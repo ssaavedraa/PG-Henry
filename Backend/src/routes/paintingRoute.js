@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const router = Router();
+const paintingControllers = require("../controllers/painting");
 
-router.get("/get/:id", painting.getById /*todo:controller*/);
-router.get("/getall" /*todo:controller*/);
+router.get("/get/:id" /*todo:controller*/);
+router.get("/getall", paintingControllers.getAll);
 router.get("/search" /*todo:controller*/);
-router.post("/create" /*todo: controller*/);
+router.post("/create", paintingControllers.add);
 router.patch("/modify/:id" /*todo: controller*/);
 
 module.exports = router;
