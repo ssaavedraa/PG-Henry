@@ -47,27 +47,27 @@ const {
 	Review,
 	Technique,
 	User,
-} = sequelize.models;
+} = sequelize.models
 
 // Aca vendrian las relaciones
 
-Painting.belongsTo(Artist);
-Artist.hasMany(Painting);
-Painting.hasMany(Review);
-Review.belongsTo(Painting);
-Painting.belongsToMany(Technique, { through: 'painting_technique' });
-Technique.belongsToMany(Painting, { through: 'painting_technique' });
-Painting.hasMany(Photo);
-Photo.belongsTo(Painting);
-Painting.belongsToMany(Purchase, { through: 'painting_purchases' });
-Purchase.belongsToMany(Painting, { through: 'painting_purchases' });
-Purchase.belongsTo(Contact_info);
-Purchase.belongsTo(User);
-User.hasMany(Purchase);
-Review.belongsTo(Artist);
-Artist.hasMany(Review);
-Review.belongsTo(User);
-User.hasMany(Review);
+Painting.belongsTo(Artist)
+Artist.hasMany(Painting)
+Painting.hasMany(Review)
+Review.belongsTo(Painting)
+Painting.belongsToMany(Technique, { through: 'painting_technique' })
+Technique.belongsToMany(Painting, { through: 'painting_technique' })
+Painting.hasMany(Photo)
+Photo.belongsTo(Painting)
+Painting.belongsToMany(Purchase, { through: 'painting_purchases' })
+Purchase.belongsToMany(Painting, { through: 'painting_purchases' })
+Purchase.belongsTo(Contact_info)
+Purchase.belongsTo(User)
+User.hasMany(Purchase)
+Review.belongsTo(Artist)
+Artist.hasMany(Review)
+Review.belongsTo(User)
+User.hasMany(Review)
 
 module.exports = {
 	...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
