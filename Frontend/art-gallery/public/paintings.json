@@ -1,0 +1,403 @@
+{
+    "paintings":[
+        {                    
+            "id": "1111",
+            "artist": "Roy Lichtenstein",        
+            "title": "Brushstroke with Spatter",                
+            "description": " a wry commentary on the bravura of midcentury Abstract Expressionism. Here Lichtenstein combines the gestural sweep of Willem de Kooning’s brushwork with the rhythmic drips typical of Jackson Pollock. He isolates and magnifies his stroke and spatter against a ground of Ben Day dots, reproducing the conventionally painterly elements as flatly as possible with no trace of emotion or texture. ",
+            "orientation": "horizontal",              
+            "technique": "Oil",
+
+            "price": 1400,
+            "image":[
+                "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":31.1,
+                "width":39.4       
+        
+                } 
+        },
+
+
+        {                    
+            "id": "1112",        
+            "title": "Foot Medication", 
+            "artist": "Roy Lichtenstein",               
+            "description": "While he had adapted his early compositions from actual comic books, here Lichtenstein rather referred to an art historical rather than a pop culture source: Henri Matisse’s Red Studio (1911; Museum of Modern Art, New York), which features Matisse’s canvases casually set around a room.",
+            "orientation": "horizontal",              
+            "technique": "Oleo",
+
+            "price": 1800,
+            "image":[
+                "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":243.8,
+                "width":325.1        
+        
+                } 
+        } ,
+
+        {                    
+            "id": "1113",        
+            "title": "Alka Seltzer",  
+            "artist": "Roy Lichtenstein",              
+            "description": "The artist’s use of mechanical reproduction conventions served to unify his composition and produce movement and volume on a two-dimensional surface. Alka Seltzer is one of Lichtenstein’s watershed works because it shows the artist summing up his early graphic techniques and introducing what would become his most significant formal preoccupations in the years that followed",
+            "orientation": "Vertical",              
+            "technique": "Watercolor",
+
+            "price":2300,
+            "image":[
+                "https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg"],
+            "dimensions": {
+                "height":76.3,
+                "width": 56.7       
+        
+                } 
+        }, 
+        {                    
+            "id": "1114",        
+            "title": "Woman III",  
+            "artist": "Roy Lichtenstein",              
+            "description": "In Woman III Lichtenstein injected both humor and a Pop Art chill into the older painter’s wriggling swaths and slashes of bold color while playing directly on de Kooning’s series of confrontational “Woman” paintings. The fierce figure is denoted by two eyes, an elfin ear, nose, lips, bared teeth, and a patch of red dots that stand in for a rouged cheek.",
+            "orientation": "Vertical",              
+            "technique": "Acrylic",
+
+            "price":2500,
+            "image":[
+                "https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":203.2,
+                "width":142.2        
+        
+                } 
+        },
+        {                    
+            "id": "1115",        
+            "title": "Landscape 4, from Ten Landscapes", 
+            "artist": "Roy Lichtenstein",               
+            "description": "Lichtenstein exploited everyday practices of visual representation and magnified them, indicating the gas bubbles rising over the glass by meticulously scraping away extra spaces from a field of imitation hand-stenciled Benday dots",
+            "orientation": "vertical",              
+            "technique": "pencil",
+
+            "price": 3699,
+            "image":[
+                "https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg"],
+            "dimensions": {
+                "height":42.2,
+                "width":54.7        
+        
+                } 
+        },
+        {                    
+            "id": "1116",        
+            "title": "Marilyn Monroe (Marilyn)",
+            "artist":"Andy Warhol",                
+            "description": "Marilyn was the first such portfolio, consisting of ten images made from the same 1953 publicity photograph of Marilyn Monroe in the film Niagara, which Warhol transformed with intentionally off-register printing and garish combinations of psychedelic colors.",
+            "orientation": "Vertical",              
+            "technique": "Oleo",
+
+            "price": 4200,
+            "image":[
+                "https://www.artic.edu/iiif/2/5a377db1-d100-0f0c-6b46-fa7440a92245/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/5a377db1-d100-0f0c-6b46-fa7440a92245/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":91.4,
+                "width":91.4     
+        
+                } 
+        },
+
+
+        {                    
+            "id": "1117",        
+            "title": "Mao",
+            "artist":"Andy Warhol",                  
+            "description": "The most influential of Pop artists, Andy Warhol cast a cool, ironic light on the pervasiveness of commercial culture and contemporary celebrity worship. Early in his career, he began to utilize the silk-screen process to transfer photographed images to canvas, creating multiple portraits of celebrities including Marilyn Monroe, Elvis Presley, and Jacqueline Kennedy, as well as duplicated images of mass-produced products such as Campbell’s soup cans and Coca-Cola bottles.",
+            "orientation": "Vertical",              
+            "technique": "Oleo",
+
+            "price": 3500,
+            "image":[
+                "https://www.artic.edu/iiif/2/97cb5c4b-cce5-c4d8-f303-613ce92832c7/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/97cb5c4b-cce5-c4d8-f303-613ce92832c7/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":448.3,
+                "width":346.7         
+        
+                } 
+        } ,
+
+        {                    
+            "id": "1118",        
+            "title": "Early Colored Liz", 
+            "artist":"Andy Warhol",                 
+            "description":"Pop Art icon Andy Warhol’s embrace of mass culture radically altered the course of late twentieth-century art history, redefining both what a work of art can or should depict as well as the way in which it can be made. His breakthrough artistic moment came when he took the commercial printing process of photo-emulsion silkscreen and applied it to canvas.",
+            "orientation":"Vertical",              
+            "technique": "Watercolor",
+
+            "price": 1900,
+            "image":[
+                "https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":101.6,
+                "width":101.6        
+        
+                } 
+        }, 
+        {                    
+            "id": "1119",        
+            "title": "Self-Portrait",
+            "artist":"Andy Warhol",                  
+            "description": "Warhol based his first painted self-portrait on a photo booth photograph, and the work showcases Warhol’s ability to manipulate his persona itself as an artistic medium. As he admitted a few years later, “I’d prefer to remain a mystery, I never like to give my background and, anyway, I make it all up different every time I’m asked.” This work marked a starting point for Warhol’s career-long engagement with the construction of identity, especially as it pertained to crafting his public persona.",
+            "orientation": "Vertical",              
+            "technique": "Acrylic",
+
+            "price":3400,
+            "image":[
+                "https://www.artic.edu/iiif/2/446680d8-037b-aea7-738e-62ac5765aaa3/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/446680d8-037b-aea7-738e-62ac5765aaa3/full/843,/0/default.jpg"                            
+            ],
+            "dimensions": {
+                "height":50.8,
+                "width":40.6       
+        
+                } 
+        },
+        {                    
+            "id": "1120",        
+            "title": "The President", 
+            "artist":"Andy Warhol",                 
+            "description": "President John F. Kennedy. As was his practice, Warhol worked from existing imagery; in this case, press photography from the slain president’s funeral. By cropping and enlarging the selected image of the veiled former First Lady, Warhol focuses attention on his “star” much like a director using a close-up lens. The effect is a chilling glamorization of the tragic.",
+            "orientation": "Vertical",              
+            "technique": "pencil",
+
+            "price": 2500,
+            "image":[
+                "https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":152.4,
+                "width":162.6        
+        
+                } 
+        },
+        {                    
+            "id": "1121",        
+            "title": "Weaving", 
+            "artist":"Diego Rivera Barrientos",               
+            "description":"The woman, a well-known weaver, expert in the Nahuatl language, and popular artists’ model named Luz Jiménez, appears intently focused on creating the intricate red, blue, white, and black pattern of the fabric that is rolled up in her lap. Placed against the spare background of Rivera’s studio, the weaver’s actions take on greater significance and dignity.",
+            "orientation":"Horizontal",              
+            "technique":"Oil",
+
+            "price":4600,
+            "image":[
+                "https://www.artic.edu/iiif/2/718aaa92-ac48-2c17-2832-b034827bc45f/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/718aaa92-ac48-2c17-2832-b034827bc45f/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":66 ,
+                "width":106       
+        
+                } 
+        },
+
+
+        {                    
+            "id": "1122",        
+            "title": "Portrait of Marevna", 
+            "artist":"Diego Rivera Barrientos",               
+            "description": "Early in his career, Diego Rivera enjoyed a brief but sparkling period as a Cubist painter. After years of rigorous art training in Mexico City, he traveled throughout Europe from 1907 to 1910. In l9l2 Rivera settled in Paris, where he befriended other emigré avant-garde artists, such as Amedeo Modigliani and Piet Mondrian. During World War l, he became a leading member of a group of Cubists that included Albert Gleizes, Juan Gris, and Jean Metzinger.",
+            "orientation": "Vertical",              
+            "technique": "Oleo",
+
+            "price":4500,
+            "image":[
+                "https://www.artic.edu/iiif/2/8cca1b7d-2c6c-5f92-2e9d-6744b0a48aa4/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/8cca1b7d-2c6c-5f92-2e9d-6744b0a48aa4/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":145.7,
+                "width":112.7        
+        
+                } 
+        } ,
+
+        {                    
+            "id": "1123",        
+            "title": "Portrait of Florence Arquin", 
+            "artist":"Diego Rivera Barrientos",               
+            "description": "Sarasota, Ringling Museum of Art, Latin American Horizons, Apr 8May 16, 1979; Miami, Metropolitan Museum and Art Center, May 28Jun 30, 1979; Pensacola Art Center, Jul 15Aug 15, 1979; St. Petersburg, Museum of Fine Arts, Sep 1Oct 1, 1979; Fort Lauderdale Museum of the Arts, Nov 130, 1979.",
+            "orientation": "Vertical",              
+            "technique": "Watercolor",
+
+            "price":1222,
+            "image":[
+                "https://www.artic.edu/iiif/2/1630e6a7-697e-3deb-cb9e-62b1f1239791/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/1630e6a7-697e-3deb-cb9e-62b1f1239791/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":54.9,
+                "width":43.2       
+        
+                } 
+        }, 
+       
+        {                    
+            "id": "1124",        
+            "title": "Still Life with an Apple", 
+            "artist":"Diego Rivera Barrientos",               
+            "description": "Educated in Mexico City, Diego Rivera also studied art in Madrid and Paris. The simplified forms and juxtaposition of everyday objects in this carefully rendered still life reflect his encounter in Paris during the second decade of the 20th century with the emerging Cubist movement. This artistic foundation would ultimately contribute to the bold style he developed as a leader of the Mexican Mural Renaissance. Rivera’s Communist affiliations were a cause of friction for him in the United States, especially during the McCarthy era. ",
+            "orientation": "Horizontal",              
+            "technique": "pencil",
+
+            "price":2100,
+            "image":[
+                "https://www.artic.edu/iiif/2/c851c38c-5161-692e-81c2-8e49ee735d29/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/c851c38c-5161-692e-81c2-8e49ee735d29/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height": 23.8,
+                "width":  31.4      
+        
+                } 
+        },
+        {                    
+            "id": "1125",        
+            "title": "The Bedroom", 
+            "artist": "Vincent Van Gogh",               
+            "description": "In ﬂat tints, but coarsely brushed in full impasto, the walls pale lilac, the ﬂoor in a broken and faded red, the chairs and the bed chrome yellow, the pillows and the sheet very pale lemon green, the bedspread blood-red, the dressing-table orange, the washbasin blue, the window green. I had wished to express utter repose with all these very different tones.” Although the picture symbolized relaxation and peace to the artist, to our eyes the canvas seems to teem with nervous energy, instability, and turmoil, an effect heightened by the sharply receding perspective.",
+            "orientation": "Horizontal",              
+            "technique": "Oil",
+
+            "price": 4966,
+            "image":[
+                "https://www.artic.edu/iiif/2/25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":73.6,
+                "width":92.3        
+        
+                } 
+        },                   
+
+        {                    
+            "id": "1126",        
+            "title": "A Peasant Woman Digging in Front of Her Cottage", 
+            "artist": "Vincent Van Gogh",               
+            "description": "The artist; his mother, Mrs. A. C. Van Gogh Carbentus, Neunen and Breda, around 1885 [ according to a letter from Martha Op de Coul, Rijksbureau voor Kunsthistorische Documentatie, The Hague, Netherlands, Aug. 23, 2000]; given to the carpenter, Schrauwen, Breda, 1886 [this and the following according to Stokvis 1926, 5-6]; transferred to Jan and Rien Couvreur, Breda, 1903; sold to C. Mouwen, Jr., Breda; sold, Frederik Muller, Amsterdam, May 3, 1904, lot 13, for 205 fl. to Van Gelder [according to annotated copy of sale catalogue; in curatorial object file]. ",
+            "orientation": "Horizontal",              
+            "technique": "Watercolor",
+
+            "price": 4879,
+            "image":[
+                "https://www.artic.edu/iiif/2/1d3a275d-45dd-6026-b6ed-d7d8df417a3d/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/1d3a275d-45dd-6026-b6ed-d7d8df417a3d/full/843,/0/default.jpg"],
+            "dimensions": {
+                "height":31.3,
+                "width": 42       
+        
+                } 
+        }, 
+        {                    
+            "id": "1127",        
+            "title":"The Poet’s Garden",
+            "artist": "Vincent Van Gogh",                
+            "description": "The artist’s sister-in-law, Johanna van Gogh-Bonger (died 1925) [see Nordenfalk 1946 and Supinen 1990]. Galerie d’Art Odenzeel, Rotterdam [La Faille 1928, 131]. Galerie d’Art d’Audretsch, The Hague, Netherlands [according to information on Registrar archival card, copy in curatorial object file]. M. Gieseler, The Hague, Netherlands, by 1925; Sale, A. Mak, Amsterdam, Oct. 1925, lot 33. Howard Young Galleries, New York [stock no. 2486, according to Registrar archival card]. Mrs. Lewis Larned (Annie Swan) Coburn (died 1932), Chicago, by at least 1928 [see Registrar receipt dated May 28, 1928, copy in curatorial object file]; bequeathed to the Art Institute, 1933.",
+            "orientation": "Horizontal",              
+            "technique": "Acrylic",
+
+            "price":3465,
+            "image":[
+                "https://www.artic.edu/iiif/2/9ea77636-76e9-9031-6b92-ff34512d7cbc/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/9ea77636-76e9-9031-6b92-ff34512d7cbc/full/843,/0/default.jpg"
+            ],
+            "dimensions": {
+                "height":73,
+                "width": 92.1       
+        
+                } 
+        },
+        {                    
+            "id": "1128",        
+            "title": "Shower Below the Summit",
+            "artist":"Katsushika Hokusai",                 
+            "description": "Katsushika Hokusai is considered one of the greatest artists in Japanese history, and one of the important masters of the Japanese woodblock print. Hokusai’s most famous work is the series Fugaku sanju-rokkei (Thirty-Six Views of Mount Fuji), created between 1830 and 1832, when the artist was over seventy years of age.",
+            "orientation": "Horizontal",              
+            "technique": "Acrylic",
+
+            "price": 5248,
+            "image":[
+                "https://www.artic.edu/iiif/2/bbb6d024-f931-2e2f-eb95-750991834b1c/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/bbb6d024-f931-2e2f-eb95-750991834b1c/full/843,/0/default.jpg"],
+            
+            "dimensions": {
+                "height":25.7,
+                "width":37.6       
+        
+                } 
+        },
+
+
+        {                    
+            "id": "1129",        
+            "title": "A Peasant Crossing a Bridge",
+            "artist":"Katsushika Hokusai",                 
+            "description": "An old peasant returns from gathering the two bundles of horsetail rushes, which hang from a pole across his shoulder. Of the various poems about gathering rushes in the old anthologies",
+            "orientation": "Vertical",              
+            "technique": "Oleo",
+
+            "price":6877,
+            "image":[
+                "https://www.artic.edu/iiif/2/a0a3469e-c44e-0498-0fe6-5f8dfb16e54e/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/a0a3469e-c44e-0498-0fe6-5f8dfb16e54e/full/843,/0/default.jpg"],
+            
+            "dimensions": {
+                "height":50,
+                "width":23.2       
+        
+                } 
+        } ,
+
+        {                    
+            "id": "1130",        
+            "title": "Under the Wave off Kanagawa", 
+            "artist":"Katsushika Hokusai",               
+            "description": "Katsushika Hokusai’s much celebrated series, Thirty-Six Views of Mount Fuji (Fugaku sanjûrokkei), was begun in 1830, when the artist was 70 years old. This tour-de-force series established the popularity of landscape prints, which continues to this day. Perhaps most striking about the series is Hokusai’s copious use of the newly affordable Berlin blue pigment, featured in many of the compositions in the color for the sky and water. ",
+            "orientation": "Horizontal",              
+            "technique": "Watercolor",
+
+            "price":3789,
+            "image":[
+                "https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg",
+                "https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg"],
+            "dimensions": {
+                "height":25.4,
+                "width":37.6       
+        
+                } 
+        }
+
+
+
+
+
+
+
+
+
+    ]
+}
