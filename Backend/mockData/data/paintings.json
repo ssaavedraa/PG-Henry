@@ -1,0 +1,37 @@
+
+[
+    {
+    "title": "Brushstroke with Spatter",                
+    "description": " a wry commentary on the bravura of midcentury Abstract Expressionism. Here Lichtenstein combines the gestural sweep of Willem de Kooning’s brushwork with the rhythmic drips typical of Jackson Pollock. He isolates and magnifies his stroke and spatter against a ground of Ben Day dots, reproducing the conventionally painterly elements as flatly as possible with no trace of emotion or texture. ",
+    "orientation": "horizontal",
+    "height":31.1,
+    "width":39.4,
+    "price": 1400,
+    "photos":["https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[1]
+ },
+{
+    "title": "Foot Medication",                
+    "description": "While he had adapted his early compositions from actual comic books, here Lichtenstein rather referred to an art historical rather than a pop culture source: Henri Matisse’s Red Studio (1911; Museum of Modern Art, New York), which features Matisse’s canvases casually set around a room.",
+    "orientation": "horizontal", 
+    "height":243.8,
+    "width":325.1 ,
+    "price": 1800,
+    "photos":["https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[1]
+ },
+ {
+    "title": "Alka Seltzer",                
+    "description": "The artist’s use of mechanical reproduction conventions served to unify his composition and produce movement and volume on a two-dimensional surface. Alka Seltzer is one of Lichtenstein’s watershed works because it shows the artist summing up his early graphic techniques and introducing what would become his most significant formal preoccupations in the years that followed",
+    "orientation": "vertical", 
+    "height":76.3,
+    "width": 56.7 ,
+    "price":2300,
+    "photos":["https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[2]
+ }
+]
+

@@ -1,8 +1,9 @@
 const { Painting, Artist, Technique } = require("../../db");
 
-const getAll = async (req, res) => {
-  const paintings = await Painting.findAll({
-    where: { isAvailable: true },
+const getById = async (req, res) => {
+  const { id } = req.params;
+  const paintings = await Painting.findOne({
+    where: { isAvailable: true, id },
     attributes: [
       "id",
       "title",
@@ -26,7 +27,7 @@ const getAll = async (req, res) => {
       },
     ],
   });
-  res.json(paintings);
+  res.json(paintings || {});
 };
 
-module.exports = getAll;
+module.exports = getById;
