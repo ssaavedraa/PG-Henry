@@ -1,0 +1,37 @@
+.divContainer{
+    margin: 25px
+}
+
+.divContainerimg{
+display: flex;
+
+}
+
+.imgArtist{
+    width: 575px;
+    height: 500px;
+}
+
+.divButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+.divReviews{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.imgArtwork{
+    height: 150px;
+    width: 125px;
+}
+
+.divText{
+    display: flex;
+    justify-content: space-between;
+}

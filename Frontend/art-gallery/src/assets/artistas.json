@@ -1,0 +1,336 @@
+{
+  "artists": [
+    {
+      "id": "5",
+      "name": "Jean Marc Janiaczyk Douai",
+      "biography": "Jean-Marc Janiaczyk was born in 1966 in Douai, in the north of France, he is a self-taught landscape painter who painted exclusively oil paintings and in 1990 he started with a technically demanding style, hyper-realism. In 1998 he began to use a spatula and devoted himself above all to landscapes of Provence, with their vibrant and intense colours. In his paintings he has faithfully portrayed the light and heat of the region's summer. Bright red poppies, orange sunflowers, fields, modest houses on the side of the road receding into the distance... in the author's landscapes one can see some similarities with the works of his teacher and inspirer, V. Van Gogh. He exhibited his works in Florida, France, Denmark, Germany, Spain and Morocco and his paintings are in many private collections in France, Belgium, USA, Denmark, Germany, Spain, Czech Republic and Morocco.",
+      "photo": "https://i.pinimg.com/564x/57/bb/38/57bb385beec7ee7a85e4998c1bd784a9.jpg",
+      "email": "elfrances@gmail.com",
+      "location": "Douai, north of France",
+      "paintings": [
+        {
+          "id": "",
+          "title": "Lavender and Sunflowers in Provence",
+          "review": "Lights up my entire home with its colors",
+          "description": "Lavender is an essential plant of Provence, it is cultivated and distilled to obtain an oil, to be used mainly in cosmetics and perfumes. Under the sun's rays, lavender welcomes you by releasing its fragrance. Lavender fields are fascinating because of these colors that change depending on the light of day, blue, violet, pink, and even orange tones in the light of sunset.",
+          "orientation": "Horizontal",
+          "technique": "Oil",
+          "price": "3000",
+          "image": {
+            "url": "https://4.bp.blogspot.com/-NriY4bpJqog/UNxEZHkze8I/AAAAAAAAKe0/tY5IJRbBEMU/s1600/caudros+paisajes+floridos+espatula+oleo+.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "40",
+            "width": "60"
+          }
+        },
+        {
+          "id": "",
+          "title": "Purple Sun",
+          "review": "It's impressive how the artist captures every last detail",
+          "description": "She knew that one day he would come with his purple flowers",
+          "orientation": "Vertical",
+          "technique": "Oil",
+          "price": "5000",
+          "image": {
+            "url": "http://4.bp.blogspot.com/-vuiojAA-8FY/U1rz_fDe9cI/AAAAAAAADz8/IwwzfsDJbkM/s1600/1005764_409902042447956_1119483791_n.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "40",
+            "width": "110"
+          }
+        },
+        {
+          "id": "",
+          "title": "Poppies",
+          "review": "Can you imagine living in such a landscape? Jean makes it happen!",
+          "description": "Oil painting of poppies and palette knife.",
+          "orientation": "Horizontal",
+          "technique": "Oil",
+          "price": "7500",
+          "image": {
+            "url": "https://1.bp.blogspot.com/-Tga46TcslJs/VhRKQLtwq7I/AAAAAAADrnM/nb5Z8MU02Y0/s1600/cultivos-de-flores-cuadros-modernos_14.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "100",
+            "width": "150"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Bav Jozwiak",
+      "biography": "Bav Jozwiak has earned his signature status with the American Watercolor Society, the National Watercolor Society, Watercolor West, and others too numerous to mention. She is an internationally awarded artist. Born in Vancouver, Washington, Bev still resides there with her husband of more than 30 years. He has two daughters and three grandchildren. She has been featured in countless Best of Art Books, including numerous times in North Light's popular Splash series. He has had a plethora of magazine articles, including an emagazine cover, the cover of Sept. 2017 of North Light Watercolor Magazine, and the cover of Palette magazine in 2019.",
+      "photo": "https://1.bp.blogspot.com/-BjXxQjCKDoE/WOATQ_-jh-I/AAAAAAAAQMI/yHZRJSgQbiYHzB2C-7EMk8XRcdu6hzIpgCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252810%2529.jpg",
+      "email": "paintingjoz@hotmail.com",
+      "location": "Vancouver, Washington",
+      "paintings": [
+        {
+          "id": "",
+          "title": "In the hood",
+          "review": "It was love at first sight!",
+          "description": "The watercolor painting stands out for its transparency, the clarity of its colors, and the spontaneity. The watercolor colors are obtained with pigments that are very finely ground and bound with gum arabic, it dissolves easily in water and adheres very well to paper. Painting with water-based pigments is one of the oldest techniques. During the Renaissance and later centuries, all preliminary studies, sketches, drawings and jottings in the open air were done with a gouache, mainly colored sepia. It is in the eighteenth century the most brilliant era of watercolor, painters of English romanticism raised this technique to its highest level.",
+          "orientation": "Horizontal",
+          "technique": "Watercolor",
+          "price": "10000",
+          "image": {
+            "url": "https://3.bp.blogspot.com/-JvSyQr_vKI0/WOATT1DJ7KI/AAAAAAAAQNM/o5LJLloMMQswlAcaIlhzwzk1xtkNzkfKgCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252827%2529.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "60",
+            "width": "140"
+          }
+        },
+        {
+          "id": "",
+          "title": "It's a knot",
+          "review": "",
+          "description": "The watercolor painting stands out for its transparency, the clarity of its colors, and the spontaneity. The watercolor colors are obtained with pigments that are very finely ground and bound with gum arabic, it dissolves easily in water and adheres very well to paper. Painting with water-based pigments is one of the oldest techniques. During the Renaissance and later centuries, all preliminary studies, sketches, drawings and jottings in the open air were done with a gouache, mainly colored sepia. It is in the eighteenth century the most brilliant era of watercolor, painters of English romanticism raised this technique to its highest level.",
+          "orientation": "Horizontal",
+          "technique": "Watercolor",
+          "price": "8000",
+          "image": {
+            "url": "https://3.bp.blogspot.com/-7aZ0604KLVM/WOATTIfI7rI/AAAAAAAAQM4/KSorXdNEO7MaqpkI0F8KAzWoQOUpmdJVwCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252822%2529.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "1.00",
+            "width": "140"
+          }
+        },
+        {
+          "id": "",
+          "title": "Raised and born in Seattle",
+          "review": "",
+          "description": "The watercolor painting stands out for its transparency, the clarity of its colors, and the spontaneity. The watercolor colors are obtained with pigments that are very finely ground and bound with gum arabic, it dissolves easily in water and adheres very well to paper. Painting with water-based pigments is one of the oldest techniques. During the Renaissance and later centuries, all preliminary studies, sketches, drawings and jottings in the open air were done with a gouache, mainly colored sepia. It is in the eighteenth century the most brilliant era of watercolor, painters of English romanticism raised this technique to its highest level.",
+          "orientation": "Vertical",
+          "technique": "Watercolor",
+          "price": "9000",
+          "image": {
+            "url": "https://texaswatercolorsociety.org/wp-content/uploads/sites/2/2018/04/4bJozw2SeattleBornAndRaised-1.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "60",
+            "width": "50"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Elena Kraft",
+      "biography": "Hello, my name is Elena, I am an artist and choreographer and I live in Kiel. I masterfully combine figurative, floral, portret and animal painting. In Kiel I own two dance schools and my artwork is inspired by my passion for dancing, merging the charm and grace of a dancer, thus giving the paintings a very special, very sensual touch. Furthermore, through years of experience with body control, as well as the insight of an expert in body language, which I acquired in the long years as a trainer, choreographer and dancer, I bring my paintings to life in a very artistic way. When I finish a painting, I am ready for it to find its new home. I've had my time creating and developing, and when it's over, my time with it is over and I know it was created for someone else's enjoyment. I love what I do. I love creating works of art and I am proud of the images I create. Beautiful and meaningful images that speak to people as much as they spoke to me.",
+      "photo": "https://cdn.singulart.com/artists/v2/pictures/cropped/artwork/base/8883_artwork_79ff2f4f5ceaa06f252e9f9bb21f1e41.jpeg",
+      "email": "elkraft@hotmail.com",
+      "location": "Kronshagen, Schleswig-Holstein, Germany",
+      "paintings": [
+        {
+          "id": "",
+          "title": "Awakening",
+          "review": "¡Incredible!",
+          "description": "Acrylic paint is a class of paint that contains a plasticized material, quick-drying paint, in which the pigments are contained in an emulsion of an acrylic polymer. Although soluble in water, once they dry they are resistant It stands out especially for the speed of drying. Likewise, when it dries, the tone changes slightly, more than in oil. Acrylic paint dates from the first half of the 20th century, and was developed in parallel in Italy and the United States",
+          "orientation": "Vertical",
+          "technique": "Acrylic",
+          "price": "12000",
+          "image": {
+            "url": "https://i.pinimg.com/564x/d1/92/c3/d192c358a222f0e5da682f3722047c14.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "110",
+            "width": "60"
+          }
+        },
+        {
+          "id": "",
+          "title": "Winds of Summer",
+          "review": "Take me right back to my childhood",
+          "description": "Acrylic paint is a class of paint that contains a plasticized material, quick-drying paint, in which the pigments are contained in an emulsion of an acrylic polymer. Although soluble in water, once they dry they are resistant It stands out especially for the speed of drying. Likewise, when it dries, the tone changes slightly, more than in oil. Acrylic paint dates from the first half of the 20th century, and was developed in parallel in Italy and the United States",
+          "orientation": "Vertical",
+          "technique": "Acrylic",
+          "price": "3500",
+          "image": {
+            "url": "https://i.pinimg.com/originals/fe/65/6e/fe656e6838d15b76d146fdfce2ffaa9d.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "50",
+            "width": "30"
+          }
+        },
+        {
+          "id": "",
+          "title": "Behind schemes",
+          "review": "Cute",
+          "description": "Acrylic paint is a class of paint that contains a plasticized material, quick-drying paint, in which the pigments are contained in an emulsion of an acrylic polymer. Although soluble in water, once they dry they are resistant It stands out especially for the speed of drying. Likewise, when it dries, the tone changes slightly, more than in oil. Acrylic paint dates from the first half of the 20th century, and was developed in parallel in Italy and the United States",
+          "orientation": "Vertical",
+          "technique": "Acrylic",
+          "price": "7000",
+          "image": {
+            "url": "https://www.artmajeur.com/medias/hd/e/l/elena-kraft/artwork/12118523_2019-03-28-15-08-38.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "100",
+            "width": "85"
+          }
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Kate Louise Powell",
+      "biography": "Kate Louise Powell is an illustrator and animal rights activist from Halifax, West Yorkshire, currently based in Glasgow. After drawing recreationally all her life, Kate began to take her art career more seriously in 2012, producing a series of popular illustrations featuring the recurring motifs of flowers and butterflies. Since then he has experimented with photography, mixed media and painting, but continues to work primarily with colored pencil/pencil and black ink.",
+      "photo": "https://img.blogs.es/anexom/wp-content/uploads/2018/12/42707058715_61bbdc578f_k.jpg",
+      "email": "katelouisepowell@hotmail.co.uk",
+      "location": "Glasgow, Escocia",
+      "paintings": [
+        {
+          "id": "",
+          "title": "Frou-Frou Foxes",
+          "review": "¡Go Foxes!",
+          "description": "This was a real technical challenge for me, but I am very happy with the result and it was an absolute pleasure to spend so much time and energy on something so whimsical and full of the joy of life.",
+          "orientation": "Vertical",
+          "technique": "pencil",
+          "price": "10000",
+          "image": {
+            "url": "https://katelouisepowelldotcom.files.wordpress.com/2021/07/pauline-fin.jpeg?w=700",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "120",
+            "width": "80"
+          }
+        },
+        {
+          "id": "",
+          "title": "Anniversary for Freedom",
+          "review": "Represents me",
+          "description": "Let's focus on who they really are, and how we can best help them while being compassionate to others.",
+          "orientation": "Horizontal",
+          "technique": "pencil",
+          "price": "5000",
+          "image": {
+            "url": "https://katelouisepowelldotcom.files.wordpress.com/2021/02/ftp_veganuary-fin.jpg?w=700",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "70",
+            "width": "100"
+          }
+        },
+        {
+          "id": "",
+          "title": "Healing",
+          "review": "I saw it and I knew it, thanks for existing Kate!",
+          "description": "It's so hard to put into words: truly connecting and accepting myself, finding the ability to comb through and deal with the past, understanding how to live with certain truths instead of desperately hoping they'll go away, the relief and sense of growth that comes out of all of this. I've looked back at my old art and realized that years ago I tended to draw people in huddled positions with their backs to the world, I think unconsciously it was an expression of my vulnerability, insecurity, fear... While that I now feel so at ease and capable, a sense of being one with my own being that I have never experienced before. A kind of healing that feels like landing back in my own body after not being fully there for for as long as I can remember... The way I no longer feel suffocated and terrified is really unreal.",
+          "orientation": "Horizontal",
+          "technique": "pencil",
+          "price": "10000",
+          "image": {
+            "url": "https://scontent-eze1-1.xx.fbcdn.net/v/t1.6435-9/192219975_327277482299953_6440163914261271394_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=e3f864&_nc_ohc=rjTW7xQLCuUAX9BgCag&_nc_ht=scontent-eze1-1.xx&oh=00_AT80ej-Cq7fkVBQT7CqhtMCR8Qlwdn8aQgfGZWmGv238HQ&oe=62447D58",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "80",
+            "width": "120"
+          }
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Adilov Kabul",
+      "biography": "Adilov Kabul was born in 1959 in Tashkent, Uzbekistan. He studied art in St. Petersburg, Russia, and graduated from the St. Petersburg State Academy of Painting, Sculpture and Architecture in 1985. He moved to Budapest, Hungary in 1987. Despite his youth, he has been one of the most colorful personalities of Hungarian contemporary art. His talent is endowed with the mysterious charm of his native land, its rich historical and cultural legacy. The name chosen by Adilov Kabul, alias Chaghatay, evokes the surroundings of the old quarter of his father's house. In his landscapes the ancient and modern vision of the world are combined. In his figures myth and poetry are united. His rich art is inspired by the vision of the intimate unity of man and nature. His works are found on three continents of the world. He has exhibited in many of the former Soviet Union republics and later in Japan, India, South Korea, and Spain. His largest solo exhibition was held in Munich, Germany. mania, and the Ross Gallery exhibits his works constantly in London.",
+      "photo": "https://media.istockphoto.com/photos/forty-something-man-picture-id502734204?k=20&m=502734204&s=612x612&w=0&h=1rvrzD1IE7b626BMzGSHODvD9F8gdnpYgyCRGjsXPMM=",
+      "email": "adi@gmail.com",
+      "location": "Budapest, Hungary",
+      "paintings": [
+        {
+          "id": "",
+          "title": "Viharos",
+          "review": "",
+          "description": "Oil consists of mixing pigments with an oil-based binder, usually of vegetable origin. By extension, oil is called the pictorial work executed using this technique, which admits supports of a very varied nature: metal, wood, stone, ivory, although the most common is that it is applied on canvas or board. The oil remains wet for a long time, which favors the mixing of colors. Its drying can be compromised depending on the accessories that are put on it during the process, such as cobalt siccative, which can crack oil as it dries.",
+          "orientation": "Horizontal",
+          "technique": "Oil",
+          "price": "8000",
+          "image": {
+            "url": "http://kubinyigaleria.hu/wp-content/uploads/2020/09/IMG_4194-1024x666.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "50",
+            "width": "80"
+          }
+        },
+        {
+          "id": "",
+          "title": "Terrace",
+          "review": "",
+          "description": "Oil consists of mixing pigments with an oil-based binder, usually of vegetable origin. By extension, oil is called the pictorial work executed using this technique, which admits supports of a very varied nature: metal, wood, stone, ivory, although the most common is that it is applied on canvas or board. The oil remains wet for a long time, which favors the mixing of colors. Its drying can be compromised depending on the accessories that are put on it during the process, such as cobalt siccative, which can crack oil as it dries.",
+          "orientation": "Vertical",
+          "technique": "Oil",
+          "price": "9000",
+          "image": {
+            "url": "http://kubinyigaleria.hu/wp-content/uploads/2021/10/Sz%C3%A1nt%C3%B3-Luk%C3%A1cs-Terasz-40x30-cm-68-000-Ft-742x1024.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "100",
+            "width": "60"
+          }
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Winslow Homer",
+      "biography": "Winslow Homer is known for his dynamic portrayals of the power and beauty of nature and his reflections on humanity's struggle with the sea. A keen observer of the world around him, Homer also experimented with color, form and composition, pushing his landscapes and genre pictures in modern directions.Raised in Massachusetts, he apprenticed in a Boston lithograph shop in the mid-1850s and soon found work as a freelance illustrator.Moving to New York, He did work for Harper's Weekly, among other magazines, and enrolled in drawing classes at the National Academy of Design.",
+      "photo": "https://lopezcorrea.com/2017/images/hombreshormonas.gif",
+      "email": "homer@gmail.com",
+      "location": "New York, USA",
+      "paintings": [
+        {
+          "id": "",
+          "title": "Water Fan",
+          "review": "",
+          "description": "The water fan depicts a young man searching intently for corals with a glass-bottomed bucket. This device, known as a water glass or sponge glass, was used to stabilize the surface of moving water with the to improve visibility. It is possible that Homer was attracted to the subject because the surface of the water in constant movement, as well as its transparency, attracts attention, aspects of the sea that intrigued him especially in the Bahamas.",
+          "orientation": "Horizontal",
+          "technique": "Watercolor",
+          "price": "10000",
+          "image": {
+            "url": "https://www.artic.edu/iiif/2/1de73bb7-52d6-e099-f4e1-763e201e78fa/full/843,/0/default.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "80",
+            "width": "120"
+          }
+        },
+        {
+          "id": "",
+          "title": "Campfire, Adirondacks",
+          "review": "",
+          "description": "In Campfire, Adirondacks, guide Rufus Wallace sits among the protective roots of an overturned giant hemlock. The roots of the tree are formally expressive elements in their own right, but these ancient tentacles also seem to protect the man at rest. ",
+          "orientation": "Horizontal",
+          "technique": "Watercolor",
+          "price": "8500",
+          "image": {
+            "url": "https://www.artic.edu/iiif/2/9f7e21db-5949-5566-7d77-1871a41916c7/full/843,/0/default.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "60",
+            "width": "100"
+          }
+        }
+      ]
+    }
+  ]
+}
