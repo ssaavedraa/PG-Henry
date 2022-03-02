@@ -1,0 +1,18 @@
+.artist-card{
+    width: 18%;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.artist-card .artist-img{
+    width: 100%;
+    border-radius: 0.8rem;
+}
+
+.artist-card:hover{
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: scale(1.05);
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./DetailArtist.module.css";
 
-const artistas = require("../../assets/artistas.json");
+const artistas = require("../../assets/Json/artists.json");
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
@@ -11,7 +11,7 @@ const DetailArtist = () => {
       <div className={styles.divContainerimg}>
         <img
           src={require("./base.jpg")}
-          alt="photo artist"
+          alt="artist"
           className={styles.imgArtist}
         />
         <div className={styles.divBio}>
