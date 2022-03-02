@@ -14,7 +14,6 @@ const createArtist = async (data) => {
     biography,
     photo,
     email,
-    score: 3,
   });
 
   return newArtist;
