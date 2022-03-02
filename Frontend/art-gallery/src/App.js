@@ -1,31 +1,12 @@
 import './App.css';
 import NavBar from './components/navbar/navbar.component';
-import { db } from './firebaseConfig';
-
-
-
-
+import DetailArtist from './components/DetailArtist/DetailArtist';
 
 function App() {
-
-
-
- 
-
   return (
     <div className="App">
       <NavBar />
-     
-
-      <br /> <br />
-      
-      <br />
-      <br />
-
-
-      <div>
-        
-      </div>
+      <DetailArtist />
     </div>
   );
 }
