@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize")
+const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
 	sequelize.define("technique", {
@@ -9,5 +9,5 @@ module.exports = (sequelize) => {
 		description: {
 			type: DataTypes.TEXT,
 		},
-	})
-}
+	});
+};
