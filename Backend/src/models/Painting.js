@@ -9,10 +9,6 @@ module.exports = (sequelize) => {
 		description: {
 			type: DataTypes.TEXT,
 		},
-		orientation: {
-			type: DataTypes.ENUM('vertical', 'horizontal'),
-			allowNull: false,
-		},
 		height: {
 			type: DataTypes.FLOAT,
 			allowNull: false,
@@ -20,6 +16,18 @@ module.exports = (sequelize) => {
 		width: {
 			type: DataTypes.FLOAT,
 			allowNull: false,
+		},
+		orientation: {
+			type: DataTypes.VIRTUAL,
+			get() {
+				if (this.height > this.width) {
+					return "vertical"
+				} else if (this.height < this.width) {
+					return "horizontal"
+				} else {
+					return "square"
+				}
+			}
 		},
 		price: {
 			type: DataTypes.FLOAT,
