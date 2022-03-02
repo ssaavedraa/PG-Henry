@@ -1,0 +1,113 @@
+
+.navbar, .navbar ul, .navbar ul li, .div_search, .div_search button, .btn_access{
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    margin-top: .5rem;
+    justify-content:space-between;
+    height: 4rem;
+    width: 100vw;
+    box-shadow: 2px 2px 5px var(--fifth-color);
+}
+
+.navbar ul{
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+li h5, h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+li{
+    cursor: pointer;
+}
+
+li:hover{
+    color: var(--primary-color);
+    transition: .2s;
+}
+
+.icon{
+    font-size: 1.5rem;
+}
+
+.div_search{
+    width: 23%;
+    height: 50%;
+    justify-content: center;
+}
+
+.search{
+    width: 85%;
+    height: 100%;
+    padding-left: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: var(--third-color);
+    color: var(--fifth-color);
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.div_search button{
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 0 1rem 1rem 0;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--btnHover-color);
+    transition: .2s;
+}
+
+button:active{
+    background-color: var(--primary-color);
+}
+
+
+.icon_search{
+    font-size: 1.3rem;
+    color: var(--fourth-color);
+}
+
+.search:focus{
+    outline: none;
+    color: var(--fifth-color);
+}
+
+.nav_links{
+    height: 50%;
+}
+
+.btn_access{
+    width: 17%;
+    height: 90%;
+    padding: 0 .5rem;
+    justify-content: space-around;
+    color: var(--fourth-color);
+    background-color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 400;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+
+.home_link{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
