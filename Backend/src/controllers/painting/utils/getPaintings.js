@@ -1,8 +1,8 @@
 const { Painting, Artist, Technique } = require("../../../db");
 
-const getPaintings = async (condition) => {
+const getPaintings = async (condition, techniqueCondition) => {
   const paintings = await Painting.findAll({
-    where: condition,
+    ...condition,
     attributes: [
       "id",
       "title",
@@ -14,6 +14,7 @@ const getPaintings = async (condition) => {
     ],
     include: [
       {
+        ...techniqueCondition,
         model: Technique,
         through: {
           attributes: [],
