@@ -9,7 +9,8 @@ const artistControllers = require("../controllers/artist/index.js");
 
 
 router.get("/getall", artistControllers.getAll);
-
+router.get("/get/:id", artistControllers.getById);
+router.post("/create", artistControllers.add);
 
 
 module.exports = router;
