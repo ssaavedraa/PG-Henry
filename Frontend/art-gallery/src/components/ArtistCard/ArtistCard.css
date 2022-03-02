@@ -1,18 +1,51 @@
 .artist-card{
     width: 18%;
+    height: 22rem;
     padding: 1.5rem;
     margin: 1rem;
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.artist-card .artist-img{
-    width: 100%;
-    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .artist-card:hover{
     cursor: pointer;
     transition: transform 0.5s;
     transform: scale(1.05);
+}
+
+.artist-card .artist-img{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    clip-path: inset(0 0);
+}
+
+.artist-card .artis-data{
+    height: 20%;
+}
+
+.artist-card .artist-img img{
+    height: 100%;
+}
+
+
+.artist-sort{
+    height: 2rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.artist-sort select{
+    margin: 1rem 1rem;
+    background-color: transparent;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
 }

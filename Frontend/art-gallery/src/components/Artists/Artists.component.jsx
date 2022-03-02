@@ -7,6 +7,13 @@ const {artists} = require('../../assets/Json/artists.json')
 export default function Artists(){
     return(
         <div className="artists-container">
+            <div className="artist-sort">
+                <label htmlFor="sort">Sort by name: </label>
+                <select name="sort" id="sort">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                </select>
+            </div>
             {
                 artists.map(artist => {
                     return(

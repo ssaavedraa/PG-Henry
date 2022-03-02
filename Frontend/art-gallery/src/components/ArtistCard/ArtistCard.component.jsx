@@ -4,9 +4,13 @@ import './ArtistCard.css'
 export default function ArtistCard({id, img, name, location}){
     return(
         <div className="artist-card">
-            <img className='artist-img' src={img} alt={id} />
-            <h3>{name}</h3>
-            <p>{location}</p>
+            <div className="artist-img">
+                <img src={img} alt={id} />
+            </div>
+            <div className="artist-data">
+                <h3>{name}</h3>
+                <p>{location}</p>
+            </div>
         </div>
     )
 }
