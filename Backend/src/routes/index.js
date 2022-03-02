@@ -3,6 +3,7 @@ const { Router } = require("express");
 // Ejemplo: const authRouter = require('./auth.js');
 const paintingRoute = require("./paintingRoute.js");
 const techniqueRoute = require("./techniqueRoute.js");
+const artistRoute = require("./artistRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -13,4 +14,5 @@ router.get("/", (req, res) => {
 
 router.use("/painting", paintingRoute);
 router.use("/technique", techniqueRoute);
+router.use("/artist", artistRoute);
 module.exports = router;
