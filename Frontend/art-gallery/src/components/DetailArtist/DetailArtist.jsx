@@ -14,7 +14,7 @@ const DetailArtist = () => {
           alt="photo artist"
           className={styles.imgArtist}
         />
-        <div>
+        <div className={styles.divBio}>
           <h3>Biography</h3>
           <p>
             Kate Louise Powell is an illustrator and animal rights activist from
@@ -34,7 +34,7 @@ const DetailArtist = () => {
       <div>
         <h3>Reviews artworks artist</h3>
         <div className={styles.divReviews}>
-          <img src={require("./pauline-fin.jpeg")} alt="Img arteworks" className={styles.imgArtwork}/>
+          <img src={require("./pauline-fin.jpeg")} alt="arteworks" className={styles.imgArtwork}/>
           <div>
             <h4>Andrea Mendoza</h4>
             <div className={styles.divText}>
