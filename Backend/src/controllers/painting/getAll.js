@@ -1,32 +1,12 @@
-const { Painting, Artist, Technique } = require("../../db");
+const getPaintings = require("./utils/getPaintings");
 
 const getAll = async (req, res) => {
-  const paintings = await Painting.findAll({
-    where: { isAvailable: true },
-    attributes: [
-      "id",
-      "title",
-      "description",
-      "orientation",
-      "height",
-      "width",
-      "price",
-    ],
-    include: [
-      {
-        model: Technique,
-        through: {
-          attributes: [],
-        },
-        attributes: ["id", "name", "description"],
-      },
-      {
-        model: Artist,
-        attributes: ["id", "name", "biography", "photo", "email", "score"],
-      },
-    ],
-  });
-  res.json(paintings);
+  try {
+    const paintings = await getPaintings({ where: { isAvailable: true } });
+    res.json(paintings || []);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
 module.exports = getAll;
