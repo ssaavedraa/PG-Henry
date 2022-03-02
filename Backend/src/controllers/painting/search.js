@@ -86,21 +86,12 @@ const search = async (req, res) => {
         [Op.in]: artist.split(",").map((id) => parseInt(id)),
       };
     }
-    if (orientation) {
-      condition.where.orientation = orientation;
-    }
     if (isAvailable !== undefined) {
       condition.where.isAvailable = isAvailable;
     }
     if (orderBy) {
-      condition.order = [
-        [
-          orderBy,
-          order.toUpperCase() === "ASC" || order.toUpperCase() === "DESC"
-            ? order.toUpperCase()
-            : "ASC",
-        ],
-      ];
+      const direction = order ? order.toUpperCase() : "ASC";
+      condition.order = [[orderBy, direction]];
     }
 
     if (technique) {
@@ -110,7 +101,11 @@ const search = async (req, res) => {
     }
 
     //at this point we have our conditions ready and we make a query
-    const paintings = await getPaintings(condition, techniqueCondition);
+    let paintings = await getPaintings(condition, techniqueCondition);
+    //finally we filter the orientation manually since it's a virtual field
+    if (orientation) {
+      paintings = paintings.filter(({ orientation: or }) => or === orientation);
+    }
     res.json(paintings || []);
   } catch (err) {
     res.status(400).json({ error: err.message });
