@@ -1,0 +1,30 @@
+[
+	{
+		"title": "Professional",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 5,
+		"artistId": 1,
+		"paintingId": 1
+	},
+	{
+		"title": "Creative",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 4,
+		"artistId": 1,
+		"paintingId": 2
+	},
+	{
+		"title": "Scam",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 1,
+		"artistId": 1,
+		"paintingId": 3
+	},
+	{
+		"title": "Revolutionary",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 5,
+		"artistId": 1,
+		"paintingId": 3
+	}
+]
