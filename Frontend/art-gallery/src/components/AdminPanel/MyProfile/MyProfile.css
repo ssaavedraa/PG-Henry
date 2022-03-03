@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+.myprofile-box{
+    font-size: 20px;
+    height: 100%;
+    
+    text-align: center;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-top: 20px;
+    
+    border-radius: 20px;
+    box-shadow: 8px 5px 5px 8px rgba(71, 71, 71, 0.418);
+    
+   
+   }
+
+   .information-box{
+       text-align: center;
+   }
+
+
+   .data{
+       display: inline-flex;
+       flex-direction: column;
+       width: 40%;
+       text-align: center;
+       justify-content: center;
+      
+       
+   }
+
+   .input{
+       margin: 20px;
+       height: 30px;
+       text-align: center;
+       font-family: 'Poppins', sans-serif;
+       font-size: 20px;
+       border-radius: 10px;
+   }
+
+   .input:hover{
+       
+       background-color: rgb(231, 231, 231);
+   }
+
+
+
+   .btn-edit{
+
+
+       height: 60px;
+       width: 400px;
+       font-size: 20px;
+       list-style: none;
+       background-color: rgb(212, 212, 212);
+       border-radius: 20px;
+       border-style: none;
+       
+            
+       
+   }
+
+   .btn-edit:hover{
+    background-color: rgb(160, 160, 160);
+   }
+
+   
+
+

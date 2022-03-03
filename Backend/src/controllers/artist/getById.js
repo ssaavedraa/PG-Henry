@@ -4,24 +4,7 @@ const getById = async (req, res) => {
   const { id } = req.params;
   const artist = await Artist.findOne({
     where: { id },
-    attributes: [
-        "id",
-        "name",
-        "biography",
-        "photo",
-        "email",
-        "score",
-    ],
-    include: [
-        {
-          model: Review,
-          attributes: ["id", "title", "body", "score"],
-        },
-        {
-          model: Painting,
-          attributes: ["id", "title", "description", "orientation", "height", "width", "price", "isAvailable"],
-        },
-      ],
+    attributes: ["id", "name", "biography", "photo", "email", "location"],
   });
   res.json(artist || {});
 };

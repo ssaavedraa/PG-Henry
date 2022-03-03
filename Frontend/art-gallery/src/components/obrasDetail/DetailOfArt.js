@@ -10,10 +10,9 @@ import { getDetailObra } from '../../selector/getDetailObra'
 export const DetailOfArt = () => {
 
   // const { id } = useParams();
-    
+
   const obra = getDetailObra('1111', paintings)
   console.log(data.artists)
-  
     return (
         <div className={styles.containerDetail} >
 
@@ -28,14 +27,13 @@ export const DetailOfArt = () => {
                 title={obra[0].title}
                 img={obra[0].image}
                 />
-                <CarsDetailObra 
+                <CarsDetailObra
                 description={obra}
                 />
                  <div className={styles.btnCars}>
                 <button className={styles.buttonsCars}>Agregar al carrito</button>
                 <button className={styles.buttonsCars}>Return</button>
                 </div>
-               
                 </div>
 
                 <div className={styles.principalSectionObras}>
