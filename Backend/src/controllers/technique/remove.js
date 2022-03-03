@@ -2,7 +2,9 @@ const { Technique } = require("../../db");
 
 const remove = async (req, res) => {
 	const deleteId = req.params.id;
-
+	const technique = await Technique.findByPk(deleteId);
+	if (!technique)
+		return res.status(400).send(`No technique with Id:${deleteId} found`);
 	try {
 		await Technique.destroy({ where: { id: deleteId } });
 		res.json("Technique Deleted");

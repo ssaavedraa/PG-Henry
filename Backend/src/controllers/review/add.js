@@ -2,6 +2,11 @@ const { Review, Purchase, Painting, Artist } = require("../../db");
 
 const add = async (req, res) => {
 	const { title, body, score, userId, paintingId } = req.body;
+
+	const checkReview = await Review.findOne({ where: { userId, paintingId } });
+	if (checkReview)
+		return res.status(400).send("You reviewed this painting already");
+
 	const painting = await Painting.findOne({
 		where: { id: paintingId },
 		attributes: ["artistId"],
@@ -11,7 +16,9 @@ const add = async (req, res) => {
 		},
 	});
 	if (!painting) {
-		return res.json("Can't post review unless you purchase the painting");
+		return res
+			.status(406)
+			.send("Can't post review unless you purchase the painting");
 	}
 	const artistId = painting.toJSON().artistId;
 	try {
