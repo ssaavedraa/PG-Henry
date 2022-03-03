@@ -4,6 +4,7 @@ const { Router } = require("express");
 const paintingRoute = require("./paintingRoute.js");
 const techniqueRoute = require("./techniqueRoute.js");
 const artistRoute = require("./artistRoute.js");
+const reviewRoute = require("./reviewRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -15,4 +16,5 @@ router.get("/", (req, res) => {
 router.use("/painting", paintingRoute);
 router.use("/technique", techniqueRoute);
 router.use("/artist", artistRoute);
+router.use("/review", reviewRoute);
 module.exports = router;
