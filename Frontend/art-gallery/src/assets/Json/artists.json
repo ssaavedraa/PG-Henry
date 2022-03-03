@@ -30,6 +30,7 @@
           "description": "While he had adapted his early compositions from actual comic books, here Lichtenstein rather referred to an art historical rather than a pop culture source: Henri Matisse’s Red Studio (1911; Museum of Modern Art, New York), which features Matisse’s canvases casually set around a room.",
           "orientation": "horizontal",
           "technique": "Oleo",
+
           "price": 1800,
           "image": [
             "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
@@ -63,6 +64,7 @@
           "description": "In Woman III Lichtenstein injected both humor and a Pop Art chill into the older painter’s wriggling swaths and slashes of bold color while playing directly on de Kooning’s series of confrontational “Woman” paintings. The fierce figure is denoted by two eyes, an elfin ear, nose, lips, bared teeth, and a patch of red dots that stand in for a rouged cheek.",
           "orientation": "Vertical",
           "technique": "Acrylic",
+
           "price": 2500,
           "image": [
             "https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg",
@@ -79,6 +81,7 @@
           "description": "Lichtenstein exploited everyday practices of visual representation and magnified them, indicating the gas bubbles rising over the glass by meticulously scraping away extra spaces from a field of imitation hand-stenciled Benday dots",
           "orientation": "vertical",
           "technique": "pencil",
+
           "price": 3699,
           "image": [
             "https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg",
@@ -168,7 +171,7 @@
           "title": "",
           "description": "President John F. Kennedy. As was his practice, Warhol worked from existing imagery; in this case, press photography from the slain president’s funeral. By cropping and enlarging the selected image of the veiled former First Lady, Warhol focuses attention on his “star” much like a director using a close-up lens. The effect is a chilling glamorization of the tragic.",
           "orientation": "Vertical",
-          "technique": "charcoal",
+          "technique": "pencil",
           "price": 2500,
           "image": [
             "https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg",
@@ -185,8 +188,7 @@
       "id": "03",
       "name": "Diego Rivera Barrientos",
       "biography": "A leader of the Mexican muralist movement of the 1920s, who sought to challenge social and political iniquities, Diego Rivera often turned to indigenous themes to foster Mexican cultural pride. After years of rigorous art training in Mexico City, he traveled throughout Europe before settling in Paris in 1912, where he befriended other emigré avant-garde artists, including Amedeo Modigliani and Piet Mondrian. ",
-      "photo": "https://tvazteca.brightspotcdn.com/23/71/9b208daee4952909362288a351c9/diegoriverafotoespecial-2272225.jpg",
-      "email": "diegorivera@santart.com",
+      "photo": "diegorivera@santart.com",
       "location": "México",
       "paintings": [
         {
