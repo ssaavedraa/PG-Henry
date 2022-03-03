@@ -3,7 +3,9 @@ const { Review } = require("../../db");
 const edit = async (req, res) => {
 	const updateId = req.params.id;
 	const userId = req.body.userId;
-	const review = Review.findOne({ where: { userId } });
+	const review = await Review.findOne({
+		where: { userId: userId, id: updateId },
+	});
 	if (!review) return res.json("You can only edit your reviews");
 
 	try {
