@@ -46,7 +46,7 @@ const DetailArtist = () => {
                 <FaStar style={{color: "#F0C929", fontSize: '20px'}}/>
               </div>
             </div>
-            <p>{artistas.paintings[0].review}</p>
+            <p>Super lindo</p>
           </div>
         </div>
       </div>
