@@ -4,6 +4,6 @@ const technique = require("../controllers/technique/index");
 
 router.post("/add", technique.add);
 router.delete("/remove", technique.remove);
-router.get("/getAll", technique.getAll);
+router.get("/getall", technique.getAll);
 
 module.exports = router;
