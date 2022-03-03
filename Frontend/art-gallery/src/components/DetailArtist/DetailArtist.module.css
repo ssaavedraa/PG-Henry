@@ -1,0 +1,50 @@
+.divContainer{
+    margin: 25px
+}
+
+.divContainer h1{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+}
+
+.divContainerimg{
+margin: 30px 5px 5px 20px;
+display: flex;
+justify-content: space-evenly
+
+}
+
+.imgArtist{
+    width: 375px;
+    height: 450px;
+}
+
+.divBio{
+   width: 550px; 
+}
+
+.divButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+.divReviews{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.imgArtwork{
+    height: 150px;
+    width: 125px;
+}
+
+.divText{
+    display: flex;
+    justify-content: space-between;
+}
