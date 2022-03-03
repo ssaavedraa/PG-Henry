@@ -1,21 +1,17 @@
 import React from "react";
-import styles from "./DetailArtist.module.css";
+import { FaStar } from "react-icons/fa";
+import "./DetailArtist.css";
 
-const artistas = require("../../assets/Json/artists.json");
+// const artistas = require("../../assets/artists.json");
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
   return (
-    <div className={styles.divContainer}>
+    <div className="divContainer">
       <h1>Kate Louise Powell</h1>
-      <div className={styles.divContainerimg}>
-        <img
-          src={require("./base.jpg")}
-          alt="artist"
-          className={styles.imgArtist}
-        />
-        <div className={styles.divBio}>
-          <h3>Biography</h3>
+      <div className="divContainerimg">
+        <img src={require("./base.jpg")} alt="artist" className="imgArtist" />
+        <div className="divBio">
           <p>
             Kate Louise Powell is an illustrator and animal rights activist from
             Halifax, West Yorkshire, currently based in Glasgow. After drawing
@@ -26,21 +22,31 @@ const DetailArtist = () => {
             but continues to work primarily with colored pencil/pencil and black
             ink.
           </p>
+          <div className="divButton">
+            <button>Ver obras</button>
+          </div>
         </div>
       </div>
-      <div className={styles.divButton}>
-        <button>Ver obras</button>
-      </div>
-      <div>
+      <div className="containerReviews">
         <h3>Reviews artworks artist</h3>
-        <div className={styles.divReviews}>
-          <img src={require("./pauline-fin.jpeg")} alt="arteworks" className={styles.imgArtwork}/>
-          <div>
-            <h4>Andrea Mendoza</h4>
-            <div className={styles.divText}>
-              <p>Necesario en mi coleccion</p>
-              <p>iconos estrellitas </p>
+        <div className="divReviews">
+          <img
+            src={require("./pauline-fin.jpeg")}
+            alt="arteworks"
+            className="imgArtwork"
+          />
+          <div className="containerText">
+            <div className="divText">
+              <h4>Andrea Mendoza</h4>
+              <div>
+                <FaStar style={{color: "#F0C929", fontSize: '20px'}}/>
+                <FaStar style={{color: "#F0C929", fontSize: '20px'}} />
+                <FaStar style={{color: "#F0C929", fontSize: '20px'}} />
+                <FaStar style={{color: "#F0C929", fontSize: '20px'}} />
+                <FaStar style={{color: "#F0C929", fontSize: '20px'}}/>
+              </div>
             </div>
+            <p>Necesario en mi coleccion</p>
           </div>
         </div>
       </div>
@@ -49,9 +55,3 @@ const DetailArtist = () => {
 };
 
 export default DetailArtist;
-
-// {platforms.map( platform => {
-//     return(
-//         <option value={platform.name} key={platform.id}>{platform.name}</option>
-//     );
-// })};

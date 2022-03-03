@@ -29,6 +29,7 @@ export default function Artists(){
 
     return(
         <div className="artists-container">
+            <h1>Artists</h1>
             <div className="artist-sort">
                 <label htmlFor="sort">Sort by name: </label>
                 <select name="sort" id="sort" onChange={(e) => setSort(e.target.value)} >
