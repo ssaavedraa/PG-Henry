@@ -40,7 +40,6 @@ const add = async (req, res) => {
 
 		res.json(addedReview);
 	} catch (error) {
-		console.log(error);
 		res.status(400).send(error);
 	}
 };
