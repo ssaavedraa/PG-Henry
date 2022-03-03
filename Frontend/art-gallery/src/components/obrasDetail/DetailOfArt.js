@@ -53,9 +53,7 @@ export const DetailOfArt = () => {
                 </div>
             </section>
 
-            {/* <footer className={styles.principalFooter}>
-
-            </footer> */}
+           
 
 
 
