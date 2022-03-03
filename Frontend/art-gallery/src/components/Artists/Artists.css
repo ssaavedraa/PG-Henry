@@ -4,3 +4,35 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.card-link{
+    width: 23%;
+    color: black;
+}
+
+.artists-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.artists-header h1{
+    padding: 1rem;
+}
+
+.artist-sort{
+    height: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.artist-sort select{
+    margin: 1rem 1rem;
+    background-color: transparent;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+}

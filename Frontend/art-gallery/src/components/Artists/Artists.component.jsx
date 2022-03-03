@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {Link} from 'react-router-dom'
 import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
 
@@ -8,8 +9,6 @@ export default function Artists(){
 
     const [artistList, setArtistList] = useState(artists);
     const [sort, setSort] = useState('az');
-    console.log(artistList)
-
     useEffect(() => {
         if(sort === 'az'){
             setArtistList(artistList.sort((a, b) => {
@@ -29,24 +28,27 @@ export default function Artists(){
 
     return(
         <div className="artists-container">
-            <h1>Artists</h1>
-            <div className="artist-sort">
-                <label htmlFor="sort">Sort by name: </label>
-                <select name="sort" id="sort" onChange={(e) => setSort(e.target.value)} >
-                    <option value="az">A-Z</option>
-                    <option value="za">Z-A</option>
-                </select>
+            <div className="artists-header">
+                <h1>Artists</h1>
+                <div className="artist-sort">
+                    <label htmlFor="sort">Sort by name: </label>
+                    <select name="sort" id="sort" onChange={(e) => setSort(e.target.value)} >
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                    </select>
+                </div>
             </div>
             {
                 artistList.map(artist => {
                     return(
-                        <ArtistCard
-                            key={artist.id}
-                            id={artist.id}
-                            img={artist.photo}
-                            name={artist.name}
-                            location={artist.location}
-                        />
+                        <Link className="card-link" to={`/artists/${artist.id}`} key={artist.id}>
+                            <ArtistCard
+                                id={artist.id}
+                                img={artist.photo}
+                                name={artist.name}
+                                location={artist.location}
+                            />
+                        </Link>
                     )
                 })
             }

@@ -1,8 +1,8 @@
 .artist-card{
-    width: 18%;
+    width: 80%;
     height: 22rem;
     padding: 1.5rem;
-    margin: 1rem;
+    margin: 1rem 0;
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -30,22 +30,4 @@
 
 .artist-card .artist-img img{
     height: 100%;
-}
-
-
-.artist-sort{
-    height: 2rem;
-    padding: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.artist-sort select{
-    margin: 1rem 1rem;
-    background-color: transparent;
-    border-radius: 0.2rem;
-    padding: 0.2rem 0.4rem;
 }
