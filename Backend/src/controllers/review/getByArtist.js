@@ -1,14 +1,14 @@
 const { Review } = require("../../db");
 
 const getByArtist = async (req, res) => {
-	const bodyId = req.params.id;
+	const paramId = req.params.id;
 	try {
 		const allReviews = await Review.findAll({
-			where: { artistId: bodyId },
+			where: { artistId: paramId },
 		});
 		res.json(allReviews);
 	} catch (error) {
-		res.status(400).send(error);
+		res.status(404).send(error);
 	}
 };
 

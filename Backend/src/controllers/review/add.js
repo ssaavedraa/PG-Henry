@@ -11,7 +11,9 @@ const add = async (req, res) => {
 		},
 	});
 	if (!painting) {
-		return res.json("Can't post review unless you purchase the painting");
+		return res
+			.status(406)
+			.send("Can't post review unless you purchase the painting");
 	}
 	const artistId = painting.toJSON().artistId;
 	try {

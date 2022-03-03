@@ -1,15 +1,15 @@
 const { Review, Painting, Artist } = require("../../db");
 
 const getById = async (req, res) => {
-	const bodyId = req.params.id;
+	const paramId = req.params.id;
 	try {
 		const review = await Review.findOne({
-			where: { id: bodyId },
+			where: { id: paramId },
 			include: [{ model: Painting }, { model: Artist }],
 		});
 		res.json(review);
 	} catch (error) {
-		res.status(400).send(error);
+		res.status(404).send(error);
 	}
 };
 
