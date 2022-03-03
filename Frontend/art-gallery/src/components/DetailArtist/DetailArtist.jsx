@@ -1,11 +1,19 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import {useParams} from 'react-router-dom'
 import "./DetailArtist.css";
 
-// const artistas = require("../../assets/artists.json");
+const {artists} = require('../../assets/Json/artists.json')
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
+
+  const {id} = useParams()
+
+  let artistas = artists.find(a => {
+    return a.id === id
+  })
+
   return (
     <div className="divContainer">
       <h1>Kate Louise Powell</h1>
