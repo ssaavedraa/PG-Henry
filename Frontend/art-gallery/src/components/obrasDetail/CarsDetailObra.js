@@ -1,5 +1,5 @@
 
-import styles from '../../styles/CarsDetail.module.css'
+import styles from './CarsDetail.module.css'
 
 
 

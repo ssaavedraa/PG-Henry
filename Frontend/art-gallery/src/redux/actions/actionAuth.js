@@ -2,11 +2,15 @@
 
 
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
-import { types } from "../../types/types";
+
 import { provider } from "../../firebaseConfig";
 
 
+export const types = {
+  LOGIN: '[Auth] login',
+  LOGOUT: '[Auth] Logout',
 
+}
 
 
 

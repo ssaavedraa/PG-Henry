@@ -1,5 +1,5 @@
 
-import styles from '../../styles/btnGoogle.module.css'
+import styles from './btnGoogle.module.css'
 
 export const BtnGoogle = () => {
     return (

@@ -1,10 +1,10 @@
 
-import styles from '../../styles/Detail.module.css'
+import styles from './Detail.module.css'
 import { CarsDetailObra } from '../obrasDetail/CarsDetailObra'
 import data from '../../dataJson/artists.json'
 import paintings from '../../dataJson/paintings.json'
 import { getDetailObra } from '../../selector/getDetailObra'
-import NavBar from '../navbar/navbar.component'
+
 
 
 
