@@ -1,0 +1,164 @@
+
+[
+    {
+    "title": "Brushstroke with Spatter",                
+    "description": " a wry commentary on the bravura of midcentury Abstract Expressionism. Here Lichtenstein combines the gestural sweep of Willem de Kooning’s brushwork with the rhythmic drips typical of Jackson Pollock. He isolates and magnifies his stroke and spatter against a ground of Ben Day dots, reproducing the conventionally painterly elements as flatly as possible with no trace of emotion or texture. ",
+    "height":31.1,
+    "width":39.4,
+    "price": 1400,
+    "photos":["https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[1]
+ },
+{
+    "title": "Foot Medication",                
+    "description": "While he had adapted his early compositions from actual comic books, here Lichtenstein rather referred to an art historical rather than a pop culture source: Henri Matisse’s Red Studio (1911; Museum of Modern Art, New York), which features Matisse’s canvases casually set around a room.",
+    "height":243.8,
+    "width":325.1 ,
+    "price": 1800,
+    "photos":["https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[1]
+ },
+ {
+    "title": "Alka Seltzer",                
+    "description": "The artist’s use of mechanical reproduction conventions served to unify his composition and produce movement and volume on a two-dimensional surface. Alka Seltzer is one of Lichtenstein’s watershed works because it shows the artist summing up his early graphic techniques and introducing what would become his most significant formal preoccupations in the years that followed",
+    "height":76.3,
+    "width": 56.7 ,
+    "price":2300,
+    "photos":["https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[2]
+ },
+ {
+   "title": "Woman III",                
+   "description": "In Woman III Lichtenstein injected both humor and a Pop Art chill into the older painter’s wriggling swaths and slashes of bold color while playing directly on de Kooning’s series of confrontational “Woman” paintings. The fierce figure is denoted by two eyes, an elfin ear, nose, lips, bared teeth, and a patch of red dots that stand in for a rouged cheek.",
+   "height":203.2,
+   "width":142.2 ,
+    "price":2500,
+    "photos":["https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[3]
+ },
+ {
+   "title": "Landscape 4, from Ten Landscapes",                
+   "description": "Lichtenstein exploited everyday practices of visual representation and magnified them, indicating the gas bubbles rising over the glass by meticulously scraping away extra spaces from a field of imitation hand-stenciled Benday dots",
+   "height":42.2,
+   "width":54.7,
+    "price":3699,
+    "photos":["https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"],
+    "artistId":1,
+    "techniqueIds":[4]
+ },
+ {
+   "title": "Marilyn Monroe (Marilyn)",                
+   "description": "Marilyn was the first such portfolio, consisting of ten images made from the same 1953 publicity photograph of Marilyn Monroe in the film Niagara, which Warhol transformed with intentionally off-register printing and garish combinations of psychedelic colors.",
+   "height":91.4,
+   "width":91.4,
+    "price":4200,
+    "photos":["https://www.artic.edu/iiif/2/5a377db1-d100-0f0c-6b46-fa7440a92245/full/843,/0/default.jpg"],
+    "artistId":2,
+    "techniqueIds":[1]
+ },
+ {
+   "title": "Mao",                
+   "description": "The most influential of Pop artists, Andy Warhol cast a cool, ironic light on the pervasiveness of commercial culture and contemporary celebrity worship. Early in his career, he began to utilize the silk-screen process to transfer photographed images to canvas, creating multiple portraits of celebrities including Marilyn Monroe, Elvis Presley, and Jacqueline Kennedy, as well as duplicated images of mass-produced products such as Campbell’s soup cans and Coca-Cola bottles.",
+   "height":448.3,
+   "width":346.7,
+    "price":3500,
+    "photos":["https://www.artic.edu/iiif/2/97cb5c4b-cce5-c4d8-f303-613ce92832c7/full/843,/0/default.jpg"],
+    "artistId":2,
+    "techniqueIds":[1]
+ },
+ {
+   "title": "Early Colored Liz",                
+   "description":"Pop Art icon Andy Warhol’s embrace of mass culture radically altered the course of late twentieth-century art history, redefining both what a work of art can or should depict as well as the way in which it can be made. His breakthrough artistic moment came when he took the commercial printing process of photo-emulsion silkscreen and applied it to canvas.",
+   "height":101.6,
+   "width":101.6,
+    "price":1900,
+    "photos":["https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg"],
+    "artistId":2,
+    "techniqueIds":[2]
+ },
+ {
+   "title": "Self-Portrait",                
+   "description": "Warhol based his first painted self-portrait on a photo booth photograph, and the work showcases Warhol’s ability to manipulate his persona itself as an artistic medium. As he admitted a few years later, “I’d prefer to remain a mystery, I never like to give my background and, anyway, I make it all up different every time I’m asked.” This work marked a starting point for Warhol’s career-long engagement with the construction of identity, especially as it pertained to crafting his public persona.",
+   "height":50.8,
+   "width":40.6,
+    "price":3400,
+    "photos":["https://www.artic.edu/iiif/2/446680d8-037b-aea7-738e-62ac5765aaa3/full/843,/0/default.jpg"],
+    "artistId":2,
+    "techniqueIds":[3]
+ },
+ {
+   "title": "",                
+   "description": "President John F. Kennedy. As was his practice, Warhol worked from existing imagery; in this case, press photography from the slain president’s funeral. By cropping and enlarging the selected image of the veiled former First Lady, Warhol focuses attention on his “star” much like a director using a close-up lens. The effect is a chilling glamorization of the tragic.",
+   "height":152.4,
+   "width":162.6,
+    "price":2500,
+    "photos":["https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg"],
+    "artistId":2,
+    "techniqueIds":[4]
+ },
+ {
+   "title": "Lavanda y girasoles en Provence",
+   "description": "",
+   "height":40,
+   "width":60,
+    "price":3000,
+    "photos":["https://4.bp.blogspot.com/-NriY4bpJqog/UNxEZHkze8I/AAAAAAAAKe0/tY5IJRbBEMU/s1600/caudros+paisajes+floridos+espatula+oleo+.jpg"],
+    "artistId":3,
+    "techniqueIds":[1]
+ },
+ {
+   "title": "Lavanda y girasoles en Provence",
+   "description": "",
+   "height":40,
+   "width":60,
+    "price":3000,
+    "photos":["https://4.bp.blogspot.com/-NriY4bpJqog/UNxEZHkze8I/AAAAAAAAKe0/tY5IJRbBEMU/s1600/caudros+paisajes+floridos+espatula+oleo+.jpg"],
+    "artistId":3,
+    "techniqueIds":[1]
+ },
+ {
+   "title": "Sol púrpura",
+   "description": "Ella sabia que algún dia él llegaria con sus flores púrpuras",
+   "height":40,
+   "width":1.10,
+    "price":5000,
+    "photos":["http://4.bp.blogspot.com/-vuiojAA-8FY/U1rz_fDe9cI/AAAAAAAADz8/IwwzfsDJbkM/s1600/1005764_409902042447956_1119483791_n.jpg"],
+    "artistId":3,
+    "techniqueIds":[1]
+ },
+ {
+   "title": "Entre las poppies",
+   "description": "", 
+   "height":1.00,
+   "width":1.50,
+    "price":7500,
+    "photos":["https://1.bp.blogspot.com/-Tga46TcslJs/VhRKQLtwq7I/AAAAAAADrnM/nb5Z8MU02Y0/s1600/cultivos-de-flores-cuadros-modernos_14.jpg"],
+    "artistId":3,
+    "techniqueIds":[1]
+ },
+ {
+   "title": "In the hood",
+   "description": "",
+   "height":1.00,
+   "width":1.50,
+    "price":7500,
+    "photos":["https://1.bp.blogspot.com/-Tga46TcslJs/VhRKQLtwq7I/AAAAAAADrnM/nb5Z8MU02Y0/s1600/cultivos-de-flores-cuadros-modernos_14.jpg"],
+    "artistId":4,
+    "techniqueIds":[2]
+ },
+ {
+   "title": "Es un núdo",
+   "description": "",
+   "height":1.00,
+   "width":1.40,
+    "price":8000,
+    "photos":["https://3.bp.blogspot.com/-7aZ0604KLVM/WOATTIfI7rI/AAAAAAAAQM4/KSorXdNEO7MaqpkI0F8KAzWoQOUpmdJVwCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252822%2529.jpg"],
+    "artistId":4,
+    "techniqueIds":[2]
+ }
+]
+

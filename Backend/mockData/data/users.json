@@ -1,0 +1,26 @@
+[
+	{
+		"firstName": "Brian",
+		"lastName": "Weidl",
+		"email": "brianweidl@gmail.com",
+		"password": "1234",
+		"isBanned": false,
+		"role": "user"
+	},
+	{
+		"firstName": "Santiago",
+		"lastName": "Nunez",
+		"email": "santiagonunez@gmail.com",
+		"password": "1234",
+		"isBanned": false,
+		"role": "user"
+	},
+	{
+		"firstName": "Facundo",
+		"lastName": "Romano",
+		"email": "facundoromano@gmail.com",
+		"password": "1234",
+		"isBanned": false,
+		"role": "user"
+	}
+]

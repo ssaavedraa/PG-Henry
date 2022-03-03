@@ -5,7 +5,7 @@ import data from '../../dataJson/artists.json'
 import paintings from '../../dataJson/paintings.json'
 import { getDetailObra } from '../../selector/getDetailObra'
 import NavBar from '../navbar/navbar.component'
-import { BtnGoogle } from './BtnGoogle'
+
 
 
 
@@ -14,15 +14,15 @@ export const DetailOfArt = () => {
   // const { id } = useParams();
     
   const obra = getDetailObra('1111', paintings)
-  console.log(data.artists)
+
   
     return (
         <div className={styles.containerDetail} >
 
 
-            <header className={styles.principalHeader}>
+            {/* <header className={styles.principalHeader}>
             <NavBar />
-            </header>
+            </header> */}
 
             <section className={styles.principalSection}>
                 <div className={styles.principalSectionInterno}>
@@ -43,7 +43,7 @@ export const DetailOfArt = () => {
                 <div className={styles.principalSectionObras}>
                     <div className={styles.obrasDetailDecrement}></div>
                     <div className={styles.obrasDetail}>
-                    <BtnGoogle/>
+                  
                         <div className={styles.obrasSimilares}></div>
                         <div className={styles.obrasSimilares}></div>
                         <div className={styles.obrasSimilares}></div>
