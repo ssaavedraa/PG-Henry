@@ -4,6 +4,8 @@ import { CarsDetailObra } from '../obrasDetail/CarsDetailObra'
 import data from '../../dataJson/artists.json'
 import paintings from '../../dataJson/paintings.json'
 import { getDetailObra } from '../../selector/getDetailObra'
+import NavBar from '../navbar/navbar.component'
+import { BtnGoogle } from './BtnGoogle'
 
 
 
@@ -19,7 +21,7 @@ export const DetailOfArt = () => {
 
 
             <header className={styles.principalHeader}>
-
+            <NavBar />
             </header>
 
             <section className={styles.principalSection}>
@@ -41,7 +43,7 @@ export const DetailOfArt = () => {
                 <div className={styles.principalSectionObras}>
                     <div className={styles.obrasDetailDecrement}></div>
                     <div className={styles.obrasDetail}>
-
+                    <BtnGoogle/>
                         <div className={styles.obrasSimilares}></div>
                         <div className={styles.obrasSimilares}></div>
                         <div className={styles.obrasSimilares}></div>
@@ -51,9 +53,9 @@ export const DetailOfArt = () => {
                 </div>
             </section>
 
-            <footer className={styles.principalFooter}>
+            {/* <footer className={styles.principalFooter}>
 
-            </footer>
+            </footer> */}
 
 
 

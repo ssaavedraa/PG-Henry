@@ -92,8 +92,8 @@ align-items: center;
 }
 .btnCars {
     position: absolute;
-    margin-right: -350px;
-    margin-bottom: -200px;
+    margin-right: -400px;
+    margin-bottom: -230px;
     display: flex;
     flex-direction: column;
     gap: 3px;

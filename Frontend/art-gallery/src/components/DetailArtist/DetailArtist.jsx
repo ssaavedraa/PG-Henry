@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./DetailArtist.module.css";
 
-const artistas = require("../../assets/artistas.json");
+const artistas = require("../../dataJson/artists.json");
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
