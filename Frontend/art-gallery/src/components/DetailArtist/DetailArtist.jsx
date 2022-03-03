@@ -13,7 +13,7 @@ const DetailArtist = () => {
   let artistas = artists.find(a => {
     return a.id === id
   })
-  console.log(artistas)
+
   return (
     <div className="divContainer">
       <h1>Kate Louise Powell</h1>
