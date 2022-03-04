@@ -5,8 +5,7 @@ import styles from './Detail.module.css'
 export const DetailOfArt = () => {
 
 const navigate = useNavigate()
-    
-// const { id } = useParams();
+
 const handleReturn = () => {
  navigate(-1)
 }
