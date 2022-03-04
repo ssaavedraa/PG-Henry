@@ -8,7 +8,7 @@
 
 .cards-container{
     width: 80%;
-    margin: 3rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
 }
