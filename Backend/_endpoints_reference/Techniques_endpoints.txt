@@ -1,0 +1,34 @@
+--------------------------Technique------------------------
+
+
+    GET-(http://localhost:3001)/technique/getall 
+
+Devuelve un array con todas las tecnicas:
+[
+    {id, name, description},
+    {id, name, description},
+    ...
+]
+Por ejemplo:
+[
+    {id:1, name:"Watercolor", description:"Pintura basada al agua"}
+]
+
+
+
+    POST-(http://localhost:3001)/technique/add 
+
+recibe por body los datos para crear una tecnica nueva:
+    {name, description}
+Por ejemplo:
+    {name:"Oil", description:"pintura basada en oleo que queda bien"}
+Devuelve los datos de la tecnica creada con codigo 200
+
+
+
+
+    DELETE-(http://localhost:3001)/technique/remove/:id
+
+Elimina la tecnica con id ":id". 
+En caso de exito retorna un string con codigo 200.
+En caso de error retorna un string con el error de codigo 400
