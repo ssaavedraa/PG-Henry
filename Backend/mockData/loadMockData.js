@@ -19,10 +19,11 @@ const loadMockData = async () => {
 		const createdPurchase = await Purchase.create(purchases[i]);
 		await createdPurchase.addPaintings(purchases[i].paintingId);
 	}
-	for (let i = 0; i < reviews.length; i++) {
+	/* for (let i = 0; i < reviews.length; i++) {
 		const createdReview = await Review.create(reviews[i]);
 		await createdReview.addUser(reviews[i].userId);
-	}
+	} */
+	await Review.bulkCreate(reviews);
 };
 
 module.exports = loadMockData;
