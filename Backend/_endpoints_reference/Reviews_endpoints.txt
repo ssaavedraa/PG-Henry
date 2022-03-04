@@ -1,0 +1,51 @@
+--------------------------Reviews------------------------
+
+
+    GET-(http://localhost:3001)/getByArtist/:id
+
+Devuelve un array con todas las reviews del artista con id ":id":
+[
+    {id,title,body,score,paintingTitle, paintingPhoto, paintingPrice}
+]
+Por ejemplo:
+[{
+    "title": "Professional",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+    "score": 5,
+    "id": 1,
+    "paintingTitle":"Brushstroke with Spatter",
+    "paintingPhoto":"https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
+    "paintingPrice":1400,
+}]
+
+
+
+    GET-(http://localhost:3001)/getById/:id
+
+Devuelve la review con id ":id":
+    {title,body,score,painting:{height, width, photos:[{id,url,altText}]}, artist:{name,score}}
+por ejemplo:
+{
+    "title": "Creative",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+    "score": 4,
+    "painting.height": 243.8,
+    "painting.width": 325.1,
+    "painting.photos.id": 2,
+    "painting.photos.url": "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
+    "painting.photos.altText": null,
+    "artist.name": "Roy Lichtenstein",
+    "artist.score": 3.8
+}
+
+
+Las siguentes rutas ya estan implementadas pero dependen de la autenticacion de usuario:
+
+    POST-(http://localhost:3001)/review/add
+    PUT-(http://localhost:3001)/review/edit/:id
+    DELETE-(http://localhost:3001)/remove/:id
+
+
+
+
+
