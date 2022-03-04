@@ -106,7 +106,14 @@ const search = async (req, res) => {
     if (orientation) {
       paintings = paintings.filter(({ orientation: or }) => or === orientation);
     }
-    res.json(paintings || []);
+    //
+    const fixedPaintings = paintings.map((p) => {
+      const { photos, ...painting } = p.toJSON();
+      const image = photos[0].url;
+      return { ...painting, image };
+    });
+
+    res.json(fixedPaintings || []);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }

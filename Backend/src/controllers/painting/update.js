@@ -1,4 +1,4 @@
-const { Painting, Technique, painting_technique } = require("../../db");
+const { Painting, painting_technique } = require("../../db");
 const updatePhotos = require("./utils/updatePhotos.js");
 
 const update = async (req, res) => {
