@@ -7,6 +7,7 @@ import AdminPanel from './components/AdminPanel/AdminPanel';
 import Login from './components/Login/Login.component';
 import Footer from './components/Footer/Footer';
 import Gallery from "./components/Gallery/Gallery";
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/artists/:id" element={<DetailArtist />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/gallery" element={<Gallery />} />
+          <Route exact path="/home" element={<Home />} />
         </Routes>
         <Footer />
       </div>
