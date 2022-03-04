@@ -36,7 +36,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-        <NavLink to="/contactus">
+        <NavLink to="/contactus" className={styles.links}>
           <h5>Contacto</h5>
           </NavLink>
         </li>
