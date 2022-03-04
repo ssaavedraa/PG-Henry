@@ -1,25 +1,12 @@
 import React from "react"
-import './MyProfile.css'
+import './AddArtists.css'
 
-import { useState } from "react";
+
 import NavPanel from "../NavPanel/NavPanel";
 import imgprofile from '../../../assets/img/profile.png'
 
 
-const MyProfile = ()=>{
-
-    const [edit, setEdit] = useState(false);
-  console.log(edit)
-
-  function HandleActive() {
-
-    if(edit === false){
-    setEdit(true);
-  }else{
-    setEdit(false);
-  } 
-  }
-
+const AddArtists = ()=>{
 
 
     return (
@@ -28,114 +15,94 @@ const MyProfile = ()=>{
         <div className="admin-box">
          <NavPanel/>
           <div className="component-box">
-              <div className="tittle-box"><h2>Admin Panel</h2></div>
+          <div className="tittle-box"><h2>Admin Panel</h2></div>
            
             <div className="reder-box">
-
-
-
                 <div className="myprofile-box">
+          
           <div className="information-box">
-            <div className="title">
-              <img src={imgprofile} height="100px" alt="profile" />
-              <h2> My Profile</h2>
-              <h3>ADMIN</h3>
-            </div>
+          <h2> Add new Artist</h2>
+              
+           
             <div className="data">
-              {edit === false ? (
-                <>
-                  <span> Name: </span>
+
+            <form key="form" 
+            // onSubmit={(e) => handleSubmit(e)}
+            >
+
+              </form>
+              
+                  <label> Name: </label>
                   <input
                     type="text"
                     autoComplete="off"
                     key="name"
                     className="input"
                     required
-                    value="Santiago Rodriguez"
+                    value=""
                     name="name"
                     // onChange={handleChange}
-                    disabled
+                    
                   />
-                  <span> Email: </span>
+                  <label> Biography: </label>
                   <input
-                    type="text"
+                    type="coment"
                     autoComplete="off"
                     key="email"
                     className="input"
                     required
-                    value="santiagorodriguez@santart.com"
+                    value=""
                     name="email"
                     // onChange={handleChange}
-                    disabled
+                   
                   />
-                  <span> Password :</span>
+                  <label> Photo :</label>
                   <input
                     type="text"
                     autoComplete="off"
                     key="password"
                     className="input"
                     required
-                    value="*********"
+                    value=""
                     name="password"
                     // onChange={handleChange}
-                    disabled
+                    
                   />
-
-                <div>
-                <button onClick={() => HandleActive(true)} className="btn-edit">
-                  Edit my profile
-                </button>
-              </div>
-                </>
-              ) : (
-                <>
-                  <span> Name: </span>
+               
+              
+                
+                  <label> Email: </label>
                   <input
                     type="text"
                     autoComplete="off"
                     key="name"
                     className="input"
                     required
-                    value="Santiago Rodriguez"
+                    value=""
                     name="name"
                     // onChange={handleChange}
                   />
-                  <span> Email: </span>
+                  <label> Location: </label>
                   <input
                     type="text"
                     autoComplete="off"
                     key="email"
                     className="input"
                     required
-                    value="santiagorodriguez@santart.com"
+                    value=""
                     name="email"
                     // onChange={handleChange}
                   />
-                  <span> Password :</span>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="password"
-                    className="input"
-                    required
-                    value="*********"
-                    name="password"
-                    // onChange={handleChange}
-                  />
-
-<div>
-                <button  className="btn-edit">
-                  Change my password
-                </button>
-                <button onClick={() => HandleActive(true)} className="btn-edit">
-                  Save
+                  
+              <div>
+                <button 
+                // onClick={() => HandleActive(true)} 
+                className="btn-edit">
+                  Add new artists
                 </button>
               </div>
-                </>
-              )}
-
-             
             </div>
+          </div>
           </div>
         </div>
                 
@@ -143,10 +110,10 @@ const MyProfile = ()=>{
                 
                 </div>
           </div>
-        </div>
+        
       </>
     );
 
 }
 
-export default MyProfile;
+export default AddArtists;
