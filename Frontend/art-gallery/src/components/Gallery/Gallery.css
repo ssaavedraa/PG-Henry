@@ -1,6 +1,7 @@
 .gallery-container{
     width: 90vw;
     min-height: 90vh;
+    max-height: 180vh;
     margin: auto;
     display: flex;
 }

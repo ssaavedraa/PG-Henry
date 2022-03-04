@@ -31,12 +31,13 @@ for (let i = 0; i < technique.length; i++) {
   elemen.push({ id: i, name: technique[i] });
 }
 
-function Filters() {
+function Filters({ handleOnChange }) {
   return (
     <div className="filter-container">
-      <select className="order">
-        <option value="">AtoZ</option>
-        <option value="">ZtoA</option>
+      <select className="order" name="sort" onChange={handleOnChange}>
+        <option value="">Seleccione el orden:</option>
+        <option value="ASC">AtoZ</option>
+        <option value="DESC">ZtoA</option>
       </select>
       <Title
         texto="PRECIO"

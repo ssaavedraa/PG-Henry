@@ -25,6 +25,7 @@ label {
 
 .filter-container {
   height: 90%;
+  max-height: 150vh;;
   margin-top: 3rem;
   width: 15rem;
   overflow-y: scroll;
@@ -98,7 +99,7 @@ label {
 }
 
 .container-range {
-  height: 50%;
+  height: 19rem;
   margin: 0 0.6em;
   padding: 0.2em;
 }

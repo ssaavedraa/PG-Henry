@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPaintings } from "../../redux/actions/actions";
+import { getPaintings, getPaintingsOrder } from "../../redux/actions/actions";
 
 import Filters from "../Filters/Filters";
 import CardsPaints from "../../containers/CardsPaints/CardsPaints";
@@ -15,6 +15,17 @@ function Gallery() {
   React.useEffect(() => {
     dispatch(getPaintings());
   }, [dispatch]);
+
+  //Filters
+  const [filter, setFilter] = useState({
+    sort: "",
+  });
+
+  React.useEffect(() => {
+    dispatch(getPaintingsOrder(filter.sort));
+  }, [dispatch, filter]);
+
+  //------------------
 
   //Pagination
   const [page, setPage] = useState({
@@ -33,9 +44,16 @@ function Gallery() {
     });
   //----------------------
 
+  function handleOnChange(e) {
+    setFilter({
+      ...filter,
+      [e.target.name]: e.target.value,
+    });
+  }
+
   return (
     <div className="gallery-container">
-      <Filters />
+      <Filters handleOnChange={handleOnChange} />
       <div className="cards-container">
         <CardsPaints paintings={actualPaints} />
         <Pagination
