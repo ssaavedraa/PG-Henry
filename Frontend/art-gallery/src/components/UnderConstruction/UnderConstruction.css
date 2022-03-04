@@ -1,0 +1,34 @@
+.under-box{
+    align-self: center;
+    text-align: center;
+    margin: 2rem;
+   
+    
+    
+}
+
+.under-box img:hover {filter: opacity(.5);}
+
+.under-back{
+
+    display:inline-flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+
+.btn-log{
+    justify-content: center;
+    list-style: none;
+    background-color: rgb(212, 212, 212);
+    border-radius: 20px;
+    border-style: none;
+    height: 50px;
+    width: 100px;
+   
+}
+
+.btn-log:hover{
+ background-color: rgb(160, 160, 160);
+
+}
