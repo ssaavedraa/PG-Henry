@@ -6,6 +6,6 @@ router.get("/get/:id", paintingControllers.getById);
 router.get("/getall", paintingControllers.getAll);
 router.get("/search", paintingControllers.search);
 router.post("/create", paintingControllers.add);
-router.patch("/modify/:id" /*todo: controller*/);
+router.put("/update/:id", paintingControllers.update);
 
 module.exports = router;

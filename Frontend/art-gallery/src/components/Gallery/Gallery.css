@@ -1,0 +1,14 @@
+.gallery-container{
+    width: 90vw;
+    min-height: 90vh;
+    max-height: 180vh;
+    margin: auto;
+    display: flex;
+}
+
+.cards-container{
+    width: 80%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
