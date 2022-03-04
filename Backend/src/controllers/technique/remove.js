@@ -7,7 +7,7 @@ const remove = async (req, res) => {
 		return res.status(400).send(`No technique with Id:${deleteId} found`);
 	try {
 		await Technique.destroy({ where: { id: deleteId } });
-		res.json("Technique Deleted");
+		res.send("Technique Deleted");
 	} catch (error) {
 		res.status(404).send(error);
 	}
