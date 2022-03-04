@@ -5,8 +5,7 @@ import { GET_PAITINGS, GET_ORDER_PAINTS } from "../action-types/index.js";
 export function getPaintings() {
   return async function (dispatch) {
     try {
-      var json = await axios.get("http://localhost:3001/painting/getall");
-      //console.log('paintings', json)
+      var json = await axios.get("http://localhost:3001/painting/search");
       return dispatch({
         type: GET_PAITINGS,
         payload: json.data,
@@ -19,14 +18,16 @@ export function getPaintings() {
 
 export function getPaintingsOrder(sort) {
   return async (dispatch) => {
-    try{
-      let paintings = await axios.get(`http://localhost:3001/painting/getall`);
-      if(sort){
-        paintings = await axios.get(`http://localhost:3001/painting/search?orderBy=title&order=${sort}`);
+    try {
+      let paintings = await axios.get(`http://localhost:3001/painting/search`);
+      if (sort) {
+        paintings = await axios.get(
+          `http://localhost:3001/painting/search?orderBy=title&order=${sort}`
+        );
       }
       dispatch({ type: GET_ORDER_PAINTS, payload: paintings.data });
-    }catch(error){
+    } catch (error) {
       console.log(error);
     }
-  }
+  };
 }
