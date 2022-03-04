@@ -36,9 +36,9 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-        <Link to="/contactus">
+        <NavLink to="/contactus">
           <h5>Contacto</h5>
-          </Link>
+          </NavLink>
         </li>
         <h4>|</h4>
         {!session ? (
