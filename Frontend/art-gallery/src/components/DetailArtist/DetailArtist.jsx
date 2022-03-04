@@ -20,7 +20,7 @@ const DetailArtist = () => {
 
   //Prueba redux
   const paintings = useSelector((state) => state.paintings);
- // console.log ('Jorgy estoy en el estado', paintings)
+ //console.log ('Jorgy estoy en el estado', paintings)
   
   const {id} = useParams()
 

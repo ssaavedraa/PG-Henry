@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
@@ -12,7 +12,9 @@ export default function NavBar() {
 
   return (
     <div className={styles.navbar}>
-      <img src={Logo} alt="logo" />
+      <Link to="/">
+        <img src={Logo} alt="logo" />
+      </Link>
       <div className={styles.div_search}>
         <input
           type="text"
@@ -36,9 +38,9 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-        <Link to="/contactus">
+        <NavLink to="/contactus" className={styles.links}>
           <h5>Contacto</h5>
-          </Link>
+          </NavLink>
         </li>
         <h4>|</h4>
         {!session ? (
