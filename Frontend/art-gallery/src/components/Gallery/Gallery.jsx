@@ -18,11 +18,11 @@ function Gallery() {
 
   //Filters
   const [filter, setFilter] = useState({
-    sort: "",
+    sort: "ASC",
   });
 
   React.useEffect(() => {
-    dispatch(getPaintingsOrder(filter.sort));
+    dispatch(getPaintings({ orderBy: "title", order: filter.sort }));
   }, [dispatch, filter]);
 
   //------------------
