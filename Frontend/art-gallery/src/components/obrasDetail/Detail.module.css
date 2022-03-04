@@ -2,8 +2,8 @@
 
 .containerDetail {
     width: 100%;
-    height: 90vh;
-    background: rgb(185, 78, 78);
+    height: 130vh;
+    background: #F5F5F5;
     display: flex;
     flex-direction: column;
 }
@@ -24,21 +24,127 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(211, 199, 199);
+    background: #F5F5F5;
     flex-wrap: wrap;
-    /* transform: translate(0px, -50px); */
-    /* gap: 50px; */
-    /* margin-bottom: 30px; */
+    
+}
+.principalSectionTitle{
+font-size: 30px;
+font-weight: 800;
+margin-top: -30px;
 }
 .principalSectionInterno{
+    width: 100%;
+    /* height: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
-    /* border:  2px solid red; */
+  
 }
-
+.internoimg{
+    width: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    }
+.internoimg:hover{
+     transform: scale(1.05);
+    transition: all 1s;
+}
+.internoimg img{
+       width: 80%;
+       height: 90%;
+       object-fit: cover;
+        }
+.internodescription{
+    width: 40%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    }
+.internodescription h3{
+     margin-top: 50px;
+     margin-bottom: 30px;
+        }
+.internodescription p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+           
+ }
+.btnCard {
+width: 240px;
+height: 40px;
+background: rgb(185, 185, 185);
+margin-top: 20px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+transition: all 1s;
+cursor: pointer;
+ }
+.btnReturn{
+    width: 240px;
+    height: 40px;
+    background: rgb(185, 185, 185);
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 1s;
+    cursor: pointer;
+ }
+ .btnCard:hover {
+     color: white;
+     background: rgb(29, 28, 28);
+     transition: all 1s;
+ }
+ .btnReturn:hover {
+    color: white;
+    background: rgb(29, 28, 28);
+    transition: all 1s;
+}
+ .cardImage{
+font-size: 30px;
+font-weight: 700;
+margin-left: 10px;
+ }
+ .cardImageReturn{
+   
+ }
+ .cardImageReturn div {
+    width: 10px;
+    height: 10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px rgb(5, 5, 5) solid;
+  border-bottom: 2px rgb(5, 5, 5) solid;
+   cursor: pointer;
+   transform: translate(20px) rotate(140deg);
+   transition: all 1s;
+ }
+ .btnReturn:hover .cardImageReturn div{
+    border-right: 2px white solid;
+    border-bottom: 2px white solid;
+    transition: all 1s;
+    
+}
+ .cardText{
+margin-right: 35px;
+ }
+ .cardImageReturn{
+margin-right: 10px;
+   
+     }
 .principalSectionObras{
 width: 100%;
 height: 100px;
@@ -46,110 +152,66 @@ height: 100px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+margin-top: 100px;
 }
 
 
 
 
 .obrasDetailDecrement{
-  width: 15px;
-  height: 15px;
+    width: 20px;
+    height: 20px;
   border-left: none;
   border-top: none;
   border-right: 2px rgb(5, 5, 5) solid;
   border-bottom: 2px rgb(5, 5, 5) solid;
    cursor: pointer;
-   transform: translate(20px) rotate(140deg);
+   transform: translate(40px) rotate(140deg);
+   transition: all 1s;
 }
 .obrasDetailIncrement{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-left: none;
     border-top: none;
     border-right: 2px rgb(5, 5, 5) solid;
     border-bottom: 2px rgb(5, 5, 5) solid;
      cursor: pointer;
-     transform: translate(-20px) rotate(320deg);
+     transform: translate(-40px) rotate(320deg);
+     transition: all 1s;
+}
+.obrasDetailIncrement:hover{
+    border-right: 5px rgb(5, 5, 5) solid;
+    border-bottom: 5px rgb(5, 5, 5) solid;
+    transition: all 1s;
+}
+.obrasDetailDecrement:hover{
+    border-right: 5px rgb(5, 5, 5) solid;
+    border-bottom: 5px rgb(5, 5, 5) solid;
+    transition: all 1s;
 }
 .obrasDetail{
     width: 80%;
     height: 80%;
-    margin-top: 50px;
+    margin-top: -80px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .obrasSimilares{
-    width: 120px;
+    width: 200px;
+    height: 150px;
+
+    /* border-radius: 20px; */
+}
+.obrasSimilares img{
+    width: 100%;
     height: 100%;
-    border: 2px solid yellow;
-    border-radius: 20px;
+    object-fit: cover;
 }
-.btnCars {
-    position: absolute;
-    margin-right: -400px;
-    margin-bottom: -230px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    
-}
-.buttonsCars {
-
-    width: 120px;
-    height: 20px;
-    border-radius: 20px;
-    border: none;
-    background: transparent;
-    box-shadow: 
-    0 0px 10px rgba(0, 0, 0, 0.2) inset, 0px 0px 10px rgba(0, 0, 0, 0.2)inset,
-    0 0px 10px rgba(0, 0, 0, 0.4)inset, 0px 0px 10px rgba(0, 0, 0, 0.4)inset;
-    cursor: pointer;
-    transition: all 1s;
-}
-.buttonsCars:hover {
-
-    box-shadow: 
-    0 0px 20px rgba(255, 254, 254, 0.2), 0px 0px 30px rgba(255, 254, 254, 0.2),
-    0 0px 20px rgba(255, 254, 254, 0.2), 0px 0px 30px rgba(255, 254, 254, 0.2);
-    transition: all 1s;
-    background-color: #808080;
-    transition: all 1s;
-}
-
 
   @media (max-width: 689px) {
-    .containerDetail {
-        width: 100%;
-        height: 600px;
-    }
-  .principalSection{
-      gap: 10px;
-  }
-  .obrasDetail{
-    gap: 10px;
+   
 }
-  }
-   @media (max-width: 521px) {
-    .containerDetail {
-        height: 970px;
-    }
-    .btnCars {
-        
-      margin-left: -250px;
-      margin-bottom: -490px;
-      
-    }
-.principalSectionInterno{
-    margin-top: -100px;
-}
-  } 
-  @media (max-width: 334px) {
-  .obrasDetail{
-      width: 100%;
-      height: 80px;
-      margin-top: 110px;
-  }
-  } 
-  
+ 

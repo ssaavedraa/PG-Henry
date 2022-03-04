@@ -1,0 +1,76 @@
+--------------------------Paintings------------------------
+
+    GET-(http://localhost:3001)/painting/getall 
+Devuelve un array con todas las pinturas:
+[
+    { id, title, orientation, description,height,width,price,
+    techniques:[{id,name,description}],
+    artist:{id,namebiography,photo,email,score}},
+    { id, title, orientation, description,height,width,price,
+    techniques:[{id,name,description}],
+    artist:{id,namebiography,photo,email,score}},
+    ....
+]
+Por ejemplo:
+[
+    {
+        "orientation": "horizontal",
+        "id": 1,
+        "title": "Brushstroke with Spatter",
+        "description": " a wry commentary on the bravura of midcentury Abstract Expressionism. Here Lichtenstein combines the gestural sweep of Willem de Kooning’s brushwork with the rhythmic drips typical of Jackson Pollock. He isolates and magnifies his stroke and spatter against a ground of Ben Day dots, reproducing the conventionally painterly elements as flatly as possible with no trace of emotion or texture. ",
+        "height": 31.1,
+        "width": 39.4,
+        "price": 1400,
+        "techniques": [
+            {
+                "id": 1,
+                "name": "Oleo",
+                "description": null
+            }
+        ],
+        "artist": {
+            "id": 1,
+            "name": "Roy Lichtenstein",
+            "biography": "Lichtenstein then left New York to study at Ohio State University, which offered studio courses and a degree in fine arts. His studies were interrupted by a three-year stint in the Army during and after World War II between 1943 and 1946. After being in training programs for languages, engineering, and pilot training, all of which were cancelled, he served as an orderly, draftsman, and artist.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Roy_Lichtenstein.jpg",
+            "email": "Lichtenstein@santart.com",
+            "score": 3
+        }
+    }
+]
+
+
+
+
+    GET-(http://localhost:3001)/painting/get/:id
+
+Devuelve un objeto con la pintura de id ":id":
+{ id, title, orientation, description,height,width,price,
+    techniques:[{id,name,description}],
+    artist:{id,namebiography,photo,email,score}}
+Por ejemplo:
+{
+    "orientation": "vertical",
+    "id": 4,
+    "title": "Woman III",
+    "description": "In Woman III Lichtenstein injected both humor and a Pop Art chill into the older painter’s wriggling swaths and slashes of bold color while playing directly on de Kooning’s series of confrontational “Woman” paintings. The fierce figure is denoted by two eyes, an elfin ear, nose, lips, bared teeth, and a patch of red dots that stand in for a rouged cheek.",
+    "height": 203.2,
+    "width": 142.2,
+    "price": 2500,
+    "techniques": [
+        {
+            "id": 3,
+            "name": "Acrylic",
+            "description": null
+        }
+    ],
+    "artist": {
+        "id": 1,
+        "name": "Roy Lichtenstein",
+        "biography": "Lichtenstein then left New York to study at Ohio State University, which offered studio courses and a degree in fine arts. His studies were interrupted by a three-year stint in the Army during and after World War II between 1943 and 1946. After being in training programs for languages, engineering, and pilot training, all of which were cancelled, he served as an orderly, draftsman, and artist.",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Roy_Lichtenstein.jpg",
+        "email": "Lichtenstein@santart.com",
+        "score": 3
+    }
+}
+

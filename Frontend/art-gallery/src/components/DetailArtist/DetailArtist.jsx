@@ -2,33 +2,39 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import {useParams} from 'react-router-dom'
 import "./DetailArtist.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getPaintings } from "../../redux/actions/actions";
+import { useEffect } from "react";
 
 const {artists} = require('../../assets/Json/artists.json')
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
 
+  const dispatch = useDispatch();
+
+  //Esto es temporal
+  useEffect(() => {
+    dispatch(getPaintings());
+  }, [dispatch]);
+
+  //Prueba redux
+  const paintings = useSelector((state) => state.paintings);
+ // console.log ('Jorgy estoy en el estado', paintings)
+  
   const {id} = useParams()
 
   let artistas = artists.find(a => {
     return a.id === id
   })
-
   return (
     <div className="divContainer">
-      <h1>Kate Louise Powell</h1>
+      <h1>{artistas.name}</h1>
       <div className="divContainerimg">
-        <img src={require("./base.jpg")} alt="artist" className="imgArtist" />
+        <img src={artistas.photo} alt="artist" className="imgArtist" />
         <div className="divBio">
           <p>
-            Kate Louise Powell is an illustrator and animal rights activist from
-            Halifax, West Yorkshire, currently based in Glasgow. After drawing
-            recreationally all her life, Kate began to take her art career more
-            seriously in 2012, producing a series of popular illustrations
-            featuring the recurring motifs of flowers and butterflies. Since
-            then he has experimented with photography, mixed media and painting,
-            but continues to work primarily with colored pencil/pencil and black
-            ink.
+          {artistas.biography}
           </p>
           <div className="divButton">
             <button>Ver obras</button>
@@ -54,7 +60,7 @@ const DetailArtist = () => {
                 <FaStar style={{color: "#F0C929", fontSize: '20px'}}/>
               </div>
             </div>
-            <p>Necesario en mi coleccion</p>
+            <p>Super lindo</p>
           </div>
         </div>
       </div>

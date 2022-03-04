@@ -9,14 +9,12 @@ const AdminPanel = ()=>{
       <div className="myprofile-box">
           <div className="information-box">
 
-          <div className="title"> 
+          <div className="title">
           <img src={imgprofile} height="150px" alt="profile"/>
           <h1> My Profile</h1>
           <h3>ADMIN</h3>
-          
          </div>
           <div className="data">
-              
               <span> Name: </span>
               <input
                 type="text"
@@ -44,7 +42,7 @@ const AdminPanel = ()=>{
 
               <span> Password :</span>
               <input
-                type="text"
+                type="password"
                 autoComplete="off"
                 key="password"
                 className="input"
@@ -56,25 +54,12 @@ const AdminPanel = ()=>{
               />
 
               <div><button className="btn-edit">Edit my profile</button></div>
-
               </div>
-
-
           </div>
-
-              
-    
        </div>
-      
-      
-      
       </>
-
-      
       );
-  
   }
-  
   export default AdminPanel;
 
 

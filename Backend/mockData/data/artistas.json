@@ -1,0 +1,260 @@
+{
+  "artists": [
+    {
+      "id": "1",
+      "name": "Roy Lichtenstein",
+      "biography": "Lichtenstein then left New York to study at Ohio State University, which offered studio courses and a degree in fine arts. His studies were interrupted by a three-year stint in the Army during and after World War II between 1943 and 1946. After being in training programs for languages, engineering, and pilot training, all of which were cancelled, he served as an orderly, draftsman, and artist.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Roy_Lichtenstein.jpg",
+      "email": "Lichtenstein@santart.com",
+      "location": "United States",
+      "paintings": [
+        {
+          "id": "P-1",
+          "title": "Brushstroke with Spatter",
+          "description": " a wry commentary on the bravura of midcentury Abstract Expressionism. Here Lichtenstein combines the gestural sweep of Willem de Kooning’s brushwork with the rhythmic drips typical of Jackson Pollock. He isolates and magnifies his stroke and spatter against a ground of Ben Day dots, reproducing the conventionally painterly elements as flatly as possible with no trace of emotion or texture. ",
+          "orientation": "horizontal",
+          "technique": "Oleo",
+          "price": 1400,
+          "image": "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",  
+          "dimensions": {
+            "height": 31.1,
+            "width": 39.4
+          }
+        },
+        {
+          "id": "P-2",
+          "title": "Foot Medication",
+          "description": "While he had adapted his early compositions from actual comic books, here Lichtenstein rather referred to an art historical rather than a pop culture source: Henri Matisse’s Red Studio (1911; Museum of Modern Art, New York), which features Matisse’s canvases casually set around a room.",
+          "orientation": "horizontal",
+          "technique": "Oleo",
+          "price": 1800,
+          "image": "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 243.8,
+            "width": 325.1
+          }
+        },
+        {
+          "id": "P-3",
+          "title": "Alka Seltzer",
+          "description": "The artist’s use of mechanical reproduction conventions served to unify his composition and produce movement and volume on a two-dimensional surface. Alka Seltzer is one of Lichtenstein’s watershed works because it shows the artist summing up his early graphic techniques and introducing what would become his most significant formal preoccupations in the years that followed",
+          "orientation": "Vertical",
+          "technique": "Watercolor",
+          "price": 2300,
+          "image": "https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 76.3,
+            "width": 56.7
+          }
+        },
+        {
+          "id": "P-4",
+          "title": "Woman III",
+          "description": "In Woman III Lichtenstein injected both humor and a Pop Art chill into the older painter’s wriggling swaths and slashes of bold color while playing directly on de Kooning’s series of confrontational “Woman” paintings. The fierce figure is denoted by two eyes, an elfin ear, nose, lips, bared teeth, and a patch of red dots that stand in for a rouged cheek.",
+          "orientation": "Vertical",
+          "technique": "Acrylic",
+          "price": 2500,
+          "image": "https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 203.2,
+            "width": 142.2
+          }
+        },
+        {
+          "id": "P-5",
+          "title": "Landscape 4, from Ten Landscapes",
+          "description": "Lichtenstein exploited everyday practices of visual representation and magnified them, indicating the gas bubbles rising over the glass by meticulously scraping away extra spaces from a field of imitation hand-stenciled Benday dots",
+          "orientation": "vertical",
+          "technique": "Charcoal",
+          "price": 3699,
+          "image": "https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 42.2,
+            "width": 54.7
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "2",
+      "name": "Andy Warhol",
+      "biography": "No artist is more closely associated with advertising, consumer culture, and mass media than Andy Warhol. Through his brazen appropriation of images and his radical use of the photo-emulsion silkscreen process, the artist became synonymous with Pop. His ability to produce the same image—over and over, quickly and efficiently—upset traditional boundaries between fine and commercial art. ",
+      "photo": "https://www.ahoradata.com/wp-content/uploads/2021/02/header.jpg",
+      "email": "Warhol@saintArt.com",
+      "location": "United States",
+      "paintings": [
+        {
+          "id": "P-1",
+          "title": "Marilyn Monroe (Marilyn)",
+          "description": "Marilyn was the first such portfolio, consisting of ten images made from the same 1953 publicity photograph of Marilyn Monroe in the film Niagara, which Warhol transformed with intentionally off-register printing and garish combinations of psychedelic colors.",
+          "orientation": "Vertical",
+          "technique": "Oleo",
+          "price": 4200,
+          "image": "https://www.artic.edu/iiif/2/5a377db1-d100-0f0c-6b46-fa7440a92245/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 91.4,
+            "width": 91.4
+          }
+        },
+        {
+          "id": "P-2",
+          "title": "Mao",
+          "description": "The most influential of Pop artists, Andy Warhol cast a cool, ironic light on the pervasiveness of commercial culture and contemporary celebrity worship. Early in his career, he began to utilize the silk-screen process to transfer photographed images to canvas, creating multiple portraits of celebrities including Marilyn Monroe, Elvis Presley, and Jacqueline Kennedy, as well as duplicated images of mass-produced products such as Campbell’s soup cans and Coca-Cola bottles.",
+          "orientation": "Vertical",
+          "technique": "Oleo",
+          "price": 3500,
+          "image": "https://www.artic.edu/iiif/2/97cb5c4b-cce5-c4d8-f303-613ce92832c7/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 448.3,
+            "width": 346.7
+          }
+        },
+        {
+          "id": "P-3",
+          "title": "Early Colored Liz",
+          "description": "Pop Art icon Andy Warhol’s embrace of mass culture radically altered the course of late twentieth-century art history, redefining both what a work of art can or should depict as well as the way in which it can be made. His breakthrough artistic moment came when he took the commercial printing process of photo-emulsion silkscreen and applied it to canvas.",
+          "orientation": "Vertical",
+          "technique": "Watercolor",
+          "price": 1900,
+          "image": "https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 101.6,
+            "width": 101.6
+          }
+        },
+        {
+          "id": "P-4",
+          "title": "Self-Portrait",
+          "description": "Warhol based his first painted self-portrait on a photo booth photograph, and the work showcases Warhol’s ability to manipulate his persona itself as an artistic medium. As he admitted a few years later, “I’d prefer to remain a mystery, I never like to give my background and, anyway, I make it all up different every time I’m asked.” This work marked a starting point for Warhol’s career-long engagement with the construction of identity, especially as it pertained to crafting his public persona.",
+          "orientation": "Vertical",
+          "technique": "Acrylic",
+          "price": 3400,
+          "image": "https://www.artic.edu/iiif/2/446680d8-037b-aea7-738e-62ac5765aaa3/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 50.8,
+            "width": 40.6
+          }
+        },
+        {
+          "id": "P-5",
+          "title": "",
+          "description": "President John F. Kennedy. As was his practice, Warhol worked from existing imagery; in this case, press photography from the slain president’s funeral. By cropping and enlarging the selected image of the veiled former First Lady, Warhol focuses attention on his “star” much like a director using a close-up lens. The effect is a chilling glamorization of the tragic.",
+          "orientation": "Vertical",
+          "technique": "Charcoal",
+          "price": 2500,
+          "image": "https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg",
+          "dimensions": {
+            "height": 152.4,
+            "width": 162.6
+          }
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Jean Marc Janiaczyk Douai",
+      "biography": "Jean-Marc Janiaczyk nació en 1966 en Douai, en el norte de Francia, es un pintor paisajista autodidacta que pintó exclusivamente oleos y en 1990 comenzó con un estilo técnicamente exigente, el hiper-realismo. En 1998 comenzó a utilizar espátula y se dedico sobre todo a paisajes de la Provenza, con sus colores vibrantes e intensos. En sus pinturas ha retratado con fidelidad la luz y el calor del verano de la región. Amapolas de color rojo brillante, girasoles anaranjados, campos, casas modestas en el lateral de la carretera que se escapan en la distancia ... en los paisajes del autor se pueden ver algunas similitudes con las obras de su maestro e inspirador, V. Van Gogh. Expuso sus obras en la Florida, Francia, Dinamarca, Alemania, España y Marruecos y sus pinturas se encuentran en muchas colecciones privadas en Francia, Bélgica, EE.UU., Dinamarca, Alemania, España, República Checa y Marruecos. ",
+      "photo": "https://www.ecured.cu/images/7/75/Jeanmarcjaniaczyk1.jpg",
+      "email": "elfrances@gmail.com",
+      "location": "Douai, en el norte de Francia",
+      "paintings": [
+        {
+          "id": "",
+          "title": "Lavanda y girasoles en Provence",
+          "review": "Ilumina todo mi hogar con sus colores",
+          "description": "",
+          "orientation": "Horizontal",
+          "technique": "Óleo",
+          "price": "3000",
+          "image": {
+            "url": "https://4.bp.blogspot.com/-NriY4bpJqog/UNxEZHkze8I/AAAAAAAAKe0/tY5IJRbBEMU/s1600/caudros+paisajes+floridos+espatula+oleo+.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "40cm",
+            "width": "60cm"
+          }
+        },
+        {
+          "id": "",
+          "title": "Sol púrpura",
+          "review": "Es impresionante como el artista captura hasta el último detalle",
+          "description": "Ella sabia que algún dia él llegaria con sus flores púrpuras",
+          "orientation": "Vértical",
+          "technique": "Óleo",
+          "price": "5000",
+          "image": {
+            "url": "http://4.bp.blogspot.com/-vuiojAA-8FY/U1rz_fDe9cI/AAAAAAAADz8/IwwzfsDJbkM/s1600/1005764_409902042447956_1119483791_n.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "40",
+            "width": "1.10"
+          }
+        },
+        {
+          "id": "1",
+          "title": "Entre las poppies",
+          "review": "¿Te imaginas vivir en semejante paisaje? ¡Jean lo hace realidad!",
+          "description": "",
+          "orientation": "Horizontal",
+          "technique": "Óleo",
+          "price": "7500",
+          "image": {
+            "url": "https://1.bp.blogspot.com/-Tga46TcslJs/VhRKQLtwq7I/AAAAAAADrnM/nb5Z8MU02Y0/s1600/cultivos-de-flores-cuadros-modernos_14.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "1.00",
+            "width": "1.50"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Bav Jozwiak",
+      "biography": "Bav Jozwiak has earned her signature status in the American Watercolor Society, the National Watercolor Society, Watercolor West, and others, too numerous to mention. She is an International Award winning Artist.  Born in Vancouver, Washington, Bev still resides there with her husband of 30 plus years. She has two daughters, and three grandchildren.  She has been included in countless “Best of Art Books”, including numerous times in the well know series by North Light, “Splash”. Has had a plethora of magazine articles, including one emagazine cover,  the cover of Sept. 2017 North Light Watercolor Magazine, and the Cover of the Palette magazine in 2019. ",
+      "photo": "https://1.bp.blogspot.com/-BjXxQjCKDoE/WOATQ_-jh-I/AAAAAAAAQMI/yHZRJSgQbiYHzB2C-7EMk8XRcdu6hzIpgCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252810%2529.jpg",
+      "email": "paintingjoz@hotmail.com",
+      "location": "Vancouver, Washington",
+      "paintings": [
+        {
+          "id": "",
+          "title": "In the hood",
+          "review": "¡Fue amor a primera vista!",
+          "description": "",
+          "orientation": "Horizontal",
+          "technique": "Acuarela",
+          "price": "10000",
+          "image": {
+            "url": "https://3.bp.blogspot.com/-JvSyQr_vKI0/WOATT1DJ7KI/AAAAAAAAQNM/o5LJLloMMQswlAcaIlhzwzk1xtkNzkfKgCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252827%2529.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "60cm",
+            "width": "1.40cm"
+          }
+        },
+        {
+          "id": "",
+          "title": "Es un núdo",
+          "review": "",
+          "description": "",
+          "orientation": "Horizontal",
+          "technique": "Acuarela",
+          "price": "8000",
+          "image": {
+            "url": "https://3.bp.blogspot.com/-7aZ0604KLVM/WOATTIfI7rI/AAAAAAAAQM4/KSorXdNEO7MaqpkI0F8KAzWoQOUpmdJVwCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252822%2529.jpg",
+            "url2": ""
+          },
+          "dimensions": {
+            "height": "1.00",
+            "width": "1.40"
+          }
+        }
+      ]
+    }
+  ]
+}
