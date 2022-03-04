@@ -18,7 +18,7 @@ function App() {
         <NavBar />
         <Routes>
         <Route exact path='/admin/addartist' element={<AddArtists/>}/>
-        <Route exact path='/admin/myprofile' element={<MyProfile/>}/>
+        <Route exact path='/admin' element={<MyProfile/>}/>
         <Route exact path='/admin/additems' element={<AddItems/>}/>
           <Route exact path='/artists' element={<Artists/>}/>
           <Route exact path='/artists/:id' element={<DetailArtist/>}/>
