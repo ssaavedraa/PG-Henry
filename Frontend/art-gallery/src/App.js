@@ -10,6 +10,7 @@ import AddItems from './components/AdminPanel/AddItems/AddItems';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import Footer from './components/Footer/Footer';
 import ContactUs from './components/ContactUs/ContactUs';
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/under' element={<UnderConstruction/>}/>
           <Route exact path='/contactus' element={<ContactUs/>}/>
+          <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );

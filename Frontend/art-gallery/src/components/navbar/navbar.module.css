@@ -14,7 +14,7 @@
     margin-top: .25rem;
     justify-content:space-between;
     height: 4.35rem;
-    width: 100vw;
+    width: 100%;
     box-shadow: 2px 2px 5px var(--fifth-color);
 }
 
@@ -36,9 +36,13 @@ li{
     cursor: pointer;
 }
 
-li:hover{
+li:hover, .links:hover{
     color: var(--primary-color);
     transition: .2s;
+}
+
+.links:active{
+    color: var(--primary-color); ;
 }
 
 .icon{
@@ -95,6 +99,12 @@ button:active{
 
 .nav_links{
     height: 50%;
+    text-decoration: none;
+}
+
+.links{
+    text-decoration: none !important;
+    color: var(--bgMainColor);
 }
 
 .btn_access{
