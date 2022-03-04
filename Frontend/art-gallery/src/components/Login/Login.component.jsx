@@ -2,14 +2,23 @@ import React from 'react';
 import { useState } from 'react';
 import './Login.css'
 
+const {users} = require('../../assets/Json/users.json')
+
 export default function Login(){
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin =() => {
-        if(user){
+        let authUser = users.find(u => {
+            console.log(u.username.toLowerCase(), user.toLowerCase())
+            return (u.username === user && u.password === password)
+        })
+        if(authUser){
             window.localStorage.setItem('user', `${user}`)
+        }
+        else{
+            alert('User not found')
         }
     }
 

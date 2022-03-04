@@ -21,8 +21,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: solid 1px red;
-    border-top: 1px solid red;
+    border-bottom: solid 1px var(--primary-color);
+    border-top: 1px solid var(--primary-color);
 }
 
 .login h3{
@@ -34,6 +34,7 @@
     border-radius: 0.8rem;
     height: 1.5rem;
     width: 90%;
+    padding: 0.25rem 0.5rem;
 }
 
 .login-user label{
