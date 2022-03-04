@@ -8,6 +8,7 @@ import Login from './components/Login/Login.component';
 import AddArtists from './components/AdminPanel/AddArtists/AddArtists';
 import AddItems from './components/AdminPanel/AddItems/AddItems';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/under' element={<UnderConstruction/>}/>
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

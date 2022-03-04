@@ -4,10 +4,16 @@
     align-items: center;
 }
 
+.navbar img{
+    width: 4.75rem;
+    height: 3.75rem;
+    margin-left: 0.90rem;
+}
+
 .navbar{
-    margin-top: .5rem;
+    margin-top: .25rem;
     justify-content:space-between;
-    height: 4rem;
+    height: 4.35rem;
     width: 100vw;
     box-shadow: 2px 2px 5px var(--fifth-color);
 }
