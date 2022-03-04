@@ -2,12 +2,26 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import {useParams} from 'react-router-dom'
 import "./DetailArtist.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getPaintings } from "../../redux/actions/actions";
+import { useEffect } from "react";
 
 const {artists} = require('../../assets/Json/artists.json')
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
 
+  const dispatch = useDispatch();
+
+  //Esto es temporal
+  useEffect(() => {
+    dispatch(getPaintings());
+  }, [dispatch]);
+
+  //Prueba redux
+  const paintings = useSelector((state) => state.paintings);
+ // console.log ('Jorgy estoy en el estado', paintings)
+  
   const {id} = useParams()
 
   let artistas = artists.find(a => {

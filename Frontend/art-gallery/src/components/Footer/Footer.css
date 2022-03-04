@@ -1,0 +1,18 @@
+.divFooter{
+    align-items: center;
+    justify-content: center;   
+    display: flex; 
+   padding: 0.5rem;
+   background-color: var(--third-color);
+   flex-direction: column;
+    
+}
+.img{
+    width: 5.5rem;
+    height: 4.5rem;
+}
+
+.divFooter p{
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
