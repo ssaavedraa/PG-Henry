@@ -11,11 +11,12 @@ export default function Login(){
 
     const handleLogin =() => {
         let authUser = users.find(u => {
-            console.log(u.username.toLowerCase(), user.toLowerCase())
+            console.log(typeof u.username.toLowerCase(), typeof user.toLowerCase())
             return (u.username === user && u.password === password)
         })
         if(authUser){
-            window.localStorage.setItem('user', `${user}`)
+            console.log(authUser)
+            window.localStorage.setItem('user', authUser.name)
         }
         else{
             alert('User not found')
