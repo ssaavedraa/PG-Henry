@@ -5,6 +5,7 @@ import DetailArtist from './components/DetailArtist/DetailArtist';
 import Artists from './components/Artists/Artists.component';
 import AdminPanel from './components/AdminPanel/AdminPanel';
 import Login from './components/Login/Login.component';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/artists/:id' element={<DetailArtist/>}/>
           <Route exact path='/login' element={<Login/>} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

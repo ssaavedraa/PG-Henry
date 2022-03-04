@@ -5,6 +5,7 @@ import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import {FaUserAlt} from 'react-icons/fa';
 import { useState } from "react";
+import Logo from '../../assets/img/SantArtlogo.png'
 
 export default function NavBar() {
 
@@ -12,7 +13,7 @@ export default function NavBar() {
 
   return (
     <div className={styles.navbar}>
-      <h1 className={styles.home_link}>SantArt</h1>
+       <img src={Logo} alt="logo"/>
       <div className={styles.div_search}>
         <input
           type="text"
