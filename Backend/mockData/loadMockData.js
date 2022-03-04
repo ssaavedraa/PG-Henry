@@ -14,10 +14,14 @@ const loadMockData = async () => {
 	for (let p of paintings) {
 		await createPainting(p);
 	}
-	await Review.bulkCreate(reviews);
+
 	for (let i = 0; i < purchases.length; i++) {
 		const createdPurchase = await Purchase.create(purchases[i]);
 		await createdPurchase.addPaintings(purchases[i].paintingId);
+	}
+	for (let i = 0; i < reviews.length; i++) {
+		const createdReview = await Review.create(reviews[i]);
+		await createdReview.addUser(reviews[i].userId);
 	}
 };
 
