@@ -14,7 +14,7 @@
     margin-top: .25rem;
     justify-content:space-between;
     height: 4.35rem;
-    width: 100vw;
+    width: 100%;
     box-shadow: 2px 2px 5px var(--fifth-color);
 }
 

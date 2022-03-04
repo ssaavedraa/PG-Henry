@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );

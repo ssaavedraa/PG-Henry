@@ -34,6 +34,10 @@ for (let i = 0; i < technique.length; i++) {
 function Filters() {
   return (
     <div className="filter-container">
+      <select className="order">
+        <option value="">AtoZ</option>
+        <option value="">ZtoA</option>
+      </select>
       <Title
         texto="PRECIO"
         logo={<BiDollarCircle className="icon" />}
