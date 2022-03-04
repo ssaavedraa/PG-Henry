@@ -9,6 +9,7 @@ import AddArtists from './components/AdminPanel/AddArtists/AddArtists';
 import AddItems from './components/AdminPanel/AddItems/AddItems';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import Footer from './components/Footer/Footer';
+import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/artists/:id' element={<DetailArtist/>}/>
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/under' element={<UnderConstruction/>}/>
+          <Route exact path='/contactus' element={<ContactUs/>}/>
         </Routes>
         <Footer/>
       </div>
