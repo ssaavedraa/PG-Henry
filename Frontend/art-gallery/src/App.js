@@ -9,14 +9,10 @@ import AddArtists from './components/AdminPanel/AddArtists/AddArtists';
 import AddItems from './components/AdminPanel/AddItems/AddItems';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import Footer from './components/Footer/Footer';
-<<<<<<< HEAD
 import  {DetailOfArt} from './components/obrasDetail/DetailOfArt';
 import Home from './components/Home/Home.jsx'
-
-=======
 import ContactUs from './components/ContactUs/ContactUs';
 import Gallery from "./components/Gallery/Gallery";
->>>>>>> f9cac3faf4e162eb33491119e63bb004f5eaec28
 
 function App() {
   return (
@@ -30,14 +26,11 @@ function App() {
           <Route exact path='/artists' element={<Artists/>}/>
           <Route exact path='/artists/:id' element={<DetailArtist/>}/>
           <Route exact path='/login' element={<Login/>} />
-<<<<<<< HEAD
           <Route exact path='/' element={<Home/>} />
           <Route exact path='/gallery-id' element={<DetailOfArt/>} />
-=======
           <Route exact path='/under' element={<UnderConstruction/>}/>
           <Route exact path='/contactus' element={<ContactUs/>}/>
           <Route exact path="/gallery" element={<Gallery />} />
->>>>>>> f9cac3faf4e162eb33491119e63bb004f5eaec28
         </Routes>
         <Footer />
       </div>
