@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": 1237819239,
+            "name": "Santiago Saavedra",
+            "email": "ssaavedra@santart.com",
+            "password": "santiesdios"
+        },
+        {
+            "id": 1892398123,
+            "name": "Yessica Rodriguez",
+            "email": "yrodriguez@santart.com",
+            "password": "santiesdios"
+        },
+        {
+            "id": 1283812389,
+            "name": "Santiago Reyes",
+            "email": "sreyes@santart.com",
+            "password": "santiesdios"
+        },
+        {
+            "id": 1980239812,
+            "name": "Santiago Nuñez",
+            "email": "snunez@santart.com",
+            "password": "santiesdios"
+        }
+    ]
+}
