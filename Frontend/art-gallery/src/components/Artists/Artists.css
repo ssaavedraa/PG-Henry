@@ -3,11 +3,13 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card-link{
-    width: 23%;
     color: black;
+    margin: 0.5rem 0rem;
+    display: block;
 }
 
 .artists-header{
