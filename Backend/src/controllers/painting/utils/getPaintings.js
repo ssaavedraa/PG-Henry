@@ -1,4 +1,4 @@
-const { Painting, Artist, Technique } = require("../../../db");
+const { Painting, Artist, Technique, Photo } = require("../../../db");
 
 const getPaintings = async (condition, techniqueCondition) => {
   const paintings = await Painting.findAll({
@@ -24,6 +24,10 @@ const getPaintings = async (condition, techniqueCondition) => {
       {
         model: Artist,
         attributes: ["id", "name", "biography", "photo", "email", "score"],
+      },
+      {
+        model: Photo,
+        attributes: ["url"],
       },
     ],
   });

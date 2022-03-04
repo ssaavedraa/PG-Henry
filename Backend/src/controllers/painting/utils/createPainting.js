@@ -1,4 +1,6 @@
-const { Painting, Photo, Artist, Technique } = require("../../../db");
+const { Painting, Photo, Artist } = require("../../../db");
+const updatePhotos = require('./updatePhotos.js');
+
 
 /*
 data: {
@@ -26,11 +28,9 @@ const createPainting = async (data) => {
     width,
     price,
   });
-  const photosUrl = photos.map((p) => {
-    return { url: p };
-  });
-  const newPhotos = await Photo.bulkCreate(photosUrl);
-  await newPainting.addPhotos(newPhotos);
+
+  updatePhotos(photos, newPainting);
+
   const artist = await Artist.findOne({ where: { id: artistId } });
   if (!artist) {
     throw new Error("Couldn't find artist with id: " + artistId);
@@ -38,7 +38,7 @@ const createPainting = async (data) => {
   await artist.addPainting(newPainting);
   await newPainting.addTechniques(techniqueIds);
 
-  return newPainting;
+  return { ...newPainting.toJSON(), artistId };
 };
 
 module.exports = createPainting;

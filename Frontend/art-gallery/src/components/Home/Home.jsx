@@ -4,7 +4,7 @@ import "./home.css";
 
 const { paintings } = require("../../assets/Json/paintings.json");
 
-function home() {
+function Home() {
     //Obras mas populares max 6
   let paintsPopulars = [];
 
@@ -13,7 +13,7 @@ function home() {
   }
 
   return (
-    <div className="container">
+    <div className="container-home">
       <h2>Obras más populares</h2>
       <div className="content-all">
         <div className="content-carrousel">
@@ -32,4 +32,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
