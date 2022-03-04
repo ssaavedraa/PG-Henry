@@ -1,0 +1,61 @@
+
+
+.admin-bar{
+    display:flex;
+    flex-direction: column;  
+    box-shadow: 8px 5px 5px 0.5px rgba(71, 71, 71, 0.418);
+    margin-left: 0.5rem;
+    height: auto;
+
+}
+
+.User{
+    
+   
+    padding: 2rem;
+    text-align: center;
+}
+
+.img-profile{
+    width: 6rem;
+
+}
+
+.menu-options{
+    text-align: center;
+    
+    
+   
+    
+    
+}
+.menu-options li{
+   
+    list-style: none;
+   margin:2rem;
+    
+    
+    
+    
+
+
+}
+
+.menu-options li:hover{
+    color: rgb(3, 115, 180);
+
+
+
+}
+
+
+.logout{
+   
+    display: inline-flex;
+    
+}
+
+
+
+
+
