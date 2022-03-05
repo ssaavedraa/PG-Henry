@@ -31,7 +31,7 @@ export const DetailOfArt = () => {
     navigate(-1);
   };
 
-  if (!detailObra) {
+  if (!detailObra || !obraRandon) {
     return <h1>Loading</h1>
   }
   return (
