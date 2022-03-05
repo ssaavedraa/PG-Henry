@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Detail.module.css";
-import cartHooks from "../../customHooks/cartHook.js";
+import useCart from "../../customHooks/useCart.js";
 
 export const DetailOfArt = () => {
   const navigate = useNavigate();
-  const { add } = cartHooks();
+  const { add } = useCart();
   const handleReturn = () => {
     navigate(-1);
   };
@@ -31,7 +31,7 @@ export const DetailOfArt = () => {
               <span>orientation: "horizontal"</span>
               <span>Price: 1800</span>
             </p>
-            <button className={styles.btnCard} onClick={() => add(`Aca va la paintingId en forma de string`)}> {/* Les dejo el hook para agregar la pintura al carrito aca :) */}
+            <button className={styles.btnCard} onClick={() => add('Aca va el paintingID')}> {/* Les dejo el hook para agregar la pintura al carrito aca :) */}
               <div className={styles.cardImage}>+</div>
               <div className={styles.cardText}>AGREGAR CARRITO</div>
             </button>
