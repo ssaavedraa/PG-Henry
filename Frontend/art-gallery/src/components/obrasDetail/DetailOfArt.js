@@ -1,34 +1,52 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { getObraDetail } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
+import { useDispatch, useSelector } from "react-redux";
 
 export const DetailOfArt = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { id } = useParams()
+
+  useEffect(() => {
+    dispatch(getObraDetail(id))
+  }, [])
+
+  const {detailObra} = useSelector(state => state);
+
+console.log(detailObra)
+
 
   const handleReturn = () => {
     navigate(-1);
   };
+
+  if (!detailObra) {
+    return <h1>Loading</h1>
+  }
   return (
     <div className={styles.containerDetail}>
       <section className={styles.principalSection}>
         <header className={styles.principalSectionTitle}>
-          Roy Lichtenstein
+          <h1>{detailObra.artist.name}</h1>
         </header>
         <div className={styles.principalSectionInterno}>
           <div className={styles.internoimg}>
             <img
-              src="https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"
+              src={detailObra.photos[0].url}
               alt="img"
             />
           </div>
           <div className={styles.internodescription}>
-            <h3>Brushstroke with Spatter</h3>
+            <h3>{detailObra.title}</h3>
             <p>
-              <span>Height: 31.1</span>
-              <span>Width: 39.4</span>
-              <span>Technique: "Oleo"</span>
+              <span>Height: {detailObra.height}</span>
+              <span>Width: {detailObra.width}</span>
+              <span>Technique: {detailObra.techniques[0].name}</span>
 
-              <span>orientation: "horizontal"</span>
-              <span>Price: 1800</span>
+              <span>orientation: {detailObra.orientation}</span>
+              <span>Price: {detailObra.price}</span>
             </p>
             <div className={styles.btnCard}>
               <div className={styles.cardImage}>+</div>
