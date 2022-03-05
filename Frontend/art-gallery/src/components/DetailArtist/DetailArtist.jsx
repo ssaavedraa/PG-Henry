@@ -1,6 +1,7 @@
-import React from "react";
-import {useParams} from 'react-router-dom'
+import React, {useState} from "react";
+import {useParams, Link} from 'react-router-dom'
 import "./DetailArtist.css";
+import ModalArtworks from "./ModalArtworks";
 import ReviewArtist from "./Reviews/ReviewArtist";
 
 
@@ -8,7 +9,7 @@ const {artists} = require('../../assets/Json/artists.json')
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
-  
+  const [openModal, setOpenModal] = useState(false);
   const {id} = useParams()
   
   let artistas = artists.find(a => {
@@ -24,7 +25,8 @@ const DetailArtist = () => {
           {artistas.biography}
           </p>
           <div className="divButton">
-            <button>Ver obras</button>
+            <ModalArtworks  openModal={openModal} setOpenModal={setOpenModal} />
+            <button onClick={() => setOpenModal(true)}>Ver obras</button>  
           </div>
         </div>
       </div>
@@ -32,5 +34,6 @@ const DetailArtist = () => {
     </div>
   );
 };
+
 
 export default DetailArtist;
