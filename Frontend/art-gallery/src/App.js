@@ -31,6 +31,7 @@ function App() {
           <Route exact path="/under" element={<UnderConstruction />} />
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/gallery" element={<Gallery />} />
+          <Route exact path="/home" element={<Home />} />
         </Routes>
         <Footer />
       </div>
