@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getObraDetail } from "../../redux/actions/actions";
+import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,12 +11,21 @@ export const DetailOfArt = () => {
 
   useEffect(() => {
     dispatch(getObraDetail(id))
+    dispatch(getObrasRandon(id))
   }, [])
 
-  const {detailObra} = useSelector(state => state);
+  const { detailObra, obraRandon } = useSelector(state => state);
+  /////////////////////////////////
+  const [page, setPage] = useState(1)
+  const maximo = 4
 
-console.log(detailObra)
-
+  const handleIncrement = () => {
+    setPage(prev => Math.min(prev + 1, 3))
+  }
+  const handleDecrement = () => {
+    setPage(prev => Math.max(prev - 1, 1))
+  }
+  ////////////////////////////////
 
   const handleReturn = () => {
     navigate(-1);
@@ -65,34 +74,23 @@ console.log(detailObra)
         </div>
 
         <div className={styles.principalSectionObras}>
-          <div className={styles.obrasDetailDecrement}></div>
+          <div onClick={handleDecrement} className={styles.obrasDetailDecrement}></div>
           <div className={styles.obrasDetail}>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
+            {
+              obraRandon ?
+                obraRandon.slice((page - 1) * maximo, (page - 1) * maximo + maximo).map(obra => (
+                  <div key={obra.id} className={styles.obrasSimilares}>
+                    <img
+                      src={obra.image}
+                      alt="cards"
+                    />
+                  </div>
+                ))
+                :
+                ''
+            }
           </div>
-          <div className={styles.obrasDetailIncrement}></div>
+          <div onClick={handleIncrement} className={styles.obrasDetailIncrement}></div>
         </div>
       </section>
     </div>

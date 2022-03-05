@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_OBRAID, GET_PAITINGS } from "../action-types/index.js";
+import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS } from "../action-types/index.js";
 
 //obtener pinturas
 //filters:
@@ -53,7 +53,19 @@ export const getObraDetail = (id) => {
     } catch (error) {
       console.log('Id not found')
     }
-
   }
-
+}
+export const getObrasRandon = (id) => {
+  return async (dispatch) => {
+    try {
+      let resp = await fetch(`http://localhost:3001/painting/getrecommended/${id}`)
+      let data = await resp.json()
+      dispatch({
+        type: GET_OBRAIDRANDON,
+        payload: data
+      })
+    } catch (error) {
+      console.log('Id not found')
+    }
+  }
 }

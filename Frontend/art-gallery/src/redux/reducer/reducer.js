@@ -1,4 +1,4 @@
-import { GET_OBRAID, GET_PAITINGS } from "../action-types";
+import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS } from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
@@ -16,6 +16,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         detailObra: action.payload
+      };
+      case GET_OBRAIDRANDON:
+      return {
+        ...state,
+        obraRandon: action.payload
       };
     default:
       return state;
