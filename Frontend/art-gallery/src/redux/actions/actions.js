@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PAITINGS } from "../action-types/index.js";
+import { GET_PAITINGS, GET_REVIEWS } from "../action-types/index.js";
 
 //obtener pinturas
 //filters:
@@ -40,3 +40,19 @@ export function getPaintings(filters) {
     }
   };
 }
+
+export function getReviews(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.get('http://localhost:3001/review/getByArtist/' + id);
+      //console.log('llego en reviews', json)
+      dispatch({
+        type: GET_REVIEWS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
