@@ -13,7 +13,7 @@ function Home() {
   }
 
   return (
-    <div className="container1">
+    <div className="container-home">
       <h2>Obras más populares</h2>
       <div className="content-all">
         <div className="content-carrousel">
