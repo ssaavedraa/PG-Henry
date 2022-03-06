@@ -1,8 +1,9 @@
-import { GET_PAITINGS } from "../action-types";
+import { GET_PAITINGS, GET_REVIEWS } from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
+  reviews: [],
 };
 
 function rootReducer(state = initialState, action) {
@@ -12,6 +13,11 @@ function rootReducer(state = initialState, action) {
         ...state,
         paintings: action.payload,
       };
+      case GET_REVIEWS:
+        return {
+          ...state,
+         reviews: action.payload,
+        };
     default:
       return state;
   }

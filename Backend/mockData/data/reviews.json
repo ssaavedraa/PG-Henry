@@ -4,27 +4,95 @@
 		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
 		"score": 5,
 		"artistId": 1,
-		"paintingId": 1
+		"paintingId": 1,
+		"userId": 1
 	},
 	{
 		"title": "Creative",
 		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
 		"score": 4,
 		"artistId": 1,
-		"paintingId": 2
+		"paintingId": 2,
+		"userId": 2
 	},
 	{
 		"title": "Scam",
 		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
 		"score": 1,
 		"artistId": 1,
-		"paintingId": 3
+		"paintingId": 3,
+		"userId": 3
 	},
 	{
-		"title": "Revolutionary",
+		"title": "Amazing",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 4,
+		"artistId": 1,
+		"paintingId": 4,
+		"userId": 1
+	},
+	{
+		"title": "Quirky",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 2,
+		"artistId": 2,
+		"paintingId": 6,
+		"userId": 1
+	},
+	{
+		"title": "Humorous",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 3,
+		"artistId": 2,
+		"paintingId": 7,
+		"userId": 1
+	},
+	{
+		"title": "Incredible",
 		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
 		"score": 5,
-		"artistId": 1,
-		"paintingId": 3
+		"artistId": 3,
+		"paintingId": 11,
+		"userId": 1
+	},
+	{
+		"title": "Messy",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 2,
+		"artistId": 3,
+		"paintingId": 12,
+		"userId": 1
+	},
+	{
+		"title": "Valuable",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 4,
+		"artistId": 4,
+		"paintingId": 15,
+		"userId": 1
+	},
+	{
+		"title": "Excellent",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 5,
+		"artistId": 4,
+		"paintingId": 16,
+		"userId": 1
+	},
+	{
+		"title": "I love it",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 5,
+		"artistId": 5,
+		"paintingId": 18,
+		"userId": 2
+	},
+	{
+		"title": "Great artist",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium bibendum elit, sagittis ornare dolor sollicitudin id. Praesent congue vestibulum nibh sed cursus.",
+		"score": 5,
+		"artistId": 6,
+		"paintingId": 21,
+		"userId": 3
 	}
 ]
