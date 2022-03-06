@@ -17,14 +17,14 @@ function ContainerRange({ texto, max, min, filter, handleOnChange }) {
           name={min}
           type="number"
           onChange={handleOnChange}
-          placeholder="Desde"
+          placeholder="From"
           value={filter[min]}
         />
         <input
           name={max}
           type="number"
           onChange={handleOnChange}
-          placeholder="Hasta"
+          placeholder="To"
           value={filter[max]}
         />
       </div>

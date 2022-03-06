@@ -1,14 +1,17 @@
 import React from "react";
 
-function ListArtist({ name, data, search, addList}) {
+function ListArtist({ name, data, search, addList }) {
   return (
     <div className="subcontainerartist">
       {search && (
         <div className="search-artist">
-          <input type="text" placeholder="Search your artist!" />
+          <input
+            type="text"
+            placeholder="Search your artist!"
+          />
         </div>
       )}
-      <div className="artists" name={name} onChange={(e) => addList(e,name)}>
+      <div className="artists" name={name} onChange={(e) => addList(e, name)}>
         {data?.map((d) => (
           <div key={d.id} className="listArtist">
             <input type="checkbox" name="" id={d.id} />

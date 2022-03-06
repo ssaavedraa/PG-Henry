@@ -28,7 +28,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
 
   return (
     <div className="filter-container">
-      <select className="order" name="sort" onChange={handleOnChange}>
+      <select className="order" name="order" onChange={handleOnChange}>
         <option value="">Select sorting:</option>
         <option value="ASC">A to Z</option>
         <option value="DESC">Z to A</option>
