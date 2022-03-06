@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPaintings, getPaintingsOrder } from "../../redux/actions/actions";
+import { getPaintings } from "../../redux/actions/actions";
 
 import Filters from "../Filters/Filters";
 import CardsPaints from "../../containers/CardsPaints/CardsPaints";
@@ -18,11 +18,21 @@ function Gallery() {
 
   //Filters
   const [filter, setFilter] = useState({
-    sort: "ASC",
+    orderBy: "",
+    order: "",
+    minPrice: "",
+    maxPrice: "",
+    minWidth: "",
+    maxWidth: "",
+    minHeight: "",
+    maxHeight: "",
+    artist: [],
+    technique: [],
+    orientation: "",
   });
 
   React.useEffect(() => {
-    dispatch(getPaintings({ orderBy: "title", order: filter.sort }));
+    dispatch(getPaintings(filter));
   }, [dispatch, filter]);
 
   //------------------
@@ -44,16 +54,56 @@ function Gallery() {
     });
   //----------------------
 
-  function handleOnChange(e) {
+  function handleOnChange(e, orderBy, value) {
     setFilter({
       ...filter,
-      [e.target.name]: e.target.value,
+      orderBy,
+      [e.target.name]: !value ? e.target.value : value,
+    });
+  }
+
+  function addList(e, name) {
+    const seleccionado = filter[name].find((item) => item === e.target.id);
+    if (!seleccionado && e.target.checked) {
+      setFilter({ ...filter, [name]: [...filter[name], e.target.id] });
+    } else {
+      const newState = filter[name].filter((item) => item !== e.target.id);
+      setFilter({ ...filter, [name]: newState });
+    }
+  }
+
+  function cleanFilter() {
+
+    let inputs = document.getElementsByTagName('input');
+
+    for (let i = 0; i < inputs.length; i++) {
+      if(inputs[i].type === 'checkbox' || inputs[i].type === 'radio'){
+        inputs[i].checked = false;
+      }
+    }
+    setFilter({
+      orderBy: "",
+      order: "",
+      minPrice: "",
+      maxPrice: "",
+      minWidth: "",
+      maxWidth: "",
+      minHeight: "",
+      maxHeight: "",
+      artist: [],
+      technique: [],
+      orientation: "",
     });
   }
 
   return (
     <div className="gallery-container">
-      <Filters handleOnChange={handleOnChange} />
+      <Filters
+        handleOnChange={handleOnChange}
+        addList={addList}
+        cleanFilter={cleanFilter}
+        filter={filter}
+      />
       <div className="cards-container">
         <CardsPaints paintings={actualPaints} />
         <Pagination

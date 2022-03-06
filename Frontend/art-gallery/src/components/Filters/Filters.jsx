@@ -1,4 +1,7 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getArtist, getTechnique } from "../../redux/actions/actions";
+
 import { BiDollarCircle } from "react-icons/bi";
 import { MdOutlinePhotoSizeSelectLarge } from "react-icons/md";
 import { BsPersonBadge } from "react-icons/bs";
@@ -12,40 +15,42 @@ import ListArtist from "../utils/ListArtist";
 
 import "./Filters.css";
 
-const { artists } = require("../../assets/Json/artists.json");
-const { paintings } = require("../../assets/Json/paintings.json");
+function Filters({ handleOnChange, filter, addList, cleanFilter }) {
+  const artists = useSelector((state) => state.artist);
+  const technique = useSelector((state) => state.technique);
 
-let technique = [];
+  const dispatch = useDispatch();
 
-for (let obra of paintings) {
-  technique.push(obra.technique);
-}
+  React.useEffect(() => {
+    dispatch(getArtist());
+    dispatch(getTechnique());
+  }, [dispatch, addList]);
 
-//Datos no repetidos
-technique = technique.filter(
-  (item, index) => technique.indexOf(item) === index
-);
-
-let elemen = [];
-for (let i = 0; i < technique.length; i++) {
-  elemen.push({ id: i, name: technique[i] });
-}
-
-function Filters({ handleOnChange }) {
   return (
-    <div className="filter-container">
-      <select className="order" name="sort" onChange={handleOnChange}>
+    <div className="filter-container" name="filters">
+      <select
+        className="order"
+        name="order"
+        onChange={(e) => handleOnChange(e, "title")}
+      >
         <option value="">Seleccione el orden:</option>
         <option value="ASC">AtoZ</option>
         <option value="DESC">ZtoA</option>
       </select>
+
       <Title
         texto="PRECIO"
         logo={<BiDollarCircle className="icon" />}
         mostrar={() => mostrar(0)}
       />
       <div className="container-range">
-        <ContainerRange texto="De" />
+        <ContainerRange
+          orderBy="price"
+          max="maxPrice"
+          min="minPrice"
+          handleOnChange={handleOnChange}
+          filter={filter}
+        />
       </div>
       <Title
         texto="DIMENSIONES"
@@ -53,8 +58,22 @@ function Filters({ handleOnChange }) {
         mostrar={() => mostrar(1)}
       />
       <div className="container-range">
-        <ContainerRange texto="Alto" />
-        <ContainerRange texto="Ancho" />
+        <ContainerRange
+          texto="Alto"
+          orderBy="width"
+          max="maxWidth"
+          min="minWidth"
+          handleOnChange={handleOnChange}
+          filter={filter}
+        />
+        <ContainerRange
+          texto="Ancho"
+          orderBy="height"
+          max="maxHeight"
+          min="minHeight"
+          handleOnChange={handleOnChange}
+          filter={filter}
+        />
       </div>
       <Title
         texto="ARTISTA"
@@ -62,7 +81,12 @@ function Filters({ handleOnChange }) {
         mostrar={() => mostrar(2)}
       />
       <div className="container-range">
-        <ListArtist data={artists} search="true" />
+        <ListArtist
+          name="artist"
+          data={artists}
+          search="true"
+          addList={addList}
+        />
       </div>
       <Title
         texto="TECNICA"
@@ -70,7 +94,7 @@ function Filters({ handleOnChange }) {
         mostrar={() => mostrar(3)}
       />
       <div className="container-range">
-        <ListArtist data={elemen} />
+        <ListArtist data={technique} name="technique" addList={addList} />
       </div>
       <Title
         texto="ORIENTACIÓN"
@@ -78,23 +102,23 @@ function Filters({ handleOnChange }) {
         mostrar={() => mostrar(4)}
       />
       <div className="container-range">
-        <div className="listArtist">
-          <input type="checkbox" name="" id="" />
+        <div className="listArtist" onChange={(e) => handleOnChange(e,"","horizontal")}>
+          <input type="radio" id="check1" name="orientation" />
           <label>HORIZONTAL</label>
         </div>
-        <div className="listArtist">
-          <input type="checkbox" name="" id="" />
+        <div className="listArtist"  onChange={(e) => handleOnChange(e,"","vertical")}>
+          <input type="radio" id="check2" name="orientation" />
           <label>VERTICAL</label>
         </div>
-        <div className="listArtist">
-          <input type="checkbox" name="" id="" />
+        <div className="listArtist"  onChange={(e) => handleOnChange(e,"","square")}>
+          <input type="radio" id="check3" name="orientation" />
           <label>CUADRADO</label>
         </div>
       </div>
       <div className="btnFilter">
         <div className="contBtn">
           <MdCleaningServices className="btnClean" />
-          <button>Limpiar Filtros</button>
+          <button onClick={cleanFilter}>Limpiar Filtros</button>
         </div>
       </div>
     </div>

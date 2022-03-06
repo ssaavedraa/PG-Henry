@@ -5,7 +5,7 @@ function CardPaint({image, title, artist, height, width, techniques, price }) {
   return (
     <div className="card">
         <img src={image} alt="img-obra" className="image" />
-      <div className="data">
+      <div className="data-paint">
         <h4>{title}</h4>
         <h5>{artist.name}</h5>
         <p>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListArtist({ data, search }) {
+function ListArtist({ name, data, search, addList}) {
   return (
     <div className="subcontainerartist">
       {search && (
@@ -8,10 +8,10 @@ function ListArtist({ data, search }) {
           <input type="text" placeholder="Busca tu artista!" />
         </div>
       )}
-      <div className="artists">
+      <div className="artists" name={name} onChange={(e) => addList(e,name)}>
         {data?.map((d) => (
           <div key={d.id} className="listArtist">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id={d.id} />
             <label>{d.name}</label>
           </div>
         ))}

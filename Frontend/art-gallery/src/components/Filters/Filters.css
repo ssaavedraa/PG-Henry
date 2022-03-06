@@ -105,7 +105,9 @@ label {
 }
 
 .select-range {
-  height: 35%;
+  height: 25%;
+  align-items: center;
+  justify-content: center;
 }
 
 .select-range input {
@@ -120,6 +122,9 @@ label {
   font-size: 0.9em;
 }
 
+.subcontainer-range{
+  height: 100%;
+}
 .text-range {
   height: 75%;
 }
@@ -127,6 +132,7 @@ label {
 .text-range input {
   height: 20%;
   margin-top: 0.2em;
+  margin-bottom: 0.2em;
   padding: 0.4em;
   outline: none;
   border: 2px solid var(--fifth-color);
