@@ -29,6 +29,9 @@ export const DetailOfArt = () => {
   const handleReturn = () => {
     navigate(-1);
   };
+  const handleDetail = (id) => {
+    dispatch(getObraDetail(id))
+  }
 
   if (!detailObra || !obraRandon) {
     return <h1>Loading</h1>
@@ -81,7 +84,7 @@ export const DetailOfArt = () => {
             {
               obraRandon ?
                 obraRandon.slice((page - 1) * maximo, (page - 1) * maximo + maximo).map(obra => (
-                  <div key={obra.id} className={styles.obrasSimilares}>
+                  <div onClick={()=> handleDetail(obra.id)} key={obra.id} className={styles.obrasSimilares}>
                     <img
                       src={obra.image}
                       alt="cards"
