@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContainerRange({ texto, orderBy, max, min, filter, handleOnChange }) {
+function ContainerRange({ texto, max, min, filter, handleOnChange }) {
   return (
     <div className="subcontainer-range">
       <div className="select-range">
@@ -16,14 +16,14 @@ function ContainerRange({ texto, orderBy, max, min, filter, handleOnChange }) {
         <input
           name={min}
           type="number"
-          onChange={(e) => handleOnChange(e, orderBy)}
+          onChange={handleOnChange}
           placeholder="Desde"
           value={filter[min]}
         />
         <input
           name={max}
           type="number"
-          onChange={(e) => handleOnChange(e, orderBy)}
+          onChange={handleOnChange}
           placeholder="Hasta"
           value={filter[max]}
         />

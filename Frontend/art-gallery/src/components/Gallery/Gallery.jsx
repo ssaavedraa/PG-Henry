@@ -18,14 +18,13 @@ function Gallery() {
 
   //Filters
   const [filter, setFilter] = useState({
-    orderBy: "",
     order: "",
-    minPrice: "",
-    maxPrice: "",
-    minWidth: "",
-    maxWidth: "",
-    minHeight: "",
-    maxHeight: "",
+    minPrice: "0",
+    maxPrice: "7000",
+    minWidth: "0",
+    maxWidth: "200",
+    minHeight: "0",
+    maxHeight: "200",
     artist: [],
     technique: [],
     orientation: "",
@@ -54,7 +53,8 @@ function Gallery() {
     });
   //----------------------
 
-  function handleOnChange(e, orderBy, value) {
+  function handleOnChange(e, value) {
+    let orderBy = (e.target.name === "order" && e.target.value !== "") ? "title" : "";
     setFilter({
       ...filter,
       orderBy,
@@ -82,7 +82,6 @@ function Gallery() {
       }
     }
     setFilter({
-      orderBy: "",
       order: "",
       minPrice: "",
       maxPrice: "",

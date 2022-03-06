@@ -31,7 +31,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
       <select
         className="order"
         name="order"
-        onChange={(e) => handleOnChange(e, "title")}
+        onChange={handleOnChange}
       >
         <option value="">Seleccione el orden:</option>
         <option value="ASC">AtoZ</option>
@@ -45,7 +45,6 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
       />
       <div className="container-range">
         <ContainerRange
-          orderBy="price"
           max="maxPrice"
           min="minPrice"
           handleOnChange={handleOnChange}
@@ -60,7 +59,6 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
       <div className="container-range">
         <ContainerRange
           texto="Alto"
-          orderBy="width"
           max="maxWidth"
           min="minWidth"
           handleOnChange={handleOnChange}
@@ -68,7 +66,6 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         />
         <ContainerRange
           texto="Ancho"
-          orderBy="height"
           max="maxHeight"
           min="minHeight"
           handleOnChange={handleOnChange}
@@ -102,15 +99,15 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         mostrar={() => mostrar(4)}
       />
       <div className="container-range">
-        <div className="listArtist" onChange={(e) => handleOnChange(e,"","horizontal")}>
+        <div className="listArtist" onChange={(e) => handleOnChange(e,"horizontal")}>
           <input type="radio" id="check1" name="orientation" />
           <label>HORIZONTAL</label>
         </div>
-        <div className="listArtist"  onChange={(e) => handleOnChange(e,"","vertical")}>
+        <div className="listArtist"  onChange={(e) => handleOnChange(e,"vertical")}>
           <input type="radio" id="check2" name="orientation" />
           <label>VERTICAL</label>
         </div>
-        <div className="listArtist"  onChange={(e) => handleOnChange(e,"","square")}>
+        <div className="listArtist"  onChange={(e) => handleOnChange(e,"square")}>
           <input type="radio" id="check3" name="orientation" />
           <label>CUADRADO</label>
         </div>
