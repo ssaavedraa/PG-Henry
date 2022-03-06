@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div className="container-home">
-      <h2>Obras más populares</h2>
+      <h2>Most popular artworks</h2>
       <div className="content-all">
         <div className="content-carrousel">
           {paintsPopulars.map((paint) => (

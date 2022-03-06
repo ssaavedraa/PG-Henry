@@ -7,12 +7,15 @@ import { FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Logo from "../../assets/img/SantArtlogo.png";
+import { setLogin } from "../../redux/actions/actions";
 
 export default function NavBar() {
 
+  const dispatch = useDispatch()
   const session = useSelector(state => state.auth)
 
-  console.log(session)
+  if(window.localStorage.getItem('user'))dispatch(setLogin(window.localStorage.getItem('user')))
+
   return (
     <div className={styles.navbar}>
       <Link to="/">
@@ -23,7 +26,7 @@ export default function NavBar() {
           type="text"
           name="Search"
           className={styles.search}
-          placeholder="Busca tu obra o artista favorito"
+          placeholder="Search your favorite artwork or artist"
         />
         <button>
           <BiSearch className={styles.icon_search} />
@@ -32,17 +35,17 @@ export default function NavBar() {
       <ul className={styles.nav_links}>
         <li>
           <NavLink to="/gallery" className={styles.links}>
-            <h5>Galeria</h5>
+            <h5>Gallery</h5>
           </NavLink>
         </li>
         <li>
           <NavLink to="/artists" className={styles.links}>
-            <h5>Artistas</h5>
+            <h5>Artists</h5>
           </NavLink>
         </li>
         <li>
         <NavLink to="/contactus" className={styles.links}>
-          <h5>Contacto</h5>
+          <h5>Contact</h5>
           </NavLink>
         </li>
         <h4>|</h4>
@@ -50,12 +53,12 @@ export default function NavBar() {
           <NavLink to='/login' className={styles.login_link}>
             <button className={styles.btn_access}>
               <FaUserAlt />
-                <h4>Acceso</h4>
+                <h4>Log in</h4>
             </button>
           </NavLink>
         ) : (
           <li>
-            <h5>¡Hola {window.localStorage.getItem("user")}!</h5>
+            <h5>Welcome! {window.localStorage.getItem("user")}</h5>
           </li>
         )}
         <li>

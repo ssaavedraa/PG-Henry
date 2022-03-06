@@ -59,14 +59,14 @@ export const DetailOfArt = () => {
             </p>
             <div className={styles.btnCard}>
               <div className={styles.cardImage}>+</div>
-              <div className={styles.cardText}>AGREGAR CARRITO</div>
+              <div className={styles.cardText}>ADD TO CART</div>
             </div>
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>
               </div>
               <div onClick={handleReturn} className={styles.cardImageReturn}>
-                VOLVER A LA BUSQUEDA
+                RETURN TO SEARCH
               </div>
             </div>
           </div>

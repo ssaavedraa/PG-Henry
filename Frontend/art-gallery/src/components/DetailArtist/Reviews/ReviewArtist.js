@@ -18,7 +18,7 @@ const ReviewArtist = ({ id }) => {
 
   return (
     <div>
-      <h3 className="title">Reviews artworks artist</h3>
+      <h3 className="title">Review artist's artworks</h3>
       {reviews && reviews.length > 0 ? (
         <div className="containerReviews">
           {reviews.map((review) => {
@@ -55,7 +55,7 @@ const ReviewArtist = ({ id }) => {
       ) : (
         <div className="containerReviews">
           <div className="divReviews">
-            <h5>¡El artista aún no contiene reviews!</h5>
+            <h5>No reviews related to this artist</h5>
           </div>
         </div>
       )}
