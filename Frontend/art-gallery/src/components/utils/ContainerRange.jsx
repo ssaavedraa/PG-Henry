@@ -12,7 +12,7 @@ function ContainerRange({ texto, max, min, filter, handleOnChange }) {
         />
       </div>
       <div className="text-range">
-        <label>Digita tu rango: {texto}</label>
+        <label>Type your rank: {texto}</label>
         <input
           name={min}
           type="number"

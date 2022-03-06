@@ -24,7 +24,7 @@ const DetailArtist = () => {
           {artistas.biography}
           </p>
           <div className="divButton">
-            <button>Ver obras</button>
+            <button>View artworks</button>
           </div>
         </div>
       </div>

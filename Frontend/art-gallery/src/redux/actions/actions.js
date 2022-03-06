@@ -4,6 +4,9 @@ import {
   GET_REVIEWS,
   GET_ARTIST,
   GET_TECHNIQUE,
+  GET_OBRAID,
+  GET_OBRAIDRANDON,
+  SET_LOGIN
 } from "../action-types/index.js";
 
 //obtener pinturas
@@ -50,6 +53,40 @@ export function getPaintings(filters) {
   };
 }
 
+export const setLogin = (payload) => {
+  return{
+    type: SET_LOGIN,
+    payload
+  }
+}
+export const getObraDetail = (id) => {
+  return async (dispatch) => {
+    try {
+      let resp = await fetch(`http://localhost:3001/painting/get/${id}`)
+      let data = await resp.json()
+      dispatch({
+        type: GET_OBRAID,
+        payload: data
+      })
+    } catch (error) {
+      console.log('Id not found')
+    }
+  }
+}
+export const getObrasRandon = (id) => {
+  return async (dispatch) => {
+    try {
+      let resp = await fetch(`http://localhost:3001/painting/getrecommended/${id}`)
+      let data = await resp.json()
+      dispatch({
+        type: GET_OBRAIDRANDON,
+        payload: data
+      })
+    } catch (error) {
+      console.log('Id not found')
+    }
+  }
+}
 export function getReviews(id) {
   return async function (dispatch) {
     try {

@@ -27,19 +27,15 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
   }, [dispatch, addList]);
 
   return (
-    <div className="filter-container" name="filters">
-      <select
-        className="order"
-        name="order"
-        onChange={handleOnChange}
-      >
-        <option value="">Seleccione el orden:</option>
-        <option value="ASC">AtoZ</option>
-        <option value="DESC">ZtoA</option>
+    <div className="filter-container">
+      <select className="order" name="sort" onChange={handleOnChange}>
+        <option value="">Select sorting:</option>
+        <option value="ASC">A to Z</option>
+        <option value="DESC">Z to A</option>
       </select>
 
       <Title
-        texto="PRECIO"
+        texto="PRICE"
         logo={<BiDollarCircle className="icon" />}
         mostrar={() => mostrar(0)}
       />
@@ -52,20 +48,20 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         />
       </div>
       <Title
-        texto="DIMENSIONES"
+        texto="DIMENSIONS"
         logo={<MdOutlinePhotoSizeSelectLarge className="icon" />}
         mostrar={() => mostrar(1)}
       />
       <div className="container-range">
         <ContainerRange
-          texto="Alto"
+          texto="Width"
           max="maxWidth"
           min="minWidth"
           handleOnChange={handleOnChange}
           filter={filter}
         />
         <ContainerRange
-          texto="Ancho"
+          texto="Height"
           max="maxHeight"
           min="minHeight"
           handleOnChange={handleOnChange}
@@ -73,7 +69,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         />
       </div>
       <Title
-        texto="ARTISTA"
+        texto="ARTIST"
         logo={<BsPersonBadge className="icon" />}
         mostrar={() => mostrar(2)}
       />
@@ -86,7 +82,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         />
       </div>
       <Title
-        texto="TECNICA"
+        texto="TECHNIQUE"
         logo={<FaPaintBrush className="icon" />}
         mostrar={() => mostrar(3)}
       />
@@ -94,7 +90,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         <ListArtist data={technique} name="technique" addList={addList} />
       </div>
       <Title
-        texto="ORIENTACIÓN"
+        texto="ORIENTATION"
         logo={<GiWoodFrame className="icon" />}
         mostrar={() => mostrar(4)}
       />
@@ -109,13 +105,13 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         </div>
         <div className="listArtist"  onChange={(e) => handleOnChange(e,"square")}>
           <input type="radio" id="check3" name="orientation" />
-          <label>CUADRADO</label>
+          <label>SQUARED</label>
         </div>
       </div>
       <div className="btnFilter">
         <div className="contBtn">
           <MdCleaningServices className="btnClean" />
-          <button onClick={cleanFilter}>Limpiar Filtros</button>
+          <button onClick={cleanFilter}>Clean filters</button>
         </div>
       </div>
     </div>

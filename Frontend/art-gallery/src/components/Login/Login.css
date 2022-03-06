@@ -48,14 +48,23 @@
 
 .login button{
     margin: 1.5rem 0;
-    height: 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.65rem;
     width: 80%;
+    font-size: 1rem;
 }
 
 .login-notuser{
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.login-user .google-button{
+    width: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
