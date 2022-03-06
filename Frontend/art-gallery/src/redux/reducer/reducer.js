@@ -1,9 +1,18 @@
-import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS,  GET_REVIEWS } from "../action-types";
+import {
+  GET_OBRAID,
+  GET_OBRAIDRANDON,
+  GET_PAITINGS,
+  GET_PAINTINGS_BY_ARTIST,
+  GET_REVIEWS,
+  GET_ARTIST_ID,
+} from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
   reviews: [],
+  paintingsArtist: [],
+  artist: []
 };
 
 function rootReducer(state = initialState, action) {
@@ -13,20 +22,30 @@ function rootReducer(state = initialState, action) {
         ...state,
         paintings: action.payload,
       };
-      case GET_REVIEWS:
-        return {
-          ...state,
-         reviews: action.payload,
-        };
+    case GET_PAINTINGS_BY_ARTIST:
+      return {
+        ...state,
+        paintingsArtist: action.payload,
+      };
+    case GET_ARTIST_ID:
+      return {
+        ...state,
+        artist: action.payload
+      }
+    case GET_REVIEWS:
+      return {
+        ...state,
+        reviews: action.payload,
+      };
     case GET_OBRAID:
       return {
         ...state,
-        detailObra: action.payload
+        detailObra: action.payload,
       };
-      case GET_OBRAIDRANDON:
+    case GET_OBRAIDRANDON:
       return {
         ...state,
-        obraRandon: action.payload
+        obraRandon: action.payload,
       };
     default:
       return state;

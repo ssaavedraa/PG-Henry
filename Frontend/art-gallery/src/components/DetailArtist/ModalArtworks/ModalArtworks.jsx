@@ -1,10 +1,17 @@
 import React from "react";
 import Modal from "react-modal";
 import { FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import CardsPaints from "../../containers/CardsPaints/CardsPaints";
+import CardsPaints from "../../../containers/CardsPaints/CardsPaints";
+import "./ModalArtworks.css";
 
-const ModalArtworks = ({ openModal, setOpenModal }) => {
+const ModalArtworks = ({
+  openModal,
+  setOpenModal,
+  paintingsArtist,
+  artists,
+}) => {
+  console.log(paintingsArtist);
+
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0,0,0,0.6)",
@@ -23,12 +30,14 @@ const ModalArtworks = ({ openModal, setOpenModal }) => {
   return (
     <Modal isOpen={openModal} style={customStyles} ariaHideApp={false}>
       <div className="modal-inner">
-        <div onClick={() => setOpenModal(false)}>
-          <FaTimes />
+        <div className='containerHeaderModal'>
+          <h3>Paintings of {artists.name}</h3>
+          <div onClick={() => setOpenModal(false)}>
+            <FaTimes  style={{fontSize: "25px", cursor: "pointer" }}/>
+          </div>
         </div>
-        <CardsPaints />
-        <div className="buttpn">
-          <button onClick={() => setOpenModal(false)}>Cerrar</button>
+        <div className="containerCardsModal">
+          <CardsPaints paintings={paintingsArtist} />
         </div>
       </div>
     </Modal>

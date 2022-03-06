@@ -23,12 +23,18 @@
     object-fit: contain;
 }
 
-.data{
-    width: 90%;
+.dataCardJ{
+    width: 95%;
     height: 45%;
-    padding: .6em;
-    margin-bottom: .2em;
+    padding: 0.6em;
+    margin-bottom: 0.2em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
 }
+
 
 .data h4{
     font-size: 1.2em;

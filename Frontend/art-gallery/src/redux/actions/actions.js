@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS,  GET_REVIEWS  } from "../action-types/index.js";
+import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS,  GET_PAINTINGS_BY_ARTIST,  GET_REVIEWS, GET_ARTIST_ID } from "../action-types/index.js";
 
 //obtener pinturas
 //filters:
@@ -41,6 +41,7 @@ export function getPaintings(filters) {
   };
 }
 
+//Trae los reviews
 export function getReviews(id) {
   return async function (dispatch) {
     try {
@@ -54,6 +55,37 @@ export function getReviews(id) {
       console.log(error);
     }
   };
+}
+
+//Artista
+export function getArtistById(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.get(`http://localhost:3001/artist/get/${id}`)
+      dispatch({
+        type: GET_ARTIST_ID,
+        payload: json.data
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+//pinturas por artista
+export function getPaitingsByArtist(id) {
+  return async function (dispatch) {
+  try {
+    var json = await axios.get(`http://localhost:3001/painting/search?artist=${id}`);
+   //console.log(json)
+    dispatch({
+      type: GET_PAINTINGS_BY_ARTIST,
+      payload: json.data
+    })
+  } catch (error) {
+    console.log(error)
+  }
+  }
 }
 
 export const getObraDetail = (id) => {

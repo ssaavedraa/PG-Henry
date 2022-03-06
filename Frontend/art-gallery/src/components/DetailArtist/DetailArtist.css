@@ -17,9 +17,10 @@ justify-content: center
 }
 
 .imgArtist{
-    width: 375px;
-    height: 450px;
-    padding-right: 40px;
+    width: 24rem;
+    height: 30rem;
+    margin-right: 40px;
+    border-radius: 0.5rem;
    
 }
 
@@ -43,4 +44,5 @@ justify-content: center
     outline: none;
     border-radius: 8px;
     font-size: 17px;
+    font-weight: bold;
 }
