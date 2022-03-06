@@ -5,11 +5,14 @@ import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Logo from "../../assets/img/SantArtlogo.png";
 
 export default function NavBar() {
-  const [session, setSession] = useState(window.localStorage.getItem("user"));
 
+  const session = useSelector(state => state.auth)
+
+  console.log(session)
   return (
     <div className={styles.navbar}>
       <Link to="/">
@@ -44,13 +47,15 @@ export default function NavBar() {
         </li>
         <h4>|</h4>
         {!session ? (
-          <button className={styles.btn_access}>
-            <FaUserAlt />
-            <h4>Acceso</h4>
-          </button>
+          <NavLink to='/login' className={styles.login_link}>
+            <button className={styles.btn_access}>
+              <FaUserAlt />
+                <h4>Acceso</h4>
+            </button>
+          </NavLink>
         ) : (
           <li>
-            <h5>¡Hola {session}!</h5>
+            <h5>¡Hola {window.localStorage.getItem("user")}!</h5>
           </li>
         )}
         <li>

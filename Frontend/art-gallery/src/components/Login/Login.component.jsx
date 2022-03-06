@@ -1,22 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setLogin } from '../../redux/actions/actions';
 import './Login.css'
 
 const {users} = require('../../assets/Json/users.json')
 
 export default function Login(){
 
+    const dispatch = useDispatch()
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin =() => {
         let authUser = users.find(u => {
-            console.log(typeof u.username.toLowerCase(), typeof user.toLowerCase())
             return (u.username === user && u.password === password)
         })
         if(authUser){
-            console.log(authUser)
             window.localStorage.setItem('user', authUser.name)
+            dispatch(setLogin({user, password}))
         }
         else{
             alert('User not found')

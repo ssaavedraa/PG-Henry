@@ -1,8 +1,9 @@
-import { GET_PAITINGS } from "../action-types";
+import { GET_PAITINGS, SET_LOGIN } from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
+  auth: false
 };
 
 function rootReducer(state = initialState, action) {
@@ -12,9 +13,16 @@ function rootReducer(state = initialState, action) {
         ...state,
         paintings: action.payload,
       };
+    case SET_LOGIN:
+      return{
+        ...state,
+        auth: true
+      }
     default:
       return state;
   }
 }
+
+
 
 export default rootReducer;

@@ -1,5 +1,8 @@
 import axios from "axios";
-import { GET_PAITINGS } from "../action-types/index.js";
+import { GET_PAITINGS, SET_LOGIN } from "../action-types/index.js";
+
+//login auth test
+const {users} = require('../../assets/Json/users.json')
 
 //obtener pinturas
 //filters:
@@ -39,4 +42,11 @@ export function getPaintings(filters) {
       console.log(error);
     }
   };
+}
+
+export const setLogin = (payload) => {
+  return{
+    type: SET_LOGIN,
+    payload
+  }
 }
