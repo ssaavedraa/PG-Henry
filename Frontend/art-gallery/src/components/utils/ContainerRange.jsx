@@ -10,12 +10,12 @@ function ContainerRange({texto}) {
           max="3000"
           /* {Aqui ira el valor maximo} */ step="1" /* De paso en paso */
         />
-        <label>{texto}: 0 a 3000</label>
+        <label>{texto}: 0 to 3000</label>
       </div>
       <div className="text-range">
-        <label>o digita tu rango: </label>
-        <input type="number" placeholder="Desde" />
-        <input type="number" placeholder="Hasta" />
+        <label>or insert your range: </label>
+        <input type="number" placeholder="From" />
+        <input type="number" placeholder="To" />
       </div>
     </div>
   );

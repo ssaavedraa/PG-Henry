@@ -35,29 +35,29 @@ function Filters({ handleOnChange }) {
   return (
     <div className="filter-container">
       <select className="order" name="sort" onChange={handleOnChange}>
-        <option value="">Seleccione el orden:</option>
-        <option value="ASC">AtoZ</option>
-        <option value="DESC">ZtoA</option>
+        <option value="">Select sorting:</option>
+        <option value="ASC">A to Z</option>
+        <option value="DESC">Z to A</option>
       </select>
       <Title
-        texto="PRECIO"
+        texto="PRICE"
         logo={<BiDollarCircle className="icon" />}
         mostrar={() => mostrar(0)}
       />
       <div className="container-range">
-        <ContainerRange texto="De" />
+        <ContainerRange texto="From" />
       </div>
       <Title
-        texto="DIMENSIONES"
+        texto="DIMENSIONS"
         logo={<MdOutlinePhotoSizeSelectLarge className="icon" />}
         mostrar={() => mostrar(1)}
       />
       <div className="container-range">
-        <ContainerRange texto="Alto" />
-        <ContainerRange texto="Ancho" />
+        <ContainerRange texto="Height" />
+        <ContainerRange texto="Width" />
       </div>
       <Title
-        texto="ARTISTA"
+        texto="ARTIST"
         logo={<BsPersonBadge className="icon" />}
         mostrar={() => mostrar(2)}
       />
@@ -65,7 +65,7 @@ function Filters({ handleOnChange }) {
         <ListArtist data={artists} search="true" />
       </div>
       <Title
-        texto="TECNICA"
+        texto="TECHNIQUE"
         logo={<FaPaintBrush className="icon" />}
         mostrar={() => mostrar(3)}
       />
@@ -73,7 +73,7 @@ function Filters({ handleOnChange }) {
         <ListArtist data={elemen} />
       </div>
       <Title
-        texto="ORIENTACIÓN"
+        texto="ORIENTATION"
         logo={<GiWoodFrame className="icon" />}
         mostrar={() => mostrar(4)}
       />
@@ -88,13 +88,13 @@ function Filters({ handleOnChange }) {
         </div>
         <div className="listArtist">
           <input type="checkbox" name="" id="" />
-          <label>CUADRADO</label>
+          <label>SQUARED</label>
         </div>
       </div>
       <div className="btnFilter">
         <div className="contBtn">
           <MdCleaningServices className="btnClean" />
-          <button>Limpiar Filtros</button>
+          <button>Clean filters</button>
         </div>
       </div>
     </div>
