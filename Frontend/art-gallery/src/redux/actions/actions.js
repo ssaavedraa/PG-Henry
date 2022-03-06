@@ -6,7 +6,7 @@ import {
   GET_TECHNIQUE,
   GET_OBRAID,
   GET_OBRAIDRANDON,
-  SET_LOGIN
+  SET_LOGIN,
 } from "../action-types/index.js";
 
 //obtener pinturas
@@ -54,39 +54,41 @@ export function getPaintings(filters) {
 }
 
 export const setLogin = (payload) => {
-  return{
+  return {
     type: SET_LOGIN,
-    payload
-  }
-}
+    payload,
+  };
+};
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
-      let resp = await fetch(`http://localhost:3001/painting/get/${id}`)
-      let data = await resp.json()
+      let resp = await fetch(`http://localhost:3001/painting/get/${id}`);
+      let data = await resp.json();
       dispatch({
         type: GET_OBRAID,
-        payload: data
-      })
+        payload: data,
+      });
     } catch (error) {
-      console.log('Id not found')
+      console.log("Id not found");
     }
-  }
-}
+  };
+};
 export const getObrasRandon = (id) => {
   return async (dispatch) => {
     try {
-      let resp = await fetch(`http://localhost:3001/painting/getrecommended/${id}`)
-      let data = await resp.json()
+      let resp = await fetch(
+        `http://localhost:3001/painting/getrecommended/${id}`
+      );
+      let data = await resp.json();
       dispatch({
         type: GET_OBRAIDRANDON,
-        payload: data
-      })
+        payload: data,
+      });
     } catch (error) {
-      console.log('Id not found')
+      console.log("Id not found");
     }
-  }
-}
+  };
+};
 export function getReviews(id) {
   return async function (dispatch) {
     try {
@@ -104,10 +106,15 @@ export function getReviews(id) {
   };
 }
 
-export function getArtist() {
+export function getArtist(name) {
   return async (dispatch) => {
     try {
-      let json = await axios.get("http://localhost:3001/artist/getAll");
+      let json;
+      !name
+        ? (json = await axios.get("http://localhost:3001/artist/getAll"))
+        : (json = await axios.get(
+            `http://localhost:3001/artist/getbyname/?name=${name}`
+          ));
       dispatch({ type: GET_ARTIST, payload: json.data });
     } catch (error) {
       console.log(error);

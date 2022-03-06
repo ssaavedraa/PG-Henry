@@ -26,6 +26,10 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
     dispatch(getTechnique());
   }, [dispatch, addList]);
 
+  React.useEffect(() => {
+    dispatch(getArtist(filter.name));
+  }, [dispatch, filter, addList]);
+
   return (
     <div className="filter-container">
       <select className="order" name="order" onChange={handleOnChange}>
@@ -79,6 +83,8 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
           data={artists}
           search="true"
           addList={addList}
+          handleOnChange={handleOnChange}
+          filter={filter}
         />
       </div>
       <Title
