@@ -1,8 +1,8 @@
 import React from "react";
 
-function ContainerRange({texto}) {
+function ContainerRange({ texto, max, min, filter, handleOnChange }) {
   return (
-    <div>
+    <div className="subcontainer-range">
       <div className="select-range">
         <input
           type="range"
@@ -10,12 +10,23 @@ function ContainerRange({texto}) {
           max="3000"
           /* {Aqui ira el valor maximo} */ step="1" /* De paso en paso */
         />
-        <label>{texto}: 0 to 3000</label>
       </div>
       <div className="text-range">
-        <label>or insert your range: </label>
-        <input type="number" placeholder="From" />
-        <input type="number" placeholder="To" />
+        <label>Type your rank: {texto}</label>
+        <input
+          name={min}
+          type="number"
+          onChange={handleOnChange}
+          placeholder="From"
+          value={filter[min]}
+        />
+        <input
+          name={max}
+          type="number"
+          onChange={handleOnChange}
+          placeholder="To"
+          value={filter[max]}
+        />
       </div>
     </div>
   );
