@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS,  GET_PAINTINGS_BY_ARTIST,  GET_REVIEWS, GET_ARTIST_ID } from "../action-types/index.js";
+import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS,  GET_PAINTINGS_BY_ARTIST,  GET_REVIEWS, GET_ARTIST_ID, SET_LOGIN  } from "../action-types/index.js";
 
 //obtener pinturas
 //filters:
@@ -88,6 +88,12 @@ export function getPaitingsByArtist(id) {
   }
 }
 
+export const setLogin = (payload) => {
+  return{
+    type: SET_LOGIN,
+    payload
+  }
+}
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
@@ -116,3 +122,4 @@ export const getObrasRandon = (id) => {
     }
   }
 }
+

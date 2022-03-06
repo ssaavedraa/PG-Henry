@@ -5,7 +5,7 @@ function ListArtist({ data, search }) {
     <div className="subcontainerartist">
       {search && (
         <div className="search-artist">
-          <input type="text" placeholder="Busca tu artista!" />
+          <input type="text" placeholder="Search your artist!" />
         </div>
       )}
       <div className="artists">

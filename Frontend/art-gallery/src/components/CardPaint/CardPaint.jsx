@@ -9,9 +9,9 @@ function CardPaint({image, title, artist, height, width, techniques, price }) {
         <h4>{title}</h4>
         <h5>{artist.name}</h5>
         <p>
-          Tamaño: {height} x {width}
+          Size: {height} x {width}
         </p>
-        <p>Técnica: {techniques[0].name}</p>
+        <p>Technique: {techniques[0].name}</p>
         <p className="price">USD$ {price}</p>
       </div>
     </div>

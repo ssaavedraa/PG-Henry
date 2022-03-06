@@ -5,11 +5,13 @@ import {
   GET_PAINTINGS_BY_ARTIST,
   GET_REVIEWS,
   GET_ARTIST_ID,
+  SET_LOGIN
 } from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
+  auth: false,
   reviews: [],
   paintingsArtist: [],
   artist: []
@@ -37,6 +39,11 @@ function rootReducer(state = initialState, action) {
         ...state,
         reviews: action.payload,
       };
+    case SET_LOGIN:
+      return{
+        ...state,
+        auth: true
+      }
     case GET_OBRAID:
       return {
         ...state,
@@ -51,5 +58,7 @@ function rootReducer(state = initialState, action) {
       return state;
   }
 }
+
+
 
 export default rootReducer;
