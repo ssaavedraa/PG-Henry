@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PAITINGS } from "../action-types/index.js";
+import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS, GET_REVIEWS, SET_LOGIN } from "../action-types/index.js";
 
 //obtener pinturas
 //filters:
@@ -40,3 +40,53 @@ export function getPaintings(filters) {
     }
   };
 }
+
+export const setLogin = (payload) => {
+  return{
+    type: SET_LOGIN,
+    payload
+  }
+}
+export const getObraDetail = (id) => {
+  return async (dispatch) => {
+    try {
+      let resp = await fetch(`http://localhost:3001/painting/get/${id}`)
+      let data = await resp.json()
+      dispatch({
+        type: GET_OBRAID,
+        payload: data
+      })
+    } catch (error) {
+      console.log('Id not found')
+    }
+  }
+}
+export const getObrasRandon = (id) => {
+  return async (dispatch) => {
+    try {
+      let resp = await fetch(`http://localhost:3001/painting/getrecommended/${id}`)
+      let data = await resp.json()
+      dispatch({
+        type: GET_OBRAIDRANDON,
+        payload: data
+      })
+    } catch (error) {
+      console.log('Id not found')
+    }
+  }
+}
+export function getReviews(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.get('http://localhost:3001/review/getByArtist/' + id);
+      //console.log('llego en reviews', json)
+      dispatch({
+        type: GET_REVIEWS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+

@@ -1,0 +1,30 @@
+.google-icon{
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    border-top: 0.4rem solid #ea4335;
+    border-right: 0.4rem solid #4285f4;
+    border-bottom: 0.4rem solid #34a853;
+    border-left: 0.4rem solid #fbbc05;
+    position: relative;
+}
+
+.google-icon::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.8rem;
+    height: 0.3rem;
+    background: #4285f4;
+}
+
+.google-icon::after{
+    content: '';
+    position: absolute;
+    border-top: 0.8rem solid transparent;
+    border-right: 1.2rem solid white;
+    top: -0.45rem;
+    right: -0.5rem;
+}

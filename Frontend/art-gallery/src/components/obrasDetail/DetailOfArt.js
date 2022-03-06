@@ -1,45 +1,73 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
+import { useDispatch, useSelector } from "react-redux";
 
 export const DetailOfArt = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { id } = useParams();
 
+  useEffect(() => {
+    dispatch(getObraDetail(id));
+    dispatch(getObrasRandon(id));
+  }, []);
+
+  const { detailObra, obraRandon } = useSelector((state) => state);
+  /////////////////////////////////
+  const [page, setPage] = useState(1);
+  const maximo = 4;
+
+  const handleIncrement = () => {
+    setPage((prev) => Math.min(prev + 1, 3));
+  };
+  const handleDecrement = () => {
+    setPage((prev) => Math.max(prev - 1, 1));
+  };
+  ////////////////////////////////
   const handleReturn = () => {
     navigate(-1);
   };
+  const handleDetail = (id) => {
+    dispatch(getObraDetail(id));
+  };
+
+  if (!detailObra || !obraRandon) {
+    return <h1>Loading</h1>;
+  }
   return (
     <div className={styles.containerDetail}>
       <section className={styles.principalSection}>
         <header className={styles.principalSectionTitle}>
-          Roy Lichtenstein
+          <h1>{detailObra.artist.name}</h1>
         </header>
         <div className={styles.principalSectionInterno}>
           <div className={styles.internoimg}>
-            <img
-              src="https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"
-              alt="img"
-            />
+            <img src={detailObra.photos[0].url} alt="img" />
           </div>
           <div className={styles.internodescription}>
-            <h3>Brushstroke with Spatter</h3>
+            <h3>{detailObra.title}</h3>
             <p>
-              <span>Height: 31.1</span>
-              <span>Width: 39.4</span>
-              <span>Technique: "Oleo"</span>
+              <span>Height: {detailObra.height}</span>
+              <span>Width: {detailObra.width}</span>
+              <span>Technique: {detailObra.techniques[0].name}</span>
 
-              <span>orientation: "horizontal"</span>
-              <span>Price: 1800</span>
+              <span>orientation: {detailObra.orientation}</span>
+              <span>Price: {detailObra.price}</span>
             </p>
-            <div className={styles.btnCard}>
+            <button className={styles.btnCard}>
               <div className={styles.cardImage}>+</div>
-              <div className={styles.cardText}>AGREGAR CARRITO</div>
-            </div>
+
+              <div className={styles.cardText}>ADD TO CART</div>
+            </button>
+
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>
               </div>
               <div onClick={handleReturn} className={styles.cardImageReturn}>
-                VOLVER A LA BUSQUEDA
+                RETURN TO SEARCH
               </div>
             </div>
           </div>
@@ -47,34 +75,29 @@ export const DetailOfArt = () => {
         </div>
 
         <div className={styles.principalSectionObras}>
-          <div className={styles.obrasDetailDecrement}></div>
+          <div
+            onClick={handleDecrement}
+            className={styles.obrasDetailDecrement}
+          ></div>
           <div className={styles.obrasDetail}>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
-            <div className={styles.obrasSimilares}>
-              <img
-                src="https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg"
-                alt="cards"
-              />
-            </div>
+            {obraRandon
+              ? obraRandon
+                  .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
+                  .map((obra) => (
+                    <div
+                      onClick={() => handleDetail(obra.id)}
+                      key={obra.id}
+                      className={styles.obrasSimilares}
+                    >
+                      <img src={obra.image} alt="cards" />
+                    </div>
+                  ))
+              : ""}
           </div>
-          <div className={styles.obrasDetailIncrement}></div>
+          <div
+            onClick={handleIncrement}
+            className={styles.obrasDetailIncrement}
+          ></div>
         </div>
       </section>
     </div>
