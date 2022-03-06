@@ -90,7 +90,8 @@ align-items: center;
 justify-content: space-between;
 transition: all 1s;
 cursor: pointer;
- }
+border: none;
+}
 .btnReturn{
     width: 240px;
     height: 40px;

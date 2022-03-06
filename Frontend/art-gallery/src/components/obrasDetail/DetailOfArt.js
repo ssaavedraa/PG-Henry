@@ -26,7 +26,6 @@ export const DetailOfArt = () => {
     setPage(prev => Math.max(prev - 1, 1))
   }
   ////////////////////////////////
-
   const handleReturn = () => {
     navigate(-1);
   };
@@ -57,10 +56,13 @@ export const DetailOfArt = () => {
               <span>orientation: {detailObra.orientation}</span>
               <span>Price: {detailObra.price}</span>
             </p>
-            <div className={styles.btnCard}>
+            <button className={styles.btnCard} >
               <div className={styles.cardImage}>+</div>
+
               <div className={styles.cardText}>ADD TO CART</div>
             </div>
+            </button>
+
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>
