@@ -1,4 +1,5 @@
 const { Review, Purchase, Painting, Artist } = require("../../db");
+const updateScore = require("./utils/updateScore.js");
 
 const add = async (req, res) => {
 	const { title, body, score, userId, paintingId } = req.body;
@@ -21,6 +22,7 @@ const add = async (req, res) => {
 			.send("Can't post review unless you purchase the painting");
 	}
 	const artistId = painting.toJSON().artistId;
+
 	try {
 		const addedReview = await Review.create({
 			title,
@@ -30,20 +32,8 @@ const add = async (req, res) => {
 			userId,
 			artistId,
 		});
-		let reviewsScores = await Review.findAll({
-			where: { artistId: artistId },
-			attributes: ["score"],
-			raw: true,
-		});
 
-		reviewsScores = reviewsScores.map((scoreInteger) => scoreInteger.score);
-
-		let averageScore =
-			reviewsScores.reduce((a, b) => a + b, 0) / reviewsScores.length;
-		averageScore = averageScore.toFixed(1);
-		const artistReviewed = await Artist.findByPk(artistId);
-
-		await artistReviewed.update({ score: averageScore });
+		updateScore(artistId);
 
 		res.json(addedReview);
 	} catch (error) {

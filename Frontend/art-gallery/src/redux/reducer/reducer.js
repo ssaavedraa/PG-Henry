@@ -1,9 +1,10 @@
-import { GET_PAITINGS, SET_LOGIN } from "../action-types";
+import { GET_OBRAID, GET_OBRAIDRANDON, GET_PAITINGS, GET_REVIEWS, SET_LOGIN } from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
-  auth: false
+  auth: false,
+  reviews: [],
 };
 
 function rootReducer(state = initialState, action) {
@@ -18,6 +19,21 @@ function rootReducer(state = initialState, action) {
         ...state,
         auth: true
       }
+    case GET_OBRAID:
+      return {
+        ...state,
+        detailObra: action.payload
+      };
+      case GET_OBRAIDRANDON:
+      return {
+        ...state,
+        obraRandon: action.payload
+      };
+      case GET_REVIEWS:
+        return {
+          ...state,
+         reviews: action.payload,
+        };
     default:
       return state;
   }
