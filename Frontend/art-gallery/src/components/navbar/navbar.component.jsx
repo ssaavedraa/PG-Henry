@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
-import {FiLogOut} from 'react-icons/fi'
+import { FiLogOut } from "react-icons/fi";
 import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,16 +10,16 @@ import Logo from "../../assets/img/SantArtlogo.png";
 import { setLogin, setLogout } from "../../redux/actions/actions";
 
 export default function NavBar() {
+  const dispatch = useDispatch();
+  const session = useSelector((state) => state.auth);
 
-  const dispatch = useDispatch()
-  const session = useSelector(state => state.auth)
-
-  if(window.localStorage.getItem('user'))dispatch(setLogin(window.localStorage.getItem('user')))
+  if (window.localStorage.getItem("user"))
+    dispatch(setLogin(window.localStorage.getItem("user")));
 
   const handleLogout = () => {
-    window.localStorage.removeItem('user')
-    dispatch(setLogout())
-  }
+    window.localStorage.removeItem("user");
+    dispatch(setLogout());
+  };
 
   return (
     <div className={styles.navbar}>
@@ -31,11 +31,13 @@ export default function NavBar() {
           type="text"
           name="Search"
           className={styles.search}
-          placeholder="Search your favorite artwork or artist"
+          placeholder="Search your favorite artwork"
         />
-        <button>
-          <BiSearch className={styles.icon_search} />
-        </button>
+        <NavLink to="/under" className={styles.links}>
+          <button>
+            <BiSearch className={styles.icon_search} />
+          </button>
+        </NavLink>
       </div>
       <ul className={styles.nav_links}>
         <li>
@@ -49,16 +51,16 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-        <NavLink to="/contactus" className={styles.links}>
-          <h5>Contact</h5>
+          <NavLink to="/contactus" className={styles.links}>
+            <h5>Contact</h5>
           </NavLink>
         </li>
         <h4>|</h4>
         {!session ? (
-          <NavLink to='/login' className={styles.login_link}>
+          <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
               <FaUserAlt />
-                <h4>Log in</h4>
+              <h4>Log in</h4>
             </button>
           </NavLink>
         ) : (
@@ -66,15 +68,21 @@ export default function NavBar() {
             <h5>Welcome! {window.localStorage.getItem("user")}</h5>
           </li>
         )}
-        {session && <li onClick={() => handleLogout()}>
-          <p>Logout</p>
-          <FiLogOut className={styles.icon} />
-        </li>}
+        {session && (
+          <li onClick={() => handleLogout()}>
+            <p>Logout</p>
+            <FiLogOut className={styles.icon} />
+          </li>
+        )}
         <li>
-          <AiOutlineShoppingCart className={styles.icon} />
+          <NavLink to="/under" className={styles.links}>
+            <AiOutlineShoppingCart className={styles.icon} />
+          </NavLink>
         </li>
         <li>
-          <AiOutlineHeart className={styles.icon} />
+          <NavLink to="/under" className={styles.links}>
+            <AiOutlineHeart className={styles.icon} />
+          </NavLink>
         </li>
       </ul>
     </div>

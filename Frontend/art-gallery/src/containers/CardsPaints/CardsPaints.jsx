@@ -6,7 +6,7 @@ import "./CardsPaints.css";
 function CardsPaints({ paintings }) {
   return (
     <div className="containerCards">
-      {paintings &&
+      {paintings ?
         paintings.map((paint) => (
           <NavLink to={"/detailObra/" + paint.id} className="links" key={paint.id}>
             <CardPaint
@@ -20,7 +20,7 @@ function CardsPaints({ paintings }) {
               price={paint.price}
             />
           </NavLink>
-        ))}
+        )) : <h1>Loading...</h1>}
     </div>
   );
 }
