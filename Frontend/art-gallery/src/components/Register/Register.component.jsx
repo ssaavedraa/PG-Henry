@@ -50,13 +50,20 @@ export default function Register({open, onClose}){
     }
 
     const fieldsValidation = () => {
-        let name = document.getElementById('name')
+        let firstName = document.getElementById('first-name')
+        let lastName = document.getElementById('last-name')
         let email = document.getElementById('email')
 
-        if(!name.value){
-            name.classList.add('fail')
+        if(!firstName.value){
+            firstName.classList.add('fail')
         }
-        else name.classList.remove('fail')
+        else firstName.classList.remove('fail')
+
+        if(!lastName.value){
+            lastName.classList.add('fail')
+        }
+        else lastName.classList.remove('fail')
+
         if(!email.value.includes('@')){
             email.classList.add('fail')
         }
@@ -70,8 +77,12 @@ export default function Register({open, onClose}){
             <div className="register">
                 <AiOutlineCloseCircle className='modal-close' onClick={onClose}/>
                 <div className="field">
-                    <label htmlFor='name'>Name</label>
-                    <input type="text" name='name' id='name' />
+                    <label htmlFor='first-name'>First name</label>
+                    <input type="text" name='first-name' id='first-name' />
+                </div>
+                <div className="field">
+                    <label htmlFor='last-name'>Last name</label>
+                    <input type="text" name='last-name' id='last-name' />
                 </div>
                 <div className="field">
                     <label htmlFor='email'>email</label>
