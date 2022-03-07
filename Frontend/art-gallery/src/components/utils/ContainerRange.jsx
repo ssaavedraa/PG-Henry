@@ -1,31 +1,34 @@
 import React from "react";
+import RangeSlider from "./RangeSlider/RangeSlider";
 
-function ContainerRange({ texto, max, min, filter, handleOnChange }) {
+function ContainerRange({ max,texto, maxName, minName, filter, handleOnChange }) {
   return (
     <div className="subcontainer-range">
-      <div className="select-range">
-        <input
-          type="range"
-          min="0"
-          max="3000"
-          /* {Aqui ira el valor maximo} */ step="1" /* De paso en paso */
+      <div className="range-slider">
+        <RangeSlider
+          min={0}
+          max={max}
+          nameMin={minName}
+          nameMax={maxName}
+          filter={filter}
+          handleOnChange={handleOnChange}
         />
       </div>
       <div className="text-range">
         <label>Type your rank: {texto}</label>
         <input
-          name={min}
+          name={minName}
           type="number"
           onChange={handleOnChange}
           placeholder="From"
-          value={filter[min]}
+          value={filter[minName]}
         />
         <input
-          name={max}
+          name={maxName}
           type="number"
           onChange={handleOnChange}
           placeholder="To"
-          value={filter[max]}
+          value={filter[maxName]}
         />
       </div>
     </div>

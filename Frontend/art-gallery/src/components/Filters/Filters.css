@@ -1,13 +1,11 @@
 .filter-container,
 .slider-title,
-.select-range,
 .slider-title div {
   display: flex;
 }
 
 .filter-container,
-.container-range,
-.select-range {
+.container-range {
   flex-direction: column;
 }
 
@@ -104,20 +102,6 @@ label {
   padding: 0.2em;
 }
 
-.select-range {
-  height: 25%;
-  align-items: center;
-  justify-content: center;
-}
-
-.select-range input {
-  margin: 0.5em 0;
-  width: 80%;
-  height: 20%;
-  cursor: pointer;
-}
-
-.select-range label,
 .text-range label {
   font-size: 0.9em;
 }
@@ -268,3 +252,14 @@ label {
 .contBtn:active {
   background-color: var(--primary-color);
 }
+
+
+/* Range */
+.range-slider{
+  width: 100%;
+  background-color: aqua;
+}
+
+
+
+

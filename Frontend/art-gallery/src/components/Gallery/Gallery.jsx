@@ -93,11 +93,11 @@ function Gallery() {
     setFilter({
       order: "",
       minPrice: "0",
-      maxPrice: "7000",
+      maxPrice: "100000",
       minWidth: "0",
-      maxWidth: "200",
+      maxWidth: "2000",
       minHeight: "0",
-      maxHeight: "200",
+      maxHeight: "2000",
       artist: [],
       technique: [],
       orientation: "",
@@ -112,6 +112,7 @@ function Gallery() {
         addList={addList}
         cleanFilter={cleanFilter}
         filter={filter}
+        setFilter={setFilter}
       />
       <div className="cards-container">
         <CardsPaints paintings={actualPaints} />

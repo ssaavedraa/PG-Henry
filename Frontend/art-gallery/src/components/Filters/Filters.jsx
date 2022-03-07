@@ -15,7 +15,7 @@ import ListArtist from "../utils/ListArtist";
 
 import "./Filters.css";
 
-function Filters({ handleOnChange, filter, addList, cleanFilter }) {
+function Filters({ handleOnChange, filter, addList, cleanFilter, setFilter }) {
   const artists = useSelector((state) => state.artist);
   const technique = useSelector((state) => state.technique);
 
@@ -45,8 +45,9 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
       />
       <div className="container-range">
         <ContainerRange
-          max="maxPrice"
-          min="minPrice"
+          max="100000"
+          maxName="maxPrice"
+          minName="minPrice"
           handleOnChange={handleOnChange}
           filter={filter}
         />
@@ -58,16 +59,18 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
       />
       <div className="container-range">
         <ContainerRange
+          max="1000"
           texto="Width"
-          max="maxWidth"
-          min="minWidth"
+          maxName="maxWidth"
+          minName="minWidth"
           handleOnChange={handleOnChange}
           filter={filter}
         />
         <ContainerRange
+          max="1000"
           texto="Height"
-          max="maxHeight"
-          min="minHeight"
+          maxName="maxHeight"
+          minName="minHeight"
           handleOnChange={handleOnChange}
           filter={filter}
         />
@@ -101,15 +104,24 @@ function Filters({ handleOnChange, filter, addList, cleanFilter }) {
         mostrar={() => mostrar(4)}
       />
       <div className="container-range">
-        <div className="listArtist" onChange={(e) => handleOnChange(e,"horizontal")}>
+        <div
+          className="listArtist"
+          onChange={(e) => handleOnChange(e, "horizontal")}
+        >
           <input type="radio" id="check1" name="orientation" />
           <label>HORIZONTAL</label>
         </div>
-        <div className="listArtist"  onChange={(e) => handleOnChange(e,"vertical")}>
+        <div
+          className="listArtist"
+          onChange={(e) => handleOnChange(e, "vertical")}
+        >
           <input type="radio" id="check2" name="orientation" />
           <label>VERTICAL</label>
         </div>
-        <div className="listArtist"  onChange={(e) => handleOnChange(e,"square")}>
+        <div
+          className="listArtist"
+          onChange={(e) => handleOnChange(e, "square")}
+        >
           <input type="radio" id="check3" name="orientation" />
           <label>SQUARED</label>
         </div>
