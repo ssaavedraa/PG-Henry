@@ -10,12 +10,12 @@ import { GiWoodFrame } from "react-icons/gi";
 import { MdCleaningServices } from "react-icons/md";
 
 import Title from "../utils/Title";
-import ContainerRange from "../utils/ContainerRange";
-import ListArtist from "../utils/ListArtist";
+import ContainerRange from "../utils/ContainerRange/ContainerRange";
+import ListArtist from "../utils/ListArtist/ListArtist";
 
 import "./Filters.css";
 
-function Filters({ handleOnChange, filter, addList, cleanFilter, setFilter }) {
+function Filters({ handleOnChange, filter, addList, cleanFilter}) {
   const artists = useSelector((state) => state.artist);
   const technique = useSelector((state) => state.technique);
 

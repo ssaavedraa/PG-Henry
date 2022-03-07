@@ -1,4 +1,5 @@
 import React from "react";
+import "./ListArtist.css";
 
 function ListArtist({ name, data, search, addList, handleOnChange,filter }) {
   return (

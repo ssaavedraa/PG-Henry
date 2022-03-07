@@ -1,5 +1,6 @@
 import React from "react";
-import RangeSlider from "./RangeSlider/RangeSlider";
+import RangeSlider from "../RangeSlider/RangeSlider";
+import "./ContainerRange.css";
 
 function ContainerRange({ max,texto, maxName, minName, filter, handleOnChange }) {
   return (
