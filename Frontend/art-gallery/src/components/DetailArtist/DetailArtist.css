@@ -20,7 +20,7 @@ justify-content: center
     width: 375px;
     height: 450px;
     padding-right: 40px;
-   
+   object-fit: contain;
 }
 
 .divBio{

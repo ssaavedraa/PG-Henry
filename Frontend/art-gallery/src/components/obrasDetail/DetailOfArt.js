@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -57,12 +58,13 @@ export const DetailOfArt = () => {
               <span>Orientation: {detailObra.orientation}</span>
               <span>USD$ {detailObra.price}</span>
             </p>
+            <NavLink to="/under">
             <button className={styles.btnCard}>
               <div className={styles.cardImage}>+</div>
 
               <div className={styles.cardText}>ADD TO CART</div>
             </button>
-
+            </NavLink>
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>
