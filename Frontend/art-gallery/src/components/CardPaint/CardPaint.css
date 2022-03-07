@@ -29,8 +29,13 @@
 .data-paint{
     width: 90%;
     height: 45%;
-    padding: .6em;
-    margin-bottom: .2em;
+    padding: 0.6em;
+    margin-bottom: 0.2em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
 }
 
 .data-paint h4{

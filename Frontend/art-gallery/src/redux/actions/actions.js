@@ -1,13 +1,15 @@
 import axios from "axios";
 import {
-  GET_PAITINGS,
-  GET_REVIEWS,
-  GET_ARTIST,
-  GET_TECHNIQUE,
   GET_OBRAID,
   GET_OBRAIDRANDON,
+  GET_PAITINGS,
+  GET_PAINTINGS_BY_ARTIST,
+  GET_REVIEWS,
+  GET_ARTIST_ID,
   SET_LOGIN,
-  SET_LOGOUT
+  GET_ARTIST,
+  GET_TECHNIQUE,
+  SET_LOGOUT,
 } from "../action-types/index.js";
 
 
@@ -28,6 +30,57 @@ export function getPaintings(filters) {
           }));
       return dispatch({
         type: GET_PAITINGS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+//Trae los reviews
+export function getReviews(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.get(
+        "http://localhost:3001/review/getByArtist/" + id
+      );
+      //console.log('llego en reviews', json)
+      dispatch({
+        type: GET_REVIEWS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+//Artista
+export function getArtistById(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.get(`http://localhost:3001/artist/get/${id}`);
+      dispatch({
+        type: GET_ARTIST_ID,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+//pinturas por artista
+export function getPaitingsByArtist(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.get(
+        `http://localhost:3001/painting/search?artist=${id}`
+      );
+      //console.log(json)
+      dispatch({
+        type: GET_PAINTINGS_BY_ARTIST,
         payload: json.data,
       });
     } catch (error) {
@@ -80,23 +133,8 @@ export const getObrasRandon = (id) => {
     }
   };
 };
-export function getReviews(id) {
-  return async function (dispatch) {
-    try {
-      var json = await axios.get(
-        "http://localhost:3001/review/getByArtist/" + id
-      );
-      //console.log('llego en reviews', json)
-      dispatch({
-        type: GET_REVIEWS,
-        payload: json.data,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-}
 
+ 
 export function getArtist(name) {
   return async (dispatch) => {
     try {

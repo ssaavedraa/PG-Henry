@@ -11,7 +11,7 @@ import "./Gallery.css";
 function Gallery() {
   const dispatch = useDispatch();
   const paintings = useSelector((state) => state.paintings);
-
+  console.log('soy paintings en gallery', paintings)
   React.useEffect(() => {
     dispatch(getPaintings());
   }, [dispatch]);
