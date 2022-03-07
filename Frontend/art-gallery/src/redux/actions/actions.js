@@ -9,7 +9,6 @@ import {
   SET_LOGIN,
   GET_ARTIST,
   GET_TECHNIQUE,
-  SET_LOGIN,
   SET_LOGOUT,
 } from "../action-types/index.js";
 

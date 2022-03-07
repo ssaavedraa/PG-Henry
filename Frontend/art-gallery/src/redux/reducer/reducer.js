@@ -8,7 +8,6 @@ import {
   GET_ARTIST,
   GET_TECHNIQUE,
   SET_LOGIN,
-  SET_LOGIN,
   SET_LOGOUT,
 } from "../action-types";
 
