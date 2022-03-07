@@ -68,8 +68,8 @@
 }
 
 .div_search button{
-    width: 15%;
-    height: 100%;
+    width: 3em;
+    height: 2.5em;
     justify-content: center;
     background-color: var(--primary-color);
     border: 0;

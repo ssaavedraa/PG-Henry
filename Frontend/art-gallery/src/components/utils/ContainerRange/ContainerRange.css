@@ -5,7 +5,7 @@
 /* Range */
 .range-slider {
   width: 100%;
-  background-color: aqua;
+  position: relative;
 }
 
 .text-range label {
