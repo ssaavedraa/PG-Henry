@@ -35,8 +35,10 @@ function useCart() {
                 return
             }
             let paintingArr = getArr('painting');
-            if (!paintingArr) {
-                setArr('painting', [paintingId]);
+            if (typeof paintingId === "object") {
+                for (let i=0; i < paintingId.length; i++) {
+                    add(paintingId[i]);
+                };
                 return
             };
             if (paintingArr.includes(paintingId)) {

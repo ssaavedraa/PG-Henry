@@ -2,11 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useCart from "../../customHooks/useCart.js";
 import axios from "axios";
-import CardsPaints from "../../containers/CardsPaints/CardsPaints.jsx";
 
 
 const Cart = () => {
-    const { cart, remove } = useCart();
+    const { cart, remove, add } = useCart();
 
     const getPaintings = async (cart) => {
         const paintings = [];
@@ -30,7 +29,19 @@ const Cart = () => {
                     My cart
                 </h1>
             </div>
-            <CardsPaints paintings={cartPainting} remove={remove} button={true}/>
+            <div>
+                {cartPainting.map((painting) => (
+                    <div key={painting.id}>
+                        <h1>{painting.name}</h1>
+                        <img src={painting.photos[0].url} alt="No img" />
+                        <p>{painting.description}</p>
+                        <h2>{painting.artist.name}</h2>
+                        <p>Size: {painting.height} x {painting.width}</p>
+                        <button onClick={() => remove(painting.id)}>x</button>
+                    </div>
+                ))}
+            </div> 
+            <button onClick={() => add([1,2,3,4])}>Add paintings to cart</button>
         </div>
     );
 };
