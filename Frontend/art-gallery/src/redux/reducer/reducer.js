@@ -6,6 +6,7 @@ import {
   GET_OBRAID,
   GET_OBRAIDRANDON,
   SET_LOGIN,
+  SET_LOGOUT,
 } from "../action-types";
 
 
@@ -39,6 +40,11 @@ function rootReducer(state = initialState, action) {
       return{
         ...state,
         auth: true
+      }
+    case SET_LOGOUT:
+      return{
+        ...state,
+        auth: false
       }
     case GET_OBRAID:
       return {
