@@ -25,7 +25,7 @@ const DetailArtist = () => {
   const paintingsArtist = useSelector((state) => state.paintingsArtist)
   // console.log(paintingsByArtist)
 
-  const artists = useSelector((state) => state.artist)
+  const artists = useSelector((state) => state.artistId)
   //console.log(artists)
   
   return (

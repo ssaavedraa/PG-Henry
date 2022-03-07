@@ -1,10 +1,13 @@
-.card{
-    width: 100%;
-    height: 21rem;
-    margin: .6em;
+.card, .data-paint{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card{
+    width: 100%;
+    height: 23rem;
+    margin: .6em;
     border-radius: 1rem;
     box-shadow: 5px 5px 10px var(--second-color);
     background-color: var(--fourth-color);
@@ -23,8 +26,8 @@
     object-fit: contain;
 }
 
-.dataCardJ{
-    width: 95%;
+.data-paint{
+    width: 90%;
     height: 45%;
     padding: 0.6em;
     margin-bottom: 0.2em;
@@ -35,18 +38,19 @@
     flex-direction: column;
 }
 
-
-.data h4{
+.data-paint h4{
+    width: 100%;
+    text-align: center;
     font-size: 1.2em;
     font-weight: 500;
 }
 
-.data h5{
+.data-paint h5{
     font-size: .9em;
     font-weight: 400;
 }
 
-.data p{
+.data-paint p{
     font-size: .87em;
 }
 

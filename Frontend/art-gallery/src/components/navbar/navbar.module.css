@@ -27,16 +27,16 @@
     list-style: none;
 }
 
-li h5, h4{
+.navbar li h5, h4{
     font-size: 1.2rem;
     font-weight: 400;
 }
 
-li{
+.navbar li{
     cursor: pointer;
 }
 
-li:hover, .links:hover{
+.navbar li:hover, .links:hover{
     color: var(--primary-color);
     transition: .2s;
 }
