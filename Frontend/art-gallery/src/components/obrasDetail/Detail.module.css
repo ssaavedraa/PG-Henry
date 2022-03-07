@@ -19,7 +19,7 @@
 }
 .principalSection {
     width: 100%;
-    height: 750px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,18 +58,18 @@ margin-top: -30px;
 .internoimg img{
        width: 80%;
        height: 90%;
-       object-fit: cover;
+       object-fit: contain;
         }
 .internodescription{
     width: 40%;
-    height: 400px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
- 
+    /* border: 2px solid red; */
     }
 .internodescription h3{
-     margin-top: 50px;
+     margin-top: 0px;
      margin-bottom: 30px;
         }
 .internodescription p{
@@ -78,6 +78,11 @@ margin-top: -30px;
     align-items: center;
     gap: 10px;
            
+ }
+ .internodescription p span:nth-child(1){
+    
+    margin-bottom: 20px;
+    text-align: center;
  }
 .btnCard {
 width: 240px;
@@ -121,6 +126,7 @@ margin-left: 10px;
  }
  .cardImageReturn{
    
+   
  }
  .cardImageReturn div {
     width: 10px;
@@ -140,10 +146,11 @@ margin-left: 10px;
     
 }
  .cardText{
-margin-right: 35px;
+margin-right: 65px;
+font-size: 15px;
  }
  .cardImageReturn{
-margin-right: 10px;
+margin-right: 30px;
    
      }
 .principalSectionObras{
@@ -202,18 +209,22 @@ margin-top: 100px;
 }
 .obrasSimilares{
     width: 200px;
-    height: 150px;
+    height: 200px;
 
     /* border-radius: 20px; */
 }
 .obrasSimilares img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     cursor: pointer;
 }
 
   @media (max-width: 689px) {
    
 }
- 
+ .internodescription > P > span:nth-child(6) {
+color: black;
+font-size: 20px;
+font-weight: 800;
+ }
