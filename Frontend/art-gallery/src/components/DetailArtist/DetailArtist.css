@@ -33,6 +33,10 @@ justify-content: center
     
 }
 
+.divBio p {
+    text-align: center;
+}
+
 .divButton{
     margin: 5px;
 }
