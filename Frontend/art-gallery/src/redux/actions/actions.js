@@ -12,25 +12,7 @@ import {
   SET_LOGOUT,
 } from "../action-types/index.js";
 
-//obtener pinturas
-//filters:
-/*
-{
-    searchTerm:string,
-    minPrice:number,
-    maxPrice:number,
-    minWidth:number,
-    maxWidth:number,
-    minHeight:number,
-    maxHeight:number,
-    artist:array de ids -> [artistId,artistId],
-    technique:array de ids -> [techniqueId,techniqueId],
-    orientation:string ("vertical" | "horizontal" | "square"),
-    isAvailable: boolean (true por defecto),
-    orderBy: string ( "price" | "title" | "createdAt" | "id" | "description" | "orientation" | "height" | "width") (default id),
-    order: string ("ASC"|"DESC") (default "ASC"),
-}
-*/
+
 export function getPaintings(filters) {
   return async function (dispatch) {
     /*    console.log(filters); */
@@ -110,16 +92,16 @@ export function getPaitingsByArtist(id) {
 export const setLogin = (payload) => {
   return {
     type: SET_LOGIN,
-    payload,
-  };
-};
+    payload
+  }
+}
 
 export const setLogout = (payload) => {
-  return {
+  return{
     type: SET_LOGOUT,
-    payload,
-  };
-};
+    payload
+  }
+}
 
 export const getObraDetail = (id) => {
   return async (dispatch) => {
@@ -152,10 +134,16 @@ export const getObrasRandon = (id) => {
   };
 };
 
-export function getArtist() {
+ 
+export function getArtist(name) {
   return async (dispatch) => {
     try {
-      let json = await axios.get("http://localhost:3001/artist/getAll");
+      let json;
+      !name
+        ? (json = await axios.get("http://localhost:3001/artist/getAll"))
+        : (json = await axios.get(
+            `http://localhost:3001/artist/getbyname/?name=${name}`
+          ));
       dispatch({ type: GET_ARTIST, payload: json.data });
     } catch (error) {
       console.log(error);
