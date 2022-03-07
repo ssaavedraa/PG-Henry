@@ -1,13 +1,17 @@
 import React from "react";
+import "./ListArtist.css";
 
-function ListArtist({ name, data, search, addList }) {
+function ListArtist({ name, data, search, addList, handleOnChange,filter }) {
   return (
     <div className="subcontainerartist">
       {search && (
         <div className="search-artist">
           <input
             type="text"
+            name="name"
+            value={filter.name}
             placeholder="Search your artist!"
+            onChange={handleOnChange}
           />
         </div>
       )}
