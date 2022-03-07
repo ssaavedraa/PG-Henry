@@ -55,6 +55,7 @@ function Gallery() {
   //----------------------
 
   function handleOnChange(e, value) {
+    if(filter.artist.length) page.actualPage = 1;
     let orderBy;
     if(e.target.name === "order"){
       if(e.target.value !== "") orderBy = "title";
@@ -73,6 +74,7 @@ function Gallery() {
   }
 
   function addList(e, name) {
+    if(filter.artist.length === 0) page.actualPage = 1;
     const seleccionado = filter[name].find((item) => item === e.target.id);
     if (!seleccionado && e.target.checked) {
       setFilter({ ...filter, [name]: [...filter[name], e.target.id] });

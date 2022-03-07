@@ -11,7 +11,7 @@ const ReviewArtist = ({ id }) => {
 
   useEffect(() => {
     dispatch(getReviews(idArtist));
-  }, [dispatch]);
+  }, [dispatch, idArtist]);
 
   const reviews = useSelector((state) => state.reviews);
   //console.log("Soy las review", reviews);
@@ -55,7 +55,7 @@ const ReviewArtist = ({ id }) => {
       ) : (
         <div className="containerReviews">
           <div className="divReviews">
-            <h5>No reviews related to this artist</h5>
+            <h5>The artist has no reviews yet!</h5>
           </div>
         </div>
       )}
