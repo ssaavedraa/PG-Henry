@@ -20,7 +20,7 @@ function Gallery() {
   const [filter, setFilter] = useState({
     order: "",
     minPrice: "0",
-    maxPrice: "100000",
+    maxPrice: "30000",
     minWidth: "0",
     maxWidth: "2000",
     minHeight: "0",
@@ -93,7 +93,7 @@ function Gallery() {
     setFilter({
       order: "",
       minPrice: "0",
-      maxPrice: "100000",
+      maxPrice: "30000",
       minWidth: "0",
       maxWidth: "2000",
       minHeight: "0",

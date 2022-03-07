@@ -45,7 +45,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       />
       <div className="container-range">
         <ContainerRange
-          max="100000"
+          max="30000"
           maxName="maxPrice"
           minName="minPrice"
           handleOnChange={handleOnChange}
