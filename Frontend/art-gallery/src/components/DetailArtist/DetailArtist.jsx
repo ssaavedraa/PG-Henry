@@ -1,30 +1,45 @@
-import React from "react";
-import {useParams} from 'react-router-dom'
+import React, {useState} from "react";
+import {useParams, Link} from 'react-router-dom'
 import "./DetailArtist.css";
+import ModalArtworks from "./ModalArtworks/ModalArtworks";
 import ReviewArtist from "./Reviews/ReviewArtist";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getPaitingsByArtist, getArtistById} from "../../redux/actions/actions";
 
 const {artists} = require('../../assets/Json/artists.json')
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
-  
+  const dispatch = useDispatch();
+
+  //Estado para el modal 
+  const [openModal, setOpenModal] = useState(false);
   const {id} = useParams()
   
-  let artistas = artists.find(a => {
-    return a.id === id
-  })
+  useEffect(() => {
+    dispatch(getPaitingsByArtist(id))
+    dispatch(getArtistById(id))
+  }, [dispatch, id])
+  
+  const paintingsArtist = useSelector((state) => state.paintingsArtist)
+  // console.log(paintingsByArtist)
+
+  const artists = useSelector((state) => state.artistId)
+  //console.log(artists)
+  
   return (
     <div className="divContainer">
-      <h1>{artistas.name}</h1>
+      <h1>{artists.name}</h1>
       <div className="divContainerimg">
-        <img src={artistas.photo} alt="artist" className="imgArtist" />
+        <img src={artists.photo} alt="artist" className="imgArtist" />
         <div className="divBio">
           <p>
-          {artistas.biography}
+          {artists.biography}
           </p>
           <div className="divButton">
-            <button>View artworks</button>
+            <ModalArtworks  openModal={openModal} setOpenModal={setOpenModal} paintingsArtist={paintingsArtist} artists={artists}/>
+            <button onClick={() => setOpenModal(true)}>See paintings</button>  
           </div>
         </div>
       </div>
@@ -32,5 +47,6 @@ const DetailArtist = () => {
     </div>
   );
 };
+
 
 export default DetailArtist;

@@ -5,6 +5,8 @@
    padding: 0.5rem;
    background-color: var(--third-color);
    flex-direction: column;
+   margin-top: 2rem;
+   
     
 }
 .img{
