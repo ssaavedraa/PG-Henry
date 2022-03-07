@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
+import {FiLogOut} from 'react-icons/fi'
 import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Logo from "../../assets/img/SantArtlogo.png";
-import { setLogin } from "../../redux/actions/actions";
+import { setLogin, setLogout } from "../../redux/actions/actions";
 
 export default function NavBar() {
 
@@ -15,6 +15,11 @@ export default function NavBar() {
   const session = useSelector(state => state.auth)
 
   if(window.localStorage.getItem('user'))dispatch(setLogin(window.localStorage.getItem('user')))
+
+  const handleLogout = () => {
+    window.localStorage.removeItem('user')
+    dispatch(setLogout())
+  }
 
   return (
     <div className={styles.navbar}>
@@ -61,6 +66,10 @@ export default function NavBar() {
             <h5>Welcome! {window.localStorage.getItem("user")}</h5>
           </li>
         )}
+        {session && <li onClick={() => handleLogout()}>
+          <p>Logout</p>
+          <FiLogOut className={styles.icon} />
+        </li>}
         <li>
           <AiOutlineShoppingCart className={styles.icon} />
         </li>

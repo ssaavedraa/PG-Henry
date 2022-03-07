@@ -6,7 +6,8 @@ import {
   GET_TECHNIQUE,
   GET_OBRAID,
   GET_OBRAIDRANDON,
-  SET_LOGIN
+  SET_LOGIN,
+  SET_LOGOUT
 } from "../action-types/index.js";
 
 //obtener pinturas
@@ -59,6 +60,14 @@ export const setLogin = (payload) => {
     payload
   }
 }
+
+export const setLogout = (payload) => {
+  return{
+    type: SET_LOGOUT,
+    payload
+  }
+}
+
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
