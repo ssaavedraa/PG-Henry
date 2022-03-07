@@ -21,7 +21,12 @@ function useCart() {
     };
 
     function getArr(key) {
-        return JSON.parse(localStorage.getItem(key));
+        const storage = JSON.parse(localStorage.getItem(key));
+        if (!storage) {
+            return []
+        } else {
+            return storage
+        }
     };
 
     function add (paintingId) {
