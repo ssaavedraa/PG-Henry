@@ -1,6 +1,7 @@
 const { User, Painting } = require("../../db");
 const remove = async (req, res) => {
-	const { userId, paintingId } = req.body;
+	const { paintingId } = req.body;
+	const userId = req.params.id;
 	try {
 		const user = await User.findByPk(userId);
 		if (!user) {
@@ -11,7 +12,6 @@ const remove = async (req, res) => {
 			return res.status(404).send("Picture not found");
 		}
 		const removed = await user.removePainting(paintingId);
-		console.log(removed);
 		if (!removed)
 			return res
 				.status(404)
