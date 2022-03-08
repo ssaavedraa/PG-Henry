@@ -1,0 +1,43 @@
+.containerCartAll{
+    margin: 1rem;
+}
+
+.containerCartAll h1{
+    text-align: center;
+}
+
+.containerCart{
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem;
+}
+
+.containerCardsCart{
+display: flex;
+flex-direction: column;
+width: 90%;
+height: 70%;
+box-shadow: 5px 5px 10px var(--second-color);
+background-color: var(--fourth-color);
+justify-content: center;
+}
+
+.cardsCart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardsCart img{
+    height: 10rem;
+    width: 10rem;
+}
+
+.divButtons{
+display: flex;
+width: 90%;
+justify-content: space-between;
+margin: 2rem
+}

@@ -75,7 +75,7 @@ export default function NavBar() {
           </li>
         )}
         <li>
-          <NavLink to="/under" className={styles.links}>
+          <NavLink to="/cart" className={styles.links}>
             <AiOutlineShoppingCart className={styles.icon} />
           </NavLink>
         </li>
