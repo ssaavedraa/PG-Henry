@@ -10,15 +10,12 @@ const authRoute = require("./authRoute.js");
 const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
-router.get("/", (req, res) => {
-	res.send("funciona");
-});
 
 router.use("/painting", paintingRoute);
 router.use("/technique", techniqueRoute);
 router.use("/artist", artistRoute);
 router.use("/review", reviewRoute);
 
-router.use("/", authRoute);
+router.use("/user", authRoute);
 
 module.exports = router;

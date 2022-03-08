@@ -16,7 +16,14 @@ const register = async (req, res) => {
 			password: hashedPassword,
 			role: "user",
 		});
-		res.json(user);
+		const sendUserInfo = {
+			id: user.id,
+			firstName: user.firstName,
+			lastName: user.lastName,
+			email: user.email,
+			role: user.role,
+		};
+		res.json(sendUserInfo);
 	} catch (e) {
 		res.status(400).json(e);
 	}
