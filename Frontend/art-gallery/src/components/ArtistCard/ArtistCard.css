@@ -31,3 +31,7 @@
 .artist-card .artist-img img{
     height: 100%;
 }
+
+.artist-img{
+    object-fit: contain;
+}

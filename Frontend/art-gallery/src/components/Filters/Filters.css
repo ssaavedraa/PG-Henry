@@ -1,13 +1,11 @@
 .filter-container,
 .slider-title,
-.select-range,
 .slider-title div {
   display: flex;
 }
 
 .filter-container,
-.container-range,
-.select-range {
+.container-range {
   flex-direction: column;
 }
 
@@ -104,41 +102,6 @@ label {
   padding: 0.2em;
 }
 
-.select-range {
-  height: 25%;
-  align-items: center;
-  justify-content: center;
-}
-
-.select-range input {
-  margin: 0.5em 0;
-  width: 80%;
-  height: 20%;
-  cursor: pointer;
-}
-
-.select-range label,
-.text-range label {
-  font-size: 0.9em;
-}
-
-.subcontainer-range{
-  height: 100%;
-}
-.text-range {
-  height: 75%;
-}
-
-.text-range input {
-  height: 20%;
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-  padding: 0.4em;
-  outline: none;
-  border: 2px solid var(--fifth-color);
-  border-radius: 8px;
-}
-
 .container-range label,
 .container-range input {
   color: var(--eigth-color);
@@ -146,35 +109,6 @@ label {
 
 /* Checkout List*/
 
-.subcontainerartist {
-  height: 100%;
-}
-
-.search-artist {
-  margin: 0.8em 0;
-  height: 12%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-artist input {
-  width: 90%;
-  height: 60%;
-  padding: 0.2em 0.4em;
-  border-radius: 12px;
-  border: 2px solid var(--fifth-color);
-  outline: none;
-}
-
-.artists {
-  height: 78%;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--fifth-color);
-  border-radius: 2px;
-  overflow-y: scroll;
-}
 
 .listArtist {
   padding: 0.07em 0.2em;
@@ -268,3 +202,8 @@ label {
 .contBtn:active {
   background-color: var(--primary-color);
 }
+
+
+
+
+

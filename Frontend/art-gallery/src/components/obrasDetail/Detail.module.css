@@ -2,7 +2,7 @@
 
 .containerDetail {
     width: 100%;
-    height: 130vh;
+    min-height: 160vh;
     background: #F5F5F5;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
 .principalSectionTitle{
 font-size: 30px;
 font-weight: 800;
-margin-top: -30px;
+margin-bottom: 30px;
 }
 .principalSectionInterno{
     width: 100%;

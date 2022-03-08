@@ -1,46 +1,54 @@
-.divContainer{
-    margin: 25px
+.divContainer {
+  margin: 25px;
 }
 
-.divContainer h1{
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
+.divContainer h1 {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
 }
 
-.divContainerimg{
-margin: 30px 5px 5px 20px;
-display: flex;
-justify-content: center
-
+.divContainerimg {
+  margin: 30px 5px 5px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.imgArtist{
-    width: 375px;
-    height: 450px;
-    padding-right: 40px;
-   
+.imgArtist {
+  width: 375px;
+  height: 450px;
+  padding-right: 40px;
+  object-fit: contain;
 }
 
-.divBio{
-   width: 350px; 
-   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    
+.divBio {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.divButton{
-    margin: 5px;
+.divBio p {
+  text-align: center;
+}
+
+.divButton {
+  margin: 5px;
 }
 
 .divButton button{
-    width: 250px;
-    height: 30px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    font-size: 17px;
+  width: 250px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.divButton button:hover{
+  color: white;
 }

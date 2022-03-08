@@ -57,12 +57,13 @@ export const DetailOfArt = () => {
               <span>Orientation: {detailObra.orientation}</span>
               <span>USD$ {detailObra.price}</span>
             </p>
+            <NavLink to="/under">
             <button className={styles.btnCard}>
               <div className={styles.cardImage}>+</div>
 
               <div className={styles.cardText}>ADD TO CART</div>
             </button>
-
+            </NavLink>
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>
