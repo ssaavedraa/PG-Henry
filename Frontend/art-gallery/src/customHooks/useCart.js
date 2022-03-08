@@ -1,32 +1,35 @@
 import { useState, useEffect } from "react";
 
-function useCart() {
-  function cartEvent(e) {
-    setCart(getArr("painting"));
-  }
+function setArr(key, arr) {
+  localStorage.setItem(key, JSON.stringify(arr));
+  window.dispatchEvent(new Event("storage"));
+};
 
+function getArr(key) {
+  const storage = JSON.parse(localStorage.getItem(key));
+  if (!storage) {
+    return [];
+  } else {
+    return storage;
+  }
+};
+
+
+function useCart() {
+
+  function cartEvent() {
+    setCart(getArr("painting"))
+  };
+  
   function removeEvent() {
     window.removeEventListener("storage", cartEvent);
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("storage", cartEvent);
     return removeEvent;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  function setArr(key, arr) {
-    localStorage.setItem(key, JSON.stringify(arr));
-    window.dispatchEvent(new Event("storage"));
-  }
-
-  function getArr(key) {
-    const storage = JSON.parse(localStorage.getItem(key));
-    if (!storage) {
-      return [];
-    } else {
-      return storage;
-    }
-  }
 
   function add(paintingId) {
     try {
@@ -56,7 +59,7 @@ function useCart() {
       const id = parseInt(paintingId);
       if (isNaN(id)) return;
       for (let i = 0; i < paintingArr.length; i++) {
-        if (paintingArr[i] == paintingId) {
+        if (paintingArr[i] === paintingId) {
           paintingArr.splice(i, 1);
           setArr("painting", paintingArr);
         }
