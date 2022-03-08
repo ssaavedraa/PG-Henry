@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,6 +31,7 @@ export const DetailOfArt = () => {
   };
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
+    navigate(`/detailObra/${id}`)
   };
 
   if (!detailObra || !obraRandon) {
