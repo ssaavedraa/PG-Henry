@@ -6,9 +6,9 @@ const passport = require("passport");
 router.post("/register", authControllers.register);
 router.post("/login", authControllers.login);
 router.get(
-	"/a",
+	"/get",
 	passport.authenticate("jwt", { session: false }),
-	authControllers.a
+	authControllers.get
 );
 
 module.exports = router;
