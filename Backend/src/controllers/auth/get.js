@@ -1,7 +1,4 @@
-const { User } = require("../../db");
-
 const get = async (req, res) => {
-	//const users = await User.findAll();
 	const sendUserInfo = {
 		id: req.user.id,
 		firstName: req.user.firstName,
