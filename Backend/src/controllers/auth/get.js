@@ -1,7 +1,4 @@
-const { User } = require("../../db");
-
-const a = async (req, res) => {
-	//const users = await User.findAll();
+const get = async (req, res) => {
 	const sendUserInfo = {
 		id: req.user.id,
 		firstName: req.user.firstName,
@@ -11,4 +8,4 @@ const a = async (req, res) => {
 	};
 	return res.json(sendUserInfo);
 };
-module.exports = a;
+module.exports = get;
