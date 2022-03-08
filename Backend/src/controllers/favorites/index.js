@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const basename = path.basename(__filename);
 
-authControllers = {};
+favoriteControllers = {};
 fs
 	.readdirSync(__dirname)
 	.filter(
@@ -11,9 +11,9 @@ fs
 	)
 	.forEach((file) => {
 		const [fileName] = file.split(".");
-		authControllers[fileName] = require(path.join(__dirname, file));
+		favoriteControllers[fileName] = require(path.join(__dirname, file));
 	});
 
 module.exports = {
-	...authControllers,
+	...favoriteControllers,
 };
