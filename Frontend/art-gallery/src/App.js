@@ -14,6 +14,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import Gallery from "./components/Gallery/Gallery";
 import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
+import TestLogin from "./components/TestLogin/TestLogin";
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/gallery" element={<Gallery />} />
           <Route exact path="/home" element={<Home />} />
-          <Route exact path="/cart" element={<Cart/>} />
+          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/testlogin" element={<TestLogin />} />
         </Routes>
         <Footer />
       </div>
