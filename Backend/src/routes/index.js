@@ -5,6 +5,7 @@ const paintingRoute = require("./paintingRoute.js");
 const techniqueRoute = require("./techniqueRoute.js");
 const artistRoute = require("./artistRoute.js");
 const reviewRoute = require("./reviewRoute.js");
+const authRoute = require("./authRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -17,4 +18,7 @@ router.use("/painting", paintingRoute);
 router.use("/technique", techniqueRoute);
 router.use("/artist", artistRoute);
 router.use("/review", reviewRoute);
+
+router.use("/", authRoute);
+
 module.exports = router;
