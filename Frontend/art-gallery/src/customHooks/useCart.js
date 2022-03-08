@@ -36,7 +36,7 @@ function useCart() {
       }
       const paintingArr = getArr("painting");
       const id = parseInt(paintingId);
-      if (id === NaN) return;
+      if (isNaN(id)) return;
       if (paintingArr.includes(id)) {
         return;
       }
@@ -53,6 +53,8 @@ function useCart() {
   function remove(paintingId) {
     try {
       let paintingArr = getArr("painting");
+      const id = parseInt(paintingId);
+      if (isNaN(id)) return;
       for (let i = 0; i < paintingArr.length; i++) {
         if (paintingArr[i] == paintingId) {
           paintingArr.splice(i, 1);
