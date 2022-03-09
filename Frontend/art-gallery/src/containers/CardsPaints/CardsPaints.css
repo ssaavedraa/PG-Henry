@@ -1,27 +1,16 @@
-.containerCards, .links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.containerCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.containerCards{
-    width: 100%;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+.containerCards {
+  width: 100%;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.links{
-    width: 29%;
-    margin: .6em;
-    text-decoration: none;
-    color: var(--bgMainColor);
-}
-
-.links:active{
-    color: var(--primary-color); ;
-}
-
-.errorCardPaint{
-    font-size: 1.5rem;
-    color: var(--primary-color); ;
+.errorCardPaint {
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
