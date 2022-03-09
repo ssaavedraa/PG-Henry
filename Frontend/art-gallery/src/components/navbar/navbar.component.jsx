@@ -28,7 +28,6 @@ export default function NavBar() {
     dispatch(getSearchAuto());
   }, [dispatch, state]);
 
-
   React.useEffect(() => {
     dispatch(getSearchAuto(state.keyword));
   }, [dispatch, state]);
@@ -69,18 +68,23 @@ export default function NavBar() {
       />
       <ul className={styles.nav_links}>
         <li>
-          <NavLink to="/gallery" className={styles.links}>
-            <h5>Gallery</h5>
+          <NavLink
+            exact
+            to="/gallery"
+            className={styles.linksNav}
+            activeClassName={styles.selectedRow}
+          >
+            Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink to="/artists" className={styles.links}>
-            <h5>Artists</h5>
+          <NavLink exact to="/artists" activeClassName={styles.selectedRow} className={styles.linksNav}>
+            Artists
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contactus" className={styles.links}>
-            <h5>Contact</h5>
+          <NavLink exact to="/contactus"  activeClassName={styles.selectedRow} className={styles.linksNav}>
+            Contact
           </NavLink>
         </li>
         <h4>|</h4>
@@ -103,12 +107,12 @@ export default function NavBar() {
           </li>
         )}
         <li>
-          <NavLink to="/under" className={styles.links}>
+          <NavLink to="/under" className={styles.linksNav}>
             <AiOutlineShoppingCart className={styles.icon} />
           </NavLink>
         </li>
         <li>
-          <NavLink to="/under" className={styles.links}>
+          <NavLink to="/under" className={styles.linksNav}>
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>

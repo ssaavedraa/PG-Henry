@@ -20,3 +20,8 @@
 .links:active{
     color: var(--primary-color); ;
 }
+
+.errorCardPaint{
+    font-size: 1.5rem;
+    color: var(--primary-color); ;
+}

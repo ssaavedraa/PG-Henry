@@ -73,7 +73,7 @@
   outline: none;
   font-weight: 500;
   z-index: 1;
-  transform: translate(15.4rem, 0rem) scale(1.6);
+  transform: translate(18.4em, 0rem) scale(1.6);
   background-color: transparent;
   cursor: pointer;
 }

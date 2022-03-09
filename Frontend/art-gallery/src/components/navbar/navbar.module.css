@@ -27,7 +27,7 @@
     list-style: none;
 }
 
-.navbar li h5, h4{
+.navbar h4{
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -36,12 +36,12 @@
     cursor: pointer;
 }
 
-.navbar li:hover, .links:hover{
+.navbar li:hover, .linksNav:hover{
     color: var(--primary-color);
     transition: .2s;
 }
 
-.links:active{
+.linksNav:active{
     color: var(--primary-color); ;
 }
 
@@ -65,7 +65,9 @@ button:active{
     text-decoration: none;
 }
 
-.links{
+.linksNav{
+    font-size: 1.2rem;
+    font-weight: 400;
     text-decoration: none !important;
     color: var(--bgMainColor);
 }
@@ -92,4 +94,9 @@ button:active{
 .login_link{
     width: 17%;
     height: 90%;
+}
+
+.selectedRow {
+    color: red;
+    font-weight: 800;
 }
