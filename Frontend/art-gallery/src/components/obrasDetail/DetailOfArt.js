@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,6 +31,7 @@ export const DetailOfArt = () => {
   };
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
+    navigate(`/detailObra/${id}`)
   };
 
   if (!detailObra || !obraRandon) {
@@ -48,7 +48,7 @@ export const DetailOfArt = () => {
             <img src={detailObra.photos[0].url} alt="img" />
           </div>
           <div className={styles.internodescription}>
-            <h3>{detailObra.artist.name}</h3>
+            <h3><Link to={`/artists/${detailObra.artist.id}`}>{detailObra.artist.name}</Link></h3>
             <p>
             <span>{detailObra.description}</span>
               <span>Height: {detailObra.height} cm</span>
