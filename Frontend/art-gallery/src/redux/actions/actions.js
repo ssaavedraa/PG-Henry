@@ -10,6 +10,7 @@ import {
   GET_ARTIST,
   GET_TECHNIQUE,
   SET_LOGOUT,
+  GET_SEARCH,
 } from "../action-types/index.js";
 
 
@@ -161,3 +162,16 @@ export function getTechnique() {
     }
   };
 }
+
+export function getSearchAuto(text) {
+  return async (dispatch) => {
+    try {
+      let search = text ? text : "a";
+      let json = await axios.get(`http://localhost:3001/painting/search/suggestions/${search}`);
+      dispatch({type: GET_SEARCH, payload: json.data});
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
