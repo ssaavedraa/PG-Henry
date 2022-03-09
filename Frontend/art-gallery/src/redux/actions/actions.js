@@ -161,3 +161,27 @@ export function getTechnique() {
     }
   };
 }
+
+export const addNewArtist = (payload) => {
+  return async function (dispatch) {
+      try{
+      const post = await axios.post('http://localhost:3001/artist/create', payload);
+      console.log(post)
+      return post;
+  }catch(err){
+  console.log(err)
+}
+}};
+
+
+export const addNewPainting = (payload) => {
+  return async function (dispatch) {
+      try{
+      const post = await axios.post('http://localhost:3001/painting/create', payload);
+      console.log(post)
+      return post;
+  }catch(err){
+  console.log(err)
+}
+}};
+

@@ -1,10 +1,18 @@
 import React from "react"
 import './AddArtists.css'
-
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getArtist } from "../../redux/actions/actions";
+import { useEffect } from "react";
 
 import NavPanel from "../NavPanel/NavPanel";
+const artists = useSelector((state) => state.artist);
 
+const dispatch = useDispatch();
 
+useEffect(() => {
+  dispatch(getArtist());
+}, []);
 
 const AddArtists = ()=>{
 
