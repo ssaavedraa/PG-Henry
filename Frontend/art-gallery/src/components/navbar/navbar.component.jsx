@@ -8,6 +8,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import Logo from "../../assets/img/SantArtlogo.png";
 import { setLogin, setLogout } from "../../redux/actions/actions";
+import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
   const dispatch = useDispatch();
@@ -20,6 +21,8 @@ export default function NavBar() {
     window.localStorage.removeItem("user");
     dispatch(setLogout());
   };
+
+  const { cart } = useCart();
 
   return (
     <div className={styles.navbar}>
@@ -75,8 +78,11 @@ export default function NavBar() {
           </li>
         )}
         <li>
-          <NavLink to="/under" className={styles.links}>
-            <AiOutlineShoppingCart className={styles.icon} />
+          <NavLink to="/cart" className={styles.links}>
+            <div className={styles.divContainerCartIcon}>
+              <div className={styles.containerCartLength}>{cart.length}</div>
+              <AiOutlineShoppingCart className={styles.icon} />
+            </div>
           </NavLink>
         </li>
         <li>

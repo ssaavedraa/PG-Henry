@@ -17,7 +17,7 @@
 
 .imgArtist {
   width: 375px;
-  height: 450px;
+  /* height: 450px; */
   padding-right: 40px;
   object-fit: contain;
 }
