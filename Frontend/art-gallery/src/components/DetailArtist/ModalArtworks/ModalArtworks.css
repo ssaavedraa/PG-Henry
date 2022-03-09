@@ -1,0 +1,21 @@
+.containerCardsModal{
+    width: 80%;
+    margin: auto;
+   
+}
+.modal-inner {
+    width: 90vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerHeaderModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.3rem 0rem;
+    border-bottom: 1px solid var(--fifth-color) ;
+  }
+  
+  

@@ -1,0 +1,209 @@
+.filter-container,
+.slider-title,
+.slider-title div {
+  display: flex;
+}
+
+.filter-container,
+.container-range {
+  flex-direction: column;
+}
+
+.container-range {
+  display: none;
+}
+
+.color {
+  color: var(--primary-color);
+}
+
+label {
+  font-weight: 300;
+}
+
+.filter-container {
+  height: 90%;
+  max-height: 150vh;;
+  margin-top: 3rem;
+  width: 15rem;
+  overflow-y: scroll;
+}
+
+.order {
+  display: inline-block;
+  width: 90%;
+  margin-left: .6em;
+  cursor: pointer;
+  padding: 2px 10px;
+  height: 2.5em;
+  outline: 0;
+  background: var(--six-color);
+  color: var(--eigth-color);
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+
+.slider-title {
+  height: 5.5%;
+  margin: 1.3rem 0.6em;
+  margin-bottom: 0;
+  color: var(--eigth-color);
+}
+
+.slider-title div {
+  width: 85%;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slider-title h5 {
+  font-size: 1em;
+}
+
+.slider-title button {
+  width: 15%;
+  font-size: 1em;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.slider-title:hover,
+.slider-title button {
+  color: var(--primary-color);
+}
+
+.slider-title button {
+  color: var(--eigth-color);
+}
+
+.slider-title button:hover {
+  color: var(--primary-color);
+}
+
+.icon {
+  width: 20%;
+  height: 70%;
+}
+
+.select {
+  display: flex;
+}
+
+.container-range {
+  height: 19rem;
+  margin: 0 0.6em;
+  padding: 0.2em;
+}
+
+.container-range label,
+.container-range input {
+  color: var(--eigth-color);
+}
+
+/* Checkout List*/
+
+
+.listArtist {
+  padding: 0.07em 0.2em;
+  display: flex;
+  align-items: center;
+}
+
+.listArtist label {
+  margin-left: 0.4em;
+}
+
+.filter-container::-webkit-scrollbar,
+.artists::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.filter-container::-webkit-scrollbar:vertical,
+.artists::-webkit-scrollbar:vertical {
+  width: 0.7em;
+}
+
+.filter-container::-webkit-scrollbar-button:increment,
+.filter-container::-webkit-scrollbar-button,
+.artists::-webkit-scrollbar-button:increment,
+.artists::-webkit-scrollbar-button {
+  display: none;
+}
+
+.filter-container::-webkit-scrollbar:horizontal,
+.artists::-webkit-scrollbar:horizontal {
+  height: 0.7em;
+}
+
+.filter-container::-webkit-scrollbar-thumb,
+.artists::-webkit-scrollbar-thumb {
+  background-color: var(--eigth-color);
+  border-radius: 20px;
+  border: 2px solid var(--third-color);
+}
+
+.filter-container::-webkit-scrollbar-track,
+.artists::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.btnFilter {
+  margin-top: 1em;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contBtn {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: var(--btnMain-Color);
+}
+
+.btnClean {
+  height: 70%;
+  width: 12%;
+}
+
+.btnFilter button {
+  height: 70%;
+  width: 80%;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+
+.btnClean,
+.btnFilter button {
+  color: var(--fourth-color);
+  cursor: pointer;
+}
+
+.contBtn:hover {
+  background-color: var(--btnHover-color);
+}
+
+.contBtn:active {
+  background-color: var(--primary-color);
+}
+
+
+
+
+

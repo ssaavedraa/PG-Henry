@@ -1,21 +1,21 @@
-.container{
-    height: 75vh;
+.container-home{
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 h2{
-    margin-top: 40px;
+    margin-top: 1.5em;
     color: var(--primary-color);
 }
 
 .content-all{
-    width: 320px;
+    width: 18em;
     margin: auto;
     perspective: 1000px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 4em;
 }
 
 .content-carrousel{
@@ -32,10 +32,10 @@ h2{
 
 .content-carrousel figure{
     width: 100%;
-    height: 180px;
+    height: 11em;
     overflow: hidden;
     position: absolute;
-    box-shadow: 0 0 20px 0 var(--primary-color);
+    box-shadow: 0 0 8px 0 var(--primary-color);
     border-radius: 5px;
     transition: all 300ms;
 }
@@ -47,22 +47,22 @@ h2{
 
 
 .content-carrousel figure:nth-child(1){
-    transform: rotateY(0deg) translateZ(300px);
+    transform: rotateY(0deg) translateZ(17em);
 }
 .content-carrousel figure:nth-child(2){
-    transform: rotateY(72deg) translateZ(300px);
+    transform: rotateY(72deg) translateZ(17em);
 }
 .content-carrousel figure:nth-child(3){
-    transform: rotateY(144deg) translateZ(300px);
+    transform: rotateY(144deg) translateZ(17em);
 }
 .content-carrousel figure:nth-child(4){
-    transform: rotateY(216deg) translateZ(300px);
+    transform: rotateY(216deg) translateZ(17em);
 }
 .content-carrousel figure:nth-child(5){
-    transform: rotateY(288deg) translateZ(300px);
+    transform: rotateY(288deg) translateZ(17em);
 }
 .content-carrousel figure:nth-child(6){
-    transform: rotateY(360deg) translateZ(300px);
+    transform: rotateY(360deg) translateZ(17em);
 }
 
 .content-carrousel img{
@@ -84,7 +84,7 @@ h2{
 }
 
 .content-carrousel img:hover{
-    filter: blur(3px);
+    filter: blur(2px);
 }
 
 p{

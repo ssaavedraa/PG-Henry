@@ -1,57 +1,52 @@
-import React from "react";
-import styles from "./DetailArtist.module.css";
+import React, {useState} from "react";
+import {useParams, Link} from 'react-router-dom'
+import "./DetailArtist.css";
+import ModalArtworks from "./ModalArtworks/ModalArtworks";
+import ReviewArtist from "./Reviews/ReviewArtist";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getPaitingsByArtist, getArtistById} from "../../redux/actions/actions";
 
-//const artistas = require("../../assets/artist.json");
+const {artists} = require('../../assets/Json/artists.json')
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
+  const dispatch = useDispatch();
+
+  //Estado para el modal 
+  const [openModal, setOpenModal] = useState(false);
+  const {id} = useParams()
+  
+  useEffect(() => {
+    dispatch(getPaitingsByArtist(id))
+    dispatch(getArtistById(id))
+  }, [dispatch, id])
+  
+  const paintingsArtist = useSelector((state) => state.paintingsArtist)
+  // console.log(paintingsByArtist)
+
+  const artists = useSelector((state) => state.artistId)
+  //console.log(artists)
+  
   return (
-    <div className={styles.divContainer}>
-      <h1>Kate Louise Powell</h1>
-      <div className={styles.divContainerimg}>
-        <img
-          src={require("./base.jpg")}
-          alt="photo artist"
-          className={styles.imgArtist}
-        />
-        <div className={styles.divBio}>
-          <h3>Biography</h3>
+    <div className="divContainer">
+      <h1>{artists.name}</h1>
+      <div className="divContainerimg">
+        <img src={artists.photo} alt="artist" className="imgArtist" />
+        <div className="divBio">
           <p>
-            Kate Louise Powell is an illustrator and animal rights activist from
-            Halifax, West Yorkshire, currently based in Glasgow. After drawing
-            recreationally all her life, Kate began to take her art career more
-            seriously in 2012, producing a series of popular illustrations
-            featuring the recurring motifs of flowers and butterflies. Since
-            then he has experimented with photography, mixed media and painting,
-            but continues to work primarily with colored pencil/pencil and black
-            ink.
+          {artists.biography}
           </p>
-        </div>
-      </div>
-      <div className={styles.divButton}>
-        <button>Ver obras</button>
-      </div>
-      <div>
-        <h3>Reviews artworks artist</h3>
-        <div className={styles.divReviews}>
-          <img src={require("./pauline-fin.jpeg")} alt="arteworks" className={styles.imgArtwork}/>
-          <div>
-            <h4>Andrea Mendoza</h4>
-            <div className={styles.divText}>
-              <p>Necesario en mi coleccion</p>
-              <p>iconos estrellitas </p>
-            </div>
+          <div className="divButton">
+            <ModalArtworks  openModal={openModal} setOpenModal={setOpenModal} paintingsArtist={paintingsArtist} artists={artists}/>
+            <button onClick={() => setOpenModal(true)}>See paintings</button>  
           </div>
         </div>
       </div>
+     <ReviewArtist id={id}/>
     </div>
   );
 };
 
-export default DetailArtist;
 
-// {platforms.map( platform => {
-//     return(
-//         <option value={platform.name} key={platform.id}>{platform.name}</option>
-//     );
-// })};
+export default DetailArtist;

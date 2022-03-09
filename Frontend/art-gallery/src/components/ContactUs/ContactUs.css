@@ -1,0 +1,66 @@
+.contact-box{
+
+display: flex;
+flex-direction: column;
+;
+
+}
+
+.titulo-box{
+    
+    align-self: center;
+    margin: 3rem
+}
+
+
+
+.maps-box{
+    
+    align-self: center;
+    margin: 3rem
+}
+
+.data-box{
+    
+    align-self: center;
+    text-align: center;
+}
+
+.form-box{
+   
+}
+
+.form{
+    
+}
+.button-become{
+    align-self: center;
+    
+    margin: 3rem
+}
+
+.galery-box{
+    
+
+}
+
+
+.btn-become{
+
+
+    height: 6rem;
+    width: 24rem;
+    
+    list-style: none;
+    background-color: rgb(212, 212, 212);
+    border-radius: 20px;
+    border-style: none;
+    margin: 1rem;
+    
+         
+    
+}
+
+.btn-become:hover{
+ background-color: rgb(160, 160, 160);
+}

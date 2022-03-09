@@ -1,0 +1,32 @@
+{
+    "users": [
+        {
+            "id": 1237819239,
+            "username": "ssaavedra",
+            "name": "Santiago Saavedra",
+            "email": "ssaavedra@santart.com",
+            "password": "santiesdios"
+        },
+        {
+            "id": 1892398123,
+            "username": "yrodriguez",
+            "name": "Yessica Rodriguez",
+            "email": "yrodriguez@santart.com",
+            "password": "santiesdios"
+        },
+        {
+            "id": 1283812389,
+            "username": "sreyes",
+            "name": "Santiago Reyes",
+            "email": "sreyes@santart.com",
+            "password": "santiesdios"
+        },
+        {
+            "id": 1980239812,
+            "username": "snunez",
+            "name": "Santiago Nuñez",
+            "email": "snunez@santart.com",
+            "password": "santiesdios"
+        }
+    ]
+}

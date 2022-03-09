@@ -1,0 +1,27 @@
+.subcontainer-range {
+  height: 100%;
+}
+
+/* Range */
+.range-slider {
+  width: 100%;
+  position: relative;
+}
+
+.text-range label {
+  font-size: 0.9em;
+}
+
+.text-range {
+  height: 75%;
+}
+
+.text-range input {
+  height: 20%;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  padding: 0.4em;
+  outline: none;
+  border: 2px solid var(--fifth-color);
+  border-radius: 8px;
+}

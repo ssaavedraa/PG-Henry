@@ -4,11 +4,17 @@
     align-items: center;
 }
 
+.navbar img{
+    width: 4.75rem;
+    height: 3.75rem;
+    margin-left: 0.90rem;
+}
+
 .navbar{
-    margin-top: .5rem;
+    margin-top: .25rem;
     justify-content:space-between;
-    height: 4rem;
-    width: 100vw;
+    height: 4.35rem;
+    width: 100%;
     box-shadow: 2px 2px 5px var(--fifth-color);
 }
 
@@ -21,18 +27,22 @@
     list-style: none;
 }
 
-li h5, h4{
+.navbar li h5, h4{
     font-size: 1.2rem;
     font-weight: 400;
 }
 
-li{
+.navbar li{
     cursor: pointer;
 }
 
-li:hover{
+.navbar li:hover, .links:hover{
     color: var(--primary-color);
     transition: .2s;
+}
+
+.links:active{
+    color: var(--primary-color); ;
 }
 
 .icon{
@@ -58,8 +68,8 @@ li:hover{
 }
 
 .div_search button{
-    width: 15%;
-    height: 100%;
+    width: 3em;
+    height: 2.5em;
     justify-content: center;
     background-color: var(--primary-color);
     border: 0;
@@ -89,11 +99,17 @@ button:active{
 
 .nav_links{
     height: 50%;
+    text-decoration: none;
+}
+
+.links{
+    text-decoration: none !important;
+    color: var(--bgMainColor);
 }
 
 .btn_access{
-    width: 17%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     padding: 0 .5rem;
     justify-content: space-around;
     color: var(--fourth-color);
@@ -105,9 +121,12 @@ button:active{
     cursor: pointer;
 }
 
-
-
 .home_link{
-    margin-left: 2rem;
+    margin-left: 5rem;
     font-size: 1.5rem;
+}
+
+.login_link{
+    width: 17%;
+    height: 90%;
 }

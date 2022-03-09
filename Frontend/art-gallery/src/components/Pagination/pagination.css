@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .page {
+    padding: 3px;
+  }
+  
+  .pageLink {
+    padding:5px 9px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    box-shadow: inset 4px -4px 7px #bebebe, inset -4px 4px 7px #ffffff;
+    border-color: #fff;
+    font-size: 20px;
+    color: #7b8bc7;
+    cursor: pointer;
+  }
+  
+  .pageLink:hover {
+    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    background-color: #dfdfdf;
+  }
+  
+  .pageLink:active {
+    border-radius: 5px;
+    background: #191c29;
+    box-shadow: inset 4px -4px 7px #151823, inset -4px 4px 7px #1d202f;
+    color: #fff;
+  }
+  
+  .pageActive {
+    padding: 5px 9px;
+    border-radius: 5px;
+    background: #191c29;
+    box-shadow: inset 4px -4px 7px #151823, inset -4px 4px 7px #1d202f;
+    border-color: #191c29;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .pageActive:hover{
+    background-color: var(--primary-color);
+  }
+  
