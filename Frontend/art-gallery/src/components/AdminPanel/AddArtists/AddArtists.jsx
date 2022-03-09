@@ -3,7 +3,7 @@ import './AddArtists.css'
 
 
 import NavPanel from "../NavPanel/NavPanel";
-import imgprofile from '../../../assets/img/profile.png'
+
 
 
 const AddArtists = ()=>{
@@ -15,7 +15,7 @@ const AddArtists = ()=>{
         <div className="admin-box">
          <NavPanel/>
           <div className="component-box">
-          <div className="tittle-box"><h2>Admin Panel</h2></div>
+          <div className="title-box"><h2>Admin Panel</h2></div>
            
             <div className="reder-box">
                 <div className="myprofile-box">

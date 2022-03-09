@@ -51,7 +51,7 @@ const MyProfile = ()=>{
                     key="name"
                     className="input"
                     required
-                    value="Santiago Rodriguez"
+                    value= {window.localStorage.getItem("user")}
                     name="name"
                     // onChange={handleChange}
                     disabled
@@ -68,18 +68,7 @@ const MyProfile = ()=>{
                     // onChange={handleChange}
                     disabled
                   />
-                  <span> Password :</span>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="password"
-                    className="input"
-                    required
-                    value="*********"
-                    name="password"
-                    // onChange={handleChange}
-                    disabled
-                  />
+                  
 
                 <div>
                 <button onClick={() => HandleActive(true)} className="btn-edit">
@@ -96,7 +85,7 @@ const MyProfile = ()=>{
                     key="name"
                     className="input"
                     required
-                    value="Santiago Rodriguez"
+                    value={window.localStorage.getItem("user")}
                     name="name"
                     // onChange={handleChange}
                   />
@@ -111,17 +100,7 @@ const MyProfile = ()=>{
                     name="email"
                     // onChange={handleChange}
                   />
-                  <span> Password :</span>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="password"
-                    className="input"
-                    required
-                    value="*********"
-                    name="password"
-                    // onChange={handleChange}
-                  />
+                 
 
 <div>
                 <button  className="btn-edit">

@@ -65,7 +65,9 @@ export default function NavBar() {
           </NavLink>
         ) : (
           <li>
+            <NavLink to="/admin" className={styles.links}>
             <h5>Welcome! {window.localStorage.getItem("user")}</h5>
+            </NavLink>
           </li>
         )}
         {session && (
