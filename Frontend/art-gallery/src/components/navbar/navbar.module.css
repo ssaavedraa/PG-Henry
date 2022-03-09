@@ -145,3 +145,31 @@ button:active {
 .selectedRow {
   text-decoration: underline !important;
 }
+
+.containerCartLength{
+    display: flex;
+    top: .7em;
+    left: 1.2em;
+    position: relative;
+    text-align: center;
+    background-color: var(--primary-color);
+    height: 1.1rem;
+    width: 1.1rem;
+    border-radius: 1rem;
+    color: white;
+    padding: 0.1rem;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    font-size: .8em;
+}
+
+.divContainerCartIcon .icon{
+  font-size: 1.5em;
+}
+
+.divContainerCartIcon{
+  position: relative;
+  top: -.4em;
+}
+

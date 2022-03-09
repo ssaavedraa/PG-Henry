@@ -6,32 +6,37 @@ import GoogleLogin from 'react-google-login'
 import './Login.css'
 import GoogleIcon from './Google Icon/GoogleIcon.component';
 import Register from '../Register/Register.component';
-
-const {users} = require('../../assets/Json/users.json')
+import useAuth from '../../customHooks/useAuth';
 
 export default function Login(){
 
     const dispatch = useDispatch()
-    const [user, setUser] = useState('');
-    const [password, setPassword] = useState('');
+    const [userLogin, setUserLogin] = useState({
+        email: '',
+        password: ''
+    })
     const [isLoginFailed, setIsLoginFailed] = useState(false)
     const [isRegisterOpen, setIsRegisterOpen] = useState(false)
     const session = useSelector(state => state.auth)
+    const { login } = useAuth();
 
     const handleLogin =() => {
-        let authUser = users.find(u => {
-            return (u.username === user && u.password === password)
+        console.log(userLogin)
+        login({email: userLogin.email, password: userLogin.password})
+            .then(user => {
+                window.localStorage.setItem('user', user.firstName + ' ' + user.lastName)
+                dispatch(setLogin())
+            })
+            .catch(err => {
+                console.log(err)
+                setIsLoginFailed(true)
+            })
+    }
+
+    const handleChange =(e) => {
+        setUserLogin( user => {
+            return{...user, [e.target.id]: e.target.value}
         })
-        if(authUser){
-            window.localStorage.setItem('user', authUser.name)
-            dispatch(setLogin(authUser.name))
-            window.location.assign('/')
-        }
-        else{
-            document.getElementById('user').classList.add('login-error')
-            document.getElementById('password').classList.add('login-error')
-            setIsLoginFailed(true)
-        }
     }
 
     const responseGoogle = (response) => {
@@ -47,12 +52,12 @@ export default function Login(){
                 <h1>Login</h1>
                 <div className='login-user'>
                     <h3>For our members</h3>
-                    {isLoginFailed && <p className='login-failed'>Username/password incorrect</p>}
-                    <label htmlFor="user">Username</label>
-                    <input type="text" name="user" id="user" onChange={e => setUser(e.target.value)}/>
+                    {isLoginFailed && <p className='login-failed'>Email/password incorrect</p>}
+                    <label htmlFor="user">Email</label>
+                    <input type="text" name="email" id="email" onChange={handleChange}/>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" onChange={e => setPassword(e.target.value)}/>
-                    <button onClick={e => handleLogin()}>Login</button>
+                    <input type="password" name="password" id="password" onChange={handleChange}/>
+                    <button onClick={handleLogin}>Login</button>
                     <p>Or</p>
                     <GoogleLogin
                         clientId='978805617530-lt1c1k8amq1rkg9sk4q3rdhs7o2eqqs9.apps.googleusercontent.com'

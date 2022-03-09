@@ -24,5 +24,5 @@ function CardsPaints({ paintings }) {
     </div>
   );
 }
-
+{/* <h1 className="errorCardPaint">Not Results!</h1> */}
 export default CardsPaints;

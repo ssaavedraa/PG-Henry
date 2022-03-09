@@ -15,7 +15,7 @@ function SearchBar({ results, keyword, updateField }) {
   }
 
   return (
-    <div className="div_search">
+    <div className={results.length ? "div_search" : "div_searchNoResults"}>
       <div className="search_container">
         <button
           onClick={() => cancelSearch()}
@@ -51,8 +51,6 @@ function SearchBar({ results, keyword, updateField }) {
           ))}
         </div>
       ) : null}
-      {/*       <div className="container_results">
-          </div> */}
     </div>
   );
 }

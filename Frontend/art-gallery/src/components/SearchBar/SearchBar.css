@@ -1,12 +1,20 @@
 .div_search {
-  margin-top: 19.7rem;
+  margin-top: 16.7rem;
   display: flex;
   flex-direction: column;
   width: 23%;
-  min-height:21.9rem;
+  min-height:18.9rem;
   max-height: 60rem;
   justify-content: flex-start;
   position: relative;
+}
+
+.div_searchNoResults{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23%;
+  height: 50%;
 }
 
 

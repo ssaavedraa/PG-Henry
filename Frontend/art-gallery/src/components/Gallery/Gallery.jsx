@@ -21,7 +21,7 @@ function Gallery() {
   React.useEffect(() => {
     dispatch(getPaintings());
   }, [dispatch]);
-
+  console.log(paintings);
   //Filters
   const [filter, setFilter] = useState({
     order: "",

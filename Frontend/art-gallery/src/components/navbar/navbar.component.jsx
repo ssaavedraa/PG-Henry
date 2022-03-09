@@ -12,6 +12,7 @@ import Logo from "../../assets/img/SantArtlogo.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setLogin, setLogout } from "../../redux/actions/actions";
+import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
   const dispatch = useDispatch();
@@ -55,6 +56,7 @@ export default function NavBar() {
     }
     setState({ ...state, [name]: value, results });
   }
+  const { cart } = useCart();
 
   return (
     <div className={styles.navbar}>
@@ -69,19 +71,15 @@ export default function NavBar() {
       <ul className={styles.nav_links}>
         <li>
           <NavLink
-            exact
             to="/gallery"
             className={styles.linksNav}
-            activeClassName={styles.selectedRow}
           >
             Gallery
           </NavLink>
         </li>
         <li>
           <NavLink
-            exact
             to="/artists"
-            activeClassName={styles.selectedRow}
             className={styles.linksNav}
           >
             Artists
@@ -89,9 +87,7 @@ export default function NavBar() {
         </li>
         <li>
           <NavLink
-            exact
             to="/contactus"
-            activeClassName={styles.selectedRow}
             className={styles.linksNav}
           >
             Contact
@@ -112,8 +108,11 @@ export default function NavBar() {
           </li>
         )}
         <li>
-          <NavLink to="/under" className={styles.linksNav}>
-            <AiOutlineShoppingCart className={styles.icon} />
+          <NavLink to="/cart" className={styles.linksNav}>
+            <div className={styles.divContainerCartIcon}>
+              <div className={styles.containerCartLength}>{cart.length}</div>
+              <AiOutlineShoppingCart className={styles.icon} />
+            </div>
           </NavLink>
         </li>
         <li>
