@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/artists" element={<Artists />} />
           <Route exact path="/artists/:id" element={<DetailArtist />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/detailObra/:id" element={<DetailOfArt />} />
+          <Route exact path="/detailPainting/:id" element={<DetailOfArt />} />
           <Route exact path="/admin/addartist" element={<AddArtists />} />
           <Route exact path="/admin" element={<MyProfile />} />
           <Route exact path="/admin/additems" element={<AddItems />} />

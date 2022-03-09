@@ -39,11 +39,12 @@
 .divButtons button {
   outline: none;
   border: none;
-  padding: 0.5rem 5rem;
+  padding: 0.65rem;
   border-radius: 4px;
   background-color: var(--fifth-color);
   font-weight: bold;
   cursor: pointer;
+  width: 15rem;
 }
 
 .divButtons button:hover {

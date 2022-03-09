@@ -8,7 +8,7 @@ function CardsPaints({ paintings }) {
     <div className="containerCards">
       {paintings.length ?
         paintings.map((paint) => (
-          <NavLink to={"/detailObra/" + paint.id} className="links" key={paint.id}>
+          <NavLink to={"/detailPainting/" + paint.id} className="links" key={paint.id}>
             <CardPaint
               key={paint.id}
               image={paint.image}
