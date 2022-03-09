@@ -34,6 +34,7 @@ export const DetailOfArt = () => {
   };
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
+    navigate(`/detailObra/${id}`)
   };
 
   if (!detailObra || !obraRandon) {
@@ -60,10 +61,10 @@ export const DetailOfArt = () => {
               <span>Orientation: {detailObra.orientation}</span>
               <span>USD$ {detailObra.price}</span>
             </p>
-            {cart.includes(id) ? (
+            {cart.includes(parseInt(id)) ? (
               <button
                 className={styles.btnCard}
-                onClick={() => remove(id)}
+                onClick={() => remove(parseInt(id))}
               >
                 <div className={styles.cardImage}>-</div>
                 <div className={styles.cardText}>REMOVE FROM CART</div>
@@ -71,7 +72,7 @@ export const DetailOfArt = () => {
             ) : (
               <button
                 className={styles.btnCard}
-                onClick={() => add(id)}
+                onClick={() => add(parseInt(id))}
               >
                 <div className={styles.cardImage}>+</div>
                 <div className={styles.cardText}>ADD TO CART</div>

@@ -1,43 +1,80 @@
-.containerCartAll{
-    margin: 1rem;
+.containerCartAll {
+  margin: 1rem;
+  min-height: 90vh;
 }
 
-.containerCartAll h1{
-    text-align: center;
+.containerCartAll h1 {
+  text-align: center;
 }
 
-.containerCart{
-
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin: 1rem;
+.containerCart {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin: auto;
 }
 
-.containerCardsCart{
-display: flex;
-flex-direction: column;
-width: 90%;
-height: 70%;
-box-shadow: 5px 5px 10px var(--second-color);
-background-color: var(--fourth-color);
-justify-content: center;
+.divContainerTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem 0rem;
+  margin-top: 1rem;
 }
 
-.cardsCart{
-    display: flex;
+.divContainerTotal p{
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+.divButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0rem;
+}
+
+.divButtons button {
+  outline: none;
+  border: none;
+  padding: 0.5rem 5rem;
+  border-radius: 4px;
+  background-color: var(--fifth-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.divButtons button:hover {
+    color: white;
+    background-color: var(--btnHover-color);
+}
+
+.divPrecio {
     justify-content: space-between;
+    border-bottom: 2px solid var(--fifth-color);
+    width: 100%;
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: flex-end;
 }
 
-.cardsCart img{
-    height: 10rem;
-    width: 10rem;
-}
+.divPrecio button {
+    margin-right: 6.5rem;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1.75rem;
+    border-radius: 4px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
 
-.divButtons{
-display: flex;
-width: 90%;
-justify-content: space-between;
-margin: 2rem
-}
+  .divPrecio h5{
+      text-align: end;
+    align-items: flex-end;
+    font-size: 1.15rem;
+    margin-bottom: -0.9rem;
+  }
