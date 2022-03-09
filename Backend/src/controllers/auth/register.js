@@ -5,7 +5,7 @@ const createJWT = require("./utils/createJWT");
 const register = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
   try {
-    const existingUser = await User.findOne({ where: { email: email } });
+    const existingUser = await User.findOne({ where: { email: email, googleUser: false } });
     if (existingUser)
       return res.json({ status: "error", message: "email is already used" });
 

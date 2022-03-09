@@ -3,7 +3,12 @@ import CardPaint from "../../components/CardPaint/CardPaint";
 import { NavLink } from "react-router-dom";
 import "./CardsPaints.css";
 
-function CardsPaints({ paintings }) {
+//IsAdmin es una prop pasada para validar si es admin o usuario o guest
+function CardsPaints({ paintings, isAdmin }) {
+
+  //Booleano para evaluar si es admin
+  //let isAdmin = true;
+
   return (
     <div className="containerCards">
       {paintings.length ?
@@ -18,6 +23,7 @@ function CardsPaints({ paintings }) {
               width={paint.width}
               techniques={paint.techniques}
               price={paint.price}
+              isAdmin={isAdmin}
             />
           </NavLink>
         )) : <h1 className="errorCardPaint">Not Results!</h1>}
