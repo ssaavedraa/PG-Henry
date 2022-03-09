@@ -72,6 +72,11 @@ margin-bottom: 30px;
      margin-top: 0px;
      margin-bottom: 30px;
         }
+.internodescription h3 a{
+    
+         text-decoration: none;
+         color: black;
+    }
 .internodescription p{
     display: flex;
     flex-direction: column;
