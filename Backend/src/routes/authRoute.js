@@ -6,6 +6,7 @@ const passport = require("passport");
 
 router.post("/register", authControllers.register);
 router.post("/login", authControllers.login);
+router.post("/google/login", authControllers.googleAuth);
 router.get(
   "/get",
   passport.authenticate("jwt", { session: false }),
