@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { getPaintings } from "../../redux/actions/actions";
 
 import Filters from "../Filters/Filters";
@@ -11,6 +12,11 @@ import "./Gallery.css";
 function Gallery() {
   const dispatch = useDispatch();
   const paintings = useSelector((state) => state.paintings);
+
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+  const query = params.get("query");
+  const byQuery = query && { searchTerm: query };
 
   React.useEffect(() => {
     dispatch(getPaintings());
@@ -32,8 +38,8 @@ function Gallery() {
   });
 
   React.useEffect(() => {
-    dispatch(getPaintings(filter));
-  }, [dispatch, filter]);
+    query ? dispatch(getPaintings(byQuery)) : dispatch(getPaintings(filter));
+  }, [dispatch, filter, query, byQuery]);
 
   //------------------
 
@@ -55,14 +61,13 @@ function Gallery() {
   //----------------------
 
   function handleOnChange(e, value) {
-    if(filter.artist.length) page.actualPage = 1;
+    if (filter.artist.length) page.actualPage = 1;
     let orderBy;
-    if(e.target.name === "order"){
-      if(e.target.value !== "") orderBy = "title";
+    if (e.target.name === "order") {
+      if (e.target.value !== "") orderBy = "title";
       else orderBy = "";
-    }
-    else if(e.target.name === "minPrice"){
-      if(e.target.value !== "0") orderBy = "price";
+    } else if (e.target.name === "minPrice") {
+      if (e.target.value !== "0") orderBy = "price";
       else orderBy = "";
     }
 
@@ -74,7 +79,7 @@ function Gallery() {
   }
 
   function addList(e, name) {
-    if(filter.artist.length === 0) page.actualPage = 1;
+    if (filter.artist.length === 0) page.actualPage = 1;
     const seleccionado = filter[name].find((item) => item === e.target.id);
     if (!seleccionado && e.target.checked) {
       setFilter({ ...filter, [name]: [...filter[name], e.target.id] });
