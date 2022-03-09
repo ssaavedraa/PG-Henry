@@ -78,32 +78,37 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/artists" activeClassName={styles.selectedRow} className={styles.linksNav}>
+          <NavLink
+            exact
+            to="/artists"
+            activeClassName={styles.selectedRow}
+            className={styles.linksNav}
+          >
             Artists
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/contactus"  activeClassName={styles.selectedRow} className={styles.linksNav}>
+          <NavLink
+            exact
+            to="/contactus"
+            activeClassName={styles.selectedRow}
+            className={styles.linksNav}
+          >
             Contact
           </NavLink>
         </li>
         <h4>|</h4>
+
         {!session ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
-              <FaUserAlt />
-              <h4>Log in</h4>
+              <FaUserAlt className={styles.icon}/>
+              <h4>Login</h4>
             </button>
           </NavLink>
         ) : (
           <li>
             <h5>Welcome! {window.localStorage.getItem("user")}</h5>
-          </li>
-        )}
-        {session && (
-          <li onClick={() => handleLogout()}>
-            <p>Logout</p>
-            <FiLogOut className={styles.icon} />
           </li>
         )}
         <li>
@@ -116,6 +121,12 @@ export default function NavBar() {
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>
+        {session && (
+          <li className={styles.logoutNav} onClick={() => handleLogout()}>
+            <p>Logout</p>
+            <FiLogOut className={styles.icon} />
+          </li>
+        )}
       </ul>
     </div>
   );

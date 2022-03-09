@@ -1,102 +1,147 @@
-
-.navbar, .navbar ul, .navbar ul li,  .btn_access{
-    display: flex;
-    align-items: center;
+.navbar,
+.navbar ul,
+.navbar ul li,
+.btn_access {
+  display: flex;
+  align-items: center;
 }
 
-.navbar img{
-    width: 4.75rem;
-    height: 3.75rem;
-    margin-left: 0.90rem;
+.navbar img {
+  width: 4.75rem;
+  height: 3.75rem;
+  margin-left: 0.9rem;
 }
 
-.navbar{
-    margin-top: .25rem;
-    justify-content:space-between;
-    height: 4.35rem;
-    width: 100%;
-    box-shadow: 2px 2px 5px var(--fifth-color);
+.navbar {
+  margin-top: 0.25rem;
+  justify-content: space-between;
+  height: 4.35rem;
+  width: 100%;
+  box-shadow: 2px 2px 5px var(--fifth-color);
 }
 
-.navbar ul{
-    width: 50%;
-    justify-content: space-evenly;
+.navbar ul {
+  width: 60%;
+  justify-content: space-evenly;
 }
 
-.navbar ul li{
-    list-style: none;
+.navbar ul li {
+  list-style: none;
 }
 
-.navbar h4{
-    font-size: 1.2rem;
-    font-weight: 400;
+.navbar h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-.navbar li{
-    cursor: pointer;
+.navbar li {
+  cursor: pointer;
 }
 
-.navbar li:hover, .linksNav:hover{
-    color: var(--primary-color);
-    transition: .2s;
+.navbar li:hover,
+.linksNav:hover {
+  color: var(--primary-color);
+  transition: 0.2s;
+}
+
+.linksNav:active {
+  color: var(--primary-color);
+  background-color: transparent !important;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: var(--btnHover-color);
+  transition: 0.2s;
+}
+
+button:active {
+  background-color: var(--primary-color);
+}
+
+.nav_links {
+  height: 50%;
+}
+
+.linksNav {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none !important;
+  color: var(--bgMainColor);
+}
+
+.nav_links h4, .nav_links h5, .linksNav{
+    margin-top: .3em;
+}
+
+
+.btn_access {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  justify-content: space-around;
+  color: var(--fourth-color);
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 0;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.btn_access h4{
+    width:65%;
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.btn_access .icon{
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.home_link {
+  margin-left: 5rem;
+  font-size: 1.5rem;
+}
+
+.login_link,
+.logoutNav {
+  width: 15%;
+  height: 90%;
+}
+
+.logoutNav {
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  background-color: rgb(219, 2, 2);
+}
+
+.logoutNav:hover{
+    background-color: rgb(173, 6, 6);
 }
 
 .linksNav:active{
-    color: var(--primary-color); ;
+    background-color: rgb(219, 2, 2);
 }
 
-.icon{
-    font-size: 1.5rem;
+.logoutNav .icon {
+  font-size: 1.4em;
+  color: var(--fourth-color);
 }
 
-
-button:hover{
-    background-color: var(--btnHover-color);
-    transition: .2s;
-}
-
-button:active{
-    background-color: var(--primary-color);
-}
-
-
-.nav_links{
-    height: 50%;
-    text-decoration: none;
-}
-
-.linksNav{
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-decoration: none !important;
-    color: var(--bgMainColor);
-}
-
-.btn_access{
-    width: 100%;
-    height: 100%;
-    padding: 0 .5rem;
-    justify-content: space-around;
-    color: var(--fourth-color);
-    background-color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 400;
-    border: 0;
-    border-radius: 1rem;
-    cursor: pointer;
-}
-
-.home_link{
-    margin-left: 5rem;
-    font-size: 1.5rem;
-}
-
-.login_link{
-    width: 17%;
-    height: 90%;
+.logoutNav p {
+  font-size: 1.2em;
+  margin-right: 5px;
+  color: var(--fourth-color);
 }
 
 .selectedRow {
-    color: red;
-    font-weight: 800;
+  text-decoration: underline !important;
 }
