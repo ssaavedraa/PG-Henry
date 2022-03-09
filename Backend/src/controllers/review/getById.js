@@ -18,7 +18,7 @@ const getById = async (req, res) => {
 		});
 		if (!review)
 			return res.status(404).send(`No reviews found with id:${paramId}`);
-		console.log(review);
+
 		let fixedReview = {
 			title: review.title,
 			body: review.body,

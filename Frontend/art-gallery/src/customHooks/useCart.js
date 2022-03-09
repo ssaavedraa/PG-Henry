@@ -1,87 +1,87 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+
+function setArr(key, arr) {
+  localStorage.setItem(key, JSON.stringify(arr));
+  window.dispatchEvent(new Event("storage"));
+};
+
+function getArr(key) {
+  const storage = JSON.parse(localStorage.getItem(key));
+  if (!storage) {
+    return [];
+  } else {
+    return storage;
+  }
+};
 
 
 function useCart() {
-    function cartEvent(e) {
-        setCart(getArr('painting'));
+
+  function cartEvent() {
+    setCart(getArr("painting"))
+  };
+  
+  function removeEvent() {
+    window.removeEventListener("storage", cartEvent);
+  };
+
+  useEffect(() => {
+    window.addEventListener("storage", cartEvent);
+    return removeEvent;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function add(paintingId) {
+    try {
+      if (Array.isArray(paintingId)) {
+        paintingId.forEach((p) => add(p));
+        return;
+      }
+      const paintingArr = getArr("painting");
+      const id = parseInt(paintingId);
+      if (isNaN(id)) return;
+      if (paintingArr.includes(id)) {
+        return;
+      }
+      paintingArr.push(id);
+      setArr("painting", paintingArr);
+    } catch (err) {
+      console.log(err);
+      return err;
     }
+  }
 
-    function removeEvent() {
-        window.removeEventListener("storage", cartEvent)
-    };
+  const [cart, setCart] = useState(getArr("painting"));
 
-    useEffect(() => {
-        window.addEventListener("storage", cartEvent);
-        return removeEvent
-    }, []);
-
-    function setArr(key, arr) {
-        localStorage.setItem(key, JSON.stringify(arr));
-        window.dispatchEvent(new Event('storage'));
-    };
-
-    function getArr(key) {
-        const storage = JSON.parse(localStorage.getItem(key));
-        if (!storage) {
-            return []
-        } else {
-            return storage
+  function remove(paintingId) {
+    try {
+      let paintingArr = getArr("painting");
+      const id = parseInt(paintingId);
+      if (isNaN(id)) return;
+      for (let i = 0; i < paintingArr.length; i++) {
+        if (paintingArr[i] === paintingId) {
+          paintingArr.splice(i, 1);
+          setArr("painting", paintingArr);
         }
-    };
-
-    function add (paintingId) {
-        try {
-            if (paintingId === '') {
-                return
-            }
-            let paintingArr = getArr('painting');
-            if (typeof paintingId === "object") {
-                for (let i=0; i < paintingId.length; i++) {
-                    add(paintingId[i]);
-                };
-                return
-            };
-            if (paintingArr.includes(paintingId)) {
-                return
-            }
-            paintingArr.push(paintingId);
-            setArr('painting', paintingArr);
-        } catch (err) {
-            console.log(err);
-            return err
-        }
-    };
-
-    const [cart, setCart] = useState(getArr('painting'));
-
-    function remove(paintingId) {
-        try {
-            let paintingArr = getArr('painting');
-            for (let i=0; i < paintingArr.length; i++) {
-                if (paintingArr[i] == paintingId) {
-                    paintingArr.splice(i, 1);
-                    setArr('painting', paintingArr)
-                }
-            };
-        } catch (err) {
-            console.log(err);
-            return err
-        }
-    };
-
-    function removeAll() {
-        setArr('painting', []);
-        localStorage.removeItem('painting');
-    };
-
-    const hooks = {
-        add,
-        cart,
-        remove,
-        removeAll
+      }
+    } catch (err) {
+      console.log(err);
+      return err;
     }
-    return hooks
-};
+  }
 
+  function removeAll() {
+    setArr("painting", []);
+    localStorage.removeItem("painting");
+  }
+
+  const hooks = {
+    add,
+    cart,
+    remove,
+    removeAll,
+  };
+  return hooks;
+}
 
 export default useCart;
