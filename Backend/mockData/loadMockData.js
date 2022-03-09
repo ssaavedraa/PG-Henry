@@ -31,7 +31,7 @@ const loadMockData = async () => {
     lastName: "default",
     email: DEFAULT_ADMIN_EMAIL,
     password: hashSync(DEFAULT_ADMIN_PASSWORD, 10),
-    role: "user",
+    role: "admin",
   });
   for (let p of paintings) {
     await createPainting(p);
