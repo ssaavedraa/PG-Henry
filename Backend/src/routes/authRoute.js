@@ -24,11 +24,6 @@ router.put(
 	userControllers.changeName
 );
 router.put(
-	"/changeLastName",
-	passport.authenticate("jwt", { session: false }),
-	userControllers.changeLastName
-);
-router.put(
 	"/changePassword",
 	passport.authenticate("jwt", { session: false }),
 	userControllers.changePassword
