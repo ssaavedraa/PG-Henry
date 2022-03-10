@@ -1,27 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { getPaintings } from "../../redux/actions/actions";
-
 import Filters from "../Filters/Filters";
 import CardsPaints from "../../containers/CardsPaints/CardsPaints";
 import Pagination from "../Pagination/Pagination";
-
 import "./Gallery.css";
 
 function Gallery() {
   const dispatch = useDispatch();
   const paintings = useSelector((state) => state.paintings);
+  const navigate = useNavigate();
 
   const { search } = useLocation();
   const params = new URLSearchParams(search);
   const query = params.get("query");
-  const byQuery = query && { searchTerm: query };
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(getPaintings());
   }, [dispatch]);
-  console.log(paintings);
   //Filters
   const [filter, setFilter] = useState({
     order: "",
@@ -37,9 +34,9 @@ function Gallery() {
     name: "",
   });
 
-  React.useEffect(() => {
-    query ? dispatch(getPaintings(byQuery)) : dispatch(getPaintings(filter));
-  }, [dispatch, filter, query, byQuery]);
+  useEffect(() => {
+    dispatch(getPaintings({ searchTerm: query, ...filter }));
+  }, [dispatch, filter, query]);
 
   //------------------
 
@@ -91,7 +88,6 @@ function Gallery() {
 
   function cleanFilter() {
     let inputs = document.getElementsByTagName("input");
-
     for (let i = 0; i < inputs.length; i++) {
       if (inputs[i].type === "checkbox" || inputs[i].type === "radio") {
         inputs[i].checked = false;
@@ -110,6 +106,7 @@ function Gallery() {
       orientation: "",
       name: "",
     });
+    navigate("/gallery");
   }
 
   return (
@@ -122,6 +119,7 @@ function Gallery() {
         setFilter={setFilter}
       />
       <div className="cards-container">
+        {query && <p>{"searching for: " + query}</p>}
         <CardsPaints paintings={actualPaints} />
         <Pagination
           paintsPerPage={page.paintsPerPage}
