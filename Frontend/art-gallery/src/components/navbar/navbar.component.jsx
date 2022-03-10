@@ -13,9 +13,8 @@ import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-  const {user, logout} = useAuth()
+  const { user, logout } = useAuth();
   const resultSearch = useSelector((state) => state.resultSearch);
-
 
   const [state, setState] = useState({
     keyword: "",
@@ -29,10 +28,6 @@ export default function NavBar() {
   React.useEffect(() => {
     dispatch(getSearchAuto(state.keyword));
   }, [dispatch, state]);
-
-  const handleLogout = () => {
-    logout()
-  };
 
   function matchName(name, keyword) {
     let keyLen = keyword.length;
@@ -63,34 +58,25 @@ export default function NavBar() {
       />
       <ul className={styles.nav_links}>
         <li>
-          <NavLink
-            to="/gallery"
-            className={styles.linksNav}
-          >
+          <NavLink to="/gallery" className={styles.linksNav}>
             Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/artists"
-            className={styles.linksNav}
-          >
+          <NavLink to="/artists" className={styles.linksNav}>
             Artists
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/contactus"
-            className={styles.linksNav}
-          >
+          <NavLink to="/contactus" className={styles.linksNav}>
             Contact
           </NavLink>
         </li>
         <h4>|</h4>
-        {user.role === 'guest' ? (
+        {user.role === "guest" ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
-              <FaUserAlt className={styles.icon}/>
+              <FaUserAlt className={styles.icon} />
               <h4>Login</h4>
             </button>
           </NavLink>
@@ -112,8 +98,8 @@ export default function NavBar() {
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>
-        {user.role !== 'guest' && (
-          <li className={styles.logoutNav} onClick={() => handleLogout()}>
+        {user.role !== "guest" && (
+          <li className={styles.logoutNav} onClick={() => logout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />
           </li>
