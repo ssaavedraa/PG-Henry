@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import useAuth from "../../customHooks/useAuth";
-import { useDispatch } from "react-redux";
-import { deleteFav, postFav } from "../../redux/actions/actions.js";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteFav, getFavs, postFav } from "../../redux/actions/actions.js";
 
 function CardPaint({
   image,
@@ -19,6 +19,14 @@ function CardPaint({
   id,
 }) {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getFavs());
+  }, [dispatch]);
+
+  const favs = useSelector((state) => state.favs);
+  //console.log("soy favs", favs);
+
   const [isFavorite, setIsFavorite] = useState(false);
   const { user } = useAuth();
   //console.log(user);
@@ -63,8 +71,8 @@ function CardPaint({
           <p className="price">USD$ {price}</p>
         </div>
       </NavLink>
-      {user.role === "user" &&
-        (cart.includes(parseInt(id)) ? (
+      {user.role === "user" || user.role === "guest" ? (
+        cart.includes(parseInt(id)) ? (
           <button
             className="btn_card_paint"
             onClick={() => remove(parseInt(id))}
@@ -75,7 +83,10 @@ function CardPaint({
           <button className="btn_card_paint" onClick={() => add(parseInt(id))}>
             ADD TO CART <FaCartArrowDown className="icon_add_paint" />
           </button>
-        ))}
+        )
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }
