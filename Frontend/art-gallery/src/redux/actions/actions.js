@@ -183,7 +183,11 @@ export function postFav(id) {
       const json = await axios.post(
       `http://localhost:3001/favorites/add/${id}`
       );
-      return json;
+      console.log('soy favs', json)
+      return dispatch({
+        type: POST_FAVS,
+        payload: json.data,
+      });
     } catch (error) {
       console.log(error);
     }

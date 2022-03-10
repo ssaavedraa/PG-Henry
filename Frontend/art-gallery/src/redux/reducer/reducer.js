@@ -86,7 +86,7 @@ function rootReducer(state = initialState, action) {
     case POST_FAVS:
       return {
         ...state,
-        favs: action.id
+        favs: action.payload,
       }
     default:
       return state;

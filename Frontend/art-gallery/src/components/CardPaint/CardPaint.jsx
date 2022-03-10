@@ -5,6 +5,9 @@ import useCart from "../../customHooks/useCart.js";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import useAuth from "../../customHooks/useAuth";
+import { useDispatch } from "react-redux";
+import { postFav } from "../../redux/actions/actions.js";
+
 
 function CardPaint({
   image,
@@ -16,12 +19,15 @@ function CardPaint({
   price,
   id,
 }) {
+
+  const dispatch = useDispatch();
   const [isFavorite, setIsFavorite] = useState(false);
   const { user } = useAuth();
   console.log(user)
   
   function handlePress() {
     setIsFavorite(!isFavorite);
+    dispatch(postFav(id))
     //Agrego el dispatch del post del like
   }
 
@@ -37,7 +43,7 @@ function CardPaint({
         </button>
       )}
       {user.role === "guest" && (
-        <div></div>
+        <div className="divGuest"></div>
       )}
       {user.role === "user" && (
         <button onClick={handlePress} className="btn-header-icon">

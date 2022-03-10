@@ -139,3 +139,7 @@
   text-decoration: none;
   color: var(--bgMainColor);
 }
+
+.divGuest {
+  margin-bottom: 3rem;
+}
