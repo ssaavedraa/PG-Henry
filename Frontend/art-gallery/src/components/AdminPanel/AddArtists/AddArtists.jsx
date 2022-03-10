@@ -1,44 +1,61 @@
 import React from "react"
 import './AddArtists.css'
+import {addNewArtist} from "../../../redux/actions/actions"
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getArtist } from "../../../redux/actions/actions";
-import { useEffect } from "react";
+import { useDispatch} from "react-redux";
+
+
 
 import NavPanel from "../NavPanel/NavPanel";
-// const artists = useSelector((state) => state.artist);
 
-// const dispatch = useDispatch();
-
-// useEffect(() => {
-//   dispatch(getArtist());
-// }, []);
 
 const AddArtists = ()=>{
+const dispatch = useDispatch();
 
 
+  const [input, setInput] = useState({
+    name: "",
+    biography: "",
+    photo: "",
+    email: "",
+    location: "",    
+  });
+
+  function handleChange(e) {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value, //va tomando el nombre de cada prop, me vaya llenando el estado
+    });
+   
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(input);
+    dispatch(addNewArtist(input));
+    alert("New artist create");
+    setInput({
+      name: "",
+    biography: "",
+    photo: "",
+    email: "",
+    location: "",  
+    });
+    
+  }
     return (
-      <>
-        
+      <>        
         <div className="admin-box">
          <NavPanel/>
           <div className="component-box">
-          <div className="title-box"><h2>Admin Panel</h2></div>
-           
+          <div className="title-admin"><h1>ADMIN PANEL</h1></div>    
+          <hr></hr>       
             <div className="reder-box">
-                <div className="myprofile-box">
-          
+                <div className="artists-box">          
           <div className="information-box">
-          <h2> Add new Artist</h2>
-              
-           
+          <h2> ADD NEW ARTISTS</h2> 
             <div className="data">
-
-            <form key="form" 
-            // onSubmit={(e) => handleSubmit(e)}
-            >
-
-              </form>
+           <form key="form" onSubmit={(e) => handleSubmit(e)}>          
               
                   <label> Name: </label>
                   <input
@@ -47,81 +64,67 @@ const AddArtists = ()=>{
                     key="name"
                     className="input"
                     required
-                    value=""
+                    value={input.name}
                     name="name"
-                    // onChange={handleChange}
-                    
+                    onChange={handleChange}
                   />
                   <label> Biography: </label>
-                  <input
-                    type="coment"
-                    autoComplete="off"
-                    key="email"
-                    className="input"
-                    required
-                    value=""
-                    name="email"
-                    // onChange={handleChange}
-                   
+                  <textarea 
+                  name="biography"
+                  key="biography"                  
+                  className="input"
+                  value={input.biography}
+                  onChange={handleChange}
                   />
+                  
                   <label> Photo :</label>
                   <input
                     type="text"
                     autoComplete="off"
-                    key="password"
+                    key="photo"
                     className="input"
                     required
-                    value=""
-                    name="password"
-                    // onChange={handleChange}
-                    
+                    value={input.photo}
+                    name="photo"
+                    onChange={handleChange}
                   />
-               
-              
-                
                   <label> Email: </label>
                   <input
                     type="text"
                     autoComplete="off"
-                    key="name"
+                    key="email"
                     className="input"
                     required
-                    value=""
-                    name="name"
-                    // onChange={handleChange}
+                    value={input.email}
+                    name="email"
+                    onChange={handleChange}
                   />
                   <label> Location: </label>
                   <input
                     type="text"
                     autoComplete="off"
-                    key="email"
+                    key="location"
                     className="input"
                     required
-                    value=""
-                    name="email"
-                    // onChange={handleChange}
+                    value={input.location}
+                    name="location"
+                    onChange={handleChange}
                   />
                   
               <div>
-                <button 
-                // onClick={() => HandleActive(true)} 
+                <button                 
                 className="btn-edit">
                   Add new artists
                 </button>
+                
               </div>
+              </form>
             </div>
           </div>
           </div>
-        </div>
-                
-                
-                
-                </div>
+        </div></div>
           </div>
-        
       </>
     );
-
 }
-
 export default AddArtists;

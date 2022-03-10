@@ -15,7 +15,7 @@ const AddItems = ()=>{
         <div className="admin-box">
          <NavPanel/>
           <div className="component-box">
-          <div className="tittle-box"><h2>Admin Panel</h2></div>
+          <div className="title-admin"><h2>ADMIN PANEL</h2></div>
            
             <div className="reder-box">
                 <div className="myprofile-box">
