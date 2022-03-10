@@ -16,6 +16,7 @@ import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
 import TestLogin from "./components/TestLogin/TestLogin";
 import Favs from "./components/Favs/Favs";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
   return (
@@ -26,7 +27,15 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/artists" element={<Artists />} />
           <Route exact path="/artists/:id" element={<DetailArtist />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route
+            exact
+            path="/login"
+            element={
+              <ProtectedRoute role="guest">
+                <Login />
+              </ProtectedRoute>
+            }
+          />
           <Route exact path="/detailpainting/:id" element={<DetailOfArt />} />
           <Route exact path="/admin/addartist" element={<AddArtists />} />
           <Route exact path="/admin" element={<MyProfile />} />
