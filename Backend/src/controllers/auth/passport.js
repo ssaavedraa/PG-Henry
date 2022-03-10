@@ -1,5 +1,5 @@
 const JwtStrategy = require("passport-jwt").Strategy,
-	ExtractJwt = require("passport-jwt").ExtractJwt;
+ExtractJwt = require("passport-jwt").ExtractJwt;
 const opts = {};
 const { User } = require("../../db");
 const passport = require("passport");
@@ -11,7 +11,7 @@ passport.use(
 	new JwtStrategy(opts, async function (jwt_payload, done) {
 		try {
 			const user = await User.findOne({ where: { id: jwt_payload } });
-			if (!user) {
+			if (!user || user.isBanned) {
 				return done(null, false);
 			}
 			return done(null, user);
