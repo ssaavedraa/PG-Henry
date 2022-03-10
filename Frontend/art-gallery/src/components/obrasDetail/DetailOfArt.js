@@ -4,6 +4,7 @@ import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import './detailImg.css'
 import { useDispatch, useSelector } from "react-redux";
+import useCart from "../../customHooks/useCart.js";
 
 export const DetailOfArt = () => {
 
@@ -11,6 +12,7 @@ export const DetailOfArt = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
+  const { add, cart, remove } = useCart();
 
   useEffect(() => {
     dispatch(getObraDetail(id));
@@ -68,6 +70,7 @@ export const DetailOfArt = () => {
               <span>Orientation: {detailObra.orientation}</span>
               <span>USD$ {detailObra.price}</span>
             </p>
+<<<<<<< HEAD
             <NavLink to="/under">
               <button className={styles.btnCard}>
                 <div className={styles.cardImage}>+</div>
@@ -75,6 +78,25 @@ export const DetailOfArt = () => {
                 <div className={styles.cardText}>ADD TO CART</div>
               </button>
             </NavLink>
+=======
+            {cart.includes(parseInt(id)) ? (
+              <button
+                className={styles.btnCard}
+                onClick={() => remove(parseInt(id))}
+              >
+                <div className={styles.cardImage}>-</div>
+                <div className={styles.cardText}>REMOVE FROM CART</div>
+              </button>
+            ) : (
+              <button
+                className={styles.btnCard}
+                onClick={() => add(parseInt(id))}
+              >
+                <div className={styles.cardImage}>+</div>
+                <div className={styles.cardText}>ADD TO CART</div>
+              </button>
+            )}
+>>>>>>> fc8b5e1df31cf6779814f38d9f528ee5271313d7
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>
@@ -95,16 +117,16 @@ export const DetailOfArt = () => {
           <div className={styles.obrasDetail}>
             {obraRandon
               ? obraRandon
-                .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
-                .map((obra) => (
-                  <div
-                    onClick={() => handleDetail(obra.id)}
-                    key={obra.id}
-                    className={styles.obrasSimilares}
-                  >
-                    <img src={obra.image} alt="cards" />
-                  </div>
-                ))
+                  .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
+                  .map((obra) => (
+                    <div
+                      onClick={() => handleDetail(obra.id)}
+                      key={obra.id}
+                      className={styles.obrasSimilares}
+                    >
+                      <img src={obra.image} alt="cards" />
+                    </div>
+                  ))
               : ""}
           </div>
           <div

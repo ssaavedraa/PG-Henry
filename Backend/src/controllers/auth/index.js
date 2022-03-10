@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const basename = path.basename(__filename);
 
-artistControllers = {};
+authControllers = {};
 fs
 	.readdirSync(__dirname)
 	.filter(
@@ -11,9 +11,9 @@ fs
 	)
 	.forEach((file) => {
 		const [fileName] = file.split(".");
-		artistControllers[fileName] = require(path.join(__dirname, file));
+		authControllers[fileName] = require(path.join(__dirname, file));
 	});
 
 module.exports = {
-	...artistControllers,
+	...authControllers,
 };

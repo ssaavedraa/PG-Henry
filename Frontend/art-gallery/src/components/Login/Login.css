@@ -74,6 +74,8 @@
     flex-direction: row;
     align-items: center;
     color: black;
+    width: 80%;
+    justify-content: center;
 }
 
 .login-failed{

@@ -1,0 +1,162 @@
+.div_search {
+  margin-top: 16.7rem;
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  min-height:18.9rem;
+  max-height: 60rem;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.div_searchNoResults{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23%;
+  height: 50%;
+}
+
+
+.search_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.3rem;
+}
+
+.search_inputNav {
+  width: 85%;
+  height: 100%;
+  padding-left: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: var(--third-color);
+  color: var(--eigth-color);
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  outline: none;
+}
+
+.search_container .links {
+  height: 100%;
+  width: 3em;
+  margin: 0;
+}
+
+.btnSearch{
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.btnSearch:hover {
+  background-color: var(--btnHover-color);
+  transition: 0.2s;
+}
+
+.btnSearch:active {
+  background-color: var(--primary-color);
+}
+
+.icon_search {
+  font-size: 1.3rem;
+  margin-top: .3rem;
+  color: var(--fourth-color);
+}
+
+.search:focus {
+  outline: none;
+  color: var(--fifth-color);
+}
+
+/*Cancel button styles*/
+
+.cancel-btn {
+  color: var(--eigth-color);
+  border: none;
+  outline: none;
+  font-weight: 500;
+  z-index: 1;
+  transform: translate(18.4em, 0rem) scale(1.6);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cancel-btn:hover{
+  background-color: transparent;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+}
+.active {
+  opacity: 1;
+}
+.inactive {
+  opacity: 0;
+}
+
+/* Resultrs Container div */
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--third-color);
+  border: none;
+  width: 80%;
+  max-height: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 0.2rem;
+  z-index: 1000;
+}
+
+/* SearchPreview Component */
+
+.search-preview {
+  transition: 1s;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 3px;
+  padding-right: 10px;
+  border-top: 1px solid;
+  border-color: rgb(241, 241, 241);
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.search-preview:hover, .search-preview:hover .name,.search-preview:hover .sub-header{
+  background-color: var(--eigth-color);
+  color: var(--fifth-color);
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  color: rebeccapurple;
+}
+
+.sub-header {
+  font-weight: 500;
+  font-size: 10px;
+  color: rgb(121, 121, 121);
+  background-color: transparent !important;
+}
+.name {
+  font-size: 15px;
+  color: rgb(74, 74, 74);
+  font-weight: 800;
+  margin: 0rem 0;
+  background-color: transparent !important;
+}
+
+.start {
+  border-top: none;
+}
