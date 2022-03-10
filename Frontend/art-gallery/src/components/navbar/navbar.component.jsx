@@ -91,12 +91,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <h4>|</h4>
-<<<<<<< HEAD
         {user.role === 'guest' ? (
-=======
-
-        {!session ? (
->>>>>>> 1ed8ffdaa80af4e75aba098858c66eafce7f0b53
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
               <FaUserAlt className={styles.icon}/>
@@ -108,15 +103,12 @@ export default function NavBar() {
             <h5>Welcome! {user.firstName}</h5>
           </li>
         )}
-<<<<<<< HEAD
         {user.role !== 'guest' && (
           <li onClick={() => logout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />
           </li>
         )}
-=======
->>>>>>> 1ed8ffdaa80af4e75aba098858c66eafce7f0b53
         <li>
           <NavLink to="/cart" className={styles.linksNav}>
             <div className={styles.divContainerCartIcon}>
@@ -130,7 +122,7 @@ export default function NavBar() {
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>
-        {session && (
+        {user && (
           <li className={styles.logoutNav} onClick={() => handleLogout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />
