@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import styles from "./navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
 import { getSearchAuto } from "../../redux/actions/actions";
-
+import Logo from "../../assets/img/SantArtlogo.png";
 import SearchBar from "../SearchBar/SearchBar";
-
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
-import Logo from "../../assets/img/SantArtlogo.png";
-
 import { useDispatch, useSelector } from "react-redux";
+import useAuth from "../../customHooks/useAuth";
 import { setLogin, setLogout } from "../../redux/actions/actions";
 import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-
-  const session = useSelector((state) => state.auth);
+  const {user, logout} = useAuth()
   const resultSearch = useSelector((state) => state.resultSearch);
+
 
   const [state, setState] = useState({
     keyword: "",
@@ -94,8 +92,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <h4>|</h4>
-
-        {!session ? (
+        {user.role === 'guest' ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
               <FaUserAlt className={styles.icon}/>
@@ -104,7 +101,13 @@ export default function NavBar() {
           </NavLink>
         ) : (
           <li>
-            <h5>Welcome! {window.localStorage.getItem("user")}</h5>
+            <h5>Welcome! {user.firstName}</h5>
+          </li>
+        )}
+        {user.role !== 'guest' && (
+          <li onClick={() => logout()}>
+            <p>Logout</p>
+            <FiLogOut className={styles.icon} />
           </li>
         )}
         <li>
@@ -120,7 +123,7 @@ export default function NavBar() {
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>
-        {session && (
+        {user && (
           <li className={styles.logoutNav} onClick={() => handleLogout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />

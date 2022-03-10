@@ -5,7 +5,6 @@ const reviews = require("./data/reviews.json");
 const users = require("./data/users.json");
 const purchases = require("./data/purchases.json");
 const { Artist, Technique, Review, User, Purchase } = require("../src/db");
-const { hashSync } = require("bcrypt");
 
 const createPainting = require("../src/controllers/painting/utils/createPainting");
 const {
@@ -24,14 +23,14 @@ const loadMockData = async () => {
 		firstName: "user",
 		lastName: "default",
 		email: DEFAULT_USER_EMAIL,
-		password: hashSync(DEFAULT_USER_PASSWORD, 10),
+		password: DEFAULT_USER_PASSWORD,
 		role: "user",
 	});
 	await User.create({
 		firstName: "admin",
 		lastName: "default",
 		email: DEFAULT_ADMIN_EMAIL,
-		password: hashSync(DEFAULT_ADMIN_PASSWORD, 10),
+		password: DEFAULT_ADMIN_PASSWORD,
 		role: "admin",
 	});
 	for (let p of paintings) {
