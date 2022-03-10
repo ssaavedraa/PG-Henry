@@ -3,9 +3,10 @@
 .admin-bar{
     display:flex;
     flex-direction: column;  
-    box-shadow: 8px 5px 5px 0.5px rgba(71, 71, 71, 0.418);
+    box-shadow: 8px 5px 5px 2px rgba(71, 71, 71, 0.418);
     margin-left: 0.5rem;
     height: auto;
+    
 
 }
 
@@ -30,11 +31,15 @@
     
 }
 .menu-options li{
-    color: black;
+    color: var(--btnHover-color);
    
     list-style: none;
    margin:2rem;  
 
+}
+
+.menu-options li a{
+    color: var(--btnHover-color)
 }
 
 .menu-options li:hover{
