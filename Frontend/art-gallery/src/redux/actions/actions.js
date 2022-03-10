@@ -144,7 +144,7 @@ export function getArtist(name) {
         : (json = await axios.get(
             `http://localhost:3001/artist/getbyname/?name=${name}`
           ));
-      dispatch({ type: GET_ARTIST, payload: json.data });
+      dispatch({ type: GET_ARTIST, payload: json.data });      
     } catch (error) {
       console.log(error);
     }
@@ -155,12 +155,13 @@ export function getTechnique() {
   return async (dispatch) => {
     try {
       let json = await axios.get("http://localhost:3001/technique/getAll");
-      dispatch({ type: GET_TECHNIQUE, payload: json.data });
+      dispatch({ type: GET_TECHNIQUE, payload: json.data });      
     } catch (error) {
       console.log(error);
     }
   };
 }
+
 
 export const addNewArtist = (payload) => {
   return async function (dispatch) {
