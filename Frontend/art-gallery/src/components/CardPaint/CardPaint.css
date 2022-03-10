@@ -17,8 +17,8 @@
 .card:hover,
 .card:hover .linksCard {
   cursor: pointer;
-  transition: transform 0.5s;
-  transform: scale(1.05);
+  /* transition: transform 0.5s;
+  transform: scale(1.05); */
 }
 
 .image {
@@ -103,7 +103,7 @@
 }
 
 .btn-header-icon:hover .icon-header-card {
-  color: rgb(255, 145, 0);
+  color: red;
 }
 
 .icon-header-card,
@@ -118,7 +118,7 @@
 }
 
 .icon-header-cardFavorite {
-  color: rgb(255, 145, 0);
+  color: red;
 }
 
 .icon-header-card-Admin {
@@ -138,4 +138,8 @@
 .linksCard {
   text-decoration: none;
   color: var(--bgMainColor);
+}
+
+.divGuest {
+  margin-bottom: 3rem;
 }
