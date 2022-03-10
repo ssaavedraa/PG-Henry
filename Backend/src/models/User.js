@@ -1,4 +1,5 @@
 const { DataTypes } = require("sequelize");
+const { hashSync, compareSync } = require("bcrypt");
 
 module.exports = (sequelize) => {
 	sequelize.define("user", {
@@ -24,7 +25,10 @@ module.exports = (sequelize) => {
 			},
 		},
 		password: {
-			type: DataTypes.STRING
+			type: DataTypes.STRING,
+			set() {
+				return hashSync(password, 10)
+			}
 		},
 		isBanned: {
 			type: DataTypes.BOOLEAN,
