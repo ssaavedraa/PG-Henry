@@ -5,21 +5,13 @@ import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
 import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Logo from "../../assets/img/SantArtlogo.png";
-import { setLogin, setLogout } from "../../redux/actions/actions";
+import useAuth from "../../customHooks/useAuth";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-  const session = useSelector((state) => state.auth);
-
-  if (window.localStorage.getItem("user"))
-    dispatch(setLogin(window.localStorage.getItem("user")));
-
-  const handleLogout = () => {
-    window.localStorage.removeItem("user");
-    dispatch(setLogout());
-  };
+  const {user, logout} = useAuth()
 
   return (
     <div className={styles.navbar}>
@@ -56,7 +48,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <h4>|</h4>
-        {!session ? (
+        {user.role === 'guest' ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
               <FaUserAlt />
@@ -65,11 +57,11 @@ export default function NavBar() {
           </NavLink>
         ) : (
           <li>
-            <h5>Welcome! {window.localStorage.getItem("user")}</h5>
+            <h5>Welcome! {user.firstName}</h5>
           </li>
         )}
-        {session && (
-          <li onClick={() => handleLogout()}>
+        {user.role !== 'guest' && (
+          <li onClick={() => logout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />
           </li>

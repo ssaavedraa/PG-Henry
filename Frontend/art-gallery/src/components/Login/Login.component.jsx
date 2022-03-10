@@ -23,10 +23,7 @@ export default function Login(){
     const handleLogin =() => {
         console.log(userLogin)
         login({email: userLogin.email, password: userLogin.password})
-            .then(user => {
-                window.localStorage.setItem('user', user.firstName + ' ' + user.lastName)
-                dispatch(setLogin())
-            })
+            .then(window.location.assign('/'))
             .catch(err => {
                 console.log(err)
                 setIsLoginFailed(true)
