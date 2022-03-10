@@ -6,12 +6,11 @@ import "./SearchBar.css";
 
 function SearchBar({ results, keyword, updateField }) {
   function updateText(text) {
-    updateField("results", []);
-    updateField("keyword", text, false);
+    updateField(text, false);
   }
 
   function cancelSearch() {
-    updateField("keyword", "");
+    updateField("");
   }
 
   return (
@@ -28,7 +27,7 @@ function SearchBar({ results, keyword, updateField }) {
           value={keyword}
           className="search_inputNav"
           placeholder="Search your favorite artwork"
-          onChange={(e) => updateField("keyword", e.target.value)}
+          onChange={(e) => updateField(e.target.value)}
         />
         <NavLink to={`/gallery?query=${keyword}`} className="links">
           <button className="btnSearch" onClick={() => cancelSearch()}>
@@ -56,7 +55,7 @@ function SearchBar({ results, keyword, updateField }) {
 }
 
 function SearchPreview({ name, type, index, updateText, id, cancelSearch }) {
-  const redirect = type === "artist" ? `/artists/${id}`: `/detailObra/${id}`;
+  const redirect = type === "artist" ? `/artists/${id}` : `/detailObra/${id}`;
   return (
     <NavLink to={redirect} onClick={() => cancelSearch()}>
       <div

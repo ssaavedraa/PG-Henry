@@ -16,7 +16,7 @@ import ListArtist from "../utils/ListArtist/ListArtist";
 import "./Filters.css";
 
 function Filters({ handleOnChange, filter, addList, cleanFilter}) {
-  const artists = useSelector((state) => state.artist);
+  const artists = useSelector((state) => state.artist); 
   const technique = useSelector((state) => state.technique);
 
   const dispatch = useDispatch();
