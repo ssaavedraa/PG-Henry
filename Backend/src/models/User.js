@@ -26,8 +26,8 @@ module.exports = (sequelize) => {
 		},
 		password: {
 			type: DataTypes.STRING,
-			set() {
-				return hashSync(password, 10)
+			set(password) {
+				this.setDataValue('password', hashSync(password, 10))
 			}
 		},
 		isBanned: {
