@@ -7,7 +7,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import useAuth from "../../customHooks/useAuth";
 import { setLogin, setLogout } from "../../redux/actions/actions";
 import useCart from "../../customHooks/useCart.js";
@@ -15,6 +15,7 @@ import useCart from "../../customHooks/useCart.js";
 export default function NavBar() {
   const dispatch = useDispatch();
   const {user, logout} = useAuth()
+  const resultSearch = useSelector((state) => state.resultSearch);
 
 
   const [state, setState] = useState({
