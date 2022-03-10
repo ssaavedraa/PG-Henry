@@ -127,7 +127,7 @@ export function getArtist(name) {
         : (json = await axios.get(
             `http://localhost:3001/artist/getbyname/?name=${name}`
           ));
-      dispatch({ type: GET_ARTIST, payload: json.data });
+      dispatch({ type: GET_ARTIST, payload: json.data });      
     } catch (error) {
       console.log(error);
     }
@@ -138,13 +138,36 @@ export function getTechnique() {
   return async (dispatch) => {
     try {
       let json = await axios.get("http://localhost:3001/technique/getAll");
-      dispatch({ type: GET_TECHNIQUE, payload: json.data });
+      dispatch({ type: GET_TECHNIQUE, payload: json.data });      
     } catch (error) {
       console.log(error);
     }
   };
 }
 
+
+export const addNewArtist = (payload) => {
+  return async function (dispatch) {
+      try{
+      const post = await axios.post('http://localhost:3001/artist/create', payload);
+      console.log(post)
+      return post;
+  }catch(err){
+  console.log(err)
+}
+}};
+
+
+export const addNewPainting = (payload) => {
+  return async function (dispatch) {
+      try{
+      const post = await axios.post('http://localhost:3001/painting/create', payload);
+      console.log(post)
+      return post;
+  }catch(err){
+  console.log(err)
+}
+}};
 export function getSearchAuto(text) {
   return async (dispatch) => {
     try {
