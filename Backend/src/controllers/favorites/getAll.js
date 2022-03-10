@@ -1,6 +1,6 @@
 const { User, Painting, Photo, Artist } = require("../../db");
 const getAll = async (req, res) => {
-	const userId = req.params.id;
+	const userId = req.user.id;
 	try {
 		let user = await User.findOne({
 			where: { id: userId },

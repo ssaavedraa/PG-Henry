@@ -6,13 +6,10 @@ import {
   GET_PAINTINGS_BY_ARTIST,
   GET_REVIEWS,
   GET_ARTIST_ID,
-  SET_LOGIN,
   GET_ARTIST,
   GET_TECHNIQUE,
-  SET_LOGOUT,
   GET_SEARCH,
 } from "../action-types/index.js";
-
 
 export function getPaintings(filters) {
   return async function (dispatch) {
@@ -90,20 +87,6 @@ export function getPaitingsByArtist(id) {
   };
 }
 
-export const setLogin = (payload) => {
-  return {
-    type: SET_LOGIN,
-    payload
-  }
-}
-
-export const setLogout = (payload) => {
-  return{
-    type: SET_LOGOUT,
-    payload
-  }
-}
-
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
@@ -135,7 +118,6 @@ export const getObrasRandon = (id) => {
   };
 };
 
- 
 export function getArtist(name) {
   return async (dispatch) => {
     try {
@@ -190,12 +172,12 @@ export function getSearchAuto(text) {
   return async (dispatch) => {
     try {
       let search = text ? text : "a";
-      let json = await axios.get(`http://localhost:3001/painting/search/suggestions/${search}`);
-      dispatch({type: GET_SEARCH, payload: json.data});
+      let json = await axios.get(
+        `http://localhost:3001/painting/search/suggestions/${search}`
+      );
+      dispatch({ type: GET_SEARCH, payload: json.data });
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 }
-
-

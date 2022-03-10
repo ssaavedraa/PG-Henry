@@ -7,15 +7,12 @@ import {
   GET_ARTIST_ID,
   GET_ARTIST,
   GET_TECHNIQUE,
-  SET_LOGIN,
-  SET_LOGOUT,
   GET_SEARCH,
 } from "../action-types";
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
-  auth: false,
   reviews: [],
   paintingsArtist: [],
   artistId: [],
@@ -55,16 +52,6 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         technique: action.payload,
-      };
-    case SET_LOGIN:
-      return {
-        ...state,
-        auth: true,
-      };
-    case SET_LOGOUT:
-      return {
-        ...state,
-        auth: false,
       };
     case GET_OBRAID:
       return {
