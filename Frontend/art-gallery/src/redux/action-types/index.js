@@ -8,3 +8,4 @@ export const GET_OBRAID = "GET_OBRAID";
 export const GET_OBRAIDRANDON = "GET_OBRAIDRANDON";
 export const GET_SEARCH = "GET_SEARCH";
 export const POST_FAVS = 'POST_FAVS';
+export const DELETE_FAVS = 'DELETE_FAVS';

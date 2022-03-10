@@ -9,7 +9,8 @@ import {
   GET_ARTIST,
   GET_TECHNIQUE,
   GET_SEARCH,
-  POST_FAVS
+  POST_FAVS,
+  DELETE_FAVS
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -170,6 +171,24 @@ export function postFav(id) {
       console.log('soy favs', json)
       return dispatch({
         type: POST_FAVS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+//Post favs
+export function deleteFav(id) {
+  return async function (dispatch) {
+    try {
+      const json = await axios.delete(
+      `http://localhost:3001/favorites/remove/${id}`
+      );
+      console.log('soy favs', json)
+      return dispatch({
+        type: DELETE_FAVS,
         payload: json.data,
       });
     } catch (error) {

@@ -17,8 +17,8 @@
 .card:hover,
 .card:hover .linksCard {
   cursor: pointer;
-  transition: transform 0.5s;
-  transform: scale(1.05);
+  /* transition: transform 0.5s;
+  transform: scale(1.05); */
 }
 
 .image {

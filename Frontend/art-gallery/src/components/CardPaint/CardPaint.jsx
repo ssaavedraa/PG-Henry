@@ -6,8 +6,7 @@ import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import useAuth from "../../customHooks/useAuth";
 import { useDispatch } from "react-redux";
-import { postFav } from "../../redux/actions/actions.js";
-
+import { deleteFav, postFav } from "../../redux/actions/actions.js";
 
 function CardPaint({
   image,
@@ -19,15 +18,16 @@ function CardPaint({
   price,
   id,
 }) {
-
   const dispatch = useDispatch();
   const [isFavorite, setIsFavorite] = useState(false);
   const { user } = useAuth();
-  console.log(user)
-  
-  function handlePress() {
-    setIsFavorite(!isFavorite);
-    dispatch(postFav(id))
+  //console.log(user);
+
+  function handlePress(id) {
+    setIsFavorite(!isFavorite)
+      ? dispatch(deleteFav(id))
+      : dispatch(postFav(id));
+
     //Agrego el dispatch del post del like
   }
 
@@ -42,11 +42,9 @@ function CardPaint({
           <AiFillEdit className="icon-header-card" />
         </button>
       )}
-      {user.role === "guest" && (
-        <div className="divGuest"></div>
-      )}
+      {user.role === "guest" && <div className="divGuest"></div>}
       {user.role === "user" && (
-        <button onClick={handlePress} className="btn-header-icon">
+        <button onClick={() => handlePress(id)} className="btn-header-icon">
           {isFavorite ? (
             <AiTwotoneHeart className="icon-header-cardFavorite" />
           ) : (
@@ -66,24 +64,19 @@ function CardPaint({
           <p className="price">USD$ {price}</p>
         </div>
       </NavLink>
-      {user.role ===
-        "user" && (
-          cart.includes(parseInt(id)) ? (
-            <button
-              className="btn_card_paint"
-              onClick={() => remove(parseInt(id))}
-            >
-              REMOVE <FaCartArrowDown className="icon_add_paint" />
-            </button>
-          ) : (
-            <button
-              className="btn_card_paint"
-              onClick={() => add(parseInt(id))}
-            >
-              ADD TO CART <FaCartArrowDown className="icon_add_paint" />
-            </button>
-          )
-        )}
+      {user.role === "user" &&
+        (cart.includes(parseInt(id)) ? (
+          <button
+            className="btn_card_paint"
+            onClick={() => remove(parseInt(id))}
+          >
+            REMOVE <FaCartArrowDown className="icon_add_paint" />
+          </button>
+        ) : (
+          <button className="btn_card_paint" onClick={() => add(parseInt(id))}>
+            ADD TO CART <FaCartArrowDown className="icon_add_paint" />
+          </button>
+        ))}
     </div>
   );
 }
