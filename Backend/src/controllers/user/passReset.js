@@ -1,4 +1,3 @@
-const { hashSync } = require("bcrypt");
 const { User } = require("../../db");
 
 const passReset = async (req, res) => {
@@ -13,7 +12,7 @@ const passReset = async (req, res) => {
     );
     const newPassword = String.fromCharCode(...charArray);
     console.log(newPassword); //aca enviaria el mail con este password al user
-    user.password = hashSync(newPassword, 10);
+    user.password = newPassword
     await user.save();
     res.json("Success");
   } catch (err) {

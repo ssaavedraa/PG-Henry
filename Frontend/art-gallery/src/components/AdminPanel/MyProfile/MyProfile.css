@@ -1,60 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
 
 .admin-box{
     display: flex;   
-    height: 100vh;         
-    
-    }
+    height: auto;       
+    overflow-y: scroll;   
+        }
 
-.component-box{
-   
+.component-box{   
     height: 90vh;
     width: 85%;
 }
 
-
-.tittle-box{
-    height: 5%;
-    
+.title-admin{
+    height: 5%;    
     margin: auto;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 .reder-box{
- height: 70%;
- 
- 
-
+ height: 70%; 
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-
-
-
 .myprofile-box{
-    
-    height: auto;
-    
-    
+    height: auto;    
     text-align: center;
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 20px;
-    
-    border-radius: 20px;
-    box-shadow: 8px 5px 5px 8px rgba(71, 71, 71, 0.418);
-    
-    
-   
+         
    }
 
    .information-box{
-       text-align: center;
-       
+       text-align: center;       
        padding-top: 2rem;
-       padding-bottom: 2rem;
-       
+       padding-bottom: 2rem;       
    }
 
 
@@ -63,42 +41,31 @@
        flex-direction: column;
        width: 40%;
        text-align: center;
-       justify-content: center;
-       
-      
-       
+       justify-content: center;      
    }
 
    .input{
        margin: 0.5rem;
        height: 2rem;
        text-align: center;
-       font-family: 'Poppins', sans-serif;
-       
+       font-family: 'Poppins', sans-serif;       
        border-radius: 10px;
    }
 
-   .input:hover{
-       
+   .input:hover{       
        background-color: rgb(231, 231, 231);
    }
 
 
 
    .btn-edit{
-
-
        height: 3rem;
-       width: 12rem;
-       
+       width: 12rem;       
        list-style: none;
        background-color: rgb(212, 212, 212);
        border-radius: 20px;
        border-style: none;
-       margin: 1rem;
-       
-            
-       
+       margin: 1rem;          
    }
 
    .btn-edit:hover{

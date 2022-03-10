@@ -6,13 +6,10 @@ import {
   GET_PAINTINGS_BY_ARTIST,
   GET_REVIEWS,
   GET_ARTIST_ID,
-  SET_LOGIN,
   GET_ARTIST,
   GET_TECHNIQUE,
-  SET_LOGOUT,
   GET_SEARCH,
 } from "../action-types/index.js";
-
 
 export function getPaintings(filters) {
   return async function (dispatch) {
@@ -90,20 +87,6 @@ export function getPaitingsByArtist(id) {
   };
 }
 
-export const setLogin = (payload) => {
-  return {
-    type: SET_LOGIN,
-    payload
-  }
-}
-
-export const setLogout = (payload) => {
-  return{
-    type: SET_LOGOUT,
-    payload
-  }
-}
-
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
@@ -135,7 +118,6 @@ export const getObrasRandon = (id) => {
   };
 };
 
- 
 export function getArtist(name) {
   return async (dispatch) => {
     try {
@@ -145,7 +127,7 @@ export function getArtist(name) {
         : (json = await axios.get(
             `http://localhost:3001/artist/getbyname/?name=${name}`
           ));
-      dispatch({ type: GET_ARTIST, payload: json.data });
+      dispatch({ type: GET_ARTIST, payload: json.data });      
     } catch (error) {
       console.log(error);
     }
@@ -156,22 +138,46 @@ export function getTechnique() {
   return async (dispatch) => {
     try {
       let json = await axios.get("http://localhost:3001/technique/getAll");
-      dispatch({ type: GET_TECHNIQUE, payload: json.data });
+      dispatch({ type: GET_TECHNIQUE, payload: json.data });      
     } catch (error) {
       console.log(error);
     }
   };
 }
 
+
+export const addNewArtist = (payload) => {
+  return async function (dispatch) {
+      try{
+      const post = await axios.post('http://localhost:3001/artist/create', payload);
+      console.log(post)
+      return post;
+  }catch(err){
+  console.log(err)
+}
+}};
+
+
+export const addNewPainting = (payload) => {
+  return async function (dispatch) {
+      try{
+      const post = await axios.post('http://localhost:3001/painting/create', payload);
+      console.log(post)
+      return post;
+  }catch(err){
+  console.log(err)
+}
+}};
 export function getSearchAuto(text) {
   return async (dispatch) => {
     try {
       let search = text ? text : "a";
-      let json = await axios.get(`http://localhost:3001/painting/search/suggestions/${search}`);
-      dispatch({type: GET_SEARCH, payload: json.data});
+      let json = await axios.get(
+        `http://localhost:3001/painting/search/suggestions/${search}`
+      );
+      dispatch({ type: GET_SEARCH, payload: json.data });
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 }
-
