@@ -15,34 +15,27 @@ export default function NavBar() {
   const dispatch = useDispatch();
   const { user, logout } = useAuth();
   const resultSearch = useSelector((state) => state.resultSearch);
+  const [keyword, setKeyword] = useState("");
 
-  const [state, setState] = useState({
-    keyword: "",
-    results: [],
-  });
-
-  React.useEffect(() => {
+  /*   React.useEffect(() => {
     dispatch(getSearchAuto());
   }, [dispatch, state]);
 
   React.useEffect(() => {
     dispatch(getSearchAuto(state.keyword));
-  }, [dispatch, state]);
+  }, [dispatch, state]); */
 
-  function matchName(name, keyword) {
+  /*   function matchName(name, keyword) {
     let keyLen = keyword.length;
     name = name.toLowerCase().substring(0, keyLen);
     return name === keyword && keyLen !== 0;
-  }
+  } */
 
-  function updateField(name, value, update = true) {
-    let results = [];
+  function updateField(value, update = true) {
     if (update) {
-      results = resultSearch.filter(
-        (item) => true === matchName(item.name, value)
-      );
+      dispatch(getSearchAuto(value));
     }
-    setState({ ...state, [name]: value, results });
+    setKeyword(value);
   }
   const { cart } = useCart();
 
@@ -52,8 +45,8 @@ export default function NavBar() {
         <img src={Logo} alt="logo" />
       </Link>
       <SearchBar
-        results={state.results}
-        keyword={state.keyword}
+        results={resultSearch}
+        keyword={keyword}
         updateField={updateField}
       />
       <ul className={styles.nav_links}>

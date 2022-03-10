@@ -147,12 +147,42 @@ export function getTechnique() {
   };
 }
 
+export const addNewArtist = (payload) => {
+  return async function (dispatch) {
+    try {
+      const post = await axios.post(
+        "http://localhost:3001/artist/create",
+        payload
+      );
+      console.log(post);
+      return post;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const addNewPainting = (payload) => {
+  return async function (dispatch) {
+    try {
+      const post = await axios.post(
+        "http://localhost:3001/painting/create",
+        payload
+      );
+      console.log(post);
+      return post;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
 export function getSearchAuto(text) {
   return async (dispatch) => {
     try {
-      let search = text ? text : "a";
+      console.log(text);
+      if (!text) return dispatch({ type: GET_SEARCH, payload: "" });
       let json = await axios.get(
-        `http://localhost:3001/painting/search/suggestions/${search}`
+        `http://localhost:3001/painting/search/suggestions/${text}`
       );
       dispatch({ type: GET_SEARCH, payload: json.data });
     } catch (error) {
