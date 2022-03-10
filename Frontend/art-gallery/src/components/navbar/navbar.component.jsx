@@ -9,7 +9,6 @@ import { FiLogOut } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import useAuth from "../../customHooks/useAuth";
-import { setLogin, setLogout } from "../../redux/actions/actions";
 import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
@@ -31,12 +30,8 @@ export default function NavBar() {
     dispatch(getSearchAuto(state.keyword));
   }, [dispatch, state]);
 
-  if (window.localStorage.getItem("user"))
-    dispatch(setLogin(window.localStorage.getItem("user")));
-
   const handleLogout = () => {
-    window.localStorage.removeItem("user");
-    dispatch(setLogout());
+    logout()
   };
 
   function matchName(name, keyword) {
