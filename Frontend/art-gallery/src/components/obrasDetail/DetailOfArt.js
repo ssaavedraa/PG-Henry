@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
+import './detailImg.css'
 import { useDispatch, useSelector } from "react-redux";
 
 export const DetailOfArt = () => {
+
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -12,6 +15,7 @@ export const DetailOfArt = () => {
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
+ 
   }, []);
 
   const { detailObra, obraRandon } = useSelector((state) => state);
@@ -25,14 +29,18 @@ export const DetailOfArt = () => {
   const handleDecrement = () => {
     setPage((prev) => Math.max(prev - 1, 1));
   };
-  ////////////////////////////////
+
   const handleReturn = () => {
     navigate(-1);
   };
+ 
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
     navigate(`/detailObra/${id}`)
+   
   };
+
+ 
 
   if (!detailObra || !obraRandon) {
     return <h1>Loading</h1>;
@@ -44,13 +52,15 @@ export const DetailOfArt = () => {
           <h1>{detailObra.title}</h1>
         </header>
         <div className={styles.principalSectionInterno}>
-          <div className={styles.internoimg}>
-            <img src={detailObra.photos[0].url} alt="img" />
+
+          <div  className={styles.internoimg}>
+            <img  src={detailObra.photos[0].url} alt="img" />
           </div>
+
           <div className={styles.internodescription}>
-            <h3><Link to={`/artists/${detailObra.artist.id}`}>{detailObra.artist.name}</Link></h3>
+            <h3><Link to={`/artists/${detailObra.artist.id}`}>Artist: {detailObra.artist.name}</Link></h3>
             <p>
-            <span>{detailObra.description}</span>
+              <span>{detailObra.description}</span>
               <span>Height: {detailObra.height} cm</span>
               <span>Width: {detailObra.width} cm</span>
               <span>Technique: {detailObra.techniques[0].name}</span>
@@ -59,11 +69,11 @@ export const DetailOfArt = () => {
               <span>USD$ {detailObra.price}</span>
             </p>
             <NavLink to="/under">
-            <button className={styles.btnCard}>
-              <div className={styles.cardImage}>+</div>
+              <button className={styles.btnCard}>
+                <div className={styles.cardImage}>+</div>
 
-              <div className={styles.cardText}>ADD TO CART</div>
-            </button>
+                <div className={styles.cardText}>ADD TO CART</div>
+              </button>
             </NavLink>
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
