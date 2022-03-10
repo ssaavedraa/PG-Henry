@@ -18,7 +18,7 @@ const MyProfile = () => {
     <>
       <div className="admin-box">
         <NavPanel />
-        <div className="component-box">
+ {/*        <div className="component-box">
           <div className="title-admin">
             <h2>ADMIN PANEL</h2>
           </div>
@@ -106,7 +106,7 @@ const MyProfile = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

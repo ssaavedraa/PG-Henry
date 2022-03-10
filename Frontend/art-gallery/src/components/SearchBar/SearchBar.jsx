@@ -6,8 +6,8 @@ import "./SearchBar.css";
 
 function SearchBar({ results, keyword, updateField }) {
   function updateText(text) {
-    updateField("results", []);
     updateField("keyword", text, false);
+    updateField("results", []);
   }
 
   function cancelSearch() {

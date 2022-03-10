@@ -21,9 +21,9 @@ export default function NavBar() {
     results: [],
   });
 
-  React.useEffect(() => {
+/*   React.useEffect(() => {
     dispatch(getSearchAuto());
-  }, [dispatch, state]);
+  }, [dispatch, state]); */
 
   React.useEffect(() => {
     dispatch(getSearchAuto(state.keyword));
@@ -38,9 +38,10 @@ export default function NavBar() {
   function updateField(name, value, update = true) {
     let results = [];
     if (update) {
-      results = resultSearch.filter(
+/*       results = resultSearch.filter(
         (item) => true === matchName(item.name, value)
-      );
+      ); */
+      results = resultSearch;
     }
     setState({ ...state, [name]: value, results });
   }
