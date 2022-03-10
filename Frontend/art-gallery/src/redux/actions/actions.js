@@ -193,6 +193,7 @@ export function getSearchAuto(text) {
 
 //Post favs
 export function postFav(id) {
+  console.log('soy pintura n|', id)
   return async function (dispatch) {
     try {
       const json = await axios.post(
@@ -211,6 +212,7 @@ export function postFav(id) {
 
 //Post favs
 export function deleteFav(id) {
+  console.log('soy delete de pintura n|', id)
   return async function (dispatch) {
     try {
       const json = await axios.delete(

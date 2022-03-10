@@ -24,9 +24,8 @@ function CardPaint({
   //console.log(user);
 
   function handlePress(id) {
-    setIsFavorite(!isFavorite)
-      ? dispatch(deleteFav(id))
-      : dispatch(postFav(id));
+    setIsFavorite(!isFavorite);
+    !isFavorite ? dispatch(postFav(id)) : dispatch(deleteFav(id));
 
     //Agrego el dispatch del post del like
   }
