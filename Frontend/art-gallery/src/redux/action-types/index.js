@@ -9,3 +9,4 @@ export const GET_OBRAIDRANDON = 'GET_OBRAIDRANDON';
 export const SET_LOGIN = 'SET_LOGIN'
 export const SET_LOGOUT = 'SET_LOGOUT'
 export const GET_SEARCH = 'GET_SEARCH';
+export const POST_FAVS = 'POST_FAVS';

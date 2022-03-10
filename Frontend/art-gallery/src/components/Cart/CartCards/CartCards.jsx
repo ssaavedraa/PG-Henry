@@ -35,7 +35,7 @@ const CartCards = ({ cartPainting }) => {
                 <img src={painting.photos[0].url} alt="No img" />
                 <div className="containerDetails">
 
-                  <h5><Link to={`/detailPainting/${painting.id}`}>{painting.title}</Link></h5>
+                  <h5><Link to={`/detailpainting/${painting.id}`}>{painting.title}</Link></h5>
                   <p>{painting.artist.name}</p>
                   <p>
                     Size: {painting.height} x {painting.width}

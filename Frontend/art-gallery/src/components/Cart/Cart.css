@@ -1,13 +1,13 @@
-.containerCartAll {
+.containerFavAll {
   margin: 1rem;
   min-height: 90vh;
 }
 
-.containerCartAll h1 {
+.containerFavAll h1 {
   text-align: center;
 }
 
-.containerCart {
+.containerFav {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -52,13 +52,12 @@
     background-color: var(--btnHover-color);
 }
 
-.divPrecio {
-    justify-content: space-between;
-    border-bottom: 2px solid var(--fifth-color);
-    width: 100%;
-    display: flex;
-    padding-bottom: 1rem;
-    align-items: flex-end;
+.divPrecioFav {
+  justify-content: end;
+  border-bottom: 2px solid var(--fifth-color);
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
 }
 
 .divPrecio button {
@@ -73,9 +72,10 @@
     cursor: pointer;
   }
 
-  .divPrecio h5{
+  .divPrecioFav h5{
       text-align: end;
     align-items: flex-end;
+    justify-content: end;
     font-size: 1.15rem;
     margin-bottom: -0.9rem;
   }

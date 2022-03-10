@@ -11,6 +11,7 @@ import {
   GET_TECHNIQUE,
   SET_LOGOUT,
   GET_SEARCH,
+  POST_FAVS
 } from "../action-types/index.js";
 
 
@@ -175,3 +176,16 @@ export function getSearchAuto(text) {
   }
 }
 
+//Post favs
+export function postFav(id) {
+  return async function (dispatch) {
+    try {
+      const json = await axios.post(
+      `http://localhost:3001/favorites/add/${id}`
+      );
+      return json;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}

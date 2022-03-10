@@ -103,7 +103,7 @@
 }
 
 .btn-header-icon:hover .icon-header-card {
-  color: rgb(255, 145, 0);
+  color: red;
 }
 
 .icon-header-card,
@@ -118,7 +118,7 @@
 }
 
 .icon-header-cardFavorite {
-  color: rgb(255, 145, 0);
+  color: red;
 }
 
 .icon-header-card-Admin {

@@ -10,6 +10,7 @@ import {
   SET_LOGIN,
   SET_LOGOUT,
   GET_SEARCH,
+  POST_FAVS
 } from "../action-types";
 
 const initialState = {
@@ -22,6 +23,7 @@ const initialState = {
   artist: [],
   technique: [],
   resultSearch: [],
+  favs: []
 };
 
 function rootReducer(state = initialState, action) {
@@ -81,6 +83,11 @@ function rootReducer(state = initialState, action) {
         ...state,
         resultSearch: action.payload,
       };
+    case POST_FAVS:
+      return {
+        ...state,
+        favs: action.id
+      }
     default:
       return state;
   }

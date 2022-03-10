@@ -56,7 +56,7 @@ function SearchBar({ results, keyword, updateField }) {
 }
 
 function SearchPreview({ name, type, index, updateText, id, cancelSearch }) {
-  const redirect = type === "artist" ? `/artists/${id}`: `/detailObra/${id}`;
+  const redirect = type === "artist" ? `/artists/${id}`: `/detailpainting/${id}`;
   return (
     <NavLink to={redirect} onClick={() => cancelSearch()}>
       <div

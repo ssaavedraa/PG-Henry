@@ -35,7 +35,7 @@ export const DetailOfArt = () => {
   };
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
-    navigate(`/detailPainting/${id}`);
+    navigate(`/detailpainting/${id}`);
   };
 
   //Son utilizados para el toastify

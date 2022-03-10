@@ -116,7 +116,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/under" className={styles.linksNav}>
+          <NavLink to="/favs" className={styles.linksNav}>
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>

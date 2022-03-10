@@ -15,6 +15,7 @@ import Gallery from "./components/Gallery/Gallery";
 import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
 import TestLogin from "./components/TestLogin/TestLogin";
+import Favs from "./components/Favs/Favs";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route exact path="/artists" element={<Artists />} />
           <Route exact path="/artists/:id" element={<DetailArtist />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/detailPainting/:id" element={<DetailOfArt />} />
+          <Route exact path="/detailpainting/:id" element={<DetailOfArt />} />
           <Route exact path="/admin/addartist" element={<AddArtists />} />
           <Route exact path="/admin" element={<MyProfile />} />
           <Route exact path="/admin/additems" element={<AddItems />} />
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/gallery" element={<Gallery />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/favs" element={<Favs />} />
           <Route exact path="/testlogin" element={<TestLogin />} />
         </Routes>
         <Footer />
