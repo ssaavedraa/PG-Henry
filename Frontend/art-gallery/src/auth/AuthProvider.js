@@ -4,7 +4,7 @@ import userReset from "./utils/userReset";
 import AuthContext, { initalUser } from "./authContext";
 
 function AuthProvider({ children }) {
-  const [user, setUser] = useState(initalUser);
+  const [user, setUser] = useState({ ...initalUser, isLoading: true });
   const value = { user, setUser };
 
   useEffect(() => {
