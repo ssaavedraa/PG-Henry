@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
-import './detailImg.css'
+
 import { useDispatch, useSelector } from "react-redux";
 import useCart from "../../customHooks/useCart.js";
 
@@ -18,7 +18,7 @@ export const DetailOfArt = () => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
  
-  }, []);
+  }, [id, dispatch]);
 
   const { detailObra, obraRandon } = useSelector((state) => state);
   /////////////////////////////////
@@ -70,15 +70,6 @@ export const DetailOfArt = () => {
               <span>Orientation: {detailObra.orientation}</span>
               <span>USD$ {detailObra.price}</span>
             </p>
-<<<<<<< HEAD
-            <NavLink to="/under">
-              <button className={styles.btnCard}>
-                <div className={styles.cardImage}>+</div>
-
-                <div className={styles.cardText}>ADD TO CART</div>
-              </button>
-            </NavLink>
-=======
             {cart.includes(parseInt(id)) ? (
               <button
                 className={styles.btnCard}
@@ -96,7 +87,6 @@ export const DetailOfArt = () => {
                 <div className={styles.cardText}>ADD TO CART</div>
               </button>
             )}
->>>>>>> fc8b5e1df31cf6779814f38d9f528ee5271313d7
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
                 <div></div>

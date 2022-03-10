@@ -1,17 +1,9 @@
 .containerDetail {
-<<<<<<< HEAD
     width: 100%;
     min-height: 150vh;
     background: white;
     display: flex;
     flex-direction: column;
-=======
-  width: 100%;
-  min-height: 160vh;
-  background: #f5f5f5;
-  display: flex;
-  flex-direction: column;
->>>>>>> fc8b5e1df31cf6779814f38d9f528ee5271313d7
 }
 .principalHeader {
   width: 100%;
@@ -20,12 +12,8 @@
   align-items: center;
   justify-content: center;
 
-<<<<<<< HEAD
     background: white;
     
-=======
-  background: gray;
->>>>>>> fc8b5e1df31cf6779814f38d9f528ee5271313d7
 }
 .principalSection {
     width: 100%;
@@ -196,25 +184,6 @@ margin-right: -700px;
   transform: translate(40px) rotate(140deg);
   transition: all 1s;
 }
-<<<<<<< HEAD
-.obrasDetailDecrement:hover{
-    border-right: 5px rgb(5, 5, 5) solid;
-    border-bottom: 5px rgb(5, 5, 5) solid;
-    transition: all 1s;
-}
-.obrasDetail{
-    width: 80%;
-    height: 80%;
-    margin-top: -80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.obrasSimilares{
-    width: 250px;
-    height: 250px;
-=======
 .obrasDetailIncrement {
   width: 20px;
   height: 20px;
@@ -248,7 +217,6 @@ margin-right: -700px;
 .obrasSimilares {
   width: 200px;
   height: 200px;
->>>>>>> fc8b5e1df31cf6779814f38d9f528ee5271313d7
 
   /* border-radius: 20px; */
 }
@@ -257,8 +225,13 @@ margin-right: -700px;
   height: 100%;
   object-fit: contain;
   cursor: pointer;
+  transition: all 1.5s;
 }
-
+.obrasSimilares img:hover {
+ 
+  transition: all 1.5s;
+  transform: scale(1.4);
+}
 @media (max-width: 689px) {
 }
 .internodescription > P > span:nth-child(6) {
@@ -266,17 +239,3 @@ margin-right: -700px;
   font-size: 20px;
   font-weight: 800;
 }
-<<<<<<< HEAD
- .internodescription > P > span:nth-child(6) {
-color: black;
-font-size: 20px;
-font-weight: 800;
- }
-
-
-
- 
- 
- 
-=======
->>>>>>> fc8b5e1df31cf6779814f38d9f528ee5271313d7
