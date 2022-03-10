@@ -9,6 +9,7 @@ import {
   GET_TECHNIQUE,
   SET_LOGIN,
   SET_LOGOUT,
+  GET_SEARCH,
 } from "../action-types";
 
 const initialState = {
@@ -20,6 +21,7 @@ const initialState = {
   artistId: [],
   artist: [],
   technique: [],
+  resultSearch: [],
 };
 
 function rootReducer(state = initialState, action) {
@@ -37,13 +39,13 @@ function rootReducer(state = initialState, action) {
     case GET_ARTIST_ID:
       return {
         ...state,
-        artistId: action.payload
-      }
+        artistId: action.payload,
+      };
     case GET_REVIEWS:
       return {
         ...state,
-        reviews: action.payload
-      }
+        reviews: action.payload,
+      };
     case GET_ARTIST:
       return {
         ...state,
@@ -55,15 +57,15 @@ function rootReducer(state = initialState, action) {
         technique: action.payload,
       };
     case SET_LOGIN:
-      return{
+      return {
         ...state,
-        auth: true
-      }
+        auth: true,
+      };
     case SET_LOGOUT:
-      return{
+      return {
         ...state,
-        auth: false
-      }
+        auth: false,
+      };
     case GET_OBRAID:
       return {
         ...state,
@@ -74,12 +76,14 @@ function rootReducer(state = initialState, action) {
         ...state,
         obraRandon: action.payload,
       };
+    case GET_SEARCH:
+      return {
+        ...state,
+        resultSearch: action.payload,
+      };
     default:
       return state;
-    
   }
 }
-
-
 
 export default rootReducer;
