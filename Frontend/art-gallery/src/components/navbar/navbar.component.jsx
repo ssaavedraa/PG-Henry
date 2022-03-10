@@ -2,23 +2,20 @@ import React, { useState } from "react";
 import styles from "./navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
 import { getSearchAuto } from "../../redux/actions/actions";
-
+import Logo from "../../assets/img/SantArtlogo.png";
 import SearchBar from "../SearchBar/SearchBar";
-
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
-import Logo from "../../assets/img/SantArtlogo.png";
-
 import { useDispatch, useSelector } from "react-redux";
-import { setLogin, setLogout } from "../../redux/actions/actions";
+import useAuth from "../../customHooks/useAuth";
 import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-
-  const session = useSelector((state) => state.auth);
+  const {user, logout} = useAuth()
   const resultSearch = useSelector((state) => state.resultSearch);
+
 
   const [state, setState] = useState({
     keyword: "",
@@ -33,12 +30,8 @@ export default function NavBar() {
     dispatch(getSearchAuto(state.keyword));
   }, [dispatch, state]);
 
-  if (window.localStorage.getItem("user"))
-    dispatch(setLogin(window.localStorage.getItem("user")));
-
   const handleLogout = () => {
-    window.localStorage.removeItem("user");
-    dispatch(setLogout());
+    logout()
   };
 
   function matchName(name, keyword) {
@@ -94,8 +87,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <h4>|</h4>
-
-        {!session ? (
+        {user.role === 'guest' ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
               <FaUserAlt className={styles.icon}/>
@@ -104,7 +96,7 @@ export default function NavBar() {
           </NavLink>
         ) : (
           <li>
-            <h5>Welcome! {window.localStorage.getItem("user")}</h5>
+            <h5>Welcome! {user.firstName}</h5>
           </li>
         )}
         <li>
@@ -120,7 +112,7 @@ export default function NavBar() {
             <AiOutlineHeart className={styles.icon} />
           </NavLink>
         </li>
-        {session && (
+        {user.role !== 'guest' && (
           <li className={styles.logoutNav} onClick={() => handleLogout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />

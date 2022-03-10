@@ -1,7 +1,7 @@
 const { User, Painting } = require("../../db");
 const add = async (req, res) => {
-	const { paintingId } = req.body;
-	const userId = req.params.id;
+	const paintingId = req.params.id;
+	const userId = req.user.id;
 	try {
 		const user = await User.findByPk(userId);
 		if (!user) {
