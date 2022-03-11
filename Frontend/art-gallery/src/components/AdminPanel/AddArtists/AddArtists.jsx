@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 import ModalArtist from "./ModalArtist/ModalArtist";
+import NavPanel from "../NavPanel/NavPanel";
 import "./Artists.css";
 
 //Traemmos los artitstas
@@ -12,78 +13,81 @@ function AddArtists() {
   const [openModal, setOpenModal] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
 
-  function newArtist(){
+  function newArtist() {
     setOpenModal(!openModal);
     setIsEdit(false);
   }
 
-  function editArtist(){
+  function editArtist() {
     setOpenModal(!openModal);
     setIsEdit(true);
   }
 
   return (
-    <div className="admin-profile-container">
-      <div className="artists-header">
-        <ModalArtist
-          openModal={openModal}
-          openNewArtist={newArtist}
-          onRequestClose={newArtist}
-          isEdit={isEdit}
-          setIsEdit={setIsEdit}
-        />
-        <button className="btnNewArtist" onClick={newArtist}>
-          <FaPlus className="icon-Admin-AddArtist" />
-          Add New Artist
-        </button>
-        <button className="btnAdminView">Go to Admin View</button>
-      </div>
-      <div className="subheader-artists">
-        <h4 className="subtitle-artists">Registered Artists</h4>
-        <div className="sort-Artist-Admin">
-          <label>Sort By name:</label>
-          <select name="" id="" className="select-filter-admin">
-            <option value="ASC">AtoZ</option>
-            <option value="DESC">ZtoA</option>
-          </select>
-        </div>
-      </div>
-      <table className="data-artist-admin">
-        <thead className="row-titles-admin">
-          <tr>
-            <th className="id-title">ID</th>
-            <th className="photo-title">PHOTO</th>
-            <th className="name-title">NAME</th>
-            <th className="paintings-title">PAINTINGS</th>
-            <th className="review-title">REVIEWS</th>
-            <th className="sales-title">SALES</th>
-            <th className="button-title">SALES</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/*           Aqui hacemos el mapeo */}
-          <RowArtist
-            id="1"
-            photo={artists[0].photo}
-            name={artists[0].name}
-            paintings="3"
-            review="2"
-            sales="4"
+    <div className="container-addartist">
+      <NavPanel />
+      <div className="admin-profile-container">
+        <div className="artists-header">
+          <ModalArtist
             openModal={openModal}
-            openModalEdit={editArtist}
+            openNewArtist={newArtist}
+            onRequestClose={newArtist}
             isEdit={isEdit}
             setIsEdit={setIsEdit}
           />
-          <RowArtist />
-          <RowArtist />
-          <RowArtist />
-          <RowArtist />
-          <RowArtist />
-          <RowArtist />
-          <RowArtist />
-          <RowArtist />
-        </tbody>
-      </table>
+          <button className="btnNewArtist" onClick={newArtist}>
+            <FaPlus className="icon-Admin-AddArtist" />
+            Add New Artist
+          </button>
+          <button className="btnAdminView">Go to Admin View</button>
+        </div>
+        <div className="subheader-artists">
+          <h4 className="subtitle-artists">Registered Artists</h4>
+          <div className="sort-Artist-Admin">
+            <label>Sort By name:</label>
+            <select name="" id="" className="select-filter-admin">
+              <option value="ASC">AtoZ</option>
+              <option value="DESC">ZtoA</option>
+            </select>
+          </div>
+        </div>
+        <table className="data-artist-admin">
+          <thead className="row-titles-admin">
+            <tr>
+              <th className="id-title">ID</th>
+              <th className="photo-title">PHOTO</th>
+              <th className="name-title">NAME</th>
+              <th className="paintings-title">PAINTINGS</th>
+              <th className="review-title">REVIEWS</th>
+              <th className="sales-title">SALES</th>
+              <th className="button-title">SALES</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/*           Aqui hacemos el mapeo */}
+            <RowArtist
+              id="1"
+              photo={artists[0].photo}
+              name={artists[0].name}
+              paintings="3"
+              review="2"
+              sales="4"
+              openModal={openModal}
+              openModalEdit={editArtist}
+              isEdit={isEdit}
+              setIsEdit={setIsEdit}
+            />
+            <RowArtist />
+            <RowArtist />
+            <RowArtist />
+            <RowArtist />
+            <RowArtist />
+            <RowArtist />
+            <RowArtist />
+            <RowArtist />
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -100,7 +104,7 @@ function RowArtist({
   openModal,
   openModalEdit,
   isEdit,
-  setIsEdit
+  setIsEdit,
 }) {
   return (
     <tr>

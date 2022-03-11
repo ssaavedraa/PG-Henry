@@ -61,7 +61,9 @@ export default function NavBar() {
           </NavLink>
         ) : (
           <li>
+            <NavLink to="/admin" className={styles.linksNav}>
             <h5>Welcome! {user.firstName}</h5>
+            </NavLink>
           </li>
         )}
         {user.role === "user" || user.role === "guest" ? (
