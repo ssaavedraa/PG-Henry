@@ -19,17 +19,19 @@ function CardPaint({
   id,
 }) {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getFavs());
-  }, [dispatch]);
-
-  const favs = useSelector((state) => state.favs);
-  //console.log("soy favs", favs);
-
-  const [isFavorite, setIsFavorite] = useState(false);
   const { user } = useAuth();
   //console.log(user);
+
+  useEffect(() => {
+    if (user.role === "user") {
+      dispatch(getFavs());
+    }
+  }, [dispatch]);
+
+  // const favs = useSelector((state) => state.favs);
+  // //console.log("soy favs", favs);
+
+  const [isFavorite, setIsFavorite] = useState(false);
 
   function handlePress(id) {
     setIsFavorite(!isFavorite);
