@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
-import useAuth from "../../customHooks/useAuth";
-import { useDispatch } from "react-redux";
-import { deleteFav, getFavs, postFav } from "../../redux/actions/actions.js";
 import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal.jsx";
 import axios from "axios";
+import useAuth from "../../customHooks/useAuth";
 
 function CardPaint({
 	image,
@@ -21,28 +19,22 @@ function CardPaint({
 	fav,
 	id,
 }) {
-	const dispatch = useDispatch();
-	const { user } = useAuth();
 	//console.log(user);
-
+	const { user } = useAuth();
 	//Estado para el modal
 	const [openModal, setOpenModal] = useState(false);
-
-	useEffect(() => {
-		if (user.role === "user") {
-			dispatch(getFavs());
-		}
-	}, [dispatch, user]);
 
 	// const favs = useSelector((state) => state.favs);
 	// //console.log("soy favs", favs);
 
 	const [isFavorite, setIsFavorite] = useState(fav);
+	useEffect(() => {
+		setIsFavorite(fav);
+	}, [fav, setIsFavorite]);
 
 	function handlePress(id) {
 		setIsFavorite(!isFavorite);
 		!isFavorite ? addFav(id) : deleteFav(id);
-		//Agrego el dispatch del post del like
 	}
 
 	async function addFav(id) {
