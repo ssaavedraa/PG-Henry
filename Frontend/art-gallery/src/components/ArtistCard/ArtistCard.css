@@ -35,3 +35,12 @@
 .artist-img{
     object-fit: contain;
 }
+
+.edit-artist{
+    display: flex;
+    align-items: center;
+}
+
+.edit-artist p{
+    margin-left: 0.3rem;
+}
