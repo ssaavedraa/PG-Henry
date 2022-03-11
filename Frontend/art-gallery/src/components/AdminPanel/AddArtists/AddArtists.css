@@ -1,60 +1,48 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
 .admin-box{
     display: flex;   
-    height: 100vh;         
-    
+    height: auto;       
+    overflow-y: scroll;   
     }
 
 .component-box{
-   
     height: 90vh;
     width: 85%;
 }
 
 
-.tittle-box{
+.title-admin{
     height: 5%;
-    
+    width: 50%;    
     margin: auto;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 1rem; 
+    
 }
+
+.title-admin hr{
+    background-color:var(--eigth-color); 
+    margin: 1rem; 
+}
+
+
 .reder-box{
  height: 70%;
- 
- 
-
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-
-
-
-.myprofile-box{
-    
-    height: auto;
-    
-    
-    text-align: center;
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 20px;
-    
-    border-radius: 20px;
-    box-shadow: 8px 5px 5px 8px rgba(71, 71, 71, 0.418);
-    
-    
-   
+.artists-box{    
+    height: auto;      
+    text-align: center; 
    }
 
+ 
+
    .information-box{
-       text-align: center;
-       
+       text-align: center;       
        padding-top: 2rem;
-       padding-bottom: 2rem;
-       
+       padding-bottom: 2rem;       
    }
 
 
@@ -63,10 +51,18 @@
        flex-direction: column;
        width: 40%;
        text-align: center;
-       justify-content: center;
-       
-      
-       
+       justify-content: center;  
+          }
+
+   .data form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+   }
+
+   .data form textarea{
+       width: auto;
+       height: 6rem;
    }
 
    .input{
@@ -74,31 +70,23 @@
        height: 2rem;
        text-align: center;
        font-family: 'Poppins', sans-serif;
-       
        border-radius: 10px;
    }
 
    .input:hover{
-       
        background-color: rgb(231, 231, 231);
    }
 
 
 
    .btn-edit{
-
-
        height: 3rem;
        width: 12rem;
-       
        list-style: none;
        background-color: rgb(212, 212, 212);
        border-radius: 20px;
        border-style: none;
-       margin: 1rem;
-       
-            
-       
+       margin: 1rem; 
    }
 
    .btn-edit:hover{
