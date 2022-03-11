@@ -3,8 +3,8 @@
 
 .admin-box{
     display: flex;   
-    height: auto;       
-    overflow-y: scroll;   
+    height: 90vh !important;       
+    overflow: hidden !important;
         }
 
 .component-box{   

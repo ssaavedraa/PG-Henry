@@ -1,12 +1,17 @@
 
 
 .admin-bar{
+    height: 100%; /* -> Agregado */
+    width: 15rem;/* -> Agregado */
     display:flex;
     flex-direction: column;     
     margin-left: 0.5rem;
     align-self: stretch;
     padding: 1.5rem;   
-    background-color: rebeccapurple;
+}
+
+.menu-options > li{ /* -> Agregado */
+    display: flex;
 }
 
 .user{

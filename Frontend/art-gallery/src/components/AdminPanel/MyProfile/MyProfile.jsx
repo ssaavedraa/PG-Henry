@@ -2,6 +2,8 @@ import React from "react";
 import "./MyProfile.css";
 import { useState } from "react";
 import NavPanel from "../NavPanel/NavPanel";
+import AddArtists from "../AddArtists/AddArtists";
+import Sales from "../Sales/Sales";
 import imgprofile from "../../../assets/img/profile.png";
 
 const MyProfile = () => {
@@ -18,6 +20,7 @@ const MyProfile = () => {
     <>
       <div className="admin-box">
         <NavPanel />
+        <AddArtists />
  {/*        <div className="component-box">
           <div className="title-admin">
             <h2>ADMIN PANEL</h2>

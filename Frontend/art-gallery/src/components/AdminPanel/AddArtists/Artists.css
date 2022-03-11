@@ -1,0 +1,215 @@
+.artists-header, .btnNewArtist, .btnAdminView, .subheader-artists{
+    display: flex;
+    align-items: center;
+}
+
+.admin-profile-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 0.8em;
+}
+
+.artists-header {
+  width: 98%;
+  height: 12%;
+  padding: 0.5em;
+  margin: 0.2em auto;
+  justify-content: flex-end;
+}
+
+.btnNewArtist, .btnAdminView{
+    height: 50%;
+    padding: .5em;
+    margin: 0 .8em;
+    border: none;
+    border-radius: .5em;
+    color: var(--fourth-color);
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.btnNewArtist{
+    width: 16%;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.icon-Admin-AddArtist{
+    margin-right: .5em;
+}
+
+.btnAdminView{
+    background-color: var(--eigth-color);
+}
+
+.btnAdminView:hover{
+    background-color: var(--second-color);
+}
+
+/*Subheader*/
+.subheader-artists{
+    justify-content: space-between;
+}
+
+.subtitle-artists{
+    font-size: 1.2em;
+    margin-left: .5em;
+    font-weight: 500;
+}
+
+.sort-Artist-Admin{
+    width: 20%;
+    margin-right: .7em;
+}
+
+.sort-Artist-Admin > label{
+    margin-right: .8em;
+    color: var(--eigth-color);
+}
+
+.select-filter-admin{
+    width: 30%;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-filter-admin option{
+    cursor: pointer;
+}
+
+/*Table*/
+
+
+.data-artist-admin{
+    table-layout: fixed;
+    width: 98%;
+    border-collapse: collapse;
+    margin: 1em auto;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-artist-admin tbody{
+    background-color: var(--six-color);
+    min-width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.row-titles-admin {
+    height: 9%;
+    width: 100%;
+}
+
+.row-titles-admin > tr > th{
+    font-weight: 400;
+    color: var(--eigth-color);
+}
+
+.data-artist-admin tr{
+    border-bottom: 2px solid var(--fifth-color);
+}
+
+/*Rows Titles*/
+
+.id-title,.photo-title,.name-title,.paintings-title,.review-title,.sales-title,.button-title{
+    text-align: center;
+}
+
+.row-titles-admin tr{
+    height: 2.3em;
+}
+
+.id-title{
+    width: 5.5em;
+}
+
+.paintings-title, .review-title, .sales-title{
+    width: 6.1em;
+}
+
+.button-title{
+    width: 6.6em;
+}
+
+.photo-title{
+    width: 8em;
+}
+
+.name-title{
+    width: 17em;
+}
+
+/*Rows Data Artist*/
+
+.data-artist-admin tbody tr{
+    height: 10em;
+}
+
+
+/*Icon edit Artist*/
+
+.icon-artist-eduit{
+    color: var(--eigth-color);
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.icon-artist-eduit:hover{
+    color: var(--second-color);
+}
+
+
+/*Scrollbar*/
+.data-artist-admin tbody::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.data-artist-admin tbody::-webkit-scrollbar:vertical {
+  width: 1em;
+}
+
+.data-artist-admin tbody::-webkit-scrollbar-button:increment,
+.data-artist-admin tbody::-webkit-scrollbar-button {
+  display: none;
+}
+
+.data-artist-admin tbody::-webkit-scrollbar:horizontal {
+  height: 0.7em;
+}
+
+.data-artist-admin tbody::-webkit-scrollbar-thumb {
+  background-color: var(--eigth-color);
+  border-radius: 20px;
+  border: 2px solid var(--third-color);
+}
+
+.data-artist-admin tbody::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.img-td-artist{
+    margin-top: .3em;
+    width: 70%;
+    height: 100%;
+}
+
+/*Responsive*/
+
+@media screen and (min-width: 1250px){
+    .id-title{
+        width: 6em;
+    }
+    .name-title{
+        width: 18em;
+    }
+    .photo-title{
+        width: 10em;
+    }
+    .paintings-title, .review-title, .sales-title{
+        width: 6.9em;
+    }
+}

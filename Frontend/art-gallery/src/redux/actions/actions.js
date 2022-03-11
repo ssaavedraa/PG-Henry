@@ -175,15 +175,12 @@ export const addNewPainting = (payload) => {
   };
 };
 export function getSearchAuto(text) {
-  console.log(text.length);
   return async (dispatch) => {
     try {
-      /*       let search = text ? text : "a"; */
-      let json = text.length !== 0
-        ? await axios.get(
-            `http://localhost:3001/painting/search/suggestions/${text}`
-          )
-        : [];
+      if (!text) return dispatch({ type: GET_SEARCH, payload: "" });
+      let json = await axios.get(
+        `http://localhost:3001/painting/search/suggestions/${text}`
+      );
       dispatch({ type: GET_SEARCH, payload: json.data });
     } catch (error) {
       console.log(error);

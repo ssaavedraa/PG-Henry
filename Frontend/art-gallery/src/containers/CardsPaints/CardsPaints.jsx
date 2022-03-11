@@ -1,6 +1,5 @@
 import React from "react";
 import CardPaint from "../../components/CardPaint/CardPaint";
-import { NavLink } from "react-router-dom";
 
 import "./CardsPaints.css";
 
@@ -32,8 +31,5 @@ function CardsPaints({ paintings, isAdmin }) {
       )}
     </div>
   );
-}
-{
-  /* <h1 className="errorCardPaint">Not Results!</h1> */
 }
 export default CardsPaints;
