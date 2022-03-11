@@ -28,8 +28,7 @@ const MyProfile = () => {
     <>
       <div className="admin-box">
         <NavPanel />
-        <AddArtists />
-       {/*  <div className="component-box">
+        <div className="component-box">
           <h2>Admin panel</h2>
           <div className="user-info">
             <img src={img} className="img-profile" alt="profile"/>
@@ -75,7 +74,7 @@ const MyProfile = () => {
               }
             </div>
           </div>
-        </div>  */}
+        </div> 
       </div>
     </>
   );

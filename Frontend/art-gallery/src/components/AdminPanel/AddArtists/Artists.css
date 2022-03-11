@@ -3,6 +3,12 @@
     align-items: center;
 }
 
+.container-addartist{
+    display: flex;   
+    height: 90vh !important;       
+    overflow: hidden !important;
+}
+
 .admin-profile-container {
   width: 80%;
   height: 100%;
