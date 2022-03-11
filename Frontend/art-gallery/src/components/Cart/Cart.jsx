@@ -1,9 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import useCart from "../../customHooks/useCart.js";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Cart.css";
 import CartCards from "./CartCards/CartCards.jsx";
+import { ToastContainer, toast } from "react-toastify";
 
 const Cart = () => {
   const { cart, removeAll } = useCart();
@@ -20,7 +22,7 @@ const Cart = () => {
   };
 
   const [cartPainting, setCartPainting] = useState([]);
-  console.log(cartPainting);
+
   useEffect(() => {
     getPaintings(cart).then((res) => setCartPainting(res));
   }, [cart]);
@@ -32,24 +34,42 @@ const Cart = () => {
     totalPrice = totalPrice + painting.price;
   });
 
+  //Sirve para el toastify
+  const removeAllCart = () => {
+    removeAll();
+    toast.success("All items was delete");
+  };
+
   return (
     <div className="containerCartAll">
+      <ToastContainer
+        position="bottom-center"
+        theme="dark"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <h1>Cart</h1>
       <div className="containerCart">
         <div className="divPrecio">
-          <button onClick={() => removeAll()}>Remove all items</button>
+          <button onClick={() => removeAllCart()}>Remove all items</button>
           <h5>Price</h5>
         </div>
         <CartCards cartPainting={cartPainting} />
         <div className="divContainerTotal">
-        Total({cart.length} product):
-          <p>
-               USD$ {totalPrice}
-          </p>
+          Total({cart.length} product):
+          <p>USD$ {totalPrice}</p>
         </div>
         <div className="divButtons">
-          <button>Go back</button>
-          <button>Got to pay</button>
+          <Link to="/gallery">
+            <button>Continue shopping</button>
+          </Link>
+          <button>Buy</button>
         </div>
       </div>
     </div>

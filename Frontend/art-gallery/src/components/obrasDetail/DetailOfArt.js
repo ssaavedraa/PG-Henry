@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
+import { getObraDetail, getObrasRandon, removeUser } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import useCart from "../../customHooks/useCart.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const DetailOfArt = () => {
 
@@ -38,8 +40,18 @@ export const DetailOfArt = () => {
  
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
-    navigate(`/detailObra/${id}`)
-   
+    navigate(`/detailpainting/${id}`);
+  };
+
+  //Son utilizados para el toastify
+  const removeCart = () => {
+    remove(parseInt(id));
+    toast.success("Paint removed from the cart!");
+  };
+
+  const addCart = () => {
+    add(parseInt(id));
+    toast.success("Painting added to the cart!");
   };
 
  
@@ -49,6 +61,18 @@ export const DetailOfArt = () => {
   }
   return (
     <div className={styles.containerDetail}>
+      <ToastContainer
+        position="bottom-center"
+        theme="dark"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <section className={styles.principalSection}>
         <header className={styles.principalSectionTitle}>
           <h1>{detailObra.title}</h1>
@@ -60,7 +84,11 @@ export const DetailOfArt = () => {
           </div>
 
           <div className={styles.internodescription}>
-            <h3><Link to={`/artists/${detailObra.artist.id}`}>Artist: {detailObra.artist.name}</Link></h3>
+            <h3>
+              <Link to={`/artists/${detailObra.artist.id}`}>
+                {detailObra.artist.name}
+              </Link>
+            </h3>
             <p>
               <span>{detailObra.description}</span>
               <span>Height: {detailObra.height} cm</span>
@@ -71,18 +99,12 @@ export const DetailOfArt = () => {
               <span>USD$ {detailObra.price}</span>
             </p>
             {cart.includes(parseInt(id)) ? (
-              <button
-                className={styles.btnCard}
-                onClick={() => remove(parseInt(id))}
-              >
+              <button className={styles.btnCard} onClick={() => removeCart()}>
                 <div className={styles.cardImage}>-</div>
                 <div className={styles.cardText}>REMOVE FROM CART</div>
               </button>
             ) : (
-              <button
-                className={styles.btnCard}
-                onClick={() => add(parseInt(id))}
-              >
+              <button className={styles.btnCard} onClick={() => addCart()}>
                 <div className={styles.cardImage}>+</div>
                 <div className={styles.cardText}>ADD TO CART</div>
               </button>
