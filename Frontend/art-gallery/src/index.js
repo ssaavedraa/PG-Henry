@@ -8,8 +8,10 @@ import { store } from "./redux/store/store";
 import AuthProvider from "./auth/AuthProvider";
 import axios from "axios";
 
-axios.defaults.headers.common["Authorization"] =
-  localStorage.getItem("jwtToken");
+axios.defaults.headers.common["Authorization"] = localStorage.getItem("jwtToken");
+
+axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001'
+
 
 ReactDOM.render(
   <Provider store={store}>

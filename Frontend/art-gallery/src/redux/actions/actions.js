@@ -126,7 +126,7 @@ export function getArtist(name) {
     try {
       let json;
       !name
-        ? (json = await axios.get("http://localhost:3001/artist/getAll"))
+        ? (json = await axios.get("http://localhost:3001/artist/getall"))
         : (json = await axios.get(
           `http://localhost:3001/artist/getbyname/?name=${name}`
         ));
