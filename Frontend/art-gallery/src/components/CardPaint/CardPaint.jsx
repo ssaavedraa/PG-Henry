@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
@@ -20,7 +20,7 @@ function CardPaint({
 	id,
 }) {
 	//console.log(user);
-  const { user } = useAuth();
+	const { user } = useAuth();
 	//Estado para el modal
 	const [openModal, setOpenModal] = useState(false);
 
@@ -28,11 +28,13 @@ function CardPaint({
 	// //console.log("soy favs", favs);
 
 	const [isFavorite, setIsFavorite] = useState(fav);
+	useEffect(() => {
+		setIsFavorite(fav);
+	}, [fav, setIsFavorite]);
 
 	function handlePress(id) {
 		setIsFavorite(!isFavorite);
 		!isFavorite ? addFav(id) : deleteFav(id);
-		//Agrego el dispatch del post del like
 	}
 
 	async function addFav(id) {

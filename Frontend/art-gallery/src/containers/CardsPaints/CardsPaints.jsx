@@ -14,20 +14,18 @@ function CardsPaints({ paintings }) {
 	const { user } = useAuth();
 	const dispatch = useDispatch();
 	useEffect(() => {
-		if (user.role === "user") {
-			dispatch(getFavs());
-		}
-	}, [dispatch, user]);
+		dispatch(getFavs());
+	}, [dispatch]);
 	const favs = useSelector((state) => state.favs);
-	const addedToFavs = favs.map((fav) => fav.id);
+
 	return (
 		<div className="containerCards">
-			{paintings.length && addedToFavs.length ? (
+			{paintings.length ? (
 				paintings.map((paint) => (
 					<CardPaint
 						key={paint.id}
 						id={paint.id}
-						fav={addedToFavs.includes(paint.id) ? true : false}
+						fav={favs.map(({ id }) => id).includes(paint.id)}
 						image={paint.image}
 						title={paint.title}
 						artist={paint.artist}
