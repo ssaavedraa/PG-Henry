@@ -5,8 +5,9 @@ import useCart from "../../customHooks/useCart.js";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import useAuth from "../../customHooks/useAuth";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { deleteFav, getFavs, postFav } from "../../redux/actions/actions.js";
+import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal.jsx";
 
 function CardPaint({
   image,
@@ -22,11 +23,14 @@ function CardPaint({
   const { user } = useAuth();
   //console.log(user);
 
+  //Estado para el modal
+  const [openModal, setOpenModal] = useState(false);
+
   useEffect(() => {
     if (user.role === "user") {
       dispatch(getFavs());
     }
-  }, [dispatch]);
+  }, [dispatch, user]);
 
   // const favs = useSelector((state) => state.favs);
   // //console.log("soy favs", favs);
@@ -36,7 +40,6 @@ function CardPaint({
   function handlePress(id) {
     setIsFavorite(!isFavorite);
     !isFavorite ? dispatch(postFav(id)) : dispatch(deleteFav(id));
-
     //Agrego el dispatch del post del like
   }
 
@@ -44,10 +47,9 @@ function CardPaint({
 
   return (
     <div className="card">
+      <EditPaintingModal openModal={openModal} setOpenModal={setOpenModal} />
       {user.role === "admin" && (
-        <button
-          /* onClick=Aqui abriria el modal para editar */ className="btn-header-icon"
-        >
+        <button onClick={() => setOpenModal(true)} className="btn-header-icon">
           <AiFillEdit className="icon-header-card" />
         </button>
       )}
