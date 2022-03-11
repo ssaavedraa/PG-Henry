@@ -4,7 +4,7 @@
 
 .divContainer h1 {
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   margin: auto;
   display: flex;
 }
@@ -36,9 +36,10 @@ outline: none;
 background-color: var(--fourth-color);
 padding: 0rem;
 margin-left: 0.5rem;
+cursor: pointer;
 }
 
-.iconHeaderCardArtist {
+.iconHeaderCardArtist:hover {
   color: red;
 }
 
