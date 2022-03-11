@@ -1,16 +1,16 @@
-.containerCardsModal{
+.containerCardsModal-admin{
     width: 80%;
     margin: auto;
    
 }
-.modal-inner {
+.modal-inner-admin {
     width: 40vw;
     height: 65vh;
     display: flex;
     flex-direction: column;
   }
 
-  .containerHeaderModal{
+  .containerHeaderModal-admin{
     display: flex;
     flex-direction: row;
     justify-content: space-between;

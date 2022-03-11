@@ -1,10 +1,10 @@
 import React from "react";
 import Modal from "react-modal";
-import "./EditPaintingModal.css";
+import "./EditArtistModal.css";
 import { FaTimes } from "react-icons/fa";
 import UnderConstruction from "../../components/UnderConstruction/UnderConstruction";
 
-const EditPaintingModal = ({ openModal, setOpenModal }) => {
+const EditArtistModal = ({ openModalArtist, setOpenModalArtist }) => {
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0,0,0,0.6)",
@@ -21,13 +21,13 @@ const EditPaintingModal = ({ openModal, setOpenModal }) => {
   };
 
   return (
-    <Modal isOpen={openModal} style={customStyles} ariaHideApp={false}>
-      <div className="modal-inner-painting">
-        <div className='containerHeaderModalPainting'>
-        <h3>Edit painting</h3>
-        <div onClick={() => setOpenModal(false)}>
-          <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
-        </div>
+    <Modal isOpen={openModalArtist} style={customStyles} ariaHideApp={false}>
+      <div className="modal-inner">
+        <div className="containerHeaderModalArtist">
+          <h3> Edit artist</h3>
+          <div onClick={() => setOpenModalArtist(false)}>
+            <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
+          </div>
         </div>
         <UnderConstruction />
       </div>
@@ -35,4 +35,4 @@ const EditPaintingModal = ({ openModal, setOpenModal }) => {
   );
 };
 
-export default EditPaintingModal;
+export default EditArtistModal;

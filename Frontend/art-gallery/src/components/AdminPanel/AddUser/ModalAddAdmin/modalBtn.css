@@ -1,16 +1,16 @@
-.containerCardsModal{
+.containerCardsModal-btn{
     width: 80%;
     margin: auto;
    
 }
-.modal-inner {
+.modal-inner-btn {
     width: 20vw;
     height: 35vh;
     display: flex;
     flex-direction: column;
   }
 
-  .containerHeaderModal{
+  .containerHeaderModal-btn{
     display: flex;
     flex-direction: row;
     justify-content: space-between;

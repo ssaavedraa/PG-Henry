@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getObraDetail, getObrasRandon, removeUser } from "../../redux/actions/actions";
+import {
+  getObraDetail,
+  getObrasRandon,
+  removeUser,
+} from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,8 +33,8 @@ export const DetailOfArt = () => {
   const [page, setPage] = useState(1);
   const maximo = 4;
 
-    //Estado para el modal
-    const [openModal, setOpenModal] = useState(false);
+  //Estado para el modal
+  const [openModal, setOpenModal] = useState(false);
 
   const handleIncrement = () => {
     setPage((prev) => Math.min(prev + 1, 3));
@@ -82,10 +86,12 @@ export const DetailOfArt = () => {
           {user.role === "admin" ? (
             <h1>
               {detailObra.title}
-              <button onClick={() => setOpenModal(true)}  className={styles.btnHeaderIcon}>
-              <AiFillEdit className={styles.iconHeaderCardDetail} />
+              <button
+                onClick={() => setOpenModal(true)}
+                className={styles.btnHeaderIconDetail}
+              >
+                <AiFillEdit className={styles.iconHeaderCardDetail} />
               </button>
-              
             </h1>
           ) : (
             <h1>{detailObra.title}</h1>
@@ -95,7 +101,6 @@ export const DetailOfArt = () => {
           <div className={styles.internoimg}>
             <img src={detailObra.photos[0].url} alt="img" />
           </div>
-
           <div className={styles.internodescription}>
             <h3>
               <Link to={`/artists/${detailObra.artist.id}`}>
@@ -111,16 +116,20 @@ export const DetailOfArt = () => {
               <span>Orientation: {detailObra.orientation}</span>
               <span>USD$ {detailObra.price}</span>
             </p>
-            {cart.includes(parseInt(id)) ? (
-              <button className={styles.btnCard} onClick={() => removeCart()}>
-                <div className={styles.cardImage}>-</div>
-                <div className={styles.cardText}>REMOVE FROM CART</div>
-              </button>
+            {user.role !== "admin" ? (
+              cart.includes(parseInt(id)) ? (
+                <button className={styles.btnCard} onClick={() => removeCart()}>
+                  <div className={styles.cardImage}>-</div>
+                  <div className={styles.cardText}>REMOVE FROM CART</div>
+                </button>
+              ) : (
+                <button className={styles.btnCard} onClick={() => addCart()}>
+                  <div className={styles.cardImage}>+</div>
+                  <div className={styles.cardText}>ADD TO CART</div>
+                </button>
+              )
             ) : (
-              <button className={styles.btnCard} onClick={() => addCart()}>
-                <div className={styles.cardImage}>+</div>
-                <div className={styles.cardText}>ADD TO CART</div>
-              </button>
+              <div></div>
             )}
             <div className={styles.btnReturn}>
               <div className={styles.cardImageReturn}>
