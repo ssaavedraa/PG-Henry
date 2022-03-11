@@ -93,8 +93,9 @@ export function getPaitingsByArtist(id) {
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
-      let resp = await fetch(`http://localhost:3001/painting/get/${id}`);
-      let data = await resp.json();
+      let { data } = await axios.get(
+        `http://localhost:3001/painting/get/${id}`
+      );
       dispatch({
         type: GET_OBRAID,
         payload: data,
@@ -107,10 +108,9 @@ export const getObraDetail = (id) => {
 export const getObrasRandon = (id) => {
   return async (dispatch) => {
     try {
-      let resp = await fetch(
+      let { data } = await axios.get(
         `http://localhost:3001/painting/getrecommended/${id}`
       );
-      let data = await resp.json();
       dispatch({
         type: GET_OBRAIDRANDON,
         payload: data,
@@ -198,7 +198,7 @@ export function postFav(id) {
   return async function (dispatch) {
     try {
       const json = await axios.post(
-      `http://localhost:3001/favorites/add/${id}`
+        `http://localhost:3001/favorites/add/${id}`
       );
       //console.log('soy favs', json)
       return dispatch({
@@ -217,7 +217,7 @@ export function deleteFav(id) {
   return async function (dispatch) {
     try {
       const json = await axios.delete(
-      `http://localhost:3001/favorites/remove/${id}`
+        `http://localhost:3001/favorites/remove/${id}`
       );
      // console.log('soy favs', json)
       return dispatch({
