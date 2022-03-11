@@ -1,30 +1,37 @@
 import React, {useState, useEffect} from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {Link} from 'react-router-dom'
+import { getArtist } from "../../redux/actions/actions";
 import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
 
-const {artists} = require('../../assets/Json/artists.json')
-
 export default function Artists(){
 
-    const [artistList, setArtistList] = useState(artists);
+    const artists = useSelector(state => state.artist)
     const [sort, setSort] = useState('az');
+
+    const dispatch = useDispatch()
+
     useEffect(() => {
         if(sort === 'az'){
-            setArtistList(artistList.sort((a, b) => {
+            artists.sort((a, b) => {
                 if(a.name > b.name) return -1
                 if(a.name < b.name) return 1
                 else return 0
-            }))
+            })
         }
         if(sort === 'za'){
-            setArtistList(artistList.sort((a, b) => {
+            artists.sort((a, b) => {
                 if(a.name > b.name) return 1
                 if(a.name < b.name) return -1
                 else return 0
-            }))
+            })
         }
-    },[sort,artistList])
+    },[sort,artists])
+
+    useEffect(() => {
+      dispatch(getArtist())
+    }, [dispatch])
 
     return(
         <div className="artists-container">
@@ -39,7 +46,7 @@ export default function Artists(){
                 </div>
             </div>
             {
-                artistList.map(artist => {
+                artists.map(artist => {
                     return(
                         <Link className="card-link" to={`/artists/${artist.id}`} key={artist.id}>
                             <ArtistCard

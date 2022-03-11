@@ -8,7 +8,7 @@ import {
   GET_ARTIST,
   GET_TECHNIQUE,
   GET_SEARCH,
-  POST_FAVS, 
+  POST_FAVS,
   DELETE_FAVS
 } from "../action-types";
 
