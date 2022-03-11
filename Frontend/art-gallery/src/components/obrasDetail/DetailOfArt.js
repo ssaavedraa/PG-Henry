@@ -2,30 +2,35 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getObraDetail, getObrasRandon, removeUser } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
-
+import { AiFillEdit } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import useCart from "../../customHooks/useCart.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAuth from "../../customHooks/useAuth";
+import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal";
 
 export const DetailOfArt = () => {
-
-  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { add, cart, remove } = useCart();
 
+  //Manejo de vista
+  const { user } = useAuth();
+
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
- 
   }, [id, dispatch]);
 
   const { detailObra, obraRandon } = useSelector((state) => state);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
+
+    //Estado para el modal
+    const [openModal, setOpenModal] = useState(false);
 
   const handleIncrement = () => {
     setPage((prev) => Math.min(prev + 1, 3));
@@ -37,7 +42,7 @@ export const DetailOfArt = () => {
   const handleReturn = () => {
     navigate(-1);
   };
- 
+
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
     navigate(`/detailpainting/${id}`);
@@ -53,8 +58,6 @@ export const DetailOfArt = () => {
     add(parseInt(id));
     toast.success("Painting added to the cart!");
   };
-
- 
 
   if (!detailObra || !obraRandon) {
     return <h1>Loading</h1>;
@@ -73,14 +76,24 @@ export const DetailOfArt = () => {
         draggable
         pauseOnHover
       />
+      <EditPaintingModal openModal={openModal} setOpenModal={setOpenModal} />
       <section className={styles.principalSection}>
         <header className={styles.principalSectionTitle}>
-          <h1>{detailObra.title}</h1>
+          {user.role === "admin" ? (
+            <h1>
+              {detailObra.title}
+              <button onClick={() => setOpenModal(true)}  className={styles.btnHeaderIcon}>
+              <AiFillEdit className={styles.iconHeaderCardDetail} />
+              </button>
+              
+            </h1>
+          ) : (
+            <h1>{detailObra.title}</h1>
+          )}
         </header>
         <div className={styles.principalSectionInterno}>
-
-          <div  className={styles.internoimg}>
-            <img  src={detailObra.photos[0].url} alt="img" />
+          <div className={styles.internoimg}>
+            <img src={detailObra.photos[0].url} alt="img" />
           </div>
 
           <div className={styles.internodescription}>

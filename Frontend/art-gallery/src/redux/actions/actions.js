@@ -11,6 +11,7 @@ import {
   GET_SEARCH,
   POST_FAVS,
   DELETE_FAVS,
+  GET_FAVS
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -193,13 +194,13 @@ export function getSearchAuto(text) {
 
 //Post favs
 export function postFav(id) {
-  console.log("soy pintura n|", id);
+ // console.log('soy pintura n|', id)
   return async function (dispatch) {
     try {
       const json = await axios.post(
         `http://localhost:3001/favorites/add/${id}`
       );
-      console.log("soy favs", json);
+      //console.log('soy favs', json)
       return dispatch({
         type: POST_FAVS,
         payload: json.data,
@@ -223,16 +224,16 @@ export const removeUser = async (id) => {
   console.log(resul)
   return resul
 }
-// }
-//Post favs
+
+//Delete favs
 export function deleteFav(id) {
-  console.log("soy delete de pintura n|", id);
+  //console.log('soy delete de pintura n|', id)
   return async function (dispatch) {
     try {
       const json = await axios.delete(
         `http://localhost:3001/favorites/remove/${id}`
       );
-      console.log("soy favs", json);
+     // console.log('soy favs', json)
       return dispatch({
         type: DELETE_FAVS,
         payload: json.data,
@@ -241,4 +242,18 @@ export function deleteFav(id) {
       console.log(error);
     }
   };
+}
+
+export function getFavs(){
+  return async function (dispatch) {
+    try {
+      const json = await axios.get('http://localhost:3001/favorites/getAll');
+      return dispatch({
+        type: GET_FAVS,
+        payload: json.data
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
