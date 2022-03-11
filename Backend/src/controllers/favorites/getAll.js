@@ -1,6 +1,6 @@
 const { User, Painting, Photo, Artist } = require("../../db");
 const getAll = async (req, res) => {
-	const userId = req.params.id;
+	const userId = req.user.id;
 	try {
 		let user = await User.findOne({
 			where: { id: userId },
@@ -12,7 +12,8 @@ const getAll = async (req, res) => {
 			},
 		});
 		if (!user) return res.status(404).send("User not found");
-
+		console.log("a");
+		console.log(user.paintings);
 		const favoritesArray = user.paintings.map((fav) => {
 			fav = fav.toJSON();
 			return {
