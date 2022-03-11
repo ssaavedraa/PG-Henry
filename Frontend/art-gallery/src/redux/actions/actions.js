@@ -180,7 +180,6 @@ export const addNewPainting = (payload) => {
 export function getSearchAuto(text) {
   return async (dispatch) => {
     try {
-      console.log(text);
       if (!text) return dispatch({ type: GET_SEARCH, payload: "" });
       let json = await axios.get(
         `http://localhost:3001/painting/search/suggestions/${text}`

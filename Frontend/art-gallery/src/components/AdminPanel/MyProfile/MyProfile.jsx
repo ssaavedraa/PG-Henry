@@ -2,6 +2,8 @@ import React from "react";
 import "./MyProfile.css";
 import { useState } from "react";
 import NavPanel from "../NavPanel/NavPanel";
+import AddArtists from "../AddArtists/AddArtists";
+import Sales from "../Sales/Sales";
 import img from "../../../assets/img/profile.png";
 import useAuth from "../../../customHooks/useAuth";
 
@@ -26,7 +28,8 @@ const MyProfile = () => {
     <>
       <div className="admin-box">
         <NavPanel />
-        <div className="component-box">
+        <AddArtists />
+       {/*  <div className="component-box">
           <h2>Admin panel</h2>
           <div className="user-info">
             <img src={img} className="img-profile" alt="profile"/>
@@ -72,7 +75,7 @@ const MyProfile = () => {
               }
             </div>
           </div>
-        </div>
+        </div>  */}
       </div>
     </>
   );

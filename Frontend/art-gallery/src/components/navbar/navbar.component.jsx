@@ -17,20 +17,6 @@ export default function NavBar() {
   const resultSearch = useSelector((state) => state.resultSearch);
   const [keyword, setKeyword] = useState("");
 
-  /*   React.useEffect(() => {
-    dispatch(getSearchAuto());
-  }, [dispatch, state]);
-
-  React.useEffect(() => {
-    dispatch(getSearchAuto(state.keyword));
-  }, [dispatch, state]); */
-
-  /*   function matchName(name, keyword) {
-    let keyLen = keyword.length;
-    name = name.toLowerCase().substring(0, keyLen);
-    return name === keyword && keyLen !== 0;
-  } */
-
   function updateField(value, update = true) {
     if (update) {
       dispatch(getSearchAuto(value));
