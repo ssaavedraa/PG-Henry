@@ -1,0 +1,13 @@
+.cardsFavs{
+    display: flex;
+    padding: 0.75rem 0rem;
+    border-bottom: 2px solid var(--fifth-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardsFavs img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: contain;
+  }
