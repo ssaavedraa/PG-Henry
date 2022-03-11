@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getObraDetail, getObrasRandon } from "../../redux/actions/actions";
+import { getObraDetail, getObrasRandon, removeUser } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
