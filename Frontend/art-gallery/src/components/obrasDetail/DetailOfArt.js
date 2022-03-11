@@ -82,7 +82,7 @@ export const DetailOfArt = () => {
           {user.role === "admin" ? (
             <h1>
               {detailObra.title}
-              <button onClick={() => setOpenModal(true)}  className={styles.btnHeaderIcon}>
+              <button onClick={() => setOpenModal(true)}  className={styles.btnHeaderIconDetail}>
               <AiFillEdit className={styles.iconHeaderCardDetail} />
               </button>
               

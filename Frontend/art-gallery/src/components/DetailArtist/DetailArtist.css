@@ -30,6 +30,28 @@
   justify-content: space-between;
 }
 
+.btnHeaderIconArtist{
+  border: none;
+outline: none;
+background-color: var(--fourth-color);
+padding: 0rem;
+margin-left: 0.5rem;
+}
+
+.iconHeaderCardArtist {
+  color: red;
+}
+
+.btnHeaderIconArtist:hover{
+  background-color: var(--fourth-color);
+}
+
+.iconHeaderCardArtist{
+  width: 2.2rem;
+  height: 2.4rem;
+  color: var(--eigth-color);
+}
+
 .divBio p {
   text-align: center;
 }
