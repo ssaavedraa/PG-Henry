@@ -32,8 +32,8 @@ const ModalBtn = ({
 
   return (
     <Modal isOpen={openModal} style={customStyles} ariaHideApp={false}>
-      <div className="modal-inner">
-        <div className='containerHeaderModal'>
+      <div className="modal-inner-btn">
+        <div className='containerHeaderModal-btn'>
           <h3>Confirm</h3>
           <div onClick={() => setOpenModal(false)}>
             <FaTimes  style={{fontSize: "25px", cursor: "pointer" }}/>

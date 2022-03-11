@@ -59,9 +59,17 @@ export default function NavBar() {
               <h4>Login</h4>
             </button>
           </NavLink>
+        ) : user.role === "admin" ? (
+          <li>
+            <NavLink to="/admin" className={styles.linksNav}>
+              <h5>Welcome! {user.firstName}</h5>
+            </NavLink>
+          </li>
         ) : (
           <li>
-            <h5>Welcome! {user.firstName}</h5>
+            <NavLink to="/under" className={styles.linksNav}>
+              <h5>Welcome! {user.firstName}</h5>
+            </NavLink>
           </li>
         )}
         {user.role === "user" || user.role === "guest" ? (

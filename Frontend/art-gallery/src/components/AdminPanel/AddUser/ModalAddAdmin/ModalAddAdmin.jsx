@@ -32,14 +32,14 @@ const ModalAddAdmin = ({
 
   return (
     <Modal isOpen={openModal} style={customStyles} ariaHideApp={false}>
-      <div className="modal-inner">
-        <div className='containerHeaderModal'>
+      <div className="modal-inner-admin">
+        <div className='containerHeaderModal-admin'>
           <h3>ADD ADMIN</h3>
           <div onClick={() => setOpenModal(false)}>
             <FaTimes  style={{fontSize: "25px", cursor: "pointer" }}/>
           </div>
         </div>
-        <div className="containerCardsModal">
+        <div className="containerCardsModal-admin">
           <div className="containerCardsModal-form">
 
             <form>
