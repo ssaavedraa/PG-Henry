@@ -64,19 +64,27 @@ export default function NavBar() {
             <h5>Welcome! {user.firstName}</h5>
           </li>
         )}
-        <li>
-          <NavLink to="/cart" className={styles.linksNav}>
-            <div className={styles.divContainerCartIcon}>
-              <div className={styles.containerCartLength}>{cart.length}</div>
-              <AiOutlineShoppingCart className={styles.icon} />
-            </div>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/under" className={styles.linksNav}>
-            <AiOutlineHeart className={styles.icon} />
-          </NavLink>
-        </li>
+        {user.role === "user" || user.role === "guest" ? (
+          <li>
+            <NavLink to="/cart" className={styles.linksNav}>
+              <div className={styles.divContainerCartIcon}>
+                <div className={styles.containerCartLength}>{cart.length}</div>
+                <AiOutlineShoppingCart className={styles.icon} />
+              </div>
+            </NavLink>
+          </li>
+        ) : (
+          <li></li>
+        )}
+        {user.role === "user" || user.role === "guest" ? (
+          <li>
+            <NavLink to="/favs" className={styles.linksNav}>
+              <AiOutlineHeart className={styles.icon} />
+            </NavLink>
+          </li>
+        ) : (
+          <li></li>
+        )}
         {user.role !== "guest" && (
           <li className={styles.logoutNav} onClick={() => logout()}>
             <p>Logout</p>

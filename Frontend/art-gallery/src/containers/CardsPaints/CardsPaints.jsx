@@ -4,7 +4,7 @@ import CardPaint from "../../components/CardPaint/CardPaint";
 import "./CardsPaints.css";
 
 //IsAdmin es una prop pasada para validar si es admin o usuario o guest
-function CardsPaints({ paintings, isAdmin }) {
+function CardsPaints({ paintings}) {
 
   //Booleano para evaluar si es admin
   //let isAdmin = true;
@@ -23,7 +23,6 @@ function CardsPaints({ paintings, isAdmin }) {
                   width={paint.width}
                   techniques={paint.techniques}
                   price={paint.price}
-                  isAdmin={isAdmin}
                 />
         ))
       ) : (

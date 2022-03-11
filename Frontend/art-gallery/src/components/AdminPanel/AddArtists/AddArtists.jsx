@@ -10,9 +10,16 @@ const { artists } = require("../../../assets/Json/artists.json");
 
 function AddArtists() {
   const [openModal, setOpenModal] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
 
-  function openNewArtist() {
+  function newArtist(){
     setOpenModal(!openModal);
+    setIsEdit(false);
+  }
+
+  function editArtist(){
+    setOpenModal(!openModal);
+    setIsEdit(true);
   }
 
   return (
@@ -20,10 +27,12 @@ function AddArtists() {
       <div className="artists-header">
         <ModalArtist
           openModal={openModal}
-          openNewArtist={openNewArtist}
-          onRequestClose={openNewArtist}
+          openNewArtist={newArtist}
+          onRequestClose={newArtist}
+          isEdit={isEdit}
+          setIsEdit={setIsEdit}
         />
-        <button className="btnNewArtist" onClick={openNewArtist}>
+        <button className="btnNewArtist" onClick={newArtist}>
           <FaPlus className="icon-Admin-AddArtist" />
           Add New Artist
         </button>
@@ -61,7 +70,9 @@ function AddArtists() {
             review="2"
             sales="4"
             openModal={openModal}
-            openModalEdit={openNewArtist}
+            openModalEdit={editArtist}
+            isEdit={isEdit}
+            setIsEdit={setIsEdit}
           />
           <RowArtist />
           <RowArtist />
@@ -88,11 +99,19 @@ function RowArtist({
   sales,
   openModal,
   openModalEdit,
+  isEdit,
+  setIsEdit
 }) {
   return (
     <tr>
       <td className="id-title">{id ? id : "ID"}</td>
-      <td className="photo-title">{photo ? <img src={photo} alt="img-artist" className="img-td-artist" /> : "PHOTO"}</td>
+      <td className="photo-title">
+        {photo ? (
+          <img src={photo} alt="img-artist" className="img-td-artist" />
+        ) : (
+          "PHOTO"
+        )}
+      </td>
       <td className="name-title">{name ? name : "NAME"}</td>
       <td className="paintings-title">{paintings ? paintings : "PAINTINGS"}</td>
       <td className="review-title">{review ? review : "REVIEWS"}</td>
@@ -100,11 +119,13 @@ function RowArtist({
       <td className="button-title">
         {/*         Al hacer click podemos reutilizar la funcionalidad de la action de redux,
         para almacenar el dato buscado ahi con eso llamamos al modal y le enviamos la data*/}
-                <ModalArtist
+        <ModalArtist
           openModal={openModal}
           openNewArtist={openModalEdit}
           onRequestClose={openModalEdit}
           artists={artists[0]}
+          isEdit={isEdit}
+          setIsEdit={setIsEdit}
         />
         <AiFillEdit className="icon-artist-eduit" onClick={openModalEdit} />
       </td>

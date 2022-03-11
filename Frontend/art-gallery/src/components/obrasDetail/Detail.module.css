@@ -1,9 +1,9 @@
 .containerDetail {
-    width: 100%;
-    min-height: 150vh;
-    background: white;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  min-height: 150vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
 }
 .principalHeader {
   width: 100%;
@@ -12,92 +12,98 @@
   align-items: center;
   justify-content: center;
 
-    background: white;
-    
+  background: white;
 }
 .principalSection {
-    width: 100%;
-    height: 1100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    flex-wrap: wrap;
-    
-    
+  width: 100%;
+  height: 68rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  flex-wrap: wrap;
 }
-.principalSectionTitle{
-font-size: 30px;
-font-weight: 800;
-margin-bottom: 50px;
-margin-right: -700px;
-
+.principalSectionTitle {
+  font-size: 30px;
+  font-weight: 800;
+  /* width: 25rem; */
+  margin-bottom: 1rem;
+  /* margin-right: -700px; */
+  transform: translateY(-50px);
+  justify-content: center;
 }
-.principalSectionInterno{
-    width: 100%;
-    /* height: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-  
-
+.principalSectionInterno {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
-.internoimg{
-    width: 40%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;
-    position: relative;
-    margin-top: -200px;
-   cursor: pointer;
-    }
 
-.internoimg img{
-       width: 80%;
-       height: 80%;
-       object-fit: contain;
-       transition: all 2s;
-        }
-.internoimg img:hover{
-   
-    transform: scale(1.4);
-   object-fit: contain;
-   transition: all 2s;
-             }
-.internodescription{
-    width: 40%;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-    }
-.internodescription h3{
-     margin-top: 20px;
-     margin-bottom: 30px;
-        }
-.internodescription h3 a{
-    
-         text-decoration: none;
-         color: black;
-    }
-.internodescription p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-           
- }
- .internodescription p span:nth-child(1){
-    
-    margin-bottom: 20px;
-    text-align: center;
- }
+.iconHeaderCardDetail:hover {
+  color: red;
+}
+
+.iconHeaderCardDetail {
+  align-content: flex-end;
+  width: 7%;
+  height: 7%;
+  color: var(--eigth-color);
+  margin-bottom: -0.5rem;
+  margin-left: 0.5rem;
+}
+
+.internoimg {
+  width: 40%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  position: relative;
+  margin-top: -200px;
+  cursor: pointer;
+}
+
+.internoimg img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: all 2s;
+}
+.internoimg img:hover {
+  transform: scale(1.4);
+  object-fit: contain;
+  transition: all 2s;
+}
+.internodescription {
+  width: 40%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.internodescription h3 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.internodescription h3 a {
+  text-decoration: none;
+  color: black;
+}
+.internodescription p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.internodescription p span:nth-child(1) {
+  margin-bottom: 20px;
+  text-align: center;
+}
 .btnCard {
   width: 240px;
   height: 40px;
@@ -228,7 +234,6 @@ margin-right: -700px;
   transition: all 1.5s;
 }
 .obrasSimilares img:hover {
- 
   transition: all 1.5s;
   transform: scale(1.4);
 }

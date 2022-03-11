@@ -9,6 +9,9 @@ import {
   GET_ARTIST,
   GET_TECHNIQUE,
   GET_SEARCH,
+  POST_FAVS,
+  DELETE_FAVS,
+  GET_FAVS
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -20,12 +23,12 @@ export function getPaintings(filters) {
       !filters
         ? (json = await axios.get("http://localhost:3001/painting/getall"))
         : (json = await axios.get("http://localhost:3001/painting/search", {
-            params: {
-              ...filters,
-              artist: filters?.artist?.join(","),
-              technique: filters?.technique?.join(","),
-            },
-          }));
+          params: {
+            ...filters,
+            artist: filters?.artist?.join(","),
+            technique: filters?.technique?.join(","),
+          },
+        }));
       return dispatch({
         type: GET_PAITINGS,
         payload: json.data,
@@ -90,8 +93,9 @@ export function getPaitingsByArtist(id) {
 export const getObraDetail = (id) => {
   return async (dispatch) => {
     try {
-      let resp = await fetch(`http://localhost:3001/painting/get/${id}`);
-      let data = await resp.json();
+      let { data } = await axios.get(
+        `http://localhost:3001/painting/get/${id}`
+      );
       dispatch({
         type: GET_OBRAID,
         payload: data,
@@ -104,10 +108,9 @@ export const getObraDetail = (id) => {
 export const getObrasRandon = (id) => {
   return async (dispatch) => {
     try {
-      let resp = await fetch(
+      let { data } = await axios.get(
         `http://localhost:3001/painting/getrecommended/${id}`
       );
-      let data = await resp.json();
       dispatch({
         type: GET_OBRAIDRANDON,
         payload: data,
@@ -123,10 +126,10 @@ export function getArtist(name) {
     try {
       let json;
       !name
-        ? (json = await axios.get("http://localhost:3001/artist/getAll"))
+        ? (json = await axios.get("http://localhost:3001/artist/getall"))
         : (json = await axios.get(
-            `http://localhost:3001/artist/getbyname/?name=${name}`
-          ));
+          `http://localhost:3001/artist/getbyname/?name=${name}`
+        ));
       dispatch({ type: GET_ARTIST, payload: json.data });
     } catch (error) {
       console.log(error);
@@ -186,4 +189,70 @@ export function getSearchAuto(text) {
       console.log(error);
     }
   };
+}
+
+//Post favs
+export function postFav(id) {
+ // console.log('soy pintura n|', id)
+  return async function (dispatch) {
+    try {
+      const json = await axios.post(
+        `http://localhost:3001/favorites/add/${id}`
+      );
+      //console.log('soy favs', json)
+      return dispatch({
+        type: POST_FAVS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+export const removeUser = async (id) => {
+  // return async (dispatch) => {
+  const post = await fetch(`http://localhost:3001/user/removeadmin/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+   
+  });
+  let resul = await post.json();
+  console.log(resul)
+  return resul
+}
+
+//Delete favs
+export function deleteFav(id) {
+  //console.log('soy delete de pintura n|', id)
+  return async function (dispatch) {
+    try {
+      const json = await axios.delete(
+        `http://localhost:3001/favorites/remove/${id}`
+      );
+     // console.log('soy favs', json)
+      return dispatch({
+        type: DELETE_FAVS,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+export function getFavs(){
+  return async function (dispatch) {
+    try {
+      const json = await axios.get('http://localhost:3001/favorites/getAll');
+      return dispatch({
+        type: GET_FAVS,
+        payload: json.data
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }

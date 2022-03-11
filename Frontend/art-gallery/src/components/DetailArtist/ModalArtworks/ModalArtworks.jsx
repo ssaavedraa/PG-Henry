@@ -10,7 +10,7 @@ const ModalArtworks = ({
   paintingsArtist,
   artists,
 }) => {
-  console.log(paintingsArtist);
+  //console.log(paintingsArtist);
 
   const customStyles = {
     overlay: {

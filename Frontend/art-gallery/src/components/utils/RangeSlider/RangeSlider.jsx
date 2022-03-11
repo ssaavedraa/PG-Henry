@@ -23,7 +23,7 @@ function RangeSlider({ min, max, nameMin, nameMax, filter, handleOnChange }) {
         range.current.style.width = ((maxPercent - minPercent) > 100) ? "100%":`${maxPercent - minPercent}%`;
       }
     }
-  }, [filter[nameMin], getPercent]);
+  }, [filter[nameMin],filter,nameMin, getPercent]);
 
   // Establecer la anchura del rango para disminuir desde el lado derecho
   useEffect(() => {
@@ -34,7 +34,7 @@ function RangeSlider({ min, max, nameMin, nameMax, filter, handleOnChange }) {
         range.current.style.width = ((maxPercent - minPercent) > 100) ? "100%": `${maxPercent - minPercent}%`;
       }
     }
-  }, [filter[nameMax], getPercent]);
+  }, [filter[nameMax],filter,nameMin, getPercent]);
 
 
   return (
