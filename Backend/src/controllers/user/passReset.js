@@ -1,6 +1,5 @@
 const { User } = require("../../db");
-const emailSender = require("../../Nodemailer/sendMail.js");
-const { subject, text } = require("../../Nodemailer/Templates/resetPasswordMail.js");
+const emailSender = require("../../nodemailer/passwordReset/sendMail.js");
 
 const passReset = async (req, res) => {
 
@@ -19,7 +18,7 @@ const passReset = async (req, res) => {
 
     const newPassword = String.fromCharCode(...charArray);
 
-    emailSender(user.email, subject, text).catch((err) => res.status(400).json({ err: err.message }));
+    emailSender(user.email, user.firstName, newPassword).catch((err) => res.status(400).json({ err: err.message }));
 
     user.password = newPassword
 

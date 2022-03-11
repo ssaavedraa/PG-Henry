@@ -1,16 +1,17 @@
 const transporter = require("./transporter.js");
 const { TEST_USER } = process.env;
 
-const emailSender = async (destinatary, subject, text) => {
+const emailSender = async (destinatary, name, password) => {
     const mailOptions = {
         from: TEST_USER,
         to: destinatary,
-        subject: subject,
-        text: text,
-        /* html: <b>Hello World</b> */
+        subject: "Password reset.",
+        template: "resetPassword",
+        context: {
+            name,
+            password,
+        }
     };
-
-    console.log(mailOptions)
 
     await transporter.sendMail(mailOptions, function(error, info){
         if (error) {
