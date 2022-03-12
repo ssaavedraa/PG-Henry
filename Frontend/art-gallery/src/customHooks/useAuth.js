@@ -34,13 +34,13 @@ export default function useAuth() {
       }
       else throw new Error(res);
     },
-    [setUser]
+    [setUser, add, removeAll]
   );
   const logout = useCallback(() => {
     setUser(initalUser);
     userReset();
     removeAll();
-  }, [setUser]);
+  }, [setUser, removeAll]);
 
   return { ...user, register, login, logout };
 }
