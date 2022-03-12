@@ -84,7 +84,9 @@ function useCart() {
   }
 
   function removeAll() {
-    axios.delete("http://localhost:3001/cart/removeAll").catch(err => console.log(err));
+    if (localStorage.getItem("jwtToken") !== null) {
+      axios.delete("http://localhost:3001/cart/removeAll").catch(err => console.log(err));;
+    };
     setArr("painting", []);
     localStorage.removeItem("painting");
   }
