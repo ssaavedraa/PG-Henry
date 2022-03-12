@@ -17,20 +17,6 @@ export default function NavBar() {
   const resultSearch = useSelector((state) => state.resultSearch);
   const [keyword, setKeyword] = useState("");
 
-  /*   React.useEffect(() => {
-    dispatch(getSearchAuto());
-  }, [dispatch, state]);
-
-  React.useEffect(() => {
-    dispatch(getSearchAuto(state.keyword));
-  }, [dispatch, state]); */
-
-  /*   function matchName(name, keyword) {
-    let keyLen = keyword.length;
-    name = name.toLowerCase().substring(0, keyLen);
-    return name === keyword && keyLen !== 0;
-  } */
-
   function updateField(value, update = true) {
     if (update) {
       dispatch(getSearchAuto(value));
@@ -73,24 +59,40 @@ export default function NavBar() {
               <h4>Login</h4>
             </button>
           </NavLink>
+        ) : user.role === "admin" ? (
+          <li>
+            <NavLink to="/admin" className={styles.linksNav}>
+              <h5>Welcome! {user.firstName}</h5>
+            </NavLink>
+          </li>
         ) : (
           <li>
+            <NavLink to="/under" className={styles.linksNav}>
             <h5>Welcome! {user.firstName}</h5>
+            </NavLink>
           </li>
         )}
-        <li>
-          <NavLink to="/cart" className={styles.linksNav}>
-            <div className={styles.divContainerCartIcon}>
-              <div className={styles.containerCartLength}>{cart.length}</div>
-              <AiOutlineShoppingCart className={styles.icon} />
-            </div>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/under" className={styles.linksNav}>
-            <AiOutlineHeart className={styles.icon} />
-          </NavLink>
-        </li>
+        {user.role === "user" || user.role === "guest" ? (
+          <li>
+            <NavLink to="/cart" className={styles.linksNav}>
+              <div className={styles.divContainerCartIcon}>
+                <div className={styles.containerCartLength}>{cart.length}</div>
+                <AiOutlineShoppingCart className={styles.icon} />
+              </div>
+            </NavLink>
+          </li>
+        ) : (
+          <li></li>
+        )}
+        {user.role === "user" || user.role === "guest" ? (
+          <li>
+            <NavLink to="/favs" className={styles.linksNav}>
+              <AiOutlineHeart className={styles.icon} />
+            </NavLink>
+          </li>
+        ) : (
+          <li></li>
+        )}
         {user.role !== "guest" && (
           <li className={styles.logoutNav} onClick={() => logout()}>
             <p>Logout</p>

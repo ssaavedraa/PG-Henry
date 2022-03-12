@@ -20,6 +20,13 @@ const AddItems = () => {
     dispatch(getTechnique());
   }, [dispatch]);
 
+  
+
+  
+    
+
+
+    
   const [input, setInput] = useState({
     title: "",
     description: "",    

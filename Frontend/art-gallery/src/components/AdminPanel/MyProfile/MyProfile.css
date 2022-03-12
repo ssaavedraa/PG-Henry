@@ -1,73 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
-
 .admin-box{
     display: flex;   
-    height: auto;       
-    overflow-y: scroll;   
+    height: 90vh !important;       
+    overflow: hidden !important;
         }
 
 .component-box{   
     height: 90vh;
     width: 85%;
+    display: flex;
+    justify-content: center;
 }
 
-.title-admin{
-    height: 5%;    
-    margin: auto;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.reder-box{
- height: 70%; 
+.component-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.myprofile-box{
-    height: auto;    
-    text-align: center;
-         
-   }
+.user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 1rem;
+}
 
-   .information-box{
-       text-align: center;       
-       padding-top: 2rem;
-       padding-bottom: 2rem;       
-   }
+.user-data{
+    width: 100%;
+}
 
+.user-fields{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
 
-   .data{
-       display: inline-flex;
-       flex-direction: column;
-       width: 40%;
-       text-align: center;
-       justify-content: center;      
-   }
+.user-fields input{
+    height: 1.3rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 0.6rem;
+}
+.user-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    margin: 0.5rem;
+}
 
-   .input{
-       margin: 0.5rem;
-       height: 2rem;
-       text-align: center;
-       font-family: 'Poppins', sans-serif;       
-       border-radius: 10px;
-   }
+.user-buttons button{
+    background-color: var(--btnMain-Color);
+    color: var(--third-color);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem ;
+    border: none;
+}
 
-   .input:hover{       
-       background-color: rgb(231, 231, 231);
-   }
-
-
-
-   .btn-edit{
-       height: 3rem;
-       width: 12rem;       
-       list-style: none;
-       background-color: rgb(212, 212, 212);
-       border-radius: 20px;
-       border-style: none;
-       margin: 1rem;          
-   }
-
-   .btn-edit:hover{
-    background-color: rgb(160, 160, 160);
-   }
+.user-buttons button:disabled{
+    opacity: 50%;
+}

@@ -7,3 +7,5 @@ export const GET_ARTIST_ID = "GET_ARTIST_ID";
 export const GET_OBRAID = "GET_OBRAID";
 export const GET_OBRAIDRANDON = "GET_OBRAIDRANDON";
 export const GET_SEARCH = "GET_SEARCH";
+export const GET_ALL_ARTISTS = "GET_ALL_ARTISTS";
+export const GET_FAVS = "GET_FAVS";
