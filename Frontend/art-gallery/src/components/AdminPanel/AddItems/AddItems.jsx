@@ -15,14 +15,14 @@ const AddItems = () => {
   const technique = useSelector((state) => state.technique);
 
   React.useEffect(() => {
+    
     dispatch(getArtist());
     dispatch(getTechnique());
   }, [dispatch]);
 
   const [input, setInput] = useState({
     title: "",
-    description: "",
-    orientation: "",
+    description: "",    
     height: 0,
     width: 0,
     price: 0,
@@ -32,16 +32,45 @@ const AddItems = () => {
   });
 
   function handleChange(e) {
+
+    if(e.target.name === "height" && e.target.name === "width"){
+      let cm= Number(e.target.value)
+      setInput({
+        ...input,
+        [e.target.name]: cm, //va tomando el nombre de cada prop, me vaya llenando el estado
+      });
+    }
+
+    if(e.target.name === "photos" ){    
+      setInput({
+        ...input,
+        photos:[...input.photos, e.target.value] //va tomando el nombre de cada prop, me vaya llenando el estado
+      });      
+    }    
+    
     setInput({
       ...input,
       [e.target.name]: e.target.value, //va tomando el nombre de cada prop, me vaya llenando el estado
     });
   }
+//
 
-  function handleSelect(e) {
+function handleCheck(e){
+  if (!input.techniqueIds.includes(e.target.value)) {    
+   let tec= Number(e.target.value)    
+  setInput({
+    ...input,
+    techniqueIds: [...input.techniqueIds, tec ] , //va tomando el nombre de cada prop, me vaya llenando el estado
+  });
+}
+}
+
+
+  function handleSelect(e) { 
+    let art= Number(e.target.value)
     setInput({
       ...input,
-      [e.target.name]: e.target.value, //va tomando el nombre de cada prop, me vaya llenando el estado
+      artistId: art, //va tomando el nombre de cada prop, me vaya llenando el estado
     });
   }
 
@@ -52,8 +81,7 @@ const AddItems = () => {
     alert("New item create");
     setInput({
       title: "",
-      description: "",
-      orientation: "",
+      description: "",      
       height: 0,
       width: 0,
       price: 0,
@@ -110,26 +138,11 @@ const AddItems = () => {
                       className="input"
                       value={input.description}
                       onChange={handleChange}
-                    />
-
-                    <label> Orientation :</label>
-
-                    <select
-                      className="input"
-                      key="orientation"
-                      name="orientation"
-                      required
-                      onChange={(e) => handleSelect(e)}
-                    >
-                      <option value="">select orientation</option>
-                      <option value="horizontal">horizontal</option>
-                      <option value="vertical">vertical</option>
-                      <option value="squared">squared</option>
-                    </select>
+                    />                    
 
                     <div className="width-height">
                       <div>
-                        <label> Height: </label>
+                        <label> Height : </label>
                         <input
                           type="number"
                           required
@@ -139,8 +152,8 @@ const AddItems = () => {
                           max="10000"
                           value={input.height}
                           name="height"
-                          className="input"
-                          onChange={(e) => handleChange(e)}
+                          className="input"                          
+                          onChange={handleChange}
                         />
                       </div>
                       <div>
@@ -173,19 +186,21 @@ const AddItems = () => {
                       ))}
                     </select>
 
-                    <label> Technique: </label>
-                    <select
-                      className="input"
-                      key="techniqueIds"
-                      name="techniqueIds"
-                      required
-                      onChange={(e) => handleSelect(e)}
-                    >
-                      <option value="">select technique</option>
+                    <label> Technique: </label> 
                       {technique?.map((d) => (
-                        <option value={d.id}>{d.name}</option>
+                        <label>
+                          <input 
+                          type="checkbox" 
+                          id={d.id}
+                          name="techniqueIds" 
+                          value={d.id}
+                          onChange={(e) => handleCheck(e)}
+                          /> {d.name}
+                        </label>                        
                       ))}
-                    </select>
+
+                       
+                    
 
                     <label> Price: </label>
                     <input
