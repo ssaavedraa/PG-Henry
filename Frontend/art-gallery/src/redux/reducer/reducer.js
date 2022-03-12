@@ -8,8 +8,12 @@ import {
   GET_ARTIST,
   GET_TECHNIQUE,
   GET_SEARCH,
-  POST_FAVS, 
-  DELETE_FAVS
+  POST_FAVS,
+  DELETE_FAVS,
+  GET_USER_ADMIN,
+  ORDER_BY_A_Z,
+  UN_BANNED,
+  ORDER_BY_TYPE
 } from "../action-types";
 
 const initialState = {
@@ -76,11 +80,31 @@ function rootReducer(state = initialState, action) {
         ...state,
         favs: action.payload,
       }
-      case DELETE_FAVS:
-        return {
-          ...state,
-          favs: action.payload
-        }
+    case DELETE_FAVS:
+      return {
+        ...state,
+        favs: action.payload
+      }
+    case GET_USER_ADMIN:
+      return {
+        ...state,
+        userAdmin: action.payload
+      }
+    case ORDER_BY_A_Z:
+      return {
+        ...state,
+        userAdmin: action.payload
+      }
+    case UN_BANNED:
+      return {
+        ...state,
+        userAdmin: state.userAdmin
+      }
+    case ORDER_BY_TYPE:
+      return {
+        ...state,
+        userAdmin: action.payload
+      }
     default:
       return state;
   }

@@ -1,17 +1,48 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import './addUser.css'
 
 
 import NavPanel from "../NavPanel/NavPanel";
-import ModalAddAdmin from "./ModalAddAdmin/ModalAddAdmin";
+
 import ModalBtn from "./ModalAddAdmin/ModalBtn";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserAdmin, orderBySort, orderBySortType } from "../../../redux/actions/actions";
+
 
 
 
 export const AddUser = () => {
 
-  const [openModal, setOpenModal] = useState(false);
+
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  useEffect(() => {
+    dispatch(getUserAdmin())
+
+  }, [])
+
+
   const [openModal1, setOpenModal1] = useState(false);
+  const [dataMsj, setDataMsj] = useState({
+    mensaje: '',
+    id: 0
+  });
+
+  const handleRemoveAdmin = (data1, id) => {
+    setDataMsj(data => ({ ...data, mensaje: data1, id: id }))
+    setOpenModal1(true)
+  }
+  const handleSort = (e) => {
+    e.preventDefault();
+    dispatch(orderBySort(e.target.value))
+  }
+  const handleSortType = (e) => {
+    e.preventDefault();
+    dispatch(orderBySortType(e.target.value))
+  }
+  if (!state) {
+    return <h2>Loading</h2>
+  }
   return (
     <>
 
@@ -39,23 +70,33 @@ export const AddUser = () => {
                   <div className="panel-admin-interno1">
                     <h4>Administrator</h4>
 
-                    <div className="order-input">
+                    {/* <div className="order-input">
                       <label>Ordenador por</label>
                       <input
                         type='text'
                       ></input>
+                    </div> */}
+
+                    <div>
+                      <label>Ordenador por</label>
+                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
+                        <option value="0">Order ⇵:</option>
+                        <option value="email">Email</option>
+                        <option value="firstName">FirstName</option>
+                        <option value="id">Id</option>
+                      </select>
                     </div>
 
                     <div>
                       <label>Sort By Name</label>
-                      <select className="nav-select-1" >
+                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)} >
                         <option value="0">Order ⇵:</option>
-                        <option value="A-Z">A-Z</option>
-                        <option value="Z-A">Z-A</option>
+                        <option value="ASC">A-Z</option>
+                        <option value="DESC">Z-A</option>
                       </select>
                     </div>
-                    <ModalAddAdmin openModal={openModal} setOpenModal={setOpenModal} />
-                    <button onClick={() => setOpenModal(true)}>Add Admin</button>
+
+
                   </div>
                   <div className="panel-admin-interno2">
                     <div className="interno2-div1">
@@ -66,41 +107,64 @@ export const AddUser = () => {
                       </ul>
 
                     </div>
-                    <ModalBtn openModal={openModal1} setOpenModal={setOpenModal1}/>
+
                     <div className="interno2-div2">
-                      <h4>4</h4>
-                      <p>Santiago Reyes</p>
-                      <p>SantiagoReyes@gmail.com</p>
-                      <button onClick={() => setOpenModal1(true)}>Switch Roles</button>
-                      <button onClick={() => setOpenModal1(true)}>Ban User</button>
-                      <button onClick={() => setOpenModal1(true)}>Reset Password</button>
+                      {
+                        (state.userAdmin?.map(ele => (
+                          ele.role === 'admin' ?
+                            <div className="div-admin" key={ele.id}>
+                              <h4>{ele.id}</h4>
+                              <p>{ele.firstName}</p>
+                              <p>{ele.email}</p>
+
+                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('reset', ele.id)}>Reset Password</button>
+                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('remove', ele.id)}>Remove Admin</button>
+                              {
+                                ele.isBanned ?
+                                  <button onClick={() => handleRemoveAdmin('unban', ele.id)}>UnBan User</button>
+
+                                  :
+                                  <button onClick={() => handleRemoveAdmin('ban', ele.id)}>Ban User</button>
+                              }
+                              {ele.isBanned ?
+                                <h2 className="h2-banned">
+                                  Is banned</h2>
+                                :
+                                ''
+                              }
+                              <ModalBtn openModal={openModal1} setOpenModal={setOpenModal1} data={dataMsj} />
+                            </div>
+                            :
+                            ''
+                        )))
+                      }
                     </div>
-
-
-
                   </div>
                 </div>
 
                 {/* ////////////////////////////////////////////////// */}
 
-                <div className="panel-interno--">
+                <div className="panel-interno-- panelinterno2">
 
                   <div className="panel-admin-interno1">
                     <h4>Register Usuario</h4>
 
-                    <div className="order-input">
+                    <div>
                       <label>Ordenador por</label>
-                      <input
-                        type='text'
-                      ></input>
+                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
+                        <option value="0">Order ⇵:</option>
+                        <option value="email">Email</option>
+                        <option value="firstName">FirstName</option>
+                        <option value="id">Id</option>
+                      </select>
                     </div>
 
                     <div className="panel-button">
                       <label>Sort By Name</label>
-                      <select className="nav-select-1" >
+                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)}>
                         <option value="0">Order ⇵:</option>
-                        <option value="A-Z">A-Z</option>
-                        <option value="Z-A">Z-A</option>
+                        <option value="ASC">A-Z</option>
+                        <option value="DESC">Z-A</option>
                       </select>
                     </div>
 
@@ -116,13 +180,37 @@ export const AddUser = () => {
 
                     </div>
                     <div className="interno2-div2">
-                      <h4>4</h4>
-                      <p>Santiago Reyes</p>
-                      <p>SantiagoReyes@gmail.com</p>
-                      {/* <button>Change Ride</button> */}
 
-                      <button onClick={() => setOpenModal1(true)}>Delete</button>
-                      <button onClick={() => setOpenModal1(true)}>Reset Password</button>
+                      {
+                        (state.userAdmin?.map(ele => (
+                          ele.role === 'user' ?
+                            <div className="div-admin" key={ele.id}>
+                              <h4>{ele.id}</h4>
+                              <p>{ele.firstName}</p>
+                              <p>{ele.email}</p>
+                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('reset', ele.id)}>Reset Password</button>
+                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('add', ele.id)}>Add Admin</button>
+
+                              {
+                                ele.isBanned ?
+                                  <button onClick={() => handleRemoveAdmin('unban', ele.id)}>UnBan User</button>
+
+                                  :
+                                  <button onClick={() => handleRemoveAdmin('ban', ele.id)}>Ban User</button>
+                              }
+                              {ele.isBanned ?
+                                <h2 className="h2-banned">
+                                  Is banned</h2>
+                                :
+                                ''
+                              }
+                              <ModalBtn openModal={openModal1} setOpenModal={setOpenModal1} data={dataMsj} />
+                            </div>
+                            :
+                            ''
+                        )))
+                      }
+
                     </div>
 
 

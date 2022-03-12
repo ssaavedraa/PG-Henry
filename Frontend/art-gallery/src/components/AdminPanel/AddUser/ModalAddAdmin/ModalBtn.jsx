@@ -4,12 +4,16 @@ import { FaTimes } from "react-icons/fa";
 
 import "./modalBtn.css";
 
+import { banUser, giveUserAdmin, removeUser, resetPasswordUser, unBanUser } from "../../../../redux/actions/actions";
+import { useDispatch } from "react-redux";
+
 const ModalBtn = ({
   openModal,
   setOpenModal,
   data,
-  artists,
+  id,
 }) => {
+
 
 
   const customStyles = {
@@ -30,6 +34,27 @@ const ModalBtn = ({
    
   };
 
+ const dispatch =  useDispatch()
+
+  const handleAgree = () => {
+    if (data.mensaje === 'remove') {
+      dispatch( (removeUser(data.id))) 
+      setOpenModal(false)
+    } else if (data.mensaje === 'add'){
+      dispatch(giveUserAdmin(data.id)) 
+      setOpenModal(false)
+    }else if (data.mensaje === 'ban'){
+      dispatch(banUser(data.id)) 
+      setOpenModal(false)
+    }else if (data.mensaje === 'unban'){
+      dispatch(unBanUser(data.id)) 
+      setOpenModal(false)
+    }else if (data.mensaje === 'reset'){
+      dispatch(resetPasswordUser(data.id))  
+      setOpenModal(false)
+    }
+    
+  }
   return (
     <Modal isOpen={openModal} style={customStyles} ariaHideApp={false}>
       <div className="modal-inner-btn">
@@ -41,7 +66,7 @@ const ModalBtn = ({
         </div>
         <div className="containerCardsModal">
           <div className="containerCardsModal-btns">
-        <button onClick={() => setOpenModal(false)}>Agree</button>
+        <button onClick={handleAgree}>Agree</button>
         <button onClick={() => setOpenModal(false)}>Cancel</button>
             
           </div>
