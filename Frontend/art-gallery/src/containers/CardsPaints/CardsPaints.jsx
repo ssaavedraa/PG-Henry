@@ -1,38 +1,44 @@
 import React from "react";
 import CardPaint from "../../components/CardPaint/CardPaint";
-import { NavLink } from "react-router-dom";
-
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { getFavs } from "../../redux/actions/actions.js";
+import useAuth from "../../customHooks/useAuth";
+import { useDispatch } from "react-redux";
 import "./CardsPaints.css";
 
 //IsAdmin es una prop pasada para validar si es admin o usuario o guest
-function CardsPaints({ paintings}) {
+function CardsPaints({ paintings }) {
+	//Booleano para evaluar si es admin
+	//let isAdmin = true;
+	const { user } = useAuth();
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(getFavs());
+	}, [dispatch]);
+	const favs = useSelector((state) => state.favs);
 
-  //Booleano para evaluar si es admin
-  //let isAdmin = true;
-
-  return (
-    <div className="containerCards">
-      {paintings.length ? (
-        paintings.map((paint) => (
-                <CardPaint
-                  key={paint.id}
-                  id={paint.id}
-                  image={paint.image}
-                  title={paint.title}
-                  artist={paint.artist}
-                  height={paint.height}
-                  width={paint.width}
-                  techniques={paint.techniques}
-                  price={paint.price}
-                />
-        ))
-      ) : (
-        <h1 className="errorCardPaint">Not Results!</h1>
-      )}
-    </div>
-  );
-}
-{
-  /* <h1 className="errorCardPaint">Not Results!</h1> */
+	return (
+		<div className="containerCards">
+			{paintings.length ? (
+				paintings.map((paint) => (
+					<CardPaint
+						key={paint.id}
+						id={paint.id}
+						fav={favs.map(({ id }) => id).includes(paint.id)}
+						image={paint.image}
+						title={paint.title}
+						artist={paint.artist}
+						height={paint.height}
+						width={paint.width}
+						techniques={paint.techniques}
+						price={paint.price}
+					/>
+				))
+			) : (
+				<h1 className="errorCardPaint">Not Results!</h1>
+			)}
+		</div>
+	);
 }
 export default CardsPaints;

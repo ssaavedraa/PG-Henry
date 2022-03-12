@@ -26,10 +26,14 @@ const NavPanel = () => {
         </div>
         <ul className="menu-options">
           <li>
+          <Link to="/under">
             <AiOutlineLineChart className="icon" /> SALES
+            </Link>
           </li>
           <li>
+          <Link to="/admin/user">
             <FaUsers className="icon" /> USERS
+            </Link>
           </li>
           <li>
             <Link to="/admin/addartist">

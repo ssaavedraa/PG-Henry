@@ -8,6 +8,7 @@ const artistRoute = require("./artistRoute.js");
 const reviewRoute = require("./reviewRoute.js");
 const authRoute = require("./authRoute.js");
 const favoriteRoute = require("./favoriteRoute.js");
+const cartRoute = require("./cartRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -23,5 +24,10 @@ router.use(
 	favoriteRoute
 );
 router.use("/user", authRoute);
+router.use(
+	"/cart",
+	passport.authenticate("jwt", { session: false }),
+	cartRoute
+);
 
 module.exports = router;

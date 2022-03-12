@@ -12,7 +12,6 @@ const getAll = async (req, res) => {
 			},
 		});
 		if (!user) return res.status(404).send("User not found");
-
 		const favoritesArray = user.paintings.map((fav) => {
 			fav = fav.toJSON();
 			return {
