@@ -21,17 +21,17 @@ const loadMockData = async () => {
 	await Artist.bulkCreate(artists);
 	await User.bulkCreate(users);
 	await User.create({
-		firstName: "user",
-		lastName: "default",
-		email: DEFAULT_USER_EMAIL,
-		password: DEFAULT_USER_PASSWORD,
+		firstName: "defaul",
+		lastName: "user",
+		email: 'default-user@santart.com',
+		password: 'user123!',
 		role: "user",
 	});
 	await User.create({
 		firstName: "admin",
 		lastName: "default",
-		email: DEFAULT_ADMIN_EMAIL,
-		password: DEFAULT_ADMIN_PASSWORD,
+		email: 'admin@santart.com',
+		password: '@dm1n2022!',
 		role: "admin",
 	});
 	for (let p of paintings) {
