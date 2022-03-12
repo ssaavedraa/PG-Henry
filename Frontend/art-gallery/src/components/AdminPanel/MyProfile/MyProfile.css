@@ -50,10 +50,28 @@
     color: var(--third-color);
     border-radius: 0.3rem;
     font-size: 1rem;
-    padding: 0.3rem 0.6rem ;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem ;
     border: none;
 }
 
 .user-buttons button:disabled{
     opacity: 50%;
+}
+
+.user-buttons button:hover{
+    cursor: pointer;
+}
+
+button.cancel{
+    background-color: rgb(192, 10, 10);
+}
+
+.password-reqs{
+    border-top: var(--primary-color) 2px solid;
+    padding: 1rem;
+}
+
+.password-reqs ul{
+    padding-left: 2rem;
 }
