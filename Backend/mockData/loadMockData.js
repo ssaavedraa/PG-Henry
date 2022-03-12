@@ -15,6 +15,7 @@ const {
 } = process.env;
 
 const loadMockData = async () => {
+	console.log('loading mock data')
 
 	await Technique.bulkCreate(techniques);
 	await Artist.bulkCreate(artists);
