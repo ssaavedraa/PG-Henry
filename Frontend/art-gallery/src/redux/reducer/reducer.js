@@ -12,20 +12,20 @@ import {
   DELETE_FAVS,
   GET_USER_ADMIN,
   ORDER_BY_A_Z,
-  UN_BANNED,
-  ORDER_BY_TYPE
+  ORDER_BY_TYPE,
+  GET_FAVS,
 } from "../action-types";
 
 const initialState = {
-  //Aca estan todas las pinturas
-  paintings: [],
-  reviews: [],
-  paintingsArtist: [],
-  artistId: [],
-  artist: [],
-  technique: [],
-  resultSearch: [],
-  favs: []
+	//Aca estan todas las pinturas
+	paintings: [],
+	reviews: [],
+	paintingsArtist: [],
+	artistId: [],
+	artist: [],
+	technique: [],
+	resultSearch: [],
+	favs: [],
 };
 
 function rootReducer(state = initialState, action) {
@@ -95,16 +95,17 @@ function rootReducer(state = initialState, action) {
         ...state,
         userAdmin: action.payload
       }
-    case UN_BANNED:
-      return {
-        ...state,
-        userAdmin: state.userAdmin
-      }
+   
     case ORDER_BY_TYPE:
       return {
         ...state,
         userAdmin: action.payload
       }
+      case GET_FAVS:
+			return {
+				...state,
+				favs: action.payload,
+			};
     default:
       return state;
   }
