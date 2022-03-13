@@ -4,7 +4,7 @@ import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
-import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal.jsx";
+import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 import axios from "axios";
 import useAuth from "../../customHooks/useAuth";
 
@@ -56,7 +56,7 @@ function CardPaint({
 
 	return (
 		<div className="card">
-			<EditPaintingModal openModal={openModal} setOpenModal={setOpenModal} />
+			<PaintingModal openModal={openModal} setOpenModal={setOpenModal} ObraId={id} />
 			{user.role === "admin" && (
 				<button onClick={() => setOpenModal(true)} className="btn-header-icon">
 					<AiFillEdit className="icon-header-card" />

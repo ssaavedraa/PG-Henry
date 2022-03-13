@@ -38,3 +38,18 @@
     border-radius: 0.2rem;
     padding: 0.2rem 0.4rem;
 }
+
+.btn-create{
+    height: 2rem;
+    width: 9rem;
+    list-style: none;
+    background-color: var(--btnMain-Color);
+    border-radius: 20px;
+    border-style: none;
+    margin: 1rem; 
+    color: white;
+}
+
+.btn-create:hover{
+ background-color: var(--btnHover-color);
+}

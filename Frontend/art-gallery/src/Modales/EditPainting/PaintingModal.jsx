@@ -1,10 +1,13 @@
 import React from "react";
 import Modal from "react-modal";
-import "./EditPaintingModal.css";
+import "./PaintingModal.css";
 import { FaTimes } from "react-icons/fa";
 import UnderConstruction from "../../components/UnderConstruction/UnderConstruction";
+import EditPaintinfForm from "../EditPainting/editPaintingForm/EditPaintingForm"
 
-const EditPaintingModal = ({ openModal, setOpenModal }) => {
+
+
+const EditPaintingModal = ({ openModal, setOpenModal ,ObraId}) => {
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0,0,0,0.6)",
@@ -21,15 +24,15 @@ const EditPaintingModal = ({ openModal, setOpenModal }) => {
   };
 
   return (
-    <Modal isOpen={openModal} style={customStyles} ariaHideApp={false}>
+    <Modal isOpen={openModal} style={customStyles} ariaHideApp={false} ObraId={ObraId} >
       <div className="modal-inner-painting">
-        <div className='containerHeaderModalPainting'>
-        <h3>Edit painting</h3>
+      <div className="form-box">
+      <EditPaintinfForm isOpen={openModal} ObraId={ObraId}/>
         <div onClick={() => setOpenModal(false)}>
-          <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
+            <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
+          </div>
         </div>
-        </div>
-        <UnderConstruction />
+
       </div>
     </Modal>
   );
