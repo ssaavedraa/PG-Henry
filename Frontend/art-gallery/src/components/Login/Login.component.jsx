@@ -46,16 +46,18 @@ export default function Login() {
           {isLoginFailed && (
             <p className="login-failed">Email/password incorrect</p>
           )}
-          <label htmlFor="user">Email</label>
-          <input type="text" name="email" id="email" onChange={handleChange} />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onChange={handleChange}
-          />
-          <button onClick={handleLogin}>Login</button>
+          <form>
+            <label htmlFor="user">Email</label>
+            <input type="text" name="email" id="email" onChange={handleChange} />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onChange={handleChange}
+            />
+            <button onClick={handleLogin}>Login</button>
+          </form>
           <p>Or</p>
           <GoogleLogin
             clientId="978805617530-lt1c1k8amq1rkg9sk4q3rdhs7o2eqqs9.apps.googleusercontent.com"
