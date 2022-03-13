@@ -9,3 +9,6 @@ export const GET_OBRAIDRANDON = "GET_OBRAIDRANDON";
 export const GET_SEARCH = "GET_SEARCH";
 export const GET_ALL_ARTISTS = "GET_ALL_ARTISTS";
 export const GET_FAVS = "GET_FAVS";
+export const CLEAR_ARTISTBYID = "CLEAR_ARTISTBYID";
+export const GET_STATS_ARTIST = "GET_STATS_ARTIST";
+export const CLEAR_ARTIST = "CLEAR_ARTIST";

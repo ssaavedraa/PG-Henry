@@ -15,7 +15,7 @@ function SearchBar({ results, keyword, updateField }) {
 
   return (
     <div className={results.length ? "div_search" : "div_searchNoResults"}>
-      <form className="search_container">
+      <div className="search_container">
         <button
           onClick={() => cancelSearch()}
           className={`cancel-btn ${keyword.length > 0 ? "active" : "inactive"}`}
@@ -34,7 +34,7 @@ function SearchBar({ results, keyword, updateField }) {
             <BiSearch className="icon_search" />
           </button>
         </NavLink>
-      </form>
+      </div>
       {results.length > 0 ? (
         <div className="search-results">
           {results.map(({ type, name, id }, index) => (

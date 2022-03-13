@@ -11,6 +11,9 @@ import {
 	POST_FAVS,
 	DELETE_FAVS,
 	GET_FAVS,
+	CLEAR_ARTISTBYID,
+	GET_STATS_ARTIST,
+	CLEAR_ARTIST
 } from "../action-types";
 
 const initialState = {
@@ -78,6 +81,24 @@ function rootReducer(state = initialState, action) {
 				...state,
 				favs: action.payload,
 			};
+
+		case CLEAR_ARTISTBYID:
+			return{
+				...state,
+				artistId: [],
+			}
+
+		case GET_STATS_ARTIST:
+			return{
+				...state,
+				artist: action.payload
+			}
+
+		case CLEAR_ARTIST:
+			return{
+				...state,
+				artist: []
+			}
 		default:
 			return state;
 	}

@@ -1,4 +1,4 @@
-.artists-header, .btnNewArtist, .btnAdminView, .subheader-artists{
+.artists-header, .btnNewArtist, .subheader-artists{
     display: flex;
     align-items: center;
 }
@@ -23,10 +23,13 @@
   justify-content: flex-end;
 }
 
-.btnNewArtist, .btnAdminView{
+.btnNewArtist{
+    width: 16%;
     height: 50%;
     padding: .5em;
     margin: 0 .8em;
+    justify-content: center;
+    background-color: var(--primary-color);
     border: none;
     border-radius: .5em;
     color: var(--fourth-color);
@@ -34,22 +37,12 @@
     cursor: pointer;
 }
 
-.btnNewArtist{
-    width: 16%;
-    justify-content: center;
-    background-color: var(--primary-color);
+.btnNewArtist:hover{
+    background-color: var(--btnHover-color);
 }
 
 .icon-Admin-AddArtist{
     margin-right: .5em;
-}
-
-.btnAdminView{
-    background-color: var(--eigth-color);
-}
-
-.btnAdminView:hover{
-    background-color: var(--second-color);
 }
 
 /*Subheader*/

@@ -4,6 +4,12 @@
 }
 
 
+.container-sales-admin{
+    display: flex;   
+    height: 90vh !important;       
+    overflow: hidden !important;
+}
+
 .sales-container{
 /*     background-color: red; */
     width: 80%;
