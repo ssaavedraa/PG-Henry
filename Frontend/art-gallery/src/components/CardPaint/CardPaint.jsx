@@ -4,9 +4,9 @@ import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
-import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal.jsx";
-import axios from "axios";
 import useAuth from "../../customHooks/useAuth";
+import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal.jsx";
+import { addFav, deleteFav} from '../Favs/functionFavs.js';
 
 function CardPaint({
   image,
@@ -19,16 +19,14 @@ function CardPaint({
   fav,
   id,
 }) {
+
 	//console.log(user);
 	const { user } = useAuth();
 	//Estado para el modal
 	const [openModal, setOpenModal] = useState(false);
 
-	// const favs = useSelector((state) => state.favs);
-	// //console.log("soy favs", favs);
-
-	const [isFavorite, setIsFavorite] = useState(fav);
-	
+  const [isFavorite, setIsFavorite] = useState(fav);
+ 
   useEffect(() => {
 		setIsFavorite(fav);
 	}, [fav, setIsFavorite]);
@@ -37,22 +35,6 @@ function CardPaint({
 		setIsFavorite(!isFavorite);
 		!isFavorite ? addFav(id) : deleteFav(id);
 	}
-
-  async function addFav(id) {
-    try {
-      await axios.post(`http://localhost:3001/favorites/add/${id}`);
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
-  async function deleteFav(id) {
-    try {
-      await axios.delete(`http://localhost:3001/favorites/remove/${id}`);
-    } catch (e) {
-      console.log(e);
-    }
-  }
 
   const { add, remove, cart } = useCart();
 

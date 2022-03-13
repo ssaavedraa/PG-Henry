@@ -83,7 +83,18 @@
   border-bottom: 0.15rem solid var(--third-color);
 }
 
-.divContainerInfoObra h1 {
+.divContainerTitleFav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerInfoObra {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerInfoObra h1 {
   font-size: 1.75rem;
   font-style: oblique;
   font-weight: 500;
@@ -92,6 +103,25 @@
 .spanDimensions {
   padding-bottom: 0.75rem;
   font-size: 0.9rem;
+}
+
+.buttonLikeObra{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonLikeObra:hover{
+  color: white;
+  background: rgb(29, 28, 28);
+  transition: all 1s;
+}
+
+.iconLike{
+  font-size: 1.5rem;
+  margin-top: 0.4rem;
 }
 
 .spanTech {
@@ -109,6 +139,7 @@
   padding-top: 0.75rem;
   width: inherit;
 }
+
 
 .divDescriptionArtwork span {
   font-weight: 400;
@@ -129,26 +160,11 @@
   /* align-content: stretch; */
 }
 
-.btnHeaderIconDetail {
-  border: none;
-  outline: none;
-  background-color: var(--fourth-color);
-  padding: 0rem;
-  margin-left: 0.5rem;
-}
-
-.iconHeaderCardDetail:hover {
-  color: red;
-}
-
-.btnHeaderIconDetail:hover {
-  background-color: var(--fourth-color);
-}
 
 .iconHeaderCardDetail {
-  width: 2.2rem;
-  height: 2.4rem;
-  color: var(--eigth-color);
+  width: 1.55rem;
+  height: 1.55rem;
+  /* color: var(--eigth-color); */
 }
 
 .internoimg {
@@ -156,13 +172,10 @@
   margin-top: 1rem;
   display: flex;
   justify-content: space-around;
-  /* align-items: stretch; */
+  align-items: flex-start;
   /* transition: all 1s; */
   position: relative;
-  /* margin-top: -200px; */
   cursor: pointer;
-  /* flex-direction: column; */
-  align-content: flex-end;
 }
 
 .internoimg img {
