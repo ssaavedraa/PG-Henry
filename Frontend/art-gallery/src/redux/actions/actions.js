@@ -1,14 +1,19 @@
 import axios from "axios";
 import {
-	GET_OBRAID,
-	GET_OBRAIDRANDON,
-	GET_PAITINGS,
-	GET_PAINTINGS_BY_ARTIST,
-	GET_REVIEWS,
-	GET_ARTIST_ID,
-	GET_ARTIST,
-	GET_TECHNIQUE,
-	GET_SEARCH,
+  GET_OBRAID,
+  GET_OBRAIDRANDON,
+  GET_PAITINGS,
+  GET_PAINTINGS_BY_ARTIST,
+  GET_REVIEWS,
+  GET_ARTIST_ID,
+  GET_ARTIST,
+  GET_TECHNIQUE,
+  GET_SEARCH,
+  POST_FAVS,
+  DELETE_FAVS,
+  GET_USER_ADMIN,
+  ORDER_BY_A_Z,
+  ORDER_BY_TYPE,
 	GET_FAVS,
 } from "../action-types/index.js";
 
@@ -185,18 +190,7 @@ export function getSearchAuto(text) {
 	};
 }
 
-export const removeUser = async (id) => {
-	// return async (dispatch) => {
-	const post = await fetch(`/user/removeadmin/${id}`, {
-		method: "PUT",
-		headers: {
-			"Content-Type": "application/json",
-		},
-	});
-	let resul = await post.json();
-	console.log(resul);
-	return resul;
-};
+
 
 export function getFavs() {
 	return async function (dispatch) {
@@ -210,4 +204,114 @@ export function getFavs() {
 			console.log(error);
 		}
 	};
+}
+export const getUserAdmin =  () => {
+  return async (dispatch) => {
+
+  try {
+    const json = await axios.get(
+      `http://localhost:3001/user/getall`
+    );
+    dispatch({
+      type: GET_USER_ADMIN,
+      payload: json.data
+    })
+    // console.log(json)
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+}
+export const removeUser =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/removeadmin/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const giveUserAdmin =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/giveadmin/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const banUser =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/ban/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export function unBanUser(id) {
+  return async function (dispatch)  {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/unban/${id}`
+    );
+    console.log(json.data)
+  return  dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+
+export const resetPasswordUser =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/passreset/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const orderBySort =  (name) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.get(
+      `http://localhost:3001/user/getall?order=${name}`
+    );
+    dispatch({
+      type: ORDER_BY_A_Z,
+      payload: json.data
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const orderBySortType =  (name) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.get(
+      `http://localhost:3001/user/getall?orderBy=${name}`
+    );
+    dispatch({
+      type: ORDER_BY_TYPE,
+      payload: json.data
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
 }
