@@ -1,12 +1,9 @@
 import React, {useEffect} from "react";
 import CardPaint from "../../components/CardPaint/CardPaint";
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getFavs } from "../../redux/actions/actions.js";
 import { useDispatch } from "react-redux";
 import "./CardsPaints.css";
-import { useDispatch } from "react-redux";
-import { getFavs } from "../../redux/actions/actions.js";
 
 //IsAdmin es una prop pasada para validar si es admin o usuario o guest
 function CardsPaints({ paintings }) {
