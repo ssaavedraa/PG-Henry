@@ -1,14 +1,19 @@
 import axios from "axios";
 import {
-	GET_OBRAID,
-	GET_OBRAIDRANDON,
-	GET_PAITINGS,
-	GET_PAINTINGS_BY_ARTIST,
-	GET_REVIEWS,
-	GET_ARTIST_ID,
-	GET_ARTIST,
-	GET_TECHNIQUE,
-	GET_SEARCH,
+  GET_OBRAID,
+  GET_OBRAIDRANDON,
+  GET_PAITINGS,
+  GET_PAINTINGS_BY_ARTIST,
+  GET_REVIEWS,
+  GET_ARTIST_ID,
+  GET_ARTIST,
+  GET_TECHNIQUE,
+  GET_SEARCH,
+  POST_FAVS,
+  DELETE_FAVS,
+  GET_USER_ADMIN,
+  ORDER_BY_A_Z,
+  ORDER_BY_TYPE,
 	GET_FAVS,
 } from "../action-types/index.js";
 
@@ -19,8 +24,8 @@ export function getPaintings(filters) {
 			let json;
 
 			!filters
-				? (json = await axios.get("http://localhost:3001/painting/getall"))
-				: (json = await axios.get("http://localhost:3001/painting/search", {
+				? (json = await axios.get("/painting/getall"))
+				: (json = await axios.get("/painting/search", {
 						params: {
 							...filters,
 							artist: filters?.artist?.join(","),
@@ -41,7 +46,7 @@ export function getPaintings(filters) {
 export function getReviews(id) {
 	return async function (dispatch) {
 		try {
-			var json = await axios.get("http://localhost:3001/review/getByArtist/" + id);
+			var json = await axios.get("/review/getByArtist/" + id);
 			//console.log('llego en reviews', json)
 			dispatch({
 				type: GET_REVIEWS,
@@ -57,7 +62,7 @@ export function getReviews(id) {
 export function getArtistById(id) {
 	return async function (dispatch) {
 		try {
-			var json = await axios.get(`http://localhost:3001/artist/get/${id}`);
+			var json = await axios.get(`/artist/get/${id}`);
 			dispatch({
 				type: GET_ARTIST_ID,
 				payload: json.data,
@@ -73,7 +78,7 @@ export function getPaitingsByArtist(id) {
 	return async function (dispatch) {
 		try {
 			var json = await axios.get(
-				`http://localhost:3001/painting/search?artist=${id}`
+				`/painting/search?artist=${id}`
 			);
 			//console.log(json)
 			dispatch({
@@ -89,7 +94,7 @@ export function getPaitingsByArtist(id) {
 export const getObraDetail = (id) => {
 	return async (dispatch) => {
 		try {
-			let { data } = await axios.get(`http://localhost:3001/painting/get/${id}`);
+			let { data } = await axios.get(`/painting/get/${id}`);
 			dispatch({
 				type: GET_OBRAID,
 				payload: data,
@@ -103,7 +108,7 @@ export const getObrasRandon = (id) => {
 	return async (dispatch) => {
 		try {
 			let { data } = await axios.get(
-				`http://localhost:3001/painting/getrecommended/${id}`
+				`/painting/getrecommended/${id}`
 			);
 			dispatch({
 				type: GET_OBRAIDRANDON,
@@ -120,9 +125,9 @@ export function getArtist(name) {
 		try {
 			let json;
 			!name
-				? (json = await axios.get("http://localhost:3001/artist/getall"))
+				? (json = await axios.get("/artist/getall"))
 				: (json = await axios.get(
-						`http://localhost:3001/artist/getbyname/?name=${name}`
+						`artist/getbyname/?name=${name}`
 				  ));
 			dispatch({ type: GET_ARTIST, payload: json.data });
 		} catch (error) {
@@ -134,7 +139,7 @@ export function getArtist(name) {
 export function getTechnique() {
 	return async (dispatch) => {
 		try {
-			let json = await axios.get("http://localhost:3001/technique/getAll");
+			let json = await axios.get("/technique/getAll");
 			dispatch({ type: GET_TECHNIQUE, payload: json.data });
 		} catch (error) {
 			console.log(error);
@@ -146,7 +151,7 @@ export const addNewArtist = (payload) => {
 	return async function (dispatch) {
 		try {
 			const post = await axios.post(
-				"http://localhost:3001/artist/create",
+				"/artist/create",
 				payload
 			);
 			console.log(post);
@@ -161,7 +166,7 @@ export const addNewPainting = (payload) => {
 	return async function (dispatch) {
 		try {
 			const post = await axios.post(
-				"http://localhost:3001/painting/create",
+				"/painting/create",
 				payload
 			);
 			console.log(post);
@@ -176,7 +181,7 @@ export function getSearchAuto(text) {
 		try {
 			if (!text) return dispatch({ type: GET_SEARCH, payload: "" });
 			let json = await axios.get(
-				`http://localhost:3001/painting/search/suggestions/${text}`
+				`/painting/search/suggestions/${text}`
 			);
 			dispatch({ type: GET_SEARCH, payload: json.data });
 		} catch (error) {
@@ -185,23 +190,12 @@ export function getSearchAuto(text) {
 	};
 }
 
-export const removeUser = async (id) => {
-	// return async (dispatch) => {
-	const post = await fetch(`http://localhost:3001/user/removeadmin/${id}`, {
-		method: "PUT",
-		headers: {
-			"Content-Type": "application/json",
-		},
-	});
-	let resul = await post.json();
-	console.log(resul);
-	return resul;
-};
+
 
 export function getFavs() {
 	return async function (dispatch) {
 		try {
-			const json = await axios.get("http://localhost:3001/favorites/getAll");
+			const json = await axios.get("favorites/getAll");
 			return dispatch({
 				type: GET_FAVS,
 				payload: json.data,
@@ -274,3 +268,113 @@ export const removeTechnique = (id) => {
 		}
 	};
 };
+export const getUserAdmin =  () => {
+  return async (dispatch) => {
+
+  try {
+    const json = await axios.get(
+      `http://localhost:3001/user/getall`
+    );
+    dispatch({
+      type: GET_USER_ADMIN,
+      payload: json.data
+    })
+    // console.log(json)
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+}
+export const removeUser =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/removeadmin/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const giveUserAdmin =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/giveadmin/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const banUser =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/ban/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export function unBanUser(id) {
+  return async function (dispatch)  {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/unban/${id}`
+    );
+    console.log(json.data)
+  return  dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+
+export const resetPasswordUser =  (id) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.put(
+      `http://localhost:3001/user/passreset/${id}`
+    );
+    dispatch(getUserAdmin())
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const orderBySort =  (name) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.get(
+      `http://localhost:3001/user/getall?order=${name}`
+    );
+    dispatch({
+      type: ORDER_BY_A_Z,
+      payload: json.data
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
+}
+export const orderBySortType =  (name) => {
+  return async (dispatch) => {
+  try {
+    const json = await axios.get(
+      `http://localhost:3001/user/getall?orderBy=${name}`
+    );
+    dispatch({
+      type: ORDER_BY_TYPE,
+      payload: json.data
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
+}

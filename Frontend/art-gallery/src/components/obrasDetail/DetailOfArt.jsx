@@ -52,6 +52,7 @@ console.log(detailObra, "soy dentalle")
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
     navigate(`/detailpainting/${id}`);
+   
   };
 
   //Son utilizados para el toastify
