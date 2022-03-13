@@ -12,7 +12,7 @@ import useCart from "../../customHooks/useCart.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../customHooks/useAuth";
-import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal";
+import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
 export const DetailOfArt = () => {
   const navigate = useNavigate();
@@ -29,6 +29,8 @@ export const DetailOfArt = () => {
   }, [id, dispatch]);
 
   const { detailObra, obraRandon } = useSelector((state) => state);
+
+console.log(detailObra, "soy dentalle")
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -80,7 +82,7 @@ export const DetailOfArt = () => {
         draggable
         pauseOnHover
       />
-      <EditPaintingModal openModal={openModal} setOpenModal={setOpenModal} />
+      <PaintingModal openModal={openModal} setOpenModal={setOpenModal} ObraId={id} />
       <section className={styles.principalSection}>
         <header className={styles.principalSectionTitle}>
           {user.role === "admin" ? (

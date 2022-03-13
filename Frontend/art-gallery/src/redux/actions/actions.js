@@ -211,3 +211,66 @@ export function getFavs() {
 		}
 	};
 }
+
+
+export const editArtist = (id, payload) => {
+	
+	return async function (dispatch) {
+		try {
+			const data = await axios.put(
+				`http://localhost:3001/artist/update/${id}`,
+				payload
+			);
+			console.log(data);
+			return data;
+		} catch (err) {
+			console.log(err);
+		}
+	};
+};
+
+
+export const editPainting = (id, payload) => {
+	
+	return async function (dispatch) {
+		try {
+			const data = await axios.put(
+				`http://localhost:3001/painting/update/${id}`,
+				payload
+			);
+			console.log(data);
+			return data;
+		} catch (err) {
+			console.log(err);
+		}
+	};
+};
+
+export const addTechnique = (payload) => {
+	return async function (dispatch) {
+		try {
+			const post = await axios.post(
+				"http://localhost:3001/technique/add",
+				payload
+			);
+			console.log(post);
+			return post;
+		} catch (err) {
+			console.log(err);
+		}
+	};
+};
+
+export const removeTechnique = (id) => {
+	return async function (dispatch) {
+		try {
+			const post = await axios.delete(
+				`http://localhost:3001/technique/remove/${id}`
+			);
+			console.log(post);
+			return post;
+		} catch (err) {
+			console.log(err);
+		}
+	};
+};
