@@ -17,7 +17,7 @@ const Favs = () => {
   }, [dispatch]);
 
   const favs = useSelector((state) => state.favs);
-  console.log("soy favs", favs);
+  //console.log("soy favs", favs);
 
   return (
     <div>

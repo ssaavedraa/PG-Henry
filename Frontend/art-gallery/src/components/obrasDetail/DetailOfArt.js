@@ -3,16 +3,17 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   getObraDetail,
   getObrasRandon,
-  removeUser,
+  getFavs,
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
-import { AiFillEdit } from "react-icons/ai";
+import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import useCart from "../../customHooks/useCart.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../customHooks/useAuth";
 import EditPaintingModal from "../../Modales/EditPainting/EditPaintingModal";
+import { addFav, deleteFav } from "../Favs/functionFavs";
 
 export const DetailOfArt = () => {
   const navigate = useNavigate();
@@ -26,10 +27,27 @@ export const DetailOfArt = () => {
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
+    dispatch(getFavs());
   }, [id, dispatch]);
 
   const { detailObra, obraRandon } = useSelector((state) => state);
-  console.log(detailObra);
+
+  const favs = useSelector((state) => state.favs);
+  const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
+
+  const [isFavorite, setIsFavorite] = useState(favsPaitings);
+
+  useEffect(() => {
+    setIsFavorite(favsPaitings);
+  }, [favsPaitings, setIsFavorite]);
+
+  function handlePress(id) {
+    setIsFavorite(!isFavorite);
+    !isFavorite ? addFav(id) : deleteFav(id);
+    //Agrego el dispatch del post del like
+  }
+
+  //console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -89,26 +107,56 @@ export const DetailOfArt = () => {
         </div>
         <div className={styles.internodescription}>
           <div className={styles.principalSectionArtist}>
-            <img src={detailObra.artist.photo} alt={detailObra.artist.name} />
+            <div className={styles.principalSectionArtistImg}>
+              <img src={detailObra.artist.photo} alt={detailObra.artist.name} />
+            </div>
             <div className={styles.divContainerInfoDetail}>
               <div className={styles.divNameEmail1}>
                 <p> {detailObra.artist.name} </p>
                 <span>{detailObra.artist.email}</span>
               </div>
-              <button>
-                <Link to={`/artists/${detailObra.artist.id}`}>More about</Link>
-              </button>
+              <Link to={`/artists/${detailObra.artist.id}`}>
+                <button>More about</button>
+              </Link>
             </div>
           </div>
           <div className={styles.divContainerInfoObra}>
-            <h1>{detailObra.title}</h1>
-            <span className={styles.spanTech}>
-              {detailObra.techniques[0].name}
-            </span>
-            <span className={styles.spanDimensions}>
-              Dimensions {detailObra.width} x {detailObra.height},{" "}
-              {detailObra.orientation}
-            </span>
+            <div className={styles.divContainerTitleFav}>
+              <div className={styles.containerInfoObra}>
+                <h1>{detailObra.title}</h1>
+                <span className={styles.spanTech}>
+                  {detailObra.techniques[0].name}
+                </span>
+                <span className={styles.spanDimensions}>
+                  Dimensions {detailObra.width} x {detailObra.height},{" "}
+                  {detailObra.orientation}
+                </span>
+              </div>
+              {user.role === "user" ? (
+                <button
+                  onClick={() => handlePress(id)}
+                  className={styles.buttonLikeObra}
+                >
+                  {isFavorite ? (
+                    <AiTwotoneHeart className={styles.iconLike} />
+                  ) : (
+                    <AiOutlineHeart className={styles.iconLike} />
+                  )}
+                </button>
+              ) : (
+                <div></div>
+              )}
+              {user.role === "admin" ? (
+                <button
+                  onClick={() => setOpenModal(true)}
+                  className={styles.buttonLikeObra}
+                >
+                  <AiFillEdit className={styles.iconHeaderCardDetail} />
+                </button>
+              ) : (
+                <div></div>
+              )}
+            </div>
             <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
