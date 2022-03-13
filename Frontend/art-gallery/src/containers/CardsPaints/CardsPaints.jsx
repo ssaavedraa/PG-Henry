@@ -7,6 +7,7 @@ import "./CardsPaints.css";
 function CardsPaints({ paintings }) {
 	//Booleano para evaluar si es admin
 	//let isAdmin = true;
+
 	const favs = useSelector((state) => state.favs);
 	const addedToFavs = favs.map((fav) => fav.id);
 

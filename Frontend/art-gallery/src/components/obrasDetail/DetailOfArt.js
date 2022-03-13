@@ -29,6 +29,7 @@ export const DetailOfArt = () => {
   }, [id, dispatch]);
 
   const { detailObra, obraRandon } = useSelector((state) => state);
+  console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -81,41 +82,34 @@ export const DetailOfArt = () => {
         pauseOnHover
       />
       <EditPaintingModal openModal={openModal} setOpenModal={setOpenModal} />
-      <section className={styles.principalSection}>
-        <header className={styles.principalSectionTitle}>
-          {user.role === "admin" ? (
-            <h1>
-              {detailObra.title}
-              <button
-                onClick={() => setOpenModal(true)}
-                className={styles.btnHeaderIconDetail}
-              >
-                <AiFillEdit className={styles.iconHeaderCardDetail} />
-              </button>
-            </h1>
-          ) : (
-            <h1>{detailObra.title}</h1>
-          )}
-        </header>
-        <div className={styles.principalSectionInterno}>
-          <div className={styles.internoimg}>
-            <img src={detailObra.photos[0].url} alt="img" />
-          </div>
-          <div className={styles.internodescription}>
-            <h3>
-              <Link to={`/artists/${detailObra.artist.id}`}>
-                {detailObra.artist.name}
-              </Link>
-            </h3>
-            <p>
-              <span>{detailObra.description}</span>
-              <span>Height: {detailObra.height} cm</span>
-              <span>Width: {detailObra.width} cm</span>
-              <span>Technique: {detailObra.techniques[0].name}</span>
 
-              <span>Orientation: {detailObra.orientation}</span>
-              <span>USD$ {detailObra.price}</span>
-            </p>
+      <div className={styles.principalSectionInterno}>
+        <div className={styles.internoimg}>
+          <img src={detailObra.photos[0].url} alt="img" />
+        </div>
+        <div className={styles.internodescription}>
+          <div className={styles.principalSectionArtist}>
+            <img src={detailObra.artist.photo} alt={detailObra.artist.name} />
+            <div className={styles.divContainerInfoDetail}>
+              <div className={styles.divNameEmail1}>
+                <p> {detailObra.artist.name} </p>
+                <span>{detailObra.artist.email}</span>
+              </div>
+              <button>
+                <Link to={`/artists/${detailObra.artist.id}`}>More about</Link>
+              </button>
+            </div>
+          </div>
+          <div className={styles.divContainerInfoObra}>
+            <h1>{detailObra.title}</h1>
+            <span className={styles.spanTech}>
+              {detailObra.techniques[0].name}
+            </span>
+            <span className={styles.spanDimensions}>
+              Dimensions {detailObra.width} x {detailObra.height},{" "}
+              {detailObra.orientation}
+            </span>
+            <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
                 <button className={styles.btnCard} onClick={() => removeCart()}>
@@ -131,44 +125,46 @@ export const DetailOfArt = () => {
             ) : (
               <div></div>
             )}
-            <div className={styles.btnReturn}>
-              <div className={styles.cardImageReturn}>
-                <div></div>
-              </div>
-              <div onClick={handleReturn} className={styles.cardImageReturn}>
-                RETURN TO SEARCH
-              </div>
+          </div>
+          <div className={styles.divDescriptionArtwork}>
+            <h4>About the work</h4>
+            <span>{detailObra.description}</span>
+          </div>
+          <div className={styles.btnReturn}>
+            <div className={styles.cardImageReturn}>
+              <div></div>
+            </div>
+            <div onClick={handleReturn} className={styles.cardImageReturn}>
+              RETURN TO SEARCH
             </div>
           </div>
-          <div className={styles.btnCars}></div>
         </div>
-
-        <div className={styles.principalSectionObras}>
-          <div
-            onClick={handleDecrement}
-            className={styles.obrasDetailDecrement}
-          ></div>
-          <div className={styles.obrasDetail}>
-            {obraRandon
-              ? obraRandon
-                  .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
-                  .map((obra) => (
-                    <div
-                      onClick={() => handleDetail(obra.id)}
-                      key={obra.id}
-                      className={styles.obrasSimilares}
-                    >
-                      <img src={obra.image} alt="cards" />
-                    </div>
-                  ))
-              : ""}
-          </div>
-          <div
-            onClick={handleIncrement}
-            className={styles.obrasDetailIncrement}
-          ></div>
+      </div>
+      <div className={styles.principalSectionObras}>
+        <div
+          onClick={handleDecrement}
+          className={styles.obrasDetailDecrement}
+        ></div>
+        <div className={styles.obrasDetail}>
+          {obraRandon
+            ? obraRandon
+                .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
+                .map((obra) => (
+                  <div
+                    onClick={() => handleDetail(obra.id)}
+                    key={obra.id}
+                    className={styles.obrasSimilares}
+                  >
+                    <img src={obra.image} alt="cards" />
+                  </div>
+                ))
+            : ""}
         </div>
-      </section>
+        <div
+          onClick={handleIncrement}
+          className={styles.obrasDetailIncrement}
+        ></div>
+      </div>
     </div>
   );
 };

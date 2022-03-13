@@ -62,13 +62,13 @@ export default function NavBar() {
         ) : user.role === "admin" ? (
           <li>
             <NavLink to="/admin" className={styles.linksNav}>
-              <h5>Welcome! {user.firstName}</h5>
+              <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>
         ) : (
           <li>
             <NavLink to="/under" className={styles.linksNav}>
-            <h5>Welcome! {user.firstName}</h5>
+            <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>
         )}
@@ -84,7 +84,7 @@ export default function NavBar() {
         ) : (
           <li></li>
         )}
-        {user.role === "user" || user.role === "guest" ? (
+        {user.role === "user" ? (
           <li>
             <NavLink to="/favs" className={styles.linksNav}>
               <AiOutlineHeart className={styles.icon} />
