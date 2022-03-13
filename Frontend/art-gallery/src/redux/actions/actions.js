@@ -24,8 +24,8 @@ export function getPaintings(filters) {
 			let json;
 
 			!filters
-				? (json = await axios.get("http://localhost:3001/painting/getall"))
-				: (json = await axios.get("http://localhost:3001/painting/search", {
+				? (json = await axios.get("/painting/getall"))
+				: (json = await axios.get("/painting/search", {
 						params: {
 							...filters,
 							artist: filters?.artist?.join(","),
@@ -46,7 +46,7 @@ export function getPaintings(filters) {
 export function getReviews(id) {
 	return async function (dispatch) {
 		try {
-			var json = await axios.get("http://localhost:3001/review/getByArtist/" + id);
+			var json = await axios.get("/review/getByArtist/" + id);
 			//console.log('llego en reviews', json)
 			dispatch({
 				type: GET_REVIEWS,
@@ -62,7 +62,7 @@ export function getReviews(id) {
 export function getArtistById(id) {
 	return async function (dispatch) {
 		try {
-			var json = await axios.get(`http://localhost:3001/artist/get/${id}`);
+			var json = await axios.get(`/artist/get/${id}`);
 			dispatch({
 				type: GET_ARTIST_ID,
 				payload: json.data,
@@ -78,7 +78,7 @@ export function getPaitingsByArtist(id) {
 	return async function (dispatch) {
 		try {
 			var json = await axios.get(
-				`http://localhost:3001/painting/search?artist=${id}`
+				`/painting/search?artist=${id}`
 			);
 			//console.log(json)
 			dispatch({
@@ -94,7 +94,7 @@ export function getPaitingsByArtist(id) {
 export const getObraDetail = (id) => {
 	return async (dispatch) => {
 		try {
-			let { data } = await axios.get(`http://localhost:3001/painting/get/${id}`);
+			let { data } = await axios.get(`/painting/get/${id}`);
 			dispatch({
 				type: GET_OBRAID,
 				payload: data,
@@ -108,7 +108,7 @@ export const getObrasRandon = (id) => {
 	return async (dispatch) => {
 		try {
 			let { data } = await axios.get(
-				`http://localhost:3001/painting/getrecommended/${id}`
+				`/painting/getrecommended/${id}`
 			);
 			dispatch({
 				type: GET_OBRAIDRANDON,
@@ -125,9 +125,9 @@ export function getArtist(name) {
 		try {
 			let json;
 			!name
-				? (json = await axios.get("http://localhost:3001/artist/getall"))
+				? (json = await axios.get("/artist/getall"))
 				: (json = await axios.get(
-						`http://localhost:3001/artist/getbyname/?name=${name}`
+						`artist/getbyname/?name=${name}`
 				  ));
 			dispatch({ type: GET_ARTIST, payload: json.data });
 		} catch (error) {
@@ -139,7 +139,7 @@ export function getArtist(name) {
 export function getTechnique() {
 	return async (dispatch) => {
 		try {
-			let json = await axios.get("http://localhost:3001/technique/getAll");
+			let json = await axios.get("/technique/getAll");
 			dispatch({ type: GET_TECHNIQUE, payload: json.data });
 		} catch (error) {
 			console.log(error);
@@ -151,7 +151,7 @@ export const addNewArtist = (payload) => {
 	return async function (dispatch) {
 		try {
 			const post = await axios.post(
-				"http://localhost:3001/artist/create",
+				"/artist/create",
 				payload
 			);
 			console.log(post);
@@ -166,7 +166,7 @@ export const addNewPainting = (payload) => {
 	return async function (dispatch) {
 		try {
 			const post = await axios.post(
-				"http://localhost:3001/painting/create",
+				"/painting/create",
 				payload
 			);
 			console.log(post);
@@ -181,7 +181,7 @@ export function getSearchAuto(text) {
 		try {
 			if (!text) return dispatch({ type: GET_SEARCH, payload: "" });
 			let json = await axios.get(
-				`http://localhost:3001/painting/search/suggestions/${text}`
+				`/painting/search/suggestions/${text}`
 			);
 			dispatch({ type: GET_SEARCH, payload: json.data });
 		} catch (error) {
@@ -195,7 +195,7 @@ export function getSearchAuto(text) {
 export function getFavs() {
 	return async function (dispatch) {
 		try {
-			const json = await axios.get("http://localhost:3001/favorites/getAll");
+			const json = await axios.get("favorites/getAll");
 			return dispatch({
 				type: GET_FAVS,
 				payload: json.data,
