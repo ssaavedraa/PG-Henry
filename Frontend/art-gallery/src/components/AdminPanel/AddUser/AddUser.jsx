@@ -45,7 +45,6 @@ export const AddUser = () => {
   }
   return (
     <>
-
       <div className="addUser-admin-box">
 
         <div className="addUser-component-box">
@@ -54,8 +53,6 @@ export const AddUser = () => {
           </div>
 
           <div className="container-div">
-
-
 
             <div className="addUser-nav">
               <NavPanel />
@@ -69,13 +66,6 @@ export const AddUser = () => {
 
                   <div className="panel-admin-interno1">
                     <h4>Administrator</h4>
-
-                    {/* <div className="order-input">
-                      <label>Ordenador por</label>
-                      <input
-                        type='text'
-                      ></input>
-                    </div> */}
 
                     <div>
                       <label>Ordenador por</label>
@@ -212,13 +202,8 @@ export const AddUser = () => {
                       }
 
                     </div>
-
-
                   </div>
                 </div>
-
-
-
                 {/* }}}}}}}}}}}}}}}}}}}}}}}}}}}}} */}
               </div>
             </div>
