@@ -49,8 +49,8 @@ export const AddUser = () => {
 
         <div className="addUser-component-box">
 
-          <div className="addUser-tittle-box"><h2>Admin Panel</h2>
-          </div>
+          {/* <div className="addUser-tittle-box"><h2>Admin Panel</h2>
+          </div> */}
 
           <div className="container-div">
 

@@ -101,7 +101,7 @@ font-size: 20px;
    border-radius: 20px;
 margin-right: 20px;
 border: none;
-background: #168AAD;
+background: rgb(199, 198, 198);
 font-size: 15px;
     }
 
@@ -110,13 +110,13 @@ font-size: 15px;
         height: 30px;
         border-radius: 5px;
         border: none;
-        background: #168AAD;
+        background: rgb(199, 198, 198);
         color: black;
         font-size: 18px;
         margin-left: 10px;
     }
     .nav-select-1 > option {
-        background: #168AAD;
+        background: #F5F5F3;
         font-size: 18px;
         border-radius: 5px;
         border: none;
@@ -125,7 +125,7 @@ font-size: 15px;
 margin-right: 10px;
     }
     .order-input >input {
-       border:  2px solid #168AAD;
+       border:  2px solid #F5F5F3;
        width: 200px;
        height: 30px;
        border-radius: 5px;
