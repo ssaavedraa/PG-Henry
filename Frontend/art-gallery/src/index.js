@@ -7,12 +7,13 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store/store";
 import AuthProvider from "./auth/AuthProvider";
 // import dotenv from 'dotenv'
-import axios from 'axios'
+import axios from "axios";
 
 // dotenv.config()
-
-axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001'
-console.log(process.env.REACT_APP_API)
+axios.defaults.headers.common["Authorization"] =
+  localStorage.getItem("jwtToken");
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
+//console.log(process.env.REACT_APP_API);
 
 ReactDOM.render(
   <Provider store={store}>
