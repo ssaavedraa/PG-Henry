@@ -10,14 +10,14 @@ const Favs = () => {
   //Hook del carrito
   const { add } = useCart();
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getFavs());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getFavs());
+  // }, [dispatch]);
 
-  const favs = useSelector((state) => state.favs);
-  //console.log("soy favs", favs);
+  // const favs = useSelector((state) => state.favs);
+  // //console.log("soy favs", favs);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const Favs = () => {
           <div className="divPrecioFav">
             <h5>Price</h5>
           </div>
-          {favs && favs > 0 ? "" : <CardsFav favs={favs} />}
+         <CardsFav />
           <div className="divContainerTotal">
             <p>USD$</p>
           </div>

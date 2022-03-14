@@ -112,6 +112,7 @@
   border-radius: 1.5rem;
   border: none;
   cursor: pointer;
+  color:red 
 }
 
 .buttonLikeObra:hover {
@@ -123,6 +124,7 @@
 .iconLike {
   font-size: 1.5rem;
   margin-top: 0.4rem;
+  
 }
 
 .spanTech {

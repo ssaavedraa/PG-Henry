@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CardsFavs.css";
 import { Link } from "react-router-dom";
 import { deleteFav } from "../functionFavs";
+import { getFavs } from "../../../redux/actions/actions";
+import { useDispatch, useSelector } from "react-redux";
 
-export const CardsFav = ({ favs }) => {
-	const id = favs?.map(({ id }) => id).find((id) => id === id )
-	console.log('soy id', id)
+export const CardsFav = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getFavs());
+  }, [dispatch]);
+
+  const favs = useSelector((state) => state.favs);
+  //console.log("soy favs", favs);
+
 
   return (
     <div>
-      {console.log(favs)}
-      {favs && favs.length > 0 ? (
         <div>
           {favs.map((fav) => (
             <div key={fav.id} className="cardsFavs">
@@ -20,7 +27,7 @@ export const CardsFav = ({ favs }) => {
               <p>
                 {fav.paintingHeight} x {fav.paintingWidth}
               </p>
-			  <button onClick={()=> deleteFav(id.id)}>Delete item</button>
+			  <button onClick={()=> deleteFav(fav.id)}>Delete item</button>
               <h4>{fav.paintingprice}</h4>
             </div>
           ))}
