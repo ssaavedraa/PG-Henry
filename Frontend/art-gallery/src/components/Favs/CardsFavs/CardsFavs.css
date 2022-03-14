@@ -28,6 +28,11 @@
   color: red;
 }
 
+.containerDetailsFavs a{
+    text-decoration: none;
+    color: black;
+}
+
 .cardsFavs h4 {
   font-weight: bold;
   font-size: 1rem;

@@ -23,7 +23,7 @@ export const CardsFav = () => {
               <div className='detailsImgDiv'>
                 <img src={fav.paintingPhoto} alt={fav.title} />
                 <div className='containerDetailsFavs'>
-                  <h5>{fav.title}</h5>
+                  <h5><Link to={`/detailpainting/${fav.id}`}>{fav.title}</Link></h5>
                   <p>{fav.artistName}</p>
                   <p>
                     {fav.paintingHeight} x {fav.paintingWidth}
