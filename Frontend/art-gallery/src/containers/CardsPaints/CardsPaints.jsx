@@ -9,11 +9,12 @@ import "./CardsPaints.css";
 function CardsPaints({ paintings }) {
 	const dispatch = useDispatch();
 
+	const favs = useSelector((state) => state.favs);
+
 	useEffect(() => {
 		dispatch(getFavs());
 	}, [dispatch]);
 	
-	const favs = useSelector((state) => state.favs);
 
 	return (
 		<div className="containerCards">

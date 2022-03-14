@@ -31,6 +31,7 @@ function CardPaint({
 		setIsFavorite(fav);
 	}, [fav, setIsFavorite]);
 
+
 	function handlePress(id) {
 		setIsFavorite(!isFavorite);
 		!isFavorite ? addFav(id) : deleteFav(id);

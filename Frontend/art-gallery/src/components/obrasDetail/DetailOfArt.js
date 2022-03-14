@@ -24,18 +24,19 @@ export const DetailOfArt = () => {
   //Manejo de vista
   const { user } = useAuth();
 
-  useEffect(() => {
-    dispatch(getObraDetail(id));
-    dispatch(getObrasRandon(id));
-    dispatch(getFavs());
-  }, [id, dispatch]);
-
   const { detailObra, obraRandon } = useSelector((state) => state);
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
 
+  //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
+
+  useEffect(() => {
+    dispatch(getObraDetail(id));
+    dispatch(getObrasRandon(id));
+    dispatch(getFavs());
+  }, [id, dispatch, isFavorite]);
 
   useEffect(() => {
     setIsFavorite(favsPaitings);
