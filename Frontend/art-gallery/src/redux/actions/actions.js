@@ -90,6 +90,7 @@ export function getPaitingsByArtist(id) {
         type: GET_PAINTINGS_BY_ARTIST,
         payload: json.data,
       });
+      console.log(json.data);
     } catch (error) {
       console.log(error);
     }

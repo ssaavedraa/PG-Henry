@@ -23,7 +23,6 @@ const EditPaintinfForm = (ObraId) => {
   const detailObra = useSelector((state) => state.detailObra);
   // const artists = useSelector((state) => state.artist);
   // const technique = useSelector((state) => state.technique);
-
   const [input, setInput] = useState({
     title: detailObra.title,
     description: detailObra.description,
