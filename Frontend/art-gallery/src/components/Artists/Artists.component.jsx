@@ -17,6 +17,8 @@ export default function Artists(){
 
     const {user} = useAuth()
 
+    console.log(user)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -59,7 +61,7 @@ export default function Artists(){
         setOpenModalArtist={setOpenModalArtist}
         isEditArtist= {false}
               />
-                    {user.roler='admin' && <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>}
+                    {user.role === 'admin' && <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>}
                 </div>
             </div>
             {
