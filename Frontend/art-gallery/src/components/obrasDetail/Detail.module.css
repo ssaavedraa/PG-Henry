@@ -4,6 +4,11 @@
   flex-direction: column;
 }
 
+.btnReturn a {
+  text-decoration: none;
+  color: black
+}
+
 .principalHeader {
   width: 100%;
   height: 70px;
