@@ -7,11 +7,9 @@ function Title({logo,texto, mostrar}) {
           {logo}
           <h5>{texto}</h5>
         </div>
-        <button className="btn">▼</button>
+        <button className="btn-filter-title">▼</button>
       </div>
   )
 }
 
 export default Title;
-
-{/* <BiDollarCircle className="icon" /> */}

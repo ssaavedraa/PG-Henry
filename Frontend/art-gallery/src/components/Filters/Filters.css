@@ -13,9 +13,10 @@
   display: none;
 }
 
-.color {
-  color: var(--primary-color);
+.color-title-filter, .color-title-filter .btn-filter-title{
+  color: var(--primary-color) !important;
 }
+
 
 label {
   font-weight: 300;
@@ -50,7 +51,7 @@ label {
 
 .slider-title {
   height: 5.5%;
-  margin: 1.3rem 0.6em;
+  margin: 1.6rem 0.6em;
   margin-bottom: 0;
   color: var(--eigth-color);
 }
@@ -66,34 +67,27 @@ label {
   font-size: 1em;
 }
 
-.slider-title button {
+.btn-filter-title  {
   width: 15%;
   font-size: 1em;
   background-color: transparent;
   border: 0;
   cursor: pointer;
-}
-
-.slider-title:hover,
-.slider-title button {
-  color: var(--primary-color);
-}
-
-.slider-title button {
   color: var(--eigth-color);
 }
 
-.slider-title button:hover {
+.slider-title:hover, .btn-filter-title:hover {
   color: var(--primary-color);
 }
+
 
 .icon {
   width: 20%;
   height: 70%;
 }
 
-.select {
-  display: flex;
+.select-filter-gallery {
+ display: flex;
 }
 
 .container-range {
