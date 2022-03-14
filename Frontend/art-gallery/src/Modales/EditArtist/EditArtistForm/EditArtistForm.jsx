@@ -71,7 +71,7 @@ const EditArtistForm = (artist) => {
   return (
     <>
       <div className="artists-box">
-        <div className="img-container"></div>
+        <div className="img-container1"></div>
         <div className="info-box">
           <div className="profile-logo">
             <img src={logo} height="70rem" alt="imgUser" />
@@ -86,7 +86,7 @@ const EditArtistForm = (artist) => {
                 )}
               </div>
 
-              <label> Photo:</label>
+              <label> Photo: SOY EDIT</label>
               <input
                 type="text"
                 autoComplete="off"
