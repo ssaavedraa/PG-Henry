@@ -17,7 +17,8 @@ export default function Login() {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const { login } = useAuth();
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     login({ email: userLogin.email, password: userLogin.password })
       .then(() => navigate("/"))
       .catch((err) => {
@@ -46,16 +47,24 @@ export default function Login() {
           {isLoginFailed && (
             <p className="login-failed">Email/password incorrect</p>
           )}
-          <label htmlFor="user">Email</label>
-          <input type="text" name="email" id="email" onChange={handleChange} />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onChange={handleChange}
-          />
-          <button onClick={handleLogin}>Login</button>
+          <form onSubmit={handleLogin}>
+            <label htmlFor="user">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleChange}
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autoComplete="on"
+              onChange={handleChange}
+            />
+            <button>Login</button>
+          </form>
           <p>Or</p>
           <GoogleLogin
             clientId="978805617530-lt1c1k8amq1rkg9sk4q3rdhs7o2eqqs9.apps.googleusercontent.com"

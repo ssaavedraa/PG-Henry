@@ -38,11 +38,14 @@ export default function Artists(){
             <div className="artists-header">
                 <h1>Artists</h1>
                 <div className="artist-sort">
+                
                     <label htmlFor="sort">Sort by name: </label>
+                    
                     <select name="sort" id="sort" onChange={(e) => setSort(e.target.value)} >
                         <option value="az">A-Z</option>
                         <option value="za">Z-A</option>
                     </select>
+                    <button className="btn-create">ADD NEW ARTIST</button>
                 </div>
             </div>
             {

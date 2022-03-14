@@ -1,24 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-.admin-box{
-    display: flex;   
-    height: auto;       
-    overflow-y: scroll; 
-    
-    }
-    
 
-.principal-box{   
-    height: 90vh;
-    width: 85%;
+.principal-box-edit{
+    width: 68vw;
+    height: 85vh;
     
-    overflow-y: scroll;
     display: flex;
-    justify-content: center;
-    
-    
+    flex-direction: row;
 }
 
-.box-1{
+.data{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+    justify-content: center;
+    
+   
+ }
+
+ .box-one{
+
+    background-image: url("https://res.cloudinary.com/dw6bkceqj/image/upload/v1647084836/santart/edit_painting_c62woy.png");
+    overflow: hidden;
+    width: 65vh;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:cover;  
+}
+
+.box-two{
+    margin: 3rem;
+    width: 90%;
+   
+}
+
+.box-3{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -26,7 +42,7 @@
 
 .image-content-form{
     overflow: hidden;
-    background-color: antiquewhite;
+    
     width:50%;
     height: 80%;
     margin: 1rem;
@@ -46,6 +62,8 @@
     display: flex;
     flex-direction: column;
     width:55%;
+    padding: 2rem;
+
     
     
 }
@@ -62,18 +80,11 @@
        text-align: center;       
        padding-top: 2rem;
        padding-bottom: 2rem;  
-       background-color: coral;     
+        
    }
 
 
-   .data{
-       display: flex;
-       flex-direction: column;
-       width: 50%;
-       text-align: center;
-       justify-content: center;
-      
-    }
+   
 
 
 .data form{
@@ -85,7 +96,7 @@
 
    .data form textarea{
     width: auto;
-    height: 4rem;
+    height: 6rem;
 }
        
    
@@ -123,22 +134,17 @@
    }
 
 
+   .btn-create{
+    height: 3rem;
+    width: 12rem;
+    list-style: none;
+    background-color: var(--btnMain-Color);
+    border-radius: 20px;
+    border-style: none;
+    margin: 1rem; 
+    color: white;
+}
 
-   .btn-edit{
-       height: 3rem;
-       width: 12rem;       
-       list-style: none;
-       background-color: rgb(212, 212, 212);
-       border-radius: 20px;
-       border-style: none;
-       margin: 1rem;   
-       
-   }
-
-   .btn-edit:hover{
-    background-color: rgb(160, 160, 160);
-   }
-
-   .tech-button{
-       background-color: blue;
-   }
+.btn-create:hover{
+ background-color: var(--btnHover-color);
+}

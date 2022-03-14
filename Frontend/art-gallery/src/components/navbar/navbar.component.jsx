@@ -92,7 +92,7 @@ export default function NavBar() {
         ) : (
           <li></li>
         )}
-        {user.role === "user" || user.role === "guest" ? (
+        {user.role !== "guest" ? (
           <li>
             <NavLink to="/favs" className={styles.linksNav}>
               <AiOutlineHeart className={styles.icon} />
