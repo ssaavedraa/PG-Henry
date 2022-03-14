@@ -15,6 +15,7 @@ import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
+
 export const DetailOfArt = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ export const DetailOfArt = () => {
 
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
 
+
   useEffect(() => {
     setIsFavorite(favsPaitings);
   }, [favsPaitings, setIsFavorite]);
@@ -47,7 +49,6 @@ export const DetailOfArt = () => {
     //Agrego el dispatch del post del like
   }
 
-  //console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -100,8 +101,7 @@ export const DetailOfArt = () => {
         draggable
         pauseOnHover
       />
-      <PaintingModal openModal={openModal} setOpenModal={setOpenModal}  ObraId={id}/>
-
+      <PaintingModal openModal={openModal} setOpenModal={setOpenModal} ObraId={id} />
       <div className={styles.principalSectionInterno}>
         <div className={styles.internoimg}>
           <img src={detailObra.photos[0].url} alt="img" />
