@@ -14,7 +14,7 @@ const Cart = () => {
     const paintings = [];
     for (let i = 0; i < cart.length; i++) {
       const dbPaiting = await axios.get(
-        `http://localhost:3001/painting/get/${cart[i]}`
+        `/painting/get/${cart[i]}`
       );
       paintings.push(dbPaiting.data);
     }

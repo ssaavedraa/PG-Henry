@@ -202,7 +202,7 @@ export function getFavs() {
 export function getArtitsStat() {
   return async function (dispatch) {
     try {
-      const json = await axios.get("http://localhost:3001/artist/getstats");
+      const json = await axios.get("/artist/getstats");
       return dispatch({
         type: GET_STATS_ARTIST,
         payload: json.data,
@@ -221,7 +221,7 @@ export const editArtist = (id, payload) => {
   return async function (dispatch) {
     try {
       const data = await axios.put(
-        `http://localhost:3001/artist/update/${id}`,
+        `/artist/update/${id}`,
         payload
       );
       console.log(data);
@@ -236,7 +236,7 @@ export const editPainting = (id, payload) => {
   return async function (dispatch) {
     try {
       const data = await axios.put(
-        `http://localhost:3001/painting/update/${id}`,
+        `/painting/update/${id}`,
         payload
       );
       console.log(data);
@@ -251,7 +251,7 @@ export const addTechnique = (payload) => {
   return async function (dispatch) {
     try {
       const post = await axios.post(
-        "http://localhost:3001/technique/add",
+        "/technique/add",
         payload
       );
       console.log(post);
@@ -266,7 +266,7 @@ export const removeTechnique = (id) => {
   return async function (dispatch) {
     try {
       const post = await axios.delete(
-        `http://localhost:3001/technique/remove/${id}`
+        `/technique/remove/${id}`
       );
       console.log(post);
       return post;
@@ -278,7 +278,7 @@ export const removeTechnique = (id) => {
 export const getUserAdmin = () => {
   return async (dispatch) => {
     try {
-      const json = await axios.get(`http://localhost:3001/user/getall`);
+      const json = await axios.get(`/user/getall`);
       dispatch({
         type: GET_USER_ADMIN,
         payload: json.data,
@@ -293,7 +293,7 @@ export const removeUser = (id) => {
   return async (dispatch) => {
     try {
       const json = await axios.put(
-        `http://localhost:3001/user/removeadmin/${id}`
+        `/user/removeadmin/${id}`
       );
       dispatch(getUserAdmin());
     } catch (error) {
@@ -305,7 +305,7 @@ export const giveUserAdmin = (id) => {
   return async (dispatch) => {
     try {
       const json = await axios.put(
-        `http://localhost:3001/user/giveadmin/${id}`
+        `/user/giveadmin/${id}`
       );
       dispatch(getUserAdmin());
     } catch (error) {
@@ -316,7 +316,7 @@ export const giveUserAdmin = (id) => {
 export const banUser = (id) => {
   return async (dispatch) => {
     try {
-      const json = await axios.put(`http://localhost:3001/user/ban/${id}`);
+      const json = await axios.put(`/user/ban/${id}`);
       dispatch(getUserAdmin());
     } catch (error) {
       console.log(error);
@@ -326,7 +326,7 @@ export const banUser = (id) => {
 export function unBanUser(id) {
   return async function (dispatch) {
     try {
-      const json = await axios.put(`http://localhost:3001/user/unban/${id}`);
+      const json = await axios.put(`/user/unban/${id}`);
       console.log(json.data);
       return dispatch(getUserAdmin());
     } catch (error) {
@@ -339,7 +339,7 @@ export const resetPasswordUser = (id) => {
   return async (dispatch) => {
     try {
       const json = await axios.put(
-        `http://localhost:3001/user/passreset/${id}`
+        `/user/passreset/${id}`
       );
       dispatch(getUserAdmin());
     } catch (error) {
@@ -351,7 +351,7 @@ export const orderBySort = (name) => {
   return async (dispatch) => {
     try {
       const json = await axios.get(
-        `http://localhost:3001/user/getall?order=${name}`
+        `/user/getall?order=${name}`
       );
       dispatch({
         type: ORDER_BY_A_Z,
@@ -366,7 +366,7 @@ export const orderBySortType = (name) => {
   return async (dispatch) => {
     try {
       const json = await axios.get(
-        `http://localhost:3001/user/getall?orderBy=${name}`
+        `/user/getall?orderBy=${name}`
       );
       dispatch({
         type: ORDER_BY_TYPE,
