@@ -13,14 +13,19 @@ const changePassword = async (req, res) => {
 		if (!compareSync(oldPassword, user.password)) {
 			return res.json({
 				status: "error",
-				message: "Incorrect password",
+				message: "Old password doesn't match",
 			})
 		};
 		user.password = newPassword;
 		await user.save();
-		res.json("Success");
+		res.json({
+			status: "success"
+		});
 	} catch (err) {
-		res.status(400).json(err.message);
+		res.status(400).json({
+			status: "error",
+			message: err.message,
+		});
 	}
 };
 module.exports = changePassword;

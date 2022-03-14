@@ -14,34 +14,55 @@ const MyProfile = () => {
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
   const [oldPassword, setOldPassword] = useState("");
+  const { user } = useAuth();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const { user } = useAuth();
   const [applyChanges, setApplyChanges] = useState(true);
 
-  const emailChange = ['Old email', 'New email', 'Verify new email']
+  /* const emailChange = ['Old email', 'New email', 'Verify new email']
 
   const handleEmailChange = (e) => {
     setIsEmailEdit(!isEmailEdit)
     if(!isEmailEdit)e.target.classList.replace('normal','cancel')
     else e.target.classList.replace('cancel', 'normal')
-  }
+  }; */
 
   const handlePassChange = (e) => {
     setIsPassEdit(!isPassEdit)
     if(!isPassEdit)e.target.classList.replace('normal','cancel')
     else e.target.classList.replace('cancel', 'normal')
-  }
+  };
 
   useEffect(() => {
-    if (!applyChanges) {
+    if (isPassEdit) {
       passwordValidation()
     }
-  }, [oldPassword, password])
+  }, [password, verifyPassword]);
+
+  useEffect(() => {
+    setFirstName(user.firstName)
+    setLastName(user.lastName)
+  }, [user, setFirstName, setLastName]);
+
+  useEffect(() => {
+    if (isPassEdit) {
+      if (isPasswordSecure) {
+        setApplyChanges(false)
+      } else {
+        setApplyChanges(true)
+      }
+    } else {
+        if (firstName !== user.firstName || lastName !== user.lastName) {
+          setApplyChanges(false)
+        } else {
+          setApplyChanges(true)
+      }
+    }
+  }, [firstName, lastName, isPasswordSecure]);
 
   const passwordValidation = () => {
     let passRequirementsAmount = 0
-    const isUpperCase = (string) => /^[A-Z]*$/.test(string);
+    const isUpperCase = (string) => /[A-Z ]+/.test(string);
     const stringContainsNumber = (string) => /\d/.test(string);
 
     let pass1 = password;
@@ -76,47 +97,58 @@ const MyProfile = () => {
         setIsPasswordSecure(true)
     }
     else setIsPasswordSecure(false)
-  }
-
-  console.log(oldPassword)
-  console.log(password)
-  console.log(verifyPassword)
-
+  };
   
   const firstNameChange = (e) => {
-    setApplyChanges(false);
     setFirstName(e.target.value)
   };
 
   const lastNameChange = (e) => {
-    setApplyChanges(false);
     setLastName(e.target.value)
   };
 
   const oldPasswordChange = (e) => {
-    setApplyChanges(false);
     setOldPassword(e.target.value)
   };
 
   const passwordChange = (e) => {
-    setApplyChanges(false);
     setPassword(e.target.value)
   };
 
   const verifyPasswordChange = (e) => {
-    setApplyChanges(false);
     setVerifyPassword(e.target.value)
   };
 
   const handleChanges = async () => {
-    passwordValidation()
     if (isPassEdit && isPasswordSecure) {
       try {
-        await axios.put(`http://localhost:3001/user/changePassword/${user.id}`, { password, oldPassword })
+        const { data: { status, message } } = await axios.put("http://localhost:3001/user/changePassword", { password, oldPassword })
+        if (status === "error") {
+          alert(`${message}`)
+        } else {
+          alert("Changes saved correctly")
+        }
       } catch (err) {
         console.log(err)
       }
     }
+    if (firstName !== user.firstName || lastName !== user.lastName) {
+      try {
+        await axios.put("http://localhost:3001/user/changeName", { firstName, lastName });
+        window.location.reload();
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    discard();
+  };
+
+  const discard = () => {
+    setFirstName(user.firstName);
+    setLastName(user.lastName);
+    setOldPassword("");
+    setPassword("");
+    setVerifyPassword("");
   };
 
   return (
@@ -133,31 +165,31 @@ const MyProfile = () => {
               <div className="user-buttons">
                {/*  <button className="normal" onClick={e => handleEmailChange(e)} >{!isEmailEdit ? 'Change Email' : 'Cancel email change'}</button> */}
                 <button className="normal" onClick={handlePassChange} >{!isPassEdit ? 'Change Password' : 'Cancel password change'}</button>
-                <button>Discard changes</button>
+                <button onClick={discard}>Discard changes</button>
                 <button disabled={applyChanges} onClick={() => handleChanges()}>Save changes</button>
               </div>
               <div className="user-fields">
                 <label htmlFor="firstName"> First Name</label>
-                <input type="text" name="firstName" id="firstName" defaultValue={user.firstName} onChange={(e) => firstNameChange(e)}/>
+                <input type="text" name="firstName" id="firstName" value={firstName} onChange={(e) => firstNameChange(e)}/>
               </div>
               <div className="user-fields">
                 <label htmlFor="firstName"> Last Name</label>
-                <input type="text" name="firstName" id="firstName" defaultValue={user.lastName} onChange={(e) => lastNameChange(e)}/>
+                <input type="text" name="firstName" id="firstName" value={lastName} onChange={(e) => lastNameChange(e)}/>
               </div>
               {
                 isPassEdit && (
                   <div className="password-fields">
                     <div className="user-fields">
                       <label htmlFor='old-password'> Old password</label>
-                      <input type="password" name='old-password' id='old-passWord' onChange={(e) => oldPasswordChange(e)}/>
+                      <input type="password" name='old-password' id='old-passWord' value={oldPassword} onChange={(e) => oldPasswordChange(e)}/>
                     </div>
                     <div className="user-fields">
                         <label htmlFor='password'>Password</label>
-                        <input type="password" name='new-password' id='new-password' onChange={(e) => passwordChange(e)} />
+                        <input type="password" name='new-password' id='new-password' value={password} onChange={(e) => passwordChange(e)} />
                     </div>
                     <div className="user-fields">
                         <label htmlFor='verify-pass'>Verify password</label>
-                        <input type="password" name='verify-pass' id='verify-pass' onChange={(e) => verifyPasswordChange(e)} />
+                        <input type="password" name='verify-pass' id='verify-pass' value={verifyPassword} onChange={(e) => verifyPasswordChange(e)} />
                     </div>
                     <div className="password-reqs">
                         <p>Password requirements:</p>
