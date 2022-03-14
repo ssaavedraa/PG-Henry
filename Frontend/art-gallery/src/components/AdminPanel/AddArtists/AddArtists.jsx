@@ -101,10 +101,10 @@ function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
           isEditArtist={true}
           artist={artist.artistId}
         />
-        <AiFillEdit
+        {/* <AiFillEdit
           className="icon-artist-eduit"
           onClick={() => setOpenModalArtist(true)}
-        />
+        /> */}
       </td>
     </tr>
   );
