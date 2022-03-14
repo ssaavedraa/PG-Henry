@@ -95,15 +95,19 @@ export const getObraDetail = (id) => {
 	return async (dispatch) => {
 		try {
 			let { data } = await axios.get(`/painting/get/${id}`);
+			
 			dispatch({
 				type: GET_OBRAID,
 				payload: data,
 			});
+			console.log(data, "soy obra detail action")
 		} catch (error) {
 			console.log("Id not found");
 		}
 	};
 };
+
+
 export const getObrasRandon = (id) => {
 	return async (dispatch) => {
 		try {
