@@ -5,11 +5,8 @@ import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 import ModalArtist from "./ModalArtist/ModalArtist";
 import NavPanel from "../NavPanel/NavPanel";
+import ArtistModal from "../../../Modales/EditArtist/ArtistModal";
 import "./Artists.css";
-
-//Traemmos los artitstas
-const { artists } = require("../../../assets/Json/artists.json");
-//const dataFullArtist = artists[0];
 
 function AddArtists() {
   const dispatch = useDispatch();
@@ -19,15 +16,7 @@ function AddArtists() {
     dispatch(getArtitsStat());
   }, [dispatch]);
 
-  const [openModal, setOpenModal] = useState(false);
-  const [isEdit, setIsEdit] = useState("false");
-  function closeModal(edit) {
-    setOpenModal(!openModal);
-    if (edit === true) {
-      return setIsEdit("true");
-    }
-    return setIsEdit("false");
-  }
+  const [openModalArtist, setOpenModalArtist] = useState(false);
 
   React.useEffect(() => {
     return () => dispatch(clearArtists());
@@ -38,12 +27,15 @@ function AddArtists() {
       <NavPanel />
       <div className="admin-profile-container">
         <div className="artists-header">
-          <ModalArtist
-            openModal={openModal}
-            openNewArtist={closeModal}
-            onRequestClose={closeModal}
+          <ArtistModal
+            openModalArtist={openModalArtist}
+            setOpenModalArtist={setOpenModalArtist}
+            isEditArtist={false}
           />
-          <button className="btnNewArtist" onClick={() => closeModal(false)}>
+          <button
+            className="btnNewArtist"
+            onClick={() => setOpenModalArtist(true)}
+          >
             <FaPlus className="icon-Admin-AddArtist" />
             Add Artist
           </button>
@@ -76,10 +68,8 @@ function AddArtists() {
               ? artists.map((artist) => (
                   <RowArtist
                     artist={artist}
-                    openModal={openModal}
-                    openModalEdit={closeModal}
-                    isEdit={isEdit}
-                    setIsEdit={setIsEdit}
+                    openModalArtist={openModalArtist}
+                    setOpenModalArtist={setOpenModalArtist}
                   />
                 ))
               : null}
@@ -92,28 +82,27 @@ function AddArtists() {
 
 export default AddArtists;
 
-function RowArtist({ artist, openModal, openModalEdit, isEdit, setIsEdit }) {
+function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
   return (
     <tr>
       <td className="id-title">{artist.artistId}</td>
       <td className="photo-title">
-          <img src={artist.photo} alt="img-artist" className="img-td-artist" />
+        <img src={artist.photo} alt="img-artist" className="img-td-artist" />
       </td>
       <td className="name-title">{artist.name}</td>
       <td className="paintings-title">{artist.paintings}</td>
       <td className="review-title">{artist.reviews}</td>
       <td className="sales-title">{artist.sales}</td>
       <td className="button-title">
-        <ModalArtist
-          openModal={openModal}
-          openNewArtist={openModalEdit}
-          idArtist={artist.artistId}
-          isEdit={isEdit}
-          setIsEdit={setIsEdit}
+        <ArtistModal
+          openModalArtist={openModalArtist}
+          setOpenModalArtist={setOpenModalArtist}
+          isEditArtist={true}
+          artist={artist.artistId}
         />
         <AiFillEdit
           className="icon-artist-eduit"
-          onClick={() => openModalEdit(true)}
+          onClick={() => setOpenModalArtist(true)}
         />
       </td>
     </tr>

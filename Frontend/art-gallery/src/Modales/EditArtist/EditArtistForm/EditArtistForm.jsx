@@ -7,9 +7,11 @@ import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
 import { getArtistById } from "../../../redux/actions/actions";
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 
 const EditArtistForm = (artist) => {
-  const id = artist.artist.id;
+  console.log(artist);
+  const id = typeof artist === "object" ? artist.artist.id : artist;
 
   const dispatch = useDispatch();
 
@@ -27,7 +29,6 @@ const EditArtistForm = (artist) => {
     location: artistData.location,
   });
 
-  console.log(input, "soy input");
   function handleChange(e) {
     setInput({
       ...input,
@@ -37,9 +38,37 @@ const EditArtistForm = (artist) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(editArtist(id, input));
-    alert("updated artist data");
+    confirm();
+    //alert("updated artist data");
   }
+
+  function confirm(){
+    const confirmationAdd = Swal.mixin({
+      customClass: {
+        confirmButton: "btnSweet success",
+        cancelButton: "btnSweet danger",
+      },
+      buttonsStyling: false,
+    });
+
+    confirmationAdd.fire({
+      title: 'Are you sure?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, update!',
+      cancelButtonText: "No, cancel!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(editArtist(id, input));
+        Swal.fire(
+          'Updated!',
+          'Your entry has been updated.',
+          'success'
+        )
+      }
+    })
+  }
+
   return (
     <>
       <div className="artists-box">
