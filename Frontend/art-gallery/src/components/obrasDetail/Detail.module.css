@@ -1,235 +1,362 @@
-
-
 .containerDetail {
-    width: 100%;
-    min-height: 160vh;
-    background: #F5F5F5;
-    display: flex;
-    flex-direction: column;
+  margin: 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
 }
-.principalHeader {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    background: gray;
-    
+.btnReturn a {
+  text-decoration: none;
+  color: black
 }
-.principalSection {
-    width: 100%;
-    height: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #F5F5F5;
-    flex-wrap: wrap;
-    
+
+.principalHeader {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
 }
-.principalSectionTitle{
-font-size: 30px;
-font-weight: 800;
-margin-bottom: 30px;
+
+.principalSectionArtist {
+  display: flex;
+  width: 30rem;
+  align-items: center;
+  justify-content: flex-start;
 }
-.principalSectionInterno{
-    width: 100%;
-    /* height: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
+
+.principalSectionArtist h1 {
+  font-size: 2.3rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.principalSectionArtist img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.divContainerInfoDetail {
+  display: flex;
+  width: 30rem;
+  justify-content: space-between;
+  margin-left: 1rem;
+  align-items: center;
+}
+
+.divNameEmail1 {
+  display: flex;
+  flex-direction: column;
+  /* align-content: flex-start; */
+  align-items: flex-start;
+}
+
+.divNameEmail1 p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(5, 5, 5);
+}
+
+.divNameEmail1 span {
+  font-size: 0.8rem;
+  color: rgb(185, 185, 185);
+}
+
+.divContainerInfoDetail button {
+  height: 2.25rem;
+  width: 9rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.divContainerInfoDetail button a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.divContainerInfoObra {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: inherit;
+  padding: 1.5rem 0rem 0.75rem;
+  border-bottom: 0.15rem solid var(--third-color);
+}
+
+.divContainerTitleFav {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+  align-items: center;
+}
+
+.containerInfoObra {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+.containerInfoObra h1 {
+  font-size: 1.75rem;
+  font-style: oblique;
+  font-weight: 500;
+}
+
+.spanDimensions {
+  padding-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.buttonLikeObra {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color:red 
+}
+
+.buttonLikeObra:hover {
+  color: white;
+  background: rgb(29, 28, 28);
+  transition: all 1s;
+}
+
+.iconLike {
+  font-size: 1.5rem;
+  margin-top: 0.4rem;
   
 }
-.internoimg{
-    width: 40%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;
-    }
-.internoimg:hover{
-     transform: scale(1.05);
-    transition: all 1s;
+
+.spanTech {
+  font-size: 0.9rem;
 }
-.internoimg img{
-       width: 80%;
-       height: 90%;
-       object-fit: contain;
-        }
-.internodescription{
-    width: 40%;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 2px solid red; */
-    }
-.internodescription h3{
-     margin-top: 0px;
-     margin-bottom: 30px;
-        }
-.internodescription h3 a{
-    
-         text-decoration: none;
-         color: black;
-    }
-.internodescription p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-           
- }
- .internodescription p span:nth-child(1){
-    
-    margin-bottom: 20px;
-    text-align: center;
- }
+
+.spanPrice {
+  padding: 0.75rem 0rem 0rem;
+  border-top: 0.15rem solid var(--third-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.divDescriptionArtwork {
+  padding-top: 0.75rem;
+  width: inherit;
+}
+
+.divDescriptionArtwork span {
+  font-weight: 400;
+}
+
+.divDescriptionArtwork h4 {
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+}
+
+.principalSectionInterno {
+  /* width: 100%; */
+  /* height: 100%; */
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  /* gap: 50px; */
+  /* align-content: stretch; */
+}
+
+.iconHeaderCardDetail {
+  width: 1.55rem;
+  height: 1.55rem;
+  /* color: var(--eigth-color); */
+}
+
+.internoimg {
+  width: 45rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  /* transition: all 1s; */
+  position: relative;
+  cursor: pointer;
+}
+
+.internoimg img {
+  width: 85%;
+  /* height: 80%; */
+  object-fit: contain;
+  transition: all 2s;
+}
+.internoimg img:hover {
+  transform: scale(1.1);
+  object-fit: contain;
+  transition: all 2s;
+}
+.internodescription {
+  width: 30rem;
+  /* height: 650px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.internodescription h3 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.internodescription h3 a {
+  text-decoration: none;
+  color: black;
+}
+.internodescription p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.internodescription p span:nth-child(1) {
+  margin-bottom: 20px;
+  text-align: center;
+}
 .btnCard {
-width: 240px;
-height: 40px;
-background: rgb(185, 185, 185);
-margin-top: 20px;
-border-radius: 5px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-transition: all 1s;
-cursor: pointer;
-border: none;
+  width: 240px;
+  height: 40px;
+  /* background: rgb(185, 185, 185); */
+  margin-top: 0.75rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s;
+  cursor: pointer;
+  border: none;
 }
-.btnReturn{
-    width: 240px;
-    height: 40px;
-    background: rgb(185, 185, 185);
-    margin-top: 20px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 1s;
-    cursor: pointer;
- }
- .btnCard:hover {
-     color: white;
-     background: rgb(29, 28, 28);
-     transition: all 1s;
- }
- .btnReturn:hover {
-    color: white;
-    background: rgb(29, 28, 28);
-    transition: all 1s;
+.btnReturn {
+  width: 240px;
+  height: 40px;
+  background: var(--six-color);
+  margin-top: 2rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s;
+  cursor: pointer;
 }
- .cardImage{
-font-size: 30px;
-font-weight: 700;
-margin-left: 10px;
- }
- .cardImageReturn{
-   
-   
- }
- .cardImageReturn div {
-    width: 10px;
-    height: 10px;
+.btnCard:hover {
+  color: white;
+  background: rgb(29, 28, 28);
+  transition: all 1s;
+}
+.btnReturn:hover {
+  color: white;
+  background: rgb(29, 28, 28);
+  transition: all 1s;
+}
+.cardImage {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.cardImageReturn div {
+  width: 10px;
+  height: 10px;
   border-left: none;
   border-top: none;
   border-right: 2px rgb(5, 5, 5) solid;
   border-bottom: 2px rgb(5, 5, 5) solid;
-   cursor: pointer;
-   transform: translate(20px) rotate(140deg);
-   transition: all 1s;
- }
- .btnReturn:hover .cardImageReturn div{
-    border-right: 2px white solid;
-    border-bottom: 2px white solid;
-    transition: all 1s;
-    
+  cursor: pointer;
+  transform: translate(20px) rotate(140deg);
+  transition: all 1s;
 }
- .cardText{
-margin-right: 65px;
-font-size: 15px;
- }
- .cardImageReturn{
-margin-right: 30px;
-   
-     }
-.principalSectionObras{
-width: 100%;
-height: 100px;
-/* border: 2px solid blue; */
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 100px;
+.btnReturn:hover .cardImageReturn div {
+  border-right: 2px white solid;
+  border-bottom: 2px white solid;
+  transition: all 1s;
+}
+.cardText {
+  width: 110%;
+  font-size: 15px;
+}
+.cardImageReturn {
+  margin-right: 30px;
+}
+.principalSectionObras {
+  width: 100%;
+  /* height: 100px; */
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
 }
 
-
-
-
-.obrasDetailDecrement{
-    width: 20px;
-    height: 20px;
+.obrasDetailDecrement {
+  width: 20px;
+  height: 20px;
   border-left: none;
   border-top: none;
   border-right: 2px rgb(5, 5, 5) solid;
   border-bottom: 2px rgb(5, 5, 5) solid;
-   cursor: pointer;
-   transform: translate(40px) rotate(140deg);
-   transition: all 1s;
+  cursor: pointer;
+  transform: translate(40px) rotate(140deg);
+  transition: all 1s;
 }
-.obrasDetailIncrement{
-    width: 20px;
-    height: 20px;
-    border-left: none;
-    border-top: none;
-    border-right: 2px rgb(5, 5, 5) solid;
-    border-bottom: 2px rgb(5, 5, 5) solid;
-     cursor: pointer;
-     transform: translate(-40px) rotate(320deg);
-     transition: all 1s;
+.obrasDetailIncrement {
+  width: 20px;
+  height: 20px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px rgb(5, 5, 5) solid;
+  border-bottom: 2px rgb(5, 5, 5) solid;
+  cursor: pointer;
+  transform: translate(-40px) rotate(320deg);
+  transition: all 1s;
 }
-.obrasDetailIncrement:hover{
-    border-right: 5px rgb(5, 5, 5) solid;
-    border-bottom: 5px rgb(5, 5, 5) solid;
-    transition: all 1s;
+.obrasDetailIncrement:hover {
+  border-right: 5px rgb(5, 5, 5) solid;
+  border-bottom: 5px rgb(5, 5, 5) solid;
+  transition: all 1s;
 }
-.obrasDetailDecrement:hover{
-    border-right: 5px rgb(5, 5, 5) solid;
-    border-bottom: 5px rgb(5, 5, 5) solid;
-    transition: all 1s;
+.obrasDetailDecrement:hover {
+  border-right: 5px rgb(5, 5, 5) solid;
+  border-bottom: 5px rgb(5, 5, 5) solid;
+  transition: all 1s;
 }
-.obrasDetail{
-    width: 80%;
-    height: 80%;
-    margin-top: -80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.obrasDetail {
+  width: 80%;
+  height: 80%;
+  margin-top: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.obrasSimilares{
-    width: 200px;
-    height: 200px;
+.obrasSimilares {
+  width: 200px;
+  height: 200px;
 
-    /* border-radius: 20px; */
+  /* border-radius: 20px; */
 }
-.obrasSimilares img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    cursor: pointer;
+.obrasSimilares img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 1.5s;
 }
-
-  @media (max-width: 689px) {
-   
+.obrasSimilares img:hover {
+  transition: all 1.5s;
+  transform: scale(1.4);
 }
- .internodescription > P > span:nth-child(6) {
-color: black;
-font-size: 20px;
-font-weight: 800;
- }
+@media (max-width: 689px) {
+}
+.internodescription > P > span:nth-child(6) {
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}

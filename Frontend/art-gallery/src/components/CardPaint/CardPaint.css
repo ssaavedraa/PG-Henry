@@ -1,60 +1,167 @@
-.card, .data-paint{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card,
+.data-paint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card{
-    width: 100%;
-    height: 23rem;
-    margin: .6em;
-    border-radius: 1rem;
-    box-shadow: 5px 5px 10px var(--second-color);
-    background-color: var(--fourth-color);
+.card {
+  width: 17rem;
+  height: 24rem;
+  margin: 0.6em;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px var(--second-color);
+  background-color: var(--fourth-color);
 }
 
-.card:hover{
-    cursor: pointer;
-    transition: transform 0.5s;
-    transform: scale(1.05);
+.card:hover,
+.card:hover .linksCard {
+  cursor: pointer;
+  /* transition: transform 0.5s;
+  transform: scale(1.05); */
 }
 
-.image{
-    width: 90%;
-    height: 55%;
-    padding-top: .7em;
-    object-fit: contain;
+.image {
+  width: 90%;
+  height: 46%;
+  object-fit: contain;
 }
 
-.data-paint{
-    width: 90%;
-    height: 45%;
-    padding: 0.6em;
-    margin-bottom: 0.2em;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
+.data-paint {
+  width: 90%;
+  height: 50%;
+  padding: 0.6em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
 }
 
-.data-paint h4{
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 500;
+.data-paint h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
-.data-paint h5{
-    font-size: .9em;
-    font-weight: 400;
+.data-paint h5 {
+  font-size: 0.9em;
+  font-weight: 400;
 }
 
-.data-paint p{
-    font-size: .87em;
+.data-paint p {
+  font-size: 0.87em;
 }
 
-.price{
-    font-weight: 600;
-    font-size: .9em !important;
+.price {
+  font-weight: 600;
+  font-size: 0.9em !important;
+}
+
+/* Btb Add to Cart*/
+
+.btn_card_paint {
+  width: 60%;
+  height: 8%;
+  padding: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 8px 8px 0 0;
+  border: none;
+  cursor: pointer;
+  /* background-color: rgb(255, 145, 0); */
+  background-color: var(--fifth-color);
+  transition: 1.2s;
+}
+
+.btn_card_paint:hover {
+  color: var(--third-color);
+  background-color: black;
+}
+
+.icon_add_paint {
+  font-size: 1.4em;
+  margin-left: 0.5em;
+}
+
+.btn-header-icon {
+  width: 13%;
+  height: 7%;
+  margin: 0.2em;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-header-icon-edit {
+  width: 13%;
+  height: 7%;
+  margin: 0.9em 0.75rem;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-header-icon-edit:hover {
+  background-color: transparent;
+  color: red;
+}
+
+.btn-header-icon:hover {
+  background-color: transparent;
+}
+
+.icon-header-card:hover {
+color: red;
+}
+
+
+.btn-header-icon:hover .icon-header-card{
+  color: red;
+}
+
+.icon-header-card,
+.icon-header-cardFavorite,
+.icon-header-card-Admin {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-header-card {
+  color: var(--eigth-color);
+}
+
+.icon-header-cardFavorite {
+  color: red;
+}
+
+.icon-header-card-Admin {
+  color: var(--eigth-color);
+}
+
+/*NavLink*/
+
+.linksCard {
+  height: 84%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linksCard {
+  text-decoration: none;
+  color: var(--bgMainColor);
+}
+
+.divGuest {
+  margin-bottom: 2rem;
 }

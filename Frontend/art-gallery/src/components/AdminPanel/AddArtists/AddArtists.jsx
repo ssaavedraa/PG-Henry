@@ -1,119 +1,111 @@
-import React from "react"
-import './AddArtists.css'
-
-
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
+import { FaPlus } from "react-icons/fa";
+import { AiFillEdit } from "react-icons/ai";
+import ModalAddArtist from "../../../Modales/EditArtist/AddArtistForm/AddArtistForm";
+import ModalArtist from './ModalArtist/ModalArtist'
 import NavPanel from "../NavPanel/NavPanel";
-import imgprofile from '../../../assets/img/profile.png'
+import ArtistModal from "../../../Modales/EditArtist/ArtistModal";
+import "./Artists.css";
 
+function AddArtists() {
+  const dispatch = useDispatch();
+  const artists = useSelector((state) => state.artist);
 
-const AddArtists = ()=>{
+  React.useEffect(() => {
+    dispatch(getArtitsStat());
+  }, [dispatch]);
 
+  const [openModalArtist, setOpenModalArtist] = useState(false);
 
-    return (
-      <>
-        
-        <div className="admin-box">
-         <NavPanel/>
-          <div className="component-box">
-          <div className="tittle-box"><h2>Admin Panel</h2></div>
-           
-            <div className="reder-box">
-                <div className="myprofile-box">
-          
-          <div className="information-box">
-          <h2> Add new Artist</h2>
-              
-           
-            <div className="data">
+  React.useEffect(() => {
+    return () => dispatch(clearArtists());
+  }, [dispatch]);
 
-            <form key="form" 
-            // onSubmit={(e) => handleSubmit(e)}
-            >
-
-              </form>
-              
-                  <label> Name: </label>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="name"
-                    className="input"
-                    required
-                    value=""
-                    name="name"
-                    // onChange={handleChange}
-                    
-                  />
-                  <label> Biography: </label>
-                  <input
-                    type="coment"
-                    autoComplete="off"
-                    key="email"
-                    className="input"
-                    required
-                    value=""
-                    name="email"
-                    // onChange={handleChange}
-                   
-                  />
-                  <label> Photo :</label>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="password"
-                    className="input"
-                    required
-                    value=""
-                    name="password"
-                    // onChange={handleChange}
-                    
-                  />
-               
-              
-                
-                  <label> Email: </label>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="name"
-                    className="input"
-                    required
-                    value=""
-                    name="name"
-                    // onChange={handleChange}
-                  />
-                  <label> Location: </label>
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    key="email"
-                    className="input"
-                    required
-                    value=""
-                    name="email"
-                    // onChange={handleChange}
-                  />
-                  
-              <div>
-                <button 
-                // onClick={() => HandleActive(true)} 
-                className="btn-edit">
-                  Add new artists
-                </button>
-              </div>
-            </div>
-          </div>
+  return (
+    <div className="container-addartist">
+      <NavPanel />
+      <div className="admin-profile-container">
+        <div className="artists-header">
+          <ArtistModal
+            openModalArtist={openModalArtist}
+            setOpenModalArtist={setOpenModalArtist}
+            isEditArtist={false}
+          />
+          <button
+            className="btnNewArtist"
+            onClick={() => setOpenModalArtist(true)}
+          >
+            <FaPlus className="icon-Admin-AddArtist" />
+            Add Artist
+          </button>
+        </div>
+        <div className="subheader-artists">
+          <h4 className="subtitle-artists">Registered Artists</h4>
+          <div className="sort-Artist-Admin">
+            <label>Sort By name:</label>
+            <select name="" id="" className="select-filter-admin">
+              <option value="ASC">AtoZ</option>
+              <option value="DESC">ZtoA</option>
+            </select>
           </div>
         </div>
-                
-                
-                
-                </div>
-          </div>
-        
-      </>
-    );
-
+        <table className="data-artist-admin">
+          <thead className="row-titles-admin">
+            <tr>
+              <th className="id-title">ID</th>
+              <th className="photo-title">PHOTO</th>
+              <th className="name-title">NAME</th>
+              <th className="paintings-title">PAINTINGS</th>
+              <th className="review-title">REVIEWS</th>
+              <th className="sales-title">SALES</th>
+              <th className="button-title">SALES</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/*           Aqui hacemos el mapeo */}
+            {artists
+              ? artists.map((artist) => (
+                  <RowArtist
+                    artist={artist}
+                    openModalArtist={openModalArtist}
+                    setOpenModalArtist={setOpenModalArtist}
+                  />
+                ))
+              : null}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 }
 
 export default AddArtists;
+
+function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
+  return (
+    <tr>
+      <td className="id-title">{artist.artistId}</td>
+      <td className="photo-title">
+        <img src={artist.photo} alt="img-artist" className="img-td-artist" />
+      </td>
+      <td className="name-title">{artist.name}</td>
+      <td className="paintings-title">{artist.paintings}</td>
+      <td className="review-title">{artist.reviews}</td>
+      <td className="sales-title">{artist.sales}</td>
+      <td className="button-title">
+        <ArtistModal
+          openModalArtist={openModalArtist}
+          setOpenModalArtist={setOpenModalArtist}
+          isEditArtist={true}
+          artist={artist.artistId}
+        />
+        {/* <AiFillEdit
+          className="icon-artist-eduit"
+          onClick={() => setOpenModalArtist(true)}
+        /> */}
+      </td>
+    </tr>
+  );
+}

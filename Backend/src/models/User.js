@@ -1,4 +1,5 @@
 const { DataTypes } = require("sequelize");
+const { hashSync, compareSync } = require("bcrypt");
 
 module.exports = (sequelize) => {
 	sequelize.define("user", {
@@ -25,7 +26,9 @@ module.exports = (sequelize) => {
 		},
 		password: {
 			type: DataTypes.STRING,
-			allowNull: false,
+			set(password) {
+				this.setDataValue('password', hashSync(password, 10))
+			}
 		},
 		isBanned: {
 			type: DataTypes.BOOLEAN,
@@ -36,5 +39,10 @@ module.exports = (sequelize) => {
 			type: DataTypes.ENUM("guest", "admin", "user"),
 			allowNull: false,
 		},
+		googleUser: {
+			type: DataTypes.BOOLEAN,
+			defaultValue: false,
+			allowNull: false,
+		}
 	});
 };

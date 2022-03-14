@@ -7,19 +7,60 @@ import {
   GET_ARTIST_ID,
   GET_ARTIST,
   GET_TECHNIQUE,
-  SET_LOGIN,
-  SET_LOGOUT,
+  GET_SEARCH,
+  POST_FAVS,
+  DELETE_FAVS,
+  GET_USER_ADMIN,
+  ORDER_BY_A_Z,
+  ORDER_BY_TYPE,
+  GET_FAVS,
+  CLEAR_ARTISTBYID,
+	GET_STATS_ARTIST,
+	CLEAR_ARTIST
 } from "../action-types";
+
+
+const detailObra = {
+  orientation: "",
+  id: 1,
+  title: "",
+  description: "",
+  height: 0,
+  width: 0,
+  price: 0,
+  techniques: [
+    {
+      id: 1,
+      name: "",
+      description: "",
+    },
+  ],
+  artist: {
+    id: 1,
+    name: "",
+    biography: "",
+    photo: "",
+    email: "",
+    score: 1,
+  },
+  photos: [
+    {
+      url: "",
+    },
+  ],
+}
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
-  auth: false,
   reviews: [],
   paintingsArtist: [],
   artistId: [],
   artist: [],
   technique: [],
+  resultSearch: [],
+  favs: [],
+  detailObra,
 };
 
 function rootReducer(state = initialState, action) {
@@ -37,13 +78,13 @@ function rootReducer(state = initialState, action) {
     case GET_ARTIST_ID:
       return {
         ...state,
-        artistId: action.payload
-      }
+        artistId: action.payload,
+      };
     case GET_REVIEWS:
       return {
         ...state,
-        reviews: action.payload
-      }
+        reviews: action.payload,
+      };
     case GET_ARTIST:
       return {
         ...state,
@@ -54,16 +95,6 @@ function rootReducer(state = initialState, action) {
         ...state,
         technique: action.payload,
       };
-    case SET_LOGIN:
-      return{
-        ...state,
-        auth: true
-      }
-    case SET_LOGOUT:
-      return{
-        ...state,
-        auth: false
-      }
     case GET_OBRAID:
       return {
         ...state,
@@ -74,12 +105,63 @@ function rootReducer(state = initialState, action) {
         ...state,
         obraRandon: action.payload,
       };
-    default:
-      return state;
-    
-  }
+    case GET_SEARCH:
+      return {
+        ...state,
+        resultSearch: action.payload,
+      };
+    case POST_FAVS:
+      return {
+        ...state,
+        favs: action.payload,
+      };
+    case DELETE_FAVS:
+      return {
+        ...state,
+        favs: action.payload,
+      };
+    case GET_USER_ADMIN:
+      return {
+        ...state,
+        userAdmin: action.payload,
+      };
+    case ORDER_BY_A_Z:
+      return {
+        ...state,
+        userAdmin: action.payload,
+      };
+
+    case ORDER_BY_TYPE:
+      return {
+        ...state,
+        userAdmin: action.payload
+      }
+      case GET_FAVS:
+			return {
+				...state,
+				favs: action.payload,
+			};
+
+		case CLEAR_ARTISTBYID:
+			return{
+				...state,
+				artistId: [],
+			}
+
+		case GET_STATS_ARTIST:
+			return{
+				...state,
+				artist: action.payload
+			}
+
+		case CLEAR_ARTIST:
+			return{
+				...state,
+				artist: []
+			}
+		default:
+			return state;
+	}
 }
-
-
 
 export default rootReducer;

@@ -1,89 +1,126 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
+import { getSearchAuto, getFavs } from "../../redux/actions/actions";
+import Logo from "../../assets/img/SantArtlogo.png";
+import SearchBar from "../SearchBar/SearchBar";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
-import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import Logo from "../../assets/img/SantArtlogo.png";
-import { setLogin, setLogout } from "../../redux/actions/actions";
+import useAuth from "../../customHooks/useAuth";
+import useCart from "../../customHooks/useCart.js";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-  const session = useSelector((state) => state.auth);
+  const { user, logout } = useAuth();
+  const resultSearch = useSelector((state) => state.resultSearch);
+  const [keyword, setKeyword] = useState("");
 
-  if (window.localStorage.getItem("user"))
-    dispatch(setLogin(window.localStorage.getItem("user")));
+  //favs
 
-  const handleLogout = () => {
-    window.localStorage.removeItem("user");
-    dispatch(setLogout());
-  };
+  useEffect(() => {
+    if (user.role !== "guest") dispatch(getFavs());
+  }, [dispatch]);
+
+  const favs = useSelector((state) => state.favs);
+  // console.log('soy favs', favs)
+
+  function updateField(value, update = true) {
+    if (update) {
+      dispatch(getSearchAuto(value));
+    }
+    setKeyword(value);
+  }
+  const { cart } = useCart();
 
   return (
     <div className={styles.navbar}>
       <Link to="/">
         <img src={Logo} alt="logo" />
       </Link>
-      <div className={styles.div_search}>
-        <input
-          type="text"
-          name="Search"
-          className={styles.search}
-          placeholder="Search your favorite artwork"
-        />
-        <NavLink to="/under" className={styles.links}>
-          <button>
-            <BiSearch className={styles.icon_search} />
-          </button>
-        </NavLink>
-      </div>
+      <SearchBar
+        results={resultSearch}
+        keyword={keyword}
+        updateField={updateField}
+      />
       <ul className={styles.nav_links}>
         <li>
-          <NavLink to="/gallery" className={styles.links}>
-            <h5>Gallery</h5>
+          <NavLink to="/gallery" className={styles.linksNav}>
+            Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink to="/artists" className={styles.links}>
-            <h5>Artists</h5>
+          <NavLink to="/artists" className={styles.linksNav}>
+            Artists
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contactus" className={styles.links}>
-            <h5>Contact</h5>
+          <NavLink to="/contactus" className={styles.linksNav}>
+            Contact
           </NavLink>
         </li>
         <h4>|</h4>
-        {!session ? (
+        {user.role === "guest" ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>
-              <FaUserAlt />
-              <h4>Log in</h4>
+              <FaUserAlt className={styles.icon} />
+              <h4>Login</h4>
             </button>
           </NavLink>
+        ) : user.role === "admin" ? (
+          <li>
+            <NavLink to="/admin" className={styles.linksNav}>
+              <h5>Welcome {user.firstName}!</h5>
+            </NavLink>
+          </li>
         ) : (
           <li>
-            <h5>Welcome! {window.localStorage.getItem("user")}</h5>
+            <NavLink to="/under" className={styles.linksNav}>
+              <h5>Welcome {user.firstName}!</h5>
+            </NavLink>
           </li>
         )}
-        {session && (
-          <li onClick={() => handleLogout()}>
+        {user.role === "user" || user.role === "guest" ? (
+          <li>
+            <NavLink to="/cart" className={styles.linksNav}>
+              <div className={styles.divContainerCartIcon}>
+                <div
+                  className={
+                    cart.length > 0
+                      ? styles.containerCartLengthPlus
+                      : styles.containerCartLength
+                  }
+                >
+                  {cart.length}
+                </div>
+                <AiOutlineShoppingCart className={styles.icon} />
+              </div>
+            </NavLink>
+          </li>
+        ) : (
+          <li></li>
+        )}
+        {user.role === "user" ? (
+          <li>
+            <NavLink to="/favs" className={styles.linksNav}>
+              <div className={styles.divContainerCartIcon}>
+                <div className={styles.containerCartLengthPlus}>
+                  {favs.length}
+                </div>
+                <AiOutlineHeart className={styles.icon} />
+              </div>
+            </NavLink>
+          </li>
+        ) : (
+          <li></li>
+        )}
+        {user.role !== "guest" && (
+          <li className={styles.logoutNav} onClick={() => logout()}>
             <p>Logout</p>
             <FiLogOut className={styles.icon} />
           </li>
         )}
-        <li>
-          <NavLink to="/under" className={styles.links}>
-            <AiOutlineShoppingCart className={styles.icon} />
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/under" className={styles.links}>
-            <AiOutlineHeart className={styles.icon} />
-          </NavLink>
-        </li>
       </ul>
     </div>
   );

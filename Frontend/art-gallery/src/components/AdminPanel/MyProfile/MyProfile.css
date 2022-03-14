@@ -1,106 +1,82 @@
-
-.admin-box{
-    display: flex;   
-    height: 100vh;         
-    
-    }
-
-.component-box{
-   
-    height: 90vh;
-    width: 85%;
-}
-
-
-.tittle-box{
-    height: 5%;
-    
-    margin: auto;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.reder-box{
- height: 70%;
- 
- 
-
-}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
+.admin-box{
+    display: flex;
+}
 
+.component-box{   
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
 
-.myprofile-box{
-    
-    height: auto;
-    
-    
-    text-align: center;
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 20px;
-    
-    border-radius: 20px;
-    box-shadow: 8px 5px 5px 8px rgba(71, 71, 71, 0.418);
-    
-    
-   
-   }
+.component-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-   .information-box{
-       text-align: center;
-       
-       padding-top: 2rem;
-       padding-bottom: 2rem;
-       
-   }
+.user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 1rem;
+}
 
+.user-data{
+    width: 100%;
+}
 
-   .data{
-       display: inline-flex;
-       flex-direction: column;
-       width: 40%;
-       text-align: center;
-       justify-content: center;
-       
-      
-       
-   }
+.user-fields{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
 
-   .input{
-       margin: 0.5rem;
-       height: 2rem;
-       text-align: center;
-       font-family: 'Poppins', sans-serif;
-       
-       border-radius: 10px;
-   }
+.user-fields input{
+    height: 1.3rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 0.6rem;
+}
+.user-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    margin: 0.5rem;
+}
 
-   .input:hover{
-       
-       background-color: rgb(231, 231, 231);
-   }
+.user-buttons button{
+    background-color: var(--btnMain-Color);
+    color: var(--third-color);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem ;
+    border: none;
+}
 
+.user-buttons button:disabled{
+    opacity: 50%;
+}
 
+.user-buttons button:hover{
+    cursor: pointer;
+}
 
-   .btn-edit{
+button.cancel{
+    background-color: rgb(192, 10, 10);
+}
 
+.password-reqs{
+    border-top: var(--primary-color) 2px solid;
+    padding: 1rem;
+}
 
-       height: 3rem;
-       width: 12rem;
-       
-       list-style: none;
-       background-color: rgb(212, 212, 212);
-       border-radius: 20px;
-       border-style: none;
-       margin: 1rem;
-       
-            
-       
-   }
-
-   .btn-edit:hover{
-    background-color: rgb(160, 160, 160);
-   }
+.password-reqs ul{
+    padding-left: 2rem;
+}

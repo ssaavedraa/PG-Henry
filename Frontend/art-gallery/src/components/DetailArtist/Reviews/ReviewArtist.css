@@ -1,7 +1,6 @@
-
 .containerReviews{
     margin: auto;
-    padding: 5px 40px 5px 40px;
+    padding: 0.3125rem 2.5rem 0.3125rem 2.5rem;
     width: 80%;
     justify-content: center;
     align-items: center;
@@ -26,6 +25,7 @@
     height: 95px;
     width: 67.5px;
     border-radius: 3px;
+    object-fit: contain;
 }
 
 .containerText{
@@ -53,3 +53,4 @@
 .divText div{
     margin-left: 5px;
 }
+

@@ -16,7 +16,7 @@ import ListArtist from "../utils/ListArtist/ListArtist";
 import "./Filters.css";
 
 function Filters({ handleOnChange, filter, addList, cleanFilter}) {
-  const artists = useSelector((state) => state.artist);
+  const artists = useSelector((state) => state.artist); 
   const technique = useSelector((state) => state.technique);
 
   const dispatch = useDispatch();
@@ -141,17 +141,17 @@ export default Filters;
 function mostrar(num) {
   const title = document.getElementsByClassName("slider-title");
   const containerRange = document.getElementsByClassName("container-range");
-  const btn = document.getElementsByClassName("btn");
+  const btn = document.getElementsByClassName("btn-filter-title");
 
   containerRange[0].style.height = "25%";
   containerRange[3].style.height = "30%";
   containerRange[4].style.height = "15%";
 
-  title[num].classList.toggle("color");
-  containerRange[num].classList.toggle("select");
+  title[num].classList.toggle("color-title-filter");
+  containerRange[num].classList.toggle("select-filter-gallery");
 
   if (containerRange[num].style.display === "none") {
-    containerRange[num].classList.remove("select");
+    containerRange[num].classList.remove("select-filter-gallery");
   }
 
   btn[num].innerHTML = btn[num].innerHTML === "▲" ? "▼" : "▲";

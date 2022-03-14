@@ -1,106 +1,131 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 .admin-box{
     display: flex;   
-    height: 100vh;         
+    height: auto;       
+    overflow-y: scroll; 
     
     }
+    
 
-.component-box{
-   
+.principal-box{   
     height: 90vh;
-    width: 85%;
+    width: 85%;    
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.box-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-content-form{
+    overflow: hidden;
+    background-color: antiquewhite;
+    width:50%;
+    height: 80%;
+    margin: 1rem;
+    object-fit: cover;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.3);
+    
+}
+
+.image-content-form img{    
+    height: 250px;  
 }
 
 
-.tittle-box{
-    height: 5%;
+.first-dataform{
+    display: flex;
+    flex-direction: column;
+    width:55%;   
     
-    margin: auto;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.reder-box{
- height: 70%;
- 
- 
-
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-
-
-
-.myprofile-box{
-    
-    height: auto;
-    
-    
-    text-align: center;
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 20px;
-    
-    border-radius: 20px;
-    box-shadow: 8px 5px 5px 8px rgba(71, 71, 71, 0.418);
-    
-    
-   
-   }
-
-   .information-box{
-       text-align: center;
-       
-       padding-top: 2rem;
-       padding-bottom: 2rem;
+.information-box{
+       text-align: center;       
+      
        
    }
 
 
    .data{
-       display: inline-flex;
+       display: flex;
        flex-direction: column;
-       width: 40%;
+       width: 50%;
        text-align: center;
        justify-content: center;
-       
       
+    }
+
+
+.data form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    
+   } 
+
+   .data form textarea{
+    width: auto;
+    height: 4rem;
+}
        
-   }
+   
 
    .input{
-       margin: 0.5rem;
-       height: 2rem;
+       margin: 0.1rem;
+       height: 1.5rem;
        text-align: center;
-       font-family: 'Poppins', sans-serif;
-       
+       font-family: 'Poppins', sans-serif;       
        border-radius: 10px;
    }
 
-   .input:hover{
-       
+   .input:hover{       
        background-color: rgb(231, 231, 231);
+   }
+
+   .width-height{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+   }
+
+   .techniques-box{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       padding: 0.2rem;
+   }
+
+   .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
    }
 
 
 
    .btn-edit{
-
-
        height: 3rem;
-       width: 12rem;
-       
+       width: 12rem;       
        list-style: none;
        background-color: rgb(212, 212, 212);
        border-radius: 20px;
        border-style: none;
-       margin: 1rem;
-       
-            
+       margin: 1rem;   
        
    }
 
    .btn-edit:hover{
     background-color: rgb(160, 160, 160);
+   }
+
+   .tech-button{
+       background-color: blue;
    }

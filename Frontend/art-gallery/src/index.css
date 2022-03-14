@@ -18,7 +18,7 @@ a{
 
   --btnMain-Color: #168AAD;
   --btnSecond-Color: #000000;
-  --btnHover-color: #056987;
+  --btnHover-color: #00485e;
 }
 
 body {
@@ -28,6 +28,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 }
+
+button, input[type="text"], textarea{
+  font-family: 'Poppins', sans-serif;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

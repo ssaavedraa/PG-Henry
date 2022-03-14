@@ -1,0 +1,77 @@
+.containerCardsCart {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fourth-color);
+  align-items: stretch;
+}
+
+.cardsCart {
+  display: flex;
+  padding: 0.75rem 0rem;
+  border-bottom: 2px solid var(--fifth-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerDetails button {
+  justify-content: center;
+  background-color: var(--fourth-color);
+  border: none;
+  outline: none;
+  padding: 0px;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.containerDetails button:hover {
+  color: red;
+}
+
+.cardsCart img {
+  height: 6rem;
+  width: 6rem;
+  object-fit: contain;
+}
+
+.cardsCart h4 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cardsCart h5 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cardsCart p {
+  font-size: 0.8rem;
+}
+
+.divImgDetails {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.containerDetails {
+  padding-left: 2rem;
+}
+
+.divNothing {
+  border-bottom: 2px solid var(--fifth-color);
+  padding: 1rem 0rem;
+}
+
+.divPriceButton {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 4.5rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.containerDetails a{
+  text-decoration: none;
+  color: black
+}

@@ -8,13 +8,14 @@
     height: 85vh;
     display: flex;
     flex-direction: column;
+    z-index: 1, 
   }
 
   .containerHeaderModal{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.3rem 0rem;
+  
     border-bottom: 1px solid var(--fifth-color) ;
   }
   

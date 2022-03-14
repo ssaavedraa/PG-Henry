@@ -1,10 +1,10 @@
 .divContainer {
-  margin: 25px;
+  margin: 1.5625rem;
 }
 
 .divContainer h1 {
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   margin: auto;
   display: flex;
 }
@@ -17,7 +17,7 @@
 
 .imgArtist {
   width: 375px;
-  height: 450px;
+  /* height: 450px; */
   padding-right: 40px;
   object-fit: contain;
 }
@@ -30,6 +30,29 @@
   justify-content: space-between;
 }
 
+.btnHeaderIconArtist{
+  border: none;
+outline: none;
+background-color: var(--fourth-color);
+padding: 0rem;
+margin-left: 0.5rem;
+cursor: pointer;
+}
+
+.iconHeaderCardArtist:hover {
+  color: red;
+}
+
+.btnHeaderIconArtist:hover{
+  background-color: var(--fourth-color);
+}
+
+.iconHeaderCardArtist{
+  width: 2.2rem;
+  height: 2.4rem;
+  color: var(--eigth-color);
+}
+
 .divBio p {
   text-align: center;
 }
@@ -40,15 +63,16 @@
 
 .divButton button{
   width: 250px;
-  height: 30px;
+  height: 2.2rem;
   border: none;
   outline: none;
   border-radius: 8px;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 .divButton button:hover{
   color: white;
+  background-color: var(--btnHover-color) ;
 }

@@ -42,6 +42,14 @@
     padding: 0.25rem 0.5rem;
 }
 
+.login-user form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .login-user label{
     margin-top: 0.5rem;
 }
@@ -74,6 +82,8 @@
     flex-direction: row;
     align-items: center;
     color: black;
+    width: 80%;
+    justify-content: center;
 }
 
 .login-failed{
