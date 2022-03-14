@@ -1,33 +1,43 @@
 import React from "react";
-import "./AddItems.css";
-import NavPanel from "../NavPanel/NavPanel";
+import "./EditPaintingForm.css";
+
 import {
+  getObraDetail,
+  editPainting,
   getArtist,
   getTechnique,
-  addNewPainting,
 } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import logo from "../../../assets/img/SantArtlogo.png";
 
-const AddItems = () => {
+const EditPaintinfForm = (ObraId) => {
   const dispatch = useDispatch();
-  const artists = useSelector((state) => state.artist);
-  const technique = useSelector((state) => state.technique);
+  const id = ObraId.ObraId;
+  const detailObra = useSelector((state) => state.detailObra);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    dispatch(getObraDetail(id));
     dispatch(getArtist());
     dispatch(getTechnique());
-  }, [dispatch]);
+  }, [id, dispatch]);
+
+  useEffect(() => {
+    setInput({
+      title: detailObra.title,
+      description: detailObra.description,
+      height: detailObra.height,
+      width: detailObra.width,
+      price: detailObra.price,
+    });
+  }, [detailObra]);
 
   const [input, setInput] = useState({
-    title: "",
-    description: "",
-    height: 0,
-    width: 0,
-    price: 0,
-    photos: [],
-    artistId: 0,
-    techniqueIds: [],
+    title: detailObra.title,
+    description: detailObra.description,
+    height: detailObra.height,
+    width: detailObra.width,
+    price: detailObra.price,
   });
 
   function handleChange(e) {
@@ -52,70 +62,39 @@ const AddItems = () => {
       });
     }
   }
-  //
 
-  function handleCheck(e) {
-    let tec = Number(e.target.value);
-    if (input.techniqueIds.includes(tec)) {
-      setInput({
-        ...input,
-        techniqueIds: input.techniqueIds.filter((d) => d !== tec),
-      });
-    } else {
-      setInput({
-        ...input,
-        techniqueIds: [...input.techniqueIds, tec],
-      });
-    }
-  }
-
-  function handleSelect(e) {
-    let art = Number(e.target.value);
-    setInput({
-      ...input,
-      artistId: art,
-    });
-  }
-
-  console.log(input);
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(addNewPainting(input));
-    alert("New item create");
+    dispatch(editPainting(id, input));
+    alert("Painting Updated");
     setInput({
       title: "",
       description: "",
       height: 0,
       width: 0,
       price: 0,
-      photos: [],
-      artistId: 0,
-      techniqueIds: [],
     });
   }
 
   return (
     <>
-      <div className="admin-box">
-        <NavPanel />
-        <div className="principal-box">
-          <div className="data">
-            <h2> ADD NEW ITEM</h2>
+      <div className="principal-box-edit">
+        <div className="box-one"></div>
+        <div className="data">
+          <div className="profile-logo">
+            <img src={logo} height="70rem" alt="imgUser" />
+          </div>
 
+          <div className="box-two">
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
-              <div className="box-1">
+              <div className="box-3">
                 <div className="image-content-form">
-                  {input.photos &&
-                  input.photos.toString().startsWith("http") ? (
-                    <img src={input.photos.toString()} alt="imgUser" />
-                  ) : (
-                    <img
-                      src="http://accordelectrotechnics.in/img/product/no-preview/no-preview.png"
-                      alt="nofoto"
-                    />
+                  {detailObra.photos !== "" && (
+                    <img src={detailObra.photos[0].url} alt="imgUser" />
                   )}
                 </div>
                 <div className="first-dataform">
+                  {detailObra.artist && <h3>{detailObra.artist.name}</h3>}
                   <label> Title: </label>
                   <input
                     type="text"
@@ -156,6 +135,7 @@ const AddItems = () => {
                         onChange={handleChange}
                       />
                     </div>
+
                     <div>
                       <label> Width: </label>
                       <input
@@ -172,50 +152,8 @@ const AddItems = () => {
                       />
                     </div>
                   </div>
-                  <label> Artist: </label>
-                  <select
-                    className="input"
-                    key="artistId"
-                    name="artistId"
-                    required
-                    onChange={(e) => handleSelect(e)}
-                  >
-                    <option value="">select artist</option>
-                    {artists?.map((a) => (
-                      <option value={a.id}>{a.name}</option>
-                    ))}
-                  </select>
                 </div>
               </div>
-
-              <div className="techniques-box">
-                <label> Technique: </label>
-                {technique?.map((d) => (
-                  <label>
-                    <input
-                      type="checkbox"
-                      id={d.id}
-                      name="techniqueIds"
-                      value={d.id}
-                      onChange={(e) => handleCheck(e)}
-                    />{" "}
-                    {d.name}
-                  </label>
-                ))}
-              </div>
-
-              <label> Photo: </label>
-
-              <input
-                type="text"
-                autoComplete="off"
-                key="photos"
-                className="input"
-                required
-                value={input.photos}
-                name="photos"
-                onChange={handleChange}
-              />
 
               <label> Description: </label>
               <textarea
@@ -227,7 +165,7 @@ const AddItems = () => {
               />
 
               <div>
-                <button className="btn-edit">ADD NEW ITEM</button>
+                <button className="btn-create">EDIT ITEM</button>
               </div>
             </form>
           </div>
@@ -237,4 +175,4 @@ const AddItems = () => {
   );
 };
 
-export default AddItems;
+export default EditPaintinfForm;

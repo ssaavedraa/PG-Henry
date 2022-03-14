@@ -7,7 +7,8 @@ import MyProfile from "./components/AdminPanel/MyProfile/MyProfile";
 import Login from "./components/Login/Login.component";
 import AddArtists from "./components/AdminPanel/AddArtists/AddArtists";
 import AddItems from "./components/AdminPanel/AddItems/AddItems";
-import {AddUser} from "./components/AdminPanel/AddUser/AddUser"
+import {AddUser} from "./components/AdminPanel/AddUser/AddUser";
+import Sales from "./components/AdminPanel/Sales/Sales";
 import UnderConstruction from "./components/UnderConstruction/UnderConstruction";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home.jsx";
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/admin" element={<MyProfile />} />
           <Route exact path="/admin/user" element={<AddUser/>} />
           <Route exact path="/admin/additems" element={<AddItems />} />
+          <Route exact path="/admin/sales" element={<Sales />} />
           <Route exact path="/under" element={<UnderConstruction />} />
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/gallery" element={<Gallery />} />

@@ -34,15 +34,16 @@ export default function Artists(){
     }, [dispatch])
 
     return(
-        <div className="artists-container">
-            <div className="artists-header">
+        <div className="artists-container1">
+            <div className="artists-header1">
                 <h1>Artists</h1>
-                <div className="artist-sort">
+                <div className="artist-sort1">
                     <label htmlFor="sort">Sort by name: </label>
                     <select name="sort" id="sort" onChange={(e) => setSort(e.target.value)} >
                         <option value="az">A-Z</option>
                         <option value="za">Z-A</option>
                     </select>
+                    <button className="btn-create">ADD NEW ARTIST</button>
                 </div>
             </div>
             {

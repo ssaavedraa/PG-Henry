@@ -7,11 +7,10 @@ const LOAD_MOCK_DATA = process.env.LOAD_MOCK_DATA;
 const port = process.env.PORT || 3001
 // Syncing all the models at once.
 
-
 conn
   .sync({ force: true })
   .then(() => {
-    if (LOAD_MOCK_DATA) loadMockData();
+    if (MOCK_DATA) loadMockData();
   })
   .then(() => {
     conn.query("CREATE EXTENSION IF NOT EXISTS  pg_trgm;");

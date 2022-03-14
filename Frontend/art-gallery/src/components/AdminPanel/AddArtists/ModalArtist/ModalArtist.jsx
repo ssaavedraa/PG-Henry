@@ -1,19 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-modal";
+import { getArtistById } from "../../../../redux/actions/actions";
 import img from "../../../../assets/img/profile.png";
 import { FaTimes } from "react-icons/fa";
 import { ImFolderUpload } from "react-icons/im";
-import {addConfirmation} from "../../../utils/Notifications/Notifications.js";
+import { addConfirmation } from "../../../utils/Notifications/Notifications.js";
 import "./ModalArtist.css";
 
-function ModalArtist({ openModal, openNewArtist, artists,isEdit,setIsEdit }) {
+function ModalArtist({ openModal, openNewArtist, idArtist, isEdit }) {
+  const dispatch = useDispatch();
 
-  let title = isEdit && artists ? "Edit Artist" : "New Artist";
-  let name = isEdit && artists ? artists.name : "";
-  let photo = isEdit && artists ? artists.photo : img;
-  let email = isEdit && artists ? artists.email : "";
-  let location = isEdit && artists ? artists.location : "";
-  let biography = isEdit && artists ? artists.biography : "";
+  const artist = useSelector((state) => state.artistId);
+
+  const title = isEdit === "true" ? "Edit Artist" : "New Artist";
+  let name = isEdit === "true" ? "Artist Name" : "";
+  const photo = img;
+  let email = isEdit === "true" ? "Artist Email" : "";
+  let location = isEdit === "true" ? "Artist Location" : "";
+  let biography = isEdit === "true" ? "Artist Biography" : "";
+
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    location: "",
+    biography: "",
+  });
+
+  React.useEffect(() => {
+    Modal.setAppElement("body");
+    if (isEdit === "true") {
+      dispatch(getArtistById(idArtist));
+    }
+  }, [dispatch, isEdit]);
 
   function onChange(e) {
     const reader = new FileReader();
@@ -24,24 +43,19 @@ function ModalArtist({ openModal, openNewArtist, artists,isEdit,setIsEdit }) {
     reader.readAsDataURL(e.target.files[0]);
   }
 
-  React.useEffect(() => {
-    Modal.setAppElement("body");
-  }, []);
+/*   React.useEffect(() => {
+    return () => dispatch(getArtistById());
+  }, [dispatch]); */
 
-
-  function confirmar(){
-    addConfirmation()
-    setIsEdit(false);
-    clean();
+  function confirmar() {
+    addConfirmation();
   }
 
-  function clean() {
-    title = "New Artist";
-    name = "";
-    photo = img;
-    email = "";
-    location = "";
-    biography = "hola";
+  function updateData(e) {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
   }
 
   return (
@@ -53,7 +67,10 @@ function ModalArtist({ openModal, openNewArtist, artists,isEdit,setIsEdit }) {
     >
       <div className="header-modal-artist">
         <h3>{title}</h3>
-        <button onClick={openNewArtist} className="btnCloseModalArtist">
+        <button
+          onClick={() => openNewArtist(false)}
+          className="btnCloseModalArtist"
+        >
           <FaTimes className="close-btn-modal" />
         </button>
       </div>
@@ -79,26 +96,52 @@ function ModalArtist({ openModal, openNewArtist, artists,isEdit,setIsEdit }) {
           <div className="infoArtistEdit">
             <div className="main-NewArtist">
               <label>Name:</label>
-              <input type="text" value={name}/>
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={updateData}
+              />
             </div>
             <div className="main-NewArtist">
               <label>Email:</label>
-              <input type="text" value={email}/>
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={updateData}
+              />
             </div>
             <div className="main-NewArtist">
               <label>Location:</label>
-              <input type="text" value={location}/>
+              <input
+                type="text"
+                name="location"
+                value={location}
+                onChange={updateData}
+              />
             </div>
           </div>
         </div>
         <div className="data-second-artist">
           <div className="biography-NewArtist">
             <label>Biography:</label>
-            <textarea name="" id="" cols="30" rows="10">{biography}</textarea>
+            <textarea
+              name="biography"
+              id=""
+              cols="30"
+              rows="10"
+              onChange={updateData}
+              value={biography}
+            />
           </div>
           <div className="btnModalArtist">
-            <button id="create" onClick={confirmar}>Create</button>
-            <button id="cancel" onClick={openNewArtist}>Cancel</button>
+            <button id="create" onClick={confirmar}>
+              Create
+            </button>
+            <button id="cancel" onClick={() => openNewArtist(false)}>
+              Cancel
+            </button>
           </div>
         </div>
       </div>
