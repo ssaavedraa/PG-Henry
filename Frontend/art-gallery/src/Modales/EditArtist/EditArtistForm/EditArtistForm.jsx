@@ -9,8 +9,9 @@ import { getArtistById } from "../../../redux/actions/actions";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 
-const EditArtistForm = (artist) => {
-  const id = artist.artist.id;
+const EditArtistForm = ({artist, setOpenModalArtist}) => {
+
+  const id = artist.id;
 
   const dispatch = useDispatch();
 
@@ -63,8 +64,10 @@ const EditArtistForm = (artist) => {
           'Updated!',
           'Your entry has been updated.',
           'success'
-        )
+        )        
       }
+
+      setOpenModalArtist(false)
     })
   }
 
