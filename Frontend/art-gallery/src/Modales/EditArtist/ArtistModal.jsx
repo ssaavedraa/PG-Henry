@@ -28,11 +28,11 @@ const EditArtistModal = ({ openModalArtist, setOpenModalArtist , isAddArtist, is
  
 
   return (
-    <Modal isOpen={openModalArtist} style={customStyles} ariaHideApp={false} isEditArtist={isEditArtist } artist={artist}>
+    <Modal isOpen={openModalArtist} style={customStyles} isEditArtist= {isEditArtist}ariaHideApp={false} artist={artist}>
       <div className="modal-editart">
                <div className="form-box">
-                 {isEditArtist === true ?  (<AddArtistForm isOpen={openModalArtist} /> ):
-                  ( <EditArtistForm isOpen={openModalArtist} artist={artist} />)
+                 {isEditArtist === true ?  <EditArtistForm isOpen={openModalArtist} artist={artist} /> :
+                  <AddArtistForm isOpen={openModalArtist} /> 
                  }       
         
         <div onClick={() => setOpenModalArtist(false)}>
