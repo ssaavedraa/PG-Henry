@@ -20,15 +20,25 @@ export const CardsFav = () => {
         <div className="containerCardsFavsFavs">
           {favs.map((fav) => (
             <div key={fav.id} className="cardsFavs">
-              <div className='detailsImgDiv'>
+              <div className="detailsImgDiv">
                 <img src={fav.paintingPhoto} alt={fav.title} />
-                <div className='containerDetailsFavs'>
-                  <h5><Link to={`/detailpainting/${fav.id}`}>{fav.title}</Link></h5>
+                <div className="containerDetailsFavs">
+                  <h5>
+                    <Link to={`/detailpainting/${fav.id}`}>{fav.title}</Link>
+                  </h5>
                   <p>{fav.artistName}</p>
                   <p>
                     {fav.paintingHeight} x {fav.paintingWidth}
                   </p>
-                  <button onClick={() => deleteFav(fav.id)}>Delete item</button>
+                  <button
+                    onClick={() => {
+                      deleteFav(fav.id).then(() => {
+                        dispatch(getFavs());
+                      });
+                    }}
+                  >
+                    Delete item
+                  </button>
                 </div>
               </div>
               <h4>USD$ {fav.paintingprice}</h4>
@@ -36,7 +46,7 @@ export const CardsFav = () => {
           ))}
         </div>
       ) : (
-        <div className='divNothinghere'>
+        <div className="divNothinghere">
           Nothing here. <Link to="/gallery">See artworks here!</Link>
         </div>
       )}
