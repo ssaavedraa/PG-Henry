@@ -122,7 +122,7 @@ const MyProfile = () => {
   const handleChanges = async () => {
     if (isPassEdit && isPasswordSecure) {
       try {
-        const { data: { status, message } } = await axios.put("http://localhost:3001/user/changePassword", { password, oldPassword })
+        const { data: { status, message } } = await axios.put("user/changePassword", { password, oldPassword })
         if (status === "error") {
           alert(`${message}`)
         } else {
@@ -134,7 +134,7 @@ const MyProfile = () => {
     }
     if (firstName !== user.firstName || lastName !== user.lastName) {
       try {
-        await axios.put("http://localhost:3001/user/changeName", { firstName, lastName });
+        await axios.put("/user/changeName", { firstName, lastName });
         window.location.reload();
       } catch (err) {
         console.log(err)

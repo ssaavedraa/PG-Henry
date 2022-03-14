@@ -9,7 +9,7 @@ export default function GoogleLoginBtn({ onSuccess, onFailure }){
     const {user, setUser} = useContext(AuthContext);
 
     const successResponseGoogle = (res) => {
-        axios.post("http://localhost:3001/user/google/login", { tokenId: res.tokenId })
+        axios.post("/user/google/login", { tokenId: res.tokenId })
         .then(res => { 
             userSet(res.data.token);
             setUser((prev) => { return { ...prev, user: res.data.user } });
