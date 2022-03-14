@@ -10,8 +10,7 @@ import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 const EditArtistForm = (artist) => {
-  console.log(artist);
-  const id = typeof artist === "object" ? artist.artist.id : artist;
+  const id = artist.artist.id;
 
   const dispatch = useDispatch();
 
