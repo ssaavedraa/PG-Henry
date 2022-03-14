@@ -85,8 +85,9 @@
 
 .divContainerTitleFav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  width: inherit;
+  align-items: center;
 }
 
 .containerInfoObra {
@@ -105,7 +106,7 @@
   font-size: 0.9rem;
 }
 
-.buttonLikeObra{
+.buttonLikeObra {
   width: 3rem;
   height: 3rem;
   border-radius: 1.5rem;
@@ -113,13 +114,13 @@
   cursor: pointer;
 }
 
-.buttonLikeObra:hover{
+.buttonLikeObra:hover {
   color: white;
   background: rgb(29, 28, 28);
   transition: all 1s;
 }
 
-.iconLike{
+.iconLike {
   font-size: 1.5rem;
   margin-top: 0.4rem;
 }
@@ -140,7 +141,6 @@
   width: inherit;
 }
 
-
 .divDescriptionArtwork span {
   font-weight: 400;
 }
@@ -159,7 +159,6 @@
   /* gap: 50px; */
   /* align-content: stretch; */
 }
-
 
 .iconHeaderCardDetail {
   width: 1.55rem;

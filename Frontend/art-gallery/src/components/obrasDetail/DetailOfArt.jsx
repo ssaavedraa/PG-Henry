@@ -17,7 +17,7 @@ import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
 
 export const DetailOfArt = () => {
-  const navigate = useNavigate();
+   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { add, cart, remove } = useCart();
@@ -25,19 +25,19 @@ export const DetailOfArt = () => {
   //Manejo de vista
   const { user } = useAuth();
 
-  useEffect(() => {
-    dispatch(getObraDetail(id));
-    dispatch(getObrasRandon(id));
-    dispatch(getFavs());
-  }, [id, dispatch]);
-
   const { detailObra, obraRandon } = useSelector((state) => state);
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
 
+  //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
 
+  useEffect(() => {
+    dispatch(getObraDetail(id));
+    dispatch(getObrasRandon(id));
+    dispatch(getFavs());
+  }, [id, dispatch, isFavorite]);
 
   useEffect(() => {
     setIsFavorite(favsPaitings);
@@ -49,6 +49,7 @@ export const DetailOfArt = () => {
     //Agrego el dispatch del post del like
   }
 
+  //console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -70,7 +71,6 @@ export const DetailOfArt = () => {
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
     navigate(`/detailpainting/${id}`);
-   
   };
 
   //Son utilizados para el toastify
