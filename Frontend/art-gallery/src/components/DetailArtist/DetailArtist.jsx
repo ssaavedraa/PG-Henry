@@ -36,7 +36,7 @@ const DetailArtist = () => {
   // console.log(paintingsByArtist)
 
   const artists = useSelector((state) => state.artistId);
-  //console.log(artists)
+  console.log(artists)
 
   return (
     <div className="divContainer">
@@ -57,7 +57,7 @@ const DetailArtist = () => {
         openModalArtist={openModalArtist}
         setOpenModalArtist={setOpenModalArtist}
         isEditArtist={true}
-        artist={artists}
+        artistId={artists.id}
       />
       <div className="divContainerimg">
         <img src={artists.photo} alt="artist" className="imgArtist" />
