@@ -11,13 +11,11 @@ import {
   GET_SEARCH,
   GET_STATS_ARTIST,
   CLEAR_ARTIST,
-  POST_FAVS,
-  DELETE_FAVS,
   GET_USER_ADMIN,
   ORDER_BY_A_Z,
   ORDER_BY_TYPE,
   GET_FAVS,
-  CLEAR_ARTISTBYID
+  CLEAR_ARTISTBYID,
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -193,6 +191,7 @@ export function getFavs() {
   return async function (dispatch) {
     try {
       const json = await axios.get("favorites/getAll");
+      console.log("actions en favs", json);
       return dispatch({
         type: GET_FAVS,
         payload: json.data,

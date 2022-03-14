@@ -6,7 +6,9 @@ import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 import useAuth from "../../customHooks/useAuth";
-import { addFav, deleteFav} from '../Favs/functionFavs.js';
+import { addFav, deleteFav } from "../Favs/functionFavs.js";
+import { useDispatch } from "react-redux";
+import { getFavs } from "../../redux/actions/actions.js";
 
 function CardPaint({
   image,
@@ -19,31 +21,37 @@ function CardPaint({
   fav,
   id,
 }) {
-
-	//console.log(user);
-	const { user } = useAuth();
-	//Estado para el modal
-	const [openModal, setOpenModal] = useState(false);
-
+  //console.log(user);
+  const { user } = useAuth();
+  //Estado para el modal
+  const [openModal, setOpenModal] = useState(false);
   const [isFavorite, setIsFavorite] = useState(fav);
- 
+  const dispatch = useDispatch();
+
   useEffect(() => {
-		setIsFavorite(fav);
-	}, [fav, setIsFavorite]);
+    setIsFavorite(fav);
+  }, [fav, setIsFavorite]);
 
-
-	function handlePress(id) {
-		setIsFavorite(!isFavorite);
-		!isFavorite ? addFav(id) : deleteFav(id);
-	}
+  async function handlePress(id) {
+    setIsFavorite(!isFavorite);
+    !isFavorite ? await addFav(id) : await deleteFav(id);
+    dispatch(getFavs());
+  }
 
   const { add, remove, cart } = useCart();
 
   return (
     <div className="card">
-      <PaintingModal openModal={openModal} setOpenModal={setOpenModal} ObraId={id} />
+      <PaintingModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        ObraId={id}
+      />
       {user.role === "admin" && (
-        <button onClick={() => setOpenModal(true)} className="btn-header-icon-edit">
+        <button
+          onClick={() => setOpenModal(true)}
+          className="btn-header-icon-edit"
+        >
           <AiFillEdit className="icon-header-card" />
         </button>
       )}

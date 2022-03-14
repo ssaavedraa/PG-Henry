@@ -15,9 +15,8 @@ import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
-
 export const DetailOfArt = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { add, cart, remove } = useCart();
@@ -43,9 +42,10 @@ export const DetailOfArt = () => {
     setIsFavorite(favsPaitings);
   }, [favsPaitings, setIsFavorite]);
 
-  function handlePress(id) {
+  async function handlePress(id) {
     setIsFavorite(!isFavorite);
-    !isFavorite ? addFav(id) : deleteFav(id);
+    !isFavorite ? await addFav(id) : await deleteFav(id);
+    dispatch(getFavs());
     //Agrego el dispatch del post del like
   }
 
@@ -101,7 +101,11 @@ export const DetailOfArt = () => {
         draggable
         pauseOnHover
       />
-      <PaintingModal openModal={openModal} setOpenModal={setOpenModal} ObraId={id} />
+      <PaintingModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        ObraId={id}
+      />
       <div className={styles.principalSectionInterno}>
         <div className={styles.internoimg}>
           <img src={detailObra.photos[0].url} alt="img" />
@@ -216,4 +220,4 @@ export const DetailOfArt = () => {
       </div>
     </div>
   );
-}; 
+};
