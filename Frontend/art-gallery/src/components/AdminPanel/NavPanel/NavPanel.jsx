@@ -20,7 +20,7 @@ const NavPanel = () => {
         <div className="user">
           <Link to="/admin">
             <img src={img} className="img-profile" alt="profile" />
-            <h5>{window.localStorage.getItem("user")}</h5>
+            <h5>Admin</h5>
           </Link>
           <Link to="/admin"> My Profile</Link>
         </div>

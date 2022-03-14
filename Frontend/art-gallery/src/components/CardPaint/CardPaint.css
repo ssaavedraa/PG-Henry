@@ -75,12 +75,14 @@
   border-radius: 8px 8px 0 0;
   border: none;
   cursor: pointer;
-  background-color: rgb(255, 145, 0);
+  /* background-color: rgb(255, 145, 0); */
+  background-color: var(--fifth-color);
   transition: 1.2s;
 }
 
 .btn_card_paint:hover {
   color: var(--third-color);
+  background-color: black;
 }
 
 .icon_add_paint {
