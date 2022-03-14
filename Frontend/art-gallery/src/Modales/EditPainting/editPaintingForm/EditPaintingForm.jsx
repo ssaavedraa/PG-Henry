@@ -12,7 +12,6 @@ import { useState } from "react";
 import logo from "../../../assets/img/SantArtlogo.png";
 
 const EditPaintinfForm = (ObraId) => {
-  
   const dispatch = useDispatch();
   const id = ObraId.ObraId;
   React.useEffect(() => {
@@ -24,7 +23,6 @@ const EditPaintinfForm = (ObraId) => {
   const detailObra = useSelector((state) => state.detailObra);
   // const artists = useSelector((state) => state.artist);
   // const technique = useSelector((state) => state.technique);
-  console.log(detailObra, "soy detailObra edit painting")
 
   const [input, setInput] = useState({
     title: detailObra.title,
@@ -97,7 +95,7 @@ const EditPaintinfForm = (ObraId) => {
 
   return (
     <>
-     { detailObra && detailObra.lenght > 0  ? 
+     
       <div className="principal-box-edit">
         <div className="box-one"></div>
         <div className="data">
@@ -120,7 +118,7 @@ const EditPaintinfForm = (ObraId) => {
                     key="title"
                     className="input"
                     required
-                    // defaultValue={detailObra.title}
+                    defaultValue={detailObra.title}
                     value={input.title}
                     name="title"
                     onChange={handleChange}
@@ -193,8 +191,8 @@ const EditPaintinfForm = (ObraId) => {
             </form>
           </div>
         </div>
-      </div> : <div> Loading</div> }
-    </> 
+      </div>
+    </>
   );
 };
 
