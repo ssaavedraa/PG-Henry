@@ -78,10 +78,7 @@ const EditPaintinfForm = (ObraId) => {
 
   return (
     <>
-<<<<<<< HEAD
      
-=======
->>>>>>> 2d46c6b30a56eec75c4c9c04882fbbed87ee765a
       <div className="principal-box-edit">
         <div className="box-one"></div>
         <div className="data">

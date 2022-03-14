@@ -76,7 +76,15 @@ export default function NavBar() {
           <li>
             <NavLink to="/cart" className={styles.linksNav}>
               <div className={styles.divContainerCartIcon}>
-                <div className={styles.containerCartLength}>{cart.length}</div>
+                <div
+                  className={
+                    cart.length > 0
+                      ? styles.containerCartLengthPlus
+                      : styles.containerCartLength
+                  }
+                >
+                  {cart.length}
+                </div>
                 <AiOutlineShoppingCart className={styles.icon} />
               </div>
             </NavLink>
