@@ -5,6 +5,7 @@ import { getArtist } from "../../redux/actions/actions";
 import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
 import ArtistModal from "../../Modales/EditArtist/ArtistModal";
+import useAuth from "../../customHooks/useAuth";
 
 
 
@@ -13,6 +14,8 @@ export default function Artists(){
 
     const artists = useSelector(state => state.artist)
     const [sort, setSort] = useState('az');
+
+    const {user} = useAuth()
 
     const dispatch = useDispatch()
 
@@ -40,7 +43,6 @@ export default function Artists(){
 
 
     const [openModalArtist, setOpenModalArtist] = useState(false);
-    
 
     return(
         <div className="artists-container1">
@@ -55,9 +57,9 @@ export default function Artists(){
                      <ArtistModal
         openModalArtist={openModalArtist}
         setOpenModalArtist={setOpenModalArtist}
-        isEditArtist= {false}     
+        isEditArtist= {false}
               />
-                    <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>
+                    {user.roler='admin' && <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>}
                 </div>
             </div>
             {
