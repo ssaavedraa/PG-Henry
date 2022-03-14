@@ -93,6 +93,7 @@
 .containerInfoObra {
   display: flex;
   flex-direction: column;
+  width: inherit;
 }
 
 .containerInfoObra h1 {
