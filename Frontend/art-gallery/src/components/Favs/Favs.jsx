@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Favs.css";
 import useCart from "../../customHooks/useCart";
-import { useDispatch, useSelector } from "react-redux";
-import { deleteFav, getFavs } from "../../redux/actions/actions.js";
+// import { useDispatch, useSelector } from "react-redux";
+// import { deleteFav, getFavs } from "../../redux/actions/actions.js";
 import { CardsFav } from "./CardsFavs/CardsFav";
 
 const Favs = () => {
@@ -29,7 +29,7 @@ const Favs = () => {
           </div>
          <CardsFav />
           <div className="divContainerTotal">
-            <p>USD$</p>
+            {/* <p>USD$</p> */}
           </div>
           <div className="divButtons">
             <Link to="/gallery">

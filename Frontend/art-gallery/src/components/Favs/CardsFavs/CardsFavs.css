@@ -1,13 +1,70 @@
-.cardsFavs{
-    display: flex;
-    padding: 0.75rem 0rem;
-    border-bottom: 2px solid var(--fifth-color);
-    justify-content: space-between;
-    align-items: center;
+.containerCardsFavsFavs {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fourth-color);
+  align-items: stretch;
 }
 
-.cardsFavs img {
-    height: 6rem;
-    width: 6rem;
-    object-fit: contain;
-  }
+.cardsFavs {
+  display: flex;
+  padding: 0.75rem 0rem;
+  border-bottom: 2px solid var(--fifth-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerDetailsFavs button {
+  justify-content: center;
+  background-color: var(--fourth-color);
+  border: none;
+  outline: none;
+  padding: 0px;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.containerDetailsFavs button:hover {
+  color: red;
+}
+
+.cardsFavs h4 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cardsFavs h5 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cardsFavs p {
+  font-size: 0.8rem;
+}
+
+.detailsImgDiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.detailsImgDiv img {
+  height: 6rem;
+  width: 6rem;
+  object-fit: contain;
+}
+
+.containerDetailsFavs {
+  padding-left: 2rem;
+}
+
+.divNothinghere {
+  border-bottom: 2px solid var(--fifth-color);
+  padding: 1rem 0rem;
+}
+
+.divNothinghere a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
