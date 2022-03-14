@@ -4,10 +4,6 @@ import {Link} from 'react-router-dom'
 import { getArtist } from "../../redux/actions/actions";
 import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
-import ArtistModal from "../../Modales/EditArtist/ArtistModal";
-
-
-
 
 export default function Artists(){
 
@@ -37,11 +33,6 @@ export default function Artists(){
       dispatch(getArtist())
     }, [dispatch])
 
-
-
-    const [openModalArtist, setOpenModalArtist] = useState(false);
-    
-
     return(
         <div className="artists-container1">
             <div className="artists-header1">
@@ -52,12 +43,7 @@ export default function Artists(){
                         <option value="az">A-Z</option>
                         <option value="za">Z-A</option>
                     </select>
-                     <ArtistModal
-        openModalArtist={openModalArtist}
-        setOpenModalArtist={setOpenModalArtist}
-        isEditArtist= {false}     
-              />
-                    <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>
+                    <button className="btn-create">ADD NEW ARTIST</button>
                 </div>
             </div>
             {
