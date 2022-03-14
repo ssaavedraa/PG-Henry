@@ -54,7 +54,8 @@ export default function Artists(){
                     </select>
                      <ArtistModal
         openModalArtist={openModalArtist}
-        setOpenModalArtist={setOpenModalArtist}     
+        setOpenModalArtist={setOpenModalArtist}
+        isEditArtist= {false}     
               />
                     <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>
                 </div>
