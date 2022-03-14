@@ -28,7 +28,7 @@ const EditArtistModal = ({ openModalArtist, setOpenModalArtist , isAddArtist, is
  
 
   return (
-    <Modal isOpen={openModalArtist} style={customStyles} ariaHideApp={false} artist={artist}>
+    <Modal isOpen={openModalArtist} style={customStyles} isEditArtist= {isEditArtist}ariaHideApp={false} artist={artist}>
       <div className="modal-editart">
                <div className="form-box">
                  {isEditArtist === true ?  <EditArtistForm isOpen={openModalArtist} artist={artist} /> :
