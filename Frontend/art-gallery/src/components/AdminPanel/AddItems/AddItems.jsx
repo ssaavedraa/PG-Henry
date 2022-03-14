@@ -99,6 +99,7 @@ const AddItems = () => {
       <div className="admin-box">
         <NavPanel />
         <div className="principal-box">
+          
           <div className="data">
             <h2> ADD NEW ITEM</h2>
 

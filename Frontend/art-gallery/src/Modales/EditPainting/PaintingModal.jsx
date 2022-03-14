@@ -8,6 +8,7 @@ import EditPaintinfForm from "../EditPainting/editPaintingForm/EditPaintingForm"
 
 
 const EditPaintingModal = ({ openModal, setOpenModal ,ObraId}) => {
+ 
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0,0,0,0.6)",
