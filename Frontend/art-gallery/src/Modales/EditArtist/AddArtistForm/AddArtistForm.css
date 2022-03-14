@@ -27,7 +27,7 @@
     flex-direction: row;
     height: auto;
     justify-content: space-between;   
-    
+    z-index: 6;
    } 
 
    .info-box{
