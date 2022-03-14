@@ -14,18 +14,53 @@ import {
   ORDER_BY_A_Z,
   ORDER_BY_TYPE,
   GET_FAVS,
+  CLEAR_ARTISTBYID,
+	GET_STATS_ARTIST,
+	CLEAR_ARTIST
 } from "../action-types";
 
+
+const detailObra = {
+  orientation: "",
+  id: 1,
+  title: "",
+  description: "",
+  height: 0,
+  width: 0,
+  price: 0,
+  techniques: [
+    {
+      id: 1,
+      name: "",
+      description: "",
+    },
+  ],
+  artist: {
+    id: 1,
+    name: "",
+    biography: "",
+    photo: "",
+    email: "",
+    score: 1,
+  },
+  photos: [
+    {
+      url: "",
+    },
+  ],
+}
+
 const initialState = {
-	//Aca estan todas las pinturas
-	paintings: [],
-	reviews: [],
-	paintingsArtist: [],
-	artistId: [],
-	artist: [],
-	technique: [],
-	resultSearch: [],
-	favs: [],
+  //Aca estan todas las pinturas
+  paintings: [],
+  reviews: [],
+  paintingsArtist: [],
+  artistId: [],
+  artist: [],
+  technique: [],
+  resultSearch: [],
+  favs: [],
+  detailObra,
 };
 
 function rootReducer(state = initialState, action) {
@@ -79,23 +114,23 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         favs: action.payload,
-      }
+      };
     case DELETE_FAVS:
       return {
         ...state,
-        favs: action.payload
-      }
+        favs: action.payload,
+      };
     case GET_USER_ADMIN:
       return {
         ...state,
-        userAdmin: action.payload
-      }
+        userAdmin: action.payload,
+      };
     case ORDER_BY_A_Z:
       return {
         ...state,
-        userAdmin: action.payload
-      }
-   
+        userAdmin: action.payload,
+      };
+
     case ORDER_BY_TYPE:
       return {
         ...state,
@@ -106,9 +141,27 @@ function rootReducer(state = initialState, action) {
 				...state,
 				favs: action.payload,
 			};
-    default:
-      return state;
-  }
+
+		case CLEAR_ARTISTBYID:
+			return{
+				...state,
+				artistId: [],
+			}
+
+		case GET_STATS_ARTIST:
+			return{
+				...state,
+				artist: action.payload
+			}
+
+		case CLEAR_ARTIST:
+			return{
+				...state,
+				artist: []
+			}
+		default:
+			return state;
+	}
 }
 
 export default rootReducer;

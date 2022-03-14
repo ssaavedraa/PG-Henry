@@ -2,8 +2,6 @@ import React from "react";
 import "./MyProfile.css";
 import { useState } from "react";
 import NavPanel from "../NavPanel/NavPanel";
-import AddArtists from "../AddArtists/AddArtists";
-import Sales from "../Sales/Sales";
 import img from "../../../assets/img/profile.png";
 import useAuth from "../../../customHooks/useAuth";
 
