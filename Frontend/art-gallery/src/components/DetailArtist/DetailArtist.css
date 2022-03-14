@@ -1,5 +1,5 @@
 .divContainer {
-  margin: 25px;
+  margin: 1.5625rem;
 }
 
 .divContainer h1 {
@@ -63,15 +63,16 @@ cursor: pointer;
 
 .divButton button{
   width: 250px;
-  height: 30px;
+  height: 2.2rem;
   border: none;
   outline: none;
   border-radius: 8px;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 .divButton button:hover{
   color: white;
+  background-color: var(--btnHover-color) ;
 }

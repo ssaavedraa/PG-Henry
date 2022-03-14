@@ -98,11 +98,31 @@
   cursor: pointer;
 }
 
+.btn-header-icon-edit {
+  width: 13%;
+  height: 7%;
+  margin: 0.9em 0.75rem;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-header-icon-edit:hover {
+  background-color: transparent;
+  color: red;
+}
+
 .btn-header-icon:hover {
   background-color: transparent;
 }
 
-.btn-header-icon:hover .icon-header-card {
+.icon-header-card:hover {
+color: red;
+}
+
+
+.btn-header-icon:hover .icon-header-card{
   color: red;
 }
 

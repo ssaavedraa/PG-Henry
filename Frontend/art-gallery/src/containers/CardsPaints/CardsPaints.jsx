@@ -1,22 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import CardPaint from "../../components/CardPaint/CardPaint";
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getFavs } from "../../redux/actions/actions.js";
-import useAuth from "../../customHooks/useAuth";
 import { useDispatch } from "react-redux";
 import "./CardsPaints.css";
 
 //IsAdmin es una prop pasada para validar si es admin o usuario o guest
 function CardsPaints({ paintings }) {
-	//Booleano para evaluar si es admin
-	//let isAdmin = true;
-	const { user } = useAuth();
 	const dispatch = useDispatch();
+
+	const favs = useSelector((state) => state.favs);
+
 	useEffect(() => {
 		dispatch(getFavs());
 	}, [dispatch]);
-	const favs = useSelector((state) => state.favs);
+	
 
 	return (
 		<div className="containerCards">
