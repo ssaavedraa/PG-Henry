@@ -20,10 +20,10 @@ export default function NavBar() {
   //favs
 
   useEffect(() => {
-		dispatch(getFavs());
-	}, [dispatch]);
+    if (user.role !== "guest") dispatch(getFavs());
+  }, [dispatch]);
 
-  const favs = useSelector((state) => state.favs)
+  const favs = useSelector((state) => state.favs);
   // console.log('soy favs', favs)
 
   function updateField(value, update = true) {
@@ -77,7 +77,7 @@ export default function NavBar() {
         ) : (
           <li>
             <NavLink to="/under" className={styles.linksNav}>
-            <h5>Welcome {user.firstName}!</h5>
+              <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>
         )}
@@ -105,8 +105,10 @@ export default function NavBar() {
           <li>
             <NavLink to="/favs" className={styles.linksNav}>
               <div className={styles.divContainerCartIcon}>
-              <div className={styles.containerCartLengthPlus}>{favs.length}</div>
-              <AiOutlineHeart className={styles.icon} />
+                <div className={styles.containerCartLengthPlus}>
+                  {favs.length}
+                </div>
+                <AiOutlineHeart className={styles.icon} />
               </div>
             </NavLink>
           </li>

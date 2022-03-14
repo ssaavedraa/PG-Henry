@@ -66,7 +66,7 @@ const EditPaintinfForm = (ObraId) => {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(editPainting(id, input));
-    alert("New item create");
+    alert("Painting Updated");
     setInput({
       title: "",
       description: "",
