@@ -3,11 +3,14 @@ import "./AddArtistForm.css";
 import { addNewArtist } from "../../../redux/actions/actions";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
 
+
 const ModalAddArtist = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [input, setInput] = useState({
     name: "",
@@ -28,7 +31,7 @@ const ModalAddArtist = () => {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(addNewArtist(input));
-    alert("New artist create");
+    navigate("/artists");
     setInput({
       name: "",
       biography: "",
