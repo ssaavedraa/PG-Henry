@@ -8,21 +8,29 @@ import {
   getTechnique,
 } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../../assets/img/SantArtlogo.png";
 
 const EditPaintinfForm = (ObraId) => {
   const dispatch = useDispatch();
   const id = ObraId.ObraId;
-  React.useEffect(() => {
+  const detailObra = useSelector((state) => state.detailObra);
+
+  useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getArtist());
     dispatch(getTechnique());
   }, [id, dispatch]);
 
-  const detailObra = useSelector((state) => state.detailObra);
-  // const artists = useSelector((state) => state.artist);
-  // const technique = useSelector((state) => state.technique);
+  useEffect(() => {
+    setInput({
+      title: detailObra.title,
+      description: detailObra.description,
+      height: detailObra.height,
+      width: detailObra.width,
+      price: detailObra.price,
+    });
+  }, [detailObra]);
 
   const [input, setInput] = useState({
     title: detailObra.title,
@@ -55,31 +63,6 @@ const EditPaintinfForm = (ObraId) => {
     }
   }
 
-  // function handleCheck(e){
-  //   let tec= Number(e.target.value)
-  //   if (input.techniqueIds.includes(tec)) {
-  //     setInput({
-  //       ...input,
-  //      techniqueIds: input.techniqueIds.filter((d) => d !== tec)
-  //     });
-  //   }else{
-  //   setInput({
-  //     ...input,
-  //     techniqueIds: [...input.techniqueIds, tec ] ,
-  //   });
-  // }
-
-  // }
-
-  //   function handleSelect(e) {
-
-  //     setInput({
-  //       ...input,
-  //       artistId:Number(e.target.value),
-  //     });
-  //   }
-
-  console.log(input);
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(editPainting(id, input));
@@ -95,7 +78,10 @@ const EditPaintinfForm = (ObraId) => {
 
   return (
     <>
+<<<<<<< HEAD
      
+=======
+>>>>>>> 2d46c6b30a56eec75c4c9c04882fbbed87ee765a
       <div className="principal-box-edit">
         <div className="box-one"></div>
         <div className="data">
@@ -107,10 +93,12 @@ const EditPaintinfForm = (ObraId) => {
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-3">
                 <div className="image-content-form">
-                  <img src={detailObra.photos[0].url} alt="imgUser" />
+                  {detailObra.photos !== "" && (
+                    <img src={detailObra.photos[0].url} alt="imgUser" />
+                  )}
                 </div>
                 <div className="first-dataform">
-                  <h3>{detailObra.artist.name}</h3>
+                  {detailObra.artist && <h3>{detailObra.artist.name}</h3>}
                   <label> Title: </label>
                   <input
                     type="text"
@@ -118,7 +106,6 @@ const EditPaintinfForm = (ObraId) => {
                     key="title"
                     className="input"
                     required
-                    defaultValue={detailObra.title}
                     value={input.title}
                     name="title"
                     onChange={handleChange}
@@ -131,7 +118,6 @@ const EditPaintinfForm = (ObraId) => {
                     key="price"
                     className="input"
                     required
-                    defaultValue={detailObra.price}
                     value={input.price}
                     name="price"
                     onChange={handleChange}
@@ -150,7 +136,6 @@ const EditPaintinfForm = (ObraId) => {
                         value={input.height}
                         name="height"
                         className="input"
-                        defaultValue={detailObra.height}
                         onChange={handleChange}
                       />
                     </div>
@@ -167,7 +152,6 @@ const EditPaintinfForm = (ObraId) => {
                         className="input"
                         value={input.width}
                         name="width"
-                        defaultValue={detailObra.width}
                         onChange={handleChange}
                       />
                     </div>
@@ -181,7 +165,6 @@ const EditPaintinfForm = (ObraId) => {
                 key="description"
                 className="input"
                 value={input.description}
-                defaultValue={detailObra.description}
                 onChange={handleChange}
               />
 
