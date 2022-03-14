@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
-import { getSearchAuto } from "../../redux/actions/actions";
+import { getSearchAuto, getFavs } from "../../redux/actions/actions";
 import Logo from "../../assets/img/SantArtlogo.png";
 import SearchBar from "../SearchBar/SearchBar";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
@@ -16,6 +16,15 @@ export default function NavBar() {
   const { user, logout } = useAuth();
   const resultSearch = useSelector((state) => state.resultSearch);
   const [keyword, setKeyword] = useState("");
+
+  //favs
+
+  useEffect(() => {
+		dispatch(getFavs());
+	}, [dispatch]);
+
+  const favs = useSelector((state) => state.favs)
+  // console.log('soy favs', favs)
 
   function updateField(value, update = true) {
     if (update) {
@@ -62,13 +71,13 @@ export default function NavBar() {
         ) : user.role === "admin" ? (
           <li>
             <NavLink to="/admin" className={styles.linksNav}>
-              <h5>Welcome! {user.firstName}</h5>
+              <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>
         ) : (
           <li>
             <NavLink to="/under" className={styles.linksNav}>
-              <h5>Welcome! {user.firstName}</h5>
+            <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>
         )}
@@ -92,10 +101,13 @@ export default function NavBar() {
         ) : (
           <li></li>
         )}
-        {user.role !== "guest" ? (
+        {user.role === "user" ? (
           <li>
             <NavLink to="/favs" className={styles.linksNav}>
+              <div className={styles.divContainerCartIcon}>
+              <div className={styles.containerCartLengthPlus}>{favs.length}</div>
               <AiOutlineHeart className={styles.icon} />
+              </div>
             </NavLink>
           </li>
         ) : (

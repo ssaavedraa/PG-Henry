@@ -3,19 +3,21 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   getObraDetail,
   getObrasRandon,
-  removeUser,
+  getFavs,
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
-import { AiFillEdit } from "react-icons/ai";
+import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import useCart from "../../customHooks/useCart.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../customHooks/useAuth";
+import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
+
 export const DetailOfArt = () => {
-  const navigate = useNavigate();
+   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { add, cart, remove } = useCart();
@@ -23,14 +25,31 @@ export const DetailOfArt = () => {
   //Manejo de vista
   const { user } = useAuth();
 
+  const { detailObra, obraRandon } = useSelector((state) => state);
+
+  const favs = useSelector((state) => state.favs);
+  const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
+
+  //estado para manejar los favoritos
+  const [isFavorite, setIsFavorite] = useState(favsPaitings);
+
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
-  }, [id, dispatch]);
+    dispatch(getFavs());
+  }, [id, dispatch, isFavorite]);
 
-  const { detailObra, obraRandon } = useSelector((state) => state);
+  useEffect(() => {
+    setIsFavorite(favsPaitings);
+  }, [favsPaitings, setIsFavorite]);
 
-console.log(detailObra, "soy dentalle")
+  function handlePress(id) {
+    setIsFavorite(!isFavorite);
+    !isFavorite ? addFav(id) : deleteFav(id);
+    //Agrego el dispatch del post del like
+  }
+
+  //console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -52,7 +71,6 @@ console.log(detailObra, "soy dentalle")
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
     navigate(`/detailpainting/${id}`);
-   
   };
 
   //Son utilizados para el toastify
@@ -84,41 +102,63 @@ console.log(detailObra, "soy dentalle")
         pauseOnHover
       />
       <PaintingModal openModal={openModal} setOpenModal={setOpenModal} ObraId={id} />
-      <section className={styles.principalSection}>
-        <header className={styles.principalSectionTitle}>
-          {user.role === "admin" ? (
-            <h1>
-              {detailObra.title}
-              <button
-                onClick={() => setOpenModal(true)}
-                className={styles.btnHeaderIconDetail}
-              >
-                <AiFillEdit className={styles.iconHeaderCardDetail} />
-              </button>
-            </h1>
-          ) : (
-            <h1>{detailObra.title}</h1>
-          )}
-        </header>
-        <div className={styles.principalSectionInterno}>
-          <div className={styles.internoimg}>
-            <img src={detailObra.photos[0].url} alt="img" />
-          </div>
-          <div className={styles.internodescription}>
-            <h3>
+      <div className={styles.principalSectionInterno}>
+        <div className={styles.internoimg}>
+          <img src={detailObra.photos[0].url} alt="img" />
+        </div>
+        <div className={styles.internodescription}>
+          <div className={styles.principalSectionArtist}>
+            <div className={styles.principalSectionArtistImg}>
+              <img src={detailObra.artist.photo} alt={detailObra.artist.name} />
+            </div>
+            <div className={styles.divContainerInfoDetail}>
+              <div className={styles.divNameEmail1}>
+                <p> {detailObra.artist.name} </p>
+                <span>{detailObra.artist.email}</span>
+              </div>
               <Link to={`/artists/${detailObra.artist.id}`}>
-                {detailObra.artist.name}
+                <button>More about</button>
               </Link>
-            </h3>
-            <p>
-              <span>{detailObra.description}</span>
-              <span>Height: {detailObra.height} cm</span>
-              <span>Width: {detailObra.width} cm</span>
-              <span>Technique: {detailObra.techniques[0].name}</span>
-
-              <span>Orientation: {detailObra.orientation}</span>
-              <span>USD$ {detailObra.price}</span>
-            </p>
+            </div>
+          </div>
+          <div className={styles.divContainerInfoObra}>
+            <div className={styles.divContainerTitleFav}>
+              <div className={styles.containerInfoObra}>
+                <h1>{detailObra.title}</h1>
+                <span className={styles.spanTech}>
+                  {detailObra.techniques[0].name}
+                </span>
+                <span className={styles.spanDimensions}>
+                  Dimensions {detailObra.width} x {detailObra.height},{" "}
+                  {detailObra.orientation}
+                </span>
+              </div>
+              {user.role === "user" ? (
+                <button
+                  onClick={() => handlePress(id)}
+                  className={styles.buttonLikeObra}
+                >
+                  {isFavorite ? (
+                    <AiTwotoneHeart className={styles.iconLike} />
+                  ) : (
+                    <AiOutlineHeart className={styles.iconLike} />
+                  )}
+                </button>
+              ) : (
+                <div></div>
+              )}
+              {user.role === "admin" ? (
+                <button
+                  onClick={() => setOpenModal(true)}
+                  className={styles.buttonLikeObra}
+                >
+                  <AiFillEdit className={styles.iconHeaderCardDetail} />
+                </button>
+              ) : (
+                <div></div>
+              )}
+            </div>
+            <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
                 <button className={styles.btnCard} onClick={() => removeCart()}>
@@ -134,44 +174,46 @@ console.log(detailObra, "soy dentalle")
             ) : (
               <div></div>
             )}
-            <div className={styles.btnReturn}>
-              <div className={styles.cardImageReturn}>
-                <div></div>
-              </div>
-              <div onClick={handleReturn} className={styles.cardImageReturn}>
-                RETURN TO SEARCH
-              </div>
+          </div>
+          <div className={styles.divDescriptionArtwork}>
+            <h4>About the work</h4>
+            <span>{detailObra.description}</span>
+          </div>
+          <div className={styles.btnReturn}>
+            <div className={styles.cardImageReturn}>
+              <div></div>
+            </div>
+            <div onClick={handleReturn} className={styles.cardImageReturn}>
+              RETURN TO SEARCH
             </div>
           </div>
-          <div className={styles.btnCars}></div>
         </div>
-
-        <div className={styles.principalSectionObras}>
-          <div
-            onClick={handleDecrement}
-            className={styles.obrasDetailDecrement}
-          ></div>
-          <div className={styles.obrasDetail}>
-            {obraRandon
-              ? obraRandon
-                  .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
-                  .map((obra) => (
-                    <div
-                      onClick={() => handleDetail(obra.id)}
-                      key={obra.id}
-                      className={styles.obrasSimilares}
-                    >
-                      <img src={obra.image} alt="cards" />
-                    </div>
-                  ))
-              : ""}
-          </div>
-          <div
-            onClick={handleIncrement}
-            className={styles.obrasDetailIncrement}
-          ></div>
+      </div>
+      <div className={styles.principalSectionObras}>
+        <div
+          onClick={handleDecrement}
+          className={styles.obrasDetailDecrement}
+        ></div>
+        <div className={styles.obrasDetail}>
+          {obraRandon
+            ? obraRandon
+                .slice((page - 1) * maximo, (page - 1) * maximo + maximo)
+                .map((obra) => (
+                  <div
+                    onClick={() => handleDetail(obra.id)}
+                    key={obra.id}
+                    className={styles.obrasSimilares}
+                  >
+                    <img src={obra.image} alt="cards" />
+                  </div>
+                ))
+            : ""}
         </div>
-      </section>
+        <div
+          onClick={handleIncrement}
+          className={styles.obrasDetailIncrement}
+        ></div>
+      </div>
     </div>
   );
-};
+}; 
