@@ -35,6 +35,7 @@ const Favs = () => {
             <Link to="/gallery">
               <button>See more paintings</button>
             </Link>
+            <Link to='/under'>
             <button
               onClick={() => {
                 add();
@@ -42,6 +43,8 @@ const Favs = () => {
             >
               Add to cart
             </button>
+            </Link>
+           
           </div>
         </div>
       </div>

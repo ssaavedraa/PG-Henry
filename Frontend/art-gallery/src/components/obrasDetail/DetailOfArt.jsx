@@ -64,9 +64,9 @@ export const DetailOfArt = () => {
     setPage((prev) => Math.max(prev - 1, 1));
   };
 
-  const handleReturn = () => {
-    navigate(-1);
-  };
+  // const handleReturn = () => {
+  //   navigate(-1);
+  // };
 
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
@@ -187,9 +187,11 @@ export const DetailOfArt = () => {
             <div className={styles.cardImageReturn}>
               <div></div>
             </div>
-            <div onClick={handleReturn} className={styles.cardImageReturn}>
+            <Link to='/gallery'>
+            <div className={styles.cardImageReturn}>
               RETURN TO SEARCH
             </div>
+            </Link>
           </div>
         </div>
       </div>

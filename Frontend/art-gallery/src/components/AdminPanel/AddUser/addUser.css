@@ -111,6 +111,7 @@ font-size: 15px;
         border-radius: 5px;
         border: none;
         background: rgb(199, 198, 198);
+        /* background-color: var(--eigth-color); */
         color: black;
         font-size: 18px;
         margin-left: 10px;
@@ -135,7 +136,7 @@ margin-right: 10px;
 .interno2-div1 {
     width: 100%;
     height: 30px;
-    border-bottom: 2px solid rgb(10, 10, 10);
+    border-bottom: 2px solid var(--fifth-color);
     margin-top: 10px;
 display: flex;
 }
@@ -192,7 +193,7 @@ display: flex;
     height: 50px;
     display: flex;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid var(--fifth-color);
     margin-bottom: -40px;
     padding-top: 4px;
 
