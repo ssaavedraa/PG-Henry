@@ -10,7 +10,7 @@ const port = process.env.PORT || 3001
 conn
   .sync({ force: true })
   .then(() => {
-    if (MOCK_DATA) loadMockData();
+    if (LOAD_MOCK_DATA) loadMockData();
   })
   .then(() => {
     conn.query("CREATE EXTENSION IF NOT EXISTS  pg_trgm;");
