@@ -4,7 +4,6 @@ import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 import ModalAddArtist from "../../../Modales/EditArtist/AddArtistForm/AddArtistForm";
-import ModalArtist from './ModalArtist/ModalArtist'
 import NavPanel from "../NavPanel/NavPanel";
 import ArtistModal from "../../../Modales/EditArtist/ArtistModal";
 import "./Artists.css";
@@ -12,16 +11,17 @@ import "./Artists.css";
 function AddArtists() {
   const dispatch = useDispatch();
   const artists = useSelector((state) => state.artist);
-
+  
+  
   React.useEffect(() => {
     dispatch(getArtitsStat());
   }, [dispatch]);
 
-  const [openModalArtist, setOpenModalArtist] = useState(false);
 
   React.useEffect(() => {
     return () => dispatch(clearArtists());
   }, [dispatch]);
+  const [openModalArtist, setOpenModalArtist] = useState(false);
 
   return (
     <div className="container-addartist">
@@ -83,7 +83,7 @@ function AddArtists() {
 
 export default AddArtists;
 
-function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
+function RowArtist({ artist, openModalArtist, setOpenModalArtist}) {
   return (
     <tr>
       <td className="id-title">{artist.artistId}</td>
@@ -95,12 +95,12 @@ function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
       <td className="review-title">{artist.reviews}</td>
       <td className="sales-title">{artist.sales}</td>
       <td className="button-title">
-        <ArtistModal
+{/*         <ArtistModal
           openModalArtist={openModalArtist}
           setOpenModalArtist={setOpenModalArtist}
-          isEditArtist={true}
+          isEditArtist={false}
           artist={artist.artistId}
-        />
+        /> */}
         {/* <AiFillEdit
           className="icon-artist-eduit"
           onClick={() => setOpenModalArtist(true)}
