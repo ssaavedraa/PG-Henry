@@ -98,7 +98,7 @@ const MyProfile = () => {
     }
     else setIsPasswordSecure(false)
   };
-  
+
   const firstNameChange = (e) => {
     setFirstName(e.target.value)
   };
