@@ -7,10 +7,9 @@ import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
 import { getArtistById } from "../../../redux/actions/actions";
 import { useEffect } from "react";
-import Swal from "sweetalert2";
+import { confirmationSweet } from "../../../components/utils/Notifications/Notifications.js";
 
-const EditArtistForm = ({artist, setOpenModalArtist}) => {
-
+const EditArtistForm = ({ artist, setOpenModalArtist }) => {
   const id = artist.id;
 
   const dispatch = useDispatch();
@@ -38,37 +37,22 @@ const EditArtistForm = ({artist, setOpenModalArtist}) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    confirm();
-    //alert("updated artist data");
+    /*
+      Sweet Alert recibe como argumentos:
+      - primer argumento: Nombre del artista o pintura
+      - segundo argumento, estado que cerrara el modal,
+      - tercer argumento: Booleano 'true' si es para edita, 'false' si es para agregar
+      - cuarto argumento: Booleano 'true' si es artista, 'false' si es una obra
+    */
+    confirmationSweet(artistData.name,confirm, closeModal, false, false);
   }
 
-  function confirm(){
-    const confirmationAdd = Swal.mixin({
-      customClass: {
-        confirmButton: "btnSweet success",
-        cancelButton: "btnSweet danger",
-      },
-      buttonsStyling: false,
-    });
+  function confirm() {
+    dispatch(editArtist(id, input));
+  }
 
-    confirmationAdd.fire({
-      title: 'Are you sure?',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, update!',
-      cancelButtonText: "No, cancel!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        dispatch(editArtist(id, input));
-        Swal.fire(
-          'Updated!',
-          'Your entry has been updated.',
-          'success'
-        )        
-      }
-
-      setOpenModalArtist(false)
-    })
+  function closeModal() {
+    setOpenModalArtist(false);
   }
 
   return (

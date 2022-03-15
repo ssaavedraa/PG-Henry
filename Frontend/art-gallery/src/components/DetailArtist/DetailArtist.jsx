@@ -36,7 +36,6 @@ const DetailArtist = () => {
   // console.log(paintingsByArtist)
 
   const artists = useSelector((state) => state.artistId);
-  //console.log(artists)
 
   return (
     <div className="divContainer">
