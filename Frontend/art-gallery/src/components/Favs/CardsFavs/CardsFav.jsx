@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { deleteFav } from "../functionFavs";
 import { getFavs } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
+import useCart from '../../../customHooks/useCart.js';
 
 export const CardsFav = () => {
   const dispatch = useDispatch();
   const favs = useSelector((state) => state.favs);
+  const { add } = useCart();
   //console.log("soy favs", favs);
 
   useEffect(() => {
@@ -42,6 +44,7 @@ export const CardsFav = () => {
                 </div>
               </div>
               <h4>USD$ {fav.paintingprice}</h4>
+              <button onClick={() => add(parseInt(fav.id))}>Agregar al carrito</button>
             </div>
           ))}
         </div>
