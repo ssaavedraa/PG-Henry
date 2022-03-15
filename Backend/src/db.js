@@ -103,7 +103,6 @@ Review.belongsTo(User);
 User.hasMany(Review);
 User.belongsToMany(Painting, { through: "user_favorites" });
 Painting.belongsToMany(User, { through: "user_favorites" });
-
 User.hasOne(Cart);
 Cart.belongsTo(User);
 Painting.hasMany(Cart);

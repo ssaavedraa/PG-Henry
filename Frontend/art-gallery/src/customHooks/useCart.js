@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 function setArr(key, arr) {
   localStorage.setItem(key, JSON.stringify(arr));
@@ -32,18 +33,25 @@ function useCart() {
   }, []);
 
   function add(paintingId) {
+
     try {
+
       if (Array.isArray(paintingId)) {
         paintingId.forEach((p) => add(p));
         return;
-      }
+      };
+
+      if (localStorage.getItem("jwtToken") !== null) {
+        axios.post(`http://localhost:3001/cart/add/${paintingId}`).catch(err => console.log(err));
+      };
+
       const paintingArr = getArr("painting");
       const id = parseInt(paintingId);
+
       if (isNaN(id)) return;
-      if (paintingArr.includes(id)) {
-        return;
-      }
+      if (paintingArr.includes(id)) return;
       paintingArr.push(id);
+
       setArr("painting", paintingArr);
     } catch (err) {
       console.log(err);
@@ -55,6 +63,11 @@ function useCart() {
 
   function remove(paintingId) {
     try {
+
+      if (localStorage.getItem("jwtToken") !== null) {
+        axios.delete(`http://localhost:3001/cart/remove/${paintingId}`).catch(err => console.log(err));
+      };
+
       let paintingArr = getArr("painting");
       const id = parseInt(paintingId);
       if (isNaN(id)) return;
@@ -71,6 +84,9 @@ function useCart() {
   }
 
   function removeAll() {
+    if (localStorage.getItem("jwtToken") !== null) {
+      axios.delete("http://localhost:3001/cart/removeAll").catch(err => console.log(err));;
+    };
     setArr("painting", []);
     localStorage.removeItem("painting");
   }

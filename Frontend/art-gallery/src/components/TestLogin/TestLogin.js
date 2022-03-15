@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useAuth from "../../customHooks/useAuth";
+import GoogleLoginBtn from "../GoogleLoginBtn/GoogleLoginBtn";
 
 function TestLogin() {
   const { isLoading, user, register, logout, login } = useAuth();
@@ -74,6 +75,7 @@ function TestLogin() {
       <button onClick={() => console.log(user)}>
         Mostrame lo que hay en user en consola
       </button>
+    <GoogleLoginBtn onSuccess={() => {return}} onFailure={() => {return}} />
     </div>
   );
 }
