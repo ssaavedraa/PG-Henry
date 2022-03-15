@@ -2,50 +2,64 @@
 .admin-box{
     display: flex;   
     height: auto;       
-    overflow-y: scroll;   
+    overflow-y: scroll; 
+    
     }
     
 
-.component-box{   
+.principal-box{   
     height: 90vh;
-    width: 85%;
+    width: 85%;    
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    
+    
 }
 
-.title-admin{
-    height: 5%;
-    width: 50%;    
-    margin: auto;
-    text-align: center;
-    padding: 1rem;     
+.box-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.title-admin hr{
-    background-color:var(--eigth-color); 
-    margin: 1rem; 
-}
-.reder-box{
- height: 70%;  
+.image-content-form{
+    overflow: hidden;
+    background-color: antiquewhite;
+    width:50%;
+    height: 80%;
+    margin: 1rem;
+    object-fit: cover;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.3);
+    
 }
 
-.items-box{
-    height: auto;      
-    text-align: center; 
-   }
+.image-content-form img{    
+    height: 250px;  
+}
 
+
+.first-dataform{
+    display: flex;
+    flex-direction: column;
+    width:55%;   
+    
+}
 
 .information-box{
        text-align: center;       
-       padding-top: 2rem;
-       padding-bottom: 2rem;       
+      
+       
    }
 
 
    .data{
-       display: inline-flex;
+       display: flex;
        flex-direction: column;
-       width: 40%;
+       width: 50%;
        text-align: center;
        justify-content: center;
+      
     }
 
 
@@ -53,18 +67,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    
    } 
 
    .data form textarea{
     width: auto;
-    height: 6rem;
+    height: 4rem;
 }
        
    
 
    .input{
-       margin: 0.5rem;
-       height: 2rem;
+       margin: 0.1rem;
+       height: 1.5rem;
        text-align: center;
        font-family: 'Poppins', sans-serif;       
        border-radius: 10px;
@@ -78,6 +93,13 @@
        display: flex;
        flex-direction: row;
        justify-content: space-around;
+   }
+
+   .techniques-box{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       padding: 0.2rem;
    }
 
    .price{

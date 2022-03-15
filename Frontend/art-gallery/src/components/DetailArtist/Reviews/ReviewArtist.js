@@ -17,7 +17,7 @@ const ReviewArtist = ({ id }) => {
   //console.log("Soy las review", reviews);
 
   return (
-    <div>
+    <div className='divContainerReviews'>
       <h3 className="title">Review artist's artworks</h3>
       {reviews && reviews.length > 0 ? (
         <div className="containerReviews">

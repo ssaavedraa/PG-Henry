@@ -7,7 +7,7 @@ const userRegister = async (user, setUser) => {
   });
   try {
     const { data } = await axios.post(
-      "http://localhost:3001/user/register",
+      "/user/register",
       user
     );
     if (data.status === "error") throw new Error(data.message);

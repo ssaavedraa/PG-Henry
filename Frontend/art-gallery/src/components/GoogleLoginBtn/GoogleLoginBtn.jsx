@@ -24,6 +24,7 @@ export default function GoogleLoginBtn({ onSuccess, onFailure }){
         const paintings = JSON.parse(localStorage.getItem("painting"));
         removeAll();
         axios.post("http://localhost:3001/user/google/login", { tokenId: res.tokenId })
+        axios.post("/user/google/login", { tokenId: res.tokenId })
         .then(res => { 
             userSet(res.data.token);
             setUser((prev) => { return { ...prev, user: res.data.user } });

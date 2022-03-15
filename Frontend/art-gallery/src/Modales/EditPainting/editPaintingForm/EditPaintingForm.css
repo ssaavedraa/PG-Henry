@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+.principal-box-edit{
+    width: 68vw;
+    height: 85vh;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+    justify-content: center;
+    
+   
+ }
+
+ .box-one{
+
+    background-image: url("https://res.cloudinary.com/dw6bkceqj/image/upload/v1647084836/santart/edit_painting_c62woy.png");
+    overflow: hidden;
+    width: 65vh;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:cover;  
+}
+
+.box-two{
+    margin: 3rem;
+    width: 90%;
+   
+}
+
+.box-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-content-form{
+    overflow: hidden;
+    
+    width:50%;
+    height: 80%;
+    margin: 1rem;
+    object-fit: cover;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.3);
+    
+}
+
+.image-content-form img{
+    
+    height: 250px;
+  
+}
+
+
+.first-dataform{
+    display: flex;
+    flex-direction: column;
+    width:55%;
+    padding: 2rem;
+
+    
+    
+}
+
+.title-admin hr{
+    background-color:var(--eigth-color); 
+    margin: 1rem; 
+}
+
+
+
+
+.information-box{
+       text-align: center;       
+       padding-top: 2rem;
+       padding-bottom: 2rem;  
+        
+   }
+
+
+   
+
+
+.data form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    
+   } 
+
+   .data form textarea{
+    width: auto;
+    height: 6rem;
+}
+       
+   
+
+   .input{
+       margin: 0.3rem;
+       height: 1.5rem;
+       text-align: center;
+       font-family: 'Poppins', sans-serif;       
+       border-radius: 10px;
+   }
+
+   .input:hover{       
+       background-color: rgb(231, 231, 231);
+   }
+
+   .width-height{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+   }
+
+   .techniques-box{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       padding: 0.5rem;
+   }
+
+   .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+   }
+
+
+   .btn-create{
+    height: 3rem;
+    width: 12rem;
+    list-style: none;
+    background-color: var(--btnMain-Color);
+    border-radius: 20px;
+    border-style: none;
+    margin: 1rem; 
+    color: white;
+}
+
+.btn-create:hover{
+ background-color: var(--btnHover-color);
+}

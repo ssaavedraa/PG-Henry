@@ -10,7 +10,7 @@ import {
   getArtistById,
 } from "../../redux/actions/actions";
 import useAuth from "../../customHooks/useAuth";
-import EditArtistModal from "../../Modales/EditArtist/EditArtistModal";
+import ArtistModal from "../../Modales/EditArtist/ArtistModal";
 import { AiFillEdit } from "react-icons/ai";
 
 //Componente que renderiza el detalle de un artista
@@ -53,9 +53,11 @@ const DetailArtist = () => {
       ) : (
         <h1>{artists.name}</h1>
       )}
-      <EditArtistModal
+      <ArtistModal
         openModalArtist={openModalArtist}
         setOpenModalArtist={setOpenModalArtist}
+        isEditArtist={true}
+        artist={artists}
       />
       <div className="divContainerimg">
         <img src={artists.photo} alt="artist" className="imgArtist" />

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+.img-container1{
+    background-image: url("https://res.cloudinary.com/dw6bkceqj/image/upload/v1647084744/santart/edit_artist_ateuv7.png");
+    overflow: hidden;
+    width: 65vh;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:cover;   
+    }
+
+.profile-logo{  
+    justify-content: flex-end;
+    display: flex;    
+    padding-top: 2rem;
+    height: 0.5rem;
+}
+
+.imgRedonda {
+    width:8rem;
+    height:7rem;
+    border-radius:150px;
+}
+.artists-box{       
+    width: 100%;      
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;   
+    z-index: 6;
+   } 
+
+   .info-box{
+       text-align: center;              
+       width: 80vh; 
+           
+   }
+
+   .data-box{
+       display: inline-flex;
+       flex-direction: column;       
+       text-align: center;
+       width: 28rem;
+       justify-content: center;         
+       
+          }
+          
+   .data-box form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto; 
+   }
+
+   .data-box form textarea{
+       width: auto;
+       height: 4rem;
+       width: auto;
+   }
+
+   .data-box form label{
+   
+    font-weight: 600;
+
+}
+
+   .input-addartist{
+       margin: 0.2rem;
+       height: 1.5rem;
+       width: auto;
+       text-align: center;
+       font-family: 'Poppins', sans-serif;
+       border-radius: 10px;
+   }
+
+   .input:hover{
+       background-color: rgb(231, 231, 231);
+   }
+
+
+
+   .btn-create{
+       height: 3rem;
+       width: 12rem;
+       list-style: none;
+       background-color: var(--btnMain-Color);
+       border-radius: 20px;
+       border-style: none;
+       margin: 1rem; 
+       color: white;
+   }
+
+   .btn-create:hover{
+    background-color: var(--btnHover-color);
+   }

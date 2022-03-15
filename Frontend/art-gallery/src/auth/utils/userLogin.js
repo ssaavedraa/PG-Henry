@@ -6,7 +6,7 @@ const userLogin = async (user, setUser) => {
     return { ...prevUser, isLoading: true };
   });
   try {
-    const { data } = await axios.post("http://localhost:3001/user/login", user);
+    const { data } = await axios.post("/user/login", user);
     if (data.status === "error") throw new Error(data.message);
     userSet(data.token);
     setUser((prevUser) => {
