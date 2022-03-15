@@ -4,7 +4,6 @@ import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 import ModalAddArtist from "../../../Modales/EditArtist/AddArtistForm/AddArtistForm";
-import ModalArtist from "./ModalArtist/ModalArtist";
 import NavPanel from "../NavPanel/NavPanel";
 import ArtistModal from "../../../Modales/EditArtist/ArtistModal";
 import "./Artists.css";
