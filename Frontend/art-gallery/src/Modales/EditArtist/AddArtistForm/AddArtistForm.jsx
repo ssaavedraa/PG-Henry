@@ -8,7 +8,7 @@ import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
 
 
-const ModalAddArtist = () => {
+const ModalAddArtist = (setOpenModalArtist) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -31,6 +31,7 @@ const ModalAddArtist = () => {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(addNewArtist(input));
+    
     navigate("/artists");
     setInput({
       name: "",
@@ -39,6 +40,8 @@ const ModalAddArtist = () => {
       email: "",
       location: "",
     });
+
+    
   }
   return (
     <>
