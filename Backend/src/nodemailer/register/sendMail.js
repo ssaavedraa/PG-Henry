@@ -1,15 +1,16 @@
 const transporter = require("../transporter.js");
 const { TEST_USER } = process.env;
 
-const emailSender = async (destinatary, name, password) => {
+const emailSender = async (destinatary, name, url, token) => {
     const mailOptions = {
         from: TEST_USER,
         to: destinatary,
-        subject: "Password reset.",
-        template: "resetPassword",
+        subject: "New Account.",
+        template: "register",
         context: {
             name,
-            password,
+            url,
+            token
         }
     };
 
