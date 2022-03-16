@@ -9,8 +9,8 @@ import useCart from "../../../customHooks/useCart.js";
 export const CardsFav = () => {
   const dispatch = useDispatch();
   const favs = useSelector((state) => state.favs);
-  const { add, cart } = useCart();
-  //console.log("soy favs", favs);
+  const { add, remove, cart } = useCart();
+  console.log("soy favs", favs);
 
   useEffect(() => {
     dispatch(getFavs());
@@ -44,14 +44,15 @@ export const CardsFav = () => {
                 </div>
               </div>
                 <h4>USD$ {fav.paintingprice}</h4>
-                {fav.isAvailable === "true" ? (
-                  <h4 className="textNotAvalibleFavs">Not available</h4>
-                ) : (
+                {fav.isAvailable ? (
                   <h4 className="textAvalibleFavs">Available</h4>
+                ) : (
+                  <h4 className="textNotAvalibleFavs">Not available</h4>
+                  
                 )}
                 {cart.includes(parseInt(fav.id)) ? (
                   <button
-                    onClick={() => add(parseInt(fav.id))}
+                    onClick={() => remove(parseInt(fav.id))}
                     className="btnAddCartFavs"
                     disabled={!fav.isAvailable}
                   >

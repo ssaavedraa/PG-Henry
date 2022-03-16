@@ -4,6 +4,8 @@ import {
   getObraDetail,
   getObrasRandon,
   getFavs,
+  availablePainting,
+  notAvailablePainting
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
@@ -25,13 +27,16 @@ export const DetailOfArt = () => {
   const { user } = useAuth();
 
   const { detailObra, obraRandon } = useSelector((state) => state);
+  //console.log('detalles de la obra', detailObra)
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
-
+  //estado para manejar la disponibilidad del la pintura
+  const [isAvailable, setIsAvailable] = useState(false);
+  console.log(isAvailable)
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -47,6 +52,12 @@ export const DetailOfArt = () => {
     !isFavorite ? await addFav(id) : await deleteFav(id);
     dispatch(getFavs());
     //Agrego el dispatch del post del like
+  }
+
+  async function handleAvailable(id) {
+    setIsAvailable(!isAvailable)
+    !isAvailable ? await availablePainting(id) : await notAvailablePainting(id);
+    dispatch(getObraDetail(id))
   }
 
   //console.log(detailObra);
@@ -163,16 +174,31 @@ export const DetailOfArt = () => {
               )}
             </div>
             <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
+            <div>
+              {detailObra.isAvailable !== "true" ?
+              <span>Sold</span> :
+              <span>Sale</span>
+              }
+              {user.role === 'admin' ? (
+                <button onClick={() => handleAvailable(id)}>
+                  {
+                    isAvailable ? <p>Sold</p> : <p>sale</p>
+                  }
+                 </button>
+              ) : <div></div>}
+            </div>
+           
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
-                <button className={styles.btnCard} onClick={() => removeCart()}>
+                <button className={styles.btnCard} onClick={() => removeCart()} disabled={!detailObra.isAvailable}>
                   <div className={styles.cardImage}>-</div>
                   <div className={styles.cardText}>REMOVE FROM CART</div>
                 </button>
               ) : (
-                <button className={styles.btnCard} onClick={() => addCart()}>
+                <button className={styles.btnCard} onClick={() => addCart()} disabled={!detailObra.isAvailable}>
                   <div className={styles.cardImage}>+</div>
                   <div className={styles.cardText}>ADD TO CART</div>
+                  
                 </button>
               )
             ) : (

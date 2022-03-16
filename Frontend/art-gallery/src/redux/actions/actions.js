@@ -97,21 +97,20 @@ export function getPaitingsByArtist(id) {
 }
 
 export const getObraDetail = (id) => {
-	return async (dispatch) => {
-		try {
-			let { data } = await axios.get(`/painting/get/${id}`);
-			
-			dispatch({
-				type: GET_OBRAID,
-				payload: data,
-			});
-			console.log(data, "soy obra detail action")
-		} catch (error) {
-			console.log("Id not found");
-		}
-	};
-};
+  return async (dispatch) => {
+    try {
+      let { data } = await axios.get(`/painting/get/${id}`);
 
+      dispatch({
+        type: GET_OBRAID,
+        payload: data,
+      });
+      console.log(data, "soy obra detail action");
+    } catch (error) {
+      console.log("Id not found");
+    }
+  };
+};
 
 export const getObrasRandon = (id) => {
   return async (dispatch) => {
@@ -153,14 +152,14 @@ export function getTechnique() {
 }
 
 export const addNewArtist = (payload) => {
-  console.log(payload)
+  console.log(payload);
   return async function (dispatch) {
     try {
       const response = await axios.post("/artist/create", payload);
       console.log(response);
       return dispatch({
         type: ADD_ARTIST,
-        payload: response.data
+        payload: response.data,
       });
     } catch (err) {
       console.log(err);
@@ -228,10 +227,7 @@ export function clearArtists() {
 export const editArtist = (id, payload) => {
   return async function (dispatch) {
     try {
-      const data = await axios.put(
-        `/artist/update/${id}`,
-        payload
-      );
+      const data = await axios.put(`/artist/update/${id}`, payload);
       console.log(data);
       return data;
     } catch (err) {
@@ -243,10 +239,7 @@ export const editArtist = (id, payload) => {
 export const editPainting = (id, payload) => {
   return async function (dispatch) {
     try {
-      const data = await axios.put(
-        `/painting/update/${id}`,
-        payload
-      );
+      const data = await axios.put(`/painting/update/${id}`, payload);
       console.log(data);
       return data;
     } catch (err) {
@@ -258,10 +251,7 @@ export const editPainting = (id, payload) => {
 export const addTechnique = (payload) => {
   return async function (dispatch) {
     try {
-      const post = await axios.post(
-        "/technique/add",
-        payload
-      );
+      const post = await axios.post("/technique/add", payload);
       console.log(post);
       return post;
     } catch (err) {
@@ -273,9 +263,7 @@ export const addTechnique = (payload) => {
 export const removeTechnique = (id) => {
   return async function (dispatch) {
     try {
-      const post = await axios.delete(
-        `/technique/remove/${id}`
-      );
+      const post = await axios.delete(`/technique/remove/${id}`);
       console.log(post);
       return post;
     } catch (err) {
@@ -299,9 +287,7 @@ export const getUserAdmin = () => {
 export const removeUser = (id) => {
   return async (dispatch) => {
     try {
-      const json = await axios.put(
-        `/user/removeadmin/${id}`
-      );
+      const json = await axios.put(`/user/removeadmin/${id}`);
       dispatch(getUserAdmin());
     } catch (error) {
       console.log(error);
@@ -311,9 +297,7 @@ export const removeUser = (id) => {
 export const giveUserAdmin = (id) => {
   return async (dispatch) => {
     try {
-      const json = await axios.put(
-        `/user/giveadmin/${id}`
-      );
+      const json = await axios.put(`/user/giveadmin/${id}`);
       dispatch(getUserAdmin());
     } catch (error) {
       console.log(error);
@@ -345,21 +329,18 @@ export function unBanUser(id) {
 export const resetPasswordUser = (id) => {
   return async (dispatch) => {
     try {
-      const json = await axios.put(
-        `/user/passreset/${id}`
-      );
+      const json = await axios.put(`/user/passreset/${id}`);
       dispatch(getUserAdmin());
     } catch (error) {
       console.log(error);
     }
   };
 };
+
 export const orderBySort = (name) => {
   return async (dispatch) => {
     try {
-      const json = await axios.get(
-        `/user/getall?order=${name}`
-      );
+      const json = await axios.get(`/user/getall?order=${name}`);
       dispatch({
         type: ORDER_BY_A_Z,
         payload: json.data,
@@ -372,9 +353,7 @@ export const orderBySort = (name) => {
 export const orderBySortType = (name) => {
   return async (dispatch) => {
     try {
-      const json = await axios.get(
-        `/user/getall?orderBy=${name}`
-      );
+      const json = await axios.get(`/user/getall?orderBy=${name}`);
       dispatch({
         type: ORDER_BY_TYPE,
         payload: json.data,
@@ -384,3 +363,17 @@ export const orderBySortType = (name) => {
     }
   };
 };
+
+//Funciones para la disponibilidad de las pinturas
+
+export async function availablePainting(id) {
+  try {
+    await axios.put(`/painting/setAvailable/${id}`);
+  } catch (error) {}
+}
+
+export async function notAvailablePainting(id) {
+  try {
+    await axios.put(`/painting/setNotAvailable/${id}`);
+  } catch (error) {}
+}
