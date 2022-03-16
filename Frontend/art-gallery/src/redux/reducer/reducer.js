@@ -16,7 +16,8 @@ import {
   GET_FAVS,
   CLEAR_ARTISTBYID,
 	GET_STATS_ARTIST,
-	CLEAR_ARTIST
+	CLEAR_ARTIST,
+  ADD_ARTIST
 } from "../action-types";
 
 
@@ -159,6 +160,13 @@ function rootReducer(state = initialState, action) {
 				...state,
 				artist: []
 			}
+
+    case ADD_ARTIST:
+      console.log(state.artist)
+      return{
+        ...state,
+        artist: [...state.artist, action.payload]
+      }
 		default:
 			return state;
 	}

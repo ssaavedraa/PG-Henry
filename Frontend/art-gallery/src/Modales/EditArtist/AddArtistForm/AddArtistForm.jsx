@@ -3,16 +3,14 @@ import "./AddArtistForm.css";
 import { addNewArtist } from "../../../redux/actions/actions";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
 import { confirmationSweet } from "../../../components/utils/Notifications/Notifications";
-
+import { useNavigate } from "react-router-dom";
 
 const AddArtistForm = (setOpenModalArtist) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [input, setInput] = useState({
     name: "",
     biography: "",
@@ -21,7 +19,6 @@ const AddArtistForm = (setOpenModalArtist) => {
     location: "",
   });
 
-  console.log(input);
   function handleChange(e) {
     setInput({
       ...input,

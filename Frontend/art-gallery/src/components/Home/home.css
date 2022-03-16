@@ -1,8 +1,4 @@
-
-
-
-
- .container-home{
+.container-home{
     height: 80vh;
     display: flex;
     flex-direction: column;

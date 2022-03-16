@@ -17,8 +17,6 @@ export default function Artists(){
 
     const {user} = useAuth()
 
-    console.log(user)
-
     const dispatch = useDispatch()
 
     useEffect(() => {
