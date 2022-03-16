@@ -3,15 +3,12 @@ import "./AddArtistForm.css";
 import { addNewArtist } from "../../../redux/actions/actions";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
 
 
-const ModalAddArtist = (setOpenModalArtist) => {
+const ModalAddArtist = ({setOpenModalArtist}) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
   const [input, setInput] = useState({
     name: "",
     biography: "",
@@ -20,7 +17,6 @@ const ModalAddArtist = (setOpenModalArtist) => {
     location: "",
   });
 
-  console.log(input);
   function handleChange(e) {
     setInput({
       ...input,
@@ -31,8 +27,6 @@ const ModalAddArtist = (setOpenModalArtist) => {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(addNewArtist(input));
-    
-    navigate("/artists");
     setInput({
       name: "",
       biography: "",
@@ -40,9 +34,10 @@ const ModalAddArtist = (setOpenModalArtist) => {
       email: "",
       location: "",
     });
-
-    
+    setOpenModalArtist(false)
   }
+
+  console.log(setOpenModalArtist)
   return (
     <>
       <div className="artists-box">
