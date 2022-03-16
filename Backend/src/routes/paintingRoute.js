@@ -9,5 +9,7 @@ router.get("/search", paintingControllers.search);
 router.get("/search/suggestions/:searchBy", paintingControllers.getSuggestions);
 router.post("/create", paintingControllers.add);
 router.put("/update/:id", paintingControllers.update);
+router.put("/setAvailable/:id", paintingControllers.setAvailable);
+router.put("/setNotAvailable/:id", paintingControllers.setNotAvailable);
 
 module.exports = router;
