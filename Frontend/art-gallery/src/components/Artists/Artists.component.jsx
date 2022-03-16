@@ -56,8 +56,7 @@ export default function Artists(){
                     </select>
                      <AddArtistModal
         openModalArtist={openModalArtist}
-        setOpenModalArtist={setOpenModalArtist}
-        isEditArtist= {false}
+        setOpenModalArtist={setOpenModalArtist}        
               />
                     {user.role === 'admin' && <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>}
                 </div>

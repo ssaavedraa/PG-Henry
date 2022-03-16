@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import AddArtistForm from "./AddArtistForm"
 
 
-const AddArtistModal = ({openModalArtist, setOpenModalArtist , artist}) => { 
+const AddArtistModal = ({openModalArtist, setOpenModalArtist }) => { 
 
   const customStyles = {
     overlay: {
@@ -25,7 +25,7 @@ const AddArtistModal = ({openModalArtist, setOpenModalArtist , artist}) => {
  
 
   return (
-    <Modal isOpen={openModalArtist} style={customStyles} setOpenModalArtist={setOpenModalArtist} ariaHideApp={false} artist={artist}>
+    <Modal isOpen={openModalArtist} style={customStyles} setOpenModalArtist={setOpenModalArtist} ariaHideApp={false}>
       <div className="modal-editart">
                <div className="form-box">
                  

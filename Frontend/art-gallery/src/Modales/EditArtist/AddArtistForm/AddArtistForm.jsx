@@ -18,6 +18,7 @@ const AddArtistForm = (setOpenModalArtist) => {
     email: "",
     location: "",
   });
+  console.log(input)
 
   function handleChange(e) {
     setInput({
