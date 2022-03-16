@@ -1,5 +1,6 @@
 const { User } = require("../../db");
 const createJWT = require("./utils/createJWT");
+const emailSender = require("../../nodemailer/register/sendMail.js");
 
 const register = async (req, res) => {
   const {
@@ -9,17 +10,17 @@ const register = async (req, res) => {
 
   try {
     const existingUser = await User.findOne({
-      where: { email: email, googleUser: false },
+      where: { email, googleUser: false },
     });
 
     if (existingUser)
       return res.json({ status: "error", message: "email is already used" });
 
     const user = await User.create({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
+      firstName,
+      lastName,
+      email,
+      password,
       role: "user",
     });
 
@@ -33,10 +34,9 @@ const register = async (req, res) => {
 
     const token = createJWT(user.id);
 
-    console.log(
-      "Esto es un mail a user.mail, que le manda un link a:",
-      url + "/user/verify/" + token
-    );
+    const link = `${url}/user/verify/${token}`
+
+    emailSender(user.email, user.firstName, link).catch((err) => res.status(400).json({ err: err.message }));
 
     res.json({
       status: "ok",
