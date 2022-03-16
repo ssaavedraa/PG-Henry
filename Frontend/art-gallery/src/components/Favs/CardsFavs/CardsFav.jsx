@@ -5,6 +5,7 @@ import { deleteFav } from "../functionFavs";
 import { getFavs } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
 import useCart from '../../../customHooks/useCart.js';
+import { FaCartArrowDown } from "react-icons/fa";
 
 export const CardsFav = () => {
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ export const CardsFav = () => {
               </div>
               <h4>USD$ {fav.paintingprice}</h4>
               <h4>Available</h4>
-              <button onClick={() => add(parseInt(fav.id))}>Agregar al carrito</button>
+              <button onClick={() => add(parseInt(fav.id))} className='btnAddCartFavs'>Add to cart</button>
             </div>
           ))}
         </div>
