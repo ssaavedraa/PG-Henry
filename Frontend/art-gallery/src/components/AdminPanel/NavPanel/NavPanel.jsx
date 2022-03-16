@@ -12,7 +12,7 @@ import useAuth from "../../../customHooks/useAuth";
 
 const NavPanel = () => {
   const session = useSelector((state) => state.auth);
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
 
   return (
     <>
@@ -20,7 +20,7 @@ const NavPanel = () => {
         <div className="user">
           <Link to="/admin">
             <img src={img} className="img-profile" alt="profile" />
-            <h5>Admin</h5>
+            <h5>{user.firstName}</h5>
           </Link>
           <Link to="/admin"> My Profile</Link>
         </div>
