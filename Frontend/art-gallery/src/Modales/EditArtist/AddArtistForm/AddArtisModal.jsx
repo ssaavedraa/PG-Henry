@@ -1,12 +1,12 @@
 import React from "react";
 import Modal from "react-modal";
-import "./ArtistModal.css";
+import "./AddArtistModal.css";
 import { FaTimes } from "react-icons/fa";
 // import UnderConstruction from "../../components/UnderConstruction/UnderConstruction";
-import AddArtistForm from "./AddArtistForm/AddArtistForm"
-import EditArtistForm from "./EditArtistForm/EditArtistForm"
+import AddArtistForm from "./AddArtistForm"
 
-const EditArtistModal = ({ openModalArtist, setOpenModalArtist , isAddArtist, isEditArtist, artist}) => { 
+
+const AddArtistModal = ({openModalArtist, setOpenModalArtist }) => { 
 
   const customStyles = {
     overlay: {
@@ -19,21 +19,18 @@ const EditArtistModal = ({ openModalArtist, setOpenModalArtist , isAddArtist, is
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      padding: "none"
-      
-      
-      
+      padding: "none"                 
     },
   };
  
 
   return (
-    <Modal isOpen={openModalArtist} style={customStyles} isEditArtist= {isEditArtist}ariaHideApp={false} artist={artist}>
+    <Modal isOpen={openModalArtist} style={customStyles} setOpenModalArtist={setOpenModalArtist} ariaHideApp={false}>
       <div className="modal-editart">
                <div className="form-box">
-                 {isEditArtist === true ?  <EditArtistForm isOpen={openModalArtist} setOpenModalArtist={setOpenModalArtist} artist={artist} /> :
+                 
                   <AddArtistForm isOpen={openModalArtist}  setOpenModalArtist={setOpenModalArtist} /> 
-                 }       
+                        
         
         <div onClick={() => setOpenModalArtist(false)}>
             <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
@@ -44,4 +41,4 @@ const EditArtistModal = ({ openModalArtist, setOpenModalArtist , isAddArtist, is
   );
 };
 
-export default EditArtistModal;
+export default AddArtistModal;
