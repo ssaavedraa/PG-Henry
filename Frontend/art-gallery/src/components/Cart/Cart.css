@@ -1,13 +1,13 @@
-.containerFavAll {
+.containerCartAll {
   margin: 1rem;
   min-height: 90vh;
 }
 
-.containerFavAll h1 {
+.containerCartAll h1 {
   text-align: center;
 }
 
-.containerFav {
+.containerCart {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -23,11 +23,11 @@
   margin-top: 1rem;
 }
 
-.divContainerTotal p{
-    font-weight: bold;
-    font-size: 1rem;
-    color: black;
-    margin-left: 0.5rem;
+.divContainerTotal p {
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  margin-left: 0.5rem;
 }
 
 .divButtons {
@@ -48,11 +48,11 @@
 }
 
 .divButtons button:hover {
-    color: white;
-    background-color: var(--btnHover-color);
+  color: white;
+  background-color: var(--btnHover-color);
 }
 
-.divPrecioFav {
+.divPrecio {
   justify-content: end;
   border-bottom: 2px solid var(--fifth-color);
   width: 100%;
@@ -61,21 +61,21 @@
 }
 
 .divPrecio button {
-    margin-right: 6.5rem;
-    outline: none;
-    border: none;
-    padding: 0.5rem 1.75rem;
-    border-radius: 4px;
-    background-color: red;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-  }
+  margin-right: 6.5rem;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1.75rem;
+  border-radius: 4px;
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
 
-  .divPrecioFav h5{
-      text-align: end;
-    align-items: flex-end;
-    justify-content: end;
-    font-size: 1.15rem;
-    margin-bottom: -0.9rem;
-  }
+.divPrecio h5 {
+  text-align: end;
+  align-items: flex-end;
+  justify-content: end;
+  font-size: 1.15rem;
+  margin-bottom: -0.9rem;
+}
