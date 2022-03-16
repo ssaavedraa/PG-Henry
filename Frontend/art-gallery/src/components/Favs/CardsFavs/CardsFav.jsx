@@ -10,7 +10,7 @@ export const CardsFav = () => {
   const dispatch = useDispatch();
   const favs = useSelector((state) => state.favs);
   const { add } = useCart();
-  //console.log("soy favs", favs);
+  console.log("soy favs", favs);
 
   useEffect(() => {
     dispatch(getFavs());
@@ -44,6 +44,7 @@ export const CardsFav = () => {
                 </div>
               </div>
               <h4>USD$ {fav.paintingprice}</h4>
+              <h4>Available</h4>
               <button onClick={() => add(parseInt(fav.id))}>Agregar al carrito</button>
             </div>
           ))}

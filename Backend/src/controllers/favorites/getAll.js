@@ -7,7 +7,7 @@ const getAll = async (req, res) => {
       attributes: ["id", "firstName"],
       include: {
         model: Painting,
-        attributes: ["id", "title", "height", "width", "price"],
+        attributes: ["id", "title", "height", "width", "price", "isAvailable"],
         include: [{ model: Photo }, { model: Artist }],
       },
     });

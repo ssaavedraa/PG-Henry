@@ -191,7 +191,7 @@ export function getFavs() {
   return async function (dispatch) {
     try {
       const json = await axios.get("favorites/getAll");
-      console.log("actions en favs", json);
+      //console.log("actions en favs", json);
       return dispatch({
         type: GET_FAVS,
         payload: json.data,
