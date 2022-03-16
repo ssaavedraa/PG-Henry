@@ -243,6 +243,7 @@ export const editPainting = (id, payload) => {
         payload
       );
       console.log(data);
+     
       return data;
     } catch (err) {
       console.log(err);
@@ -380,3 +381,11 @@ export const orderBySortType = (name) => {
     }
   };
 };
+export const setAvailable = async (id) => {
+  const json = await axios.put(
+    `/painting/setAvailable/${id}`
+  );
+console.log(json.data)
+return json
+
+}
