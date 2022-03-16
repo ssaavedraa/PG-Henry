@@ -16,6 +16,7 @@ import {
   ORDER_BY_TYPE,
   GET_FAVS,
   CLEAR_ARTISTBYID,
+  ADD_ARTIST,
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -152,11 +153,15 @@ export function getTechnique() {
 }
 
 export const addNewArtist = (payload) => {
+  console.log(payload)
   return async function (dispatch) {
     try {
-      const post = await axios.post("/artist/create", payload);
-      console.log(post);
-      return post;
+      const response = await axios.post("/artist/create", payload);
+      console.log(response);
+      return dispatch({
+        type: ADD_ARTIST,
+        payload: response.data
+      });
     } catch (err) {
       console.log(err);
     }
@@ -286,7 +291,6 @@ export const getUserAdmin = () => {
         type: GET_USER_ADMIN,
         payload: json.data,
       });
-      // console.log(json)
     } catch (error) {
       console.log(error);
     }

@@ -23,6 +23,7 @@ const getAll = async (req, res) => {
         paintingprice: fav.price,
         artistName: fav.artist.name,
         artistPhoto: fav.artist.photo,
+        isAvailable: fav.isAvailable,
       };
     });
     if (!favoritesArray.length) return res.json([]);
