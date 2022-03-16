@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { deleteFav } from "../functionFavs";
 import { getFavs } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
-import useCart from '../../../customHooks/useCart.js';
-import { FaCartArrowDown } from "react-icons/fa";
+import useCart from "../../../customHooks/useCart.js";
 
 export const CardsFav = () => {
   const dispatch = useDispatch();
   const favs = useSelector((state) => state.favs);
-  const { add } = useCart();
-  console.log("soy favs", favs);
+  const { add, cart } = useCart();
+  //console.log("soy favs", favs);
 
   useEffect(() => {
     dispatch(getFavs());
@@ -44,10 +43,30 @@ export const CardsFav = () => {
                   </button>
                 </div>
               </div>
-              <h4>USD$ {fav.paintingprice}</h4>
-              <h4>Available</h4>
-              <button onClick={() => add(parseInt(fav.id))} className='btnAddCartFavs'>Add to cart</button>
-            </div>
+                <h4>USD$ {fav.paintingprice}</h4>
+                {fav.isAvailable === "true" ? (
+                  <h4 className="textNotAvalibleFavs">Not available</h4>
+                ) : (
+                  <h4 className="textAvalibleFavs">Available</h4>
+                )}
+                {cart.includes(parseInt(fav.id)) ? (
+                  <button
+                    onClick={() => add(parseInt(fav.id))}
+                    className="btnAddCartFavs"
+                    disabled={!fav.isAvailable}
+                  >
+                    Remove to cart
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => add(parseInt(fav.id))}
+                    className="btnAddCartFavs"
+                    disabled={!fav.isAvailable}
+                  >
+                    Add to cart
+                  </button>
+                )}
+              </div>
           ))}
         </div>
       ) : (

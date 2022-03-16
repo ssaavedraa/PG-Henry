@@ -30,8 +30,9 @@
 }
 
 .containerPriceStatus h5 {
-  padding-left: 8.5rem;
-  font-size: 1.15rem;
+  padding-left: 9.5rem;
+  font-size: 1rem;
+  /* color: var(--eigth-color); */
 }
 
 .divContainerTotal {
