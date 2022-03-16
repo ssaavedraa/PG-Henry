@@ -5,7 +5,7 @@ import {
   getObrasRandon,
   getFavs,
   availablePainting,
-  notAvailablePainting
+  notAvailablePainting,
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
@@ -34,9 +34,7 @@ export const DetailOfArt = () => {
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
-  //estado para manejar la disponibilidad del la pintura
-  const [isAvailable, setIsAvailable] = useState(false);
-  console.log(isAvailable)
+ 
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -54,10 +52,9 @@ export const DetailOfArt = () => {
     //Agrego el dispatch del post del like
   }
 
-  async function handleAvailable(id) {
-    setIsAvailable(!isAvailable)
-    !isAvailable ? await availablePainting(id) : await notAvailablePainting(id);
-    dispatch(getObraDetail(id))
+  async function handleAvailable(id, detailObraisAvailable) {
+    !detailObraisAvailable ? await availablePainting(id) : await notAvailablePainting(id);
+    dispatch(getObraDetail(id));
   }
 
   //console.log(detailObra);
@@ -174,31 +171,47 @@ export const DetailOfArt = () => {
               )}
             </div>
             <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
-            <div>
-              {detailObra.isAvailable !== "true" ?
-              <span>Sold</span> :
-              <span>Sale</span>
-              }
-              {user.role === 'admin' ? (
-                <button onClick={() => handleAvailable(id)}>
-                  {
-                    isAvailable ? <p>Sold</p> : <p>sale</p>
-                  }
-                 </button>
-              ) : <div></div>}
+            <div className={styles.divContainerPaintingAvailible}>
+              {detailObra.isAvailable ? (
+                <span className={styles.spanPaintingAvailible}>
+                  This painting is available
+                </span>
+              ) : (
+                <span className={styles.spanNotAvailible}>
+                  This painting isn't available
+                </span>
+              )}
+              {user.role === "admin" ? (
+                <button onClick={() => handleAvailable(id, detailObra.isAvailable)}>
+                  {detailObra.isAvailable ? (
+                    <p className={styles.pTextPaintingforSale}>Painting for sale</p>
+                  ) : (
+                    <p className={styles.pTextPaintingSold}>Painting sold</p>
+                  )}
+                </button>
+              ) : (
+                <div></div>
+              )}
             </div>
-           
+
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
-                <button className={styles.btnCard} onClick={() => removeCart()} disabled={!detailObra.isAvailable}>
+                <button
+                  className={styles.btnCard}
+                  onClick={() => removeCart()}
+                  disabled={!detailObra.isAvailable}
+                >
                   <div className={styles.cardImage}>-</div>
                   <div className={styles.cardText}>REMOVE FROM CART</div>
                 </button>
               ) : (
-                <button className={styles.btnCard} onClick={() => addCart()} disabled={!detailObra.isAvailable}>
+                <button
+                  className={styles.btnCard}
+                  onClick={() => addCart()}
+                  disabled={!detailObra.isAvailable}
+                >
                   <div className={styles.cardImage}>+</div>
                   <div className={styles.cardText}>ADD TO CART</div>
-                  
                 </button>
               )
             ) : (
@@ -213,10 +226,8 @@ export const DetailOfArt = () => {
             <div className={styles.cardImageReturn}>
               <div></div>
             </div>
-            <Link to='/gallery'>
-            <div className={styles.cardImageReturn}>
-              RETURN TO SEARCH
-            </div>
+            <Link to="/gallery">
+              <div className={styles.cardImageReturn}>RETURN TO SEARCH</div>
             </Link>
           </div>
         </div>

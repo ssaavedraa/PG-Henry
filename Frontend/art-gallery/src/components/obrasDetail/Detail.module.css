@@ -6,7 +6,7 @@
 
 .btnReturn a {
   text-decoration: none;
-  color: black
+  color: black;
 }
 
 .principalHeader {
@@ -118,7 +118,7 @@
   border-radius: 1.5rem;
   border: none;
   cursor: pointer;
-  color:red 
+  color: red;
 }
 
 .buttonLikeObra:hover {
@@ -130,7 +130,6 @@
 .iconLike {
   font-size: 1.5rem;
   margin-top: 0.4rem;
-  
 }
 
 .spanTech {
@@ -140,7 +139,7 @@
 .spanPrice {
   padding: 0.75rem 0rem 0rem;
   border-top: 0.15rem solid var(--third-color);
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1.2rem;
 }
 
@@ -359,4 +358,40 @@
   color: black;
   font-size: 20px;
   font-weight: 800;
+}
+
+.spanPaintingAvailible {
+  color: green;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+.spanNotAvailible {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+.divContainerPaintingAvailible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divContainerPaintingAvailible button{
+  border: none;
+  outline: none;
+  height: 2.25rem;
+  width: 9rem;
+  border-radius: 0.5rem;
+}
+
+.pTextPaintingforSale{
+color: red
+}
+
+.pTextPaintingSold{
+color: green
 }
