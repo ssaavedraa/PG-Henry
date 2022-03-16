@@ -22,7 +22,6 @@ function CardPaint({
   fav,
   id,
 }) {
-  //console.log(user);
   const { user } = useAuth();
   //Estado para el modal
   const [openModal, setOpenModal] = useState(false);

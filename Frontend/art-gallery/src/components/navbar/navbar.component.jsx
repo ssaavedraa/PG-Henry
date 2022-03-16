@@ -24,7 +24,6 @@ export default function NavBar() {
   }, [dispatch]);
 
   const favs = useSelector((state) => state.favs);
-  // console.log('soy favs', favs)
 
   function updateField(value, update = true) {
     if (update) {

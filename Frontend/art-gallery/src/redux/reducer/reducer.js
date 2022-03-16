@@ -17,7 +17,8 @@ import {
   CLEAR_ARTISTBYID,
 	GET_STATS_ARTIST,
 	CLEAR_ARTIST,
-  ADD_ARTIST
+  ADD_ARTIST,
+  EDIT_PAINT
 } from "../action-types";
 
 
@@ -162,12 +163,12 @@ function rootReducer(state = initialState, action) {
 			}
 
     case ADD_ARTIST:
-      console.log(state.artist)
       return{
         ...state,
         artist: [...state.artist, action.payload]
       }
-		default:
+    case EDIT_PAINT:
+    default:
 			return state;
 	}
 }

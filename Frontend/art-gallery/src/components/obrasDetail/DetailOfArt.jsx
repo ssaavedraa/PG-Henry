@@ -27,7 +27,6 @@ export const DetailOfArt = () => {
   const { user } = useAuth();
 
   const { detailObra, obraRandon } = useSelector((state) => state);
-  //console.log('detalles de la obra', detailObra)
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
@@ -36,7 +35,6 @@ export const DetailOfArt = () => {
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
   //estado para manejar la disponibilidad del la pintura
   const [isAvailable, setIsAvailable] = useState(false);
-  console.log(isAvailable)
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -60,7 +58,6 @@ export const DetailOfArt = () => {
     dispatch(getObraDetail(id))
   }
 
-  //console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
