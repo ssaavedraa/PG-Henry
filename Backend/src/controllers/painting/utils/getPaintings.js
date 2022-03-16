@@ -11,6 +11,7 @@ const getPaintings = async (condition, techniqueCondition) => {
       "height",
       "width",
       "price",
+      "isAvailable",
     ],
     include: [
       {

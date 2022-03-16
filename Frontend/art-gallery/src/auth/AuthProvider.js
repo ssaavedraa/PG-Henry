@@ -4,23 +4,23 @@ import userReset from "./utils/userReset";
 import AuthContext, { initalUser } from "./authContext";
 
 function AuthProvider({ children }) {
-  const [user, setUser] = useState({ ...initalUser, isLoading: true });
+  const [user, setUser] = useState({ ...initalUser, firstLoad: true });
   const value = { user, setUser };
 
   useEffect(() => {
     setUser((prev) => {
-      return { ...prev, isLoading: true };
+      return { ...prev, firstLoad: true };
     });
     userGet()
       .then((user) => {
         setUser((prev) => {
-          return { ...prev, user, isLoading: false };
+          return { ...prev, user, firstLoad: false };
         });
       })
       .catch(() => {
         userReset();
         setUser((prev) => {
-          return { ...prev, isLoading: false };
+          return { ...prev, firstLoad: false };
         });
       });
   }, []);
