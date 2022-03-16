@@ -2,13 +2,18 @@ const { User } = require("../../db");
 const createJWT = require("./utils/createJWT");
 
 const register = async (req, res) => {
-
-  const { firstName, lastName, email, password } = req.body;
+  const {
+    user: { firstName, lastName, email, password },
+    url,
+  } = req.body;
 
   try {
-    const existingUser = await User.findOne({ where: { email: email, googleUser: false } });
+    const existingUser = await User.findOne({
+      where: { email: email, googleUser: false },
+    });
 
-    if (existingUser) return res.json({ status: "error", message: "email is already used" });
+    if (existingUser)
+      return res.json({ status: "error", message: "email is already used" });
 
     const user = await User.create({
       firstName: firstName,
@@ -28,12 +33,15 @@ const register = async (req, res) => {
 
     const token = createJWT(user.id);
 
+    console.log(
+      "Esto es un mail a user.mail, que le manda un link a:",
+      url + "/user/verify/" + token
+    );
+
     res.json({
       status: "ok",
       user: sendUserInfo,
-      token,
     });
-
   } catch (e) {
     res.status(400).json(e);
   }
