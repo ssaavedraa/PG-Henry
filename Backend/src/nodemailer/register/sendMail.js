@@ -1,7 +1,7 @@
 const transporter = require("../transporter.js");
 const { TEST_USER } = process.env;
 
-const emailSender = async (destinatary, name) => {
+const emailSender = async (destinatary, name, url, token) => {
     const mailOptions = {
         from: TEST_USER,
         to: destinatary,
@@ -9,7 +9,8 @@ const emailSender = async (destinatary, name) => {
         template: "register",
         context: {
             name,
-            link
+            url,
+            token
         }
     };
 

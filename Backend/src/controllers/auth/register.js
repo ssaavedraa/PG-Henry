@@ -34,9 +34,7 @@ const register = async (req, res) => {
 
     const token = createJWT(user.id);
 
-    const link = `${url}/user/verify/${token}`
-
-    emailSender(user.email, user.firstName, link).catch((err) => res.status(400).json({ err: err.message }));
+    emailSender(email, firstName, url, token).catch((err) => res.status(400).json({ err: err.message }));
 
     res.json({
       status: "ok",
