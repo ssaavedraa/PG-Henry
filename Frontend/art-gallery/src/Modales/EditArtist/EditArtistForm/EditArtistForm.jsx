@@ -11,12 +11,8 @@ import { confirmationSweet } from "../../../components/utils/Notifications/Notif
 import { useNavigate } from "react-router-dom";
 
 const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
-  // console.log(artist, "soy artist en edit")
 
   const id = artistId;
-  // console.log(id , "soy id artist.id")
-
-
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

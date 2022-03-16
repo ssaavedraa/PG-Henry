@@ -9,7 +9,6 @@ import EditArtistForm from "./EditArtistForm"
 
 const EditArtistModal = ({ openEditArtistModal, setOpenEditArtistModal ,artistId}) => { 
   
-console.log(artistId, "soy modal edit")
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0,0,0,0.6)",

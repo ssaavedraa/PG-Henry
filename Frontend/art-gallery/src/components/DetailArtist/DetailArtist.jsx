@@ -33,7 +33,6 @@ const DetailArtist = () => {
   }, [dispatch, id]);
 
   const paintingsArtist = useSelector((state) => state.paintingsArtist);
-  // console.log(paintingsByArtist)
 
   const artists = useSelector((state) => state.artistId);
 

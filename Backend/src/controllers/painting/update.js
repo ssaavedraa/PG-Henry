@@ -1,4 +1,5 @@
 const { Painting, painting_technique } = require("../../db");
+const getPaintings = require("./utils/getPaintings");
 const updatePhotos = require("./utils/updatePhotos.js");
 
 const update = async (req, res) => {
@@ -14,7 +15,7 @@ const update = async (req, res) => {
 
     //Updating photos
 
-    const updatedPainting = await Painting.findOne({ where: { id } });
+    //const updatedPainting = await Painting.findOne({ where: { id } });
     //updatePhotos(photos, updatedPainting);
 
     //Updating techniques
@@ -30,7 +31,8 @@ const update = async (req, res) => {
     );
 
     if (update == 1) {
-      res.json("painting updated succesfully");
+      const updatedPainting = await getPaintings({ where: { id } });
+      res.json(updatedPainting);
     } else {
       res.json("painting update failed");
     }
