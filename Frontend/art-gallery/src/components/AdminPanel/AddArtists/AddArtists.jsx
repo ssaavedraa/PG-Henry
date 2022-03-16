@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
-import ModalAddArtist from "../../../Modales/EditArtist/AddArtistForm/AddArtistForm";
+import EditArtistModal from "../../../Modales/EditArtist/EditArtistForm/EditArtistModal";
 import NavPanel from "../NavPanel/NavPanel";
-import ArtistModal from "../../../Modales/EditArtist/ArtistModal";
+import AddArtistModal from "../../../Modales/EditArtist/AddArtistForm/AddArtisModal";
 import "./Artists.css";
 
 function AddArtists() {
@@ -20,6 +20,7 @@ function AddArtists() {
 
   React.useEffect(() => {
     return () => dispatch(clearArtists());
+
   }, [dispatch]);
   const [openModalArtist, setOpenModalArtist] = useState(false);
 
@@ -28,7 +29,7 @@ function AddArtists() {
       <NavPanel />
       <div className="admin-profile-container">
         <div className="artists-header">
-          <ArtistModal
+          <AddArtistModal
             openModalArtist={openModalArtist}
             setOpenModalArtist={setOpenModalArtist}
             isEditArtist={false}
@@ -95,7 +96,7 @@ function RowArtist({ artist, openModalArtist, setOpenModalArtist}) {
       <td className="review-title">{artist.reviews}</td>
       <td className="sales-title">{artist.sales}</td>
       <td className="button-title">
-{/*         <ArtistModal
+{/*         <EditArtistModal
           openModalArtist={openModalArtist}
           setOpenModalArtist={setOpenModalArtist}
           isEditArtist={false}

@@ -18,3 +18,4 @@ export const GET_FAVS = "GET_FAVS";
 export const CLEAR_ARTISTBYID = "CLEAR_ARTISTBYID";
 export const GET_STATS_ARTIST = "GET_STATS_ARTIST";
 export const CLEAR_ARTIST = "CLEAR_ARTIST";
+export const ADD_ARTIST = 'ADD_ARTIST'
