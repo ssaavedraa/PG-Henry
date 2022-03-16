@@ -6,9 +6,10 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
+import { confirmationSweet } from "../../../components/utils/Notifications/Notifications";
 
 
-const ModalAddArtist = (setOpenModalArtist) => {
+const AddArtistForm = (setOpenModalArtist) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -30,19 +31,26 @@ const ModalAddArtist = (setOpenModalArtist) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(addNewArtist(input));
-    
-    navigate("/artists");
-    setInput({
-      name: "",
-      biography: "",
-      photo: "",
-      email: "",
-      location: "",
-    });
 
+    confirmationSweet(input.name, confirm, closeModal, false, true);   
     
   }
+  
+  function confirm() {
+    dispatch(addNewArtist(input));
+    navigate("/artists");   
+  }
+
+  function closeModal() {
+    setOpenModalArtist(false);
+  }
+
+
+
+
+
+
+
   return (
     <>
       <div className="artists-box">
@@ -195,4 +203,4 @@ const ModalAddArtist = (setOpenModalArtist) => {
     </>
   );
 };
-export default ModalAddArtist;
+export default AddArtistForm;

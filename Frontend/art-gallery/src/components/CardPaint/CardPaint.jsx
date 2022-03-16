@@ -9,6 +9,7 @@ import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs.js";
 import { useDispatch } from "react-redux";
 import { getFavs } from "../../redux/actions/actions.js";
+import loading from "../../assets/img/loading-img.gif"
 
 function CardPaint({
   image,
@@ -66,7 +67,11 @@ function CardPaint({
         </button>
       )}
       <NavLink to={"/detailpainting/" + id} className="linksCard" key={id}>
-        <img src={image} alt="img-obra" className="image" />
+       { image ?  <img src={image} alt="img-obra" className="image" /> : <img
+      src={loading}
+      alt="loading"
+      width="40px"
+    />}
         <div className="data-paint">
           <h4>{title}</h4>
           <h5>{artist.name}</h5>

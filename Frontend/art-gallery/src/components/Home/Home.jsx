@@ -14,7 +14,11 @@ function Home() {
 
   return (
     <div className="container-home">
-      <h2>Most popular artworks</h2>
+        <div className="text-conteiner-home">
+<span className="line anim-typewriter"> THE BEST PAINTINGS & ARTISTS</span>
+
+</div>
+      
       <div className="content-all">
         <div className="content-carrousel">
           {paintsPopulars.map((paint) => (
@@ -28,6 +32,7 @@ function Home() {
           ))}
         </div>
       </div>
+    
     </div>
   );
 }
