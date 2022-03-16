@@ -120,7 +120,9 @@ export default function Register({ open, onClose }) {
   const onRegister = () => {
     register(registerUser)
       .then((user) => {
-        alert(`Bienvendido ${user.firstName}`);
+        alert(
+          `Welcome ${user.firstName}, a mail was sent to your address to finish your registration`
+        );
         onClose();
         setRegisterUser({
           firstName: "",

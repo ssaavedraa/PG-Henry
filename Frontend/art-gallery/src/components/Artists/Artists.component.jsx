@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { getArtist } from "../../redux/actions/actions";
 import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
-import ArtistModal from "../../Modales/EditArtist/ArtistModal";
+import AddArtistModal from "../../Modales/EditArtist/AddArtistForm/AddArtisModal";
 import useAuth from "../../customHooks/useAuth";
 
 
@@ -54,11 +54,10 @@ export default function Artists(){
                         <option value="az">A-Z</option>
                         <option value="za">Z-A</option>
                     </select>
-                     <ArtistModal
-                        openModalArtist={openModalArtist}
-                        setOpenModalArtist={setOpenModalArtist}
-                        isEditArtist= {false}
-                    />
+                     <AddArtistModal
+        openModalArtist={openModalArtist}
+        setOpenModalArtist={setOpenModalArtist}        
+              />
                     {user.role === 'admin' && <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>}
                 </div>
             </div>

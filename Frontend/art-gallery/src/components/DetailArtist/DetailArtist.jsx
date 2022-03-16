@@ -10,7 +10,7 @@ import {
   getArtistById,
 } from "../../redux/actions/actions";
 import useAuth from "../../customHooks/useAuth";
-import ArtistModal from "../../Modales/EditArtist/ArtistModal";
+import EditArtistModal from "../../Modales/EditArtist/EditArtistForm/EditArtistModal";
 import { AiFillEdit } from "react-icons/ai";
 
 //Componente que renderiza el detalle de un artista
@@ -21,7 +21,7 @@ const DetailArtist = () => {
   const [openModal, setOpenModal] = useState(false);
 
   //Estado para el modal de artistas
-  const [openModalArtist, setOpenModalArtist] = useState(false);
+  const [openEditArtistModal, setOpenEditArtistModal] = useState(false);
   const { id } = useParams();
 
   //Manejo de vista
@@ -43,7 +43,7 @@ const DetailArtist = () => {
         <h1>
           {artists.name}
           <button
-            onClick={() => setOpenModalArtist(true)}
+            onClick={() => setOpenEditArtistModal(true)}
             className="btnHeaderIconArtist"
           >
             <AiFillEdit className="iconHeaderCardArtist" />
@@ -52,11 +52,10 @@ const DetailArtist = () => {
       ) : (
         <h1>{artists.name}</h1>
       )}
-      <ArtistModal
-        openModalArtist={openModalArtist}
-        setOpenModalArtist={setOpenModalArtist}
-        isEditArtist={true}
-        artist={artists}
+      <EditArtistModal
+        openEditArtistModal={openEditArtistModal}
+        setOpenEditArtistModal={setOpenEditArtistModal}        
+        artistId={id}
       />
       <div className="divContainerimg">
         <img src={artists.photo} alt="artist" className="imgArtist" />

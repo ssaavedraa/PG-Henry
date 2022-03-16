@@ -8,45 +8,47 @@ const { Artist, Technique, Review, User, Purchase } = require("../src/db");
 
 const createPainting = require("../src/controllers/painting/utils/createPainting");
 const {
-	DEFAULT_USER_EMAIL,
-	DEFAULT_USER_PASSWORD,
-	DEFAULT_ADMIN_EMAIL,
-	DEFAULT_ADMIN_PASSWORD,
+  DEFAULT_USER_EMAIL,
+  DEFAULT_USER_PASSWORD,
+  DEFAULT_ADMIN_EMAIL,
+  DEFAULT_ADMIN_PASSWORD,
 } = process.env;
 
 const loadMockData = async () => {
-	console.log('loading mock data')
+  console.log("loading mock data");
 
-	await Technique.bulkCreate(techniques);
-	await Artist.bulkCreate(artists);
-	await User.bulkCreate(users);
-	await User.create({
-		firstName: "defaul",
-		lastName: "user",
-		email: 'default-user@santart.com',
-		password: 'user123!',
-		role: "user",
-	});
-	await User.create({
-		firstName: "admin",
-		lastName: "default",
-		email: 'admin@santart.com',
-		password: '@dm1n2022!',
-		role: "admin",
-	});
-	for (let p of paintings) {
-		await createPainting(p);
-	}
+  await Technique.bulkCreate(techniques);
+  await Artist.bulkCreate(artists);
+  await User.bulkCreate(users);
+  await User.create({
+    firstName: "defaul",
+    lastName: "user",
+    email: "default-user@santart.com",
+    password: "user123!",
+    role: "user",
+    isVerified: true,
+  });
+  await User.create({
+    firstName: "admin",
+    lastName: "default",
+    email: "admin@santart.com",
+    password: "@dm1n2022!",
+    role: "admin",
+    isVerified: true,
+  });
+  for (let p of paintings) {
+    await createPainting(p);
+  }
 
-	for (let i = 0; i < purchases.length; i++) {
-		const createdPurchase = await Purchase.create(purchases[i]);
-		await createdPurchase.addPaintings(purchases[i].paintingId);
-	}
-	/* for (let i = 0; i < reviews.length; i++) {
+  for (let i = 0; i < purchases.length; i++) {
+    const createdPurchase = await Purchase.create(purchases[i]);
+    await createdPurchase.addPaintings(purchases[i].paintingId);
+  }
+  /* for (let i = 0; i < reviews.length; i++) {
 		const createdReview = await Review.create(reviews[i]);
 		await createdReview.addUser(reviews[i].userId);
 	} */
-	await Review.bulkCreate(reviews);
+  await Review.bulkCreate(reviews);
 };
 
 module.exports = loadMockData;
