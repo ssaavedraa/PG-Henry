@@ -110,17 +110,19 @@ font-size: 15px;
         height: 30px;
         border-radius: 5px;
         border: none;
-        background: rgb(199, 198, 198);
+        /* background: rgb(199, 198, 198); */
         /* background-color: var(--eigth-color); */
         color: black;
         font-size: 18px;
         margin-left: 10px;
+        border: 2px solid var(--fifth-color);
     }
     .nav-select-1 > option {
         background: #F5F5F3;
         font-size: 18px;
         border-radius: 5px;
-        border: none;
+        /* border: 2px solid var(--fifth-color); */
+        /* border: none; */
     }
     .order-input >label {
 margin-right: 10px;
@@ -204,3 +206,29 @@ display: flex;
 .panelinterno2 {
     margin-top: 100px;
 }
+.color-reset {
+    background: rgb(235, 87, 99) !important;
+    color: white;
+    font-weight: 800;
+}
+.color-remove {
+    background: #147970 !important;
+    color: white;
+    font-weight: 800;
+}
+.color-unban {
+    background: #ccdae4 !important;
+    color: #0f4970;
+    font-weight: 800;
+}
+.color-admin {
+    background: #0f4970 !important;
+    color: #C1D4E1;
+    font-weight: 800;
+}
+.color-add {
+    background: #50b9b1 !important;
+    color: white;
+    font-weight: 800;
+}
+

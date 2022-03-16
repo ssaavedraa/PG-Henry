@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react"
 import './addUser.css'
 
-
 import NavPanel from "../NavPanel/NavPanel";
 
-import ModalBtn from "./ModalAddAdmin/ModalBtn";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserAdmin, orderBySort, orderBySortType } from "../../../redux/actions/actions";
-
+import { banUser, getUserAdmin, giveUserAdmin, orderBySort, orderBySortType, removeUser, resetPasswordUser, unBanUser } from "../../../redux/actions/actions";
+import Swal from "sweetalert2";
 
 
 
@@ -21,17 +19,6 @@ export const AddUser = () => {
 
   }, [])
 
-
-  const [openModal1, setOpenModal1] = useState(false);
-  const [dataMsj, setDataMsj] = useState({
-    mensaje: '',
-    id: 0
-  });
-
-  const handleRemoveAdmin = (data1, id) => {
-    setDataMsj(data => ({ ...data, mensaje: data1, id: id }))
-    setOpenModal1(true)
-  }
   const handleSort = (e) => {
     e.preventDefault();
     dispatch(orderBySort(e.target.value))
@@ -40,6 +27,70 @@ export const AddUser = () => {
     e.preventDefault();
     dispatch(orderBySortType(e.target.value))
   }
+
+  function confirm(name, id){
+    const confirmationAdd = Swal.mixin({
+      customClass: {
+        confirmButton: "btnSweet success",
+        cancelButton: "btnSweet danger",
+      },
+      buttonsStyling: false,
+    });
+
+    confirmationAdd.fire({
+      title: 'Are you sure?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, update!',
+      cancelButtonText: "No, cancel!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        if (name === 'remove') {
+          dispatch( (removeUser(id))) 
+          Swal.fire(
+            'Updated!',
+            'Your entry has been updated.',
+            'success'
+          ) 
+        } else if (name === 'add'){
+          dispatch(giveUserAdmin(id)) 
+          Swal.fire(
+            'Updated!',
+            'Your entry has been updated.',
+            'success'
+          ) 
+          
+        }else if (name === 'ban'){
+          dispatch(banUser(id)) 
+          Swal.fire(
+            'Updated!',
+            'Your entry has been updated.',
+            'success'
+          ) 
+          
+        }else if (name === 'unban'){
+          dispatch(unBanUser(id)) 
+          Swal.fire(
+            'Updated!',
+            'Your entry has been updated.',
+            'success'
+          ) 
+          
+        }else if (name === 'reset'){
+          dispatch(resetPasswordUser(id))  
+          Swal.fire(
+            'Updated!',
+            'Your entry has been updated.',
+            'success'
+          ) 
+        }      
+      }
+
+    })
+  }
+
+
   if (!state) {
     return <h2>Loading</h2>
   }
@@ -70,7 +121,7 @@ export const AddUser = () => {
                     <div>
                       <label>Ordenador por</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
-                        <option value="0">Order ⇵:</option>
+                        <option value="0">Order:</option>
                         <option value="email">Email</option>
                         <option value="firstName">FirstName</option>
                         <option value="id">Id</option>
@@ -80,7 +131,7 @@ export const AddUser = () => {
                     <div>
                       <label>Sort By Name</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)} >
-                        <option value="0">Order ⇵:</option>
+                        <option value="0">Order:</option>
                         <option value="ASC">A-Z</option>
                         <option value="DESC">Z-A</option>
                       </select>
@@ -107,14 +158,14 @@ export const AddUser = () => {
                               <p>{ele.firstName}</p>
                               <p>{ele.email}</p>
 
-                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('reset', ele.id)}>Reset Password</button>
-                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('remove', ele.id)}>Remove Admin</button>
+                              <button className="color-reset" disabled={ele.isBanned} onClick={() => confirm('reset', ele.id)}>Reset Password</button>
+                              <button className="color-remove" disabled={ele.isBanned} onClick={() => confirm('remove', ele.id)}>Remove Admin</button>
                               {
                                 ele.isBanned ?
-                                  <button onClick={() => handleRemoveAdmin('unban', ele.id)}>UnBan User</button>
+                                  <button className="color-admin" onClick={() => confirm('unban', ele.id)}>UnBan User</button>
 
                                   :
-                                  <button onClick={() => handleRemoveAdmin('ban', ele.id)}>Ban User</button>
+                                  <button className="color-unban"  onClick={() => confirm('ban', ele.id)}>Ban User</button>
                               }
                               {ele.isBanned ?
                                 <h2 className="h2-banned">
@@ -122,7 +173,7 @@ export const AddUser = () => {
                                 :
                                 ''
                               }
-                              <ModalBtn openModal={openModal1} setOpenModal={setOpenModal1} data={dataMsj} />
+                              
                             </div>
                             :
                             ''
@@ -142,7 +193,7 @@ export const AddUser = () => {
                     <div>
                       <label>Ordenador por</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
-                        <option value="0">Order ⇵:</option>
+                        <option value="0">Order:</option>
                         <option value="email">Email</option>
                         <option value="firstName">FirstName</option>
                         <option value="id">Id</option>
@@ -152,7 +203,7 @@ export const AddUser = () => {
                     <div className="panel-button">
                       <label>Sort By Name</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)}>
-                        <option value="0">Order ⇵:</option>
+                        <option value="0">Order:</option>
                         <option value="ASC">A-Z</option>
                         <option value="DESC">Z-A</option>
                       </select>
@@ -178,15 +229,15 @@ export const AddUser = () => {
                               <h4>{ele.id}</h4>
                               <p>{ele.firstName}</p>
                               <p>{ele.email}</p>
-                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('reset', ele.id)}>Reset Password</button>
-                              <button disabled={ele.isBanned} onClick={() => handleRemoveAdmin('add', ele.id)}>Add Admin</button>
+                              <button className="color-reset" disabled={ele.isBanned} onClick={() => confirm('reset', ele.id)}>Reset Password</button>
+                              <button className="color-add" disabled={ele.isBanned} onClick={() => confirm('add', ele.id)}>Add Admin</button>
 
                               {
                                 ele.isBanned ?
-                                  <button onClick={() => handleRemoveAdmin('unban', ele.id)}>UnBan User</button>
+                                  <button className="color-admin" onClick={() => confirm('unban', ele.id)}>UnBan User</button>
 
                                   :
-                                  <button onClick={() => handleRemoveAdmin('ban', ele.id)}>Ban User</button>
+                                  <button className="color-unban" onClick={() => confirm('ban', ele.id)}>Ban User</button>
                               }
                               {ele.isBanned ?
                                 <h2 className="h2-banned">
@@ -194,7 +245,7 @@ export const AddUser = () => {
                                 :
                                 ''
                               }
-                              <ModalBtn openModal={openModal1} setOpenModal={setOpenModal1} data={dataMsj} />
+                             
                             </div>
                             :
                             ''
