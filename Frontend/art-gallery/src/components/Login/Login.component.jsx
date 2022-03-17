@@ -66,7 +66,7 @@ export default function Login() {
               autoComplete="on"
               onChange={handleChange}
             />
-            <button>Login</button>
+            <button id="submit">Login</button>
           </form>
           <p>Or</p>
           <GoogleLogin

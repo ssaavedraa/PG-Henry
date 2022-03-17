@@ -168,6 +168,13 @@ function rootReducer(state = initialState, action) {
         artist: [...state.artist, action.payload]
       }
     case EDIT_PAINT:
+      let artworks = [...state.paintings]
+      let modifiedArtworkIndex = artworks.findIndex(paint => paint.id === action.payload[0].id)
+      artworks[modifiedArtworkIndex] = action.payload[0]
+      return{
+        ...state,
+        paintings: artworks
+      }
     default:
 			return state;
 	}
