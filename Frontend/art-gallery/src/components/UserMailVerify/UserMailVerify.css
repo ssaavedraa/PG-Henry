@@ -1,0 +1,36 @@
+.verifyEmail{
+    min-height: 70vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.divContainerVerifyEmail{
+    display: flex;
+    min-height: 70vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerVerifyEmail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40rem;
+    height: 15rem;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: 1px rgb(0 0 0 / 11%) solid;
+    box-shadow: 1px 2px 10px rgb(0 0 0 / 30%);
+}
+
+.containerVerifyEmail p{
+    padding: 0.25rem
+}
+
+.containerVerifyEmail a{
+    color: var(--btnMain-Color);
+    font-weight: bold;
+}

@@ -5,7 +5,7 @@ import {
   getObrasRandon,
   getFavs,
   availablePainting,
-  notAvailablePainting
+  notAvailablePainting,
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
@@ -33,8 +33,7 @@ export const DetailOfArt = () => {
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
-  //estado para manejar la disponibilidad del la pintura
-  const [isAvailable, setIsAvailable] = useState(false);
+  
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -52,10 +51,11 @@ export const DetailOfArt = () => {
     //Agrego el dispatch del post del like
   }
 
-  async function handleAvailable(id) {
-    setIsAvailable(!isAvailable)
-    !isAvailable ? await availablePainting(id) : await notAvailablePainting(id);
-    dispatch(getObraDetail(id))
+  async function handleAvailable(id, detailObraisAvailable) {
+    !detailObraisAvailable
+      ? await availablePainting(id)
+      : await notAvailablePainting(id);
+    dispatch(getObraDetail(id));
   }
 
   /////////////////////////////////
@@ -71,10 +71,6 @@ export const DetailOfArt = () => {
   const handleDecrement = () => {
     setPage((prev) => Math.max(prev - 1, 1));
   };
-
-  // const handleReturn = () => {
-  //   navigate(-1);
-  // };
 
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
@@ -162,7 +158,7 @@ export const DetailOfArt = () => {
               {user.role === "admin" ? (
                 <button
                   onClick={() => setOpenModal(true)}
-                  className={styles.buttonLikeObra}
+                  className={styles.buttonEditObra}
                 >
                   <AiFillEdit className={styles.iconHeaderCardDetail} />
                 </button>
@@ -170,32 +166,59 @@ export const DetailOfArt = () => {
                 <div></div>
               )}
             </div>
-            <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
-            <div>
-              {detailObra.isAvailable !== "true" ?
-              <span>Sold</span> :
-              <span>Sale</span>
-              }
-              {user.role === 'admin' ? (
-                <button onClick={() => handleAvailable(id)}>
-                  {
-                    isAvailable ? <p>Sold</p> : <p>sale</p>
-                  }
-                 </button>
-              ) : <div></div>}
+            <div className={styles.divContainerPaintingAvailible}>
+              <div className={styles.divContainerPriceAvalible}>
+                <span className={styles.spanPrice}>
+                  USD$ {detailObra.price}
+                </span>
+                {detailObra.isAvailable ? (
+                  <span className={styles.spanPaintingAvailible}>
+                    This painting is available
+                  </span>
+                ) : (
+                  <span className={styles.spanNotAvailible}>
+                    This painting isn't available
+                  </span>
+                )}
+              </div>
+              {user.role === "admin" ? (
+                <div className={styles.divContainerButtonAvailable}>
+                  <span>Change paint availability</span>
+                  <button
+                    onClick={() => handleAvailable(id, detailObra.isAvailable)}
+                  >
+                    {detailObra.isAvailable ? (
+                      <p className={styles.pTextPaintingforSale}>
+                        Take from sale
+                      </p>
+                    ) : (
+                      <p className={styles.pTextPaintingSold}>Put on sale</p>
+                    )}
+                  </button>
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
-           
+
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
-                <button className={styles.btnCard} onClick={() => removeCart()} disabled={!detailObra.isAvailable}>
+                <button
+                  className={styles.btnCard}
+                  onClick={() => removeCart()}
+                  disabled={!detailObra.isAvailable}
+                >
                   <div className={styles.cardImage}>-</div>
                   <div className={styles.cardText}>REMOVE FROM CART</div>
                 </button>
               ) : (
-                <button className={styles.btnCard} onClick={() => addCart()} disabled={!detailObra.isAvailable}>
+                <button
+                  className={styles.btnCard}
+                  onClick={() => addCart()}
+                  disabled={!detailObra.isAvailable}
+                >
                   <div className={styles.cardImage}>+</div>
                   <div className={styles.cardText}>ADD TO CART</div>
-                  
                 </button>
               )
             ) : (
@@ -210,10 +233,8 @@ export const DetailOfArt = () => {
             <div className={styles.cardImageReturn}>
               <div></div>
             </div>
-            <Link to='/gallery'>
-            <div className={styles.cardImageReturn}>
-              RETURN TO SEARCH
-            </div>
+            <Link to="/gallery">
+              <div className={styles.cardImageReturn}>RETURN TO SEARCH</div>
             </Link>
           </div>
         </div>
