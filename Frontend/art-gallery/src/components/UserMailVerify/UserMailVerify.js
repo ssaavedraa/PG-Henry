@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import useAuth from "../../customHooks/useAuth";
+import "./UserMailVerify.css";
 
 function UserMailVerify() {
   const navigate = useNavigate();
@@ -25,15 +26,22 @@ function UserMailVerify() {
     }
   }, [checking, navigate, token, verifyMail]);
 
-  if (checking) return <h2>Verifying your email ...</h2>;
+  if (checking)
+    return (
+      <div className="verifyEmail">
+        <h2>Verifying your email...</h2>
+      </div>
+    );
   return (
-    <div>
-      <h1>Welcome {user}</h1>
-      <h3>Your email has been verified, you can now login</h3>
-      <p>
-        Redirecting to login in 5 seg, or
-        <Link to="/login"> click here</Link>
-      </p>
+    <div className="divContainerVerifyEmail">
+      <div className='containerVerifyEmail'>
+        <h1>Welcome {user}</h1>
+        <h3>Your email has been verified, you can now login</h3>
+        <p>
+          Redirecting to login in 5 seg, or
+          <Link to="/login"> click here</Link>
+        </p>
+      </div>
     </div>
   );
 }
