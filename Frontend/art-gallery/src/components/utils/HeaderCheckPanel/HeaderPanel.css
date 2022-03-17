@@ -6,17 +6,17 @@
 }
 
 .admin-sales-header {
-  width: 98%;
+  width: 94%;
   height: 15%;
   padding: 0.5em;
-  margin: 0.2em auto;
+  margin: 0.2em 0;
+  margin-left: 1em;
   justify-content: space-between;
   color: var(--primary-color);
 }
 
 .admin-profile-titles {
   font-size: 2em;
-  margin-left: 0.6em;
 }
 
 .subtitle-filters {

@@ -1,17 +1,30 @@
 import React from "react";
+import "./HeaderPanel.css";
 
-function HeaderPanel() {
-    //Aca validamos si el usuario es admin o customer y dependiendo de eso
-    //quitamos y mostramos lo que necesitamos
+function HeaderCheckPanel({title}) {
   return (
-    <div className="sales-titles-header">
-      <h5 className="product-sales">Product</h5>
-      <h5 className="purchase-sales">Date of Purchase</h5>
-      <h5 className="shipment-sales">Shipment date</h5>
-      <h5 className="customer-sales">Customer</h5>
-      <h5 className="status-sales">Status</h5>
+    <div className="admin-sales-header">
+      <h3 className="admin-profile-titles">{title}</h3>
+      <ul className="filter-admin-seals">
+        <li className="subtitle-filters">
+          <h5 className="name-filter">Pending </h5>
+          <input type="checkbox" name="pending" />
+        </li>
+        <li className="subtitle-filters">
+          <h5 className="name-filter">Sent</h5>
+          <input type="checkbox" name="sent" />
+        </li>
+        <li className="subtitle-filters">
+          <h5 className="name-filter">Completed</h5>
+          <input type="checkbox" name="completed" />
+        </li>
+        <li className="subtitle-filters">
+          <h5 className="name-filter">Cancelled</h5>
+          <input type="checkbox" name="cancelled" />
+        </li>
+      </ul>
     </div>
   );
 }
 
-export default HeaderPanel;
+export default HeaderCheckPanel;
