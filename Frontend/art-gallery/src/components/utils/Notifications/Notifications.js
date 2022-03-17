@@ -49,40 +49,39 @@ export function confirmationSweet(name,execute,closeModal,isEdit,isArtist){
 
 
 export function deleteConfirmation() {
-  const confirmationDelete = Swal.mixin({
+  const swalWithBootstrapButtons = Swal.mixin({
     customClass: {
-      confirmButton: "btnSweet success",
-      cancelButton: "btnSweet danger",
+      confirmButton: 'btn btn-success',
+      cancelButton: 'btn btn-danger'
     },
-    buttonsStyling: false,
-  });
-
-  confirmationDelete
-    .fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonText: "Yes, delete it!",
-      cancelButtonText: "No, cancel!",
-      reverseButtons: true,
-    })
-    .then((result) => {
-      if (result.isConfirmed) {
-        confirmationDelete.fire(
-          "Deleted!",
-          "Your file has been deleted.",
-          "success"
-        );
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
-        confirmationDelete.fire(
-          "Cancelled",
-          "Your file is safe!",
-          "error"
-        );
-      }
-    });
+    buttonsStyling: false
+  })
+  
+  swalWithBootstrapButtons.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    cancelButtonText: 'No, cancel!',
+    reverseButtons: true
+  }).then((result) => {
+    if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    } else if (
+      result.dismiss === Swal.DismissReason.cancel
+    ) {
+      swalWithBootstrapButtons.fire(
+        'Cancelled',
+        'Your imaginary file is safe :)',
+        'error'
+      )
+    }
+  })
 }
+
+/*Usuarios */

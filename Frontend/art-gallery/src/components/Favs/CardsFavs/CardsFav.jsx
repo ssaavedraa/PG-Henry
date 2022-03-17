@@ -10,7 +10,6 @@ export const CardsFav = () => {
   const dispatch = useDispatch();
   const favs = useSelector((state) => state.favs);
   const { add, remove, cart } = useCart();
-  console.log("soy favs", favs);
 
   useEffect(() => {
     dispatch(getFavs());

@@ -33,7 +33,7 @@ export const DetailOfArt = () => {
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
-
+  
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
