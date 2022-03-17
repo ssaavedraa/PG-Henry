@@ -4,7 +4,7 @@ import {
   getObraDetail,
   getObrasRandon,
   getFavs,
-  setAvailable,
+ 
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
@@ -37,7 +37,7 @@ export const DetailOfArt = () => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
     dispatch(getFavs());
-    setAvailable(4)
+  
   }, [id, dispatch, isFavorite]);
 
   useEffect(() => {

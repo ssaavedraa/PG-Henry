@@ -381,11 +381,3 @@ export const orderBySortType = (name) => {
     }
   };
 };
-export const setAvailable = async (id) => {
-  const json = await axios.put(
-    `/painting/setAvailable/${id}`
-  );
-console.log(json.data)
-return json
-
-}
