@@ -19,6 +19,7 @@ import Cart from "./components/Cart/Cart";
 import TestLogin from "./components/TestLogin/TestLogin";
 import Favs from "./components/Favs/Favs";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import { FormContac_1 } from "./components/FormContac/FormContac_1";
 
 function App() {
   return (
@@ -51,6 +52,8 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/favs" element={<Favs />} />
           <Route exact path="/testlogin" element={<TestLogin />} />
+
+          <Route exact path="/form" element={<FormContac_1 />} />
         </Routes>
         <Footer />
       </div>
