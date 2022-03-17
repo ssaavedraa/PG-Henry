@@ -10,6 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { confirmationSweet } from "../../utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
+import { IoIosAddCircle } from "react-icons/io";
+
 
 
 const AddItems = () => {
@@ -18,6 +20,8 @@ const AddItems = () => {
   const technique = useSelector((state) => state.technique);
   const navigate = useNavigate();
 
+
+  // console.log(technique, "soy technique")
   React.useEffect(() => {
     dispatch(getArtist());
     dispatch(getTechnique());
@@ -33,6 +37,13 @@ const AddItems = () => {
     artistId: 0,
     techniqueIds: [],
   });
+
+  const [inputTechnique, setInputTechnique] = useState({
+    name: "",
+    description:""
+  })
+console.log(inputTechnique, "inputTechnique")
+
 
   function handleChange(e) {
     if (e.target.name === "photos") {
@@ -77,6 +88,31 @@ const AddItems = () => {
     }
   }
 
+  function handleChangeTech(e){
+    const tec= (e.target.value).replace(/\w\S*/g, 
+    function(txt){return txt.charAt(0).toUpperCase() +
+           txt.substr(1).toLowerCase();}); 
+           
+
+    const allTechiques= [];    
+
+  technique.map((d) => (
+    allTechiques.push(d.name)
+    ))    
+
+    if (allTechiques.includes(tec)){
+      alert("This Technique is already added ")    
+
+    }else{
+      setInputTechnique({
+        ...input,
+        inputTechnique: e.target.value,  
+      });
+
+    }  
+    
+  }
+
   function handleSelect(e) {
     let art = Number(e.target.value);
     setInput({
@@ -110,7 +146,7 @@ const AddItems = () => {
 
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
-                <div className="image-content-form">
+                <div className="image-content-item">
                   {input.photos &&
                   input.photos.toString().startsWith("http") ? (
                     <img src={input.photos.toString()} alt="imgUser" />
@@ -151,11 +187,9 @@ const AddItems = () => {
                       <label> Height : </label>
                       <input
                         type="number"
-                        required
+                        step="0.01"
                         key="height"
-                        id="height"
-                        min="11"
-                        max="10000"
+                        id="height"                       
                         value={input.height}
                         name="height"
                         className="input"
@@ -166,9 +200,7 @@ const AddItems = () => {
                       <label> Width: </label>
                       <input
                         type="number"
-                        required
-                        min="11"
-                        max="10000"
+                        step="0.01"                       
                         key="width"
                         id="width"
                         className="input"
@@ -195,7 +227,8 @@ const AddItems = () => {
               </div>
 
               <div className="techniques-box">
-                <label> Technique: </label>
+                <div>
+                <label> Select techniques: </label>
                 {technique?.map((d) => (
                   <label>
                     <input
@@ -204,11 +237,35 @@ const AddItems = () => {
                       name="techniqueIds"
                       value={d.id}
                       onChange={(e) => handleCheck(e)}
-                    />{" "}
+                    />
                     {d.name}
                   </label>
                 ))}
+                </div>
+                <div>
+                  <form>
+                  <label>Add a new techiques:</label>
+                  <label>name:</label>
+                  <input 
+                  key="name"
+                  name="name"
+                  value={inputTechnique.name}
+                  onChange={handleChangeTech}
+                  /> 
+                  <label>description :</label>
+                  <input 
+                  type="description"
+                  name="description"
+                  value={inputTechnique.description}
+                  onChange={handleChangeTech}                  
+                  />
+                  
+                  <button> <IoIosAddCircle/> </button>
+                  </form>
+                </div>
               </div>
+              
+
 
               <label> Photo: </label>
 

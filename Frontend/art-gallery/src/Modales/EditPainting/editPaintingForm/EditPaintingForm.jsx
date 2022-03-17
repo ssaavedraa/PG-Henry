@@ -117,7 +117,8 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
                       <label> Height : </label>
                       <input
                         type="number"
-                        required
+                        step="0.01"
+                        
                         key="height"
                         id="height"
                         min="11"
@@ -133,7 +134,7 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
                       <label> Width: </label>
                       <input
                         type="number"
-                        required
+                        step="0.01"
                         min="11"
                         max="10000"
                         key="width"
