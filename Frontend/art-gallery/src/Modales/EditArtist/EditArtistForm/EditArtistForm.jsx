@@ -11,17 +11,32 @@ import { confirmationSweet } from "../../../components/utils/Notifications/Notif
 import { useNavigate } from "react-router-dom";
 
 const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
-
   const id = artistId;
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const artistData = useSelector((state) => state.artistId);
 
   useEffect(() => {
     dispatch(getArtistById(id));
   }, [dispatch, id]);
 
-  const artistData = useSelector((state) => state.artistId);
+  useEffect(()=>{
+  })
+
+  useEffect(() => {
+    setInput({
+      name: artistData.name,
+      biography: artistData.biography,
+      photo: artistData.photo,
+      email: artistData.email,
+      location: artistData.location,
+    });
+  }, [artistData]);
+
+  useEffect(()=>{
+    dispatch(getArtistById());
+  },[dispatch])
+
 
   const [input, setInput] = useState({
     name: artistData.name,
