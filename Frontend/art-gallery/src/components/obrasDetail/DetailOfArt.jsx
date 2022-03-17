@@ -27,14 +27,13 @@ export const DetailOfArt = () => {
   const { user } = useAuth();
 
   const { detailObra, obraRandon } = useSelector((state) => state);
-  //console.log('detalles de la obra', detailObra)
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
- 
+
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -53,11 +52,12 @@ export const DetailOfArt = () => {
   }
 
   async function handleAvailable(id, detailObraisAvailable) {
-    !detailObraisAvailable ? await availablePainting(id) : await notAvailablePainting(id);
+    !detailObraisAvailable
+      ? await availablePainting(id)
+      : await notAvailablePainting(id);
     dispatch(getObraDetail(id));
   }
 
-  //console.log(detailObra);
   /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
@@ -71,10 +71,6 @@ export const DetailOfArt = () => {
   const handleDecrement = () => {
     setPage((prev) => Math.max(prev - 1, 1));
   };
-
-  // const handleReturn = () => {
-  //   navigate(-1);
-  // };
 
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
@@ -162,7 +158,7 @@ export const DetailOfArt = () => {
               {user.role === "admin" ? (
                 <button
                   onClick={() => setOpenModal(true)}
-                  className={styles.buttonLikeObra}
+                  className={styles.buttonEditObra}
                 >
                   <AiFillEdit className={styles.iconHeaderCardDetail} />
                 </button>
@@ -170,25 +166,36 @@ export const DetailOfArt = () => {
                 <div></div>
               )}
             </div>
-            <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
             <div className={styles.divContainerPaintingAvailible}>
-              {detailObra.isAvailable ? (
-                <span className={styles.spanPaintingAvailible}>
-                  This painting is available
+              <div className={styles.divContainerPriceAvalible}>
+                <span className={styles.spanPrice}>
+                  USD$ {detailObra.price}
                 </span>
-              ) : (
-                <span className={styles.spanNotAvailible}>
-                  This painting isn't available
-                </span>
-              )}
+                {detailObra.isAvailable ? (
+                  <span className={styles.spanPaintingAvailible}>
+                    This painting is available
+                  </span>
+                ) : (
+                  <span className={styles.spanNotAvailible}>
+                    This painting isn't available
+                  </span>
+                )}
+              </div>
               {user.role === "admin" ? (
-                <button onClick={() => handleAvailable(id, detailObra.isAvailable)}>
-                  {detailObra.isAvailable ? (
-                    <p className={styles.pTextPaintingforSale}>Painting for sale</p>
-                  ) : (
-                    <p className={styles.pTextPaintingSold}>Painting sold</p>
-                  )}
-                </button>
+                <div className={styles.divContainerButtonAvailable}>
+                  <span>Change paint availability</span>
+                  <button
+                    onClick={() => handleAvailable(id, detailObra.isAvailable)}
+                  >
+                    {detailObra.isAvailable ? (
+                      <p className={styles.pTextPaintingforSale}>
+                        Take from sale
+                      </p>
+                    ) : (
+                      <p className={styles.pTextPaintingSold}>Put on sale</p>
+                    )}
+                  </button>
+                </div>
               ) : (
                 <div></div>
               )}

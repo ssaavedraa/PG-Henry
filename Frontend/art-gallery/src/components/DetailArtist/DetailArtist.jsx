@@ -11,7 +11,7 @@ import {
 } from "../../redux/actions/actions";
 import useAuth from "../../customHooks/useAuth";
 import EditArtistModal from "../../Modales/EditArtist/EditArtistForm/EditArtistModal";
-import { AiFillEdit } from "react-icons/ai";
+import { AiFillEdit, AiOutlineEnvironment, AiOutlineMail } from "react-icons/ai";
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
@@ -33,34 +33,43 @@ const DetailArtist = () => {
   }, [dispatch, id]);
 
   const paintingsArtist = useSelector((state) => state.paintingsArtist);
-  // console.log(paintingsByArtist)
-
   const artists = useSelector((state) => state.artistId);
 
   return (
     <div className="divContainer">
-      {user.role === "admin" ? (
-        <h1>
-          {artists.name}
-          <button
-            onClick={() => setOpenEditArtistModal(true)}
-            className="btnHeaderIconArtist"
-          >
-            <AiFillEdit className="iconHeaderCardArtist" />
-          </button>
-        </h1>
-      ) : (
-        <h1>{artists.name}</h1>
-      )}
       <EditArtistModal
         openEditArtistModal={openEditArtistModal}
-        setOpenEditArtistModal={setOpenEditArtistModal}        
+        setOpenEditArtistModal={setOpenEditArtistModal}
         artistId={id}
       />
       <div className="divContainerimg">
-        <img src={artists.photo} alt="artist" className="imgArtist" />
+        <div>
+          <img src={artists.photo} alt="artist" className="imgArtist" />
+        </div>
         <div className="divBio">
-          <p>{artists.biography}</p>
+          <div className="divContainerNameEmailArtist">
+            <div className="divNameEmailArtist">
+              <h1>{artists.name} </h1>
+              <span><AiOutlineMail className='iconsDetailArtist'/>{artists.email}</span>
+              <span><AiOutlineEnvironment className='iconsDetailArtist'/>{artists.location}</span>
+            </div>
+            <div>
+              {user.role === "admin" ? (
+                <button
+                  onClick={() => setOpenEditArtistModal(true)}
+                  className="btnHeaderIconArtist"
+                >
+                  <AiFillEdit className="iconHeaderCardArtist" />
+                </button>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </div>
+          <div className="divArtistBiography">
+            <h4>Who is {artists.name}?</h4>
+            <p>{artists.biography}</p>
+          </div>
           <div className="divButton">
             <ModalArtworks
               openModal={openModal}

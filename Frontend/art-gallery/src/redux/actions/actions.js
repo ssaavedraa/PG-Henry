@@ -84,12 +84,10 @@ export function getPaitingsByArtist(id) {
   return async function (dispatch) {
     try {
       var json = await axios.get(`/painting/search?artist=${id}`);
-      //console.log(json)
       dispatch({
         type: GET_PAINTINGS_BY_ARTIST,
         payload: json.data,
-      });
-      console.log(json.data);
+      })
     } catch (error) {
       console.log(error);
     }
