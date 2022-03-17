@@ -14,9 +14,7 @@ export const startGoogleLogin = () => {
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        console.log(token);
         const user = result.user;
-        console.log(user.uid);
         dispatch(login(user.uid, user.displayName));
       })
       .catch((error) => {

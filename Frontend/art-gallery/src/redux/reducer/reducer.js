@@ -17,7 +17,8 @@ import {
   CLEAR_ARTISTBYID,
 	GET_STATS_ARTIST,
 	CLEAR_ARTIST,
-  ADD_ARTIST
+  ADD_ARTIST,
+  EDIT_PAINT
 } from "../action-types";
 
 
@@ -162,12 +163,19 @@ function rootReducer(state = initialState, action) {
 			}
 
     case ADD_ARTIST:
-      console.log(state.artist)
       return{
         ...state,
         artist: [...state.artist, action.payload]
       }
-		default:
+    case EDIT_PAINT:
+      let artworks = [...state.paintings]
+      let modifiedArtworkIndex = artworks.findIndex(paint => paint.id === action.payload[0].id)
+      artworks[modifiedArtworkIndex] = action.payload[0]
+      return{
+        ...state,
+        paintings: artworks
+      }
+    default:
 			return state;
 	}
 }

@@ -1,19 +1,17 @@
 import axios from "axios";
-import userSet from "./userSet";
 
 const userRegister = async (user, setUser) => {
   setUser((prevUser) => {
     return { ...prevUser, isLoading: true };
   });
   try {
-    const { data } = await axios.post(
-      "/user/register",
-      user
-    );
+    const { data } = await axios.post("/user/register", {
+      user,
+      url: window.location.host,
+    });
     if (data.status === "error") throw new Error(data.message);
-    userSet(data.token);
     setUser((prevUser) => {
-      return { ...prevUser, user: data.user, isLoading: false };
+      return { ...prevUser, isLoading: false };
     });
     return { status: data.status, user: data.user };
   } catch (er) {
