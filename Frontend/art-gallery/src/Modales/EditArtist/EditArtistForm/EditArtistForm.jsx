@@ -20,9 +20,6 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
     dispatch(getArtistById(id));
   }, [dispatch, id]);
 
-  useEffect(()=>{
-  })
-
   useEffect(() => {
     setInput({
       name: artistData.name,
