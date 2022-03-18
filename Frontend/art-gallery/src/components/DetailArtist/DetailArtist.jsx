@@ -12,6 +12,7 @@ import {
 import useAuth from "../../customHooks/useAuth";
 import EditArtistModal from "../../Modales/EditArtist/EditArtistForm/EditArtistModal";
 import { AiFillEdit, AiOutlineEnvironment, AiOutlineMail } from "react-icons/ai";
+import img from '../../assets/img/loading-img.gif'
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
@@ -34,6 +35,12 @@ const DetailArtist = () => {
 
   const paintingsArtist = useSelector((state) => state.paintingsArtist);
   const artists = useSelector((state) => state.artistId);
+
+  if (!artists || !paintingsArtist) {
+    return <div className="loading">
+        <img src={img} alt="img"/>
+        </div>
+  }
 
   return (
     <div className="divContainer">

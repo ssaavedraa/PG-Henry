@@ -5,7 +5,8 @@
 		"email": "brianweidl@gmail.com",
 		"password": "1234",
 		"isBanned": false,
-		"role": "user"
+		"role": "user",
+		"isVerified": true
 	},
 	{
 		"firstName": "Santiago",
@@ -13,14 +14,25 @@
 		"email": "santiagonunez@gmail.com",
 		"password": "1234",
 		"isBanned": false,
-		"role": "user"
+		"role": "user",
+		"isVerified": true
 	},
 	{
 		"firstName": "Facundo",
 		"lastName": "Romano",
-		"email": "facuromano1212998@gmail.com",
+		"email": "facuromano121299@gmail.com",
 		"password": "1234",
 		"isBanned": false,
-		"role": "user"
+		"role": "user",
+		"isVerified": true
+	},
+	{
+		"firstName": "Yessica",
+		"lastName": "Rodriguez",
+		"email": "yessicarodriguez@live.com.mx",
+		"password": "1234",
+		"isBanned": false,
+		"role": "user",
+		"isVerified": true
 	}
 ]

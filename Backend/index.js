@@ -2,7 +2,6 @@ const loadMockData = require("./mockData/loadMockData.js");
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
 
-
 const LOAD_MOCK_DATA = process.env.LOAD_MOCK_DATA;
 const port = process.env.PORT || 3001
 // Syncing all the models at once.
@@ -23,3 +22,4 @@ conn
   .catch((err) => {
     console.error(err);
   });
+
