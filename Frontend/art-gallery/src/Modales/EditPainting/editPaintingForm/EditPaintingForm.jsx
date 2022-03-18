@@ -32,6 +32,24 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
     });
   }, [detailObra]);
 
+  const [errors, setError] = useState({  }); 
+  const[applyChanges, setApplyChanges]= useState(true);
+
+  function validate(input) {    
+    setApplyChanges(true)
+    let errors = {};
+    if (!input.title
+      || !input.price
+      || !input.height
+      || !input.width 
+      || !input.description) {
+      errors.message = "*All inputs are required";              
+    }else{
+    setApplyChanges(false)
+    }
+    return errors;
+  }
+
   const [input, setInput] = useState({
     title: detailObra.title,
     description: detailObra.description,
@@ -61,6 +79,12 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
         [e.target.name]: e.target.value,
       });
     }
+    setError(      
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    ); 
   }
 
   async function handleSubmit(e) {
@@ -159,7 +183,8 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
               />
 
               <div>
-                <button className="btn-create">EDIT ITEM</button>
+              <div className="error">{errors.message ? <p>{errors.message}</p> : <p></p>} </div>
+                <button disabled={applyChanges} className="btn-painting">EDIT ITEM</button>
               </div>
             </form>
           </div>

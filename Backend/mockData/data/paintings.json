@@ -18,7 +18,8 @@
     "width": 325.1,
     "price": 1800,
     "photos": [
-      "https://d16kd6gzalkogb.cloudfront.net/__sized__/auction_artwork_images/8575212-11-2014185-thumbnail_webp-9999x9999.webp"
+      "https://d16kd6gzalkogb.cloudfront.net/__sized__/auction_artwork_images/8575212-11-2014185-thumbnail_webp-9999x9999.webp", 
+      "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"
     ],
     "artistId": 1,
     "techniqueIds": [1]

@@ -10,9 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { confirmationSweet } from "../../utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
-import { IoIosAddCircle } from "react-icons/io";
-
-
 
 const AddItems = () => {
   const dispatch = useDispatch();
@@ -20,8 +17,6 @@ const AddItems = () => {
   const technique = useSelector((state) => state.technique);
   const navigate = useNavigate();
 
-
-  // console.log(technique, "soy technique")
   React.useEffect(() => {
     dispatch(getArtist());
     dispatch(getTechnique());
@@ -38,12 +33,32 @@ const AddItems = () => {
     techniqueIds: [],
   });
 
-  const [inputTechnique, setInputTechnique] = useState({
-    name: "",
-    description:""
-  })
-console.log(inputTechnique, "inputTechnique")
+  const [errors, setError] = useState({});
+  const [applyChanges, setApplyChanges] = useState(true);
 
+  function validate(input) {
+    setApplyChanges(true);
+    let errors = {};
+    if (
+      !input.title ||
+      !input.price ||
+      !input.height ||
+      !input.width ||
+      !input.artistId ||
+      input.techniqueIds.length === 0 ||
+      !input.description
+    ) {
+      errors.message = "*All inputs are required";
+    } else if (
+      input.photos.length === 0 ||
+      !input.photos.toString().startsWith("http")
+    ) {
+      errors.message = "*invalid photo";
+    } else {
+      setApplyChanges(false);
+    }
+    return errors;
+  }
 
   function handleChange(e) {
     if (e.target.name === "photos") {
@@ -66,12 +81,14 @@ console.log(inputTechnique, "inputTechnique")
         [e.target.name]: e.target.value,
       });
     }
+    setError(
+      //form
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
   }
-  //
-
-
-
-
 
   function handleCheck(e) {
     let tec = Number(e.target.value);
@@ -86,31 +103,13 @@ console.log(inputTechnique, "inputTechnique")
         techniqueIds: [...input.techniqueIds, tec],
       });
     }
-  }
-
-  function handleChangeTech(e){
-    const tec= (e.target.value).replace(/\w\S*/g, 
-    function(txt){return txt.charAt(0).toUpperCase() +
-           txt.substr(1).toLowerCase();}); 
-           
-
-    const allTechiques= [];    
-
-  technique.map((d) => (
-    allTechiques.push(d.name)
-    ))    
-
-    if (allTechiques.includes(tec)){
-      alert("This Technique is already added ")    
-
-    }else{
-      setInputTechnique({
+    setError(
+      //form
+      validate({
         ...input,
-        inputTechnique: e.target.value,  
-      });
-
-    }  
-    
+        [e.target.name]: e.target.value,
+      })
+    );
   }
 
   function handleSelect(e) {
@@ -119,31 +118,33 @@ console.log(inputTechnique, "inputTechnique")
       ...input,
       artistId: art,
     });
+    setError(
+      //form
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
   }
-
-
 
   //--------
   function handleSubmit(e) {
     e.preventDefault();
-    confirmationSweet(input.name,confirm, false, false);
+    confirmationSweet(input.name, confirm, false, false);
   }
 
   function confirm() {
     dispatch(addNewPainting(input));
-    navigate("/gallery")    
+    navigate("/gallery");
   }
-
 
   return (
     <>
       <div className="admin-box">
         <NavPanel />
         <div className="principal-box">
-          
           <div className="data">
             <h2> ADD NEW ITEM</h2>
-
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
                 <div className="image-content-item">
@@ -164,7 +165,6 @@ console.log(inputTechnique, "inputTechnique")
                     autoComplete="off"
                     key="title"
                     className="input"
-                    required
                     value={input.title}
                     name="title"
                     onChange={handleChange}
@@ -176,7 +176,6 @@ console.log(inputTechnique, "inputTechnique")
                     autoComplete="off"
                     key="price"
                     className="input"
-                    required
                     value={input.price}
                     name="price"
                     onChange={handleChange}
@@ -189,7 +188,7 @@ console.log(inputTechnique, "inputTechnique")
                         type="number"
                         step="0.01"
                         key="height"
-                        id="height"                       
+                        id="height"
                         value={input.height}
                         name="height"
                         className="input"
@@ -200,7 +199,7 @@ console.log(inputTechnique, "inputTechnique")
                       <label> Width: </label>
                       <input
                         type="number"
-                        step="0.01"                       
+                        step="0.01"
                         key="width"
                         id="width"
                         className="input"
@@ -215,10 +214,9 @@ console.log(inputTechnique, "inputTechnique")
                     className="input"
                     key="artistId"
                     name="artistId"
-                    required
                     onChange={(e) => handleSelect(e)}
                   >
-                    <option value="">select artist</option>
+                    <option>artists</option>
                     {artists?.map((a) => (
                       <option value={a.id}>{a.name}</option>
                     ))}
@@ -227,8 +225,7 @@ console.log(inputTechnique, "inputTechnique")
               </div>
 
               <div className="techniques-box">
-                <div>
-                <label> Select techniques: </label>
+                <label> Technique: </label>
                 {technique?.map((d) => (
                   <label>
                     <input
@@ -241,40 +238,15 @@ console.log(inputTechnique, "inputTechnique")
                     {d.name}
                   </label>
                 ))}
-                </div>
-                <div>
-                  <form>
-                  <label>Add a new techiques:</label>
-                  <label>name:</label>
-                  <input 
-                  key="name"
-                  name="name"
-                  value={inputTechnique.name}
-                  onChange={handleChangeTech}
-                  /> 
-                  <label>description :</label>
-                  <input 
-                  type="description"
-                  name="description"
-                  value={inputTechnique.description}
-                  onChange={handleChangeTech}                  
-                  />
-                  
-                  <button> <IoIosAddCircle/> </button>
-                  </form>
-                </div>
+                <div></div>
               </div>
-              
-
 
               <label> Photo: </label>
-
               <input
                 type="text"
                 autoComplete="off"
                 key="photos"
-                className="input"
-                required
+                className=""
                 value={input.photos}
                 name="photos"
                 onChange={handleChange}
@@ -288,9 +260,14 @@ console.log(inputTechnique, "inputTechnique")
                 value={input.description}
                 onChange={handleChange}
               />
+              <div className="error">
+                {errors.message ? <p>{errors.message}</p> : <p></p>}{" "}
+              </div>
 
               <div>
-                <button className="btn-edit">ADD NEW ITEM</button>
+                <button disabled={applyChanges} className="btn-edit">
+                  ADD NEW ITEM
+                </button>
               </div>
             </form>
           </div>

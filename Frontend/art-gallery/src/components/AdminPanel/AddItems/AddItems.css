@@ -131,3 +131,7 @@
    .tech-button{
        background-color: blue;
    }
+
+   .error p{
+       color: red;
+   }
