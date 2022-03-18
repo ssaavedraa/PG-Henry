@@ -1,0 +1,27 @@
+
+.modal-editart{
+    height: auto;
+    width: auto;
+    overflow: auto;
+  
+    
+        
+}
+
+.containerHeaderModalArtist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    
+}
+
+.form-box{
+    display: flex;
+    flex-direction: row;    
+    height: auto;
+   
+    
+}
+

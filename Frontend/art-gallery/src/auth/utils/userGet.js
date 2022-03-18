@@ -5,7 +5,7 @@ const userGet = async () => {
   if (!token) throw new Error("no token");
   axios.defaults.headers.common["Authorization"] =
     localStorage.getItem("jwtToken");
-  const { data } = await axios.get("http://localhost:3001/user/get");
+  const { data } = await axios.get("/user/get");
   return data;
 };
 export default userGet;

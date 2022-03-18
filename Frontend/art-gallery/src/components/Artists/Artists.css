@@ -1,4 +1,4 @@
-.artists-container{
+.artists-container1{
     width: 60%;
     margin: auto;
     display: flex;
@@ -12,29 +12,44 @@
     display: block;
 }
 
-.artists-header{
+.artists-header1{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.artists-header h1{
+.artists-header1 h1{
     padding: 1rem;
 }
 
-.artist-sort{
+.artist-sort1{
     height: 2rem;
-    padding: 1rem;
+    padding: 1.5rem 0rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
 
-.artist-sort select{
+.artist-sort1 select{
     margin: 1rem 1rem;
     background-color: transparent;
     border-radius: 0.2rem;
     padding: 0.2rem 0.4rem;
+}
+
+.btn-create{
+    height: 2rem;
+    width: 9rem;
+    list-style: none;
+    background-color: var(--btnMain-Color);
+    border-radius: 20px;
+    border-style: none;
+    margin: 1rem; 
+    color: white;
+}
+
+.btn-create:hover{
+ background-color: var(--btnHover-color);
 }

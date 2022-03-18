@@ -1,10 +1,11 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import "./SearchBar.css";
 
 function SearchBar({ results, keyword, updateField }) {
+  const navigate = useNavigate();
   function updateText(text) {
     updateField(text, false);
   }
@@ -12,16 +13,19 @@ function SearchBar({ results, keyword, updateField }) {
   function cancelSearch() {
     updateField("");
   }
-
+  function submitSearch(e) {
+    e.preventDefault();
+    navigate(`/gallery?query=${keyword}`);
+  }
   return (
     <div className={results.length ? "div_search" : "div_searchNoResults"}>
-      <form className="search_container">
-        <button
+      <form className="search_container" onSubmit={submitSearch}>
+        <input
+          type="button"
           onClick={() => cancelSearch()}
           className={`cancel-btn ${keyword.length > 0 ? "active" : "inactive"}`}
-        >
-          x
-        </button>
+          value="x"
+        />
         <input
           type="text"
           value={keyword}
@@ -55,7 +59,8 @@ function SearchBar({ results, keyword, updateField }) {
 }
 
 function SearchPreview({ name, type, index, updateText, id, cancelSearch }) {
-  const redirect = type === "artist" ? `/artists/${id}`: `/detailpainting/${id}`;
+  const redirect =
+    type === "artist" ? `/artists/${id}` : `/detailpainting/${id}`;
   return (
     <NavLink to={redirect} onClick={() => cancelSearch()}>
       <div

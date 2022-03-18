@@ -1,0 +1,16 @@
+
+.modal-inner-painting {
+    width: 70vw;
+    height: 85vh;    
+    z-index: 1;
+   
+  }
+
+  .containerHeaderModalPainting{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    
+  }

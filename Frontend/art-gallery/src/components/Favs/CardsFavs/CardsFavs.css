@@ -1,13 +1,93 @@
-.cardsFavs{
-    display: flex;
-    padding: 0.75rem 0rem;
-    border-bottom: 2px solid var(--fifth-color);
-    justify-content: space-between;
-    align-items: center;
+.containerCardsFavsFavs {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fourth-color);
+  align-items: stretch;
 }
 
-.cardsFavs img {
-    height: 6rem;
-    width: 6rem;
-    object-fit: contain;
-  }
+.cardsFavs {
+  display: flex;
+  padding: 0.75rem 0rem;
+  border-bottom: 2px solid var(--fifth-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerDetailsFavs button {
+  justify-content: center;
+  background-color: var(--fourth-color);
+  border: none;
+  outline: none;
+  padding: 0px;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.containerDetailsFavs button:hover {
+  color: red;
+}
+
+.containerDetailsFavs a{
+    text-decoration: none;
+    color: black;
+}
+
+.cardsFavs h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.containerDetailsFavs h5 {
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 20rem;
+}
+
+.cardsFavs p {
+  font-size: 0.8rem;
+}
+
+.detailsImgDiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.detailsImgDiv img {
+  height: 6rem;
+  width: 6rem;
+  object-fit: contain;
+}
+
+.containerDetailsFavs {
+  padding-left: 2rem;
+  width: 15rem;
+}
+
+.divNothinghere {
+  border-bottom: 2px solid var(--fifth-color);
+  padding: 1rem 0rem;
+}
+
+.divNothinghere a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.btnAddCartFavs{
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.textAvalibleFavs {
+  color: green;
+}
+
+.textNotAvalibleFavs{
+  color: red;
+  padding-left: -0.5rem
+}

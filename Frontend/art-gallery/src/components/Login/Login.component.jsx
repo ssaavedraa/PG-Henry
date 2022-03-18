@@ -13,15 +13,19 @@ export default function Login() {
     email: "",
     password: "",
   });
-  const [isLoginFailed, setIsLoginFailed] = useState(false);
+  const [isLoginFailed, setIsLoginFailed] = useState({
+    status: false,
+    msg: "",
+  });
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const { login } = useAuth();
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     login({ email: userLogin.email, password: userLogin.password })
       .then(() => navigate("/"))
       .catch((err) => {
-        setIsLoginFailed(true);
+        setIsLoginFailed({ status: true, msg: err.message });
       });
   };
 
@@ -43,20 +47,26 @@ export default function Login() {
         <h1>Login</h1>
         <div className="login-user">
           <h3>For our members</h3>
-          {isLoginFailed && (
-            <p className="login-failed">Email/password incorrect</p>
+          {isLoginFailed.status && (
+            <p className="login-failed">{isLoginFailed.msg} </p>
           )}
-          <form>
+          <form onSubmit={handleLogin}>
             <label htmlFor="user">Email</label>
-            <input type="text" name="email" id="email" onChange={handleChange} />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleChange}
+            />
             <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
               id="password"
+              autoComplete="on"
               onChange={handleChange}
             />
-            <button onClick={handleLogin}>Login</button>
+            <button id="submit">Login</button>
           </form>
           <p>Or</p>
           <GoogleLogin

@@ -1,40 +1,76 @@
 import React from "react";
 import "./MyProfile.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavPanel from "../NavPanel/NavPanel";
-import AddArtists from "../AddArtists/AddArtists";
-import Sales from "../Sales/Sales";
 import img from "../../../assets/img/profile.png";
 import useAuth from "../../../customHooks/useAuth";
+import axios from "axios";
+import Swal from "sweetalert2";
+
+
 
 const MyProfile = () => {
 
-  const [isEmailEdit, setIsEmailEdit] = useState(false)
+  // const [isEmailEdit, setIsEmailEdit] = useState(false)
   const [isPassEdit, setIsPassEdit] = useState(false)
-  const [isPasswordSecure, setIsPasswordSecure] = useState(false)
-  const {user} = useAuth()
+  const [isPasswordSecure, setIsPasswordSecure] = useState(false);
+  const [password, setPassword] = useState("");
+  const [verifyPassword, setVerifyPassword] = useState("");
+  const [oldPassword, setOldPassword] = useState("");
+  const { user } = useAuth();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [applyChanges, setApplyChanges] = useState(true);
 
-  const emailChange = ['Old email', 'New email', 'Verify new email']
+  /* const emailChange = ['Old email', 'New email', 'Verify new email']
 
   const handleEmailChange = (e) => {
     setIsEmailEdit(!isEmailEdit)
     if(!isEmailEdit)e.target.classList.replace('normal','cancel')
     else e.target.classList.replace('cancel', 'normal')
-  }
+  }; */
 
   const handlePassChange = (e) => {
+  
     setIsPassEdit(!isPassEdit)
     if(!isPassEdit)e.target.classList.replace('normal','cancel')
     else e.target.classList.replace('cancel', 'normal')
-  }
+  };
+
+  useEffect(() => {
+    if (isPassEdit) {
+      passwordValidation()
+    }
+  }, [password, verifyPassword]);
+
+  useEffect(() => {
+    setFirstName(user.firstName)
+    setLastName(user.lastName)
+  }, [user, setFirstName, setLastName]);
+
+  useEffect(() => {
+    if (isPassEdit) {
+      if (isPasswordSecure) {
+        setApplyChanges(false)
+      } else {
+        setApplyChanges(true)
+      }
+    } else {
+        if (firstName !== user.firstName || lastName !== user.lastName) {
+          setApplyChanges(false)
+        } else {
+          setApplyChanges(true)
+      }
+    }
+  }, [firstName, lastName, isPasswordSecure]);
 
   const passwordValidation = () => {
-    let upperCaseAmount = 0
-    let numberAmount = 0
     let passRequirementsAmount = 0
+    const isUpperCase = (string) => /[A-Z ]+/.test(string);
+    const stringContainsNumber = (string) => /\d/.test(string);
 
-    let pass1 = document.getElementById('password-reg').value
-    let pass2 = document.getElementById('verify-pass').value
+    let pass1 = password;
+    let pass2 = verifyPassword;
 
     //password length
     if(pass1.length >= 8){
@@ -42,18 +78,14 @@ const MyProfile = () => {
         passRequirementsAmount++
     }
     else document.getElementById('pass-length').classList.replace('pass-success', 'pass-fail')
-    for(let i = 0; i < pass1.length; i++){
-        if(!isNaN(pass1.charAt(i))) numberAmount++
-        else if(pass1.charAt(i) === pass1.charAt(i).toUpperCase()) upperCaseAmount++
-    }
     ///password uppercase
-    if(upperCaseAmount >= 1){
+    if(isUpperCase(pass1)){
         document.getElementById('pass-letters').classList.replace('pass-fail', 'pass-success')
         passRequirementsAmount++
     }
     else document.getElementById('pass-letters').classList.replace('pass-success', 'pass-fail')
     ///password numbers
-    if(numberAmount >= 1){
+    if(stringContainsNumber(pass1)){
         document.getElementById('pass-numbers').classList.replace('pass-fail', 'pass-success')
         passRequirementsAmount++
     }
@@ -69,8 +101,97 @@ const MyProfile = () => {
         setIsPasswordSecure(true)
     }
     else setIsPasswordSecure(false)
-  }
+  };
 
+  const firstNameChange = (e) => {
+    e.preventDefault()
+    setFirstName(e.target.value)
+  };
+
+  const lastNameChange = (e) => {
+    setLastName(e.target.value)
+    e.preventDefault()
+  };
+
+  const oldPasswordChange = (e) => {
+    setOldPassword(e.target.value)
+  };
+
+  const passwordChange = (e) => {
+    setPassword(e.target.value)
+  };
+
+  const verifyPasswordChange = (e) => {
+    setVerifyPassword(e.target.value)
+  };
+
+  const discard = () => {
+    setFirstName(user.firstName);
+    setLastName(user.lastName);
+    setOldPassword("");
+    setPassword("");
+    setVerifyPassword("");
+  };
+
+  const  confirm = async () => {
+
+    const confirmationAdd = Swal.mixin({
+      customClass: {
+        confirmButton: "btnSweet success",
+        cancelButton: "btnSweet danger",
+      },
+      buttonsStyling: false,
+    });
+
+    confirmationAdd.fire({
+      title: 'Are you sure you want to save the changes?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, update!',
+      cancelButtonText: "No, cancel!",
+    }).then( async (result) => {
+      
+      if (result.isConfirmed) {
+        if (isPassEdit && isPasswordSecure) {
+          try {
+            const { data: { status, message } } = await axios.put("user/changePassword", { password, oldPassword })
+            if (status === "error") {
+              Swal.fire(
+                `Old password doesn't match`,
+                `Old password doesn't match`,
+                `Old password doesn't match`
+                
+              ) 
+            } else {
+              Swal.fire(
+                "Changes saved correctly",
+                "Changes saved correctly",
+                "Changes saved correctly"
+                
+              ) 
+            }
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        if (firstName !== user.firstName || lastName !== user.lastName) {
+          try {
+            await axios.put("/user/changeName", { firstName, lastName });
+            window.location.reload();
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        discard();
+        Swal.fire(
+          'Updated!',
+          'Your entry has been updated.',
+          'success'
+        )  
+      }
+
+    })
+  }
   return (
     <>
       <div className="admin-box">
@@ -83,34 +204,33 @@ const MyProfile = () => {
             <p>{`${user.firstName} ${user.lastName}`}</p>
             <div className="user-data">
               <div className="user-buttons">
-                <button className="normal" onClick={e => handleEmailChange(e)} >{!isEmailEdit ? 'Change Email' : 'Cancel email change'}</button>
-                <button className="normal" onClick={handlePassChange} >{!isPassEdit ? 'Change Password' : 'Cancel password change'}</button>
-                <button>Discard changes</button>
-                <button disabled={true}>Save changes</button>
+               {/*  <button className="normal" onClick={e => handleEmailChange(e)} >{!isEmailEdit ? 'Change Email' : 'Cancel email change'}</button> */}
+                <button className="normal color-reset" onClick={handlePassChange} >{!isPassEdit ? 'Change Password' : 'Cancel password change'}</button>
+                <button  onClick={discard}>Discard changes</button>
+                <button className="color-add"  disabled={applyChanges} onClick={confirm }>Save changes</button>
               </div>
               <div className="user-fields">
                 <label htmlFor="firstName"> First Name</label>
-                <input type="text" name="firstName" id="firstName" defaultValue={user.firstName} />
+                <input type="text" name="firstName" id="firstName" value={firstName} onChange={(e) => firstNameChange(e)}/>
               </div>
               <div className="user-fields">
                 <label htmlFor="firstName"> Last Name</label>
-                <input type="text" name="firstName" id="firstName" defaultValue={user.lastName}
-                />
+                <input type="text" name="firstName" id="firstName" value={lastName} onChange={(e) => lastNameChange(e)}/>
               </div>
               {
                 isPassEdit && (
                   <div className="password-fields">
                     <div className="user-fields">
                       <label htmlFor='old-password'> Old password</label>
-                      <input type="text" name='old-password' id='old-passWord' />
+                      <input type="password" name='old-password' id='old-passWord' value={oldPassword} onChange={(e) => oldPasswordChange(e)}/>
                     </div>
                     <div className="user-fields">
                         <label htmlFor='password'>Password</label>
-                        <input type="password" name='new-password' id='new-password' onChange={(e) => passwordValidation()} />
+                        <input type="password" name='new-password' id='new-password' value={password} onChange={(e) => passwordChange(e)} />
                     </div>
                     <div className="user-fields">
                         <label htmlFor='verify-pass'>Verify password</label>
-                        <input type="password" name='verify-pass' id='verify-pass' onChange={(e) => passwordValidation()} />
+                        <input type="password" name='verify-pass' id='verify-pass' value={verifyPassword} onChange={(e) => verifyPasswordChange(e)} />
                     </div>
                     <div className="password-reqs">
                         <p>Password requirements:</p>
@@ -124,7 +244,7 @@ const MyProfile = () => {
                   </div>
                   )
               }
-              {
+              {/* {
                 isEmailEdit && emailChange.map(field => {
                   let dashedField = field.toLowerCase().split(' ').join('-')
                   return(
@@ -134,7 +254,7 @@ const MyProfile = () => {
                     </div>
                   )
                 })
-              }
+              } */}
             </div>
           </div>
         </div> 

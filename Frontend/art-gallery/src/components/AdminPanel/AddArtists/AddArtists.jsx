@@ -1,45 +1,41 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
-import ModalArtist from "./ModalArtist/ModalArtist";
+import EditArtistModal from "../../../Modales/EditArtist/EditArtistForm/EditArtistModal";
 import NavPanel from "../NavPanel/NavPanel";
+import AddArtistModal from "../../../Modales/EditArtist/AddArtistForm/AddArtisModal";
 import "./Artists.css";
 
-//Traemmos los artitstas
-const { artists } = require("../../../assets/Json/artists.json");
-//const dataFullArtist = artists[0];
-
 function AddArtists() {
-  const [openModal, setOpenModal] = useState(false);
-  const [isEdit, setIsEdit] = useState(false);
+  const artists = useSelector((state) => state.artist);
+  const dispatch = useDispatch();
+  
+  
+  React.useEffect(() => {
+    dispatch(getArtitsStat());
+  }, [dispatch]);
 
-  function newArtist() {
-    setOpenModal(!openModal);
-    setIsEdit(false);
-  }
-
-  function editArtist() {
-    setOpenModal(!openModal);
-    setIsEdit(true);
-  }
+  const [openModalArtist, setOpenModalArtist] = useState(false);
 
   return (
     <div className="container-addartist">
       <NavPanel />
       <div className="admin-profile-container">
         <div className="artists-header">
-          <ModalArtist
-            openModal={openModal}
-            openNewArtist={newArtist}
-            onRequestClose={newArtist}
-            isEdit={isEdit}
-            setIsEdit={setIsEdit}
+          <AddArtistModal
+            openModalArtist={openModalArtist}
+            setOpenModalArtist={setOpenModalArtist}
+            isEditArtist={false}
           />
-          <button className="btnNewArtist" onClick={newArtist}>
+          <button
+            className="btnNewArtist"
+            onClick={() => setOpenModalArtist(true)}
+          >
             <FaPlus className="icon-Admin-AddArtist" />
-            Add New Artist
+            Add Artist
           </button>
-          <button className="btnAdminView">Go to Admin View</button>
         </div>
         <div className="subheader-artists">
           <h4 className="subtitle-artists">Registered Artists</h4>
@@ -65,26 +61,15 @@ function AddArtists() {
           </thead>
           <tbody>
             {/*           Aqui hacemos el mapeo */}
-            <RowArtist
-              id="1"
-              photo={artists[0].photo}
-              name={artists[0].name}
-              paintings="3"
-              review="2"
-              sales="4"
-              openModal={openModal}
-              openModalEdit={editArtist}
-              isEdit={isEdit}
-              setIsEdit={setIsEdit}
-            />
-            <RowArtist />
-            <RowArtist />
-            <RowArtist />
-            <RowArtist />
-            <RowArtist />
-            <RowArtist />
-            <RowArtist />
-            <RowArtist />
+            {artists
+              ? artists.map((artist) => (
+                  <RowArtist
+                    artist={artist}
+                    openModalArtist={openModalArtist}
+                    setOpenModalArtist={setOpenModalArtist}
+                  />
+                ))
+              : null}
           </tbody>
         </table>
       </div>
@@ -94,44 +79,28 @@ function AddArtists() {
 
 export default AddArtists;
 
-function RowArtist({
-  id,
-  photo,
-  name,
-  paintings,
-  review,
-  sales,
-  openModal,
-  openModalEdit,
-  isEdit,
-  setIsEdit,
-}) {
+function RowArtist({ artist, openModalArtist, setOpenModalArtist}) {
+  const [openModal, setopenModal] = useState(false);
   return (
     <tr>
-      <td className="id-title">{id ? id : "ID"}</td>
+      <td className="id-title">{artist.artistId}</td>
       <td className="photo-title">
-        {photo ? (
-          <img src={photo} alt="img-artist" className="img-td-artist" />
-        ) : (
-          "PHOTO"
-        )}
+        <img src={artist.photo} alt="img-artist" className="img-td-artist" />
       </td>
-      <td className="name-title">{name ? name : "NAME"}</td>
-      <td className="paintings-title">{paintings ? paintings : "PAINTINGS"}</td>
-      <td className="review-title">{review ? review : "REVIEWS"}</td>
-      <td className="sales-title">{sales ? sales : "SALES"}</td>
+      <td className="name-title">{artist.name}</td>
+      <td className="paintings-title">{artist.paintings}</td>
+      <td className="review-title">{artist.reviews}</td>
+      <td className="sales-title">{artist.sales}</td>
+      <EditArtistModal
+        openEditArtistModal={openModal}
+        setOpenEditArtistModal={setopenModal}
+        artistId={artist.artistId}
+      />
       <td className="button-title">
-        {/*         Al hacer click podemos reutilizar la funcionalidad de la action de redux,
-        para almacenar el dato buscado ahi con eso llamamos al modal y le enviamos la data*/}
-        <ModalArtist
-          openModal={openModal}
-          openNewArtist={openModalEdit}
-          onRequestClose={openModalEdit}
-          artists={artists[0]}
-          isEdit={isEdit}
-          setIsEdit={setIsEdit}
+        <AiFillEdit
+          className="icon-artist-eduit"
+          onClick={() => setopenModal(true)}
         />
-        <AiFillEdit className="icon-artist-eduit" onClick={openModalEdit} />
       </td>
     </tr>
   );

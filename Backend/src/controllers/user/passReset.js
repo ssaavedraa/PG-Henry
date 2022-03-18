@@ -26,7 +26,6 @@ const passReset = async (req, res) => {
 
     res.json("Success");
   } catch (err) {
-    console.log(err)
     res.status(400).json({ err: err.message });
   }
 };

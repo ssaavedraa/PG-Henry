@@ -75,12 +75,14 @@
   border-radius: 8px 8px 0 0;
   border: none;
   cursor: pointer;
-  background-color: rgb(255, 145, 0);
+  /* background-color: rgb(255, 145, 0); */
+  background-color: var(--fifth-color);
   transition: 1.2s;
 }
 
 .btn_card_paint:hover {
   color: var(--third-color);
+  background-color: black;
 }
 
 .icon_add_paint {
@@ -98,11 +100,31 @@
   cursor: pointer;
 }
 
+.btn-header-icon-edit {
+  width: 13%;
+  height: 7%;
+  margin: 0.9em 0.75rem;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-header-icon-edit:hover {
+  background-color: transparent;
+  color: red;
+}
+
 .btn-header-icon:hover {
   background-color: transparent;
 }
 
-.btn-header-icon:hover .icon-header-card {
+.icon-header-card:hover {
+color: red;
+}
+
+
+.btn-header-icon:hover .icon-header-card{
   color: red;
 }
 
