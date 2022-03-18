@@ -20,6 +20,7 @@ import Favs from "./components/Favs/Favs";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
+import { FormContacArtist } from "./components/FormContac/FormContacArtist";
 
 function App() {
   return (
@@ -56,7 +57,7 @@ function App() {
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/favs" element={<Favs />} />
-      
+          <Route exact path="/form" element={<FormContacArtist />} />
 
           
         </Routes>
