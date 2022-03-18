@@ -130,7 +130,6 @@
 .iconLike {
   font-size: 1.5rem;
   margin-top: 0.4rem;
-  
 }
 
 .spanTech {
@@ -179,26 +178,38 @@
   margin-top: 1rem;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
-  /* transition: all 1s; */
+  align-items: center;
   position: relative;
   cursor: pointer;
+  padding: 2vh;
+  flex-direction: column-reverse;
 }
 
 .internoimg img {
   width: 85%;
-  /* height: 80%; */
   object-fit: contain;
   transition: all 2s;
 }
-.internoimg img:hover {
+
+.miniatureContainer{
+  display: flex;
+  flex-direction: row;
+  margin: 1vh;
+  justify-content: center;
+}
+
+.miniatureContainer img{
+  margin: 1.5vh;
+  width: 20%;
+  height: auto;
+}
+
+.miniatureContainer img:hover{
   transform: scale(1.1);
-  object-fit: contain;
-  transition: all 2s;
 }
+
 .internodescription {
   width: 30rem;
-  /* height: 650px; */
   display: flex;
   flex-direction: column;
   align-items: center;

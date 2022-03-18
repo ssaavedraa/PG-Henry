@@ -4,8 +4,6 @@ import {
   getObraDetail,
   getObrasRandon,
   getFavs,
-  availablePainting,
-  notAvailablePainting
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
@@ -17,24 +15,25 @@ import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
+import './Detail.module.css'
+
 export const DetailOfArt = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { add, cart, remove } = useCart();
-
   //Manejo de vista
   const { user } = useAuth();
 
   const { detailObra, obraRandon } = useSelector((state) => state);
+  const [bigImage, setBigImage] = useState(0)
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
-  //estado para manejar la disponibilidad del la pintura
-  const [isAvailable, setIsAvailable] = useState(false);
+
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -52,13 +51,6 @@ export const DetailOfArt = () => {
     //Agrego el dispatch del post del like
   }
 
-  async function handleAvailable(id) {
-    setIsAvailable(!isAvailable)
-    !isAvailable ? await availablePainting(id) : await notAvailablePainting(id);
-    dispatch(getObraDetail(id))
-  }
-
-  /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
 
@@ -71,10 +63,6 @@ export const DetailOfArt = () => {
   const handleDecrement = () => {
     setPage((prev) => Math.max(prev - 1, 1));
   };
-
-  // const handleReturn = () => {
-  //   navigate(-1);
-  // };
 
   const handleDetail = (id) => {
     dispatch(getObraDetail(id));
@@ -116,7 +104,16 @@ export const DetailOfArt = () => {
       />
       <div className={styles.principalSectionInterno}>
         <div className={styles.internoimg}>
-          <img src={detailObra.photos[0].url} alt="img" />
+          <div className={styles.miniatureContainer}>
+            {
+              detailObra.photos.map((artwork, index) => {
+                return(
+                  <img src={artwork.url} alt={`img-${index}`} key={`img-${index}`} onClick={() => setBigImage(index)}/>
+                )
+              })
+            }
+          </div>
+          <img src={detailObra.photos[bigImage].url} alt="img" />
         </div>
         <div className={styles.internodescription}>
           <div className={styles.principalSectionArtist}>
@@ -129,7 +126,7 @@ export const DetailOfArt = () => {
                 <span>{detailObra.artist.email}</span>
               </div>
               <Link to={`/artists/${detailObra.artist.id}`}>
-                <button>More about</button>
+                <button>About this artist</button>
               </Link>
             </div>
           </div>
@@ -171,31 +168,16 @@ export const DetailOfArt = () => {
               )}
             </div>
             <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
-            <div>
-              {detailObra.isAvailable !== "true" ?
-              <span>Sold</span> :
-              <span>Sale</span>
-              }
-              {user.role === 'admin' ? (
-                <button onClick={() => handleAvailable(id)}>
-                  {
-                    isAvailable ? <p>Sold</p> : <p>sale</p>
-                  }
-                 </button>
-              ) : <div></div>}
-            </div>
-           
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
-                <button className={styles.btnCard} onClick={() => removeCart()} disabled={!detailObra.isAvailable}>
+                <button className={styles.btnCard} onClick={() => removeCart()}>
                   <div className={styles.cardImage}>-</div>
                   <div className={styles.cardText}>REMOVE FROM CART</div>
                 </button>
               ) : (
-                <button className={styles.btnCard} onClick={() => addCart()} disabled={!detailObra.isAvailable}>
+                <button className={styles.btnCard} onClick={() => addCart()}>
                   <div className={styles.cardImage}>+</div>
                   <div className={styles.cardText}>ADD TO CART</div>
-                  
                 </button>
               )
             ) : (
