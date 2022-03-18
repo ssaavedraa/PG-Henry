@@ -18,7 +18,7 @@ function DataSales({ index }) {
   return (
     <div className="sales-data-subcontainer">
       <div className="sales-main-data">
-        <img src="" alt="image-sale" className="product-sales" />
+        <img src="" alt="img-sale-main" className="product-sales" />
         <h5 className="purchase-sales">Date of Purchase</h5>
         <h5 className="shipment-sales">Shipment date</h5>
         <h5 className="customer-sales">Customer</h5>
