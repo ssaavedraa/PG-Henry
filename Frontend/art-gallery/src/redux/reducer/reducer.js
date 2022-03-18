@@ -71,6 +71,7 @@ const initialState = {
   resultSearch: [],
   favs: [],
   detailObra,
+
 };
 
 function rootReducer(state = initialState, action) {
