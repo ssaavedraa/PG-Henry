@@ -7,22 +7,21 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store/store";
 import AuthProvider from "./auth/AuthProvider";
 // import dotenv from 'dotenv'
-import axios from 'axios'
+import axios from "axios";
 
 // dotenv.config()
 
-axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001'
-console.log(process.env.REACT_APP_API)
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <AuthProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </AuthProvider>
-  </Provider>,
-  document.getElementById("root")
+	<Provider store={store}>
+		<AuthProvider>
+			<React.StrictMode>
+				<App />
+			</React.StrictMode>
+		</AuthProvider>
+	</Provider>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

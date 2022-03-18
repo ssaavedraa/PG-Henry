@@ -9,6 +9,7 @@ const reviewRoute = require("./reviewRoute.js");
 const authRoute = require("./authRoute.js");
 const favoriteRoute = require("./favoriteRoute.js");
 const cartRoute = require("./cartRoute.js");
+const checkoutRoute = require("./checkoutRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -29,5 +30,6 @@ router.use(
 	passport.authenticate("jwt", { session: false }),
 	cartRoute
 );
+router.use("/checkout", checkoutRoute);
 
 module.exports = router;

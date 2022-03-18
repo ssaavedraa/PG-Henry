@@ -23,6 +23,7 @@ const initialState = {
 	technique: [],
 	resultSearch: [],
 	favs: [],
+	preferenceId: 0,
 };
 
 function rootReducer(state = initialState, action) {
