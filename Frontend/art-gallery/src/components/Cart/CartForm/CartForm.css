@@ -1,0 +1,73 @@
+.divContainerFormCart{
+    width: inherit;
+    margin: 0.5rem 0rem;
+}
+
+.divContainerDetailsCart{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.divContainerItemsCart {
+    width: 27rem;  
+}
+
+.divContainerInputsFormCart{
+    
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.divContainerNameLastCart{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+
+.divNameLastCart{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+
+.divContainerProductCart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divContainerProductCart img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.divContainerProductCart p{
+font-size: 0.9rem;
+margin: 0.15rem 0rem;
+}
+
+.divContainerInputsFormCart label{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+}
+
+.divProductSubTotalCart{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2rem;
+    border-radius: 0.25rem;
+    align-items: center;
+    background-color: var(--six-color);
+    margin-top: 0.75rem;
+}
+
+.divContainerTotalPrice{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;  
+}

@@ -6,6 +6,7 @@ import axios from "axios";
 import "./Cart.css";
 import CartCards from "./CartCards/CartCards.jsx";
 import { ToastContainer, toast } from "react-toastify";
+import ModalBuyCart from "./ModalBuyCart/ModalBuyCart.jsx";
 
 const Cart = () => {
   const { cart, removeAll } = useCart();
@@ -13,15 +14,15 @@ const Cart = () => {
   const getPaintings = async (cart) => {
     const paintings = [];
     for (let i = 0; i < cart.length; i++) {
-      const dbPaiting = await axios.get(
-        `/painting/get/${cart[i]}`
-      );
+      const dbPaiting = await axios.get(`/painting/get/${cart[i]}`);
       paintings.push(dbPaiting.data);
     }
     return paintings;
   };
 
   const [cartPainting, setCartPainting] = useState([]);
+  //Estado para el modal
+  const [openModalBuy, setOpenModalBuy] = useState(false);
 
   useEffect(() => {
     getPaintings(cart).then((res) => setCartPainting(res));
@@ -45,7 +46,7 @@ const Cart = () => {
       <ToastContainer
         position="bottom-center"
         theme="dark"
-        autoClose={3000}
+        autoClose={1500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -53,6 +54,12 @@ const Cart = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+      />
+      <ModalBuyCart
+        openModalBuy={openModalBuy}
+        setOpenModalBuy={setOpenModalBuy}
+        cartPainting={cartPainting}
+        totalPrice={totalPrice}
       />
       <h1>Cart</h1>
       <div className="containerCart">
@@ -69,7 +76,7 @@ const Cart = () => {
           <Link to="/gallery">
             <button>Continue shopping</button>
           </Link>
-          <button>Buy</button>
+          <button onClick={() => setOpenModalBuy(true)}>Buy</button>
         </div>
       </div>
     </div>
