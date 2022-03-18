@@ -198,10 +198,12 @@ export function getFavs() {
   };
 }
 
-export function getArtitsStat() {
+export function getArtitsStat(filters) {
   return async function (dispatch) {
     try {
-      const json = await axios.get("/artist/getstats");
+      const json = await axios.get("/artist/getstats", {
+        params: {...filters},
+      });
       return dispatch({
         type: GET_STATS_ARTIST,
         payload: json.data,

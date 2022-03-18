@@ -45,17 +45,32 @@ export default function NavBar() {
       />
       <ul className={styles.nav_links}>
         <li>
-          <NavLink to="/gallery" className={styles.linksNav}>
+          <NavLink
+            to="/gallery"
+            className={(navData) =>
+              navData.isActive ? styles.links_Active : styles.linksNav
+            }
+          >
             Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink to="/artists" className={styles.linksNav}>
+          <NavLink
+            to="/artists"
+            className={(navData) =>
+              navData.isActive ? styles.links_Active : styles.linksNav
+            }
+          >
             Artists
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contactus" className={styles.linksNav}>
+          <NavLink
+            to="/contactus"
+            className={(navData) =>
+              navData.isActive ? styles.links_Active : styles.linksNav
+            }
+          >
             Contact
           </NavLink>
         </li>
