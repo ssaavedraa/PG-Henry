@@ -10,7 +10,6 @@ import {
   GET_TECHNIQUE,
   GET_SEARCH,
   GET_STATS_ARTIST,
-  CLEAR_ARTIST,
   GET_USER_ADMIN,
   ORDER_BY_A_Z,
   ORDER_BY_TYPE,
@@ -211,10 +210,6 @@ export function getArtitsStat() {
       console.log(error);
     }
   };
-}
-
-export function clearArtists() {
-  return { type: CLEAR_ARTIST };
 }
 
 export const editArtist = (id, payload) => {

@@ -9,6 +9,9 @@ import Swal from "sweetalert2";
 
 
 
+
+
+
 export const AddUser = () => {
 
 
@@ -28,7 +31,10 @@ export const AddUser = () => {
     dispatch(orderBySortType(e.target.value))
   }
 
-  function confirm(name, id){
+ const  confirm = (name, id) => {
+
+   
+
     const confirmationAdd = Swal.mixin({
       customClass: {
         confirmButton: "btnSweet success",
@@ -165,7 +171,7 @@ export const AddUser = () => {
                                   <button className="color-admin" onClick={() => confirm('unban', ele.id)}>UnBan User</button>
 
                                   :
-                                  <button className="color-unban"  onClick={() => confirm('ban', ele.id)}>Ban User</button>
+                                  <button className="color-unban" onClick={() => confirm('ban', ele.id)}>Ban User</button>
                               }
                               {ele.isBanned ?
                                 <h2 className="h2-banned">
@@ -173,7 +179,7 @@ export const AddUser = () => {
                                 :
                                 ''
                               }
-                              
+
                             </div>
                             :
                             ''
@@ -245,7 +251,7 @@ export const AddUser = () => {
                                 :
                                 ''
                               }
-                             
+
                             </div>
                             :
                             ''

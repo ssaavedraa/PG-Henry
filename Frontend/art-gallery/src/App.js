@@ -18,6 +18,7 @@ import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
 import Favs from "./components/Favs/Favs";
 import ProtectedRoute from "./routes/ProtectedRoute";
+
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 
 function App() {

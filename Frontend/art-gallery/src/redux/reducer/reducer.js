@@ -16,7 +16,6 @@ import {
   GET_FAVS,
   CLEAR_ARTISTBYID,
 	GET_STATS_ARTIST,
-	CLEAR_ARTIST,
   ADD_ARTIST,
   EDIT_PAINT
 } from "../action-types";
@@ -52,12 +51,21 @@ const detailObra = {
   ],
 }
 
+const artistId = {
+    id: 1,
+    name: "",
+    biography: "",
+    photo: "",
+    email: "",
+    location: "",
+}
+
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
   reviews: [],
   paintingsArtist: [],
-  artistId: [],
+  artistId,
   artist: [],
   technique: [],
   resultSearch: [],
@@ -154,12 +162,6 @@ function rootReducer(state = initialState, action) {
 			return{
 				...state,
 				artist: action.payload
-			}
-
-		case CLEAR_ARTIST:
-			return{
-				...state,
-				artist: []
 			}
 
     case ADD_ARTIST:
