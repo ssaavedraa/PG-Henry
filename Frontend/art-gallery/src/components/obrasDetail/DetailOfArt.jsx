@@ -17,23 +17,25 @@ import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
 
+import './Detail.module.css'
+
 export const DetailOfArt = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { add, cart, remove } = useCart();
-
   //Manejo de vista
   const { user } = useAuth();
 
   const { detailObra, obraRandon } = useSelector((state) => state);
+  const [bigImage, setBigImage] = useState(0)
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
 
   //estado para manejar los favoritos
   const [isFavorite, setIsFavorite] = useState(favsPaitings);
-  
+
   useEffect(() => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
@@ -113,7 +115,16 @@ export const DetailOfArt = () => {
       />
       <div className={styles.principalSectionInterno}>
         <div className={styles.internoimg}>
-          <img src={detailObra.photos[0].url} alt="img" />
+          <div className={styles.miniatureContainer}>
+            {
+              detailObra.photos.map((artwork, index) => {
+                return(
+                  <img src={artwork.url} alt={`img-${index}`} key={`img-${index}`} onClick={() => setBigImage(index)}/>
+                )
+              })
+            }
+          </div>
+          <img src={detailObra.photos[bigImage].url} alt="img" />
         </div>
         <div className={styles.internodescription}>
           <div className={styles.principalSectionArtist}>
@@ -126,7 +137,7 @@ export const DetailOfArt = () => {
                 <span>{detailObra.artist.email}</span>
               </div>
               <Link to={`/artists/${detailObra.artist.id}`}>
-                <button>More about</button>
+                <button>About this artist</button>
               </Link>
             </div>
           </div>
@@ -240,6 +251,7 @@ export const DetailOfArt = () => {
           </div>
         </div>
       </div>
+      <center><h1>More paintings</h1></center>
       <div className={styles.principalSectionObras}>
         <div
           onClick={handleDecrement}
