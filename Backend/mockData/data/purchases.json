@@ -2,7 +2,7 @@
 	{
 		"purchaseDate": "2022-01-17T04:33:12.000Z",
 		"completedDate": "2022-01-18T04:33:12.000Z",
-		"state": "completed",
+		"state": "pending",
 		"totalPrice": 1500,
 		"userId": 1,
 		"paintingId": 1
@@ -18,7 +18,7 @@
 	{
 		"purchaseDate": "2022-01-17T04:33:12.000Z",
 		"completedDate": "2022-01-18T04:33:12.000Z",
-		"state": "completed",
+		"state": "pending",
 		"totalPrice": 2500,
 		"userId": 3,
 		"paintingId": 3
@@ -84,7 +84,7 @@
 		"completedDate": "2022-01-18T04:33:12.000Z",
 		"state": "completed",
 		"totalPrice": 2500,
-		"userId": 1,
+		"userId": 4,
 		"paintingId": 16
 	},
 	{

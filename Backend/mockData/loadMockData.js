@@ -4,7 +4,15 @@ const paintings = require("./data/paintings.json");
 const reviews = require("./data/reviews.json");
 const users = require("./data/users.json");
 const purchases = require("./data/purchases.json");
-const { Artist, Technique, Review, User, Purchase } = require("../src/db");
+const contactInfos = require("./data/contactInfo.json");
+const {
+  Artist,
+  Technique,
+  Review,
+  User,
+  Purchase,
+  ContactInfo,
+} = require("../src/db");
 
 const createPainting = require("../src/controllers/painting/utils/createPainting");
 const {
@@ -43,6 +51,7 @@ const loadMockData = async () => {
   for (let i = 0; i < purchases.length; i++) {
     const createdPurchase = await Purchase.create(purchases[i]);
     await createdPurchase.addPaintings(purchases[i].paintingId);
+    await createdPurchase.createContactInfo(contactInfos[i]);
   }
   /* for (let i = 0; i < reviews.length; i++) {
 		const createdReview = await Review.create(reviews[i]);
