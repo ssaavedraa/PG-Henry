@@ -13,6 +13,7 @@ a{
   --six-color: #f5f5f5;
   --seven-color: #cceef8;
   --eigth-color: #7c7c7c;
+  --nine-color: #ebebec;
 
   --bgMainColor: #000000;
 
@@ -27,6 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+ 
 }
 
 button, input[type="text"], textarea{

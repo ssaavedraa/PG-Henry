@@ -8,11 +8,15 @@ import {
 } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { confirmationSweet } from "../../utils/Notifications/Notifications";
+import { useNavigate } from "react-router-dom";
+
 
 const AddItems = () => {
   const dispatch = useDispatch();
   const artists = useSelector((state) => state.artist);
   const technique = useSelector((state) => state.technique);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     dispatch(getArtist());
@@ -54,6 +58,10 @@ const AddItems = () => {
   }
   //
 
+
+
+
+
   function handleCheck(e) {
     let tec = Number(e.target.value);
     if (input.techniqueIds.includes(tec)) {
@@ -77,22 +85,19 @@ const AddItems = () => {
     });
   }
 
-  console.log(input);
+
+
+  //--------
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(addNewPainting(input));
-    alert("New item create");
-    setInput({
-      title: "",
-      description: "",
-      height: 0,
-      width: 0,
-      price: 0,
-      photos: [],
-      artistId: 0,
-      techniqueIds: [],
-    });
+    confirmationSweet(input.name,confirm, false, false);
   }
+
+  function confirm() {
+    dispatch(addNewPainting(input));
+    navigate("/gallery")    
+  }
+
 
   return (
     <>

@@ -1,0 +1,128 @@
+/*sales-data-subcontainer*/
+.sales-data-subcontainer{
+    width: 95%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8em;
+    margin-left: 1em;
+    color: var(--eigth-color);
+    border-radius: 0.4em;
+    border-style: inset;
+    background-color: var(--nine-color);
+}
+
+.arrow-sales{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+
+.btnArrowSale{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor:pointer;
+    font-size: 1.2em;
+    color: var(--eigth-color);
+}
+
+.btnArrowSale:hover{
+    color: var(--third-color);
+}
+
+.resizeSubcontainer{
+    transition: 1.2s;
+    height:50%;
+}
+
+.resizeSubcontainer .sales-main-data{
+    display: none;
+}
+
+.resizeSubcontainer .detail-seal-data{
+    display: flex;
+}
+
+
+/*Sub Container Render Main Data*/
+.sales-main-data {
+  width: 100%;
+  height: 85%; 
+  display: flex;
+  align-items: center;
+  border-radius: 0.4em;
+}
+
+.sales-main-data .product-sales,
+.sales-main-data .purchase-sales,
+.sales-main-data .shipment-sales,
+.sales-main-data .customer-sales,
+.sales-main-data .status-sales {
+  height: 100%;
+}
+
+/*Btn Review*/
+.btnReviewPurchase{
+    height: 27%;
+    width: 15%;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    background-color: var(--primary-color);
+    color: var(--fourth-color);
+}
+
+.btnReviewPurchase:hover{
+    background-color: var(--btnHover-color);
+}
+
+.btnReviewPurchase:active{
+    background-color: var(--primary-color);
+}
+
+/*Detail Data*/
+.detail-seal-data{
+    
+    width: 100%;
+    height: 85%;
+    display: none;
+}
+
+.img-sale-detail{
+    width: 30%;
+}
+
+.specific-seal-data{
+    width: 40%;
+    padding: .5em;
+}
+
+.specific-seal-data h5, .status-detail-data h5{
+    font-size: 1em;
+    margin-bottom: .9em;
+    font-weight: 500;
+}
+
+.status-detail-data{
+    width: 30%;
+    height: 100%;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-detail-data select{
+    height: 15%;
+    width: 40%;
+    border-radius: .4em;
+    outline: none;
+}

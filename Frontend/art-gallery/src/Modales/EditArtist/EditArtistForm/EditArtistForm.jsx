@@ -8,17 +8,32 @@ import logo from "../../../assets/img/SantArtlogo.png";
 import { getArtistById } from "../../../redux/actions/actions";
 import { useEffect } from "react";
 import { confirmationSweet } from "../../../components/utils/Notifications/Notifications.js";
+import { useNavigate } from "react-router-dom";
 
-const EditArtistForm = ({ artist, setOpenModalArtist }) => {
-  const id = artist.id;
-
+const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
+  const id = artistId;
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const artistData = useSelector((state) => state.artistId);
 
   useEffect(() => {
     dispatch(getArtistById(id));
   }, [dispatch, id]);
 
-  const artistData = useSelector((state) => state.artistId);
+  useEffect(() => {
+    setInput({
+      name: artistData.name,
+      biography: artistData.biography,
+      photo: artistData.photo,
+      email: artistData.email,
+      location: artistData.location,
+    });
+  }, [artistData]);
+
+  useEffect(()=>{
+    dispatch(getArtistById());
+  },[dispatch])
+
 
   const [input, setInput] = useState({
     name: artistData.name,
@@ -40,19 +55,21 @@ const EditArtistForm = ({ artist, setOpenModalArtist }) => {
     /*
       Sweet Alert recibe como argumentos:
       - primer argumento: Nombre del artista o pintura
-      - segundo argumento, estado que cerrara el modal,
-      - tercer argumento: Booleano 'true' si es para edita, 'false' si es para agregar
-      - cuarto argumento: Booleano 'true' si es artista, 'false' si es una obra
+      - segundo argumento, funcion dispatch,
+      - tercer argumento, estado que cerrara el modal,
+      - cuarto argumento: Booleano 'true' si es para edita, 'false' si es para agregar
+      - quinto argumento: Booleano 'true' si es artista, 'false' si es una obra
     */
-    confirmationSweet(artistData.name,confirm, closeModal, false, false);
+    confirmationSweet(artistData.name,confirm, closeModal, true, true);
   }
 
   function confirm() {
     dispatch(editArtist(id, input));
+    navigate("/artists")
   }
 
   function closeModal() {
-    setOpenModalArtist(false);
+    setOpenEditArtistModal(false);
   }
 
   return (
@@ -73,14 +90,14 @@ const EditArtistForm = ({ artist, setOpenModalArtist }) => {
                 )}
               </div>
 
-              <label> Photo: SOY EDIT</label>
+              <label> Photo: </label>
               <input
                 type="text"
                 autoComplete="off"
                 key="photo"
                 className="input-addartist"
                 required
-                defaultValue={artistData.photo}
+                
                 value={input.photo}
                 name="photo"
                 onChange={handleChange}
@@ -92,7 +109,7 @@ const EditArtistForm = ({ artist, setOpenModalArtist }) => {
                 autoComplete="off"
                 key="name"
                 className="input-addartist"
-                defaultValue={artistData.name}
+                
                 value={input.name}
                 name="name"
                 onChange={handleChange}
@@ -105,7 +122,7 @@ const EditArtistForm = ({ artist, setOpenModalArtist }) => {
                 key="email"
                 className="input-addartist"
                 required
-                defaultValue={artistData.email}
+                
                 value={input.email}
                 name="email"
                 onChange={handleChange}
@@ -197,7 +214,7 @@ const EditArtistForm = ({ artist, setOpenModalArtist }) => {
                 name="biography"
                 key="biography"
                 className="input-addartist"
-                defaultValue={artistData.biography}
+                
                 value={input.biography}
                 onChange={handleChange}
               />

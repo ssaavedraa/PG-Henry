@@ -7,7 +7,7 @@ import MyProfile from "./components/AdminPanel/MyProfile/MyProfile";
 import Login from "./components/Login/Login.component";
 import AddArtists from "./components/AdminPanel/AddArtists/AddArtists";
 import AddItems from "./components/AdminPanel/AddItems/AddItems";
-import {AddUser} from "./components/AdminPanel/AddUser/AddUser";
+import { AddUser } from "./components/AdminPanel/AddUser/AddUser";
 import Sales from "./components/AdminPanel/Sales/Sales";
 import UnderConstruction from "./components/UnderConstruction/UnderConstruction";
 import Footer from "./components/Footer/Footer";
@@ -16,10 +16,10 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import Gallery from "./components/Gallery/Gallery";
 import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
-import TestLogin from "./components/TestLogin/TestLogin";
 import Favs from "./components/Favs/Favs";
 import ProtectedRoute from "./routes/ProtectedRoute";
-import { FormContac_1 } from "./components/FormContac/FormContac_1";
+
+import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 
 function App() {
   return (
@@ -39,10 +39,15 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            exact
+            path="/user/verify/:token"
+            element={<UserMailVerify />}
+          />
           <Route exact path="/detailpainting/:id" element={<DetailOfArt />} />
           <Route exact path="/admin/addartist" element={<AddArtists />} />
           <Route exact path="/admin" element={<MyProfile />} />
-          <Route exact path="/admin/user" element={<AddUser/>} />
+          <Route exact path="/admin/user" element={<AddUser />} />
           <Route exact path="/admin/additems" element={<AddItems />} />
           <Route exact path="/admin/sales" element={<Sales />} />
           <Route exact path="/under" element={<UnderConstruction />} />
@@ -51,9 +56,9 @@ function App() {
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/favs" element={<Favs />} />
-          <Route exact path="/testlogin" element={<TestLogin />} />
+      
 
-          <Route exact path="/form" element={<FormContac_1 />} />
+          
         </Routes>
         <Footer />
       </div>

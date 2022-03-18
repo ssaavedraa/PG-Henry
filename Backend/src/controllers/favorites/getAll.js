@@ -7,7 +7,7 @@ const getAll = async (req, res) => {
       attributes: ["id", "firstName"],
       include: {
         model: Painting,
-        attributes: ["id", "title", "height", "width", "price"],
+        attributes: ["id", "title", "height", "width", "price", "isAvailable"],
         include: [{ model: Photo }, { model: Artist }],
       },
     });
@@ -23,6 +23,7 @@ const getAll = async (req, res) => {
         paintingprice: fav.price,
         artistName: fav.artist.name,
         artistPhoto: fav.artist.photo,
+        isAvailable: fav.isAvailable,
       };
     });
     if (!favoritesArray.length) return res.json([]);
