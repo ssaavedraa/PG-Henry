@@ -1,0 +1,29 @@
+.admin-sales-header,
+.filter-admin-seals,
+.subtitle-filters {
+  display: flex;
+  align-items: center;
+}
+
+.admin-sales-header {
+  width: 94%;
+  height: 15%;
+  padding: 0.5em;
+  margin: 0.2em 0;
+  margin-left: 1em;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+
+.admin-profile-titles {
+  font-size: 2em;
+}
+
+.subtitle-filters {
+  margin: 0 0.5em;
+  font-size: 1.1em;
+}
+
+.name-filter {
+  margin: 0 0.3em;
+}

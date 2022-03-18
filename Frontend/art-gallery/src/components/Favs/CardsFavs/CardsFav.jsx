@@ -42,31 +42,30 @@ export const CardsFav = () => {
                   </button>
                 </div>
               </div>
-                <h4>USD$ {fav.paintingprice}</h4>
-                {fav.isAvailable ? (
-                  <h4 className="textAvalibleFavs">Available</h4>
-                ) : (
-                  <h4 className="textNotAvalibleFavs">Not available</h4>
-                  
-                )}
-                {cart.includes(parseInt(fav.id)) ? (
-                  <button
-                    onClick={() => remove(parseInt(fav.id))}
-                    className="btnAddCartFavs"
-                    disabled={!fav.isAvailable}
-                  >
-                    Remove to cart
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => add(parseInt(fav.id))}
-                    className="btnAddCartFavs"
-                    disabled={!fav.isAvailable}
-                  >
-                    Add to cart
-                  </button>
-                )}
-              </div>
+              <h4>USD$ {fav.paintingprice}</h4>
+              {fav.isAvailable ? (
+                <h4 className="textAvalibleFavs">Available</h4>
+              ) : (
+                <h4 className="textNotAvalibleFavs">Not available</h4>
+              )}
+              {cart.includes(parseInt(fav.id)) ? (
+                <button
+                  onClick={() => remove(parseInt(fav.id))}
+                  className="btnAddCartFavs"
+                  disabled={!fav.isAvailable}
+                >
+                  Remove to cart
+                </button>
+              ) : (
+                <button
+                  onClick={() => add(parseInt(fav.id))}
+                  className="btnAddCartFavs"
+                  disabled={!fav.isAvailable}
+                >
+                  Add to cart
+                </button>
+              )}
+            </div>
           ))}
         </div>
       ) : (

@@ -26,7 +26,7 @@ const NavPanel = () => {
         </div>
         <ul className="menu-options">
           <li>
-          <Link to="/under">
+          <Link to="/admin/sales">
             <AiOutlineLineChart className="icon" /> SALES
             </Link>
           </li>

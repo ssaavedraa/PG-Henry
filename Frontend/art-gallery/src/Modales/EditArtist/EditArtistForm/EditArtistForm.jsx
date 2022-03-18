@@ -11,17 +11,29 @@ import { confirmationSweet } from "../../../components/utils/Notifications/Notif
 import { useNavigate } from "react-router-dom";
 
 const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
-
   const id = artistId;
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const artistData = useSelector((state) => state.artistId);
 
   useEffect(() => {
     dispatch(getArtistById(id));
   }, [dispatch, id]);
 
-  const artistData = useSelector((state) => state.artistId);
+  useEffect(() => {
+    setInput({
+      name: artistData.name,
+      biography: artistData.biography,
+      photo: artistData.photo,
+      email: artistData.email,
+      location: artistData.location,
+    });
+  }, [artistData]);
+
+  useEffect(()=>{
+    dispatch(getArtistById());
+  },[dispatch])
+
 
   const [input, setInput] = useState({
     name: artistData.name,
@@ -43,9 +55,10 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
     /*
       Sweet Alert recibe como argumentos:
       - primer argumento: Nombre del artista o pintura
-      - segundo argumento, estado que cerrara el modal,
-      - tercer argumento: Booleano 'true' si es para edita, 'false' si es para agregar
-      - cuarto argumento: Booleano 'true' si es artista, 'false' si es una obra
+      - segundo argumento, funcion dispatch,
+      - tercer argumento, estado que cerrara el modal,
+      - cuarto argumento: Booleano 'true' si es para edita, 'false' si es para agregar
+      - quinto argumento: Booleano 'true' si es artista, 'false' si es una obra
     */
     confirmationSweet(artistData.name,confirm, closeModal, true, true);
   }

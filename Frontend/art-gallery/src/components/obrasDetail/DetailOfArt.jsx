@@ -4,6 +4,8 @@ import {
   getObraDetail,
   getObrasRandon,
   getFavs,
+  availablePainting,
+  notAvailablePainting,
 } from "../../redux/actions/actions";
 import styles from "./Detail.module.css";
 import { AiFillEdit, AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
@@ -51,6 +53,14 @@ export const DetailOfArt = () => {
     //Agrego el dispatch del post del like
   }
 
+  async function handleAvailable(id, detailObraisAvailable) {
+    !detailObraisAvailable
+      ? await availablePainting(id)
+      : await notAvailablePainting(id);
+    dispatch(getObraDetail(id));
+  }
+
+  /////////////////////////////////
   const [page, setPage] = useState(1);
   const maximo = 4;
 
@@ -159,7 +169,7 @@ export const DetailOfArt = () => {
               {user.role === "admin" ? (
                 <button
                   onClick={() => setOpenModal(true)}
-                  className={styles.buttonLikeObra}
+                  className={styles.buttonEditObra}
                 >
                   <AiFillEdit className={styles.iconHeaderCardDetail} />
                 </button>
@@ -167,15 +177,57 @@ export const DetailOfArt = () => {
                 <div></div>
               )}
             </div>
-            <span className={styles.spanPrice}>USD$ {detailObra.price}</span>
+            <div className={styles.divContainerPaintingAvailible}>
+              <div className={styles.divContainerPriceAvalible}>
+                <span className={styles.spanPrice}>
+                  USD$ {detailObra.price}
+                </span>
+                {detailObra.isAvailable ? (
+                  <span className={styles.spanPaintingAvailible}>
+                    This painting is available
+                  </span>
+                ) : (
+                  <span className={styles.spanNotAvailible}>
+                    This painting isn't available
+                  </span>
+                )}
+              </div>
+              {user.role === "admin" ? (
+                <div className={styles.divContainerButtonAvailable}>
+                  <span>Change paint availability</span>
+                  <button
+                    onClick={() => handleAvailable(id, detailObra.isAvailable)}
+                  >
+                    {detailObra.isAvailable ? (
+                      <p className={styles.pTextPaintingforSale}>
+                        Take from sale
+                      </p>
+                    ) : (
+                      <p className={styles.pTextPaintingSold}>Put on sale</p>
+                    )}
+                  </button>
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
+
             {user.role !== "admin" ? (
               cart.includes(parseInt(id)) ? (
-                <button className={styles.btnCard} onClick={() => removeCart()}>
+                <button
+                  className={styles.btnCard}
+                  onClick={() => removeCart()}
+                  disabled={!detailObra.isAvailable}
+                >
                   <div className={styles.cardImage}>-</div>
                   <div className={styles.cardText}>REMOVE FROM CART</div>
                 </button>
               ) : (
-                <button className={styles.btnCard} onClick={() => addCart()}>
+                <button
+                  className={styles.btnCard}
+                  onClick={() => addCart()}
+                  disabled={!detailObra.isAvailable}
+                >
                   <div className={styles.cardImage}>+</div>
                   <div className={styles.cardText}>ADD TO CART</div>
                 </button>
@@ -192,14 +244,13 @@ export const DetailOfArt = () => {
             <div className={styles.cardImageReturn}>
               <div></div>
             </div>
-            <Link to='/gallery'>
-            <div className={styles.cardImageReturn}>
-              RETURN TO SEARCH
-            </div>
+            <Link to="/gallery">
+              <div className={styles.cardImageReturn}>RETURN TO SEARCH</div>
             </Link>
           </div>
         </div>
       </div>
+      <center><h1>More paintings</h1></center>
       <div className={styles.principalSectionObras}>
         <div
           onClick={handleDecrement}

@@ -8,7 +8,6 @@ import { FaTimes } from "react-icons/fa";
 import EditArtistForm from "./EditArtistForm"
 
 const EditArtistModal = ({ openEditArtistModal, setOpenEditArtistModal ,artistId}) => { 
-  
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0,0,0,0.6)",
@@ -26,7 +25,7 @@ const EditArtistModal = ({ openEditArtistModal, setOpenEditArtistModal ,artistId
       
     },
   };
- 
+
 
   return (
     <Modal isOpen={openEditArtistModal} setOpenEditArtistModal= {setOpenEditArtistModal} style={customStyles} ariaHideApp={false} artistId={artistId}>
