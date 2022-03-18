@@ -56,9 +56,6 @@ function App() {
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/favs" element={<Favs />} />
-      
-
-          
         </Routes>
         <Footer />
       </div>
