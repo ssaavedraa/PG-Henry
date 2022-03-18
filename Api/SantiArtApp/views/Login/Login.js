@@ -5,9 +5,12 @@ import {
   Button,
   TextInput,
   View,
+  Image
 } from "react-native";
 import style from "./Login.style.js";
 import axios from "axios";
+//Es para las pantallas responsives
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const popUp = (msg) => {
   Alert.alert("Login failed :(", msg, [{ text: "OK" }]);
@@ -59,6 +62,7 @@ function Login({ navigation }) {
     );
   return (
     <View style={style.loginForm}>
+      <Image  source={require("../../assets/SantArtlogo.png")} style={{width: wp('70%'), height: hp('25%')}}/>
       <TextInput
         autoFocus
         placeholder="Email"

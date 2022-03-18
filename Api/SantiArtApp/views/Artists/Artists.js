@@ -10,7 +10,7 @@ function Artists() {
     getArtists()
       .then((artists) => {
         setArtistData(artists);
-        console.log("LOADED ARTISTS");
+        //console.log("LOADED ARTISTS", artists);
       })
       .catch((err) => {
         console.log(err);
@@ -33,18 +33,20 @@ function Artists() {
     );
   return (
     <View>
-      {artistData.map(({ name }, i) => (
-        <Text key={i}>{name}</Text>
+      {artistData.map(({ name, photo }, i) => (
+        <View key={i}>
+        <Text >{name}</Text>
+        <Image
+          style={{ width: 50, height: 50 }}
+          source={{
+            uri: photo,
+          }}
+        /> 
+        </View>
       ))}
     </View>
   );
 }
 
 export default Artists;
-/* <Image
-          key={i}
-          style={{ width: 50, height: 50 }}
-          source={{
-            uri: { photo },
-          }}
-        /> */
+
