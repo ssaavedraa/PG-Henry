@@ -38,6 +38,7 @@ export const DetailOfArt = () => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
     dispatch(getFavs());
+  
   }, [id, dispatch, isFavorite]);
 
   useEffect(() => {

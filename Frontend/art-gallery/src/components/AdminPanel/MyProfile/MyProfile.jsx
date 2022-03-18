@@ -5,10 +5,13 @@ import NavPanel from "../NavPanel/NavPanel";
 import img from "../../../assets/img/profile.png";
 import useAuth from "../../../customHooks/useAuth";
 import axios from "axios";
+import Swal from "sweetalert2";
+
+
 
 const MyProfile = () => {
 
-  const [isEmailEdit, setIsEmailEdit] = useState(false)
+  // const [isEmailEdit, setIsEmailEdit] = useState(false)
   const [isPassEdit, setIsPassEdit] = useState(false)
   const [isPasswordSecure, setIsPasswordSecure] = useState(false);
   const [password, setPassword] = useState("");
@@ -28,6 +31,7 @@ const MyProfile = () => {
   }; */
 
   const handlePassChange = (e) => {
+  
     setIsPassEdit(!isPassEdit)
     if(!isPassEdit)e.target.classList.replace('normal','cancel')
     else e.target.classList.replace('cancel', 'normal')
@@ -100,11 +104,13 @@ const MyProfile = () => {
   };
 
   const firstNameChange = (e) => {
+    e.preventDefault()
     setFirstName(e.target.value)
   };
 
   const lastNameChange = (e) => {
     setLastName(e.target.value)
+    e.preventDefault()
   };
 
   const oldPasswordChange = (e) => {
@@ -119,30 +125,6 @@ const MyProfile = () => {
     setVerifyPassword(e.target.value)
   };
 
-  const handleChanges = async () => {
-    if (isPassEdit && isPasswordSecure) {
-      try {
-        const { data: { status, message } } = await axios.put("user/changePassword", { password, oldPassword })
-        if (status === "error") {
-          alert(`${message}`)
-        } else {
-          alert("Changes saved correctly")
-        }
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    if (firstName !== user.firstName || lastName !== user.lastName) {
-      try {
-        await axios.put("/user/changeName", { firstName, lastName });
-        window.location.reload();
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    discard();
-  };
-
   const discard = () => {
     setFirstName(user.firstName);
     setLastName(user.lastName);
@@ -151,6 +133,65 @@ const MyProfile = () => {
     setVerifyPassword("");
   };
 
+  const  confirm = async () => {
+
+    const confirmationAdd = Swal.mixin({
+      customClass: {
+        confirmButton: "btnSweet success",
+        cancelButton: "btnSweet danger",
+      },
+      buttonsStyling: false,
+    });
+
+    confirmationAdd.fire({
+      title: 'Are you sure you want to save the changes?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, update!',
+      cancelButtonText: "No, cancel!",
+    }).then( async (result) => {
+      
+      if (result.isConfirmed) {
+        if (isPassEdit && isPasswordSecure) {
+          try {
+            const { data: { status, message } } = await axios.put("user/changePassword", { password, oldPassword })
+            if (status === "error") {
+              Swal.fire(
+                `Old password doesn't match`,
+                `Old password doesn't match`,
+                `Old password doesn't match`
+                
+              ) 
+            } else {
+              Swal.fire(
+                "Changes saved correctly",
+                "Changes saved correctly",
+                "Changes saved correctly"
+                
+              ) 
+            }
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        if (firstName !== user.firstName || lastName !== user.lastName) {
+          try {
+            await axios.put("/user/changeName", { firstName, lastName });
+            window.location.reload();
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        discard();
+        Swal.fire(
+          'Updated!',
+          'Your entry has been updated.',
+          'success'
+        )  
+      }
+
+    })
+  }
   return (
     <>
       <div className="admin-box">
@@ -164,9 +205,9 @@ const MyProfile = () => {
             <div className="user-data">
               <div className="user-buttons">
                {/*  <button className="normal" onClick={e => handleEmailChange(e)} >{!isEmailEdit ? 'Change Email' : 'Cancel email change'}</button> */}
-                <button className="normal" onClick={handlePassChange} >{!isPassEdit ? 'Change Password' : 'Cancel password change'}</button>
-                <button onClick={discard}>Discard changes</button>
-                <button disabled={applyChanges} onClick={() => handleChanges()}>Save changes</button>
+                <button className="normal color-reset" onClick={handlePassChange} >{!isPassEdit ? 'Change Password' : 'Cancel password change'}</button>
+                <button  onClick={discard}>Discard changes</button>
+                <button className="color-add"  disabled={applyChanges} onClick={confirm }>Save changes</button>
               </div>
               <div className="user-fields">
                 <label htmlFor="firstName"> First Name</label>
