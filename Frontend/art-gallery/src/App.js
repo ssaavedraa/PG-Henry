@@ -25,6 +25,7 @@ import CheckoutButton from "./components/MercadoPago/checkoutButton";
 
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 
+
 function App() {
 
   return (

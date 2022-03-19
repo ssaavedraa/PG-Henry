@@ -6,6 +6,8 @@ import Filters from "../Filters/Filters";
 import CardsPaints from "../../containers/CardsPaints/CardsPaints";
 import Pagination from "../Pagination/Pagination";
 import "./Gallery.css";
+import img from '../../assets/img/loading-img.gif'
+
 
 function Gallery() {
   const dispatch = useDispatch();
@@ -107,6 +109,12 @@ function Gallery() {
       name: "",
     });
     navigate("/gallery");
+  }
+
+  if (!paintings) {
+    return <div className="loading">
+        <img src={img} alt="img"/>
+        </div>
   }
 
   return (
