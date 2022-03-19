@@ -3,7 +3,7 @@ import useAuth from "../../customHooks/useAuth";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function CheckoutButton({}) {
+export default function CheckoutButton() {
 	const { cart } = useCart();
 	const { user } = useAuth();
 	const navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function CheckoutButton({}) {
 			try {
 				const preference = await axios.post("checkout/createPreference", obj);
 
-				if (preference.data.status == "ok") {
+				if (preference.data.status === "ok") {
 					localStorage.setItem("preferenceId", preference.data.preferenceId);
 					localStorage.setItem("purchaseId", preference.data.purchaseId);
 				}

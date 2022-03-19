@@ -12,7 +12,7 @@ const paymentFailure = async (req, res) => {
 		purchase.pendingDate = canceledDateFormat;
 		purchase.canceledDate = new Date();
 		await purchase.save();
-		res.json(req.query);
+		res.redirect("http://localhost:3000/");
 	} catch (e) {
 		console.log(e);
 		return res.status(400).send(e);

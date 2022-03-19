@@ -11,7 +11,7 @@ const paymentSuccess = async (req, res) => {
 		pendingDateFormat = pendingDateFormat.slice(0, -5);
 		purchase.pendingDate = pendingDateFormat;
 		await purchase.save();
-		res.json(req.query);
+		res.redirect("http://localhost:3000/");
 	} catch (e) {
 		console.log(e);
 		return res.status(400).send(e);
