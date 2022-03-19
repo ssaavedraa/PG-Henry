@@ -1,25 +1,23 @@
-
-
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "./TechniqueModal.css";
 import { FaTimes } from "react-icons/fa";
+
 import { useDispatch, useSelector } from "react-redux";
 
-import { 
-  getTechnique,
-  addTechnique,
-} from "../../redux/actions/actions";
+import { getTechnique, addTechnique } from "../../redux/actions/actions";
+import { confirmationSweet } from "../../components/utils/Notifications/Notifications";
 
+export default function TechniqueModal({
+  openTechniqueModal,
+  setOpenTechniqueModal,
+}) {
+  const dispatch = useDispatch();
+  const technique = useSelector((state) => state.technique);
 
-export default function TechniqueModal({openTechniqueModal, setOpenTechniqueModal}) {
-    const dispatch = useDispatch();
-
-  React.useEffect(() => {    
+  React.useEffect(() => {
     dispatch(getTechnique());
   }, [dispatch]);
-
-  const technique = useSelector((state) => state.technique);
 
   const customStyles = {
     overlay: {
@@ -36,47 +34,96 @@ export default function TechniqueModal({openTechniqueModal, setOpenTechniqueModa
     },
   };
 
-  const [TechExist, setTechExist] = useState("");
   const [inputTechnique, setInputTechnique] = useState({
-    name:"",
-    description: ""
+    name: "",
+    description: "",
   });
+  console.log(inputTechnique, "soy input");
+
+  const [errors, setError] = useState({});
+  const [applyChanges, setApplyChanges] = useState(true);
+  console.log(errors, "soy errores");
+
+  function validate(input) {
+    setApplyChanges(true);
+    const allTechiques = [];
+    console.log(allTechiques, "soy todas la tecnicas");
+    technique.map((d) => allTechiques.push(d.name));
+    let errors = {};
+    if (allTechiques.includes(input.name)) {
+      errors.message = "This Technique is already added";
+    } else if (!input.name || !input.description) {
+      errors.message = "*All inputs are required";
+    } else {
+      setApplyChanges(false);
+    }
+    return errors;
+  }
 
   function handleChangeTech(e) {
-    const tec = e.target.value.replace(/\w\S*/g, function (txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-
-    const allTechiques = [];
-
-    technique.map((d) => allTechiques.push(d.name));
-
-    if (allTechiques.includes(tec)) {
-      setTechExist({
-        message: "This Technique is already added",
+    if (e.target.name === "name") {
+      const tec = e.target.value.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
+      setInputTechnique({
+        ...inputTechnique,
+        name: tec,
       });
     } else {
       setInputTechnique({
         ...inputTechnique,
-        inputTechnique: e.target.value,
+        description: e.target.value,
       });
     }
+    setError(
+      validate({
+        ...inputTechnique,
+        [e.target.name]: e.target.value,
+      })
+    );
   }
-    return (
-        <Modal
-        isOpen={openTechniqueModal}
-        style={customStyles}
-        setOpenModalArtist={setOpenTechniqueModal}
-        ariaHideApp={false}
-      >
-        
-        <div className="modal-technique">
-        <div onClick={() => setOpenTechniqueModal(false)}>
-          <div className="technique-box">
-            <form>
-              <div><h3>Add a new techiques</h3></div>
-              <div><label>Name:</label></div>
-              <div>
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    confirmationSweet(
+      inputTechnique.name,
+      confirm,
+      closeModal,
+      false,
+      false,
+      true
+    );
+  }
+
+  function confirm() {
+    dispatch(addTechnique(inputTechnique));
+    setInputTechnique({
+      name: "",
+      description: "",
+    });
+  }
+
+  function closeModal() {
+    setOpenTechniqueModal(false);
+  }
+
+  return (
+    <Modal
+      isOpen={openTechniqueModal}
+      style={customStyles}
+      setOpenModalArtist={setOpenTechniqueModal}
+      ariaHideApp={false}
+    >
+      <div className="modal-technique">
+        <div className="technique-box">
+          <form>
+            <div>
+              <h2>ADD TECHNIQUE</h2>
+            </div>
+            <div>
+              <label>Name:</label>
+            </div>
+            <div>
               <input
                 key="name"
                 className="input"
@@ -84,10 +131,12 @@ export default function TechniqueModal({openTechniqueModal, setOpenTechniqueModa
                 value={inputTechnique.name}
                 onChange={handleChangeTech}
               />
-              </div>
-              {/* {techExist ? <label> {techExist.message} </label> : <div></div>} */}
+            </div>
+
+            <div>
               <div>
-              <div><label>Description :</label></div>
+                <label>Description :</label>
+              </div>
               <textarea
                 name="description"
                 key="description"
@@ -95,23 +144,26 @@ export default function TechniqueModal({openTechniqueModal, setOpenTechniqueModa
                 value={inputTechnique.description}
                 onChange={handleChangeTech}
               />
-
-              
-            
-              </div>
-
-              <button>
-                ADD NEW TECHNIQUE               
-                
-              </button>
-            </form>
-
-            
-              <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
             </div>
-          </div>
+            <div className="error">
+              {errors.message ? <p>{errors.message}</p> : <p></p>}
+            </div>
+
+            <div>
+              <button
+                disabled={applyChanges}
+                onClick={handleSubmit}
+                className="btn-edit"
+              >
+                ADD NEW TECHNIQUE
+              </button>
+            </div>
+          </form>
         </div>
-      </Modal>
-    );
-  }
-  
+        <div className="close-btn" onClick={() => setOpenTechniqueModal(false)}>
+          <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
+        </div>
+      </div>
+    </Modal>
+  );
+}

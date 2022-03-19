@@ -1,21 +1,38 @@
-
-.modal-technique{
-    height: 30vh;
-    width: 40vh;
-    overflow: auto;
-    background-color: aquamarine;
+.modal-technique {
+  height: 50vh;
+  width: 60vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-
-
-.technique-box form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: blue;
-    
-    
-   
-    
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
 }
 
+.technique-box {
+  display: flex;
+}
+
+.technique-box form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.technique-box form h2 {
+  margin: 1rem;
+  color: var(--btnMain-Color);
+}
+
+.technique-box form textarea {
+  width: 20rem;
+
+  height: 5rem;
+}
+
+.error p {
+  color: red;
+}

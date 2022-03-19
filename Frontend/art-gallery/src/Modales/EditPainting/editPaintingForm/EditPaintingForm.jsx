@@ -10,8 +10,9 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import logo from "../../../assets/img/SantArtlogo.png";
+import { confirmationSweet } from "../../../components/utils/Notifications/Notifications";
 
-const EditPaintinfForm = ({ObraId, setOpenModal}) => {
+const EditPaintinfForm = ({ ObraId, setOpenModal }) => {
   const dispatch = useDispatch();
   const id = ObraId;
   const detailObra = useSelector((state) => state.detailObra);
@@ -32,20 +33,22 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
     });
   }, [detailObra]);
 
-  const [errors, setError] = useState({  }); 
-  const[applyChanges, setApplyChanges]= useState(true);
+  const [errors, setError] = useState({});
+  const [applyChanges, setApplyChanges] = useState(true);
 
-  function validate(input) {    
-    setApplyChanges(true)
+  function validate(input) {
+    setApplyChanges(true);
     let errors = {};
-    if (!input.title
-      || !input.price
-      || !input.height
-      || !input.width 
-      || !input.description) {
-      errors.message = "*All inputs are required";              
-    }else{
-    setApplyChanges(false)
+    if (
+      !input.title ||
+      !input.price ||
+      !input.height ||
+      !input.width ||
+      !input.description
+    ) {
+      errors.message = "*All inputs are required";
+    } else {
+      setApplyChanges(false);
     }
     return errors;
   }
@@ -79,18 +82,31 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
         [e.target.name]: e.target.value,
       });
     }
-    setError(      
+    setError(
       validate({
         ...input,
         [e.target.name]: e.target.value,
       })
-    ); 
+    );
   }
 
-  async function handleSubmit(e) {
+  // async function handleSubmit(e) {
+  //   e.preventDefault();
+  //   await dispatch(editPainting(id, input));
+  //   setOpenModal(false)
+  // }
+
+  function handleSubmit(e) {
     e.preventDefault();
+    confirmationSweet(detailObra.title, confirm, closeModal, true, false);
+  }
+
+  async function confirm() {
     await dispatch(editPainting(id, input));
-    setOpenModal(false)
+  }
+
+  function closeModal() {
+    setOpenModal(false);
   }
 
   return (
@@ -142,7 +158,6 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
                       <input
                         type="number"
                         step="0.01"
-                        
                         key="height"
                         id="height"
                         min="11"
@@ -183,8 +198,12 @@ const EditPaintinfForm = ({ObraId, setOpenModal}) => {
               />
 
               <div>
-              <div className="error">{errors.message ? <p>{errors.message}</p> : <p></p>} </div>
-                <button disabled={applyChanges} className="btn-painting">EDIT ITEM</button>
+                <div className="error">
+                  {errors.message ? <p>{errors.message}</p> : <p></p>}{" "}
+                </div>
+                <button disabled={applyChanges} className="btn-painting">
+                  EDIT ITEM
+                </button>
               </div>
             </form>
           </div>
