@@ -17,7 +17,8 @@ import {
   CLEAR_ARTISTBYID,
 	GET_STATS_ARTIST,
   ADD_ARTIST,
-  EDIT_PAINT
+  EDIT_PAINT,
+  ADD_TECHNIQUE
 } from "../action-types";
 
 
@@ -177,6 +178,11 @@ function rootReducer(state = initialState, action) {
       return{
         ...state,
         paintings: artworks
+      }
+      case ADD_TECHNIQUE:
+      return{
+        ...state,
+        technique: [...state.technique, action.payload]
       }
     default:
 			return state;
