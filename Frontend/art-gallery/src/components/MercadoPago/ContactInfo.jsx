@@ -1,8 +1,10 @@
 import axios from "axios";
+import useCart from "../../customHooks/useCart";
 
 import { useNavigate } from "react-router-dom";
 
 export default function ContactInfo() {
+	const { cart } = useCart();
 	const navigate = useNavigate();
 
 	const info = {
@@ -16,12 +18,12 @@ export default function ContactInfo() {
 		floor: 45,
 		unit: "f",
 	};
-	info.paintings = [1, 2, 3];
+	info.paintings = cart;
 
 	info.purchaseId = localStorage.getItem("purchaseId");
 	const handleClick = async () => {
 		try {
-			const response = await axios.post("checkout/contactInfo", info);
+			await axios.post("checkout/contactInfo", info);
 			navigate("/payment");
 		} catch (e) {
 			console.log(e);
