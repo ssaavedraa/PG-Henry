@@ -16,7 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
-
+import img from '../../assets/img/loading-img.gif'
 import './Detail.module.css'
 
 export const DetailOfArt = () => {
@@ -92,7 +92,10 @@ export const DetailOfArt = () => {
   };
 
   if (!detailObra || !obraRandon) {
-    return <h1>Loading</h1>;
+    return <div className="loading">
+    <img src={img} alt="img"/>
+    </div>
+    
   }
   return (
     <div className={styles.containerDetail}>

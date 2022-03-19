@@ -1,0 +1,91 @@
+.container__FormContacArtist{
+    width: 100%;
+    min-height: 90vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.FormContacArtist_Principal {
+    width: 70vh;
+    min-height: 80vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+.FormContacArtist_Principal img{
+margin-right: 5px;
+margin-top: 3px;
+}
+.FormContacArtist_Principal_img{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.FormContacArtist_form {
+    width: 80%;
+    height: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.FormContacArtist_form form {
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.FormContacArtist_form h1 {
+  
+    margin-bottom: 10px;
+}
+
+.FormContacArtist_form input {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+    /* margin-bottom: 30px; */
+    padding-left: 5px;
+}
+.FormContacArtist_form textarea {
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+    padding-left: 5px;
+  }
+.FormContacArtist_form button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+margin-top: 30px;
+margin-bottom: 10px;
+background: #168AAD;
+color: white;
+font-size: 15px;
+text-align: center;
+border: none;
+cursor: pointer;
+}
+.messageError {
+    width: 305px;
+    height: 30px;
+    border: 2px solid black;
+    background: rgb(230, 118, 118);
+    border-radius: 10px;
+    /* margin-top: -33px; */
+    padding-left: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notMessageError{
+    display: none;
+}

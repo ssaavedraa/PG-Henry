@@ -6,7 +6,7 @@ import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
 import AddArtistModal from "../../Modales/EditArtist/AddArtistForm/AddArtisModal";
 import useAuth from "../../customHooks/useAuth";
-
+import img from '../../assets/img/loading-img.gif'
 
 
 
@@ -40,10 +40,14 @@ export default function Artists(){
       dispatch(getArtist())
     }, [dispatch])
 
-
+    
 
     const [openModalArtist, setOpenModalArtist] = useState(false);
-
+    if (!artists) {
+        return <div className="loading">
+            <img src={img} alt="img"/>
+            </div>
+      }
     return(
         <div className="artists-container1">
             <div className="artists-header1">
