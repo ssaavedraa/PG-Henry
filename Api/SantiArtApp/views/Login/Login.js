@@ -78,7 +78,7 @@ function Login({ navigation }) {
         ref={passRef}
       />
       <Button title="Login" onPress={handleLogin} />
-      <Button title="PASA" onPress={() => navigation.replace("Home")} />
+      <Button title="Home" onPress={() => navigation.replace("Home")} />
     </View>
   );
 }
