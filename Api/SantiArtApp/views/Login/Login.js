@@ -5,9 +5,18 @@ import {
   Button,
   TextInput,
   View,
+  Image,
+  TouchableOpacity,
+  Text,
 } from "react-native";
 import style from "./Login.style.js";
 import axios from "axios";
+//Es para las pantallas responsives
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
+import symbolicateStackTrace from "react-native/Libraries/Core/Devtools/symbolicateStackTrace";
 
 const popUp = (msg) => {
   Alert.alert("Login failed :(", msg, [{ text: "OK" }]);
@@ -59,6 +68,10 @@ function Login({ navigation }) {
     );
   return (
     <View style={style.loginForm}>
+      <Image
+        source={require("../../assets/santArt.png")}
+        style={{ width: wp("75%"), height: hp("40%") }}
+      />
       <TextInput
         autoFocus
         placeholder="Email"
@@ -68,6 +81,7 @@ function Login({ navigation }) {
         autoCapitalize="none"
         onChangeText={(i) => setEmail(i)}
         onSubmitEditing={() => passRef.current.focus()}
+        style={style.inputs}
       />
       <TextInput
         secureTextEntry
@@ -76,8 +90,11 @@ function Login({ navigation }) {
         onChangeText={(i) => setPassword(i)}
         onSubmitEditing={handleLogin}
         ref={passRef}
+        style={style.inputs}
       />
-      <Button title="Login" onPress={handleLogin} />
+      <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
+        <Text style={style.textLogin}>Login</Text>
+      </TouchableOpacity>
       <Button title="PASA DERECHO" onPress={() => navigation.replace("Home")} />
     </View>
   );
