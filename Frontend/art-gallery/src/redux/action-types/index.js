@@ -12,9 +12,11 @@ export const DELETE_FAVS = 'DELETE_FAVS';
 export const GET_USER_ADMIN = 'GET_USER_ADMIN';
 export const ORDER_BY_A_Z = 'ORDER_BY_A_Z';
 export const ORDER_BY_TYPE = 'ORDER_BY_TYPE';
-
 export const GET_ALL_ARTISTS = "GET_ALL_ARTISTS";
 export const GET_FAVS = "GET_FAVS";
 export const CLEAR_ARTISTBYID = "CLEAR_ARTISTBYID";
 export const GET_STATS_ARTIST = "GET_STATS_ARTIST";
 export const CLEAR_ARTIST = "CLEAR_ARTIST";
+export const ADD_ARTIST = 'ADD_ARTIST'
+export const EDIT_ARTIST = 'EDIT_ARTIST'
+export const EDIT_PAINT = 'EDIT_PAINT'

@@ -3,32 +3,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
-import ModalAddArtist from "../../../Modales/EditArtist/AddArtistForm/AddArtistForm";
-import ModalArtist from './ModalArtist/ModalArtist'
+import EditArtistModal from "../../../Modales/EditArtist/EditArtistForm/EditArtistModal";
 import NavPanel from "../NavPanel/NavPanel";
-import ArtistModal from "../../../Modales/EditArtist/ArtistModal";
+import AddArtistModal from "../../../Modales/EditArtist/AddArtistForm/AddArtisModal";
 import "./Artists.css";
 
 function AddArtists() {
-  const dispatch = useDispatch();
   const artists = useSelector((state) => state.artist);
-
+  const dispatch = useDispatch();
+  
+  
   React.useEffect(() => {
     dispatch(getArtitsStat());
   }, [dispatch]);
 
   const [openModalArtist, setOpenModalArtist] = useState(false);
 
-  React.useEffect(() => {
-    return () => dispatch(clearArtists());
-  }, [dispatch]);
-
   return (
     <div className="container-addartist">
       <NavPanel />
       <div className="admin-profile-container">
         <div className="artists-header">
-          <ArtistModal
+          <AddArtistModal
             openModalArtist={openModalArtist}
             setOpenModalArtist={setOpenModalArtist}
             isEditArtist={false}
@@ -83,7 +79,8 @@ function AddArtists() {
 
 export default AddArtists;
 
-function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
+function RowArtist({ artist, openModalArtist, setOpenModalArtist}) {
+  const [openModal, setopenModal] = useState(false);
   return (
     <tr>
       <td className="id-title">{artist.artistId}</td>
@@ -94,17 +91,16 @@ function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
       <td className="paintings-title">{artist.paintings}</td>
       <td className="review-title">{artist.reviews}</td>
       <td className="sales-title">{artist.sales}</td>
+      <EditArtistModal
+        openEditArtistModal={openModal}
+        setOpenEditArtistModal={setopenModal}
+        artistId={artist.artistId}
+      />
       <td className="button-title">
-        <ArtistModal
-          openModalArtist={openModalArtist}
-          setOpenModalArtist={setOpenModalArtist}
-          isEditArtist={true}
-          artist={artist.artistId}
-        />
-        {/* <AiFillEdit
+        <AiFillEdit
           className="icon-artist-eduit"
-          onClick={() => setOpenModalArtist(true)}
-        /> */}
+          onClick={() => setopenModal(true)}
+        />
       </td>
     </tr>
   );

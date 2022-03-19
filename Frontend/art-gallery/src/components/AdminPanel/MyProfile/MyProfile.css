@@ -80,3 +80,18 @@ button.cancel{
 .password-reqs ul{
     padding-left: 2rem;
 }
+.color-reset {
+    background: rgb(235, 87, 99) !important;
+    color: white;
+    font-weight: 800;
+}
+.color-add {
+    background: #50b9b1 !important;
+    color: white;
+    font-weight: 800;
+}
+.messgeError {
+    width: 120px;
+    height: 100px;
+    background: #50b9b1;
+}
