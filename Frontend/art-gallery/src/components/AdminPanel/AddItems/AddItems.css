@@ -135,3 +135,13 @@
    .error p{
        color: red;
    }
+
+   .add-item-btn{
+    height: 2rem;
+    width: 11rem;       
+    list-style: none;
+    background-color: rgb(212, 212, 212);
+    border-radius: 20px;
+    border-style: none;
+    margin: 1rem;
+   }

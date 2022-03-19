@@ -1,26 +1,20 @@
 
-.modal-editart{
-    height: auto;
-    width: auto;
+.modal-technique{
+    height: 30vh;
+    width: 40vh;
     overflow: auto;
-  
-    
-        
+    background-color: aquamarine;
 }
 
-.containerHeaderModalArtist{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    
-    
-}
 
-.form-box{
+
+.technique-box form{
     display: flex;
-    flex-direction: row;    
-    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blue;
+    
+    
    
     
 }

@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { confirmationSweet } from "../../utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
+import TechniqueModal from "../../../Modales/AddTechniques/Tecnique"
 
 const AddItems = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const AddItems = () => {
     techniqueIds: [],
   });
 
+  const [openTechniqueModal, setOpenTechniqueModal] = useState(false);
   const [errors, setError] = useState({});
   const [applyChanges, setApplyChanges] = useState(true);
 
@@ -142,8 +144,14 @@ const AddItems = () => {
     <>
       <div className="admin-box">
         <NavPanel />
+        <TechniqueModal
+        openTechniqueModal={openTechniqueModal}
+        setOpenTechniqueModal={setOpenTechniqueModal}        
+      />
         <div className="principal-box">
+         
           <div className="data">
+          <div><button onClick={() => setOpenTechniqueModal(true) } className="add-item-btn">Add new technique</button></div>
             <h2> ADD NEW ITEM</h2>
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
@@ -238,7 +246,7 @@ const AddItems = () => {
                     {d.name}
                   </label>
                 ))}
-                <div></div>
+                
               </div>
 
               <label> Photo: </label>
