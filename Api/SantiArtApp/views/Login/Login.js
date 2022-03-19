@@ -95,7 +95,7 @@ function Login({ navigation }) {
       <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
         <Text style={style.textLogin}>Login</Text>
       </TouchableOpacity>
-      {/* <Button title="PASA DERECHO" onPress={() => navigation.replace("Home")} /> */}
+      <Button title="PASA DERECHO" onPress={() => navigation.replace("Home")} />
     </View>
   );
 }
