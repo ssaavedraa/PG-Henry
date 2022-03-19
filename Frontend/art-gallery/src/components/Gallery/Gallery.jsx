@@ -6,6 +6,8 @@ import Filters from "../Filters/Filters";
 import CardsPaints from "../../containers/CardsPaints/CardsPaints";
 import Pagination from "../Pagination/Pagination";
 import "./Gallery.css";
+import img from '../../assets/img/loading-img.gif'
+
 
 function Gallery() {
   const dispatch = useDispatch();
@@ -25,9 +27,9 @@ function Gallery() {
     minPrice: "0",
     maxPrice: "30000",
     minWidth: "0",
-    maxWidth: "2000",
+    maxWidth: "1000",
     minHeight: "0",
-    maxHeight: "2000",
+    maxHeight: "1000",
     artist: [],
     technique: [],
     orientation: "",
@@ -107,6 +109,12 @@ function Gallery() {
       name: "",
     });
     navigate("/gallery");
+  }
+
+  if (!paintings) {
+    return <div className="loading">
+        <img src={img} alt="img"/>
+        </div>
   }
 
   return (

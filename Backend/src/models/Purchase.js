@@ -1,15 +1,20 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-	sequelize.define('purchase', {
-		purchaseDate: {
-			type: DataTypes.DATE,
-			allowNull: false,
-		},
+	sequelize.define("purchase", {
 		state: {
-			type: DataTypes.ENUM('pending', 'dispatched', 'canceled', 'completed'),
+			type: DataTypes.ENUM(
+				"pending",
+				"dispatched",
+				"canceled",
+				"completed",
+				"processing"
+			),
 		},
 		canceledDate: {
+			type: DataTypes.DATE,
+		},
+		pendingDate: {
 			type: DataTypes.DATE,
 		},
 		dispatchedDate: {
@@ -21,5 +26,8 @@ module.exports = (sequelize) => {
 		totalPrice: {
 			type: DataTypes.FLOAT,
 		},
-	})
-}
+		payment_id: {
+			type: DataTypes.INTEGER,
+		},
+	});
+};

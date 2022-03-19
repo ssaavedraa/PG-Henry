@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom'
 import { getArtist } from "../../redux/actions/actions";
 import ArtistCard from '../ArtistCard/ArtistCard.component'
 import './Artists.css'
-import ArtistModal from "../../Modales/EditArtist/ArtistModal";
+import AddArtistModal from "../../Modales/EditArtist/AddArtistForm/AddArtisModal";
 import useAuth from "../../customHooks/useAuth";
-
+import img from '../../assets/img/loading-img.gif'
 
 
 
@@ -16,8 +16,6 @@ export default function Artists(){
     const [sort, setSort] = useState('az');
 
     const {user} = useAuth()
-
-    console.log(user)
 
     const dispatch = useDispatch()
 
@@ -42,10 +40,14 @@ export default function Artists(){
       dispatch(getArtist())
     }, [dispatch])
 
-
+    
 
     const [openModalArtist, setOpenModalArtist] = useState(false);
-
+    if (!artists) {
+        return <div className="loading">
+            <img src={img} alt="img"/>
+            </div>
+      }
     return(
         <div className="artists-container1">
             <div className="artists-header1">
@@ -56,10 +58,9 @@ export default function Artists(){
                         <option value="az">A-Z</option>
                         <option value="za">Z-A</option>
                     </select>
-                     <ArtistModal
+                     <AddArtistModal
         openModalArtist={openModalArtist}
-        setOpenModalArtist={setOpenModalArtist}
-        isEditArtist= {false}
+        setOpenModalArtist={setOpenModalArtist}        
               />
                     {user.role === 'admin' && <button  onClick={() => setOpenModalArtist(true)} className="btn-create">ADD NEW ARTIST</button>}
                 </div>

@@ -11,9 +11,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import logo from "../../../assets/img/SantArtlogo.png";
 
-const EditPaintinfForm = (ObraId) => {
+const EditPaintinfForm = ({ObraId, setOpenModal}) => {
   const dispatch = useDispatch();
-  const id = ObraId.ObraId;
+  const id = ObraId;
   const detailObra = useSelector((state) => state.detailObra);
 
   useEffect(() => {
@@ -63,22 +63,14 @@ const EditPaintinfForm = (ObraId) => {
     }
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    dispatch(editPainting(id, input));
-    alert("Painting Updated");
-    setInput({
-      title: "",
-      description: "",
-      height: 0,
-      width: 0,
-      price: 0,
-    });
+    await dispatch(editPainting(id, input));
+    setOpenModal(false)
   }
 
   return (
     <>
-     
       <div className="principal-box-edit">
         <div className="box-one"></div>
         <div className="data">

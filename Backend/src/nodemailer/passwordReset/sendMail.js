@@ -1,4 +1,4 @@
-const transporter = require("./transporter.js");
+const transporter = require("../transporter.js");
 const { TEST_USER } = process.env;
 
 const emailSender = async (destinatary, name, password) => {
