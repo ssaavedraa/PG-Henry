@@ -1,0 +1,1467 @@
+*   [33m951a4a5[m[33m ([m[1;36mHEAD -> [m[1;32myessy[m[33m)[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[31m|[m[32m\[m  
+[31m|[m *   [33m1be167d[m[33m ([m[1;31morigin/development[m[33m)[m Merge pull request #171 from ssaavedraa/mercadopagointegration
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m *   [33md959dcc[m Merge branch 'development' into mercadopagointegration
+[31m|[m [33m|[m [35m|[m[33m\[m  
+[31m|[m [33m|[m [35m|[m[33m/[m  
+[31m|[m [33m|[m[33m/[m[35m|[m   
+[31m|[m [33m|[m * [33ma278e57[m mercadopago
+* [33m|[m [36m|[m [33m987ff7a[m[33m ([m[1;31morigin/yessy[m[33m)[m formularios controlados
+* [33m|[m [36m|[m [33m939c366[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;31m|[m[33m\[m[33m|[m [36m|[m 
+[1;31m|[m * [36m|[m   [33m248601d[m Merge pull request #169 from ssaavedraa/ssaavedraa
+[1;31m|[m [1;33m|[m[1;34m\[m [36m\[m  
+[1;31m|[m [1;33m|[m * [36m\[m   [33me898dac[m Artwork miniature added, css fixes
+[1;31m|[m [1;33m|[m [1;35m|[m[1;36m\[m [36m\[m  
+[1;31m|[m [1;33m|[m * [1;36m|[m [36m|[m [33m473f2ce[m Artwork miniature added
+[1;31m|[m * [1;36m|[m [1;36m|[m [36m|[m   [33m730ca35[m Merge pull request #168 from ssaavedraa/detailObra
+[1;31m|[m [1;36m|[m[32m\[m [1;36m\[m [1;36m\[m [36m\[m  
+[1;31m|[m [1;36m|[m [32m|[m[1;36m_[m[1;36m|[m[1;36m/[m [36m/[m  
+[1;31m|[m [1;36m|[m[1;36m/[m[32m|[m [1;36m|[m [36m|[m   
+[1;31m|[m [1;36m|[m * [1;36m|[m [36m|[m [33m4c1d95b[m Update App.js
+[1;31m|[m [1;36m|[m * [1;36m|[m [36m|[m   [33m9bcd287[m Subiendo mis cambios, form de contacto +  swes alert
+[1;31m|[m [1;36m|[m [33m|[m[1;36m\[m [1;36m\[m [36m\[m  
+[1;31m|[m [1;36m|[m [33m|[m[1;36m/[m [1;36m/[m [36m/[m  
+[1;31m|[m [1;36m|[m[1;36m/[m[33m|[m [1;36m|[m [36m|[m   
+[1;31m|[m [1;36m|[m * [1;36m|[m [36m|[m [33m88c3808[m formulario contacto
+[1;31m|[m [1;36m|[m * [1;36m|[m [36m|[m [33m5c6c2a6[m cambiando color admin perfil
+[1;31m|[m [1;36m|[m * [1;36m|[m [36m|[m   [33m6055f99[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into detailObra
+[1;31m|[m [1;36m|[m [35m|[m[36m\[m [1;36m\[m [36m\[m  
+[1;31m|[m [1;36m|[m * [36m|[m [1;36m|[m [36m|[m [33m72c78cf[m accion de setAvaliable
+* [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m [33mbd93fce[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;31m|[m[1;36m\[m[1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m 
+[1;31m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m   [33mf15982d[m Merge pull request #167 from ssaavedraa/home
+[1;31m|[m [1;33m|[m[1;34m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33m916367f[m Correcciones
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33m6eac139[m Se vincula el componente editar artista desde el panel del admin
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m   [33m40356f5[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[1;31m|[m [1;33m|[m [1;35m|[m[1;33m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[1;31m|[m [1;33m|[m [1;35m|[m[1;33m/[m [36m/[m [36m/[m [1;36m/[m [36m/[m  
+[1;31m|[m [1;33m|[m[1;33m/[m[1;35m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33m5f4a1e3[m se modifica estilos para navbar
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33mfbdf829[m Se linkea el componente Sales con NavPanel del Admin
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33m0d7f456[m Se arregla valor maximo de rango
+[1;31m|[m [1;33m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33md6e8786[m Se realiza componente de compras
+* [1;33m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m [33m4ff8465[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[31m|[m[1;33m\[m[1;33m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m 
+[31m|[m * [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   [33m89e3ba0[m Merge pull request #166 from ssaavedraa/eli-detailartist
+[31m|[m [1;36m|[m[34m\[m [1;36m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[31m|[m [1;36m|[m [34m|[m[1;36m/[m [36m/[m [36m/[m [1;36m/[m [36m/[m  
+[31m|[m [1;36m|[m[1;36m/[m[34m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   
+[31m|[m [1;36m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33mbfd983d[m agrega estilos al verifyEmail
+[31m|[m [1;36m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m   [33m2c19515[m merge con development
+[31m|[m [1;36m|[m [35m|[m[1;36m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[31m|[m [1;36m|[m [35m|[m[1;36m/[m [36m/[m [36m/[m [1;36m/[m [36m/[m  
+[31m|[m [1;36m|[m[1;36m/[m[35m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   
+[31m|[m [1;36m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m [33m6aa9966[m agrega locacion en detalle del artista, borra algunos console.log
+[31m|[m [1;36m|[m * [36m|[m [36m|[m [1;36m|[m [36m|[m   [33m4f26ef5[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[31m|[m [1;36m|[m [1;31m|[m[1;32m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[31m|[m [1;36m|[m * [1;32m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m   [33m122b81c[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[31m|[m [1;36m|[m [1;33m|[m[1;34m\[m [1;32m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[31m|[m [1;36m|[m * [1;34m|[m [1;32m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m [33mca799a2[m agrega el status en el detalle de la obra
+* [1;36m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m [33m9780414[m detalles
+* [1;36m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m [33m085674d[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m[1;36m\[m[1;36m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m 
+[1;35m|[m * [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   [33mbd1021f[m Merge pull request #165 from ssaavedraa/ssaavedraa
+[1;35m|[m [31m|[m[1;36m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[1;35m|[m [31m|[m [1;36m|[m [1;34m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m_[m[36m|[m[1;36m/[m [36m/[m  
+[1;35m|[m [31m|[m [1;36m|[m[1;36m/[m[1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m [31m|[m * [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [36m|[m   [33mdb352c6[m Merge branch 'development' into ssaavedraa
+[1;35m|[m [31m|[m [33m|[m[34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [31m|[m * [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [36m|[m [33md37f1c8[m Login form CSS fixed
+[1;35m|[m [31m|[m * [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [36m|[m [33md390c4a[m Edit paintintg state applied in reducer
+[1;35m|[m [31m|[m * [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [36m|[m [36m|[m   [33m6c6f9db[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;35m|[m [31m|[m [35m|[m[1;32m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [31m|[m [35m|[m [1;32m|[m [34m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;34m|[m[1;32m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [31m|[m [35m|[m [1;32m|[m[1;32m/[m[34m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m * [35m|[m [1;32m|[m [34m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m8f8f91c[m Merge pull request #164 from ssaavedraa/home
+[1;35m|[m [34m|[m[1;32m\[m [35m\[m [1;32m\[m [34m\[m [1;34m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [34m|[m [1;32m|[m[34m_[m[35m|[m[34m_[m[1;32m|[m[34m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [34m|[m[34m/[m[1;32m|[m [35m|[m [1;32m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m [34m|[m * [35m|[m [1;32m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m1bb8006[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[1;35m|[m [34m|[m [1;33m|[m[34m\[m [35m\[m [1;32m\[m [1;34m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [34m|[m [1;33m|[m[34m/[m [35m/[m [1;32m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [34m|[m[34m/[m[1;33m|[m [35m|[m [1;32m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m * [1;33m|[m [35m|[m [1;32m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33mc8c825f[m Merge pull request #163 from ssaavedraa/ssaavedraa
+[1;35m|[m [1;32m|[m[35m\[m [1;33m\[m [35m\[m [1;32m\[m [1;34m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [1;32m|[m [35m|[m [1;33m|[m[35m/[m [1;32m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [1;32m|[m [35m|[m[35m/[m[1;33m|[m [1;32m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m   
+[1;35m|[m [1;32m|[m [35m|[m[1;32m_[m[1;33m|[m[1;32m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m    
+[1;35m|[m [1;32m|[m[1;32m/[m[35m|[m [1;33m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m     
+[1;35m|[m [1;32m|[m * [1;33m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m [33m8a0c28a[m console.logs deleted, username added to admin panel nav, states update on edit and artist and painting pending backend changes
+[1;35m|[m * [1;36m|[m [1;33m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m912f99e[m Merge pull request #162 from ssaavedraa/painting-quickfix
+[1;35m|[m [1;34m|[m[32m\[m [1;36m\[m [1;33m\[m [1;34m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [1;34m|[m [32m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;33m|[m[1;34m_[m[1;34m|[m[1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [1;34m|[m[1;34m/[m[32m|[m [1;36m|[m [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m [1;34m|[m * [1;36m|[m [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m [33m5568535[m quickfix: /painting/update/:id now returns modified painting
+[1;35m|[m [1;34m|[m [1;36m|[m[1;36m/[m [1;33m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m * [1;36m|[m [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33mf2f857f[m Merge pull request #161 from ssaavedraa/facu-emails
+[1;35m|[m [1;36m|[m[34m\[m [1;36m\[m [1;33m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [1;36m|[m [34m|[m[1;36m/[m [1;33m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [1;36m|[m[1;36m/[m[34m|[m [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m [1;36m|[m * [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m [33me45fa74[m emails
+[1;35m|[m [1;36m|[m * [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m [33mb85fee7[m emails except register email
+[1;35m|[m [1;36m|[m[1;36m/[m [1;33m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m * [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m9ce914b[m Merge pull request #159 from ssaavedraa/santin-email-verify
+[1;35m|[m [35m|[m[36m\[m [1;33m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [35m|[m * [1;33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m [33m5ea61c3[m feat: added email verification, TODO: send email
+[1;35m|[m [35m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m [33mffe0018[m Se agrega componente modularizado de panel (solo diseño)
+[1;35m|[m [35m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m8d16137[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[1;35m|[m [35m|[m [36m|[m [1;31m|[m[35m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [35m|[m [36m|[m[35m_[m[1;31m|[m[35m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;35m|[m [35m|[m[35m/[m[36m|[m [1;31m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;35m|[m * [36m|[m [1;31m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33mee7dbb6[m Merge pull request #160 from ssaavedraa/yessy
+[1;35m|[m [1;33m|[m[1;34m\[m [36m\[m [1;31m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;35m|[m [1;33m|[m [1;34m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m [33m4b73523[m Se modifica notificaciones
+* [1;33m|[m [1;34m|[m [36m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m [33m94df7ed[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;34m|[m[1;33m\[m[1;33m|[m [1;34m|[m [36m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m 
+[1;34m|[m [1;33m|[m[1;34m/[m [36m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;34m|[m[1;34m/[m[1;33m|[m [36m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;34m|[m * [36m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   [33me67d825[m Merge pull request #158 from ssaavedraa/eli-detailartist
+[1;34m|[m [36m|[m[1;34m\[m [36m\[m [1;34m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;34m|[m [36m|[m [1;34m|[m[36m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;34m|[m [36m|[m[36m/[m[1;34m|[m [1;34m|[m [1;34m/[m [36m/[m [36m/[m [36m/[m   
+[1;34m|[m [36m|[m [1;34m|[m [1;34m|[m[1;34m/[m [36m/[m [36m/[m [36m/[m    
+[1;34m|[m [36m|[m [1;34m|[m[1;34m/[m[1;34m|[m [36m|[m [36m|[m [36m|[m     
+[1;34m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m [33m106ef0b[m arregla error en fav
+[1;34m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m [33mc6ba6c7[m agrega botones de agregar al carrito, el status del stock en favs
+[1;34m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m6abd6cd[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;34m|[m [36m|[m [33m|[m[36m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;34m|[m [36m|[m [33m|[m[36m/[m [1;34m/[m [36m/[m [36m/[m [36m/[m  
+[1;34m|[m [36m|[m[36m/[m[33m|[m [1;34m|[m [36m|[m [36m|[m [36m|[m   
+[1;34m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m [33m27063b5[m botones de add to cart en favs
+[1;34m|[m [36m|[m * [1;34m|[m [36m|[m [36m|[m [36m|[m   [33m69166cb[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;34m|[m [36m|[m [35m|[m[36m\[m [1;34m\[m [36m\[m [36m\[m [36m\[m  
+[1;34m|[m [36m|[m [35m|[m [36m|[m [1;34m|[m[36m_[m[36m|[m[36m/[m [36m/[m  
+[1;34m|[m [36m|[m [35m|[m [36m|[m[36m/[m[1;34m|[m [36m|[m [36m|[m   
+[1;34m|[m [36m|[m * [36m|[m [1;34m|[m [36m|[m [36m|[m [33mcc5feb8[m css en favs, agrega el isAvailable en favs
+[1;34m|[m [36m|[m * [36m|[m [1;34m|[m [36m|[m [36m|[m   [33mc469aaa[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;34m|[m [36m|[m [1;31m|[m[1;32m\[m [36m\[m [1;34m\[m [36m\[m [36m\[m  
+[1;34m|[m [36m|[m * [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33ma079e73[m favs
+[1;34m|[m [36m|[m * [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m   [33m5c9ad8f[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;34m|[m [36m|[m [1;33m|[m[1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [36m\[m [36m\[m  
+[1;34m|[m [36m|[m * [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33m3cadc1f[m ni idea que cambie
+[1;34m|[m [36m|[m * [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33m63868bd[m modales
+[1;34m|[m [36m|[m * [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m   [33m4434e72[m merge con development
+[1;34m|[m [36m|[m [1;35m|[m[1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [36m\[m [36m\[m  
+[1;34m|[m [36m|[m * [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33m394d9ba[m artist
+* [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33md6f867e[m sweet alert
+* [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33m291ad48[m arreglado
+[31m|[m[36m\[m[36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m 
+[31m|[m * [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m   [33me0384cd[m Merge pull request #157 from ssaavedraa/santin-fixes
+[31m|[m [33m|[m[34m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [36m\[m [36m\[m  
+[31m|[m [33m|[m * [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m [33m6cb8041[m fix: favourites/getAll now returns isAvailable attribute
+[31m|[m * [34m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [36m|[m [36m|[m   [33m9befeb3[m Merge pull request #156 from ssaavedraa/ssaavedraa
+[31m|[m [36m|[m[36m\[m [34m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [36m\[m [36m\[m  
+[31m|[m [36m|[m [36m|[m[36m_[m[34m|[m[36m_[m[1;36m|[m[36m_[m[1;36m|[m[36m_[m[1;34m|[m[36m_[m[1;32m|[m[36m/[m [1;34m/[m [36m/[m [36m/[m  
+[31m|[m [36m|[m[36m/[m[36m|[m [34m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m   
+[31m|[m [36m|[m * [34m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m [33mbbb9417[m Reducer updated for /artists
+[31m|[m * [36m|[m [34m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m   [33m5ff600a[m Merge pull request #155 from ssaavedraa/santin-fixes
+[31m|[m [1;31m|[m[34m\[m [36m\[m [34m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;32m\[m [1;34m\[m [36m\[m [36m\[m  
+[31m|[m [1;31m|[m [34m|[m [36m|[m[34m/[m [1;36m/[m [1;36m/[m [1;34m/[m [1;32m/[m [1;34m/[m [36m/[m [36m/[m  
+[31m|[m [1;31m|[m [34m|[m[34m/[m[36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m   
+[31m|[m [1;31m|[m * [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m [33maedc9b5[m feat: put /painting/setAvailable and /painting/setNotAvailable endpoints
+[31m|[m [1;31m|[m * [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m [33m0f33eb0[m fix: paintings routes now respond with isAvailable attribute
+[31m|[m [1;31m|[m * [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m [33m1b49fe3[m feat: order and orderby queries added to /artist/getstats endpoint
+[31m|[m [1;31m|[m * [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;34m|[m [36m|[m [36m|[m [33mf59d7cc[m bugfix: Protected route now doesn't show page content
+[31m|[m [1;31m|[m [1;32m|[m [36m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m/[m [1;34m/[m [36m/[m [36m/[m  
+[31m|[m [1;31m|[m [1;32m|[m[1;32m/[m[36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m   
+[31m|[m * [1;32m|[m [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m|[m [36m|[m   [33m53124a3[m Merge pull request #154 from ssaavedraa/detailObra
+[31m|[m [1;32m|[m[36m\[m [1;32m\[m [36m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;34m\[m [36m\[m [36m\[m  
+[31m|[m [1;32m|[m [36m|[m[1;32m/[m [36m/[m [1;36m/[m [1;36m/[m [1;34m/[m [1;34m/[m [36m/[m [36m/[m  
+[31m|[m [1;32m|[m[1;32m/[m[36m|[m [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m/[m [36m/[m   
+[31m|[m [1;32m|[m [36m|[m [36m|[m[36m_[m[1;36m|[m[36m_[m[1;36m|[m[36m_[m[1;34m|[m[36m_[m[1;34m|[m[36m/[m [36m/[m    
+[31m|[m [1;32m|[m [36m|[m[36m/[m[36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m|[m     
+[31m|[m [1;32m|[m * [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m|[m   [33m604933a[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into detailObra
+[31m|[m [1;32m|[m [1;35m|[m[1;32m\[m [36m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;34m\[m [36m\[m  
+[31m|[m [1;32m|[m [1;35m|[m[1;32m/[m [36m/[m [1;36m/[m [1;36m/[m [1;34m/[m [1;34m/[m [36m/[m  
+[31m|[m [1;32m|[m[1;32m/[m[1;35m|[m [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m|[m   
+[31m|[m [1;32m|[m * [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;34m|[m [36m|[m [33meb63d3e[m cambios
+[31m|[m [1;32m|[m [1;34m|[m [36m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;36m|[m[1;34m/[m [1;34m/[m [36m/[m  
+[31m|[m [1;32m|[m [1;34m|[m[1;34m/[m[36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [36m|[m   
+* [1;32m|[m [1;34m/[m [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [36m|[m [33ma97ce1f[m alerts ready
+[1;32m|[m[1;32m/[m [1;34m/[m [36m/[m [1;36m/[m [1;36m/[m [1;34m/[m [36m/[m  
+* [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [36m|[m   [33m841b95c[m Merge pull request #153 from ssaavedraa/home
+[31m|[m[32m\[m [1;34m\[m [36m\[m [1;36m\[m [1;36m\[m [1;34m\[m [36m\[m  
+[31m|[m * [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [1;34m|[m [36m|[m [33m52d38df[m update artist modal
+[31m|[m [1;34m|[m [1;34m|[m[1;34m_[m[36m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;36m|[m[1;34m/[m [36m/[m  
+[31m|[m [1;34m|[m[1;34m/[m[1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m   
+[31m|[m * [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m [33mf265651[m Se agrega notificaciones Sweet alert Optimizadas y re-factor
+[31m|[m * [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m [33m5afe488[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[31m|[m [33m|[m[1;34m\[m[1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m 
+[31m|[m * [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m   [33m5abf451[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[31m|[m [35m|[m[36m\[m [1;34m\[m [36m\[m [1;36m\[m [1;36m\[m [36m\[m  
+[31m|[m * [36m|[m [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m [33mba572c0[m Se verifico de donde se pisaba el edit Artist y new Artist mas no se soluciono
+[31m|[m * [36m|[m [1;34m|[m [36m|[m [1;36m|[m [1;36m|[m [36m|[m   [33me33063a[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[31m|[m [1;31m|[m[1;36m\[m [36m\[m [1;34m\[m [36m\[m [1;36m\[m [1;36m\[m [36m\[m  
+[31m|[m [1;31m|[m [1;36m|[m [36m|[m[1;36m_[m[1;34m|[m[1;36m_[m[36m|[m[1;36m_[m[1;36m|[m[1;36m/[m [36m/[m  
+[31m|[m [1;31m|[m [1;36m|[m[1;36m/[m[36m|[m [1;34m|[m [36m|[m [1;36m|[m [36m|[m   
+[31m|[m * [1;36m|[m [36m|[m [1;34m|[m [36m|[m [1;36m|[m [36m|[m [33macefe5e[m No se hizo na
+* [1;32m|[m [1;36m|[m [36m|[m [1;34m|[m [36m|[m [1;36m|[m [36m|[m   [33m9543991[m Merge pull request #133 from ssaavedraa/facu-cart-connection
+[1;34m|[m[1;34m\[m [1;32m\[m [1;36m\[m [36m\[m [1;34m\[m [36m\[m [1;36m\[m [36m\[m  
+[1;34m|[m [1;34m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;36m|[m[1;34m_[m[36m|[m[1;34m/[m [36m/[m [1;36m/[m [36m/[m  
+[1;34m|[m[1;34m/[m[1;34m|[m [1;32m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   
+[1;34m|[m * [1;32m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m [33m747d900[m solving merge conflict
+[1;34m|[m * [1;32m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   [33m1f6f9ab[m merge conflic fix
+[1;34m|[m [1;35m|[m[1;34m\[m [1;32m\[m [1;36m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[1;34m|[m [1;35m|[m[1;34m/[m [1;32m/[m [1;36m/[m [36m/[m [36m/[m [1;36m/[m [36m/[m  
+[1;34m|[m[1;34m/[m[1;35m|[m [1;32m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   
+* [1;35m|[m [1;32m|[m [1;36m|[m [36m|[m [36m|[m [1;36m|[m [36m|[m   [33mc38c832[m Merge pull request #151 from ssaavedraa/ssaavedraa
+[36m|[m[36m\[m [1;35m\[m [1;32m\[m [1;36m\[m [36m\[m [36m\[m [1;36m\[m [36m\[m  
+[36m|[m [36m|[m[36m_[m[1;35m|[m[36m_[m[1;32m|[m[36m_[m[1;36m|[m[36m/[m [36m/[m [1;36m/[m [36m/[m  
+[36m|[m[36m/[m[36m|[m [1;35m|[m [1;32m|[m [1;36m|[m [36m/[m [1;36m/[m [36m/[m   
+[36m|[m [36m|[m [1;35m|[m[36m_[m[1;32m|[m[36m_[m[1;36m|[m[36m/[m [1;36m/[m [36m/[m    
+[36m|[m [36m|[m[36m/[m[1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m     
+[36m|[m * [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m [33m43c93bf[m register modal fixed
+[36m|[m * [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m [33m786147e[m register modal fixed
+* [32m|[m [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m [33m0fcfe18[m Merge pull request #150 from ssaavedraa/ssaavedraa
+[33m|[m[32m\[m[32m|[m [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m 
+[33m|[m * [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m [33m6a99642[m endpoints fixes
+[33m|[m * [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m   [33m87a843c[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[33m|[m [35m|[m[33m\[m [1;35m\[m [1;32m\[m [1;36m\[m [1;36m\[m [36m\[m  
+[33m|[m [35m|[m[33m/[m [1;35m/[m [1;32m/[m [1;36m/[m [1;36m/[m [36m/[m  
+[33m|[m[33m/[m[35m|[m [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m   
+* [35m|[m [1;35m|[m [1;32m|[m [1;36m|[m [1;36m|[m [36m|[m   [33m07b5f51[m Merge pull request #149 from ssaavedraa/yessy
+[1;36m|[m[1;32m\[m [35m\[m [1;35m\[m [1;32m\[m [1;36m\[m [1;36m\[m [36m\[m  
+[1;36m|[m [1;32m|[m[1;36m_[m[35m|[m[1;36m_[m[1;35m|[m[1;36m_[m[1;32m|[m[1;36m/[m [1;36m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[1;32m|[m [35m|[m [1;35m|[m [1;32m|[m [1;36m|[m [36m|[m   
+[1;36m|[m * [35m|[m [1;35m|[m [1;32m|[m [1;36m|[m [36m|[m [33m30def32[m hola
+* [1;32m|[m [35m|[m [1;35m|[m [1;32m|[m [1;36m|[m [36m|[m [33m6b9f577[m Merge pull request #148 from ssaavedraa/yessy
+[1;36m|[m[1;32m\[m[1;32m|[m [35m|[m [1;35m|[m [1;32m|[m [1;36m|[m [36m|[m 
+[1;36m|[m [1;32m|[m[1;36m_[m[35m|[m[1;36m_[m[1;35m|[m[1;36m_[m[1;32m|[m[1;36m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[1;32m|[m [35m|[m [1;35m|[m [1;32m|[m [36m|[m   
+[1;36m|[m * [35m|[m [1;35m|[m [1;32m|[m [36m|[m [33mdbe107b[m ultimo
+[1;36m|[m * [35m|[m [1;35m|[m [1;32m|[m [36m|[m [33m4fee32d[m ultimo
+[1;36m|[m * [35m|[m [1;35m|[m [1;32m|[m [36m|[m   [33me6ad639[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;36m|[m [1;35m|[m[1;36m\[m [35m\[m [1;35m\[m [1;32m\[m [36m\[m  
+[1;36m|[m [1;35m|[m[1;36m/[m [35m/[m [1;35m/[m [1;32m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[1;35m|[m [35m|[m [1;35m|[m [1;32m|[m [36m|[m   
+* [1;35m|[m [35m|[m [1;35m|[m [1;32m|[m [36m|[m   [33m48b9697[m Merge pull request #147 from ssaavedraa/home
+[31m|[m[1;32m\[m [1;35m\[m [35m\[m [1;35m\[m [1;32m\[m [36m\[m  
+[31m|[m [1;32m|[m [1;35m|[m[1;32m_[m[35m|[m[1;32m_[m[1;35m|[m[1;32m/[m [36m/[m  
+[31m|[m [1;32m|[m[1;32m/[m[1;35m|[m [35m|[m [1;35m|[m [36m|[m   
+[31m|[m * [1;35m|[m [35m|[m [1;35m|[m [36m|[m [33md66b00f[m Se quita console.log
+[31m|[m * [1;35m|[m [35m|[m [1;35m|[m [36m|[m   [33m64f235a[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[31m|[m [33m|[m[31m\[m [1;35m\[m [35m\[m [1;35m\[m [36m\[m  
+[31m|[m [33m|[m[31m/[m [1;35m/[m [35m/[m [1;35m/[m [36m/[m  
+[31m|[m[31m/[m[33m|[m [1;35m|[m [35m|[m [1;35m|[m [36m|[m   
+[31m|[m * [1;35m|[m [35m|[m [1;35m|[m [36m|[m [33meadd198[m Se agrega SweetAlert se conecta addArtist con modal
+[31m|[m [34m|[m * [35m|[m [1;35m|[m [36m|[m [33ma86a0d3[m ultimo
+[31m|[m [34m|[m * [35m|[m [1;35m|[m [36m|[m [33m2dd3c9e[m -hola
+[31m|[m [34m|[m * [35m|[m [1;35m|[m [36m|[m   [33m9828a59[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[31m|[m [34m|[m [35m|[m[31m\[m [35m\[m [1;35m\[m [36m\[m  
+[31m|[m [34m|[m[31m_[m[35m|[m[31m/[m [35m/[m [1;35m/[m [36m/[m  
+[31m|[m[31m/[m[34m|[m [35m|[m [35m|[m [1;35m|[m [36m|[m   
+* [34m|[m [35m|[m [35m|[m [1;35m|[m [36m|[m   [33m9fb39a0[m Merge pull request #144 from ssaavedraa/ssaavedraa
+[1;31m|[m[1;32m\[m [34m\[m [35m\[m [35m\[m [1;35m\[m [36m\[m  
+[1;31m|[m [1;32m|[m [34m|[m * [35m\[m [1;35m\[m [36m\[m   [33m1a593f2[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;31m|[m [1;32m|[m [34m|[m [1;33m|[m[1;31m\[m [35m\[m [1;35m\[m [36m\[m  
+[1;31m|[m [1;32m|[m[1;31m_[m[34m|[m[1;31m_[m[1;33m|[m[1;31m/[m [35m/[m [1;35m/[m [36m/[m  
+[1;31m|[m[1;31m/[m[1;32m|[m [34m|[m [1;33m|[m [35m|[m [1;35m|[m [36m|[m   
+* [1;32m|[m [34m|[m [1;33m|[m [35m|[m [1;35m|[m [36m|[m   [33m185282a[m Merge pull request #146 from ssaavedraa/facu-adminBugFix
+[1;35m|[m[1;36m\[m [1;32m\[m [34m\[m [1;33m\[m [35m\[m [1;35m\[m [36m\[m  
+[1;35m|[m * [1;32m|[m [34m|[m [1;33m|[m [35m|[m [1;35m|[m [36m|[m [33md40c966[m myProfile fix
+[1;35m|[m * [1;32m|[m [34m|[m [1;33m|[m [35m|[m [1;35m|[m [36m|[m [33mf10314b[m unfinished admin view password change
+[1;35m|[m [34m|[m [1;32m|[m[34m/[m [1;33m/[m [35m/[m [1;35m/[m [36m/[m  
+[1;35m|[m [34m|[m[34m/[m[1;32m|[m [1;33m|[m [35m|[m [1;35m|[m [36m|[m   
+[1;35m|[m [34m|[m [1;32m|[m * [35m|[m [1;35m|[m [36m|[m [33m4649ec9[m ultimo
+[1;35m|[m [34m|[m [1;32m|[m * [35m|[m [1;35m|[m [36m|[m   [33m6d20c65[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [34m|[m [1;32m|[m [31m|[m[1;35m\[m [35m\[m [1;35m\[m [36m\[m  
+[1;35m|[m [34m|[m[1;35m_[m[1;32m|[m[1;35m_[m[31m|[m[1;35m/[m [35m/[m [1;35m/[m [36m/[m  
+[1;35m|[m[1;35m/[m[34m|[m [1;32m|[m [31m|[m [35m|[m [1;35m|[m [36m|[m   
+* [34m|[m [1;32m|[m [31m|[m [35m|[m [1;35m|[m [36m|[m   [33mec3086e[m Merge pull request #145 from ssaavedraa/eli-detailartist
+[34m|[m[34m\[m [34m\[m [1;32m\[m [31m\[m [35m\[m [1;35m\[m [36m\[m  
+[34m|[m [34m|[m[34m/[m [1;32m/[m [31m/[m [35m/[m [1;35m/[m [36m/[m  
+[34m|[m[34m/[m[34m|[m [1;32m|[m [31m|[m [35m|[m [1;35m|[m [36m|[m   
+[34m|[m * [1;32m|[m [31m|[m [35m|[m [1;35m|[m [36m|[m [33m5b8ae5d[m toques de css
+[34m|[m[34m/[m [1;32m/[m [31m/[m [35m/[m [1;35m/[m [36m/[m  
+[34m|[m [1;32m|[m * [35m|[m [1;35m|[m [36m|[m   [33m5ca2c39[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[34m|[m [1;32m|[m [35m|[m[34m\[m [35m\[m [1;35m\[m [36m\[m  
+[34m|[m [1;32m|[m[34m_[m[35m|[m[34m/[m [35m/[m [1;35m/[m [36m/[m  
+[34m|[m[34m/[m[1;32m|[m [35m|[m [35m|[m [1;35m|[m [36m|[m   
+[34m|[m [1;32m|[m * [35m|[m [1;35m|[m [36m|[m   [33mb23c645[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[34m|[m [1;32m|[m [1;31m|[m[1;32m\[m [35m\[m [1;35m\[m [36m\[m  
+[34m|[m [1;32m|[m * [1;32m\[m [35m\[m [1;35m\[m [36m\[m   [33m47d5b8a[m ultimo
+[34m|[m [1;32m|[m [1;33m|[m[1;34m\[m [1;32m\[m [35m\[m [1;35m\[m [36m\[m  
+[34m|[m [1;32m|[m * [1;34m\[m [1;32m\[m [35m\[m [1;35m\[m [36m\[m   [33ma4de935[m ultimo
+[34m|[m [1;32m|[m [1;35m|[m[1;36m\[m [1;34m\[m [1;32m\[m [35m\[m [1;35m\[m [36m\[m  
+[34m|[m [1;32m|[m * [1;36m|[m [1;34m|[m [1;32m|[m [35m|[m [1;35m|[m [36m|[m [33m0435641[m ultimo
+[34m|[m [1;32m|[m * [1;36m|[m [1;34m|[m [1;32m|[m [35m|[m [1;35m|[m [36m|[m [33m01a084c[m ultimo
+[34m|[m [1;32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m * [1;35m|[m [36m|[m [33m2d7f267[m endpoints fixes
+[34m|[m [1;32m|[m [1;36m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;32m|[m[1;32m/[m [1;35m/[m [36m/[m  
+[34m|[m [1;32m|[m[1;32m/[m[1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m   
+[34m|[m * [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m [33m03bfb6a[m test
+[34m|[m * [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m   [33maf64996[m test
+[34m|[m [31m|[m[34m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;32m\[m [1;35m\[m [36m\[m  
+[34m|[m [31m|[m[34m/[m [1;36m/[m [1;36m/[m [1;34m/[m [1;32m/[m [1;35m/[m [36m/[m  
+[34m|[m[34m/[m[31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m   
+* [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m   [33mc7f3fb4[m Merge pull request #143 from ssaavedraa/painting-update-bugfix
+[33m|[m[34m\[m [31m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;32m\[m [1;35m\[m [36m\[m  
+[33m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m [33m0df89c7[m bugfix: painting update
+* [34m|[m [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m [33m2bf97da[m Merge pull request #142 from ssaavedraa/favs-bugfixes
+[35m|[m[34m\[m[34m|[m [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m 
+[35m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m [33mce54a12[m bugfix: now favourites updates correctly
+[35m|[m[35m/[m [31m/[m [1;36m/[m [1;36m/[m [1;34m/[m [1;32m/[m [1;35m/[m [36m/[m  
+* [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;32m|[m [1;35m|[m [36m|[m   [33m2182a49[m Merge pull request #141 from ssaavedraa/eli-detailartist
+[1;32m|[m[1;32m\[m [31m\[m [1;36m\[m [1;36m\[m [1;34m\[m [1;32m\[m [1;35m\[m [36m\[m  
+[1;32m|[m [1;32m|[m[1;32m_[m[31m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m/[m [1;35m/[m [36m/[m  
+[1;32m|[m[1;32m/[m[1;32m|[m [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;35m|[m [36m|[m   
+[1;32m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;35m|[m [36m|[m [33m9c6d32e[m agrega cosas en favs
+[1;32m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;35m|[m [36m|[m [33m5eb19f7[m css en detailObra
+[1;32m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;35m|[m [36m|[m [33m1f1d4db[m css en favs
+* [1;32m|[m [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;35m|[m [36m|[m [33m13352e0[m Merge pull request #140 from ssaavedraa/eli-detailartist
+[1;34m|[m[1;32m\[m[1;32m|[m [31m|[m [1;36m|[m [1;36m|[m [1;34m|[m [1;35m|[m [36m|[m 
+[1;34m|[m [1;32m|[m[1;34m_[m[31m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;36m|[m[1;34m/[m [1;35m/[m [36m/[m  
+[1;34m|[m[1;34m/[m[1;32m|[m [31m|[m [1;36m|[m [1;36m|[m [1;35m|[m [36m|[m   
+[1;34m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;35m|[m [36m|[m [33m07ae2cc[m cambios en fav
+[1;34m|[m * [31m|[m [1;36m|[m [1;36m|[m [1;35m|[m [36m|[m   [33m00c4578[m merge con development
+[1;34m|[m [1;35m|[m[1;34m\[m [31m\[m [1;36m\[m [1;36m\[m [1;35m\[m [36m\[m  
+[1;34m|[m [1;35m|[m[1;34m/[m [31m/[m [1;36m/[m [1;36m/[m [1;35m/[m [36m/[m  
+[1;34m|[m[1;34m/[m[1;35m|[m [31m|[m [1;36m|[m [1;36m|[m [1;35m|[m [36m|[m   
+* [1;35m|[m [31m|[m [1;36m|[m [1;36m|[m [1;35m|[m [36m|[m   [33ma595777[m Merge pull request #139 from ssaavedraa/home
+[1;36m|[m[32m\[m [1;35m\[m [31m\[m [1;36m\[m [1;36m\[m [1;35m\[m [36m\[m  
+[1;36m|[m [32m|[m[1;36m_[m[1;35m|[m[1;36m_[m[31m|[m[1;36m_[m[1;36m|[m[1;36m/[m [1;35m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[32m|[m [1;35m|[m [31m|[m [1;36m|[m [1;35m|[m [36m|[m   
+[1;36m|[m * [1;35m|[m [31m|[m [1;36m|[m [1;35m|[m [36m|[m   [33mabb4341[m Se agregan los cambios de santinu el pro xd
+[1;36m|[m [33m|[m[1;36m\[m [1;35m\[m [31m\[m [1;36m\[m [1;35m\[m [36m\[m  
+[1;36m|[m [33m|[m[1;36m/[m [1;35m/[m [31m/[m [1;36m/[m [1;35m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[33m|[m [1;35m|[m [31m|[m [1;36m|[m [1;35m|[m [36m|[m   
+* [33m|[m [1;35m|[m [31m|[m [1;36m|[m [1;35m|[m [36m|[m   [33m2d46c6b[m Merge pull request #138 from ssaavedraa/santin-bugfixes
+[1;36m|[m[36m\[m [33m\[m [1;35m\[m [31m\[m [1;36m\[m [1;35m\[m [36m\[m  
+[1;36m|[m [36m|[m[1;36m_[m[33m|[m[1;36m_[m[1;35m|[m[1;36m_[m[31m|[m[1;36m/[m [1;35m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[36m|[m [33m|[m [1;35m|[m [31m|[m [1;35m|[m [36m|[m   
+[1;36m|[m * [33m|[m [1;35m|[m [31m|[m [1;35m|[m [36m|[m [33m5e806fa[m bugfix:edit painting modal
+[1;36m|[m[1;36m/[m [33m/[m [1;35m/[m [31m/[m [1;35m/[m [36m/[m  
+[1;36m|[m * [1;35m|[m [31m|[m [1;35m|[m [36m|[m [33m54beb60[m No se hizo nada
+[1;36m|[m * [1;35m|[m [31m|[m [1;35m|[m [36m|[m   [33mb2da0b9[m Se implementa lo de la rama developmento con el componente AddArtist
+[1;36m|[m [1;31m|[m[1;36m\[m [1;35m\[m [31m\[m [1;35m\[m [36m\[m  
+[1;36m|[m [1;31m|[m[1;36m/[m [1;35m/[m [31m/[m [1;35m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[1;31m|[m [1;35m|[m [31m|[m [1;35m|[m [36m|[m   
+[1;36m|[m * [1;35m|[m [31m|[m [1;35m|[m [36m|[m [33mdccfa93[m Se hace npm i de Back
+[1;36m|[m * [1;35m|[m [31m|[m [1;35m|[m [36m|[m [33m447f137[m Se corrije el diseño de los filtrados(galeria), se comenta codigo de ModalArtist para su funcionamiento, se ajusta diseño de navbar
+[1;36m|[m [1;32m|[m * [31m|[m [1;35m|[m [36m|[m [33me399557[m no me acuerdo que cambios hice
+[1;36m|[m [1;32m|[m * [31m|[m [1;35m|[m [36m|[m   [33m9135f6d[m merge con development
+[1;36m|[m [1;32m|[m [1;33m|[m[1;36m\[m [31m\[m [1;35m\[m [36m\[m  
+[1;36m|[m [1;32m|[m[1;36m_[m[1;33m|[m[1;36m/[m [31m/[m [1;35m/[m [36m/[m  
+[1;36m|[m[1;36m/[m[1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   
+* [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   [33me25c18a[m Merge pull request #136 from ssaavedraa/yessy
+[1;35m|[m[1;36m\[m [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m [36m\[m  
+[1;35m|[m * [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m [36m\[m   [33mece0cef[m ultimo
+[1;35m|[m [31m|[m[1;35m\[m [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m [36m\[m  
+[1;35m|[m [31m|[m[1;35m/[m [1;32m/[m [1;33m/[m [31m/[m [1;35m/[m [36m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   
+* [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   [33m6541659[m Merge pull request #129 from ssaavedraa/detailObra
+[33m|[m[34m\[m [31m\[m [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m [36m\[m  
+[33m|[m * [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m [33m23b678e[m[33m ([m[1;31morigin/detailObra[m[33m)[m cambios
+[33m|[m * [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m [33m0a478e6[m commit
+[33m|[m * [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   [33mbb306e2[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into detailObra
+[33m|[m [35m|[m[33m\[m [31m\[m [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m [36m\[m  
+[33m|[m [35m|[m[33m/[m [31m/[m [1;32m/[m [1;33m/[m [31m/[m [1;35m/[m [36m/[m  
+[33m|[m[33m/[m[35m|[m [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   
+[33m|[m * [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [36m|[m   [33m97d420e[m m
+[33m|[m [1;31m|[m[36m\[m [31m\[m [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m [36m\[m  
+[33m|[m [1;31m|[m [36m|[m [31m|[m[36m_[m[1;32m|[m[36m_[m[1;33m|[m[36m_[m[31m|[m[36m_[m[1;35m|[m[36m/[m  
+[33m|[m [1;31m|[m [36m|[m[36m/[m[31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m   
+[33m|[m * [36m|[m [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m [33mcd4f617[m comit
+[33m|[m * [36m|[m [31m|[m [1;32m|[m [1;33m|[m [31m|[m [1;35m|[m   [33mef1df90[m commit
+[33m|[m [1;33m|[m[1;32m\[m [36m\[m [31m\[m [1;32m\[m [1;33m\[m [31m\[m [1;35m\[m  
+[33m|[m [1;33m|[m [1;32m|[m [36m|[m[1;32m_[m[31m|[m[1;32m/[m [1;33m/[m [31m/[m [1;35m/[m  
+[33m|[m [1;33m|[m [1;32m|[m[1;32m/[m[36m|[m [31m|[m [1;33m|[m [31m|[m [1;35m|[m   
+[33m|[m * [1;32m|[m [36m|[m [31m|[m [1;33m|[m [31m|[m [1;35m|[m [33m0d8de14[m cambios
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [1;33m|[m [31m|[m [1;35m|[m [33mec6734f[m ultimo
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [1;33m|[m [31m|[m [1;35m|[m [33m68b141d[m forms ready
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [1;33m|[m [31m|[m [1;35m|[m   [33m213da02[m cambios
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [1;35m|[m[1;32m\[m [1;33m\[m [31m\[m [1;35m\[m  
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m[1;32m_[m[1;35m|[m[1;32m/[m [1;33m/[m [31m/[m [1;35m/[m  
+[33m|[m [1;34m|[m [1;32m|[m[1;32m/[m[36m|[m [1;35m|[m [1;33m|[m [31m|[m [1;35m|[m   
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [1;33m|[m [31m|[m [1;35m|[m [33m3184e52[m ultimo
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [1;33m|[m [31m|[m [1;35m|[m   [33m6b3612b[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [31m|[m[32m\[m [1;33m\[m [31m\[m [1;35m\[m  
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [32m\[m [1;33m\[m [31m\[m [1;35m\[m   [33mde9bded[m add
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [33m|[m[34m\[m [32m\[m [1;33m\[m [31m\[m [1;35m\[m  
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m * [34m|[m [32m|[m [1;33m|[m [31m|[m [1;35m|[m [33m2b36dd0[m add
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [32m|[m * [31m|[m [1;35m|[m [33maf41eda[m probando
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [32m|[m * [31m|[m [1;35m|[m [33m315df15[m algo con favs
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [32m|[m * [31m|[m [1;35m|[m   [33m0cace3e[m merge con development
+[33m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [32m|[m [35m|[m[33m\[m [31m\[m [1;35m\[m  
+[33m|[m [1;34m|[m[33m_[m[1;32m|[m[33m_[m[36m|[m[33m_[m[34m|[m[33m_[m[34m|[m[33m_[m[32m|[m[33m_[m[35m|[m[33m/[m [31m/[m [1;35m/[m  
+[33m|[m[33m/[m[1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m   
+* [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m   [33m31212ce[m Merge pull request #135 from ssaavedraa/santiN-bug-fixing
+[36m|[m[1;32m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [34m\[m [32m\[m [35m\[m [31m\[m [1;35m\[m  
+[36m|[m [1;32m|[m[36m_[m[1;34m|[m[36m_[m[1;32m|[m[36m/[m [34m/[m [34m/[m [32m/[m [35m/[m [31m/[m [1;35m/[m  
+[36m|[m[36m/[m[1;32m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m   
+[36m|[m * [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m [33m51292a2[m bugfix:searchbar form fixed, now it searches when pressing enter
+[36m|[m * [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m [33m2d09077[m bugfix:register form now redirects to home
+[36m|[m * [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m [33mbe2d4db[m bugfix:now /favs link button is only available to users
+[36m|[m * [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m [33mad21f3a[m bugfix:login form now works
+[36m|[m * [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m [33m9800d32[m bugfix:authorization header gets loaded on .index
+[36m|[m * [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [35m|[m [31m|[m [1;35m|[m [33m6549ed0[m bugfix:mock data now gets loaded
+[36m|[m[36m/[m [1;34m/[m [1;32m/[m [34m/[m [34m/[m [32m/[m [35m/[m [31m/[m [1;35m/[m  
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m * [31m|[m [1;35m|[m [33m1269fc7[m[33m ([m[1;31morigin/eli-detailartist[m[33m)[m arreglos
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m * [31m|[m [1;35m|[m   [33m82118a3[m merge con eli-antesdeploy
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;33m|[m[1;34m\[m [31m\[m [1;35m\[m  
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;33m|[m * [31m|[m [1;35m|[m [33m0d461d5[m prueba
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;33m|[m * [31m|[m [1;35m|[m [33mba60fa6[m agrega boton likes en detailobra y otras cositas
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m * [1;34m|[m [31m|[m [1;35m|[m   [33m0b6067e[m[33m ([m[1;31morigin/eli[m[33m)[m merge con development
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m[36m\[m [1;34m\[m [31m\[m [1;35m\[m  
+[36m|[m [1;34m|[m[36m_[m[1;32m|[m[36m_[m[34m|[m[36m_[m[34m|[m[36m_[m[32m|[m[36m_[m[1;34m|[m[36m/[m [1;34m/[m [31m/[m [1;35m/[m  
+[36m|[m[36m/[m[1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m [1;34m/[m [31m/[m [1;35m/[m   
+[36m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m[1;34m/[m [31m/[m [1;35m/[m    
+* [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m [31m|[m [1;35m|[m   [33m8aeb2c3[m Merge pull request #134 from ssaavedraa/ssaavedraa
+[31m|[m[32m\[m [1;34m\[m [1;32m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m [31m\[m [1;35m\[m  
+* [32m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m [31m|[m [1;35m|[m [33m0223108[m Update index.js
+* [32m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m [31m|[m [1;35m|[m [33m4540998[m Update index.js
+* [32m|[m [1;34m|[m [1;32m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m [31m|[m [1;35m|[m   [33m005f1f3[m Merge pull request #132 from ssaavedraa/ssaavedraa
+[33m|[m[34m\[m [32m\[m [1;34m\[m [1;32m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m [31m\[m [1;35m\[m  
+* [34m\[m [32m\[m [1;34m\[m [1;32m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m [31m\[m [1;35m\[m   [33mced0678[m Merge pull request #131 from ssaavedraa/ssaavedraa
+[35m|[m[36m\[m [34m\[m [32m\[m [1;34m\[m [1;32m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m [31m\[m [1;35m\[m  
+* [36m\[m [34m\[m [32m\[m [1;34m\[m [1;32m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m [31m\[m [1;35m\[m   [33mfa35259[m Merge pull request #130 from ssaavedraa/ssaavedraa
+[1;32m|[m[1;32m\[m [36m\[m [34m\[m [32m\[m [1;34m\[m [1;32m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m [31m\[m [1;35m\[m  
+[1;32m|[m [1;32m|[m[1;32m_[m[36m|[m[1;32m_[m[34m|[m[1;32m_[m[32m|[m[1;32m_[m[1;34m|[m[1;32m/[m [34m/[m [34m/[m [32m/[m [1;34m/[m [31m/[m [1;35m/[m  
+[1;32m|[m[1;32m/[m[1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;34m|[m [31m|[m [1;35m|[m   
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m * [31m|[m [1;35m|[m [33m0f088fc[m modificaciones en obraDetail, agrega vistas y arregla estilos que se pisan
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [1;35m|[m [33m838322c[m test
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [1;35m|[m [33mb951893[m[33m ([m[1;31morigin/ssaavedraa[m[33m)[m mock data loading
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [1;35m|[m [33mad3e62b[m mock data log
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [1;35m|[m [33m43699cd[m auth endpoints changes
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m[32m_[m[34m|[m[32m_[m[34m|[m[32m_[m[32m|[m[32m_[m[1;32m|[m[32m/[m [1;35m/[m  
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m[32m/[m[1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m   
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m * [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m [33m899dac2[m environment variables
+[1;32m|[m [1;32m|[m [36m|[m [34m|[m[34m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m [1;32m/[m [1;35m/[m  
+[1;32m|[m [1;32m|[m [36m|[m * [1;34m/[m [34m/[m [34m/[m [32m/[m [1;32m/[m [1;35m/[m [33m31e6455[m redux endpoints for deployment
+[1;32m|[m [1;32m|[m [36m|[m[36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m [1;32m/[m [1;35m/[m  
+[1;32m|[m [1;32m|[m * [1;34m/[m [34m/[m [34m/[m [32m/[m [1;32m/[m [1;35m/[m [33mac22f1b[m Frontend deploy testing
+[1;32m|[m [1;32m|[m[1;32m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m [1;32m/[m [1;35m/[m  
+[1;32m|[m * [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m [33m68bc6da[m files required for backend deployment
+[1;32m|[m * [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m   [33m6b66a2f[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [1;33m|[m[1;32m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m [1;32m\[m [1;35m\[m  
+[1;32m|[m [1;33m|[m[1;32m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m [1;32m/[m [1;35m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m   
+* [1;33m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m   [33mf1e82bc[m Merge pull request #128 from ssaavedraa/santin-artist-route
+[1;35m|[m[1;36m\[m [1;33m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m [1;32m\[m [1;35m\[m  
+[1;35m|[m * [1;33m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m [33mda9c764[m feat: /artist/getstats endpoint
+[1;35m|[m [1;36m|[m * [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [1;35m|[m [33mc09ac30[m login minor fixes
+[1;35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [33m08f2f58[m[33m ([m[1;31morigin/facu-cart-connection[m[33m)[m google login sync with cart
+[1;35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [33md03903e[m console.log deleted
+[1;35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [33m90bab6e[m user & cart sync
+[1;35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m * [33m246df98[m useCart hook connects to database
+[1;35m|[m [1;36m|[m[1;35m_[m[1;36m|[m[1;35m_[m[1;34m|[m[1;35m_[m[34m|[m[1;35m_[m[34m|[m[1;35m_[m[32m|[m[1;35m_[m[1;32m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m   
+* [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m   [33m760b3a0[m Merge pull request #127 from ssaavedraa/favoriteCard
+[31m|[m[32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m [1;32m\[m  
+[31m|[m * [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [33m467ce3a[m[33m ([m[1;31morigin/favoriteCard[m[33m)[m fix fav
+[31m|[m * [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m [33mf18b263[m fix favs when reload
+* [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [1;32m|[m   [33md4e47c2[m Merge pull request #126 from ssaavedraa/facu-sendEmail
+[1;32m|[m[34m\[m [32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m [1;32m\[m  
+[1;32m|[m [34m|[m[1;32m_[m[32m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[34m|[m[1;32m_[m[34m|[m[1;32m_[m[32m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[34m|[m [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+[1;32m|[m * [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m19dcade[m Merge branch 'development' into facu-sendEmail
+[1;32m|[m [35m|[m[1;32m\[m [32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;32m|[m [35m|[m[1;32m/[m [32m/[m [1;36m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[1;32m|[m[1;32m/[m[35m|[m [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+* [35m|[m [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m2e78b4f[m Merge pull request #125 from ssaavedraa/home
+[1;31m|[m[1;32m\[m [35m\[m [32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;31m|[m * [35m\[m [32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m   [33m378a737[m[33m ([m[1;31morigin/jorgy[m[33m, [m[1;31morigin/home[m[33m)[m Se vinculan los links del panel del admin con sus componentes
+[1;31m|[m [1;33m|[m[1;34m\[m [35m\[m [32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;31m|[m * [1;34m|[m [35m|[m [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [33md880d44[m Se vincula el link del navbar del perfil con el del admin
+* [1;34m|[m [1;34m|[m [35m|[m [32m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m9ffab7c[m Merge pull request #123 from ssaavedraa/favoriteCard
+[1;34m|[m[32m\[m [1;34m\[m [1;34m\[m [35m\[m [32m\[m [1;36m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;34m|[m [32m|[m[1;34m_[m[1;34m|[m[1;34m/[m [35m/[m [32m/[m [1;36m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[1;34m|[m[1;34m/[m[32m|[m [1;34m|[m [35m|[m [32m/[m [1;36m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m   
+[1;34m|[m [32m|[m [1;34m|[m[32m_[m[35m|[m[32m/[m [1;36m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m    
+[1;34m|[m [32m|[m[32m/[m[1;34m|[m [35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m     
+[1;34m|[m * [1;34m|[m [35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [33m9457d55[m fav fix front
+[1;34m|[m * [1;34m|[m [35m|[m [1;36m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [33m37b961b[m fav fix
+[1;34m|[m [1;36m|[m [1;34m|[m[1;36m_[m[35m|[m[1;36m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[1;34m|[m [1;36m|[m[1;36m/[m[1;34m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+* [1;36m|[m [1;34m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m40a8099[m Merge pull request #122 from ssaavedraa/eli-detailartist
+[1;36m|[m[32m\[m [1;36m\[m [1;34m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;36m|[m [32m|[m[1;36m/[m [1;34m/[m [35m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[1;36m|[m[1;36m/[m[32m|[m [1;34m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+[1;36m|[m * [1;34m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m7dc8c40[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;36m|[m [33m|[m[1;36m\[m [1;34m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;36m|[m [33m|[m[1;36m/[m [1;34m/[m [35m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[1;36m|[m[1;36m/[m[33m|[m [1;34m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+* [33m|[m [1;34m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m862efb3[m Merge pull request #121 from ssaavedraa/jorgy
+[35m|[m[1;34m\[m [33m\[m [1;34m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[35m|[m [1;34m|[m [33m|[m[1;34m/[m [35m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[35m|[m [1;34m|[m[1;34m/[m[33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+[35m|[m * [33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33m106b46f[m Se quitan warnings del componente Range Slider, se ajusta el componente AddArtist
+[35m|[m [1;31m|[m[35m\[m [33m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[35m|[m [1;31m|[m[35m/[m [33m/[m [35m/[m [1;36m/[m [1;34m/[m [34m/[m [34m/[m [32m/[m  
+[35m|[m[35m/[m[1;31m|[m [33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   
+[35m|[m * [33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m   [33mc86e65e[m Se agrega el componente AddArtist, se tocan en el index el tipo de letra, se agregan 2 notificaciones de confirmacion
+[35m|[m [1;33m|[m[32m\[m [33m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[35m|[m [1;33m|[m [32m|[m [33m|[m[32m_[m[35m|[m[32m_[m[1;36m|[m[32m_[m[1;34m|[m[32m_[m[34m|[m[32m_[m[34m|[m[32m/[m  
+[35m|[m [1;33m|[m [32m|[m[32m/[m[33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m   
+[35m|[m * [32m|[m [33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [34m|[m [33m0a64326[m Sin cambios
+[35m|[m [34m|[m [32m|[m[34m_[m[33m|[m[34m_[m[35m|[m[34m_[m[1;36m|[m[34m_[m[1;34m|[m[34m_[m[34m|[m[34m/[m  
+[35m|[m [34m|[m[34m/[m[32m|[m [33m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m   
+[35m|[m [34m|[m [32m|[m * [35m|[m [1;36m|[m [1;34m|[m [34m|[m [33mcefc343[m vistas admi
+[35m|[m [34m|[m [32m|[m * [35m|[m [1;36m|[m [1;34m|[m [34m|[m   [33m09fb7ff[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[35m|[m [34m|[m [32m|[m [1;35m|[m[35m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m  
+[35m|[m [34m|[m[35m_[m[32m|[m[35m_[m[1;35m|[m[35m/[m [35m/[m [1;36m/[m [1;34m/[m [34m/[m  
+[35m|[m[35m/[m[34m|[m [32m|[m [1;35m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m   
+* [34m|[m [32m|[m [1;35m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m   [33m52f29bb[m Merge pull request #120 from ssaavedraa/login-quickfix
+[31m|[m[32m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m  
+[31m|[m * [34m|[m [32m|[m [1;35m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m [33mb91d939[m[33m ([m[1;31morigin/login-quickfix[m[33m)[m login msg quickfix
+* [32m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;36m|[m [1;34m|[m [34m|[m   [33m46e590d[m Merge pull request #119 from ssaavedraa/ssaavedraa
+[33m|[m[34m\[m [32m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m  
+[33m|[m * [32m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m   [33m9634b14[m Merge branch 'development' into ssaavedraa
+[33m|[m [1;36m|[m[33m\[m [32m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;36m\[m [1;34m\[m [34m\[m  
+[33m|[m [1;36m|[m[33m/[m [32m/[m [34m/[m [32m/[m [1;35m/[m [35m/[m [1;36m/[m [1;34m/[m [34m/[m  
+[33m|[m[33m/[m[1;36m|[m [32m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;36m/[m [1;34m/[m [34m/[m   
+[33m|[m [1;36m|[m [32m|[m[1;36m_[m[34m|[m[1;36m_[m[32m|[m[1;36m_[m[1;35m|[m[1;36m_[m[35m|[m[1;36m/[m [1;34m/[m [34m/[m    
+[33m|[m [1;36m|[m[1;36m/[m[32m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m     
+* [1;36m|[m [32m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   [33m6487fc5[m Merge pull request #118 from ssaavedraa/addCartDb
+[32m|[m[1;32m\[m [1;36m\[m [32m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;34m\[m [34m\[m  
+[32m|[m [1;32m|[m[32m_[m[1;36m|[m[32m/[m [34m/[m [32m/[m [1;35m/[m [35m/[m [1;34m/[m [34m/[m  
+[32m|[m[32m/[m[1;32m|[m [1;36m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   
+[32m|[m * [1;36m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m [33mb2bbcd1[m add cart items to db
+* [1;32m|[m [1;36m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   [33m8ad87b0[m Merge pull request #117 from ssaavedraa/eli-detailartist
+[1;33m|[m[1;34m\[m [1;32m\[m [1;36m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;34m\[m [34m\[m  
+[1;33m|[m [1;34m|[m [1;32m|[m * [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m [33m6fb82c3[m Artists component connected to backend
+[1;33m|[m [1;34m|[m [1;32m|[m * [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   [33mebb5362[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;33m|[m [1;34m|[m [1;32m|[m [1;35m|[m[1;33m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;34m\[m [34m\[m  
+[1;33m|[m [1;34m|[m[1;33m_[m[1;32m|[m[1;33m_[m[1;35m|[m[1;33m/[m [34m/[m [32m/[m [1;35m/[m [35m/[m [1;34m/[m [34m/[m  
+[1;33m|[m[1;33m/[m[1;34m|[m [1;32m|[m [1;35m|[m [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   
+[1;33m|[m [1;34m|[m [1;32m|[m * [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m [33m5a31061[m My profile component edited
+[1;33m|[m [1;34m|[m [1;32m|[m * [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m [33m88fe7b0[m branch update
+[1;33m|[m [1;34m|[m [1;32m|[m * [34m|[m [32m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   [33m968f8b3[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;33m|[m [1;34m|[m [1;32m|[m [31m|[m[32m\[m [34m\[m [32m\[m [1;35m\[m [35m\[m [1;34m\[m [34m\[m  
+[1;33m|[m [1;34m|[m [1;32m|[m [31m|[m [32m|[m [34m|[m[32m/[m [1;35m/[m [35m/[m [1;34m/[m [34m/[m  
+[1;33m|[m [1;34m|[m [1;32m|[m [31m|[m [32m|[m[32m/[m[34m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m   
+[1;33m|[m [1;34m|[m [1;32m|[m * [32m|[m [34m|[m [1;35m|[m [35m|[m [1;34m|[m [34m|[m [33m15b0181[m branch update
+[1;33m|[m [1;34m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m * [35m|[m [1;34m|[m [34m|[m   [33m4d3d14d[m merge con obraDetail
+[1;33m|[m [1;34m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [33m|[m[1;34m\[m [35m\[m [1;34m\[m [34m\[m  
+[1;33m|[m [1;34m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [33m|[m [1;34m|[m [35m|[m[1;34m/[m [34m/[m  
+[1;33m|[m [1;34m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [33m|[m [1;34m|[m[1;34m/[m[35m|[m [34m|[m   
+[1;33m|[m [1;34m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [33m|[m * [35m|[m [34m|[m [33m6838032[m commit
+[1;33m|[m [1;34m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m * [34m|[m [35m|[m [34m|[m [33m6f5e4de[m vista admi, modales
+[1;33m|[m [1;34m|[m [1;32m|[m[1;34m_[m[32m|[m[1;34m_[m[32m|[m[1;34m_[m[34m|[m[1;34m/[m [34m/[m [35m/[m [34m/[m  
+[1;33m|[m [1;34m|[m[1;34m/[m[1;32m|[m [32m|[m [32m|[m [34m|[m [34m|[m [35m|[m [34m|[m   
+[1;33m|[m * [1;32m|[m [32m|[m [32m|[m [34m|[m [34m|[m [35m|[m [34m|[m   [33m6555811[m merge con development
+[1;33m|[m [35m|[m[1;33m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [34m\[m [35m\[m [34m\[m  
+[1;33m|[m [35m|[m[1;33m/[m [1;32m/[m [32m/[m [32m/[m [34m/[m [34m/[m [35m/[m [34m/[m  
+[1;33m|[m[1;33m/[m[35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [34m|[m [35m|[m [34m|[m   
+* [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [34m|[m [35m|[m [34m|[m   [33m1f7eef7[m Merge pull request #116 from ssaavedraa/detailObra
+[1;31m|[m[34m\[m [35m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [34m\[m [35m\[m [34m\[m  
+[1;31m|[m [34m|[m [35m|[m[34m_[m[1;32m|[m[34m_[m[32m|[m[34m_[m[32m|[m[34m_[m[34m|[m[34m/[m [35m/[m [34m/[m  
+[1;31m|[m [34m|[m[34m/[m[35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+[1;31m|[m * [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33m121fdbf[m add user admin
+[1;31m|[m [1;33m|[m[1;31m\[m [35m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [35m/[m [1;32m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+[1;31m|[m * [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33ma765a62[m commit admin
+[1;31m|[m * [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33m42bb3eb[m commit
+[1;31m|[m [1;35m|[m[1;36m\[m [35m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[1;31m|[m [1;35m|[m [1;36m|[m * [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33m43a9c46[m favs, modales y vistas admi
+[1;31m|[m [1;35m|[m [1;36m|[m * [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33m24b6d1c[m merge con development
+[1;31m|[m [1;35m|[m [1;36m|[m [31m|[m[1;31m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[1;31m|[m [1;35m|[m[1;31m_[m[1;36m|[m[1;31m_[m[31m|[m[1;31m/[m [1;32m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[1;31m|[m[1;31m/[m[1;35m|[m [1;36m|[m [31m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+* [1;35m|[m [1;36m|[m [31m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33m88f0f78[m Merge pull request #115 from ssaavedraa/santiN-fixes
+[33m|[m[34m\[m [1;35m\[m [1;36m\[m [31m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[33m|[m * [1;35m|[m [1;36m|[m [31m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33mf0d04c1[m feat: backend authorization middlewares
+[33m|[m * [1;35m|[m [1;36m|[m [31m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33m13f404e[m switched from fetch to axios.get
+[33m|[m * [1;35m|[m [1;36m|[m [31m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33m2b5081d[m axios header now loads on index
+[33m|[m [34m|[m [1;35m|[m [1;36m|[m * [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33mf2b6953[m favs
+[33m|[m [34m|[m [1;35m|[m [1;36m|[m * [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33m40e60f5[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[33m|[m [34m|[m [1;35m|[m [1;36m|[m [35m|[m[33m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[33m|[m [34m|[m[33m_[m[1;35m|[m[33m_[m[1;36m|[m[33m_[m[35m|[m[33m/[m [1;32m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[33m|[m[33m/[m[34m|[m [1;35m|[m [1;36m|[m [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+* [34m|[m [1;35m|[m [1;36m|[m [35m|[m [1;32m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33mab4060a[m Merge pull request #113 from ssaavedraa/brianAddUserFunctionality
+[1;31m|[m[1;32m\[m [34m\[m [1;35m\[m [1;36m\[m [35m\[m [1;32m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[1;31m|[m [1;32m|[m [34m|[m[1;32m_[m[1;35m|[m[1;32m_[m[1;36m|[m[1;32m_[m[35m|[m[1;32m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[1;31m|[m [1;32m|[m[1;32m/[m[34m|[m [1;35m|[m [1;36m|[m [35m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+[1;31m|[m * [34m|[m [1;35m|[m [1;36m|[m [35m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33mad34851[m name and lastname fusion
+[1;31m|[m * [34m|[m [1;35m|[m [1;36m|[m [35m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33m7b5c6c4[m change name last name and password
+* [1;32m|[m [34m|[m [1;35m|[m [1;36m|[m [35m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33m0944e62[m Merge pull request #114 from ssaavedraa/santin-protected-route
+[34m|[m[1;34m\[m [1;32m\[m [34m\[m [1;35m\[m [1;36m\[m [35m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[34m|[m [1;34m|[m[34m_[m[1;32m|[m[34m/[m [1;35m/[m [1;36m/[m [35m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[34m|[m[34m/[m[1;34m|[m [1;32m|[m [1;35m|[m [1;36m|[m [35m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+[34m|[m * [1;32m|[m [1;35m|[m [1;36m|[m [35m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33md16cca1[m[33m ([m[1;31morigin/santin-protected-route[m[33m)[m feat: protected route component
+[34m|[m[34m/[m [1;32m/[m [1;35m/[m [1;36m/[m [35m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[34m|[m [1;32m|[m [1;35m|[m [1;36m|[m * [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m [33m77ccbaf[m favs
+[34m|[m [1;32m|[m[34m_[m[1;35m|[m[34m_[m[1;36m|[m[34m/[m [32m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[34m|[m[34m/[m[1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+* [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33mc1e1b76[m Merge pull request #111 from ssaavedraa/brianfavs
+[32m|[m[1;36m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[32m|[m [1;36m|[m[32m_[m[1;32m|[m[32m_[m[1;35m|[m[32m_[m[1;36m|[m[32m_[m[32m|[m[32m/[m [34m/[m [35m/[m [34m/[m  
+[32m|[m[32m/[m[1;36m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+[32m|[m * [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33m217b731[m fix cors issue
+[32m|[m * [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [34m|[m [35m|[m [34m|[m [33m688454d[m favs
+[32m|[m * [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33me721e48[m merge con development
+[32m|[m [31m|[m[32m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[32m|[m [31m|[m[32m/[m [1;32m/[m [1;35m/[m [1;36m/[m [32m/[m [34m/[m [35m/[m [34m/[m  
+[32m|[m[32m/[m[31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [34m|[m [35m|[m [34m|[m   
+* [31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [34m|[m [35m|[m [34m|[m   [33mbd0d866[m Merge pull request #110 from ssaavedraa/gallery-quickfix
+[34m|[m[34m\[m [31m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [34m\[m [35m\[m [34m\[m  
+[34m|[m [34m|[m[34m_[m[31m|[m[34m_[m[1;32m|[m[34m_[m[1;35m|[m[34m_[m[1;36m|[m[34m_[m[32m|[m[34m/[m [35m/[m [34m/[m  
+[34m|[m[34m/[m[34m|[m [31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m   
+[34m|[m * [31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m [33m9f9d28a[m refactor: gallery and searchbar
+[34m|[m[34m/[m [31m/[m [1;32m/[m [1;35m/[m [1;36m/[m [32m/[m [35m/[m [34m/[m  
+* [31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m   [33me5a9f3b[m Merge pull request #109 from ssaavedraa/logout-quickfix
+[35m|[m[36m\[m [31m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m  
+[35m|[m * [31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m [33mc549386[m logout quickfix
+[35m|[m[35m/[m [31m/[m [1;32m/[m [1;35m/[m [1;36m/[m [32m/[m [35m/[m [34m/[m  
+* [31m|[m [1;32m|[m [1;35m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m   [33m7111637[m Merge pull request #102 from ssaavedraa/detailObra
+[1;31m|[m[1;32m\[m [31m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m  
+[1;31m|[m * [31m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m   [33me6ca4cb[m Merge branch 'development' into detailObra
+[1;31m|[m [1;35m|[m[1;31m\[m [31m\[m [1;32m\[m [1;35m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m  
+[1;31m|[m [1;35m|[m[1;31m/[m [31m/[m [1;32m/[m [1;35m/[m [1;36m/[m [32m/[m [35m/[m [34m/[m  
+[1;31m|[m[1;31m/[m[1;35m|[m [31m|[m [1;32m|[m [1;35m/[m [1;36m/[m [32m/[m [35m/[m [34m/[m   
+[1;31m|[m [1;35m|[m [31m|[m[1;35m_[m[1;32m|[m[1;35m/[m [1;36m/[m [32m/[m [35m/[m [34m/[m    
+[1;31m|[m [1;35m|[m[1;35m/[m[31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m     
+* [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m   [33mdb532b6[m Merge pull request #104 from ssaavedraa/yessy
+[1;35m|[m[1;36m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m  
+[1;35m|[m * [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m   [33m6db045d[m Merge branch 'development' into yessy
+[1;35m|[m [31m|[m[1;35m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m  
+[1;35m|[m [31m|[m[1;35m/[m [1;35m/[m [31m/[m [1;32m/[m [1;36m/[m [32m/[m [35m/[m [34m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m   
+[1;35m|[m * [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [34m|[m   [33m83b97c3[m Merge branch 'development' into yessy
+[1;35m|[m [34m|[m[34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m [34m\[m  
+[1;35m|[m [34m|[m [34m|[m[34m_[m[1;35m|[m[34m_[m[31m|[m[34m_[m[1;32m|[m[34m_[m[1;36m|[m[34m_[m[32m|[m[34m_[m[35m|[m[34m/[m  
+[1;35m|[m [34m|[m[34m/[m[34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m   
+[1;35m|[m * [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33m698b85b[m adds ready
+[1;35m|[m * [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33m155232e[m add artists ready
+[1;35m|[m * [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33mc48b390[m hola
+[1;35m|[m * [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33mb4a8ff9[m hi
+[1;35m|[m * [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33m5b8dbd5[m 1
+[1;35m|[m * [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m   [33ma66ec04[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [35m|[m[36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [36m|[m [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33ma31bbe9[m ultimo
+[1;35m|[m * [36m|[m [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m   [33m68c4ed7[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [1;31m|[m[1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m   [33mf8e4721[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [1;33m|[m[1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m   [33m95e8de9[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [1;35m|[m[1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m   [33m1156c5e[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [31m|[m[32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m   [33m6f4ec70[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [33m|[m[34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m   [33m75187d5[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [35m|[m[36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m   [33mb8554dd[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[1;35m|[m [1;31m|[m[1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;35m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m * [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;35m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33meb65e16[m ultimo
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m * [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33m8c6f1d4[m guardando cambios
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m * [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33m8b28caf[m guardando
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m * [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m   [33m4c719f6[m puull
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;33m|[m[1;34m\[m [31m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m * [1;34m|[m [31m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33m2b46fec[m w
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m * [1;32m|[m [1;36m|[m [32m|[m [35m|[m [33me5eea88[m favs
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m * [1;32m|[m [1;36m|[m [32m|[m [35m|[m   [33ma736319[m merge con development
+[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m[1;35m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;35m|[m [1;32m|[m[1;35m_[m[1;32m|[m[1;35m_[m[36m|[m[1;35m_[m[34m|[m[1;35m_[m[32m|[m[1;35m_[m[1;36m|[m[1;35m_[m[1;34m|[m[1;35m_[m[1;32m|[m[1;35m_[m[36m|[m[1;35m_[m[34m|[m[1;35m_[m[1;34m|[m[1;35m_[m[1;34m|[m[1;35m_[m[1;35m|[m[1;35m/[m [1;32m/[m [1;36m/[m [32m/[m [35m/[m  
+[1;35m|[m[1;35m/[m[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m   
+* [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;36m|[m [32m|[m [35m|[m   [33me74058a[m Merge pull request #108 from ssaavedraa/santin-login
+[1;36m|[m[32m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;34m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;36m\[m [32m\[m [35m\[m  
+[1;36m|[m [32m|[m[1;36m_[m[1;32m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m_[m[34m|[m[1;36m_[m[32m|[m[1;36m_[m[1;36m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m_[m[34m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;35m|[m[1;36m_[m[1;32m|[m[1;36m/[m [32m/[m [35m/[m  
+[1;36m|[m[1;36m/[m[32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [32m|[m [35m|[m   
+[1;36m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [32m|[m [35m|[m [33ma75c22a[m login cleanup
+[1;36m|[m[1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [34m/[m [1;34m/[m [1;34m/[m [1;35m/[m [1;32m/[m [32m/[m [35m/[m  
+* [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [32m|[m [35m|[m   [33m38d673d[m Merge pull request #107 from ssaavedraa/ssaavedraa
+[1;32m|[m[32m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;34m\[m [1;34m\[m [1;35m\[m [1;32m\[m [32m\[m [35m\[m  
+[1;32m|[m [32m|[m[1;32m_[m[1;32m|[m[1;32m_[m[1;32m|[m[1;32m_[m[36m|[m[1;32m_[m[34m|[m[1;32m_[m[32m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;32m|[m[1;32m_[m[36m|[m[1;32m_[m[34m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;35m|[m[1;32m/[m [32m/[m [35m/[m  
+[1;32m|[m[1;32m/[m[32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [32m/[m [35m/[m   
+[1;32m|[m [32m|[m [1;32m|[m[32m_[m[1;32m|[m[32m_[m[36m|[m[32m_[m[34m|[m[32m_[m[32m|[m[32m_[m[1;36m|[m[32m_[m[1;34m|[m[32m_[m[1;32m|[m[32m_[m[36m|[m[32m_[m[34m|[m[32m_[m[1;34m|[m[32m_[m[1;34m|[m[32m_[m[1;35m|[m[32m/[m [35m/[m    
+[1;32m|[m [32m|[m[32m/[m[1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [35m|[m     
+[1;32m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [35m|[m [33me5c4fae[m branch update
+[1;32m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [1;35m|[m [35m|[m [33me963267[m branch update
+[1;32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m * [35m|[m [33m78ca0b7[m actions, cambios en cardPaint
+[1;32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m * [35m|[m   [33mc9d1395[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [35m|[m[1;32m\[m [35m\[m  
+[1;32m|[m [34m|[m[1;32m_[m[1;32m|[m[1;32m_[m[1;32m|[m[1;32m_[m[36m|[m[1;32m_[m[34m|[m[1;32m_[m[32m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;32m|[m[1;32m_[m[36m|[m[1;32m_[m[34m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;34m|[m[1;32m_[m[35m|[m[1;32m/[m [35m/[m  
+[1;32m|[m[1;32m/[m[34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m   
+* [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m   [33m42f1672[m Merge pull request #106 from ssaavedraa/brianfavroute
+[1;31m|[m[1;32m\[m [34m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;34m\[m [1;34m\[m [35m\[m [35m\[m  
+[1;31m|[m * [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m [33mf5ed2a0[m change fav route
+[1;31m|[m [34m|[m [34m|[m[34m_[m[1;32m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m_[m[34m|[m[34m_[m[32m|[m[34m_[m[1;36m|[m[34m_[m[1;34m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m/[m [1;34m/[m [1;34m/[m [35m/[m [35m/[m  
+[1;31m|[m [34m|[m[34m/[m[34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m   
+* [34m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m   [33m6515931[m Merge pull request #105 from ssaavedraa/ssaavedraa
+[34m|[m[34m\[m [34m\[m [34m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;34m\[m [35m\[m [35m\[m  
+[34m|[m [34m|[m[34m/[m [34m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;34m/[m [35m/[m [35m/[m  
+[34m|[m[34m/[m[34m|[m [34m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;34m/[m [35m/[m [35m/[m   
+[34m|[m [34m|[m[34m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;34m/[m [35m/[m [35m/[m    
+[34m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m [33m544a00c[m branch update
+[34m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m [33m0c3201e[m branch update
+[34m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m   [33m6e63273[m branch update
+[34m|[m [1;35m|[m[34m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;34m\[m [35m\[m [35m\[m  
+[34m|[m [1;35m|[m[34m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;34m/[m [35m/[m [35m/[m  
+[34m|[m[34m/[m[1;35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m   
+[34m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [35m|[m [35m|[m [33m66c6585[m branch update
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m * [35m|[m [33m3787feb[m agrega favs, actions, reducer, modifica las cards segun rol
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m * [35m|[m   [33m37a2149[m merge con development
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [31m|[m[1;34m\[m [35m\[m  
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [31m|[m[1;34m/[m [35m/[m  
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m[1;34m/[m[31m|[m [35m|[m   
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m * [35m|[m [33m770d686[m toastify, cambios en obraDetail, y css en cart
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [32m|[m * [33mdced899[m style error fix
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [32m|[m * [33m0cd6ccb[m nodemailer password reset template without styles
+[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [32m|[m * [33m86a33cb[m email sender
+[34m|[m [1;36m|[m[34m_[m[1;32m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m_[m[34m|[m[34m_[m[32m|[m[34m_[m[1;36m|[m[34m_[m[1;34m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m_[m[1;34m|[m[34m_[m[1;34m|[m[34m_[m[32m|[m[34m/[m  
+[34m|[m[34m/[m[1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [32m|[m   
+* [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;34m|[m [32m|[m   [33m1ed8ffd[m Merge pull request #103 from ssaavedraa/facu-password-encrypt
+[1;34m|[m[34m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;34m\[m [32m\[m  
+[1;34m|[m [34m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;32m|[m[1;34m_[m[36m|[m[1;34m_[m[34m|[m[1;34m_[m[32m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;34m|[m[1;34m_[m[1;32m|[m[1;34m_[m[36m|[m[1;34m_[m[1;34m|[m[1;34m/[m [32m/[m  
+[1;34m|[m[1;34m/[m[34m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m   
+[1;34m|[m * [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m [33m649a1db[m update & tested
+[1;34m|[m * [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m [33mfe4da17[m password hash in setter
+[1;34m|[m[1;34m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [32m/[m  
+* [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m   [33mfc8b5e1[m Merge pull request #100 from ssaavedraa/brian-auth
+[35m|[m[36m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [32m\[m  
+[35m|[m * [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [32m\[m   [33m4c76b44[m Merge branch 'development' into brian-auth
+[35m|[m [1;31m|[m[1;32m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [32m\[m  
+[35m|[m * [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m [33m09e904c[m delete comm
+[35m|[m * [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m [33m9907c9b[m add favs info and check if banned for passport strategy
+* [1;32m|[m [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m   [33m81ec0c4[m Merge pull request #101 from ssaavedraa/facu-google-auth
+[1;32m|[m[1;34m\[m [1;32m\[m [1;32m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [32m\[m  
+[1;32m|[m [1;34m|[m[1;32m_[m[1;32m|[m[1;32m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [32m/[m  
+[1;32m|[m[1;32m/[m[1;34m|[m [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m   
+[1;32m|[m * [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m [33m61848a8[m google login finished
+[1;32m|[m * [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m [33mcfb60a6[m google login
+[1;32m|[m[1;32m/[m [1;32m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [32m/[m  
+* [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [32m|[m   [33mb5e2cc4[m Merge pull request #98 from ssaavedraa/jorgy
+[32m|[m[1;36m\[m [1;32m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [32m\[m  
+[32m|[m [1;36m|[m[32m_[m[1;32m|[m[32m_[m[1;36m|[m[32m_[m[1;32m|[m[32m_[m[1;32m|[m[32m_[m[36m|[m[32m_[m[34m|[m[32m_[m[32m|[m[32m_[m[1;36m|[m[32m_[m[1;34m|[m[32m_[m[1;32m|[m[32m_[m[36m|[m[32m_[m[1;34m|[m[32m/[m  
+[32m|[m[32m/[m[1;36m|[m [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   
+[32m|[m * [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33m44dff96[m Se agregan botones de favoritos y editar en las cards de paints en galeria, se ajusta diseño de paginado
+* [1;36m|[m [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33mc211345[m Merge pull request #97 from ssaavedraa/santiN-adminRoute
+[31m|[m[32m\[m [1;36m\[m [1;32m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[31m|[m * [1;36m|[m [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33mb445a33[m feat: admin routes
+[31m|[m * [1;36m|[m [1;32m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33m712cd6a[m fix:default admin account now loads with the correct role
+[31m|[m [1;32m|[m [1;36m|[m[1;32m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m  
+[31m|[m [1;32m|[m[1;32m/[m[1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   
+* [1;32m|[m [1;36m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33m41c6b8a[m Merge pull request #96 from ssaavedraa/home
+[1;32m|[m[1;36m\[m [1;32m\[m [1;36m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[1;32m|[m [1;36m|[m[1;32m/[m [1;36m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[1;36m|[m [1;36m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m   
+[1;32m|[m [1;36m|[m[1;36m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m    
+[1;32m|[m * [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33m880a993[m Se ajusta los estilos del seearchbar para que no tapen los filtros
+[1;32m|[m [35m|[m[1;32m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[1;32m|[m [35m|[m[1;32m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   
+* [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33m1286847[m Merge pull request #93 from ssaavedraa/santiN-defaultUsers
+[1;31m|[m[1;32m\[m [35m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[1;31m|[m * [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33me74262a[m feat: added default user and admin to .env
+* [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33ma896898[m Merge pull request #95 from ssaavedraa/eli-detailartist
+[1;33m|[m[1;34m\[m [1;32m\[m [35m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[1;33m|[m * [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33ma7a7e79[m css en el nav del carrito
+[1;33m|[m * [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33m3454520[m merge con development
+[1;33m|[m [1;35m|[m[1;32m\[m[1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m 
+[1;33m|[m * [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33m5ae611b[m no me acuerdo
+[1;33m|[m * [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33m01b652a[m diseño del carrito
+[1;33m|[m * [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33mddbb3cd[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;33m|[m [31m|[m[32m\[m [1;32m\[m [35m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[1;33m|[m * [32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [33m6a63918[m cart css
+[1;33m|[m * [32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m   [33m9db3282[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;33m|[m [33m|[m[1;32m\[m [32m\[m [1;32m\[m [35m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m  
+[1;33m|[m [33m|[m [1;32m|[m [32m|[m[1;32m_[m[1;32m|[m[1;32m_[m[35m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;32m|[m[1;32m_[m[1;32m|[m[1;32m_[m[36m|[m[1;32m_[m[34m|[m[1;32m_[m[32m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m/[m [36m/[m [1;34m/[m  
+[1;33m|[m [33m|[m [1;32m|[m[1;32m/[m[32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [36m|[m [1;34m|[m   
+[1;33m|[m * [1;32m|[m [32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [36m|[m [1;34m|[m   [33m2444e5f[m merge con development
+[1;33m|[m [35m|[m[1;34m\[m [1;32m\[m [32m\[m [1;32m\[m [35m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m [36m\[m [1;34m\[m  
+[1;33m|[m [35m|[m [1;34m|[m [1;32m|[m[1;34m_[m[32m|[m[1;34m_[m[1;32m|[m[1;34m_[m[35m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;32m|[m[1;34m_[m[36m|[m[1;34m_[m[34m|[m[1;34m_[m[32m|[m[1;34m_[m[1;36m|[m[1;34m/[m [36m/[m [1;34m/[m  
+[1;33m|[m [35m|[m [1;34m|[m[1;34m/[m[1;32m|[m [32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m   
+[1;33m|[m * [1;34m|[m [1;32m|[m [32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m [33m0f4ae22[m cambios en css
+* [36m|[m [1;34m|[m [1;32m|[m [32m|[m [1;32m|[m [35m|[m [1;36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m   [33m8f601eb[m Merge pull request #94 from ssaavedraa/ssaavedraa
+[1;32m|[m[1;36m\[m [36m\[m [1;34m\[m [1;32m\[m [32m\[m [1;32m\[m [35m\[m [1;36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [36m\[m [1;34m\[m  
+[1;32m|[m [1;36m|[m[1;32m_[m[36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;32m|[m[1;32m_[m[32m|[m[1;32m/[m [35m/[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [36m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[1;36m|[m [36m|[m [1;34m|[m [1;32m|[m [32m|[m [35m|[m [1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [36m/[m [1;34m/[m   
+[1;32m|[m [1;36m|[m [36m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;32m|[m[1;36m_[m[32m|[m[1;36m_[m[35m|[m[1;36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [36m/[m [1;34m/[m    
+[1;32m|[m [1;36m|[m[1;36m/[m[36m|[m [1;34m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m     
+[1;32m|[m * [36m|[m [1;34m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m [33m2369919[m Login and register connected to backend
+[1;32m|[m * [36m|[m [1;34m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m   [33md34c4a8[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [1;33m|[m[36m\[m [36m\[m [1;34m\[m [1;32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [36m\[m [1;34m\[m  
+[1;32m|[m [1;33m|[m [36m|[m [36m|[m[36m_[m[1;34m|[m[36m_[m[1;32m|[m[36m_[m[32m|[m[36m_[m[35m|[m[36m_[m[1;32m|[m[36m_[m[1;32m|[m[36m_[m[36m|[m[36m_[m[34m|[m[36m_[m[32m|[m[36m_[m[1;36m|[m[36m/[m [1;34m/[m  
+[1;32m|[m [1;33m|[m [36m|[m[36m/[m[36m|[m [1;34m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m   
+[1;32m|[m * [36m|[m [36m|[m [1;34m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m   [33m09450b7[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [1;35m|[m[1;36m\[m [36m\[m [36m\[m [1;34m\[m [1;32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m  
+[1;32m|[m * [1;36m\[m [36m\[m [36m\[m [1;34m\[m [1;32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m   [33mb200c06[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [31m|[m[1;34m\[m [1;36m\[m [36m\[m [36m\[m [1;34m\[m [1;32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m  
+[1;32m|[m [31m|[m [1;34m|[m [1;36m|[m[1;34m_[m[36m|[m[1;34m_[m[36m|[m[1;34m/[m [1;32m/[m [32m/[m [35m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;36m/[m [1;34m/[m  
+[1;32m|[m [31m|[m [1;34m|[m[1;34m/[m[1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m   
+[1;32m|[m * [1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m [33m3605647[m styling
+[1;32m|[m * [1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [1;34m|[m   [33mc03a784[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [33m|[m[1;36m\[m [1;34m\[m [1;36m\[m [36m\[m [36m\[m [1;32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [1;34m\[m  
+[1;32m|[m [33m|[m [1;36m|[m [1;34m|[m[1;36m_[m[1;36m|[m[1;36m_[m[36m|[m[1;36m_[m[36m|[m[1;36m_[m[1;32m|[m[1;36m_[m[32m|[m[1;36m_[m[35m|[m[1;36m_[m[1;32m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m_[m[34m|[m[1;36m_[m[32m|[m[1;36m/[m [1;34m/[m  
+[1;32m|[m [33m|[m [1;36m|[m[1;36m/[m[1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   
+[1;32m|[m * [1;36m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [33m17e51f7[m First name and laste name field added to register component
+* [34m|[m [1;36m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   [33me37c751[m Merge pull request #92 from ssaavedraa/addFavorites
+[35m|[m[36m\[m [34m\[m [1;36m\[m [1;34m\[m [1;36m\[m [36m\[m [36m\[m [1;32m\[m [32m\[m [35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;34m\[m  
+[35m|[m * [34m|[m [1;36m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [33m23de2d8[m take id from params
+[35m|[m * [34m|[m [1;36m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [33m47e1fe9[m add favorites to db and routes
+[35m|[m [1;36m|[m [34m|[m[1;36m_[m[1;36m|[m[1;36m_[m[1;34m|[m[1;36m/[m [36m/[m [36m/[m [1;32m/[m [32m/[m [35m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;34m/[m  
+[35m|[m [1;36m|[m[1;36m/[m[34m|[m [1;36m|[m [1;34m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [35m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   
+[35m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m [33m03bcf5d[m Se modifica un poco el diseño del navbar
+[35m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   [33ma103ddc[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[35m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m[35m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;34m\[m  
+[35m|[m [1;36m|[m[35m_[m[34m|[m[35m_[m[1;36m|[m[35m_[m[1;34m|[m[35m_[m[36m|[m[35m_[m[36m|[m[35m_[m[1;32m|[m[35m_[m[32m|[m[35m_[m[1;31m|[m[35m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;34m/[m  
+[35m|[m[35m/[m[1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   
+* [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   [33ma3e8ca9[m Merge pull request #89 from ssaavedraa/detailObra
+[36m|[m[1;34m\[m [1;36m\[m [34m\[m [1;36m\[m [1;34m\[m [36m\[m [36m\[m [1;32m\[m [32m\[m [1;31m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;34m\[m  
+[36m|[m [1;34m|[m[36m_[m[1;36m|[m[36m_[m[34m|[m[36m_[m[1;36m|[m[36m_[m[1;34m|[m[36m/[m [36m/[m [1;32m/[m [32m/[m [1;31m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m [1;34m/[m  
+[36m|[m[36m/[m[1;34m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   
+[36m|[m * [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [1;34m|[m   [33mff613d3[m Merge branch 'development' into detailObra
+[36m|[m [1;34m|[m[1;36m\[m [1;36m\[m [34m\[m [1;36m\[m [1;34m\[m [36m\[m [1;32m\[m [32m\[m [1;31m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m [1;34m\[m  
+[36m|[m [1;34m|[m [1;36m|[m[1;34m_[m[1;36m|[m[1;34m_[m[34m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;34m|[m[1;34m_[m[36m|[m[1;34m_[m[1;32m|[m[1;34m_[m[32m|[m[1;34m_[m[1;31m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;32m|[m[1;34m_[m[36m|[m[1;34m_[m[34m|[m[1;34m_[m[32m|[m[1;34m/[m  
+[36m|[m [1;34m|[m[1;34m/[m[1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[36m|[m * [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mb1ad340[m  navigate
+[36m|[m * [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33mf78a27b[m commi
+[36m|[m [31m|[m[1;36m\[m [1;36m\[m [1;36m\[m [34m\[m [1;36m\[m [1;34m\[m [36m\[m [1;32m\[m [32m\[m [1;31m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[36m|[m [31m|[m [1;36m|[m [1;36m|[m[1;36m/[m [34m/[m [1;36m/[m [1;34m/[m [36m/[m [1;32m/[m [32m/[m [1;31m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[36m|[m [31m|[m [1;36m|[m[1;36m/[m[1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[36m|[m * [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m0749aca[m commitee
+[36m|[m * [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mb2e9e13[m commit
+[36m|[m [32m|[m [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m6234a58[m Se ajustan detalles en la busqueda
+[36m|[m [32m|[m [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m * [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m03c562f[m Se agrega funcionalidad de SearchBar
+[36m|[m [32m|[m[36m_[m[1;36m|[m[36m_[m[1;36m|[m[36m_[m[34m|[m[36m_[m[1;36m|[m[36m_[m[1;34m|[m[36m_[m[36m|[m[36m_[m[1;32m|[m[36m_[m[32m|[m[36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[36m|[m[36m/[m[32m|[m [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+* [32m|[m [1;36m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33mee6e328[m Merge pull request #88 from ssaavedraa/santiN-auth
+[1;36m|[m[34m\[m [32m\[m [1;36m\[m [1;36m\[m [34m\[m [1;36m\[m [1;34m\[m [36m\[m [1;32m\[m [32m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;36m|[m [34m|[m[1;36m_[m[32m|[m[1;36m_[m[1;36m|[m[1;36m/[m [34m/[m [1;36m/[m [1;34m/[m [36m/[m [1;32m/[m [32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;36m|[m[1;36m/[m[34m|[m [32m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;36m|[m * [32m|[m [1;36m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mc8f0a4f[m feat: useAuth hooks + user routes fixes
+[1;36m|[m [1;36m|[m [32m|[m[1;36m/[m [34m/[m [1;36m/[m [1;34m/[m [36m/[m [1;32m/[m [32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;36m|[m [1;36m|[m[1;36m/[m[32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+* [1;36m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m1fd856a[m Merge pull request #87 from ssaavedraa/facu-cart-component
+[1;36m|[m[36m\[m [1;36m\[m [32m\[m [34m\[m [1;36m\[m [1;34m\[m [36m\[m [1;32m\[m [32m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;36m|[m [36m|[m[1;36m/[m [32m/[m [34m/[m [1;36m/[m [1;34m/[m [36m/[m [1;32m/[m [32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;36m|[m[1;36m/[m[36m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;36m|[m * [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mfd9275b[m useCart hook second update
+[1;36m|[m * [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m04dbcc5[m useCart hook update
+* [36m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33maaf937c[m Merge pull request #86 from ssaavedraa/login
+[36m|[m[1;32m\[m [36m\[m [32m\[m [34m\[m [1;36m\[m [1;34m\[m [36m\[m [1;32m\[m [32m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[36m|[m [1;32m|[m[36m/[m [32m/[m [34m/[m [1;36m/[m [1;34m/[m [36m/[m [1;32m/[m [32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[36m|[m[36m/[m[1;32m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[36m|[m * [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m815dfa0[m delete console.log
+[36m|[m * [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mc88fb40[m fix endpoint name
+* [1;32m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mf7ca015[m Merge pull request #85 from ssaavedraa/login
+[32m|[m[1;32m\[m[1;32m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m 
+[32m|[m [1;32m|[m[32m_[m[32m|[m[32m_[m[34m|[m[32m_[m[1;36m|[m[32m_[m[1;34m|[m[32m_[m[36m|[m[32m_[m[1;32m|[m[32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[32m|[m[32m/[m[1;32m|[m [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[32m|[m * [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33mb6e713d[m fix send user info
+[32m|[m * [32m|[m [34m|[m [1;36m|[m [1;34m|[m [36m|[m [1;32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m83f80f8[m login, register and auth
+[32m|[m [1;34m|[m [32m|[m[1;34m_[m[34m|[m[1;34m_[m[1;36m|[m[1;34m/[m [36m/[m [1;32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[32m|[m [1;34m|[m[1;34m/[m[32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+* [1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m5ffdf3b[m Merge pull request #84 from ssaavedraa/nsanti-SearchSuggestions
+[1;35m|[m[1;36m\[m [1;34m\[m [32m\[m [34m\[m [1;36m\[m [36m\[m [1;32m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;35m|[m * [1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m0094053[m feat: /search/suggestions/:searchBy endpoint
+[1;35m|[m [1;32m|[m [1;34m|[m[1;32m_[m[32m|[m[1;32m_[m[34m|[m[1;32m_[m[1;36m|[m[1;32m_[m[36m|[m[1;32m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;35m|[m [1;32m|[m[1;32m/[m[1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+* [1;32m|[m [1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m6e24ccd[m Merge pull request #83 from ssaavedraa/useCart-quickfix
+[1;32m|[m[32m\[m [1;32m\[m [1;34m\[m [32m\[m [34m\[m [1;36m\[m [36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;32m|[m [32m|[m[1;32m/[m [1;34m/[m [32m/[m [34m/[m [1;36m/[m [36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;32m|[m[1;32m/[m[32m|[m [1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;32m|[m * [1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m71330d8[m fix:useCart now works with strings
+[1;32m|[m[1;32m/[m [1;34m/[m [32m/[m [34m/[m [1;36m/[m [36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+* [1;34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33mec5e718[m Merge pull request #82 from ssaavedraa/facu-cart-component
+[1;34m|[m[34m\[m [1;34m\[m [32m\[m [34m\[m [1;36m\[m [36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;34m|[m [34m|[m[1;34m/[m [32m/[m [34m/[m [1;36m/[m [36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;34m|[m[1;34m/[m[34m|[m [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;34m|[m * [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m4064241[m cart component update
+[1;34m|[m * [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m6baa60d[m cart component merge conflict solved
+[1;34m|[m * [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m9fd6403[m cart component merge error solved
+[1;34m|[m[1;34m/[m [32m/[m [34m/[m [1;36m/[m [36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+* [32m|[m [34m|[m [1;36m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m96af2eb[m Merge pull request #81 from ssaavedraa/home
+[1;36m|[m[36m\[m [32m\[m [34m\[m [1;36m\[m [36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;36m|[m [36m|[m[1;36m_[m[32m|[m[1;36m_[m[34m|[m[1;36m/[m [36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;36m|[m[1;36m/[m[36m|[m [32m|[m [34m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;36m|[m * [32m|[m [34m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m7c8d0e2[m Se arregla paginado, se corrigen estilos
+[1;36m|[m [1;31m|[m[1;36m\[m [32m\[m [34m\[m [36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;36m|[m [1;31m|[m[1;36m/[m [32m/[m [34m/[m [36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;36m|[m[1;36m/[m[1;31m|[m [32m|[m [34m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+* [1;31m|[m [32m|[m [34m|[m [36m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m633dfdd[m Merge pull request #80 from ssaavedraa/eli-detailartist
+[1;33m|[m[36m\[m [1;31m\[m [32m\[m [34m\[m [36m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;33m|[m [36m|[m [1;31m|[m[36m_[m[32m|[m[36m_[m[34m|[m[36m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;33m|[m [36m|[m[36m/[m[1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;33m|[m * [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m723c944[m merge con development
+[1;33m|[m [1;35m|[m[1;33m\[m [1;31m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m[1;33m/[m [1;31m/[m [32m/[m [34m/[m [1;32m/[m [1;32m/[m [36m/[m [34m/[m [32m/[m  
+[1;33m|[m[1;33m/[m[1;35m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   
+[1;33m|[m * [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33ma42af57[m cambios pequeños que no recuerdo
+[1;33m|[m * [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33mf155f77[m merge con development
+[1;33m|[m [31m|[m[32m\[m [1;31m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;33m|[m * [32m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m [33m451c03c[m me olvide que cambie
+[1;33m|[m * [32m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [36m|[m [34m|[m [32m|[m   [33m82b5ee9[m merge con development
+[1;33m|[m [33m|[m[36m\[m [32m\[m [1;31m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [36m\[m [34m\[m [32m\[m  
+[1;33m|[m [33m|[m [36m|[m [32m|[m[36m_[m[1;31m|[m[36m_[m[32m|[m[36m_[m[34m|[m[36m_[m[1;32m|[m[36m_[m[1;32m|[m[36m/[m [34m/[m [32m/[m  
+[1;33m|[m [33m|[m [36m|[m[36m/[m[32m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   
+[1;33m|[m * [36m|[m [32m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m [33me3af140[m img json
+[1;33m|[m * [36m|[m [32m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m [33m26af2ca[m modal para ver obras, actions, reducer, arreglo de imagen rota en json
+[1;33m|[m * [36m|[m [32m|[m [1;31m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   [33ma25a678[m merge con obraDetail
+[1;33m|[m [35m|[m[36m\[m [36m\[m [32m\[m [1;31m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [34m\[m [32m\[m  
+[1;33m|[m [35m|[m [36m|[m [36m|[m [32m|[m * [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m [33m4d70991[m Se agregan links a under construction y se arregla el css
+[1;33m|[m [35m|[m[1;33m_[m[36m|[m[1;33m_[m[36m|[m[1;33m_[m[32m|[m[1;33m/[m [32m/[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m [32m/[m  
+[1;33m|[m[1;33m/[m[35m|[m [36m|[m [36m|[m [32m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   
+* [35m|[m [36m|[m [36m|[m [32m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   [33m19317dd[m Merge pull request #79 from ssaavedraa/jorgy
+[32m|[m[1;32m\[m [35m\[m [36m\[m [36m\[m [32m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [34m\[m [32m\[m  
+[32m|[m [1;32m|[m[32m_[m[35m|[m[32m_[m[36m|[m[32m_[m[36m|[m[32m/[m [32m/[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m [32m/[m  
+[32m|[m[32m/[m[1;32m|[m [35m|[m [36m|[m [36m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   
+[32m|[m * [35m|[m [36m|[m [36m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m [33mb95dca3[m Delete prueba
+[32m|[m * [35m|[m [36m|[m [36m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m [33m9925fcc[m prueba
+[32m|[m * [35m|[m [36m|[m [36m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   [33mf1c38e5[m Se ajusta el package-lock.json
+[32m|[m [1;33m|[m[32m\[m [35m\[m [36m\[m [36m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [34m\[m [32m\[m  
+[32m|[m [1;33m|[m[32m/[m [35m/[m [36m/[m [36m/[m [32m/[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m [32m/[m  
+[32m|[m[32m/[m[1;33m|[m [35m|[m [36m|[m [36m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   
+* [1;33m|[m [35m|[m [36m|[m [36m|[m [32m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   [33m9726a14[m Merge pull request #76 from ssaavedraa/detailObra
+[1;35m|[m[32m\[m [1;33m\[m [35m\[m [36m\[m [36m\[m [32m\[m [34m\[m [1;32m\[m [1;32m\[m [34m\[m [32m\[m  
+[1;35m|[m [32m|[m [1;33m|[m[32m_[m[35m|[m[32m_[m[36m|[m[32m_[m[36m|[m[32m/[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m [32m/[m  
+[1;35m|[m [32m|[m[32m/[m[1;33m|[m [35m|[m [36m|[m [36m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m   
+[1;35m|[m * [1;33m|[m [35m|[m [36m|[m [36m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m [32m|[m [33mce5bf9c[m css
+[1;35m|[m [32m|[m [1;33m|[m[32m_[m[35m|[m[32m_[m[36m|[m[32m_[m[36m|[m[32m_[m[34m|[m[32m_[m[1;32m|[m[32m_[m[1;32m|[m[32m_[m[34m|[m[32m/[m  
+[1;35m|[m [32m|[m[32m/[m[1;33m|[m [35m|[m [36m|[m [36m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m   
+[1;35m|[m [32m|[m * [35m|[m [36m|[m [36m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m   [33m7649d23[m Se corrijen conflictos al hacer pull
+[1;35m|[m [32m|[m [31m|[m[1;35m\[m [35m\[m [36m\[m [36m\[m [34m\[m [1;32m\[m [1;32m\[m [34m\[m  
+[1;35m|[m [32m|[m[1;35m_[m[31m|[m[1;35m/[m [35m/[m [36m/[m [36m/[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m  
+[1;35m|[m[1;35m/[m[32m|[m [31m|[m [35m|[m [36m|[m [36m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m   
+* [32m|[m [31m|[m [35m|[m [36m|[m [36m|[m [34m|[m [1;32m|[m [1;32m|[m [34m|[m   [33me8cc513[m Merge pull request #77 from ssaavedraa/ssaavedraa
+[32m|[m[34m\[m [32m\[m [31m\[m [35m\[m [36m\[m [36m\[m [34m\[m [1;32m\[m [1;32m\[m [34m\[m  
+[32m|[m [34m|[m[32m/[m [31m/[m [35m/[m [36m/[m [36m/[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m  
+[32m|[m[32m/[m[34m|[m [31m|[m [35m|[m [36m|[m [36m|[m [34m/[m [1;32m/[m [1;32m/[m [34m/[m   
+[32m|[m [34m|[m [31m|[m[34m_[m[35m|[m[34m_[m[36m|[m[34m_[m[36m|[m[34m/[m [1;32m/[m [1;32m/[m [34m/[m    
+[32m|[m [34m|[m[34m/[m[31m|[m [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [34m|[m     
+[32m|[m * [31m|[m [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [34m|[m [33m59861d9[m Register component added, session control added, register form added
+[32m|[m[32m/[m [31m/[m [35m/[m [36m/[m [36m/[m [1;32m/[m [1;32m/[m [34m/[m  
+[32m|[m * [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [34m|[m [33m6c4c7cf[m Se ajusta y modulariza css
+[32m|[m * [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [34m|[m [33m1772c19[m Se agrega los input range como componentes y se vinculan al estado
+[32m|[m * [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [34m|[m [33m9e68458[m Se agrega busqueda al listado de artistas del componente Filters
+[32m|[m[32m/[m [35m/[m [36m/[m [36m/[m [1;32m/[m [1;32m/[m [34m/[m  
+* [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [34m|[m   [33mf5bb228[m Merge pull request #75 from ssaavedraa/santiN-newArtistRoute
+[34m|[m[36m\[m [35m\[m [36m\[m [36m\[m [1;32m\[m [1;32m\[m [34m\[m  
+[34m|[m [36m|[m[34m_[m[35m|[m[34m_[m[36m|[m[34m_[m[36m|[m[34m_[m[1;32m|[m[34m_[m[1;32m|[m[34m/[m  
+[34m|[m[34m/[m[36m|[m [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m   
+[34m|[m * [35m|[m [36m|[m [36m|[m [1;32m|[m [1;32m|[m [33m4f119c9[m feat: /artist/getbyname endpoint
+[34m|[m [36m|[m [35m|[m[36m_[m[36m|[m[36m/[m [1;32m/[m [1;32m/[m  
+[34m|[m [36m|[m[36m/[m[35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+* [36m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m0f065d3[m Merge pull request #74 from ssaavedraa/home
+[36m|[m[1;32m\[m [36m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[36m|[m [1;32m|[m[36m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[36m|[m[36m/[m[1;32m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+[36m|[m * [35m|[m [36m|[m [1;32m|[m [1;32m|[m [33m2d8fd65[m Se ajustan Filtros
+[36m|[m * [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m8006136[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[36m|[m [1;33m|[m[36m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[36m|[m [1;33m|[m[36m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[36m|[m[36m/[m[1;33m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+* [1;33m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m5dfe96b[m Merge pull request #73 from ssaavedraa/merge-quickfix
+[1;35m|[m[1;36m\[m [1;33m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[1;35m|[m * [1;33m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m [33m572c3de[m merge conflict quickfix
+[1;35m|[m[1;35m/[m [1;33m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[1;35m|[m * [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33mf808046[m Se arreglan conflictos al hacer el pull
+[1;35m|[m [31m|[m[1;35m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[1;35m|[m [31m|[m[1;35m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+* [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m7f33079[m Merge pull request #71 from ssaavedraa/detailObra
+[33m|[m[34m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[33m|[m * [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m   [33mfb343b9[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into detailObra
+[33m|[m [35m|[m[36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[33m|[m * [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m [33m855963d[m agregando link
+* [36m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33ma6c606a[m Merge pull request #70 from ssaavedraa/ssaavedraa
+[1;31m|[m[1;32m\[m [36m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[1;31m|[m * [36m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m   [33m2875267[m Merge branch 'development' into ssaavedraa
+[1;31m|[m [1;33m|[m[1;31m\[m [36m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [36m/[m [36m/[m [31m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [36m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+* [1;33m|[m [36m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33me4e043a[m Merge pull request #68 from ssaavedraa/facu-carrito-customHook
+[36m|[m[1;36m\[m [1;33m\[m [36m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[36m|[m [1;36m|[m[36m_[m[1;33m|[m[36m_[m[36m|[m[36m/[m [31m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[36m|[m[36m/[m[1;36m|[m [1;33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+[36m|[m * [1;33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m9a23ae4[m Merge branch 'development' into facu-carrito-customHook
+[36m|[m [31m|[m[36m\[m [1;33m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[36m|[m [31m|[m[36m/[m [1;33m/[m [36m/[m [31m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[36m|[m[36m/[m[31m|[m [1;33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+[36m|[m * [1;33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m [33m50a9124[m cart hook update
+[36m|[m * [1;33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m [33m93b9dcf[m cart custom hook
+[36m|[m [32m|[m * [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m [33mcca126c[m Login with Google + page content translation
+[36m|[m [32m|[m * [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m7aca67a[m branch update
+[36m|[m [32m|[m [33m|[m[36m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[36m|[m [32m|[m[36m_[m[33m|[m[36m/[m [36m/[m [31m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[36m|[m[36m/[m[32m|[m [33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+* [32m|[m [33m|[m [36m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m318f9ae[m Merge pull request #69 from ssaavedraa/detailObra
+[35m|[m[36m\[m [32m\[m [33m\[m [36m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[35m|[m [36m|[m [32m|[m[36m_[m[33m|[m[36m/[m [31m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[35m|[m [36m|[m[36m/[m[32m|[m [33m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   
+[35m|[m * [32m|[m [33m|[m [31m|[m [35m|[m [36m|[m [1;32m|[m [1;32m|[m   [33m6104ec3[m guardando cambios
+[35m|[m [36m|[m[35m\[m [32m\[m [33m\[m [31m\[m [35m\[m [36m\[m [1;32m\[m [1;32m\[m  
+[35m|[m [36m|[m[35m/[m [32m/[m [33m/[m [31m/[m [35m/[m [36m/[m [1;32m/[m [1;32m/[m  
+[35m|[m[35m/[m[36m|[m [32m|[m [33m|[m [31m|[m [35m|[m [36m/[m [1;32m/[m [1;32m/[m   
+[35m|[m [36m|[m [32m|[m[36m_[m[33m|[m[36m_[m[31m|[m[36m_[m[35m|[m[36m/[m [1;32m/[m [1;32m/[m    
+[35m|[m [36m|[m[36m/[m[32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m     
+[35m|[m * [32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m [33m5292173[m guardando
+[35m|[m * [32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m [33mee5c7fe[m commit
+[35m|[m * [32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m [33mef3a41e[m get backend + mostrar data
+[35m|[m * [32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m [33m6460a15[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into detailObra
+[35m|[m [1;33m|[m[32m\[m[32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m 
+[35m|[m * [32m|[m [33m|[m [31m|[m [35m|[m [1;32m|[m [1;32m|[m [33m20ac5be[m get backend y mostrar detalle
+[35m|[m [1;34m|[m [32m|[m * [31m|[m [35m|[m [1;32m|[m [1;32m|[m [33m22a611d[m login state using redux
+[35m|[m [1;34m|[m [32m|[m [1;34m|[m * [35m|[m [1;32m|[m [1;32m|[m [33m94299f3[m Ajustes en el filtrado
+[35m|[m [1;34m|[m [32m|[m [1;34m|[m * [35m|[m [1;32m|[m [1;32m|[m [33md49a1e8[m Se corrigen medidas y acoplamiento, se agrega en redux la traida de los datos de Artista y Tecnica, se agrega FILTRACION Funcional
+[35m|[m [1;34m|[m [32m|[m [1;34m|[m * [35m|[m [1;32m|[m [1;32m|[m   [33m1c6e7b4[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into home
+[35m|[m [1;34m|[m [32m|[m [1;34m|[m [1;35m|[m[35m\[m [35m\[m [1;32m\[m [1;32m\[m  
+[35m|[m [1;34m|[m[35m_[m[32m|[m[35m_[m[1;34m|[m[35m_[m[1;35m|[m[35m/[m [35m/[m [1;32m/[m [1;32m/[m  
+[35m|[m[35m/[m[1;34m|[m [32m|[m [1;34m|[m [1;35m|[m [35m|[m [1;32m|[m [1;32m|[m   
+* [1;34m|[m [32m|[m [1;34m|[m [1;35m|[m [35m|[m [1;32m|[m [1;32m|[m   [33m0780059[m Merge pull request #66 from ssaavedraa/eli-detailartist
+[32m|[m[35m\[m [1;34m\[m [32m\[m [1;34m\[m [1;35m\[m [35m\[m [1;32m\[m [1;32m\[m  
+[32m|[m [35m|[m[32m_[m[1;34m|[m[32m/[m [1;34m/[m [1;35m/[m [35m/[m [1;32m/[m [1;32m/[m  
+[32m|[m[32m/[m[35m|[m [1;34m|[m [1;34m|[m [1;35m|[m [35m/[m [1;32m/[m [1;32m/[m   
+[32m|[m [35m|[m [1;34m|[m[35m_[m[1;34m|[m[35m_[m[1;35m|[m[35m/[m [1;32m/[m [1;32m/[m    
+[32m|[m [35m|[m[35m/[m[1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m     
+[32m|[m * [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   [33m45ce77c[m merge con development
+[32m|[m [33m|[m[32m\[m [1;34m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;32m\[m  
+[32m|[m [33m|[m[32m/[m [1;34m/[m [1;34m/[m [1;35m/[m [1;32m/[m [1;32m/[m  
+[32m|[m[32m/[m[33m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   
+* [33m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   [33m2923a80[m Merge pull request #62 from ssaavedraa/home
+[35m|[m[36m\[m [33m\[m [1;34m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;32m\[m  
+* [36m\[m [33m\[m [1;34m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;32m\[m   [33m940ea71[m Merge pull request #64 from ssaavedraa/brian-addjson
+[1;31m|[m[1;32m\[m [36m\[m [33m\[m [1;34m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;32m\[m  
+[1;31m|[m * [36m|[m [33m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m [33mb5f9f8f[m add user info to review
+[1;31m|[m * [36m|[m [33m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m [33me15c2d5[m fix mockData
+[1;31m|[m * [36m|[m [33m|[m [1;34m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m [33mbc4d487[m add purchases and reviews
+[1;31m|[m [1;34m|[m [36m|[m[1;34m_[m[33m|[m[1;34m/[m [1;34m/[m [1;35m/[m [1;32m/[m [1;32m/[m  
+[1;31m|[m [1;34m|[m[1;34m/[m[36m|[m [33m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   
+* [1;34m|[m [36m|[m [33m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   [33m6db9cc3[m Merge pull request #65 from ssaavedraa/nSanti-recommendedroute
+[1;34m|[m[1;34m\[m [1;34m\[m [36m\[m [33m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;32m\[m  
+[1;34m|[m [1;34m|[m[1;34m/[m [36m/[m [33m/[m [1;34m/[m [1;35m/[m [1;32m/[m [1;32m/[m  
+[1;34m|[m[1;34m/[m[1;34m|[m [36m|[m [33m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   
+[1;34m|[m * [36m|[m [33m|[m [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m [33m4be6598[m feat: new route get /painting/getrecommended
+[1;34m|[m[1;34m/[m [36m/[m [33m/[m [1;34m/[m [1;35m/[m [1;32m/[m [1;32m/[m  
+[1;34m|[m [36m|[m * [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m [33m2a2aa89[m reviews dinamicos
+[1;34m|[m [36m|[m * [1;34m|[m [1;35m|[m [1;32m|[m [1;32m|[m   [33mba255dd[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;34m|[m [36m|[m [1;35m|[m[1;32m\[m [1;34m\[m [1;35m\[m [1;32m\[m [1;32m\[m  
+[1;34m|[m [36m|[m [1;35m|[m [1;32m|[m [1;34m|[m[1;32m_[m[1;35m|[m[1;32m_[m[1;32m|[m[1;32m/[m  
+[1;34m|[m [36m|[m [1;35m|[m [1;32m|[m[1;32m/[m[1;34m|[m [1;35m|[m [1;32m|[m   
+[1;34m|[m [36m|[m * [1;32m|[m [1;34m|[m [1;35m|[m [1;32m|[m [33mc01a519[m arreglitos en estilo
+[1;34m|[m [36m|[m [1;36m|[m [1;32m|[m [1;34m|[m * [1;32m|[m [33m6072eda[m Se ajusta el tamaño del componente Gallery
+[1;34m|[m [36m|[m [1;36m|[m[36m_[m[1;32m|[m[36m_[m[1;34m|[m[36m/[m [1;32m/[m  
+[1;34m|[m [36m|[m[36m/[m[1;36m|[m [1;32m|[m [1;34m|[m [1;32m|[m   
+[1;34m|[m * [1;36m|[m [1;32m|[m [1;34m|[m [1;32m|[m   [33m7e6cea2[m Se corrije el diseño de Home y se le agregan medidas dinamicas
+[1;34m|[m [31m|[m[1;34m\[m [1;36m\[m [1;32m\[m [1;34m\[m [1;32m\[m  
+[1;34m|[m [31m|[m[1;34m/[m [1;36m/[m [1;32m/[m [1;34m/[m [1;32m/[m  
+[1;34m|[m[1;34m/[m[31m|[m [1;36m|[m [1;32m|[m [1;34m|[m [1;32m|[m   
+* [31m|[m [1;36m|[m [1;32m|[m [1;34m|[m [1;32m|[m   [33mae4cd26[m Merge pull request #61 from ssaavedraa/facu-review-route-fix
+[1;32m|[m[34m\[m [31m\[m [1;36m\[m [1;32m\[m [1;34m\[m [1;32m\[m  
+[1;32m|[m [34m|[m[1;32m_[m[31m|[m[1;32m_[m[1;36m|[m[1;32m/[m [1;34m/[m [1;32m/[m  
+[1;32m|[m[1;32m/[m[34m|[m [31m|[m [1;36m|[m [1;34m|[m [1;32m|[m   
+[1;32m|[m * [31m|[m [1;36m|[m [1;34m|[m [1;32m|[m [33mcfa339c[m review-route-fix
+[1;32m|[m[1;32m/[m [31m/[m [1;36m/[m [1;34m/[m [1;32m/[m  
+* [31m|[m [1;36m|[m [1;34m|[m [1;32m|[m   [33m9b2499c[m Merge pull request #60 from ssaavedraa/ssaavedraa
+[1;36m|[m[1;34m\[m [31m\[m [1;36m\[m [1;34m\[m [1;32m\[m  
+[1;36m|[m [1;34m|[m[1;36m_[m[31m|[m[1;36m/[m [1;34m/[m [1;32m/[m  
+[1;36m|[m[1;36m/[m[1;34m|[m [31m|[m [1;34m/[m [1;32m/[m   
+[1;36m|[m [1;34m|[m [31m|[m[1;34m/[m [1;32m/[m    
+[1;36m|[m [1;34m|[m[1;34m/[m[31m|[m [1;32m|[m     
+[1;36m|[m * [31m|[m [1;32m|[m   [33m56fea0e[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;36m|[m [1;31m|[m[1;36m\[m [31m\[m [1;32m\[m  
+[1;36m|[m [1;31m|[m[1;36m/[m [31m/[m [1;32m/[m  
+[1;36m|[m[1;36m/[m[1;31m|[m [31m|[m [1;32m|[m   
+* [1;31m|[m [31m|[m [1;32m|[m   [33m25edf05[m Merge pull request #59 from ssaavedraa/nSanti-getPaintingAction
+[1;32m|[m[1;34m\[m [1;31m\[m [31m\[m [1;32m\[m  
+[1;32m|[m [1;34m|[m[1;32m_[m[1;31m|[m[1;32m_[m[31m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[1;34m|[m [1;31m|[m [31m|[m   
+[1;32m|[m * [1;31m|[m [31m|[m [33m9bad9f9[m refactor:getPainting action
+[1;32m|[m[1;32m/[m [1;31m/[m [31m/[m  
+[1;32m|[m * [31m|[m [33md973413[m development branch update
+[1;32m|[m * [31m|[m   [33md75e26c[m Merge branch 'ssaavedraa' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [1;35m|[m[1;36m\[m [31m\[m  
+[1;32m|[m [1;35m|[m * [31m|[m [33me7e0f8a[m Update App.js
+[1;32m|[m * [1;36m|[m [31m|[m   [33me5985d9[m login footer fix
+[1;32m|[m [31m|[m[1;32m\[m [1;36m\[m [31m\[m  
+[1;32m|[m [31m|[m[1;32m/[m [1;36m/[m [31m/[m  
+[1;32m|[m[1;32m/[m[31m|[m [1;36m|[m [31m|[m   
+* [31m|[m [1;36m|[m [31m|[m   [33mf605eba[m Merge pull request #58 from ssaavedraa/nsanti-frontendfix
+[33m|[m[34m\[m [31m\[m [1;36m\[m [31m\[m  
+[33m|[m * [31m|[m [1;36m|[m [31m|[m [33m2868899[m images and navLink fix
+[33m|[m[33m/[m [31m/[m [1;36m/[m [31m/[m  
+* [31m|[m [1;36m|[m [31m|[m   [33mc3170d9[m Merge pull request #57 from ssaavedraa/eli-detailartist
+[35m|[m[36m\[m [31m\[m [1;36m\[m [31m\[m  
+[35m|[m * [31m|[m [1;36m|[m [31m|[m [33m25b3b73[m arreglos en front
+[35m|[m * [31m|[m [1;36m|[m [31m|[m   [33m3621c9d[m resolucion conflictos ramas
+[35m|[m [1;31m|[m[1;32m\[m [31m\[m [1;36m\[m [31m\[m  
+[35m|[m * [1;32m|[m [31m|[m [1;36m|[m [31m|[m [33mc641a5b[m merge
+[35m|[m * [1;32m|[m [31m|[m [1;36m|[m [31m|[m   [33mc70834a[m merge con development
+[35m|[m [1;33m|[m[1;34m\[m [1;32m\[m [31m\[m [1;36m\[m [31m\[m  
+[35m|[m * [1;34m|[m [1;32m|[m [31m|[m [1;36m|[m [31m|[m [33m82a8fd2[m algunos cambios
+* [1;34m|[m [1;34m|[m [1;32m|[m [31m|[m [1;36m|[m [31m|[m   [33m9008757[m Merge pull request #56 from ssaavedraa/facu-backend
+[1;35m|[m[1;36m\[m [1;34m\[m [1;34m\[m [1;32m\[m [31m\[m [1;36m\[m [31m\[m  
+[1;35m|[m * [1;34m|[m [1;34m|[m [1;32m|[m [31m|[m [1;36m|[m [31m|[m [33mf009d24[m painting and artist routes fix
+* [1;36m|[m [1;34m|[m [1;34m|[m [1;32m|[m [31m|[m [1;36m|[m [31m|[m   [33mafb94b2[m Merge pull request #52 from ssaavedraa/quickfix-paintingphotos
+[31m|[m[32m\[m [1;36m\[m [1;34m\[m [1;34m\[m [1;32m\[m [31m\[m [1;36m\[m [31m\[m  
+[31m|[m * [1;36m|[m [1;34m|[m [1;34m|[m [1;32m|[m [31m|[m [1;36m|[m [31m|[m [33m0c56251[m added photos url on response
+[31m|[m [1;36m|[m[1;36m/[m [1;34m/[m [1;34m/[m [1;32m/[m [31m/[m [1;36m/[m [31m/[m  
+* [1;36m|[m [1;34m|[m [1;34m|[m [1;32m|[m [31m|[m [1;36m|[m [31m|[m   [33m47f2831[m Merge pull request #54 from ssaavedraa/brian-reviewfix
+[1;32m|[m[34m\[m [1;36m\[m [1;34m\[m [1;34m\[m [1;32m\[m [31m\[m [1;36m\[m [31m\[m  
+[1;32m|[m [34m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;34m|[m[1;32m/[m [31m/[m [1;36m/[m [31m/[m  
+[1;32m|[m[1;32m/[m[34m|[m [1;36m|[m [1;34m|[m [1;34m|[m [31m|[m [1;36m|[m [31m|[m   
+[1;32m|[m * [1;36m|[m [1;34m|[m [1;34m|[m [31m|[m [1;36m|[m [31m|[m [33m86bf7c1[m fix res.json technique remove
+[1;32m|[m * [1;36m|[m [1;34m|[m [1;34m|[m [31m|[m [1;36m|[m [31m|[m [33mac740d8[m fix getById Review
+[1;32m|[m [34m|[m [1;36m|[m [1;34m|[m [1;34m|[m * [1;36m|[m [31m|[m [33mc49516d[m login footer fix
+[1;32m|[m [34m|[m [1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m[1;36m/[m [31m/[m  
+[1;32m|[m [34m|[m [1;36m|[m [1;34m|[m [1;34m|[m * [31m|[m   [33m25399f0[m branch update
+[1;32m|[m [34m|[m [1;36m|[m [1;34m|[m [1;34m|[m [35m|[m[1;32m\[m [31m\[m  
+[1;32m|[m [34m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;34m|[m[1;32m_[m[35m|[m[1;32m/[m [31m/[m  
+[1;32m|[m[1;32m/[m[34m|[m [1;36m|[m [1;34m|[m [1;34m|[m [35m|[m [31m|[m   
+* [34m|[m [1;36m|[m [1;34m|[m [1;34m|[m [35m|[m [31m|[m   [33m56c0f84[m Merge pull request #51 from ssaavedraa/detailObra
+[1;34m|[m[1;32m\[m [34m\[m [1;36m\[m [1;34m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m [1;32m|[m[1;34m_[m[34m|[m[1;34m_[m[1;36m|[m[1;34m_[m[1;34m|[m[1;34m/[m [35m/[m [31m/[m  
+[1;34m|[m[1;34m/[m[1;32m|[m [34m|[m [1;36m|[m [1;34m|[m [35m|[m [31m|[m   
+[1;34m|[m * [34m|[m [1;36m|[m [1;34m|[m [35m|[m [31m|[m   [33m885fe1a[m Merge branch 'development' into detailObra
+[1;34m|[m [1;33m|[m[1;34m\[m [34m\[m [1;36m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m [1;33m|[m[1;34m/[m [34m/[m [1;36m/[m [1;34m/[m [35m/[m [31m/[m  
+[1;34m|[m[1;34m/[m[1;33m|[m [34m|[m [1;36m|[m [1;34m|[m [35m|[m [31m|[m   
+[1;34m|[m * [34m|[m [1;36m|[m [1;34m|[m [35m|[m [31m|[m   [33mefe7ac3[m cambios n
+[1;34m|[m [1;35m|[m[1;36m\[m [34m\[m [1;36m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m [1;35m|[m [1;36m|[m [34m|[m[1;36m/[m [1;34m/[m [35m/[m [31m/[m  
+[1;34m|[m [1;35m|[m [1;36m|[m[1;36m/[m[34m|[m [1;34m|[m [35m|[m [31m|[m   
+[1;34m|[m * [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m   [33ma43b972[m Merge branch 'detailObra' of https://github.com/ssaavedraa/PG-Henry into prueba
+[1;34m|[m [31m|[m[32m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m [31m|[m * [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m [33mfc54fc3[m Delete cambios.jsx
+[1;34m|[m * [32m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m [33m9503939[m cambios
+[1;34m|[m * [32m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m   [33m1343a69[m modificando
+[1;34m|[m [33m|[m[34m\[m [32m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m * [34m\[m [32m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m   [33me203c5a[m commit
+[1;34m|[m [35m|[m[36m\[m [34m\[m [32m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m * [36m\[m [34m\[m [32m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m   [33m59796ab[m m
+[1;34m|[m [1;31m|[m[1;32m\[m [36m\[m [34m\[m [32m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m * [1;32m|[m [36m|[m [34m|[m [32m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m [33m53d792e[m cambios
+[1;34m|[m [32m|[m [1;32m|[m[32m_[m[36m|[m[32m_[m[34m|[m[32m/[m [1;36m/[m [34m/[m [1;34m/[m [35m/[m [31m/[m  
+[1;34m|[m [32m|[m[32m/[m[1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m   
+[1;34m|[m * [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m [33mb4a5c27[m guardando
+[1;34m|[m * [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m   [33m43129b6[m css detailArt
+[1;34m|[m [1;33m|[m[1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;36m\[m [34m\[m [1;34m\[m [35m\[m [31m\[m  
+[1;34m|[m * [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [35m|[m [31m|[m [33m96ec009[m css
+[1;34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m * [31m|[m   [33m83406ab[m branch update
+[1;34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [1;35m|[m[1;34m\[m [31m\[m  
+[1;34m|[m [1;34m|[m[1;34m_[m[1;34m|[m[1;34m_[m[1;32m|[m[1;34m_[m[36m|[m[1;34m_[m[34m|[m[1;34m_[m[1;36m|[m[1;34m_[m[34m|[m[1;34m_[m[1;34m|[m[1;34m_[m[1;35m|[m[1;34m/[m [31m/[m  
+[1;34m|[m[1;34m/[m[1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m   
+* [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;36m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m   [33mf9cac3f[m Merge pull request #50 from ssaavedraa/yessy
+[1;36m|[m[32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [1;36m\[m [34m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[1;36m|[m [32m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;34m|[m[1;36m_[m[1;32m|[m[1;36m_[m[36m|[m[1;36m_[m[34m|[m[1;36m/[m [34m/[m [1;34m/[m [1;35m/[m [31m/[m  
+[1;36m|[m[1;36m/[m[32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m   
+[1;36m|[m * [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m   [33mb86a27e[m ultimo
+[1;36m|[m [33m|[m[34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [34m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[1;36m|[m * [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m [33m4b685b8[m new
+[1;36m|[m * [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m [33m41c9e5f[m contact
+[1;36m|[m * [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m   [33m3982bff[m ok
+[1;36m|[m [35m|[m[34m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m [34m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[1;36m|[m [35m|[m [34m|[m [34m|[m[34m_[m[1;34m|[m[34m_[m[1;34m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m/[m [34m/[m [1;34m/[m [1;35m/[m [31m/[m  
+[1;36m|[m [35m|[m [34m|[m[34m/[m[34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m   
+[1;36m|[m * [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [1;34m|[m [1;35m|[m [31m|[m [33m70c0b59[m addart additems underconstruction ok
+[1;36m|[m [34m|[m [34m|[m[34m_[m[34m|[m[34m_[m[1;34m|[m[34m_[m[1;34m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m/[m [1;34m/[m [1;35m/[m [31m/[m  
+[1;36m|[m [34m|[m[34m/[m[34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   
+* [34m|[m [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   [33mae1572a[m Merge pull request #47 from ssaavedraa/nSantiago-getByArtist
+[1;31m|[m[1;32m\[m [34m\[m [34m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[1;31m|[m * [34m|[m [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m [33mf6b2767[m fix:response data on /review/getByArtist route
+* [1;32m|[m [34m|[m [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   [33med46887[m Merge pull request #46 from ssaavedraa/facu-route-update
+[34m|[m[1;34m\[m [1;32m\[m [34m\[m [34m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[34m|[m [1;34m|[m[34m_[m[1;32m|[m[34m_[m[34m|[m[34m_[m[34m|[m[34m/[m [1;34m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;35m/[m [31m/[m  
+[34m|[m[34m/[m[1;34m|[m [1;32m|[m [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   
+[34m|[m * [1;32m|[m [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   [33m03228e0[m Merge branch 'facu-route-update' of https://github.com/ssaavedraa/PG-Henry into facu-route-update
+[34m|[m [1;35m|[m[1;36m\[m [1;32m\[m [34m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[34m|[m [1;35m|[m * [1;32m\[m [34m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;35m\[m [31m\[m   [33md7a653d[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #28 from ssaavedraa/home
+[34m|[m [1;35m|[m [31m|[m[32m\[m [1;32m\[m [34m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[34m|[m * [31m|[m [32m|[m [1;32m|[m [34m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m [33m4185cd0[m artist and painting update routes
+[34m|[m [34m|[m [31m|[m[34m_[m[32m|[m[34m_[m[1;32m|[m[34m/[m [34m/[m [1;34m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;35m/[m [31m/[m  
+[34m|[m [34m|[m[34m/[m[31m|[m [32m|[m [1;32m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   
+* [34m|[m [31m|[m [32m|[m [1;32m|[m [34m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   [33m17afca5[m Merge pull request #49 from ssaavedraa/home
+[34m|[m[34m\[m [34m\[m [31m\[m [32m\[m [1;32m\[m [34m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [1;35m\[m [31m\[m  
+[34m|[m [34m|[m[34m_[m[34m|[m[34m_[m[31m|[m[34m_[m[32m|[m[34m_[m[1;32m|[m[34m/[m [1;34m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [1;35m/[m [31m/[m  
+[34m|[m[34m/[m[34m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [1;35m|[m [31m|[m   
+[34m|[m [34m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m * [31m|[m [33m76607ab[m artist card visualization fixed
+[34m|[m [34m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m * [33mefdc9cf[m Cambios en App
+[34m|[m [34m|[m [34m|[m[34m_[m[31m|[m[34m_[m[32m|[m[34m_[m[1;32m|[m[34m_[m[1;34m|[m[34m_[m[1;34m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m_[m[1;34m|[m[34m_[m[34m|[m[34m/[m  
+[34m|[m [34m|[m[34m/[m[34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m   
+[34m|[m * [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m [33m035d0df[m Se modifican los estilos de los links y se agrega parte del enrutamiento
+[34m|[m * [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m [33mfb0c637[m Se corrige diseño y se agrega ordenamiento
+[34m|[m * [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m [33mfcf483b[m Se agrega el componente Paginacion funcional
+[34m|[m * [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m [33m1add932[m Se agrega el componente CardsPaints que renderiza cada card de Paint
+[34m|[m * [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m   [33mb1f3e81[m Se Ajustan los errores en App.js
+[34m|[m [35m|[m[34m\[m [34m\[m [31m\[m [32m\[m [1;32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [34m\[m  
+[34m|[m [35m|[m[34m/[m [34m/[m [31m/[m [32m/[m [1;32m/[m [1;34m/[m [1;34m/[m [1;32m/[m [36m/[m [1;34m/[m [34m/[m  
+[34m|[m[34m/[m[35m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m   
+* [35m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [1;34m|[m [34m|[m   [33mc1bf7f9[m Merge pull request #48 from ssaavedraa/eli-detailartist
+[1;31m|[m[1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [1;34m\[m [34m\[m  
+[1;31m|[m [1;34m|[m [35m|[m[1;34m_[m[34m|[m[1;34m_[m[31m|[m[1;34m_[m[32m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;34m|[m[1;34m_[m[1;34m|[m[1;34m_[m[1;32m|[m[1;34m_[m[36m|[m[1;34m/[m [34m/[m  
+[1;31m|[m [1;34m|[m[1;34m/[m[35m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m   
+[1;31m|[m * [35m|[m [34m|[m [31m|[m [32m|[m [1;32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m   [33m6940153[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[1;31m|[m [1;33m|[m[1;32m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m  
+[1;31m|[m [1;33m|[m [1;32m|[m [35m|[m[1;32m_[m[34m|[m[1;32m_[m[31m|[m[1;32m_[m[32m|[m[1;32m/[m [1;34m/[m [1;34m/[m [1;32m/[m [36m/[m [34m/[m  
+[1;31m|[m [1;33m|[m [1;32m|[m[1;32m/[m[35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m   
+[1;31m|[m * [1;32m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m [33m0c2abee[m footer, redux, y logo en nav
+* [1;34m|[m [1;32m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m|[m   [33m8800e6a[m Merge pull request #43 from ssaavedraa/ssaavedraa
+[1;32m|[m[34m\[m [1;34m\[m [1;32m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m [34m\[m  
+[1;32m|[m [34m|[m[1;32m_[m[1;34m|[m[1;32m/[m [35m/[m [34m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m [1;32m/[m [36m/[m [34m/[m  
+[1;32m|[m[1;32m/[m[34m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [34m/[m   
+[1;32m|[m [34m|[m [1;34m|[m[34m_[m[35m|[m[34m_[m[34m|[m[34m_[m[31m|[m[34m_[m[32m|[m[34m_[m[1;34m|[m[34m_[m[1;34m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m/[m    
+[1;32m|[m [34m|[m[34m/[m[1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m     
+[1;32m|[m * [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m   [33m9683d68[m added users.json
+[1;32m|[m [31m|[m[32m\[m [1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m  
+[1;32m|[m * [32m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m [33m6ff1369[m test
+[1;32m|[m * [32m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m [36m|[m   [33m458d935[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [33m|[m[36m\[m [32m\[m [1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m [1;32m\[m [36m\[m  
+[1;32m|[m [33m|[m [36m|[m [32m|[m[36m_[m[1;34m|[m[36m_[m[35m|[m[36m_[m[34m|[m[36m_[m[31m|[m[36m_[m[32m|[m[36m_[m[1;34m|[m[36m_[m[1;34m|[m[36m_[m[1;32m|[m[36m/[m  
+[1;32m|[m [33m|[m [36m|[m[36m/[m[32m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m   
+[1;32m|[m * [36m|[m [32m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [1;32m|[m   [33mbefdb9e[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [35m|[m[1;32m\[m [36m\[m [32m\[m [1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m [1;32m\[m  
+[1;32m|[m [35m|[m [1;32m|[m [36m|[m[1;32m_[m[32m|[m[1;32m_[m[1;34m|[m[1;32m_[m[35m|[m[1;32m_[m[34m|[m[1;32m_[m[31m|[m[1;32m_[m[32m|[m[1;32m_[m[1;34m|[m[1;32m_[m[1;34m|[m[1;32m/[m  
+[1;32m|[m [35m|[m [1;32m|[m[1;32m/[m[36m|[m [32m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+[1;32m|[m * [1;32m|[m [36m|[m [32m|[m [1;34m|[m [35m|[m [34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33m27d60ac[m Merge branch 'development' of github.com:ssaavedraa/PG-Henry into ssaavedraa
+[1;32m|[m [1;31m|[m[1;32m\[m [1;32m\[m [36m\[m [32m\[m [1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+* [1;31m|[m [1;32m\[m [1;32m\[m [36m\[m [32m\[m [1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m   [33mea76a4f[m Merge pull request #45 from ssaavedraa/endpoints_reference
+[34m|[m[1;34m\[m [1;31m\[m [1;32m\[m [1;32m\[m [36m\[m [32m\[m [1;34m\[m [35m\[m [34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[34m|[m [1;34m|[m[34m_[m[1;31m|[m[34m_[m[1;32m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m_[m[32m|[m[34m_[m[1;34m|[m[34m_[m[35m|[m[34m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[34m|[m[34m/[m[1;34m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [32m|[m [1;34m|[m [35m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+[34m|[m * [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [32m|[m [1;34m|[m [35m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [33m5c5d582[m endpoints reference files
+[34m|[m[34m/[m [1;31m/[m [1;32m/[m [1;32m/[m [36m/[m [32m/[m [1;34m/[m [35m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[34m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [32m|[m [1;34m|[m * [31m/[m [32m/[m [1;34m/[m [1;34m/[m [33m40e93c2[m Se agrega el componente Filter con Galleria
+[34m|[m [1;31m|[m[34m_[m[1;32m|[m[34m_[m[1;32m|[m[34m_[m[36m|[m[34m_[m[32m|[m[34m_[m[1;34m|[m[34m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[34m|[m[34m/[m[1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [32m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+* [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [32m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33m3b8ca01[m Merge pull request #42 from ssaavedraa/brian-new
+[32m|[m[1;36m\[m [1;31m\[m [1;32m\[m [1;32m\[m [36m\[m [32m\[m [1;34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[32m|[m [1;36m|[m[32m_[m[1;31m|[m[32m_[m[1;32m|[m[32m_[m[1;32m|[m[32m_[m[36m|[m[32m/[m [1;34m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[32m|[m[32m/[m[1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+[32m|[m * [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [33m47fb2c4[m fix review route
+[32m|[m * [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [33md310540[m remove update review routes
+* [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [36m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33mf656691[m Merge pull request #41 from ssaavedraa/eli-detailartist
+[36m|[m[32m\[m [1;36m\[m [1;31m\[m [1;32m\[m [1;32m\[m [36m\[m [1;34m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[36m|[m [32m|[m[36m_[m[1;36m|[m[36m_[m[1;31m|[m[36m_[m[1;32m|[m[36m_[m[1;32m|[m[36m/[m [1;34m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[36m|[m[36m/[m[32m|[m [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+[36m|[m * [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [1;34m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [33m186460a[m Update .env.sample
+[36m|[m [1;34m|[m [1;36m|[m[1;34m_[m[1;31m|[m[1;34m_[m[1;32m|[m[1;34m_[m[1;32m|[m[1;34m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[36m|[m [1;34m|[m[1;34m/[m[1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+[36m|[m * [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m [33m292855c[m errores corregidos
+[36m|[m * [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33m67b3501[m merge con development
+[36m|[m [33m|[m[36m\[m [1;36m\[m [1;31m\[m [1;32m\[m [1;32m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[36m|[m [33m|[m[36m/[m [1;36m/[m [1;31m/[m [1;32m/[m [1;32m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[36m|[m[36m/[m[33m|[m [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+* [33m|[m [1;36m|[m [1;31m|[m [1;32m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33m77d17e4[m Merge pull request #40 from ssaavedraa/yessy
+[1;32m|[m[36m\[m [33m\[m [1;36m\[m [1;31m\[m [1;32m\[m [1;32m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[1;32m|[m [36m|[m[1;32m_[m[33m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;31m|[m[1;32m_[m[1;32m|[m[1;32m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[36m|[m [33m|[m [1;36m|[m [1;31m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+[1;32m|[m * [33m|[m [1;36m|[m [1;31m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33m8861be8[m hola
+[1;32m|[m [1;31m|[m[1;32m\[m [33m\[m [1;36m\[m [1;31m\[m [1;32m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[1;32m|[m [1;31m|[m[1;32m/[m [33m/[m [1;36m/[m [1;31m/[m [1;32m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[1;31m|[m [33m|[m [1;36m|[m [1;31m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   
+* [1;31m|[m [33m|[m [1;36m|[m [1;31m|[m [1;32m|[m [31m|[m [32m|[m [1;34m|[m [1;34m|[m   [33m8468e7f[m Merge pull request #39 from ssaavedraa/home
+[1;33m|[m[1;34m\[m [1;31m\[m [33m\[m [1;36m\[m [1;31m\[m [1;32m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[1;33m|[m * [1;31m\[m [33m\[m [1;36m\[m [1;31m\[m [1;32m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m   [33ma40708d[m Se agregan ajustes
+[1;33m|[m [32m|[m[1;32m\[m [1;31m\[m [33m\[m [1;36m\[m [1;31m\[m [1;32m\[m [31m\[m [32m\[m [1;34m\[m [1;34m\[m  
+[1;33m|[m [32m|[m [1;32m|[m [1;31m|[m[1;32m_[m[33m|[m[1;32m_[m[1;36m|[m[1;32m_[m[1;31m|[m[1;32m/[m [31m/[m [32m/[m [1;34m/[m [1;34m/[m  
+[1;33m|[m [32m|[m [1;32m|[m[1;32m/[m[1;31m|[m [33m|[m [1;36m|[m [1;31m|[m [31m|[m [32m/[m [1;34m/[m [1;34m/[m   
+[1;33m|[m [32m|[m [1;32m|[m[32m_[m[1;31m|[m[32m_[m[33m|[m[32m_[m[1;36m|[m[32m_[m[1;31m|[m[32m_[m[31m|[m[32m/[m [1;34m/[m [1;34m/[m    
+[1;33m|[m [32m|[m[32m/[m[1;32m|[m [1;31m|[m [33m|[m [1;36m|[m [1;31m|[m [31m|[m [1;34m|[m [1;34m|[m     
+[1;33m|[m * [1;32m|[m [1;31m|[m [33m|[m [1;36m|[m [1;31m|[m [31m|[m [1;34m|[m [1;34m|[m [33m5e5725a[m Se agrega el componente Home y CardHome
+* [1;36m|[m [1;32m|[m [1;31m|[m [33m|[m [1;36m|[m [1;31m|[m [31m|[m [1;34m|[m [1;34m|[m   [33m99a0287[m Merge pull request #38 from ssaavedraa/ssaavedraa
+[1;32m|[m[1;31m\[m [1;36m\[m [1;32m\[m [1;31m\[m [33m\[m [1;36m\[m [1;31m\[m [31m\[m [1;34m\[m [1;34m\[m  
+[1;32m|[m [1;31m|[m[1;32m_[m[1;36m|[m[1;32m/[m [1;31m/[m [33m/[m [1;36m/[m [1;31m/[m [31m/[m [1;34m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[1;31m|[m [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [1;31m/[m [31m/[m [1;34m/[m [1;34m/[m   
+[1;32m|[m [1;31m|[m [1;36m|[m[1;31m_[m[1;31m|[m[1;31m_[m[33m|[m[1;31m_[m[1;36m|[m[1;31m/[m [31m/[m [1;34m/[m [1;34m/[m    
+[1;32m|[m [1;31m|[m[1;31m/[m[1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m     
+[1;32m|[m * [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33m8e76e9a[m Login component and localStorage user
+* [32m|[m [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m   [33meb9f880[m Merge pull request #37 from ssaavedraa/nSantiago-artistRouteFix
+[33m|[m[34m\[m [32m\[m [1;36m\[m [1;31m\[m [33m\[m [1;36m\[m [31m\[m [1;34m\[m [1;34m\[m  
+[33m|[m * [32m|[m [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33m1bb2286[m fix: removed unnecessary response info
+[33m|[m * [32m|[m [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33m3724e20[m fix: Added location attribute
+[33m|[m * [32m|[m [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33m9d267a0[m fix: Added location attribute to Artist model
+[33m|[m * [32m|[m [1;36m|[m [1;31m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33m7285ae2[m deleted: artistas.json is not used
+[33m|[m[33m/[m [32m/[m [1;36m/[m [1;31m/[m [33m/[m [1;36m/[m [31m/[m [1;34m/[m [1;34m/[m  
+[33m|[m [32m|[m [1;36m|[m * [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33m73937cb[m css y logo
+[33m|[m [32m|[m [1;36m|[m * [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m [33mab6c04d[m logo up
+[33m|[m [32m|[m [1;36m|[m * [33m|[m [1;36m|[m [31m|[m [1;34m|[m [1;34m|[m   [33mf54f676[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into yessy
+[33m|[m [32m|[m [1;36m|[m [35m|[m[1;34m\[m [33m\[m [1;36m\[m [31m\[m [1;34m\[m [1;34m\[m  
+[33m|[m [32m|[m [1;36m|[m [35m|[m [1;34m|[m [33m|[m[1;34m_[m[1;36m|[m[1;34m_[m[31m|[m[1;34m_[m[1;34m|[m[1;34m/[m  
+[33m|[m [32m|[m [1;36m|[m [35m|[m [1;34m|[m[1;34m/[m[33m|[m [1;36m|[m [31m|[m [1;34m|[m   
+[33m|[m [32m|[m [1;36m|[m * [1;34m|[m [33m|[m [1;36m|[m [31m|[m [1;34m|[m [33m22ce697[m ultimo
+[33m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m * [1;36m|[m [31m|[m [1;34m|[m [33m3cb000a[m dinamico en artist
+[33m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m * [1;36m|[m [31m|[m [1;34m|[m   [33m6bb3268[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[33m|[m [32m|[m [1;36m|[m [36m|[m [1;34m|[m [1;31m|[m[33m\[m [1;36m\[m [31m\[m [1;34m\[m  
+[33m|[m [32m|[m[33m_[m[1;36m|[m[33m_[m[36m|[m[33m_[m[1;34m|[m[33m_[m[1;31m|[m[33m/[m [1;36m/[m [31m/[m [1;34m/[m  
+[33m|[m[33m/[m[32m|[m [1;36m|[m [36m|[m [1;34m|[m [1;31m|[m [1;36m|[m [31m|[m [1;34m|[m   
+* [32m|[m [1;36m|[m [36m|[m [1;34m|[m [1;31m|[m [1;36m|[m [31m|[m [1;34m|[m [33m3a21af9[m Merge pull request #35 from ssaavedraa/ssaavedraa
+[1;34m|[m[32m\[m[32m|[m [1;36m|[m [36m|[m [1;34m|[m [1;31m|[m [1;36m|[m [31m|[m [1;34m|[m 
+[1;34m|[m [32m|[m[1;34m_[m[1;36m|[m[1;34m_[m[36m|[m[1;34m/[m [1;31m/[m [1;36m/[m [31m/[m [1;34m/[m  
+[1;34m|[m[1;34m/[m[32m|[m [1;36m|[m [36m|[m [1;31m|[m [1;36m|[m [31m|[m [1;34m|[m   
+[1;34m|[m * [1;36m|[m [36m|[m [1;31m|[m [1;36m|[m [31m|[m [1;34m|[m [33m48ea7a3[m added dynamic content DetailArtist component
+[1;34m|[m [1;34m|[m [1;36m|[m [36m|[m * [1;36m|[m [31m|[m [1;34m|[m   [33mcf6cd33[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry
+[1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [1;35m|[m[1;34m\[m [1;36m\[m [31m\[m [1;34m\[m  
+[1;34m|[m [1;34m|[m[1;34m_[m[1;36m|[m[1;34m_[m[36m|[m[1;34m_[m[1;35m|[m[1;34m/[m [1;36m/[m [31m/[m [1;34m/[m  
+[1;34m|[m[1;34m/[m[1;34m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m   
+* [1;34m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m [33m6d70188[m Merge pull request #33 from ssaavedraa/ssaavedraa
+[31m|[m[1;34m\[m[1;34m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m 
+[31m|[m * [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m [33m8b96818[m added routes /artists and /artists/:id
+[31m|[m * [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m   [33me0279e5[m conflicts fixed
+[31m|[m [33m|[m[34m\[m [1;36m\[m [36m\[m [1;35m\[m [1;36m\[m [31m\[m [1;34m\[m  
+[31m|[m * [34m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m [33m656e593[m Artist componente sorting added
+[31m|[m * [34m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m [33mf01c581[m Artist cards fixing
+[31m|[m * [34m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m [33m6e896fb[m Artist cards and Artist component added
+[31m|[m [1;36m|[m [34m|[m[1;36m/[m [36m/[m [1;35m/[m [1;36m/[m [31m/[m [1;34m/[m  
+[31m|[m [1;36m|[m[1;36m/[m[34m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m   
+* [1;36m|[m [34m|[m [36m|[m [1;35m|[m [1;36m|[m [31m|[m [1;34m|[m   [33meb39ba6[m Merge pull request #32 from ssaavedraa/brian-new
+[34m|[m[1;36m\[m [1;36m\[m [34m\[m [36m\[m [1;35m\[m [1;36m\[m [31m\[m [1;34m\[m  
+[34m|[m [1;36m|[m[34m_[m[1;36m|[m[34m/[m [36m/[m [1;35m/[m [1;36m/[m [31m/[m [1;34m/[m  
+[34m|[m[34m/[m[1;36m|[m [1;36m|[m [36m|[m [1;35m|[m [1;36m/[m [31m/[m [1;34m/[m   
+[34m|[m [1;36m|[m [1;36m|[m[1;36m_[m[36m|[m[1;36m_[m[1;35m|[m[1;36m/[m [31m/[m [1;34m/[m    
+[34m|[m [1;36m|[m[1;36m/[m[1;36m|[m [36m|[m [1;35m|[m [31m|[m [1;34m|[m     
+[34m|[m * [1;36m|[m [36m|[m [1;35m|[m [31m|[m [1;34m|[m [33m01d2e08[m delete console.log
+[34m|[m * [1;36m|[m [36m|[m [1;35m|[m [31m|[m [1;34m|[m [33m5e434d6[m[33m ([m[1;31morigin/brian-new[m[33m)[m finish review routing
+* [36m|[m [1;36m|[m [36m|[m [1;35m|[m [31m|[m [1;34m|[m   [33m56a9905[m Merge pull request #30 from ssaavedraa/FrontDev
+[1;31m|[m[36m\[m [36m\[m [1;36m\[m [36m\[m [1;35m\[m [31m\[m [1;34m\[m  
+[1;31m|[m [36m|[m [36m|[m[36m_[m[1;36m|[m[36m/[m [1;35m/[m [31m/[m [1;34m/[m  
+[1;31m|[m [36m|[m[36m/[m[36m|[m [1;36m|[m [1;35m|[m [31m|[m [1;34m|[m   
+* [36m|[m [36m|[m [1;36m|[m [1;35m|[m [31m|[m [1;34m|[m   [33m301187c[m Merge pull request #29 from ssaavedraa/eli-detailartist
+[1;33m|[m[1;34m\[m [36m\[m [36m\[m [1;36m\[m [1;35m\[m [31m\[m [1;34m\[m  
+* [1;34m\[m [36m\[m [36m\[m [1;36m\[m [1;35m\[m [31m\[m [1;34m\[m   [33m2fef98d[m Merge pull request #26 from ssaavedraa/nSantiago-quickfix
+[1;35m|[m[1;36m\[m [1;34m\[m [36m\[m [36m\[m [1;36m\[m [1;35m\[m [31m\[m [1;34m\[m  
+[1;35m|[m * [1;34m|[m [36m|[m [36m|[m [1;36m|[m [1;35m|[m [31m|[m [1;34m|[m [33m70bc712[m fix: /painting/search route now works with orientation being virtual
+[1;35m|[m[1;35m/[m [1;34m/[m [36m/[m [36m/[m [1;36m/[m [1;35m/[m [31m/[m [1;34m/[m  
+[1;35m|[m [1;34m|[m [36m|[m [36m|[m [1;36m|[m * [31m|[m [1;34m|[m   [33m26d368e[m Merge branch 'FrontDev' of https://github.com/ssaavedraa/PG-Henry
+[1;35m|[m [1;34m|[m [36m|[m [36m|[m [1;36m|[m [31m|[m[36m\[m [31m\[m [1;34m\[m  
+[1;35m|[m [1;34m|[m [36m|[m [36m|[m[36m_[m[1;36m|[m[36m_[m[31m|[m[36m/[m [31m/[m [1;34m/[m  
+[1;35m|[m [1;34m|[m [36m|[m[36m/[m[36m|[m [1;36m|[m [31m|[m [31m|[m [1;34m|[m   
+[1;35m|[m [1;34m|[m * [36m|[m [1;36m|[m [31m|[m [31m|[m [1;34m|[m   [33m0d25605[m[33m ([m[1;31morigin/FrontDev[m[33m)[m Merge pull request #22 from ssaavedraa/detailObra
+[1;35m|[m [1;34m|[m [1;36m|[m[1;34m\[m [36m\[m [1;36m\[m [31m\[m [31m\[m [1;34m\[m  
+[1;35m|[m [1;34m|[m [1;36m|[m [1;34m|[m[1;36m_[m[36m|[m[1;36m/[m [31m/[m [31m/[m [1;34m/[m  
+[1;35m|[m [1;34m|[m [1;36m|[m[1;36m/[m[1;34m|[m [36m|[m [31m|[m [31m|[m [1;34m/[m   
+[1;35m|[m [1;34m|[m [1;36m|[m [1;34m|[m [36m|[m[1;34m_[m[31m|[m[1;34m_[m[31m|[m[1;34m/[m    
+[1;35m|[m [1;34m|[m [1;36m|[m [1;34m|[m[1;34m/[m[36m|[m [31m|[m [31m|[m     
+[1;35m|[m [1;34m|[m [1;36m|[m * [36m|[m [31m|[m [31m|[m   [33m491533c[m c
+[1;35m|[m [1;34m|[m [1;36m|[m [35m|[m[1;36m\[m [36m\[m [31m\[m [31m\[m  
+[1;35m|[m [1;34m|[m [1;36m|[m [35m|[m[1;36m/[m [36m/[m [31m/[m [31m/[m  
+[1;35m|[m [1;34m|[m [1;36m|[m[1;36m/[m[35m|[m [36m|[m [31m|[m [31m|[m   
+[1;35m|[m [1;34m|[m [1;36m|[m * [36m|[m [31m|[m [31m|[m [33m5f29026[m c
+[1;35m|[m [1;34m|[m [1;36m|[m * [36m|[m [31m|[m [31m|[m [33mb9c12cc[m commit
+[1;35m|[m [1;34m|[m [1;36m|[m * [36m|[m [31m|[m [31m|[m [33m4a3ccf1[m Commit detailObra
+[1;35m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m * [31m|[m [33m2c002d2[m agrega artists, paintings al json del back
+[1;35m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m * [31m|[m [33mde9a219[m Merge branch 'development' of https://github.com/ssaavedraa/PG-Henry
+[1;35m|[m [1;34m|[m [1;36m|[m[1;34m_[m[36m|[m[1;34m_[m[36m|[m[1;34m/[m[1;35m|[m [31m|[m 
+[1;35m|[m [1;34m|[m[1;34m/[m[1;36m|[m [36m|[m [36m|[m[1;35m/[m [31m/[m  
+[1;35m|[m [1;34m|[m[1;35m_[m[1;36m|[m[1;35m_[m[36m|[m[1;35m/[m[36m|[m [31m|[m   
+[1;35m|[m[1;35m/[m[1;34m|[m [1;36m|[m [36m|[m [36m|[m [31m|[m   
+* [1;34m|[m [1;36m|[m [36m|[m [36m|[m [31m|[m   [33mcde4233[m Merge pull request #25 from ssaavedraa/facu-painting-model
+[1;33m|[m[1;34m\[m [1;34m\[m [1;36m\[m [36m\[m [36m\[m [31m\[m  
+[1;33m|[m * [1;34m|[m [1;36m|[m [36m|[m [36m|[m [31m|[m [33me21fdcd[m painting model update
+* [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [36m|[m [31m|[m   [33m8de801e[m Merge pull request #23 from ssaavedraa/sNunez-paintingsearch
+[36m|[m[1;36m\[m [1;34m\[m [1;34m\[m [1;36m\[m [36m\[m [36m\[m [31m\[m  
+[36m|[m [1;36m|[m[36m_[m[1;34m|[m[36m_[m[1;34m|[m[36m_[m[1;36m|[m[36m_[m[36m|[m[36m/[m [31m/[m  
+[36m|[m[36m/[m[1;36m|[m [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m   
+[36m|[m * [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33mffdc513[m feat: route /painting/search
+[36m|[m * [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33me90e73a[m fix: getPaintings helper
+[36m|[m * [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m70442f6[m updated: mockup data JSONs
+[36m|[m * [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m5aa8d62[m refactor:getPainting
+[36m|[m [1;34m|[m[1;34m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+* [1;34m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m   [33m4e94416[m Merge pull request #13 from ssaavedraa/facu-routecreation
+[1;34m|[m[32m\[m [1;34m\[m [1;34m\[m [1;36m\[m [36m\[m [31m\[m  
+[1;34m|[m [32m|[m[1;34m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+[1;34m|[m[1;34m/[m[32m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m   
+[1;34m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33mc41cc48[m artist route
+[1;34m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m42207bd[m artist route
+[1;34m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33macca7cf[m first artist route
+[1;34m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33ma32d68b[m controller
+[1;34m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m9fed727[m incomplete-routes
+[1;34m|[m[1;34m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+* [1;34m|[m [1;36m|[m [36m|[m [31m|[m   [33m08786c4[m Merge pull request #12 from ssaavedraa/brian-techniqueroute
+[33m|[m[34m\[m [1;34m\[m [1;36m\[m [36m\[m [31m\[m  
+[33m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m05c5f82[m add semicolons
+[33m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33mf051dbf[m add technique controllers and route
+[33m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m94110ac[m finish technique controllers and route
+[33m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m   [33m54fdca7[m router use technique
+[33m|[m [35m|[m[36m\[m [1;34m\[m [1;36m\[m [36m\[m [31m\[m  
+[33m|[m * [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m390b5e1[m adding technique routes
+* [36m|[m [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m   [33mc30d478[m Merge pull request #11 from ssaavedraa/SNunez-paintingRoute
+[36m|[m[1;32m\[m [36m\[m [36m\[m [1;34m\[m [1;36m\[m [36m\[m [31m\[m  
+[36m|[m [1;32m|[m[36m_[m[36m|[m[36m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+[36m|[m[36m/[m[1;32m|[m [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m   
+[36m|[m * [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m689a102[m feat: /get/:id
+[36m|[m * [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m3d03d09[m feat:getAll controller
+[36m|[m * [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m553c237[m refactor:add controller
+[36m|[m * [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33me1ef6d6[m feat:Loading mockup data
+* [1;32m|[m [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m787a70d[m Merge pull request #9 from ssaavedraa/SantiNunez-paintingRoute
+[36m|[m[1;32m\[m[1;32m|[m [36m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m 
+[36m|[m [1;32m|[m[36m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+[36m|[m[36m/[m[1;32m|[m [1;34m|[m [1;36m|[m [36m|[m [31m|[m   
+[36m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33mabc4e09[m added controller structure
+[36m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m3eb0998[m paintingRoute definitions
+[36m|[m[36m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+* [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33m35bab50[m associations
+* [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33mac74faf[m relations
+* [1;34m|[m [1;36m|[m [36m|[m [31m|[m   [33mcc3100b[m Merge pull request #8 from ssaavedraa/brianModelCreation
+[1;35m|[m[1;36m\[m [1;34m\[m [1;36m\[m [36m\[m [31m\[m  
+[1;35m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33mf58fff8[m Add files via upload
+[1;35m|[m[1;35m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+* [1;34m|[m [1;36m|[m [36m|[m [31m|[m   [33m7b7ffc5[m Merge pull request #6 from ssaavedraa/facu-modelcreation
+[31m|[m[32m\[m [1;34m\[m [1;36m\[m [36m\[m [31m\[m  
+[31m|[m * [1;34m|[m [1;36m|[m [36m|[m [31m|[m [33me6d56e5[m models
+[31m|[m[31m/[m [1;34m/[m [1;36m/[m [36m/[m [31m/[m  
+[31m|[m * [1;36m/[m [36m/[m [31m/[m [33me064cf2[m css-decente en details artits
+[31m|[m [1;36m|[m[1;36m/[m [36m/[m [31m/[m  
+[31m|[m * [36m|[m [31m|[m   [33m7766212[m Merge pull request #21 from ssaavedraa/jorgy-navbar
+[31m|[m [33m|[m[34m\[m [36m\[m [31m\[m  
+[31m|[m [33m|[m * [36m|[m [31m|[m [33m0cff85a[m[33m ([m[1;31morigin/jorgy-navbar[m[33m)[m Se pudo
+[31m|[m [33m|[m * [36m|[m [31m|[m   [33m6046a20[m Merge branch 'FrontDev' of https://github.com/ssaavedraa/PG-Henry into jorgy-navbar
+[31m|[m [33m|[m [35m|[m[33m\[m [36m\[m [31m\[m  
+[31m|[m [33m|[m [35m|[m[33m/[m [36m/[m [31m/[m  
+[31m|[m [33m|[m[33m/[m[35m|[m [36m|[m [31m|[m   
+[31m|[m * [35m|[m [36m|[m [31m|[m   [33m41d718c[m Merge pull request #20 from ssaavedraa/eli-detailartist
+[31m|[m [1;31m|[m[1;32m\[m [35m\[m [36m\[m [31m\[m  
+[31m|[m [1;31m|[m * [35m|[m [36m|[m [31m|[m [33m8082483[m eli cambios
+[31m|[m [1;31m|[m * [35m|[m [36m|[m [31m|[m [33m52cb307[m eli changes
+[31m|[m [1;31m|[m * [35m|[m [36m|[m [31m|[m   [33m7517d69[m Merge branch 'FrontDev' of https://github.com/ssaavedraa/PG-Henry into eli-detailartist
+[31m|[m [1;31m|[m [1;33m|[m[1;31m\[m [35m\[m [36m\[m [31m\[m  
+[31m|[m [1;31m|[m [1;33m|[m[1;31m/[m [35m/[m [36m/[m [31m/[m  
+[31m|[m [1;31m|[m[1;31m/[m[1;33m|[m [35m|[m [36m|[m [31m|[m   
+[31m|[m [1;31m|[m * [35m|[m [36m|[m [31m|[m [33mcfdab9a[m little
+[31m|[m [1;31m|[m * [35m|[m [36m|[m [31m|[m   [33mdc8c8be[m Merge branch 'FrontDev' of https://github.com/ssaavedraa/PG-Henry into FrontDev
+[31m|[m [1;31m|[m [1;35m|[m[1;36m\[m [35m\[m [36m\[m [31m\[m  
+[31m|[m [1;31m|[m * [1;36m|[m [35m|[m [36m|[m [31m|[m [33mf7f0c4d[m artists
+[31m|[m [1;31m|[m * [1;36m|[m [35m|[m [36m|[m [31m|[m [33m26e5cd5[m base detail artist
+[31m|[m [1;31m|[m * [1;36m|[m [35m|[m [36m|[m [31m|[m [33m7dc3034[m prueba
+[31m|[m [1;31m|[m[31m/[m [1;36m/[m [35m/[m [36m/[m [31m/[m  
+[31m|[m[31m/[m[1;31m|[m [1;36m|[m [35m|[m [36m|[m [31m|[m   
+[31m|[m [1;31m|[m [1;36m|[m * [36m|[m [31m|[m   [33mf4dbebd[m Merge branch 'main' of https://github.com/ssaavedraa/PG-Henry into jorgy-navbar
+[31m|[m [1;31m|[m [1;36m|[m [31m|[m[31m\[m [36m\[m [31m\[m  
+[31m|[m [1;31m|[m [1;36m|[m [31m|[m [31m|[m [36m|[m[31m/[m  
+[31m|[m [1;31m|[m [1;36m|[m [31m|[m [31m|[m[31m/[m[36m|[m   
+[31m|[m [1;31m|[m [1;36m|[m [31m|[m * [36m|[m   [33m9dc4a83[m Merge pull request #15 from ssaavedraa/yessica
+[31m|[m [1;31m|[m [1;36m|[m [31m|[m [33m|[m[34m\[m [36m\[m  
+[31m|[m [1;31m|[m [1;36m|[m * [33m|[m [34m\[m [36m\[m   [33m4bab72c[m Merge branch 'FrontDev' of https://github.com/ssaavedraa/PG-Henry into jorgy-navbar
+[31m|[m [1;31m|[m [1;36m|[m [35m|[m[1;31m\[m [33m\[m [34m\[m [36m\[m  
+[31m|[m [1;31m|[m [1;36m|[m[1;31m_[m[35m|[m[1;31m/[m [33m/[m [34m/[m [36m/[m  
+[31m|[m [1;31m|[m[1;31m/[m[1;36m|[m [35m|[m [33m|[m [34m|[m [36m|[m   
+[31m|[m * [1;36m|[m [35m|[m [33m|[m [34m|[m [36m|[m   [33ma93df25[m Merge pull request #19 from ssaavedraa/ssaavedraa
+[31m|[m [1;36m|[m[1;32m\[m [1;36m\[m [35m\[m [33m\[m [34m\[m [36m\[m  
+[31m|[m [1;36m|[m [1;32m|[m[1;36m/[m [35m/[m [33m/[m [34m/[m [36m/[m  
+[31m|[m [1;36m|[m[1;36m/[m[1;32m|[m [35m|[m [33m|[m [34m|[m [36m|[m   
+[31m|[m [1;36m|[m * [35m|[m [33m|[m [34m|[m [36m|[m [33m12e8610[m blank spaces deletede in json file, santiago addded
+[31m|[m [1;36m|[m[1;36m/[m [35m/[m [33m/[m [34m/[m [36m/[m  
+[31m|[m * [35m|[m [33m|[m [34m|[m [36m|[m   [33m29befcb[m Merge pull request #17 from ssaavedraa/yessica
+[31m|[m [33m|[m[1;34m\[m [35m\[m [33m\[m [34m\[m [36m\[m  
+[31m|[m [33m|[m [1;34m|[m[33m_[m[35m|[m[33m/[m [34m/[m [36m/[m  
+[31m|[m [33m|[m[33m/[m[1;34m|[m [35m|[m [34m|[m [36m|[m   
+[31m|[m [33m|[m * [35m|[m [34m|[m [36m|[m [33m7662296[m intentanto
+[31m|[m [33m|[m [34m|[m [35m|[m[34m/[m [36m/[m  
+[31m|[m [33m|[m [34m|[m[34m/[m[35m|[m [36m|[m   
+[31m|[m [33m|[m * [35m|[m [36m|[m [33mcd60037[m hola2
+[31m|[m [33m|[m * [35m|[m [36m|[m [33m6a688d2[m yessica
+[31m|[m [33m|[m[33m/[m [35m/[m [36m/[m  
+[31m|[m * [35m|[m [36m|[m [33md073ad5[m Merge pull request #14 from ssaavedraa/yessica
+[31m|[m[31m/[m[1;36m|[m [35m|[m [36m|[m 
+[31m|[m * [35m|[m [36m|[m [33m5c2db02[m hola
+[31m|[m * [35m|[m [36m|[m [33m5240b60[m Json para front
+[31m|[m[31m/[m [35m/[m [36m/[m  
+[31m|[m * [36m/[m [33m72be5f2[m Se agrega el componente Navbar con estilos, ademas se crea las variables globales de los colores y el tipo de letra a utilizar
+[31m|[m[31m/[m [36m/[m  
+* [36m|[m   [33m4424ae6[m Merge pull request #2 from ssaavedraa/serverSetUp
+[36m|[m[32m\[m [36m\[m  
+[36m|[m [32m|[m[36m/[m  
+[36m|[m[36m/[m[32m|[m   
+[36m|[m * [33m4f07af6[m setUp server/db
+[36m|[m[36m/[m  
+*   [33m61aaf9a[m Merge pull request #1 from ssaavedraa/BackEndStruct
+[33m|[m[34m\[m  
+[33m|[m * [33mc63f177[m Added backend folder structure
+[33m|[m[33m/[m  
+* [33md973455[m Navbar template
+* [33m777ab9c[m backend boilerplate
+* [33mfd4b269[m Frontend boilerplate
+* [33ma5900d4[m Initial commit

@@ -14,3 +14,5 @@ export default function CardHomeArt({url,artist,title}) {
     </figure>
   );
 }
+
+
