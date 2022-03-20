@@ -65,7 +65,7 @@ export const CardsFav = () => {
                   Add to cart
                 </button>
               )}
-            </div>
+              </div>
           ))}
         </div>
       ) : (
