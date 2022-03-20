@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import Login from "./views/Login/Login";
 import Home from "./views/Home";
 import axios from "axios";
+import PurchaseDetail from "./views/PurchaseDetail/PurchaseDetail";
 
 axios.defaults.baseURL = "https://santart-backend.herokuapp.com/";
 
@@ -13,12 +14,14 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="Login" component={Login} />
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="Login"
+          component={Login}
+        />
         <Stack.Screen
           name="Home"
           component={Home}
@@ -26,6 +29,7 @@ export default function App() {
             headerShown: false,
           }}
         />
+        <Stack.Screen name="PurchaseDetail" component={PurchaseDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
