@@ -53,15 +53,14 @@ const CartForm = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		/* for (const key in info) {
+		for (const key in info) {
 			if (!info[key] && key !== "floor" && key !== "unit") {
 				return;
 			}
-		} */
+		}
 		try {
 			await axios.post("checkout/contactInfo", info);
-			console.log(contactInfo);
-			console.log(info);
+
 			dispatch(contactInfo(info));
 			navigate("/payment");
 		} catch (e) {
