@@ -6,7 +6,8 @@
     "width": 39.4,
     "price": 1400,
     "photos": [
-      "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/249173c2-0013-4624-211c-3e8fcf335048/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694814/santart/1_grr3kb.png"
     ],
     "artistId": 1,
     "techniqueIds": [1]
@@ -18,7 +19,9 @@
     "width": 325.1,
     "price": 1800,
     "photos": [
-      "https://d16kd6gzalkogb.cloudfront.net/__sized__/auction_artwork_images/8575212-11-2014185-thumbnail_webp-9999x9999.webp"
+      "https://d16kd6gzalkogb.cloudfront.net/__sized__/auction_artwork_images/8575212-11-2014185-thumbnail_webp-9999x9999.webp",
+      "https://d16kd6gzalkogb.cloudfront.net/__sized__/auction_artwork_images/8575212-11-2014185-thumbnail_webp-9999x9999.webp" 
+      
     ],
     "artistId": 1,
     "techniqueIds": [1]
@@ -30,7 +33,8 @@
     "width": 56.7,
     "price": 2300,
     "photos": [
-      "https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/93a86517-a89f-1b8a-c910-119e3417cc4e/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694798/santart/3_n4zg85.png"
     ],
     "artistId": 1,
     "techniqueIds": [2]
@@ -54,7 +58,8 @@
     "width": 54.7,
     "price": 3699,
     "photos": [
-      "https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/a610c6c1-ed95-2a17-a697-8342c2a72b73/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694778/santart/5_rnu4ga.png"
     ],
     "artistId": 1,
     "techniqueIds": [4]
@@ -66,7 +71,8 @@
     "width": 91.4,
     "price": 4200,
     "photos": [
-      "https://www.artic.edu/iiif/2/5a377db1-d100-0f0c-6b46-fa7440a92245/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/5a377db1-d100-0f0c-6b46-fa7440a92245/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694872/santart/6_hmjpzr.png"
     ],
     "artistId": 2,
     "techniqueIds": [1]
@@ -78,7 +84,8 @@
     "width": 346.7,
     "price": 3500,
     "photos": [
-      "https://www.artic.edu/iiif/2/97cb5c4b-cce5-c4d8-f303-613ce92832c7/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/97cb5c4b-cce5-c4d8-f303-613ce92832c7/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694765/santart/7_b5n1c8.png"
     ],
     "artistId": 2,
     "techniqueIds": [1]
@@ -90,7 +97,8 @@
     "width": 101.6,
     "price": 1900,
     "photos": [
-      "https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694851/santart/8_j1jfoi.png"
     ],
     "artistId": 2,
     "techniqueIds": [2]
@@ -102,7 +110,8 @@
     "width": 40.6,
     "price": 3400,
     "photos": [
-      "https://www.artic.edu/iiif/2/446680d8-037b-aea7-738e-62ac5765aaa3/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/446680d8-037b-aea7-738e-62ac5765aaa3/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694852/santart/9_kdyjnz.png"
     ],
     "artistId": 2,
     "techniqueIds": [3]
@@ -114,7 +123,8 @@
     "width": 162.6,
     "price": 2500,
     "photos": [
-      "https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/239fba82-6991-9813-a555-5e8b7503be0e/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694836/santart/10_p6t30o.png"
     ],
     "artistId": 2,
     "techniqueIds": [4]
@@ -126,7 +136,8 @@
     "width": 106,
     "price": 4600,
     "photos": [
-      "https://www.artic.edu/iiif/2/718aaa92-ac48-2c17-2832-b034827bc45f/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/718aaa92-ac48-2c17-2832-b034827bc45f/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694869/santart/11_tiaque.png"
     ],
     "artistId": 3,
     "techniqueIds": [1]
@@ -139,7 +150,8 @@
     "height": 145.7,
     "width": 112.7,
     "photos": [
-      "https://www.artic.edu/iiif/2/8cca1b7d-2c6c-5f92-2e9d-6744b0a48aa4/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/8cca1b7d-2c6c-5f92-2e9d-6744b0a48aa4/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694853/santart/12_u1igc8.png"
     ],
     "artistId": 3
   },
@@ -151,7 +163,8 @@
     "height": 54.9,
     "width": 43.2,
     "photos": [
-      "https://www.artic.edu/iiif/2/1630e6a7-697e-3deb-cb9e-62b1f1239791/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/1630e6a7-697e-3deb-cb9e-62b1f1239791/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695102/santart/13_ygvgcp.png"
     ],
     "artistId": 3
   },
@@ -163,7 +176,8 @@
     "height": 23.8,
     "width": 31.4,
     "photos": [
-      "https://www.artic.edu/iiif/2/c851c38c-5161-692e-81c2-8e49ee735d29/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/c851c38c-5161-692e-81c2-8e49ee735d29/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694899/santart/14_cqvis3.png"
     ],
     "artistId": 3
   },
@@ -173,7 +187,8 @@
     "techniqueIds": [1],
     "price": 4966,
     "photos": [
-      "https://www.artic.edu/iiif/2/25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695152/santart/15_sq0a1a.png"
     ],
     "height": 73.6,
     "width": 92.3,
@@ -185,7 +200,8 @@
     "techniqueIds": [2],
     "price": 4879,
     "photos": [
-      "https://www.artic.edu/iiif/2/1d3a275d-45dd-6026-b6ed-d7d8df417a3d/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/1d3a275d-45dd-6026-b6ed-d7d8df417a3d/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694916/santart/16_ub1uzr.png"
     ],
     "height": 31.3,
     "width": 42,
@@ -197,7 +213,8 @@
     "techniqueIds": [3],
     "price": 3465,
     "photos": [
-      "https://www.artic.edu/iiif/2/9ea77636-76e9-9031-6b92-ff34512d7cbc/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/9ea77636-76e9-9031-6b92-ff34512d7cbc/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694927/santart/17_sbaj3q.png"
     ],
     "height": 73,
     "width": 92.1,
@@ -209,7 +226,8 @@
     "techniqueIds": [3],
     "price": 5248,
     "photos": [
-      "https://www.artic.edu/iiif/2/bbb6d024-f931-2e2f-eb95-750991834b1c/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/bbb6d024-f931-2e2f-eb95-750991834b1c/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695194/santart/18_fluazg.png"
     ],
     "height": 25.7,
     "width": 37.6,
@@ -221,7 +239,8 @@
     "techniqueIds": [1],
     "price": 6877,
     "photos": [
-      "https://www.artic.edu/iiif/2/a0a3469e-c44e-0498-0fe6-5f8dfb16e54e/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/a0a3469e-c44e-0498-0fe6-5f8dfb16e54e/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694916/santart/19_hxhmxh.png"
     ],
     "height": 50,
     "width": 23.2,
@@ -233,7 +252,8 @@
     "techniqueIds": [3],
     "price": 3789,
     "photos": [
-      "https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694940/santart/20_k2hxip.png"
     ],
     "height": 25.4,
     "width": 37.6,
@@ -244,7 +264,8 @@
     "description": "Lavender is an essential plant of Provence, it is cultivated and distilled to obtain an oil, to be used mainly in cosmetics and perfumes. Under the sun's rays, lavender welcomes you by releasing its fragrance. Lavender fields are fascinating because of these colors that change depending on the light of day, blue, violet, pink, and even orange tones in the light of sunset.",
     "price": 3000,
     "photos": [
-      "https://4.bp.blogspot.com/-NriY4bpJqog/UNxEZHkze8I/AAAAAAAAKe0/tY5IJRbBEMU/s1600/caudros+paisajes+floridos+espatula+oleo+.jpg"
+      "https://4.bp.blogspot.com/-NriY4bpJqog/UNxEZHkze8I/AAAAAAAAKe0/tY5IJRbBEMU/s1600/caudros+paisajes+floridos+espatula+oleo+.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694974/santart/21_qoar6l.png"
     ],
     "artistId": 6,
     "techniqueIds": [1],
@@ -258,7 +279,8 @@
     "width": 1.1,
     "price": 5000,
     "photos": [
-      "http://4.bp.blogspot.com/-vuiojAA-8FY/U1rz_fDe9cI/AAAAAAAADz8/IwwzfsDJbkM/s1600/1005764_409902042447956_1119483791_n.jpg"
+      "http://4.bp.blogspot.com/-vuiojAA-8FY/U1rz_fDe9cI/AAAAAAAADz8/IwwzfsDJbkM/s1600/1005764_409902042447956_1119483791_n.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695022/santart/22_olbkwf.png"
     ],
     "artistId": 6,
     "techniqueIds": [1]
@@ -270,7 +292,10 @@
     "width": 1.5,
     "price": 7500,
     "photos": [
-      "https://1.bp.blogspot.com/-Tga46TcslJs/VhRKQLtwq7I/AAAAAAADrnM/nb5Z8MU02Y0/s1600/cultivos-de-flores-cuadros-modernos_14.jpg"
+      "https://1.bp.blogspot.com/-Tga46TcslJs/VhRKQLtwq7I/AAAAAAADrnM/nb5Z8MU02Y0/s1600/cultivos-de-flores-cuadros-modernos_14.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647694989/santart/23_h56uye.png"
+
+    
     ],
     "artistId": 6,
     "techniqueIds": [1]
@@ -282,7 +307,8 @@
     "width": 1.5,
     "price": 7500,
     "photos": [
-      "https://3.bp.blogspot.com/-JvSyQr_vKI0/WOATT1DJ7KI/AAAAAAAAQNM/o5LJLloMMQswlAcaIlhzwzk1xtkNzkfKgCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252827%2529.jpg"
+      "https://3.bp.blogspot.com/-JvSyQr_vKI0/WOATT1DJ7KI/AAAAAAAAQNM/o5LJLloMMQswlAcaIlhzwzk1xtkNzkfKgCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252827%2529.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695116/santart/24_fc1tex.png"
     ],
     "artistId": 7,
     "techniqueIds": [2]
@@ -294,7 +320,8 @@
     "width": 1.4,
     "price": 8000,
     "photos": [
-      "https://3.bp.blogspot.com/-7aZ0604KLVM/WOATTIfI7rI/AAAAAAAAQM4/KSorXdNEO7MaqpkI0F8KAzWoQOUpmdJVwCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252822%2529.jpg"
+      "https://3.bp.blogspot.com/-7aZ0604KLVM/WOATTIfI7rI/AAAAAAAAQM4/KSorXdNEO7MaqpkI0F8KAzWoQOUpmdJVwCLcB/s1600/Bev%2BJozwiak%2BTutt%2527Art%2540%2B%252822%2529.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695035/santart/25_hdmfjq.png"
     ],
     "artistId": 7,
     "techniqueIds": [2]
@@ -306,7 +333,8 @@
     "width": 50,
     "price": 9000,
     "photos": [
-      "https://texaswatercolorsociety.org/wp-content/uploads/sites/2/2018/04/4bJozw2SeattleBornAndRaised-1.jpg"
+      "https://texaswatercolorsociety.org/wp-content/uploads/sites/2/2018/04/4bJozw2SeattleBornAndRaised-1.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695011/santart/26_jkl4fc.png"
     ],
     "artistId": 7,
     "techniqueIds": [2]
@@ -317,7 +345,8 @@
     "techniqueIds": [3],
     "price": 12000,
     "photos": [
-      "https://i.pinimg.com/564x/d1/92/c3/d192c358a222f0e5da682f3722047c14.jpg"
+      "https://i.pinimg.com/564x/d1/92/c3/d192c358a222f0e5da682f3722047c14.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695003/santart/27_oyltca.png"
     ],
     "height": 110,
     "width": 60,
@@ -329,7 +358,8 @@
     "techniqueIds": [3],
     "price": "3500",
     "photos": [
-      "https://i.pinimg.com/originals/fe/65/6e/fe656e6838d15b76d146fdfce2ffaa9d.jpg"
+      "https://i.pinimg.com/originals/fe/65/6e/fe656e6838d15b76d146fdfce2ffaa9d.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695065/santart/28_gohlvq.png"
     ],
     "height": "50",
     "width": "30",
@@ -341,7 +371,8 @@
     "techniqueIds": [3],
     "price": "7000",
     "photos": [
-      "https://www.artmajeur.com/medias/hd/e/l/elena-kraft/artwork/12118523_2019-03-28-15-08-38.jpg"
+      "https://www.artmajeur.com/medias/hd/e/l/elena-kraft/artwork/12118523_2019-03-28-15-08-38.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695105/santart/29_ne6idf.png"
     ],
     "height": "1.00",
     "width": "85",
@@ -365,6 +396,7 @@
     "techniqueIds": [4],
     "price": "5000",
     "photos": [
+      "https://katelouisepowelldotcom.files.wordpress.com/2021/02/ftp_veganuary-fin.jpg?w=700",
       "https://katelouisepowelldotcom.files.wordpress.com/2021/02/ftp_veganuary-fin.jpg?w=700"
     ],
     "height": "70",
@@ -377,6 +409,7 @@
     "techniqueIds": [4],
     "price": "10000",
     "photos": [
+      "https://scontent-eze1-1.xx.fbcdn.net/v/t1.6435-9/192219975_327277482299953_6440163914261271394_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=e3f864&_nc_ohc=rjTW7xQLCuUAX9BgCag&_nc_ht=scontent-eze1-1.xx&oh=00_AT80ej-Cq7fkVBQT7CqhtMCR8Qlwdn8aQgfGZWmGv238HQ&oe=62447D58",
       "https://scontent-eze1-1.xx.fbcdn.net/v/t1.6435-9/192219975_327277482299953_6440163914261271394_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=e3f864&_nc_ohc=rjTW7xQLCuUAX9BgCag&_nc_ht=scontent-eze1-1.xx&oh=00_AT80ej-Cq7fkVBQT7CqhtMCR8Qlwdn8aQgfGZWmGv238HQ&oe=62447D58"
     ],
     "height": "80",
@@ -389,7 +422,8 @@
     "techniqueIds": [1],
     "price": "8000",
     "photos": [
-      "http://kubinyigaleria.hu/wp-content/uploads/2021/11/IMG-6047.jpg"
+      "http://kubinyigaleria.hu/wp-content/uploads/2021/11/IMG-6047.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695082/santart/33_xfho5e.png"
     ],
     "height": "50",
     "width": "80",
@@ -401,7 +435,8 @@
     "techniqueIds": [1],
     "price": "9000",
     "photos": [
-      "http://kubinyigaleria.hu/wp-content/uploads/2021/10/Sz%C3%A1nt%C3%B3-Luk%C3%A1cs-Terasz-40x30-cm-68-000-Ft-742x1024.jpg"
+      "http://kubinyigaleria.hu/wp-content/uploads/2021/10/Sz%C3%A1nt%C3%B3-Luk%C3%A1cs-Terasz-40x30-cm-68-000-Ft-742x1024.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695125/santart/34_l6qida.png"
     ],
     "height": "90",
     "width": "60",
@@ -413,7 +448,8 @@
     "techniqueIds": [2],
     "price": "10000",
     "photos": [
-      "https://www.artic.edu/iiif/2/1de73bb7-52d6-e099-f4e1-763e201e78fa/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/1de73bb7-52d6-e099-f4e1-763e201e78fa/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695194/santart/35_kxd5js.png"
     ],
     "height": "80",
     "width": "1.00",
@@ -425,7 +461,8 @@
     "techniqueIds": [2],
     "price": "8500",
     "photos": [
-      "https://www.artic.edu/iiif/2/9f7e21db-5949-5566-7d77-1871a41916c7/full/843,/0/default.jpg"
+      "https://www.artic.edu/iiif/2/9f7e21db-5949-5566-7d77-1871a41916c7/full/843,/0/default.jpg",
+      "https://res.cloudinary.com/dw6bkceqj/image/upload/v1647695103/santart/36_ekxtbb.png"
     ],
     "height": "60",
     "width": "90",
