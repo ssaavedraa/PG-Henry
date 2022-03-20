@@ -8,7 +8,7 @@ import getPurchases from "../../selectors/getPurchases";
 function Purchases(props) {
   const [purchasetData, setPurchaseData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [filter, setFilter] = useState(null);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     setLoading(true);
