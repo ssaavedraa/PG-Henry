@@ -6,7 +6,7 @@ import axios from "axios";
 import "./Cart.css";
 import CartCards from "./CartCards/CartCards.jsx";
 import { ToastContainer, toast } from "react-toastify";
-import ModalBuyCart from "./ModalBuyCart/ModalBuyCart.jsx";
+import CheckoutButton from "../MercadoPago/checkoutButton.jsx";
 
 const Cart = () => {
   const { cart, removeAll } = useCart();
@@ -21,8 +21,7 @@ const Cart = () => {
   };
 
   const [cartPainting, setCartPainting] = useState([]);
-  //Estado para el modal
-  const [openModalBuy, setOpenModalBuy] = useState(false);
+ 
 
   useEffect(() => {
     getPaintings(cart).then((res) => setCartPainting(res));
@@ -55,15 +54,9 @@ const Cart = () => {
         draggable
         pauseOnHover
       />
-      <ModalBuyCart
-        openModalBuy={openModalBuy}
-        setOpenModalBuy={setOpenModalBuy}
-        cartPainting={cartPainting}
-        totalPrice={totalPrice}
-      />
       <h1>Cart</h1>
       <div className="containerCart">
-        <div className="divPrecio">
+        <div className="divPrecioCart">
           <button onClick={() => removeAllCart()}>Remove all items</button>
           <h5>Price</h5>
         </div>
@@ -76,7 +69,7 @@ const Cart = () => {
           <Link to="/gallery">
             <button>Continue shopping</button>
           </Link>
-          <button onClick={() => setOpenModalBuy(true)}>Buy</button>
+          <CheckoutButton />
         </div>
       </div>
     </div>

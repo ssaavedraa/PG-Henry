@@ -1,6 +1,11 @@
 .divContainerFormCart{
     width: inherit;
-    margin: 0.5rem 0rem;
+    margin: 3rem 9rem;
+}
+
+.divContainerFormCart h1{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .divContainerDetailsCart{
@@ -14,10 +19,15 @@
 }
 
 .divContainerInputsFormCart{
-    
     width: 32rem;
     display: flex;
     flex-direction: column;
+}
+
+.divContainerInputsFormCart input{
+    height: 1.75rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--fifth-color);
 }
 
 .divContainerNameLastCart{
@@ -51,7 +61,7 @@ margin: 0.15rem 0rem;
 .divContainerInputsFormCart label{
     font-weight: bold;
     font-size: 0.8rem;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
 }
 
 .divProductSubTotalCart{
@@ -71,3 +81,42 @@ margin: 0.15rem 0rem;
     width: inherit;
     justify-content: space-between;  
 }
+
+.divContainerButtonCartContinue{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divContainerButtonCartContinue button {
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 4rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.divContainerNumberFloorUnit{
+    display: flex;
+    width: 30rem;
+    justify-content: space-between;
+
+}
+
+.NumberFloorUnitCart label{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.NumberFloorUnitCart input{
+    width: 10rem
+}
+
+.NumberFloorUnitCart{
+    padding-right: 0.4rem;
+}
+
