@@ -18,7 +18,8 @@ import {
   ADD_ARTIST,
   EDIT_ARTIST,
   EDIT_PAINT,
-  ADD_TECHNIQUE
+  ADD_TECHNIQUE,
+  ADD_PAINTING
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -164,9 +165,11 @@ export const addNewArtist = (payload) => {
 export const addNewPainting = (payload) => {
   return async function (dispatch) {
     try {
-      const post = await axios.post("/painting/create", payload);
-      console.log(post);
-      return post;
+      const response = await axios.post("/painting/create", payload);      
+      return dispatch({
+        type: ADD_PAINTING,
+        payload: response.data,
+      });
     } catch (err) {
       console.log(err);
     }

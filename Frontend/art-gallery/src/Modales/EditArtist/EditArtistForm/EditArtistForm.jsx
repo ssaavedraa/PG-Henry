@@ -86,7 +86,7 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
 
   function confirm() {
     dispatch(editArtist(id, input));
-    navigate("/artists");
+    
   }
 
   function closeModal() {
