@@ -24,6 +24,7 @@ import PayButton from "./components/MercadoPago/payment";
 import CheckoutButton from "./components/MercadoPago/checkoutButton";
 
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
+import { AboutDev } from "./components/aboutDev/AboutDev";
 
 
 function App() {
@@ -65,6 +66,8 @@ function App() {
           <Route exact path="/testMP" element={<CheckoutButton />} />
 					<Route exact path="/contactInfo" element={<ContactInfo />} />
 					<Route exact path="/payment" element={<PayButton />} />
+
+          <Route exact path="/about" element={<AboutDev />} />
         </Routes>
         <Footer />
       </div>
