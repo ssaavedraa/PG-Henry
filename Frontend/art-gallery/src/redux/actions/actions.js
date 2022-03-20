@@ -18,7 +18,9 @@ import {
   ADD_ARTIST,
   EDIT_ARTIST,
   EDIT_PAINT,
-  ADD_TECHNIQUE
+  ADD_TECHNIQUE,
+  GET_ALL_SP,
+  UPDATE__SP,
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -203,7 +205,7 @@ export function getArtitsStat(filters) {
   return async function (dispatch) {
     try {
       const json = await axios.get("/artist/getstats", {
-        params: {...filters},
+        params: { ...filters },
       });
       return dispatch({
         type: GET_STATS_ARTIST,
@@ -221,8 +223,8 @@ export const editArtist = (id, payload) => {
       const response = await axios.put(`/artist/update/${id}`, payload);
       return dispatch({
         type: EDIT_ARTIST,
-        payload: response.data
-      })
+        payload: response.data,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -236,8 +238,8 @@ export const editPainting = (id, payload) => {
       //Pendiente ajustar response desde el backend
       return dispatch({
         type: EDIT_PAINT,
-        payload: response.data
-      })
+        payload: response.data,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -257,8 +259,6 @@ export const addTechnique = (payload) => {
     }
   };
 };
-
-
 
 export const removeTechnique = (id) => {
   return async function (dispatch) {
@@ -375,3 +375,55 @@ export async function notAvailablePainting(id) {
     await axios.put(`/painting/setNotAvailable/${id}`);
   } catch (error) {}
 }
+
+//Funciones Sales and Purchase
+export const getAllPurchase = (filters) => {
+  return async (dispatch) => {
+    try {
+      const json = await axios.get("/purchase/get/all", {
+        params: { ...filters },
+      });
+      dispatch({ type: GET_ALL_SP, payload: json.data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const updateStatus = (type, id) => {
+  return async () => {
+    try {
+      switch (type) {
+        case "completed":
+          await axios.put(`/purchase/set/completed/${id}`);
+          break;
+        case "dispatched":
+          await axios.put(`/purchase/set/dispatched/${id}`);
+          break;
+        default:
+        case "canceled":
+          await axios.put(`/purchase/set/canceled/${id}`);
+          break;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+/* export function getArtitsStat(filters) {
+  return async function (dispatch) {
+    try {
+      const json = await axios.get("/artist/getstats", {
+        params: { ...filters },
+      });
+      return dispatch({
+        type: GET_STATS_ARTIST,
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+ */

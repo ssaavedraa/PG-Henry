@@ -7,24 +7,26 @@
 /*Titles Header*/
 
 .sales-titles-header,
+.id-sales,
 .product-sales,
 .purchase-sales,
-.shipment-sales,
+.price-sales,
 .customer-sales,
 .status-sales {
   display: flex;
 }
 
 .sales-titles-header{
-  width: 95%;
+  width: 94%;
   height: 7%;
-  margin-left: 1em;
+  margin-left: 1.2em;
   color: var(--eigth-color);
 }
 
+.id-sales,
 .product-sales,
 .purchase-sales,
-.shipment-sales,
+.price-sales,
 .customer-sales,
 .status-sales {
   padding: 0.3em;
@@ -34,22 +36,26 @@
   font-size: 1em;
 }
 
-.product-sales {
+.id-sales{
+  width: 8%;
+}
+
+.product-sales, .status-sales{
   width: 19%;
 }
 
-.purchase-sales,
-.shipment-sales {
+.purchase-sales{
   width: 18%;
+}
+
+.price-sales{
+  width: 10%;
 }
 
 .customer-sales {
   width: 26%;
 }
 
-.status-sales {
-  width: 19%;
-}
 
 /*Container Data*/
 .sales-data-container {

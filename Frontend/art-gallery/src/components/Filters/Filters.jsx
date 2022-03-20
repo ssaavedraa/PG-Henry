@@ -24,7 +24,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
   React.useEffect(() => {
     dispatch(getArtist());
     dispatch(getTechnique());
-  }, [dispatch, addList]);
+  }, [dispatch]);
 
   React.useEffect(() => {
     dispatch(getArtist(filter.name));
