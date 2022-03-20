@@ -35,22 +35,26 @@ const NavPanel = () => {
         <ul className="menu-options">          
           <li>
           <Link to="/admin/sales">
-            <AiOutlineLineChart className="icon" /> SALES
+          <div className="shopping-btn"><div className="icon" ><AiOutlineLineChart/></div><div>SALES</div></div>
+           
             </Link>
           </li>
           <li>
           <Link to="/admin/user">
-            <FaUsers className="icon" /> USERS
+          <div className="shopping-btn"><div className="icon" ><FaUsers/></div><div>USERS</div></div>
+            
             </Link>
           </li>
           <li>
             <Link to="/admin/addartist">
-              <div><BsPersonBadge className="icon" /> </div> <div>ARTISTS</div> 
+            <div className="shopping-btn"><div className="icon" ><BsPersonBadge/></div><div >ARTISTS</div></div>
+              
             </Link>
           </li>
           <li>
-            <Link to="/admin/additems">              
-              <BiImageAdd className="icon" /> ITEMS
+            <Link to="/admin/additems">   
+            <div className="shopping-btn"><div className="icon" ><BiImageAdd /></div><div >ITEMS</div></div>           
+              
             </Link>
           </li>
           {session && (

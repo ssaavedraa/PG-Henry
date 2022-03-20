@@ -6,6 +6,8 @@ import logo from "../../assets/img/SantArtlogo.png";
 import { confirmationSweet } from "../../components/utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
 
+import { FaStar } from "react-icons/fa";
+
 const AddAReview= (setOpenModalArtist) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

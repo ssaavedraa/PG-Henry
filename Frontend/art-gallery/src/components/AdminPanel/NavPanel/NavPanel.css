@@ -1,5 +1,4 @@
 
-
 .admin-bar{
     height: 70vh;
     width: 15rem;
@@ -16,7 +15,11 @@
 .shopping-btn{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    
 }
+
+
 .menu-options > li{ /* -> Agregado */
     display: flex;    
     
@@ -83,9 +86,6 @@
 
 .icon{
     font-size: 1.5rem;
+    padding: 0.5rem;
+    
 }
-
-
-
-
-
