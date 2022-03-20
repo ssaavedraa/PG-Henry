@@ -1,7 +1,7 @@
 
 
 .admin-bar{
-    height: 100%;
+    height: 70vh;
     width: 15rem;
     display: flex;
     flex-direction: column;
@@ -13,8 +13,13 @@
     align-items: center;  /*Eli anduvo por aqui*/
 }
 
-.menu-options > li{ /* -> Agregado */
+.shopping-btn{
     display: flex;
+    flex-direction: row;
+}
+.menu-options > li{ /* -> Agregado */
+    display: flex;    
+    
 }
 
 .user{
@@ -44,20 +49,29 @@
     text-align:left;    
 }
 
-.menu-options li{    
+.menu-options ul{
+   
+}
+.menu-options li{ 
+    height: 4rem;
     font-size: 1.2rem;   
     list-style: none;
-   margin:2.5rem;  
+    margin-top:2.5rem ;
+    margin-bottom: 2.5rem;
+    
     color: var(--eigth-color);
     cursor: pointer;
     font-weight: 600;
+    
 }
 
 .menu-options li:hover{
     color: var(--btnHover-color)
  }
 .menu-options li a{
-    color: var(--eigth-color);    
+    color: var(--eigth-color); 
+      
+    
 }
 
 .menu-options li a:hover{

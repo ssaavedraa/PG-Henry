@@ -116,28 +116,29 @@ export const AddUser = () => {
             </div>
 
             <div className="addUser-content">
-              <div className="panel-title"><h1>User</h1></div>
+              
               <div className="panel-admin">
+                <h1>Users</h1>
 
                 <div className="panel-interno--">
 
                   <div className="panel-admin-interno1">
-                    <h4>Administrator</h4>
+                    <h4>Administrators</h4>
 
                     <div>
-                      <label>Ordenador por</label>
+                      <label>Order by:</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
-                        <option value="0">Order:</option>
+                        <option value="0">...</option>
                         <option value="email">Email</option>
                         <option value="firstName">FirstName</option>
                         <option value="id">Id</option>
                       </select>
                     </div>
 
-                    <div>
-                      <label>Sort By Name</label>
+                    <div className="panel-button">
+                      <label>Sort By Name:</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)} >
-                        <option value="0">Order:</option>
+                        <option value="0">...</option>
                         <option value="ASC">A-Z</option>
                         <option value="DESC">Z-A</option>
                       </select>
@@ -194,12 +195,12 @@ export const AddUser = () => {
                 <div className="panel-interno-- panelinterno2">
 
                   <div className="panel-admin-interno1">
-                    <h4>Register Usuario</h4>
+                    <h4>Registered users</h4>
 
                     <div>
-                      <label>Ordenador por</label>
+                      <label>Order by:</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
-                        <option value="0">Order:</option>
+                        <option value="0">...</option>
                         <option value="email">Email</option>
                         <option value="firstName">FirstName</option>
                         <option value="id">Id</option>
@@ -209,7 +210,7 @@ export const AddUser = () => {
                     <div className="panel-button">
                       <label>Sort By Name</label>
                       <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)}>
-                        <option value="0">Order:</option>
+                        <option value="0">...</option>
                         <option value="ASC">A-Z</option>
                         <option value="DESC">Z-A</option>
                       </select>

@@ -65,6 +65,7 @@ function App() {
           <Route exact path="/testMP" element={<CheckoutButton />} />
 					<Route exact path="/contactInfo" element={<ContactInfo />} />
 					<Route exact path="/payment" element={<PayButton />} />
+          <Route exact path="/user" element={<MyProfile />} />
         </Routes>
         <Footer />
       </div>
