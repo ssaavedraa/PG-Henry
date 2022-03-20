@@ -4,11 +4,15 @@ import MaterialCommunityIcons from "react-native-vector-icons/Ionicons";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 const states = [
-  { name: "Processing", icon: "ellipsis-horizontal-outline" },
-  { name: "Pending", icon: "close-outline" },
-  { name: "Dispatched", icon: "checkmark-outline" },
-  { name: "Completed", icon: "checkmark-done-outline" },
-  { name: "Canceled", icon: "close-outline" },
+  {
+    name: "Processing",
+    icon: "ellipsis-horizontal-outline",
+    color: "blue",
+  },
+  { name: "Pending", icon: "close-outline", color: "blue" },
+  { name: "Dispatched", icon: "checkmark-outline", color: "blue" },
+  { name: "Completed", icon: "checkmark-done-outline", color: "blue" },
+  { name: "Canceled", icon: "close-outline", color: "blue" },
 ];
 
 function PurchaseFilter({ setFilter, filter }) {
@@ -19,22 +23,29 @@ function PurchaseFilter({ setFilter, filter }) {
     });
   };
   return (
-    <View style={style.container}>
-      {states.map(({ name, icon }, id) => {
-        return (
-          <View
-            key={id}
-            style={filter === name ? style.filterSelected : style.filter}
-          >
-            <TouchableWithoutFeedback onPress={() => handlePress(id)}>
-              <View>
-                <MaterialCommunityIcons name={icon} />
-                <Text>{name}</Text>
-              </View>
-            </TouchableWithoutFeedback>
-          </View>
-        );
-      })}
+    <View style={style.containerContainer}>
+      <Text style={style.textFilter}>Filter purchases</Text>
+      <View style={style.container}>
+        {states.map(({ name, icon, color }, id) => {
+          return (
+            <View
+              key={id}
+              style={filter === name ? style.filterSelected : style.filter}
+            >
+              <TouchableWithoutFeedback onPress={() => handlePress(id)}>
+                <View style={style.iconText}>
+                  <MaterialCommunityIcons
+                    name={icon}
+                    color={color}
+                    style={style.icons}
+                  />
+                  <Text style={style.textNameFilter}>{name}</Text>
+                </View>
+              </TouchableWithoutFeedback>
+            </View>
+          );
+        })}
+      </View>
     </View>
   );
 }
