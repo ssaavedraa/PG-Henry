@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import {
   updateStatus,
-  dispatchedStatus,
+  getAllPurchase,
 } from "../../../../redux/actions/actions";
 import { useDispatch } from "react-redux";
 
-function DataSalesPurchase({ index, purchase, isAdmin }) {
+function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
   const [state, setState] = useState(purchase.state);
   const dispatch = useDispatch();
 
@@ -27,8 +27,12 @@ function DataSalesPurchase({ index, purchase, isAdmin }) {
   }
 
   function updateState() {
-    dispatch(updateStatus(state, purchase.id));
+    setUpdateStatus(purchase.id, state)
+      .then((succe) => dispatch(getAllPurchase()))
+      .catch((err) => console.log(err));
+    detailedInformation(index);
   }
+
   const isComplete =
     purchase.state === "completed"
       ? "completed"
@@ -100,7 +104,7 @@ function DataSalesPurchase({ index, purchase, isAdmin }) {
         </div>
         <div className="status-detail-data">
           <OptionsSelect state={purchase.state} onChangeState={onChangeState} />
-          {state !== purchase.state && purchase.state !== "canceled" && (
+          {state !== purchase.state && (
             <button className="btnReviewPurchase" onClick={updateState}>
               Update State
             </button>

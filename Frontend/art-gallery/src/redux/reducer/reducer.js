@@ -192,6 +192,17 @@ function rootReducer(state = initialState, action) {
         ...state,
         purchase: action.payload,
       };
+/*     case UPDATE__SP:
+      let purchases = [...state.purchase];
+      console.log(action.payload);
+      let updatePurchaseIndex = purchases.findIndex(
+        (purch) => purch.id === action.payload.id
+      );
+      purchases[updatePurchaseIndex] = action.payload;
+      return {
+        ...state,
+        purchase: purchases,
+      }; */
     default:
       return state;
   }

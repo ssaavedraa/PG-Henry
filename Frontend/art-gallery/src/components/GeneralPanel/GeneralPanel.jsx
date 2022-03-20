@@ -7,6 +7,7 @@ import "./GeneralPanel.css";
 function GeneralPanel() {
   const [state, setState] = useState({state: ""});
 
+
   const { user } = useAuth();
   const isAdmin = user.role === "admin" ? true : false;
   const title = user.role === "admin" ? "Sales" : "Purchase";

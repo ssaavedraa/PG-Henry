@@ -20,7 +20,6 @@ import {
   EDIT_PAINT,
   ADD_TECHNIQUE,
   GET_ALL_SP,
-  UPDATE__SP,
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -389,41 +388,3 @@ export const getAllPurchase = (filters) => {
     }
   };
 };
-
-export const updateStatus = (type, id) => {
-  return async () => {
-    try {
-      switch (type) {
-        case "completed":
-          await axios.put(`/purchase/set/completed/${id}`);
-          break;
-        case "dispatched":
-          await axios.put(`/purchase/set/dispatched/${id}`);
-          break;
-        default:
-        case "canceled":
-          await axios.put(`/purchase/set/canceled/${id}`);
-          break;
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-};
-
-/* export function getArtitsStat(filters) {
-  return async function (dispatch) {
-    try {
-      const json = await axios.get("/artist/getstats", {
-        params: { ...filters },
-      });
-      return dispatch({
-        type: GET_STATS_ARTIST,
-        payload: json.data,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-}
- */

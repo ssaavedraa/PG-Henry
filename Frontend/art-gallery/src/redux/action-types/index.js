@@ -22,4 +22,3 @@ export const EDIT_ARTIST = 'EDIT_ARTIST'
 export const EDIT_PAINT = 'EDIT_PAINT';
 export const ADD_TECHNIQUE = 'ADD_TECHNIQUE';
 export const GET_ALL_SP = 'GET_ALL_SP';
-export const UPDATE__SP = 'UPDATE__SP';
