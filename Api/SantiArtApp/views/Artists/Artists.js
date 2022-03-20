@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Image, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import Spinner from "../../components/Spinner/Spinner";
 import getArtists from "../../selectors/getArtists";
 
 function Artists() {
@@ -20,17 +21,8 @@ function Artists() {
       });
   }, []);
 
-  if (loading)
-    return (
-      <ActivityIndicator
-        style={{
-          flex: 1,
-          justifyContent: "center",
-        }}
-        size="large"
-        color="#0000ff"
-      />
-    );
+  if (loading) return <Spinner />;
+
   return (
     <View>
       {artistData.map(({ name }, i) => (
@@ -41,10 +33,3 @@ function Artists() {
 }
 
 export default Artists;
-/* <Image
-          key={i}
-          style={{ width: 50, height: 50 }}
-          source={{
-            uri: { photo },
-          }}
-        /> */
