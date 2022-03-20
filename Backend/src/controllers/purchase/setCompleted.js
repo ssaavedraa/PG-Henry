@@ -1,4 +1,5 @@
 const { Purchase } = require("../../db");
+const getToday = require("./Utils/getToday");
 
 const setCompleted = async (req, res) => {
   const { id } = req.params;
@@ -13,6 +14,7 @@ const setCompleted = async (req, res) => {
       });
     }
     purchase.state = "completed";
+    purchase.completedDate = getToday();
     await purchase.save();
     res.json({
       status: "ok",
