@@ -1,4 +1,5 @@
 const { Purchase } = require("../../db");
+const getToday = require("./Utils/getToday");
 
 const setCanceled = async (req, res) => {
   const { id } = req.params;
@@ -19,6 +20,7 @@ const setCanceled = async (req, res) => {
       });
     }
     purchase.state = "canceled";
+    purchase.canceledDate = getToday();
     await purchase.save();
     res.json({
       status: "ok",
