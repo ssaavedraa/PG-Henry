@@ -8,7 +8,6 @@ const ConfirmPurchase = () => {
 	//Me traje esto de payment
 	const { cart } = useCart();
 	const contactInfo = useSelector((state) => state.contactInfo);
-	console.log(contactInfo);
 
 	const getPaintings = async () => {
 		const paintings = [];
