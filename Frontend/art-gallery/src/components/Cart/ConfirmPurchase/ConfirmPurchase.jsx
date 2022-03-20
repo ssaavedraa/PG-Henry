@@ -1,8 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ConfirmPurchase.css";
+import axios from "axios";
+import useCart from "../../../customHooks/useCart";
 
 const ConfirmPurchase = () => {
   //Me traje esto de payment
+  const { cart } = useCart();
+
+  const getPaintings = async () => {
+    const paintings = [];
+    for (let i = 0; i < cart.length; i++) {
+      const dbPaiting = await axios.get(`/painting/get/${cart[i]}`);
+      paintings.push(dbPaiting.data);
+    }
+    return paintings;
+  };
+
+  const [paintings, setPaintings] = useState([]);
+
+  useEffect(() => {
+    getPaintings().then(res => setPaintings(res)).catch(err => console.log(err));
+  }, [cart]);
+
   useEffect(() => {
     const script = document.createElement("script");
 
@@ -57,12 +76,21 @@ const ConfirmPurchase = () => {
 
             <div className="NumberFloorUnitCart">
               <label>Unit</label>
-              <input type="text" name="Unit" />
+              <></>
             </div>
           </div>
         </div>
         <div className="divContainerItemsPurchase">
           <h3>Your order</h3>
+          {paintings && paintings.map((painting, i) => (
+                <div key={i} className="divContainerProductCart">
+                  <div>
+                    <p>{painting.title}</p>
+                    <img src={painting.photos[0].url} alt={painting.title} />
+                  </div>
+                  <p>USD$ {painting.price}</p>
+                </div>
+              ))}
           <div className='divContainerButtonMercadoPago'>
           <button id="button1"></button>
         </div>
