@@ -5,7 +5,7 @@ const emailSender = async (destinatary, name) => {
     const mailOptions = {
         from: TEST_USER,
         to: destinatary,
-        subject: "User Banned.",
+        subject: "Account suspended.",
         template: "userBan",
         context: {
             name

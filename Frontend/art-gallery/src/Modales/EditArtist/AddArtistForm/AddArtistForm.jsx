@@ -19,34 +19,48 @@ const AddArtistForm = (setOpenModalArtist) => {
     location: "",
   });
 
+  const [errors, setError] = useState({});
+  const [applyChanges, setApplyChanges] = useState(true);
+
+  function validate(input) {
+    setApplyChanges(true);
+    let errors = {};
+    if (!input.name || !input.biography || !input.email || !input.location) {
+      errors.message = "*All inputs are required";
+    } else if (!input.photo || !input.photo.startsWith("http")) {
+      errors.message = "*invalid photo";
+    } else {
+      setApplyChanges(false);
+    }
+    return errors;
+  }
+
   function handleChange(e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value, //va tomando el nombre de cada prop, me vaya llenando el estado
     });
+    setError(
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    confirmationSweet(input.name, confirm, closeModal, false, true);   
-    
+    confirmationSweet(input.name, confirm, closeModal, false, true);
   }
-  
+
   function confirm() {
     dispatch(addNewArtist(input));
-    navigate("/artists");   
+    navigate("/artists");
   }
 
   function closeModal() {
     setOpenModalArtist(false);
   }
-
-
-
-
-
-
 
   return (
     <>
@@ -191,7 +205,12 @@ const AddArtistForm = (setOpenModalArtist) => {
                 onChange={handleChange}
               />
               <div>
-                <button className="btn-create">CREATE</button>
+                <div className="error">
+                  {errors.message ? <p>{errors.message}</p> : <p></p>}{" "}
+                </div>
+                <button disabled={applyChanges} className="btn-addartist">
+                  CREATE
+                </button>
               </div>
             </form>
           </div>

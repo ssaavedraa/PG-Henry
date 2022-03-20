@@ -8,7 +8,6 @@ import useAuth from "../../customHooks/useAuth";
 
 //IsAdmin es una prop pasada para validar si es admin o usuario o guest
 function CardsPaints({ paintings }) {
- 
   const dispatch = useDispatch();
   const { user } = useAuth();
   const favs = useSelector((state) => state.favs);

@@ -16,8 +16,8 @@ import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
-import img from '../../assets/img/loading-img.gif'
-import './Detail.module.css'
+import img from "../../assets/img/loading-img.gif";
+import "./Detail.module.css";
 
 export const DetailOfArt = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ export const DetailOfArt = () => {
   const { user } = useAuth();
 
   const { detailObra, obraRandon } = useSelector((state) => state);
-  const [bigImage, setBigImage] = useState(0)
+  const [bigImage, setBigImage] = useState(0);
 
   const favs = useSelector((state) => state.favs);
   const favsPaitings = favs.map(({ id }) => id).includes(detailObra?.id);
@@ -40,7 +40,6 @@ export const DetailOfArt = () => {
     dispatch(getObraDetail(id));
     dispatch(getObrasRandon(id));
     dispatch(getFavs());
-  
   }, [id, dispatch, isFavorite]);
 
   useEffect(() => {
@@ -92,10 +91,11 @@ export const DetailOfArt = () => {
   };
 
   if (!detailObra || !obraRandon) {
-    return <div className="loading">
-    <img src={img} alt="img"/>
-    </div>
-    
+    return (
+      <div className="loading">
+        <img src={img} alt="img" />
+      </div>
+    );
   }
   return (
     <div className={styles.containerDetail}>
@@ -119,13 +119,16 @@ export const DetailOfArt = () => {
       <div className={styles.principalSectionInterno}>
         <div className={styles.internoimg}>
           <div className={styles.miniatureContainer}>
-            {
-              detailObra.photos.map((artwork, index) => {
-                return(
-                  <img src={artwork.url} alt={`img-${index}`} key={`img-${index}`} onClick={() => setBigImage(index)}/>
-                )
-              })
-            }
+            {detailObra.photos.map((artwork, index) => {
+              return (
+                <img
+                  src={artwork.url}
+                  alt={`img-${index}`}
+                  key={`img-${index}`}
+                  onClick={() => setBigImage(index)}
+                />
+              );
+            })}
           </div>
           <img src={detailObra.photos[bigImage].url} alt="img" />
         </div>
@@ -254,7 +257,9 @@ export const DetailOfArt = () => {
           </div>
         </div>
       </div>
-      <center><h1>More paintings</h1></center>
+      <div className={styles.divContainerTitleMorePaintings}>
+        <h1>Similar paintings</h1>
+      </div>
       <div className={styles.principalSectionObras}>
         <div
           onClick={handleDecrement}
@@ -271,6 +276,7 @@ export const DetailOfArt = () => {
                     className={styles.obrasSimilares}
                   >
                     <img src={obra.image} alt="cards" />
+                    <p>{obra.title}</p>
                   </div>
                 ))
             : ""}

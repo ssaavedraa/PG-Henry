@@ -24,6 +24,8 @@ import PayButton from "./components/MercadoPago/payment";
 import CheckoutButton from "./components/MercadoPago/checkoutButton";
 
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
+import CartForm from "./components/Cart/CartForm/CartForm";
+import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
 import { AboutDev } from "./components/aboutDev/AboutDev";
 
 
@@ -64,10 +66,9 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/favs" element={<Favs />} />
           <Route exact path="/testMP" element={<CheckoutButton />} />
-					<Route exact path="/contactInfo" element={<ContactInfo />} />
-					<Route exact path="/payment" element={<PayButton />} />
-
-          <Route exact path="/about" element={<AboutDev />} />
+					<Route exact path="/contactInfo" element={<CartForm />} />
+					<Route exact path="/payment" element={<ConfirmPurchase />} />
+          <Route exact path="/user" element={<MyProfile />} />
         </Routes>
         <Footer />
       </div>

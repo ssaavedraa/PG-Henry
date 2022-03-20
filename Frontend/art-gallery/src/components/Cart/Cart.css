@@ -52,15 +52,15 @@
   background-color: var(--btnHover-color);
 }
 
-.divPrecio {
-  justify-content: end;
-  border-bottom: 2px solid var(--fifth-color);
+.divPrecioCart {
+  justify-content: space-between;
+  border-bottom: 2px solid var(--third-color);
   width: 100%;
   display: flex;
   padding-bottom: 1rem;
 }
 
-.divPrecio button {
+.divPrecioCart button {
   margin-right: 6.5rem;
   outline: none;
   border: none;
@@ -72,10 +72,10 @@
   cursor: pointer;
 }
 
-.divPrecio h5 {
+.divPrecioCart h5 {
+  display: flex;
   text-align: end;
   align-items: flex-end;
-  justify-content: end;
   font-size: 1.15rem;
-  margin-bottom: -0.9rem;
+  margin-bottom: -0.5rem;
 }

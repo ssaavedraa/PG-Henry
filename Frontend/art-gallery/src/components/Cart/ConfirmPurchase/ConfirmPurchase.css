@@ -1,0 +1,55 @@
+.divContainerConfirmPurchase{
+    width: inherit;
+    margin: 3rem 9rem;
+}
+
+.divContainerConfirmPurchase h1{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.divContainerDetailsPurchase{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.divContainerInputsDetailPurchase{
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.divContainerInputsDetailPurchase input{
+    height: 1.75rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--fifth-color);
+}
+
+.divContainerInputsDetailPurchase  label{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.divContainerItemsPurchase {
+    width: 27rem;  
+}
+
+.divContainerButtonMercadoPago{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+#button1{
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 4rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #578bff;
+}

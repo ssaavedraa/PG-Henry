@@ -5,8 +5,8 @@
 		"email": "brianweidl@gmail.com",
 		"password": "1234",
 		"isBanned": false,
-		"role": "user",
-		"isVerified": true
+		"isVerified":true,
+		"role": "user"
 	},
 	{
 		"firstName": "Santiago",
@@ -14,8 +14,8 @@
 		"email": "santiagonunez@gmail.com",
 		"password": "1234",
 		"isBanned": false,
-		"role": "user",
-		"isVerified": true
+		"isVerified":true,
+		"role": "user"
 	},
 	{
 		"firstName": "Facundo",
