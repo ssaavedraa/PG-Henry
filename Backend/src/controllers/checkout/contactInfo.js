@@ -4,6 +4,7 @@ const contactInfo = async (req, res) => {
 	const {
 		firstName,
 		lastName,
+		email,
 		telephone,
 		postCode,
 		city,
@@ -11,11 +12,12 @@ const contactInfo = async (req, res) => {
 		streetNumber,
 		floor,
 		unit,
-
 		purchaseId,
 	} = req.body;
+
 	const paintingsIds = req.body.paintings;
 
+	console.log(req.body)
 	let paintings = [];
 	let totalPrice = 0;
 
@@ -33,6 +35,7 @@ const contactInfo = async (req, res) => {
 			telephone,
 			postCode,
 			city,
+			email,
 			street,
 			streetNumber,
 			floor,
@@ -46,7 +49,7 @@ const contactInfo = async (req, res) => {
 		purchase.contactInfoId = info.id;
 		await purchase.save();
 
-		res.json(info);
+		res.json({ status: "ok", info });
 	} catch (e) {
 		console.log(e);
 		res.send(e);
