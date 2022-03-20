@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import {
-  ActivityIndicator,
   Alert,
   Button,
   TextInput,
@@ -17,6 +16,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import symbolicateStackTrace from "react-native/Libraries/Core/Devtools/symbolicateStackTrace";
+import Spinner from "../../components/Spinner/Spinner.js";
 
 const popUp = (msg) => {
   Alert.alert("Login failed :(", msg, [{ text: "OK" }]);
@@ -42,7 +42,8 @@ function Login({ navigation }) {
         if (user.role !== "admin") {
           popUp(message);
         } else {
-          axios.defaults.headers.common["Authorization"] = token;
+          console.log(token);
+          axios.defaults.headers.common["Authorization"] = "Bearer " + token;
           navigation.replace("Home");
           return;
         }
@@ -55,17 +56,8 @@ function Login({ navigation }) {
     setLoading(false);
   };
 
-  if (loading)
-    return (
-      <ActivityIndicator
-        style={{
-          flex: 1,
-          justifyContent: "center",
-        }}
-        size="large"
-        color="#0000ff"
-      />
-    );
+  if (loading) return <Spinner />;
+
   return (
     <View style={style.loginForm}>
       <Image
@@ -95,7 +87,14 @@ function Login({ navigation }) {
       <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
         <Text style={style.textLogin}>Login</Text>
       </TouchableOpacity>
-      <Button title="PASA DERECHO" onPress={() => navigation.replace("Home")} />
+      <Button
+        title="PASA DERECHO"
+        onPress={() => {
+          axios.defaults.headers.common["Authorization"] =
+            "Bearer eyJhbGciOiJIUzI1NiJ9.Ng.UYrNTe6rvfYBwkOQgCZsJMGOyp2rVnkAt20QVwtsGOs";
+          navigation.replace("Home");
+        }}
+      />
     </View>
   );
 }
