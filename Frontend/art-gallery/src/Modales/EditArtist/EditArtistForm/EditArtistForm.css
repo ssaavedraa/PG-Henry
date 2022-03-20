@@ -79,19 +79,19 @@
 
 
 
-   .btn-create{
+   .btn-edit-artist{
        height: 3rem;
        width: 12rem;
        list-style: none;
-       background-color: var(--btnMain-Color);
+       background-color: rgb(212, 212, 212);
        border-radius: 20px;
        border-style: none;
        margin: 1rem; 
-       color: white;
+       
    }
 
-   .btn-create:hover{
-    background-color: var(--btnHover-color);
+   .btn-edit-artist:hover{
+    background-color:  rgb(160, 160, 160);
    }
 
   

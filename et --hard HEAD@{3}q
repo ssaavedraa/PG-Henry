@@ -1,0 +1,74 @@
+[33mbd93fce[m[33m ([m[1;36mHEAD -> [m[1;32myessy[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33m939c366[m HEAD@{1}: reset: moving to HEAD~2
+[33m951a4a5[m HEAD@{2}: pull origin development: Merge made by the 'recursive' strategy.
+[33m987ff7a[m[33m ([m[1;31morigin/yessy[m[33m)[m HEAD@{3}: commit: formularios controlados
+[33m939c366[m HEAD@{4}: pull origin development: Merge made by the 'recursive' strategy.
+[33mbd93fce[m[33m ([m[1;36mHEAD -> [m[1;32myessy[m[33m)[m HEAD@{5}: pull origin development: Merge made by the 'recursive' strategy.
+[33m4ff8465[m HEAD@{6}: pull origin development: Merge made by the 'recursive' strategy.
+[33m9780414[m HEAD@{7}: commit: detalles
+[33m085674d[m HEAD@{8}: pull origin development: Merge made by the 'recursive' strategy.
+[33m94df7ed[m HEAD@{9}: pull origin development: Merge made by the 'recursive' strategy.
+[33md6f867e[m HEAD@{10}: commit: sweet alert
+[33m291ad48[m HEAD@{11}: commit (merge): arreglado
+[33ma97ce1f[m HEAD@{12}: commit: alerts ready
+[33m841b95c[m HEAD@{13}: pull origin development: Fast-forward
+[33m30def32[m HEAD@{14}: commit: hola
+[33mdbe107b[m HEAD@{15}: commit: ultimo
+[33m4fee32d[m HEAD@{16}: commit: ultimo
+[33me6ad639[m HEAD@{17}: pull origin development: Merge made by the 'recursive' strategy.
+[33ma86a0d3[m HEAD@{18}: commit: ultimo
+[33m2dd3c9e[m HEAD@{19}: commit: -hola
+[33m9828a59[m HEAD@{20}: pull origin development: Merge made by the 'recursive' strategy.
+[33m1a593f2[m HEAD@{21}: pull origin development: Merge made by the 'recursive' strategy.
+[33m4649ec9[m HEAD@{22}: commit: ultimo
+[33m6d20c65[m HEAD@{23}: pull origin development: Merge made by the 'recursive' strategy.
+[33m5ca2c39[m HEAD@{24}: pull origin development: Merge made by the 'recursive' strategy.
+[33mb23c645[m HEAD@{25}: pull origin development: Merge made by the 'recursive' strategy.
+[33m47d5b8a[m HEAD@{26}: commit (merge): ultimo
+[33ma4de935[m HEAD@{27}: commit (merge): ultimo
+[33m0435641[m HEAD@{28}: commit: ultimo
+[33m01a084c[m HEAD@{29}: commit: ultimo
+[33me25c18a[m HEAD@{30}: pull origin development: Fast-forward
+[33mece0cef[m HEAD@{31}: commit (merge): ultimo
+[33mec6734f[m HEAD@{32}: commit: ultimo
+[33m68b141d[m HEAD@{33}: commit: forms ready
+[33m213da02[m HEAD@{34}: commit (merge): cambios
+[33m3184e52[m HEAD@{35}: commit: ultimo
+[33m6b3612b[m HEAD@{36}: pull origin development: Merge made by the 'recursive' strategy.
+[33mde9bded[m HEAD@{37}: commit (merge): add
+[33m2b36dd0[m HEAD@{38}: commit: add
+[33m698b85b[m HEAD@{39}: commit: adds ready
+[33m155232e[m HEAD@{40}: commit: add artists ready
+[33mc48b390[m HEAD@{41}: commit: hola
+[33mb4a8ff9[m HEAD@{42}: commit: hi
+[33m5b8dbd5[m HEAD@{43}: commit: 1
+[33ma66ec04[m HEAD@{44}: pull origin development: Merge made by the 'recursive' strategy.
+[33ma31bbe9[m HEAD@{45}: commit: ultimo
+[33m68c4ed7[m HEAD@{46}: pull origin development: Merge made by the 'recursive' strategy.
+[33mf8e4721[m HEAD@{47}: pull origin development: Merge made by the 'recursive' strategy.
+[33m95e8de9[m HEAD@{48}: pull origin development: Merge made by the 'recursive' strategy.
+[33m1156c5e[m HEAD@{49}: pull origin development: Merge made by the 'recursive' strategy.
+[33m6f4ec70[m HEAD@{50}: pull origin development: Merge made by the 'recursive' strategy.
+[33m75187d5[m HEAD@{51}: pull origin development: Merge made by the 'recursive' strategy.
+[33mb8554dd[m HEAD@{52}: pull origin development: Merge made by the 'recursive' strategy.
+[33meb65e16[m HEAD@{53}: commit: ultimo
+[33mf605eba[m HEAD@{54}: pull origin development: Fast-forward
+[33m56c0f84[m HEAD@{55}: checkout: moving from prueba to yessy
+[33mbd47ae0[m[33m ([m[1;32mprueba[m[33m)[m HEAD@{56}: commit (merge): nuevo
+[33m5ed94d3[m HEAD@{57}: commit: prueba
+[33m56c0f84[m HEAD@{58}: checkout: moving from yessy to prueba
+[33m56c0f84[m HEAD@{59}: pull origin development: Fast-forward
+[33mb86a27e[m HEAD@{60}: commit (merge): ultimo
+[33m4b685b8[m HEAD@{61}: commit: new
+[33m41c9e5f[m HEAD@{62}: commit: contact
+[33m3982bff[m HEAD@{63}: commit (merge): ok
+[33m70c0b59[m HEAD@{64}: commit: addart additems underconstruction ok
+[33m3b8ca01[m HEAD@{65}: pull origin development: Fast-forward
+[33m8861be8[m HEAD@{66}: commit (merge): hola
+[33m73937cb[m HEAD@{67}: commit: css y logo
+[33mab6c04d[m HEAD@{68}: commit: logo up
+[33mf54f676[m HEAD@{69}: pull origin development: Merge made by the 'recursive' strategy.
+[33m22ce697[m HEAD@{70}: commit: ultimo
+[33m0d25605[m[33m ([m[1;31morigin/FrontDev[m[33m)[m HEAD@{71}: checkout: moving from yessy to yessy
+[33m0d25605[m[33m ([m[1;31morigin/FrontDev[m[33m)[m HEAD@{72}: checkout: moving from main to yessy
+[33md7a653d[m[33m ([m[1;32mmain[m[33m)[m HEAD@{73}: clone: from https://github.com/ssaavedraa/PG-Henry.git

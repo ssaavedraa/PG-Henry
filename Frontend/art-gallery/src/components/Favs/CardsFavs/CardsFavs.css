@@ -81,6 +81,13 @@
   border: none;
   border-radius: 0.25rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.btnAddCartFavs:hover{
+  color: white;
+  background: rgb(29, 28, 28);
+  transition: all 1s;
 }
 
 .textAvalibleFavs {

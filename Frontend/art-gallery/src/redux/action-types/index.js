@@ -19,4 +19,7 @@ export const GET_STATS_ARTIST = "GET_STATS_ARTIST";
 export const CLEAR_ARTIST = "CLEAR_ARTIST";
 export const ADD_ARTIST = 'ADD_ARTIST'
 export const EDIT_ARTIST = 'EDIT_ARTIST'
-export const EDIT_PAINT = 'EDIT_PAINT'
+export const EDIT_PAINT = 'EDIT_PAINT';
+export const ADD_TECHNIQUE = 'ADD_TECHNIQUE';
+export const ADD_PAINTING = 'ADD_PAINTING';
+

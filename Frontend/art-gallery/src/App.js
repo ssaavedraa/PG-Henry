@@ -18,10 +18,18 @@ import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
 import Favs from "./components/Favs/Favs";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import ContactInfo from "./components/MercadoPago/ContactInfo";
+import PayButton from "./components/MercadoPago/payment";
+
+import CheckoutButton from "./components/MercadoPago/checkoutButton";
 
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
+import CartForm from "./components/Cart/CartForm/CartForm";
+import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
+
 
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -56,6 +64,10 @@ function App() {
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/favs" element={<Favs />} />
+          <Route exact path="/testMP" element={<CheckoutButton />} />
+					<Route exact path="/contactInfo" element={<CartForm />} />
+					<Route exact path="/payment" element={<ConfirmPurchase />} />
+          <Route exact path="/user" element={<MyProfile />} />
         </Routes>
         <Footer />
       </div>

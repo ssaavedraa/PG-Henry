@@ -3,9 +3,12 @@ import "./ButtonsStyles.css";
 
 
 
-export function confirmationSweet(name,execute,closeModal,isEdit,isArtist){
+export function confirmationSweet(name,execute,closeModal,isEdit,isArtist, isTech){
 
-  const detail = isArtist === true ? "artist" : "painting";
+  const detail = 
+  isArtist === true ? "artist" : 
+  isTech === true ?  "Technique": "painting";
+
 
   const edit = {
     title : 'Are you sure to change the data?',

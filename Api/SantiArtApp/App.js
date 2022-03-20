@@ -6,9 +6,9 @@ import Login from "./views/Login/Login";
 import Home from "./views/Home";
 import axios from "axios";
 import PurchaseDetail from "./views/PurchaseDetail/PurchaseDetail";
+import { API_URL } from "@env";
 
-axios.defaults.baseURL = "https://santart-backend.herokuapp.com/";
-
+axios.defaults.baseURL = API_URL || "https://santart-backend.herokuapp.com/";
 const Stack = createStackNavigator();
 
 export default function App() {

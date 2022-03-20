@@ -30,10 +30,9 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
     });
   }, [artistData]);
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(getArtistById());
-  },[dispatch])
-
+  }, [dispatch]);
 
   const [input, setInput] = useState({
     name: artistData.name,
@@ -43,11 +42,33 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
     location: artistData.location,
   });
 
+  const [errors, setError] = useState({});
+  const [applyChanges, setApplyChanges] = useState(true);
+
+  function validate(input) {
+    setApplyChanges(true);
+    let errors = {};
+    if (!input.name || !input.biography || !input.email || !input.location) {
+      errors.message = "*All inputs are required";
+    } else if (!input.photo || !input.photo.startsWith("http")) {
+      errors.message = "*invalid photo";
+    } else {
+      setApplyChanges(false);
+    }
+    return errors;
+  }
+
   function handleChange(e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value, //va tomando el nombre de cada prop, me vaya llenando el estado
     });
+    setError(
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
   }
 
   function handleSubmit(e) {
@@ -60,12 +81,12 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
       - cuarto argumento: Booleano 'true' si es para edita, 'false' si es para agregar
       - quinto argumento: Booleano 'true' si es artista, 'false' si es una obra
     */
-    confirmationSweet(artistData.name,confirm, closeModal, true, true);
+    confirmationSweet(artistData.name, confirm, closeModal, true, true);
   }
 
   function confirm() {
     dispatch(editArtist(id, input));
-    navigate("/artists")
+    
   }
 
   function closeModal() {
@@ -97,7 +118,6 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
                 key="photo"
                 className="input-addartist"
                 required
-                
                 value={input.photo}
                 name="photo"
                 onChange={handleChange}
@@ -109,7 +129,6 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
                 autoComplete="off"
                 key="name"
                 className="input-addartist"
-                
                 value={input.name}
                 name="name"
                 onChange={handleChange}
@@ -122,7 +141,6 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
                 key="email"
                 className="input-addartist"
                 required
-                
                 value={input.email}
                 name="email"
                 onChange={handleChange}
@@ -214,12 +232,16 @@ const EditArtistForm = ({ artistId, setOpenEditArtistModal }) => {
                 name="biography"
                 key="biography"
                 className="input-addartist"
-                
                 value={input.biography}
                 onChange={handleChange}
               />
               <div>
-                <button className="btn-create">UPDATE DATA</button>
+                <div className="error">
+                  {errors.message ? <p>{errors.message}</p> : <p></p>}{" "}
+                </div>
+                <button disabled={applyChanges} className="btn-edit-artist">
+                  UPDATE DATA
+                </button>
               </div>
             </form>
           </div>
