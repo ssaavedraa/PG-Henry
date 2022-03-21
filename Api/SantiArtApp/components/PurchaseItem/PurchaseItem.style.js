@@ -7,24 +7,20 @@ import {
 
 export default StyleSheet.create({
   containerPurchase: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: wp('88%'),
-    alignContent: 'center',
-    alignItems: 'center',
-    paddingLeft: wp('1%'),
-    marginBottom: wp('2%')
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: wp("88%"),
+    alignContent: "center",
+    alignItems: "center",
+    paddingLeft: wp("1%"),
+    marginBottom: wp("2%"),
   },
   textName: {
-    fontWeight: 'bold',
-    fontSize: hp('2%')
+    fontWeight: "bold",
+    fontSize: hp("2%"),
   },
-  completed:{
-    color: 'green',
-    fontWeight: 'bold'
+  textPurchase: {
+    fontWeight: "bold",
+    fontSize: hp('1.75%')
   },
-  others:{
-    color: '#FFD32D',
-    fontWeight: 'bold'
-  }
 });

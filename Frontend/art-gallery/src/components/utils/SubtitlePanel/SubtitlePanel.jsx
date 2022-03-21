@@ -5,9 +5,9 @@ function SubtitlePanel({isAdmin}) {
   //quitamos y mostramos lo que necesitamos
   return (
     <div className="sales-titles-header">
-      <h5 className="product-sales">Product</h5>
+      <h5 className="id-sales">ID</h5>
       <h5 className="purchase-sales">Date of Purchase</h5>
-      <h5 className="shipment-sales">Shipment date</h5>
+      <h5 className="price-sales">Price</h5>
       {isAdmin === true ? <h5 className="customer-sales">Customer</h5> : null}
       <h5 className="status-sales">Status</h5>
     </div>
