@@ -13,7 +13,7 @@ export default function CheckoutButton() {
 			paintingsIds: cart,
 			userId: user.id === -1 ? null : user.id,
 		};
-		//console.log('soy obj en checkoutButton', obj)
+
 		const response = await axios.post("checkout/checkAvailable", obj);
 
 		if (response.data.isAvailable) {
@@ -27,13 +27,16 @@ export default function CheckoutButton() {
 			} catch (e) {
 				console.log(e);
 			}
+		} else {
+			//Agregar mensaje de no estan disponibles
+			return;
 		}
 		navigate("/contactInfo");
 	};
 
 	//Comentarios de Eli
 	//Renderizo este boton y su logica en cart en el boton que antes
-	//era 'buy'. 
+	//era 'buy'.
 	return (
 		<div>
 			<button onClick={handleClick}>Continue</button>
