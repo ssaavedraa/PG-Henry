@@ -13,7 +13,7 @@ export default StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     paddingLeft: wp('1%'),
-    marginBottom: wp('2%')
+    marginBottom: wp('2%'),
   },
   textName: {
     fontWeight: 'bold',
@@ -26,5 +26,5 @@ export default StyleSheet.create({
   others:{
     color: '#FFD32D',
     fontWeight: 'bold'
-  }
+  },
 });

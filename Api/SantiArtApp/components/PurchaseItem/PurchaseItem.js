@@ -5,7 +5,6 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import style from "./PurchaseItem.style";
 
 function PurchaseItem({ purchase, navigation }) {
-
   return (
     <ListItem>
       <View style={style.containerPurchase}>
@@ -14,15 +13,19 @@ function PurchaseItem({ purchase, navigation }) {
             {purchase.contactInfo.firstName} {purchase.contactInfo.lastName}
           </Text>
           <Text
-          style={purchase.state === 'completed' ? style.completed : style.others}
-          >{purchase.state}</Text>
+            style={
+              purchase.state === "completed" ? style.completed : style.others
+            }
+          >
+            {purchase.state}
+          </Text>
         </View>
         <Text style={style.textName}>$ {purchase.totalPrice}</Text>
         <TouchableOpacity
           onPress={() => navigation.navigate("PurchaseDetail", { purchase })}
         >
           <MaterialCommunityIcons
-            style={{ fontSize: 32 }}
+            style={{ fontSize: 30 }}
             name="ellipsis-vertical"
           />
         </TouchableOpacity>
