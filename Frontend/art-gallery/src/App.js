@@ -27,6 +27,8 @@ import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 import CartForm from "./components/Cart/CartForm/CartForm";
 import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
 import { AboutDev } from "./components/aboutDev/AboutDev";
+import { FormContacArtist } from "./components/FormContac/FormContacArtist";
+import { FormContac_1 } from "./components/FormContac/FormContac_1";
 
 
 function App() {
@@ -69,6 +71,8 @@ function App() {
 					<Route exact path="/contactInfo" element={<CartForm />} />
 					<Route exact path="/payment" element={<ConfirmPurchase />} />
           <Route exact path="/user" element={<MyProfile />} />
+         
+
         </Routes>
         <Footer />
       </div>
