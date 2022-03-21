@@ -45,10 +45,7 @@
   transition: 0.2s;
 }
 
-.linksNav:active {
-  color: var(--primary-color);
-  background-color: transparent !important;
-}
+
 
 .icon {
   font-size: 1.5rem;
@@ -67,20 +64,19 @@
   height: 50%;
 }
 
-.linksNav {
+.linksNav, .links_Active {
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none !important;
   color: var(--bgMainColor);
 }
 
-/* .linksNav h5 {
-  margin-top: 0em;
+.links_Active{
+  text-decoration: overline !important;
+  color: var(--primary-color);
+  background-color: transparent !important;
 }
 
-.nav_links h4, .nav_links h5, .linksNav{
-    margin-top: .3em;
-} */
 
 
 .btn_access {
@@ -132,7 +128,7 @@
     background-color: rgb(173, 6, 6);
 }
 
-.linksNav:active{
+.logoutNav:active{
     background-color: rgb(219, 2, 2);
 }
 

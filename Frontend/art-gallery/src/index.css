@@ -20,6 +20,9 @@ a{
   --btnMain-Color: #168AAD;
   --btnSecond-Color: #000000;
   --btnHover-color: #00485e;
+
+  --canceled-color: #FF0000;
+  --completed-color: #008000;
 }
 
 body {
