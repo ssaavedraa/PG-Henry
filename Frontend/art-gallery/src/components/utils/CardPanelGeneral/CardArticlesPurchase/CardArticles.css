@@ -10,6 +10,7 @@
   
   .articleCard,
   .sectionSupArticle,
+  .sectionDownArticle,
   .info-article {
     display: flex;
   }
@@ -36,7 +37,7 @@
   }
   
   .sectionSupArticle h5{
-    text-align: left;
+    
     height: 100%;
     width: 70%;
   }
@@ -55,11 +56,16 @@
     width: 95%;
     height: 95%;
     margin: 0.2em;
+    object-fit: contain;
   }
   
   .sectionDownArticle {
-    margin-top: 0.2em;
-    margin-left: 0.4em;
+    margin: .5em auto;
     height: 22%;
+    width: 90%;
+    justify-content: center;
   }
   
+  .articleCard .customer-purchase-data h5{
+    text-align: left;
+  }

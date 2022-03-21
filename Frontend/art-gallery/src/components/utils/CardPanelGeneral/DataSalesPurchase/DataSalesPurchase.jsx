@@ -111,6 +111,7 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
                     id={purch.id}
                     price={purch.price}
                     title={purch.title}
+                    img={purch.photos}
                   />
                 ))
               : null}

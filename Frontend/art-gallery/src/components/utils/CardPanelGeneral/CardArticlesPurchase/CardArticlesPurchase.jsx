@@ -15,7 +15,7 @@ function CardArticlesPurchase({id, price, img, title}) {
             </div>
           </section>
           <section className="sectionMiddleArticle">
-            <img src="" alt="img-article" className="img-article" />
+            <img src={img[0].url} alt="img-article" className="img-article" />
           </section>
           <section className="sectionDownArticle">
             <div className="customer-purchase-data">

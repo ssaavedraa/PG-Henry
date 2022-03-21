@@ -80,8 +80,8 @@
 /*Btn Review*/
 .btnReviewPurchase {
   height: 27%;
-  width: 15%;
-  margin: auto;
+  width: 13%;
+  margin: .7em;
   cursor: pointer;
   outline: none;
   border: none;
