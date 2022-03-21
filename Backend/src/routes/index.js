@@ -11,6 +11,7 @@ const favoriteRoute = require("./favoriteRoute.js");
 const cartRoute = require("./cartRoute.js");
 const checkoutRoute = require("./checkoutRoute.js");
 const purchaseRoute = require("./purchaseRoute");
+const contactRoute = require("./contactRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -41,5 +42,6 @@ router.use(
 	passport.authenticate("jwt", { session: false }),
 	purchaseRoute
 );
+router.use("/contact", contactRoute);
 
 module.exports = router;
