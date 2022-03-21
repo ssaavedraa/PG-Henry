@@ -6,17 +6,55 @@ import {
 } from "react-native-responsive-screen";
 
 export default StyleSheet.create({
+  containerContainer: {
+    backgroundColor: "white",
+    marginTop: wp('4%')
+  },
   container: {
-    width: wp("100%"),
-    height: hp("8%"),
-    flexDirection: "row",
+    padding: wp("2%"),
     justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: "row",
+    backgroundColor: "white",
+    marginBottom: wp('2.5%')
+  },
+  textFilter: {
+    margin: wp('2%'),
+    fontSize: hp("2.2%"),
+    textAlign: "center",
+    fontWeight: "bold",
   },
   filterSelected: {
-    backgroundColor: "#878787",
+    backgroundColor: "#f5f5f5",
+    elevation: 2,
+    height: hp("12%"),
+    width: wp("17%"),
+    justifyContent: "center",
+    borderColor: "#f5f5f5",
+    borderWidth: wp("0.75%"),
+    borderRadius: wp("1%"),
   },
   filter: {
-    backgroundColor: "#ffffff",
+    height: hp("12%"),
+    width: wp("17%"),
+    justifyContent: "center",
+    borderColor: "#f5f5f5",
+    borderWidth: wp("0.75%"),
+    borderRadius: wp("1%"),
+    elevation: 2,
+    backgroundColor: "white",
+    
+  },
+  iconText: {
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  textNameFilter: {
+    fontSize: hp("1.25%"),
+    fontWeight: "bold",
+  },
+  icons: {
+    fontSize: hp("5.5%"),
+    color: 'black'
   },
 });
