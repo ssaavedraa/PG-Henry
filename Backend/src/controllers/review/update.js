@@ -1,10 +1,9 @@
 const { Review } = require("../../db");
 const updateScore = require("./utils/updateScore.js");
 
-
 const update = async (req, res) => {
 	const updateId = req.params.id;
-	const userId = req.body.userId;
+	const userId = req.user.id;
 	const review = await Review.findOne({
 		where: { userId: userId, id: updateId },
 		attributes: ["artistId"],

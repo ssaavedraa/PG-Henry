@@ -2,7 +2,7 @@ const { Review } = require("../../db");
 
 const remove = async (req, res) => {
 	const deleteId = req.params.id;
-	const userId = req.body.userId;
+	const userId = req.user.id;
 	const review = await Review.findOne({ where: { userId: userId } });
 	if (!review) return res.status(400).send("You can only delete your reviews");
 
