@@ -1,4 +1,5 @@
 const { Purchase } = require("../../db");
+const getToday = require("./Utils/getToday");
 
 const setDispatched = async (req, res) => {
   const { id } = req.params;
@@ -13,6 +14,7 @@ const setDispatched = async (req, res) => {
       });
     }
     purchase.state = "dispatched";
+    purchase.dispatchedDate = getToday();
     await purchase.save();
     res.json({
       status: "ok",

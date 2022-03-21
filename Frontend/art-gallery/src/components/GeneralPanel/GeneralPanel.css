@@ -8,7 +8,6 @@
 
 .sales-titles-header,
 .id-sales,
-.product-sales,
 .purchase-sales,
 .price-sales,
 .customer-sales,
@@ -21,10 +20,11 @@
   height: 7%;
   margin-left: 1.2em;
   color: var(--eigth-color);
+  display: flex;
+  justify-content: space-around;
 }
 
 .id-sales,
-.product-sales,
 .purchase-sales,
 .price-sales,
 .customer-sales,
@@ -40,7 +40,7 @@
   width: 8%;
 }
 
-.product-sales, .status-sales{
+.status-sales{
   width: 19%;
 }
 
@@ -60,7 +60,7 @@
 /*Container Data*/
 .sales-data-container {
   width: 100%;
-  height: 70%;
+  height: 73%;
   margin: 0 auto;
   overflow-y: auto;
 }

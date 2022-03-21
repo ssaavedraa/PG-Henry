@@ -46,6 +46,7 @@
     "width": 142.2,
     "price": 2500,
     "photos": [
+      "https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg",
       "https://www.artic.edu/iiif/2/0cb68b62-a531-9b60-4536-c5d35c6ab335/full/843,/0/default.jpg"
     ],
     "artistId": 1,
@@ -384,6 +385,7 @@
     "techniqueIds": [4],
     "price": "10000",
     "photos": [
+      "https://katelouisepowelldotcom.files.wordpress.com/2021/07/pauline-fin.jpeg?w=700",
       "https://katelouisepowelldotcom.files.wordpress.com/2021/07/pauline-fin.jpeg?w=700"
     ],
     "height": "1.20",

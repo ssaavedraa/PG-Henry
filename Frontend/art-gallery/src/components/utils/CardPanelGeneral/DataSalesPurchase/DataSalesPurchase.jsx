@@ -1,21 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classnames from "classnames";
-import {
-  updateStatus,
-  getAllPurchase,
-} from "../../../../redux/actions/actions";
+import { getAllPurchase } from "../../../../redux/actions/actions";
 import { useDispatch } from "react-redux";
+import CardArticlesPurchase from "../CardArticlesPurchase/CardArticlesPurchase";
+import ContactInfoPurchase from "../SectionSupSeal/ContactInfoPurchase";
+import DatesPurchase from "../SectionSupSeal/DatesPurchase";
 
 function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
   const [state, setState] = useState(purchase.state);
   const dispatch = useDispatch();
+  const size =
+    purchase.paintings.length < 3
+      ? "resizeSubcontainer"
+      : "resizeLengthSubcontainer";
 
   function detailedInformation(index) {
     const containerData = document.getElementsByClassName(
       "sales-data-subcontainer"
     );
     const btnArrow = document.getElementsByClassName("btnArrowSale");
-    containerData[index].classList.toggle("resizeSubcontainer");
+    containerData[index].classList.toggle(`${size}`);
     btnArrow[index].innerHTML = btnArrow[index].innerHTML === "▲" ? "▼" : "▲";
   }
 
@@ -44,7 +48,6 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
     <div className="sales-data-subcontainer">
       <div className="sales-main-data">
         <h5 className="id-sales">{purchase.id}</h5>
-        <img src="" alt="img-sale-main" className="product-sales" />
         <h5 className="purchase-sales">{purchase.createdAt}</h5>
         <h5 className="price-sales">{purchase.totalPrice}</h5>
         {isAdmin === true ? (
@@ -64,52 +67,41 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
       ) : null}
 
       <div className="detail-seal-data">
-        <div className="img-data-seal-id">
-          <h5>Id:&nbsp;&nbsp;{purchase.id}</h5>
-          <img src="" alt="img-sale" className="img-sale-detail" />
-        </div>
-        <div className="specific-seal-data">
-          <div className="customer-purchase-data">
-            <label>Date Purchase:&nbsp;&nbsp;</label>
-            <h5>{purchase.createdAt}</h5>
+        <section className="sectionSupSeal">
+          <DatesPurchase purchase={purchase}/>
+          <ContactInfoPurchase fullName={fullName} detailData={detailData}/>
+          <div className="status-detail-data">
+            <div className="customer-purchase-data">
+              <label>Price:&nbsp;&nbsp;</label>
+              <h5>{purchase.totalPrice}</h5>
+            </div>
+            <OptionsSelect
+              state={purchase.state}
+              onChangeState={onChangeState}
+            />
+            {state !== purchase.state && (
+              <button className="btnReviewPurchase" onClick={updateState}>
+                Update State
+              </button>
+            )}
           </div>
-          <div className="customer-purchase-data">
-            <label>Customer:&nbsp;&nbsp;</label>
-            <h5>{fullName}</h5>
+        </section>
+
+        <section className="sectionDownSeal">
+          <h5>Articles</h5>
+          <div className="cardsArticlePurchase">
+            {purchase.paintings.length > 0
+              ? purchase.paintings.map((purch) => (
+                  <CardArticlesPurchase
+                    key={purch.id}
+                    id={purch.id}
+                    price={purch.price}
+                    title={purch.title}
+                  />
+                ))
+              : null}
           </div>
-          <div className="customer-purchase-data">
-            <label>Telephone:&nbsp;&nbsp;</label>
-            <h5>{detailData.telephone}</h5>
-          </div>
-          <div className="customer-purchase-data">
-            <label>Email:&nbsp;&nbsp;</label>
-            <h5>{detailData.email}</h5>
-          </div>
-          <div className="customer-purchase-data">
-            <label>City:&nbsp;&nbsp;</label>
-            <h5>{detailData.city}</h5>
-          </div>
-          <div className="customer-purchase-data">
-            <label>Street:&nbsp;&nbsp;</label>
-            <h5>{detailData.street}</h5>
-          </div>
-          <div className="customer-purchase-data">
-            <label>Street Number:&nbsp;&nbsp;</label>
-            <h5>{detailData.streetNumber}</h5>
-          </div>
-          <div className="customer-purchase-data">
-            <label>Floor:&nbsp;&nbsp;</label>
-            <h5>{detailData.floor}</h5>
-          </div>
-        </div>
-        <div className="status-detail-data">
-          <OptionsSelect state={purchase.state} onChangeState={onChangeState} />
-          {state !== purchase.state && (
-            <button className="btnReviewPurchase" onClick={updateState}>
-              Update State
-            </button>
-          )}
-        </div>
+        </section>
       </div>
     </div>
   );
@@ -126,8 +118,6 @@ function OptionsSelect({ state, onChangeState }) {
           <option value="pending">Pending</option>;
         </select>
       );
-
-      break;
     case "pending":
       return (
         <select name="state" onChange={onChangeState}>
@@ -136,7 +126,6 @@ function OptionsSelect({ state, onChangeState }) {
           <option value="canceled">Canceled</option>;
         </select>
       );
-      break;
     case "dispatched":
       return (
         <select name="state" onChange={onChangeState}>

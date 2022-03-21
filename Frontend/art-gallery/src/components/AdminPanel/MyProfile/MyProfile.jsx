@@ -196,8 +196,7 @@ const MyProfile = () => {
     <>
       <div className="admin-box">
         <NavPanel />
-        <div className="component-box">
-          <h2>Admin panel</h2>
+        <div className="component-box">          
           <div className="user-info">
             <img src={img} className="img-profile" alt="profile"/>
             <p>{user.role}</p>

@@ -18,9 +18,10 @@ import {
   GET_STATS_ARTIST,
   ADD_ARTIST,
   EDIT_PAINT,
-  ADD_TECHNIQUE,
   GET_ALL_SP,
-  UPDATE__SP,
+  EDIT_ARTIST,
+  ADD_TECHNIQUE,
+  ADD_PAINTING,
 } from "../action-types";
 
 const detailObra = {
@@ -172,6 +173,12 @@ function rootReducer(state = initialState, action) {
         ...state,
         artist: [...state.artist, action.payload],
       };
+
+    case ADD_PAINTING:
+      return {
+        ...state,
+        paintings: [...state.paintings, action.payload],
+      };
     case EDIT_PAINT:
       let artworks = [...state.paintings];
       let modifiedArtworkIndex = artworks.findIndex(
@@ -187,22 +194,16 @@ function rootReducer(state = initialState, action) {
         ...state,
         technique: [...state.technique, action.payload],
       };
+    case EDIT_ARTIST:
+      return {
+        ...state,
+        artistId: [...state.artistId, action.payload],
+      };
     case GET_ALL_SP:
       return {
         ...state,
         purchase: action.payload,
       };
-/*     case UPDATE__SP:
-      let purchases = [...state.purchase];
-      console.log(action.payload);
-      let updatePurchaseIndex = purchases.findIndex(
-        (purch) => purch.id === action.payload.id
-      );
-      purchases[updatePurchaseIndex] = action.payload;
-      return {
-        ...state,
-        purchase: purchases,
-      }; */
     default:
       return state;
   }

@@ -90,7 +90,7 @@ export default function NavBar() {
           </li>
         ) : (
           <li>
-            <NavLink to="/under" className={styles.linksNav}>
+            <NavLink to="/user" className={styles.linksNav}>
               <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>

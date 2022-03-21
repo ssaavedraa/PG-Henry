@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import axios from "axios";
 
 export default function PayButton() {
 	useEffect(() => {
@@ -12,6 +11,7 @@ export default function PayButton() {
 			"https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js";
 		script.setAttributeNode(attr_data_preference);
 
+		// Elemento en el que renderizo, div, boton
 		document.getElementById("form1").appendChild(script);
 		return () => {
 			document.getElementById("form1").removeChild(script);
@@ -20,8 +20,7 @@ export default function PayButton() {
 
 	return (
 		<div>
-			<h1>MERCDOPAGO BUTON</h1>
-
+			<h1>Confirm your purchase</h1>
 			<form id="form1"></form>
 		</div>
 	);

@@ -192,7 +192,6 @@
 
 .internoimg {
   width: 45rem;
-  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -208,20 +207,20 @@
   transition: all 2s;
 }
 
-.miniatureContainer{
+.miniatureContainer {
   display: flex;
   flex-direction: row;
-  margin: 1vh;
+  margin: 3vh;
   justify-content: center;
 }
 
-.miniatureContainer img{
+.miniatureContainer img {
   margin: 1.5vh;
   width: 20%;
   height: auto;
 }
 
-.miniatureContainer img:hover{
+.miniatureContainer img:hover {
   transform: scale(1.1);
 }
 
@@ -369,19 +368,26 @@
 .obrasSimilares {
   width: 200px;
   height: 200px;
-
-  /* border-radius: 20px; */
+  margin-bottom: 10vh;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
+
+.obrasSimilares p{
+margin-top: 2vh;
+}
+
 .obrasSimilares img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   cursor: pointer;
-  transition: all 1.5s;
+  transition: all 1.1s;
 }
 .obrasSimilares img:hover {
-  transition: all 1.5s;
-  transform: scale(1.4);
+  transition: all 1.1s;
+  transform: scale(1.1);
 }
 @media (max-width: 689px) {
 }
@@ -417,10 +423,10 @@
   padding: 0.25rem 0rem;
 }
 
-.divContainerButtonAvailable span{
-font-weight: bold;
-font-size: 0.8rem;
-padding-bottom: 0.25rem;
+.divContainerButtonAvailable span {
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding-bottom: 0.25rem;
 }
 
 .divContainerPriceAvalible {
@@ -451,4 +457,14 @@ padding-bottom: 0.25rem;
 .pTextPaintingSold {
   color: green;
   font-weight: bold;
+}
+
+.divContainerTitleMorePaintings {
+  margin-left: 4rem;
+  margin-top: 1vh;
+  border-bottom: 0.2rem solid var(--third-color);
+}
+
+.divContainerTitleMorePaintings h1 {
+  font-size: 1.9rem;
 }

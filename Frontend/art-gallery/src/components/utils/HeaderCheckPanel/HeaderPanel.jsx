@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeaderPanel.css";
 
-function HeaderCheckPanel({ title, setState }) {
+function HeaderCheckPanel({ title, setState, state }) {
   function onChangeFilter(e) {
     const check1 = document.getElementsByName("pending");
     const check2 = document.getElementsByName("dispatched");
@@ -11,7 +11,17 @@ function HeaderCheckPanel({ title, setState }) {
     if(!check1[0].checked && !check2[0].checked && !check3[0].checked && !check4[0].checked){
       setState({ state: "" });
     }else{
-      setState({ state: e.target.name });
+      if(state.state.includes("pending") && e.target.name === "pending" ){
+        setState({state: state.state.replace(`${e.target.name},`, "")});
+      }
+      else if(state.state.includes(e.target.name)){
+        setState({state: state.state.replace(`,${e.target.name}`, "")});
+      }
+      else if(state.state !== ""){
+        setState({ state: state.state.concat(`,${e.target.name}`) });
+      }else{
+        setState({ state: e.target.name });
+      }
     }
     
   }

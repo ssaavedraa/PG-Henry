@@ -1,7 +1,7 @@
 /*sales-data-subcontainer*/
 .sales-data-subcontainer {
   width: 95%;
-  height: 40%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   margin-top: 0.8em;
@@ -37,27 +37,37 @@
 
 .resizeSubcontainer {
   transition: 0.4s;
-  height: 75%;
+  height: 120%;
 }
 
-.resizeSubcontainer .sales-main-data {
+.resizeLengthSubcontainer{
+  transition: 0.4s;
+  height: 160%;
+}
+
+.resizeSubcontainer .sales-main-data, .resizeLengthSubcontainer .sales-main-data {
   display: none;
 }
 
-.resizeSubcontainer .detail-seal-data {
+.resizeSubcontainer .detail-seal-data, .resizeLengthSubcontainer .detail-seal-data {
   display: flex;
 }
 
 /*Sub Container Render Main Data*/
+
+.resizeLengthSubcontainer .sales-main-data{
+  width: 30%;
+}
+
 .sales-main-data {
   width: 100%;
   height: 85%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   border-radius: 0.4em;
 }
 
-.sales-main-data .product-sales,
 .sales-main-data .purchase-sales,
 .sales-main-data .shipment-sales,
 .sales-main-data .customer-sales,
@@ -89,18 +99,59 @@
 }
 
 /*Detail Data*/
+
+.resizeSubcontainer .arrow-sales{
+  height: 6%;
+}
+
+.resizeLengthSubcontainer .arrow-sales{
+  height: 6%;
+}
+
+.resizeLengthSubcontainer .sectionSupSeal, .resizeLengthSubcontainer .sectionDownSeal{
+  height: 35%;
+}
+
+.detail-seal-data,
+.sectionSupSeal,
+.sectionDownSeal {
+  display: flex;
+}
+
 .detail-seal-data {
   width: 100%;
-  height: 85%;
+  height: 92%;
   display: none;
+  flex-direction: column;
+}
+
+.sectionSupSeal {
+  width: 100%;
+  height: 48%;
+  justify-content: space-around;
+}
+
+.sectionDownSeal {
+  width: 98%;
+  height: 52%;
+  margin-top: 0.6em;
+  margin-left: 0.6em;
+  flex-direction: column;
+}
+
+.sectionDownSeal h5 {
+  height: 13%;
+  width: 100%;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .img-data-seal-id {
   width: 30%;
+  margin: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .img-sale-detail {
@@ -111,7 +162,7 @@
 }
 
 .specific-seal-data {
-  width: 40%;
+  width: 35%;
   padding: 0.5em;
 }
 
@@ -137,7 +188,7 @@
 }
 
 .status-detail-data {
-  width: 30%;
+  width: 20%;
   height: 100%;
   padding: 0.5em;
   display: flex;
@@ -151,26 +202,25 @@
 
 .status-detail-data select {
   height: 13%;
-  width: 40%;
+  width: 60%;
   border-radius: 0.4em;
   outline: none;
 }
 
 .status-detail-data .btnReviewPurchase {
-  width: 50%;
+  width: 70%;
   height: 13%;
   margin-top: 1em;
 }
 
-.sales-data-subcontainer .status-sales{
+.sales-data-subcontainer .status-sales {
   color: var(--primary-color);
 }
 
-.canceled{
-    color: var(--canceled-color) !important;
+.canceled {
+  color: var(--canceled-color) !important;
 }
 
-.completed{
-    color: var(--completed-color) !important;
+.completed {
+  color: var(--completed-color) !important;
 }
-
