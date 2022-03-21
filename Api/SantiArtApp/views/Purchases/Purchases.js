@@ -25,6 +25,8 @@ function Purchases(props) {
       });
   }, [filter]);
 
+  
+
   if (loading) return <Spinner />;
   return (
     <View>

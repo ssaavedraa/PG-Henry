@@ -6,8 +6,25 @@ import {
 } from "react-native-responsive-screen";
 
 export default StyleSheet.create({
-  detailBtn: {
-    borderWidth: 1,
-    borderRadius: 2,
+  containerPurchase: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: wp('88%'),
+    alignContent: 'center',
+    alignItems: 'center',
+    paddingLeft: wp('1%'),
+    marginBottom: wp('2%')
   },
+  textName: {
+    fontWeight: 'bold',
+    fontSize: hp('2%')
+  },
+  completed:{
+    color: 'green',
+    fontWeight: 'bold'
+  },
+  others:{
+    color: '#FFD32D',
+    fontWeight: 'bold'
+  }
 });
