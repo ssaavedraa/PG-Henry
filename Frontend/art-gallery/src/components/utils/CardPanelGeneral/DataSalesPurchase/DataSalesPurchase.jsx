@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import { getAllPurchase } from "../../../../redux/actions/actions";
 import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
 import CardArticlesPurchase from "../CardArticlesPurchase/CardArticlesPurchase";
 import ContactInfoPurchase from "../SectionSupSeal/ContactInfoPurchase";
 import DatesPurchase from "../SectionSupSeal/DatesPurchase";
@@ -35,6 +36,7 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
       .then((succe) => dispatch(getAllPurchase()))
       .catch((err) => console.log(err));
     detailedInformation(index);
+    toast.success(`Status has been updated to ${state}!`);
   }
 
   const isComplete =
@@ -46,6 +48,18 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
 
   return (
     <div className="sales-data-subcontainer">
+      <ToastContainer
+        position="bottom-center"
+        theme="dark"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="sales-main-data">
         <h5 className="id-sales">{purchase.id}</h5>
         <h5 className="purchase-sales">{purchase.createdAt}</h5>
