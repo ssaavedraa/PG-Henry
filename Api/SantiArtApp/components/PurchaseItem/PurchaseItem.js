@@ -4,6 +4,14 @@ import MaterialCommunityIcons from "react-native-vector-icons/Ionicons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import style from "./PurchaseItem.style";
 
+const stateColors = {
+  completed: "green",
+  dispatched: "blue",
+  processing: "#734488",
+  pending: "#FFC600",
+  canceled: "red",
+};
+
 function PurchaseItem({ purchase, navigation }) {
   return (
     <ListItem>
@@ -13,9 +21,14 @@ function PurchaseItem({ purchase, navigation }) {
             {purchase.contactInfo.firstName} {purchase.contactInfo.lastName}
           </Text>
           <Text
-            style={
-              purchase.state === "completed" ? style.completed : style.others
-            }
+            style={[
+              style.textPurchase,
+              {
+                color: stateColors.hasOwnProperty(purchase.state)
+                  ? stateColors[purchase.state]
+                  : "grey",
+              },
+            ]}
           >
             {purchase.state}
           </Text>

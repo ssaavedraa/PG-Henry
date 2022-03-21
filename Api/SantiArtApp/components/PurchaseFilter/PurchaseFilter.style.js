@@ -22,16 +22,7 @@ export default StyleSheet.create({
     fontSize: hp("2.2%"),
     textAlign: "center",
     fontWeight: "bold",
-  },
-  filterSelected: {
-    backgroundColor: "#f5f5f5",
-    elevation: 2,
-    height: hp("12%"),
-    width: wp("17%"),
-    justifyContent: "center",
-    borderColor: "#f5f5f5",
-    borderWidth: wp("0.75%"),
-    borderRadius: wp("1%"),
+    
   },
   filter: {
     height: hp("12%"),
@@ -52,9 +43,23 @@ export default StyleSheet.create({
   textNameFilter: {
     fontSize: hp("1.25%"),
     fontWeight: "bold",
+    color: '#D1D1D1'
+  },
+
+  textNameFilterSelected:{
+    fontSize: hp("1.25%"),
+    fontWeight: "bold",
+    color: '#125D98'
+    
   },
   icons: {
     fontSize: hp("5.5%"),
-    color: 'black'
+    color: '#D1D1D1',
+    
+  },
+  iconsSelected: {
+    fontSize: hp("5.5%"),
+    color: '#125D98',
+    
   },
 });

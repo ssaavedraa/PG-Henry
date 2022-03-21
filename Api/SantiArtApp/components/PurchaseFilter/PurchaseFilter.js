@@ -29,12 +29,13 @@ function PurchaseFilter({ setFilter, filter }) {
           return (
             <View
               key={id}
-              style={filter === name ? style.filterSelected : style.filter}
+             style={style.filter}
             >
               <TouchableWithoutFeedback onPress={() => handlePress(id)}>
                 <View style={style.iconText}>
-                  <MaterialCommunityIcons name={icon} style={style.icons} />
-                  <Text style={style.textNameFilter}>{name}</Text>
+                  <MaterialCommunityIcons name={icon}  style={filter === name ? style.iconsSelected : style.icons} />
+                  <Text  style={filter === name ? style.textNameFilterSelected : style.textNameFilter}>{name}</Text>
+                 
                 </View>
               </TouchableWithoutFeedback>
             </View>
