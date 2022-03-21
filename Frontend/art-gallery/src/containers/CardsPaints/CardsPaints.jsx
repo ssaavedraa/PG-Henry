@@ -14,7 +14,7 @@ function CardsPaints({ paintings }) {
 
   useEffect(() => {
     if (user.role !== "guest") dispatch(getFavs());
-  }, [dispatch]);
+  }, [dispatch, user.role]);
 
   return (
     <div className="containerCards">
