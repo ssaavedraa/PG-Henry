@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text } from "react-native";
+import { Text, RefreshControl } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import ListItem from "../../components/ListItem/ListItem";
 import Spinner from "../../components/Spinner/Spinner";
@@ -11,7 +11,7 @@ function Users() {
   const [loading, setLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(true);
 
-  useEffect(() => {
+  const loadUsers = () => {
     setLoading(true);
     getUsers()
       .then((users) => {
@@ -23,6 +23,10 @@ function Users() {
       .finally(() => {
         if (isMounted) setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    loadUsers();
     return () => setIsMounted(false);
   }, []);
 
@@ -30,8 +34,13 @@ function Users() {
   return (
     <>
       <FlatList
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={loadUsers} />
+        }
         data={userData}
-        renderItem={({ item }) => <UserItem user={item} />}
+        renderItem={({ item }) => (
+          <UserItem user={item} loadUsers={loadUsers} />
+        )}
         keyExtractor={(item) => item.id}
       />
     </>
