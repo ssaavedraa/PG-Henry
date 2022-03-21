@@ -42,6 +42,7 @@ export default StyleSheet.create({
     borderRadius: wp("1%"),
     elevation: 2,
     backgroundColor: "white",
+    
   },
   iconText: {
     alignItems: "center",
@@ -54,5 +55,6 @@ export default StyleSheet.create({
   },
   icons: {
     fontSize: hp("5.5%"),
+    color: 'black'
   },
 });

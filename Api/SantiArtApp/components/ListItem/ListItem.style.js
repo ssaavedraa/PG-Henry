@@ -7,13 +7,14 @@ import {
 
 export default StyleSheet.create({
   container: {
-    width: wp("90%"),
-    height: hp("10%"),
-    backgroundColor: "#f2fcff",
-    marginTop: hp("1%"),
-    marginBottom: hp("1%"),
+    width: wp("94%"),
+    height: hp("8%"),
+    backgroundColor: 'white', 
+    borderRadius: wp('2%'),
+    marginBottom: wp('2%'),
+    marginTop: wp('2%'),
+    marginLeft: wp('3%'),
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    padding: wp('2.5%'),
   },
 });

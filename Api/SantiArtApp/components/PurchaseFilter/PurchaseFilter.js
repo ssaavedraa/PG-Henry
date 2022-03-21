@@ -7,12 +7,11 @@ const states = [
   {
     name: "Processing",
     icon: "ellipsis-horizontal-outline",
-    color: "blue",
   },
-  { name: "Pending", icon: "close-outline", color: "blue" },
-  { name: "Dispatched", icon: "checkmark-outline", color: "blue" },
-  { name: "Completed", icon: "checkmark-done-outline", color: "blue" },
-  { name: "Canceled", icon: "close-outline", color: "blue" },
+  { name: "Pending", icon: "time-outline" },
+  { name: "Dispatched", icon: "checkmark-outline" },
+  { name: "Completed", icon: "checkmark-done-outline" },
+  { name: "Canceled", icon: "close-outline" },
 ];
 
 function PurchaseFilter({ setFilter, filter }) {
@@ -26,7 +25,7 @@ function PurchaseFilter({ setFilter, filter }) {
     <View style={style.containerContainer}>
       <Text style={style.textFilter}>Filter purchases</Text>
       <View style={style.container}>
-        {states.map(({ name, icon, color }, id) => {
+        {states.map(({ name, icon }, id) => {
           return (
             <View
               key={id}
@@ -34,11 +33,7 @@ function PurchaseFilter({ setFilter, filter }) {
             >
               <TouchableWithoutFeedback onPress={() => handlePress(id)}>
                 <View style={style.iconText}>
-                  <MaterialCommunityIcons
-                    name={icon}
-                    color={color}
-                    style={style.icons}
-                  />
+                  <MaterialCommunityIcons name={icon} style={style.icons} />
                   <Text style={style.textNameFilter}>{name}</Text>
                 </View>
               </TouchableWithoutFeedback>
