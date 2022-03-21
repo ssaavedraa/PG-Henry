@@ -19,7 +19,9 @@ import {
   EDIT_ARTIST,
   EDIT_PAINT,
   ADD_TECHNIQUE,
-  ADD_PAINTING
+  GET_ALL_SP,
+  ADD_PAINTING,
+  CONTACT_INFO,
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -165,7 +167,7 @@ export const addNewArtist = (payload) => {
 export const addNewPainting = (payload) => {
   return async function (dispatch) {
     try {
-      const response = await axios.post("/painting/create", payload);      
+      const response = await axios.post("/painting/create", payload);
       return dispatch({
         type: ADD_PAINTING,
         payload: response.data,
@@ -202,10 +204,12 @@ export function getFavs() {
   };
 }
 
-export function getArtitsStat() {
+export function getArtitsStat(filters) {
   return async function (dispatch) {
     try {
-      const json = await axios.get("/artist/getstats");
+      const json = await axios.get("/artist/getstats", {
+        params: { ...filters },
+      });
       return dispatch({
         type: GET_STATS_ARTIST,
         payload: json.data,
@@ -222,8 +226,8 @@ export const editArtist = (id, payload) => {
       const response = await axios.put(`/artist/update/${id}`, payload);
       return dispatch({
         type: EDIT_ARTIST,
-        payload: response.data
-      })
+        payload: response.data,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -237,8 +241,8 @@ export const editPainting = (id, payload) => {
       //Pendiente ajustar response desde el backend
       return dispatch({
         type: EDIT_PAINT,
-        payload: response.data
-      })
+        payload: response.data,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -258,8 +262,6 @@ export const addTechnique = (payload) => {
     }
   };
 };
-
-
 
 export const removeTechnique = (id) => {
   return async function (dispatch) {
@@ -363,6 +365,13 @@ export const orderBySortType = (name) => {
   };
 };
 
+export const contactInfo = (info) => {
+  return {
+    type: CONTACT_INFO,
+    payload: info,
+  };
+};
+
 //Funciones para la disponibilidad de las pinturas
 
 export async function availablePainting(id) {
@@ -376,3 +385,17 @@ export async function notAvailablePainting(id) {
     await axios.put(`/painting/setNotAvailable/${id}`);
   } catch (error) {}
 }
+
+//Funciones Sales and Purchase
+export const getAllPurchase = (filters) => {
+  return async (dispatch) => {
+    try {
+      const json = await axios.get("/purchase/get/all", {
+        params: { ...filters },
+      });
+      dispatch({ type: GET_ALL_SP, payload: json.data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};

@@ -24,7 +24,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
   React.useEffect(() => {
     dispatch(getArtist());
     dispatch(getTechnique());
-  }, [dispatch, addList]);
+  }, [dispatch]);
 
   React.useEffect(() => {
     dispatch(getArtist(filter.name));
@@ -40,7 +40,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
 
       <Title
         texto="PRICE"
-        logo={<BiDollarCircle className="icon" />}
+        logo={<BiDollarCircle className="icon-fiilter-g" />}
         mostrar={() => mostrar(0)}
       />
       <div className="container-range">
@@ -54,7 +54,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="DIMENSIONS"
-        logo={<MdOutlinePhotoSizeSelectLarge className="icon" />}
+        logo={<MdOutlinePhotoSizeSelectLarge className="icon-fiilter-g" />}
         mostrar={() => mostrar(1)}
       />
       <div className="container-range">
@@ -77,7 +77,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="ARTIST"
-        logo={<BsPersonBadge className="icon" />}
+        logo={<BsPersonBadge className="icon-fiilter-g" />}
         mostrar={() => mostrar(2)}
       />
       <div className="container-range">
@@ -92,7 +92,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="TECHNIQUE"
-        logo={<FaPaintBrush className="icon" />}
+        logo={<FaPaintBrush className="icon-fiilter-g" />}
         mostrar={() => mostrar(3)}
       />
       <div className="container-range">
@@ -100,7 +100,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="ORIENTATION"
-        logo={<GiWoodFrame className="icon" />}
+        logo={<GiWoodFrame className="icon-fiilter-g" />}
         mostrar={() => mostrar(4)}
       />
       <div className="container-range">

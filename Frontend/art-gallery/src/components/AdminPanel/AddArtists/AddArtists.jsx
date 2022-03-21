@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getArtitsStat, clearArtists } from "../../../redux/actions/actions";
+import { getArtitsStat } from "../../../redux/actions/actions";
+import classnames from "classnames";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import EditArtistModal from "../../../Modales/EditArtist/EditArtistForm/EditArtistModal";
 import NavPanel from "../NavPanel/NavPanel";
 import AddArtistModal from "../../../Modales/EditArtist/AddArtistForm/AddArtisModal";
@@ -11,13 +13,34 @@ import "./Artists.css";
 function AddArtists() {
   const artists = useSelector((state) => state.artist);
   const dispatch = useDispatch();
-  
-  
+
+  const [filters, setFilters] = useState({
+    order: "ASC",
+    orderBy: "artistId",
+  });
+
   React.useEffect(() => {
     dispatch(getArtitsStat());
   }, [dispatch]);
 
   const [openModalArtist, setOpenModalArtist] = useState(false);
+
+  function orderOnChange(e) {
+    let order = "ASC";
+
+    if (filters.orderBy === e.target.name) {
+      order = filters.order === "ASC" ? "DESC" : "ASC";
+    }
+
+    setFilters({
+      order,
+      orderBy: e.target.name,
+    });
+  }
+
+  React.useEffect(() => {
+    dispatch(getArtitsStat(filters));
+  }, [dispatch, filters]);
 
   return (
     <div className="container-addartist">
@@ -50,13 +73,70 @@ function AddArtists() {
         <table className="data-artist-admin">
           <thead className="row-titles-admin">
             <tr>
-              <th className="id-title">ID</th>
-              <th className="photo-title">PHOTO</th>
-              <th className="name-title">NAME</th>
-              <th className="paintings-title">PAINTINGS</th>
-              <th className="review-title">REVIEWS</th>
-              <th className="sales-title">SALES</th>
-              <th className="button-title">SALES</th>
+              <th className="id-title">
+                <button name="artistId" onClick={orderOnChange}>
+                  ID
+                  <div className={filters.orderBy === "artistId" ? "orderButton" : "ocultOrderButton"}>
+                    {filters.order === "ASC" ? (
+                      <IoMdArrowDropdown  className="iconFilterButton" />
+                    ) : (
+                      <IoMdArrowDropup  className="iconFilterButton" />
+                    )}
+                  </div>
+                </button>
+              </th>
+              <th className="photo-title">
+                <button>PHOTO</button>
+              </th>
+              <th className="name-title">
+                <button name="name" onClick={orderOnChange}>
+                  NAME
+                  <div className={filters.orderBy === "name" ? "orderButton" : "ocultOrderButton"}>
+                    {filters.order === "ASC" ? (
+                      <IoMdArrowDropdown className="iconFilterButton" />
+                    ) : (
+                      <IoMdArrowDropup className="iconFilterButton" />
+                    )}
+                  </div>
+                </button>
+              </th>
+              <th className="paintings-title">
+                <button name="paintings" onClick={orderOnChange}>
+                  PAINTINGS
+                  <div className={filters.orderBy === "paintings" ? "orderButton" : "ocultOrderButton"}>
+                    {filters.order === "ASC" ? (
+                      <IoMdArrowDropdown className="iconFilterButton" />
+                    ) : (
+                      <IoMdArrowDropup className="iconFilterButton" />
+                    )}
+                  </div>
+                </button>
+              </th>
+              <th className="review-title">
+                <button name="reviews" onClick={orderOnChange}>
+                  REVIEWS
+                  <div className={filters.orderBy === "reviews" ? "orderButton" : "ocultOrderButton"}>
+                    {filters.order === "ASC" ? (
+                      <IoMdArrowDropdown className="iconFilterButton" />
+                    ) : (
+                      <IoMdArrowDropup className="iconFilterButton" />
+                    )}
+                  </div>
+                </button>
+              </th>
+              <th className="sales-title">
+                <button name="sales" onClick={orderOnChange}>
+                  SALES
+                  <div className={filters.orderBy === "sales" ? "orderButton" : "ocultOrderButton"}>
+                    {filters.order === "ASC" ? (
+                      <IoMdArrowDropdown className="iconFilterButton" />
+                    ) : (
+                      <IoMdArrowDropup className="iconFilterButton" />
+                    )}
+                  </div>
+                </button>
+              </th>
+              <th className="button-title">EDIT</th>
             </tr>
           </thead>
           <tbody>
@@ -79,7 +159,7 @@ function AddArtists() {
 
 export default AddArtists;
 
-function RowArtist({ artist, openModalArtist, setOpenModalArtist}) {
+function RowArtist({ artist, openModalArtist, setOpenModalArtist }) {
   const [openModal, setopenModal] = useState(false);
   return (
     <tr>

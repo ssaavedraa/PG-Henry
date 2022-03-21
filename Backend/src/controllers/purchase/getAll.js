@@ -1,4 +1,4 @@
-const { Purchase, ContactInfo, Painting, Op } = require("../../db");
+const { Purchase, ContactInfo, Painting, Photo, Op } = require("../../db");
 
 const getAll = async (req, res) => {
   const {
@@ -11,7 +11,6 @@ const getAll = async (req, res) => {
     if (role === "user") condition.where = { ...condition.where, userId: id };
     if (state)
       condition.where = { ...condition.where, state: { [Op.in]: stateList } };
-    console.log(condition);
     const purchases = await Purchase.findAll({
       ...condition,
       include: [
@@ -21,7 +20,15 @@ const getAll = async (req, res) => {
           through: {
             attributes: [],
           },
-          attributes: ["id", "title", "description", "price"],
+          include: [
+            {
+              model: Photo,
+              attributes: ["url"],
+              separate: true,
+              order: [["id", "ASC"]],
+              limit: 1,
+            },
+          ],
         },
       ],
       order: [["id", "ASC"]],
