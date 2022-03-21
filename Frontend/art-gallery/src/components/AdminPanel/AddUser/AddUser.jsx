@@ -127,7 +127,7 @@ export const AddUser = () => {
 
                     <div>
                       <label>Order by:</label>
-                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
+                      <select className="nav-select-1" onChange={(e) => handleSortType(e)}>
                         <option value="0">...</option>
                         <option value="email">Email</option>
                         <option value="firstName">FirstName</option>
@@ -137,7 +137,7 @@ export const AddUser = () => {
 
                     <div className="panel-button">
                       <label>Sort By Name:</label>
-                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)} >
+                      <select className="nav-select-1"  onChange={(e) => handleSort(e)} >
                         <option value="0">...</option>
                         <option value="ASC">A-Z</option>
                         <option value="DESC">Z-A</option>
@@ -199,7 +199,7 @@ export const AddUser = () => {
 
                     <div>
                       <label>Order by:</label>
-                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSortType(e)}>
+                      <select className="nav-select-1"  onChange={(e) => handleSortType(e)}>
                         <option value="0">...</option>
                         <option value="email">Email</option>
                         <option value="firstName">FirstName</option>
@@ -209,7 +209,7 @@ export const AddUser = () => {
 
                     <div className="panel-button">
                       <label>Sort By Name</label>
-                      <select className="nav-select-1" value={'0'} onChange={(e) => handleSort(e)}>
+                      <select className="nav-select-1"  onChange={(e) => handleSort(e)}>
                         <option value="0">...</option>
                         <option value="ASC">A-Z</option>
                         <option value="DESC">Z-A</option>
