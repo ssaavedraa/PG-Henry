@@ -22,6 +22,7 @@ import {
   EDIT_ARTIST,
   ADD_TECHNIQUE,
   ADD_PAINTING,
+  CONTACT_INFO,
 } from "../action-types";
 
 const detailObra = {
@@ -75,6 +76,7 @@ const initialState = {
   favs: [],
   detailObra,
   purchase: [],
+  contactInfo: {},
 };
 
 function rootReducer(state = initialState, action) {
@@ -203,6 +205,13 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         purchase: action.payload,
+      };
+    case CONTACT_INFO:
+      console.log("a");
+      console.log(action.payload);
+      return {
+        ...state,
+        contactInfo: action.payload,
       };
     default:
       return state;

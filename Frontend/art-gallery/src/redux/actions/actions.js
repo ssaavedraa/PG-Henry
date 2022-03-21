@@ -20,7 +20,8 @@ import {
   EDIT_PAINT,
   ADD_TECHNIQUE,
   GET_ALL_SP,
-  ADD_PAINTING
+  ADD_PAINTING,
+  CONTACT_INFO,
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -166,7 +167,7 @@ export const addNewArtist = (payload) => {
 export const addNewPainting = (payload) => {
   return async function (dispatch) {
     try {
-      const response = await axios.post("/painting/create", payload);      
+      const response = await axios.post("/painting/create", payload);
       return dispatch({
         type: ADD_PAINTING,
         payload: response.data,
@@ -361,6 +362,13 @@ export const orderBySortType = (name) => {
     } catch (error) {
       console.log(error);
     }
+  };
+};
+
+export const contactInfo = (info) => {
+  return {
+    type: CONTACT_INFO,
+    payload: info,
   };
 };
 

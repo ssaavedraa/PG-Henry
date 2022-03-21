@@ -1,76 +1,90 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ConfirmPurchase.css";
+import axios from "axios";
+import useCart from "../../../customHooks/useCart";
+import { useSelector } from "react-redux";
 
 const ConfirmPurchase = () => {
-  //Me traje esto de payment
-  useEffect(() => {
-    const script = document.createElement("script");
+	//Me traje esto de payment
+	const { cart } = useCart();
+	const contactInfo = useSelector((state) => state.contactInfo);
 
-    const attr_data_preference = document.createAttribute("data-preference-id");
-    attr_data_preference.value = localStorage.getItem("preferenceId");
+	const getPaintings = async () => {
+		const paintings = [];
+		for (let i = 0; i < cart.length; i++) {
+			const dbPaiting = await axios.get(`/painting/get/${cart[i]}`);
+			paintings.push(dbPaiting.data);
+		}
+		return paintings;
+	};
 
-    script.src =
-      "https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js";
-    script.setAttributeNode(attr_data_preference);
+	const [paintings, setPaintings] = useState([]);
 
-    // Elemento en el que renderizo, div, boton
-    document.getElementById("button1").appendChild(script);
-    return () => {
-      document.getElementById("button1").removeChild(script);
-    };
-  }, []);
+	useEffect(() => {
+		getPaintings()
+			.then((res) => setPaintings(res))
+			.catch((err) => console.log(err));
+	}, [cart]);
 
-  return (
-    <div className="divContainerConfirmPurchase">
-      <h1>Confirm purchase</h1>
-      <div className="divContainerDetailsPurchase">
-        <div className="divContainerInputsDetailPurchase">
-          <h3>Billings details</h3>
+	useEffect(() => {
+		const script = document.createElement("script");
 
-          <label>Name</label>
-          <input type="text" name="name" />
+		const attr_data_preference = document.createAttribute("data-preference-id");
+		attr_data_preference.value = localStorage.getItem("preferenceId");
 
-          <label>Email</label>
-          <input type="email" name="email" />
+		script.src =
+			"https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js";
+		script.setAttributeNode(attr_data_preference);
 
-          <label>Telephone</label>
-          <input type="text" name="telephone" />
+		// Elemento en el que renderizo, div, boton
+		document.getElementById("button1").appendChild(script);
+		return () => {
+			document.getElementById("button1").removeChild(script);
+		};
+	}, []);
 
-          <label>Post Code</label>
-          <input type="text" name="postCode" />
+	return (
+		<div className="divContainerConfirmPurchase">
+			<h1>Confirm purchase</h1>
+			<div className="divContainerDetailsPurchase">
+				<div className="divContainerInputsDetailPurchase">
+					<h3>Billings details</h3>
 
-          <label>City</label>
-          <input type="text" name="city" />
-
-          <label>Street</label>
-          <input type="text" name="street" />
-          <div className="divContainerNumberFloorUnit">
-            <div className="NumberFloorUnitCart">
-              <label>Number</label>
-              <input type="text" name="number" />
-            </div>
-
-            <div className="NumberFloorUnitCart">
-              <label>Floor</label>
-              <input type="text" name="floor" />
-            </div>
-
-            <div className="NumberFloorUnitCart">
-              <label>Unit</label>
-              <input type="text" name="Unit" />
-            </div>
-          </div>
-        </div>
-        <div className="divContainerItemsPurchase">
-          <h3>Your order</h3>
-          <div className='divContainerButtonMercadoPago'>
-          <button id="button1"></button>
-        </div>
-        </div>
-       
-      </div>
-    </div>
-  );
+					{contactInfo ? (
+						<div>
+							<div>Name :{contactInfo.firstName + contactInfo.lastName}</div>
+							<div>Email: {contactInfo.email}</div>
+							<div>Telephone: {contactInfo.telephone}</div>
+							<div>Post Code: {contactInfo.postCode}</div>
+							<div>City: {contactInfo.city}</div>
+							<div>Street: {contactInfo.street}</div>
+							<div>Number: {contactInfo.streetNumber}</div>
+							<div>Floor: {contactInfo.floor}</div>
+							<div>Unit: {contactInfo.unit}</div>
+						</div>
+					) : (
+						<div>A</div>
+					)}
+				</div>
+				<div className="divContainerItemsPurchase">
+					<h3>Your order</h3>
+					{paintings &&
+						paintings.map((painting, i) => (
+							<div key={i} className="divContainerProductCart">
+								<div>
+									<p>{painting.title}</p>
+									<img src={painting.photos[0].url} alt={painting.title} />
+								</div>
+								<p>USD$ {painting.price}</p>
+							</div>
+						))}
+					<div className="divContainerButtonMercadoPago">
+						<button id="button1"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default ConfirmPurchase;
