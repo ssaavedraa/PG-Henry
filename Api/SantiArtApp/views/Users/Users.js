@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Text, RefreshControl } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import ListItem from "../../components/ListItem/ListItem";
 import Spinner from "../../components/Spinner/Spinner";
 import UserItem from "../../components/UserItem/UserItem";
 import getUsers from "../../selectors/getUsers";

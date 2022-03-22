@@ -46,23 +46,15 @@ function UserModal({ editModal, setEditModal, user, loadUsers }) {
               onPress={() =>
                 submit(user.role === "admin" ? removeAdmin : giveAdmin)
               }
-              text={
-                <Text style={style.textBtn}>
-                  {user.role === "admin" ? "Remove admin" : "Give admin"}
-                </Text>
-              }
+              text={user.role === "admin" ? "Remove admin" : "Give admin"}
             />
             <CustomButton
               onPress={() => submit(user.isBanned ? unbanUser : banUser)}
-              text={
-                <Text style={style.textBtn}>
-                  {user.isBanned ? "Unban user" : "Ban user"}
-                </Text>
-              }
+              text={user.isBanned ? "Unban user" : "Ban user"}
             />
             <CustomButton
               onPress={() => submit(passReset)}
-              text={<Text>Reset password</Text>}
+              text={"Reset password"}
             />
           </View>
         </>
