@@ -1,91 +1,113 @@
-
-.admin-bar{
-    height: 70vh;
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0.5rem;
-    align-self: stretch;
-    padding: 1.5rem;
-    align-content: flex-end;
-    justify-content: flex-start;
-    align-items: center;  /*Eli anduvo por aqui*/
+.admin-bar {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 1.5rem;
+  align-content: flex-end;
+  justify-content: flex-start;
+  align-items: center; /*Eli anduvo por aqui*/
+  background-color: var(--nine-color);
 }
 
-.shopping-btn{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
+.user {
+  width: 70%;
+  height: 28%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.img-profile {
+  width: 62%;
+}
+
+/*Menu Options*/
+.menu-options,
+.menu-options li,
+.shopping-btn,
+.logoutShopping-btn  {
+  display: flex;
+}
+
+.menu-options {
+  width: 70%;
+  height: 60%;
+  flex-direction: column;
+}
+
+.menu-options li {
+  width: 85%;
+  height: 15%;
+  margin: 0.5em auto;
+  font-size: 1.3em;
+  list-style: none;
+  color: var(--eigth-color);
+  cursor: pointer;
+}
+
+.shopping-btn, .logoutShopping-btn {
+  width: 100%;
+  height: 90%;
+  margin: 0.1em auto;
+  align-items: center;
+}
+
+.navPanelRole-icon {
+  font-size: 1.4em;
+  margin: 0.3em 0.4em;
 }
 
 
-.menu-options > li{ /* -> Agregado */
-    display: flex;    
-    
+.logoutShopping-btn{
+  margin-top: 11em;
+  height: 66%;
+  width: 90%;
+  justify-content: center;
+  background-color: var(--canceled-color);
+  color: var(--fourth-color);
+  border-radius: .3em;
 }
 
-.user{
-    text-align:center;
-    font-size: 1.2rem;
-    margin: 1rem;    
+.logoutShopping-btn h5{
+  padding-left: .5em;
+  font-size: .9em;
+  font-weight: 500;
+}
+ .navPanelRole-icon{
+  font-size: 1.2em;
 }
 
-.user a{ 
-    color: var(--eigth-color);
+.logoutShopping-btn:hover{
+  background-color: var(--btnHoverCancelColor);
 }
 
-.user a:hover{
-    color: var(--btnHover-color)
+.logoutShopping-btn:active{
+  background-color:  var(--canceled-color);
 }
 
-.icon {
-    width: 20%;
-    height: 70%;
-  }
 
-.img-profile{
-    width: 6rem;
+/*NavLinks*/
+.navPanelRole-links {
+  width: 100%;
+  color: var(--eigth-color);
 }
 
-.menu-options{
-    text-align:left;    
+.navPanelRole-links:hover{
+    color: var(--btnHover-color);
 }
 
-.menu-options ul{
-   
-}
-.menu-options li{ 
-    height: 4rem;
-    font-size: 1.2rem;   
-    list-style: none;
-    margin-top:2.5rem ;
-    margin-bottom: 2.5rem;
-    
-    color: var(--eigth-color);
-    cursor: pointer;
-    font-weight: 600;
-    
+.navLinkActive{
+    width: 100%;
+    color: var(--primary-color);
 }
 
-.menu-options li:hover{
-    color: var(--btnHover-color)
- }
-.menu-options li a{
-    color: var(--eigth-color); 
-      
-    
+.myProfileLink{
+  color: var(--eigth-color);
+  font-weight: 400;
 }
 
-.menu-options li a:hover{
-    color: var(--btnHover-color)
-}
-.logout{   
-    align-self: baseline;
-}
-
-.icon{
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    
+.myProfileLink:hover{
+  color: var(--btnHover-color);
 }
