@@ -50,7 +50,7 @@ const DetailArtist = () => {
         artistId={id}
       />
       <div className="divContainerimg">
-        <div>
+        <div className="photo-artist">
           <img src={artists.photo} alt="artist" className="imgArtist" />
         </div>
         <div className="divBio">

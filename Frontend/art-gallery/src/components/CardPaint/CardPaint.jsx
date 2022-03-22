@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
+import { ToastContainer, toast } from "react-toastify";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
@@ -42,8 +43,25 @@ function CardPaint({
 
   const { add, remove, cart } = useCart();
 
+  function addToCart(id){
+    add(parseInt(id))
+    toast.success('Painting has been added to your cart');
+  }
+
   return (
     <div className="card">
+      <ToastContainer
+        position="bottom-center"
+        theme="dark"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <PaintingModal
         openModal={openModal}
         setOpenModal={setOpenModal}
@@ -92,7 +110,7 @@ function CardPaint({
             REMOVE <FaCartArrowDown className="icon_add_paint" />
           </button>
         ) : (
-          <button className="btn_card_paint" onClick={() => add(parseInt(id))}>
+          <button className="btn_card_paint" onClick={() => addToCart(id)}>
             ADD TO CART <FaCartArrowDown className="icon_add_paint" />
           </button>
         )
