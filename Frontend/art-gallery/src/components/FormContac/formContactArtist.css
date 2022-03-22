@@ -1,6 +1,6 @@
 .container__FormContacArtist{
     width: 100%;
-    min-height: 90vh;
+    min-height: 110vh;
     background: white;
     display: flex;
     justify-content: center;
@@ -17,7 +17,19 @@
     align-items: center;
     flex-direction: column;
  
+    animation-name: desvanecer;
+    animation-duration: 3s;
+    animation-timing-function: linear;
 }
+
+@keyframes desvanecer {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+    }
 .FormContacArtist_Principal img{
 margin-right: 5px;
 margin-top: 3px;
@@ -88,4 +100,34 @@ cursor: pointer;
 }
 .notMessageError{
     display: none;
+}
+.disbleColor{
+    opacity: 0.3;
+}
+
+.move {
+    animation: showIcom 5s linear;
+}
+
+@keyframes showIcom {
+
+    0%{
+        transform: translateY(900px) scale(4, 4);
+        opacity: 1;
+
+    }
+    50%{
+        transform: translateY(-100px) scale(4, 4);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(900px) scale(4, 4);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0.6;
+    }
+    100%{
+        transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
 }
