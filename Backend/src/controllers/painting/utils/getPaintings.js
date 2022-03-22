@@ -29,6 +29,8 @@ const getPaintings = async (condition, techniqueCondition) => {
       {
         model: Photo,
         attributes: ["url"],
+        separate: true,
+        order: [["id", "ASC"]],
       },
     ],
   });
