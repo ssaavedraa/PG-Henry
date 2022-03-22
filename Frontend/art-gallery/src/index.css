@@ -32,7 +32,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
- 
+  overflow-y: auto;
 }
 
 button, input[type="text"], textarea{
@@ -50,4 +50,33 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*Scrollbar*/
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width: .85em;
+}
+
+body::-webkit-scrollbar-button:increment,
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+  height: 0.7em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(22,138,173);
+background: linear-gradient(180deg, rgba(22,138,173,1) 0%, rgba(0,72,94,1) 49%, rgba(22,138,173,1) 100%);
+  border-radius: 20px;
+  border: 0.1em solid var(--third-color);
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
