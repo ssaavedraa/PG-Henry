@@ -16,124 +16,109 @@ import useAuth from "../../../customHooks/useAuth";
 const NavPanel = () => {
   const session = useSelector((state) => state.auth);
   const { user, logout } = useAuth();
-
+  const isAdmin = user.role === "admin" ? true : false;
   return (
-    <>
-      {user.role === "admin" ? (
-        <div className="admin-bar">
-          <div className="user">
-            <NavLink to="/admin" className="navPanelRole-links">
-              <img src={img} className="img-profile" alt="profile" />
-              <h5>{user.firstName}</h5>
-            </NavLink>
+    <div className="admin-bar">
+      <div className="user">
+        <NavLink
+          to={isAdmin === true ? "/admin" : "/user"}
+          className="navPanelRole-links"
+        >
+          <img src={img} className="img-profile" alt="profile" />
+          <h5>{user.firstName}</h5>
+        </NavLink>
+        <NavLink
+          to={isAdmin === true ? "/admin" : "/user"}
+          className={(navData) =>
+            navData.isActive ? "navLinkActive" : "navPanelRole-links"
+          }
+        >
+          <h4 className="myProfileLink">My Profile</h4>
+        </NavLink>
+      </div>
+
+      <ul className="menu-options">
+        <li>
+          <NavLink
+            to={isAdmin === true ? "/admin/sales" : "/user/purchase"}
+            className={(navData) =>
+              navData.isActive ? "navLinkActive" : "navPanelRole-links"
+            }
+          >
+            {isAdmin === true ? (
+              <div className="shopping-btn">
+                <AiOutlineLineChart className="navPanelRole-icon" />
+                <h5>SALES</h5>
+              </div>
+            ) : (
+              <div className="shopping-btn">
+                <BiShoppingBag className="navPanelRole-icon" />
+                <h5>SHOPPING </h5>
+              </div>
+            )}
+          </NavLink>
+        </li>
+
+        {isAdmin === true && (
+          <li>
             <NavLink
-              to="/admin"
+              to="/admin/user"
               className={(navData) =>
                 navData.isActive ? "navLinkActive" : "navPanelRole-links"
               }
             >
-              
-              <h4 className="myProfileLink">My Profile</h4>
+              <div className="shopping-btn">
+                <FaUsers className="navPanelRole-icon" />
+                <h5>USERS</h5>
+              </div>
             </NavLink>
-          </div>
+          </li>
+        )}
 
-          <ul className="menu-options">
-            <li>
-              <NavLink
-                to="/admin/sales"
-                className={(navData) =>
-                  navData.isActive ? "navLinkActive" : "navPanelRole-links"
-                }
-              >
-                <div className="shopping-btn">
-                  <AiOutlineLineChart className="navPanelRole-icon" />
-                  <h5>SALES</h5>
-                </div>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/admin/user"
-                className={(navData) =>
-                  navData.isActive ? "navLinkActive" : "navPanelRole-links"
-                }
-              >
-                <div className="shopping-btn">
-                  <FaUsers className="navPanelRole-icon" />
-                  <h5>USERS</h5>
-                </div>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/admin/addartist"
-                className={(navData) =>
-                  navData.isActive ? "navLinkActive" : "navPanelRole-links"
-                }
-              >
-                <div className="shopping-btn">
-                  <BsPersonBadge className="navPanelRole-icon" />
-                  <h5>ARTISTS</h5>
-                </div>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/admin/additems"
-                className={(navData) =>
-                  navData.isActive ? "navLinkActive" : "navPanelRole-links"
-                }
-              >
-                <div className="shopping-btn">
-                  <BiImageAdd className="navPanelRole-icon" />
-                  <h5>ITEMS</h5>
-                </div>
-              </NavLink>
-            </li>
-            {session && (
-              <li onClick={() => logout()}>
-                Logout
-                <FiLogOut className="icon" />
-              </li>
-            )}
-          </ul>
-        </div>
-      ) : (
-        <div className="admin-bar">
-          <div className="user">
-            <NavLink to="/admin">
-              <img src={img} className="img-profile" alt="profile" />
-              <h5>{user.firstName}</h5>
+        {isAdmin === true && (
+          <li>
+            <NavLink
+              to="/admin/addartist"
+              className={(navData) =>
+                navData.isActive ? "navLinkActive" : "navPanelRole-links"
+              }
+            >
+              <div className="shopping-btn">
+                <BsPersonBadge className="navPanelRole-icon" />
+                <h5>ARTISTS</h5>
+              </div>
             </NavLink>
-            <NavLink to="/admin"> My Profile</NavLink>
+          </li>
+        )}
+        {isAdmin === true && (
+          <li>
+            <NavLink
+              to="/admin/additems"
+              className={(navData) =>
+                navData.isActive ? "navLinkActive" : "navPanelRole-links"
+              }
+            >
+              <div className="shopping-btn">
+                <BiImageAdd className="navPanelRole-icon" />
+                <h5>ITEMS</h5>
+              </div>
+            </NavLink>
+          </li>
+        )}
+        {session && (
+          <li onClick={() => logout()}>
+            Logout
+            <FiLogOut className="icon" />
+          </li>
+        )}
+        <li onClick={() => logout()}>
+          <div className="logoutShopping-btn">
+            <h5>Logout</h5>
+            <FiLogOut className="navPanelRole-icon" />
           </div>
-          <ul className="menu-options">
-            <li>
-              <NavLink
-                to=""
-                className={(navData) =>
-                  navData.isActive ? "navLinkActive" : "navPanelRole-links"
-                }
-              >
-                <div className="shopping-btn">
-                  <div className="icon">
-                    <BiShoppingBag />
-                  </div>
-                  <div>SHOPPING</div>
-                </div>
-              </NavLink>
-            </li>
-
-            {session && (
-              <li onClick={() => logout()}>
-                Logout
-                <FiLogOut className="icon" />
-              </li>
-            )}
-          </ul>
-        </div>
-      )}
-    </>
+        </li>
+      </ul>
+    </div>
   );
 };
 

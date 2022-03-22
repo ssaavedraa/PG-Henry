@@ -26,7 +26,8 @@
 /*Menu Options*/
 .menu-options,
 .menu-options li,
-.shopping-btn {
+.shopping-btn,
+.logoutShopping-btn  {
   display: flex;
 }
 
@@ -46,7 +47,7 @@
   cursor: pointer;
 }
 
-.shopping-btn {
+.shopping-btn, .logoutShopping-btn {
   width: 100%;
   height: 90%;
   margin: 0.1em auto;
@@ -58,9 +59,34 @@
   margin: 0.3em 0.4em;
 }
 
-.logout {
-  align-self: baseline;
+
+.logoutShopping-btn{
+  margin-top: 11em;
+  height: 66%;
+  width: 90%;
+  justify-content: center;
+  background-color: var(--canceled-color);
+  color: var(--fourth-color);
+  border-radius: .3em;
 }
+
+.logoutShopping-btn h5{
+  padding-left: .5em;
+  font-size: .9em;
+  font-weight: 500;
+}
+ .navPanelRole-icon{
+  font-size: 1.2em;
+}
+
+.logoutShopping-btn:hover{
+  background-color: var(--btnHoverCancelColor);
+}
+
+.logoutShopping-btn:active{
+  background-color:  var(--canceled-color);
+}
+
 
 /*NavLinks*/
 .navPanelRole-links {
