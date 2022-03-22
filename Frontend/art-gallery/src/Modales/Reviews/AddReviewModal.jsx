@@ -18,19 +18,15 @@ const AddReviewModal = ({openModalReview, setOpenModalReview }) => {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      padding: "none"                 
+      padding: "none"
     },
   };
- 
 
   return (
     <Modal isOpen={openModalReview} style={customStyles} setOpenModalReview={setOpenModalReview} ariaHideApp={false}>
       <div className="modal-editart">
                <div className="form-box">
-                 
-                  <AddAReview isOpen={openModalReview}  setOpenModalReview={setOpenModalReview} /> 
-                        
-        
+                  <AddAReview isOpen={openModalReview}  setOpenModalReview={setOpenModalReview} />
         <div onClick={() => setOpenModalReview(false)}>
             <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
           </div>
