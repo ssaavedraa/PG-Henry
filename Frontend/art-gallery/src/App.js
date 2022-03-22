@@ -27,6 +27,7 @@ import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 import CartForm from "./components/Cart/CartForm/CartForm";
 import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
 import { AboutDev } from "./components/aboutDev/AboutDev";
+import { ImageLoader } from "./components/ImageLoader/ImageLoader";
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
 					<Route exact path="/contactInfo" element={<CartForm />} />
 					<Route exact path="/payment" element={<ConfirmPurchase />} />
           <Route exact path="/user" element={<MyProfile />} />
+          <Route exact path="/image" element={<ImageLoader />} />
         </Routes>
         <Footer />
       </div>

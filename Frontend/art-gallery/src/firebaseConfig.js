@@ -1,34 +1,27 @@
-
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import 'firebase/firestore'
-
+import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
-
-import 'firebase/auth'
-import { GoogleAuthProvider } from "firebase/auth";
-
-
-
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCPRKM1ZgNoza4iYHE35CnyAhz3c7dWTYU",
-  authDomain: "sanart-5.firebaseapp.com",
-  projectId: "sanart-5",
-  storageBucket: "sanart-5.appspot.com",
-  messagingSenderId: "235527689975",
-  appId: "1:235527689975:web:7bae1a21e037877054a5f2",
-  measurementId: "G-LEJXP8Y0VL"
+  apiKey: "AIzaSyBjS1E9WnJ_KVrp3vKMEtZO_qCgrXq0wvI",
+  authDomain: "santart-9b5c9.firebaseapp.com",
+  projectId: "santart-9b5c9",
+  storageBucket: "santart-9b5c9.appspot.com",
+  messagingSenderId: "300497102374",
+  appId: "1:300497102374:web:adcc54a278021c490d68e7"
 };
 
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore();
-const analytics = getAnalytics(app);
-const provider = new GoogleAuthProvider();
-export {
-    
-    app,
-    provider,
-    db
-}
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+
+// Get a reference to the storage service, which is used to create references in your storage bucket
+
+const fbFirestore = getFirestore(firebaseApp)
+const fbStorage = getStorage();
+
+
+export { fbStorage, fbFirestore }
+
+
