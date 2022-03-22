@@ -192,6 +192,7 @@
 
 .internoimg {
   width: 45rem;
+  height: 35rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -199,6 +200,11 @@
   cursor: pointer;
   padding: 2vh;
   flex-direction: column-reverse;
+}
+
+.photoPaintingDetail{
+  width: 80% !important;
+  height: 75%;
 }
 
 .internoimg img {
@@ -209,13 +215,14 @@
 
 .miniatureContainer {
   display: flex;
+  height: 25%;
+  margin-top: 1em;
   flex-direction: row;
-  margin: 3vh;
   justify-content: center;
 }
 
 .miniatureContainer img {
-  margin: 1.5vh;
+  margin: 0.4em;
   width: 20%;
   height: auto;
 }
@@ -226,6 +233,7 @@
 
 .internodescription {
   width: 30rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
