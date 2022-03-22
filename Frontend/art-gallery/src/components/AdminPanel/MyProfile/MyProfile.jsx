@@ -189,7 +189,7 @@ const MyProfile = () => {
         <NavPanel />
         <div className="component-box">          
           <div className="user-info">
-            <img src={img} className="img-profile" alt="profile"/>
+            <img src={img} className="img-Myprofile" alt="profile"/>
             <p>{user.role}</p>
             <p>{`${user.firstName} ${user.lastName}`}</p>
             <div className="user-data">
