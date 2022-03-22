@@ -14,7 +14,7 @@
 
 .arrow-sales {
   width: 100%;
-  height: 15%;
+  height: 13%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
 
 .resizeSubcontainer {
   transition: 0.4s;
-  height: 120%;
+  height: 130%;
 }
 
 .resizeLengthSubcontainer{
@@ -120,14 +120,18 @@
 
 .detail-seal-data {
   width: 100%;
-  height: 92%;
+  height: 96%;
   display: none;
   flex-direction: column;
 }
 
+.detail-seal-data .status-sales {
+  padding: 0 .5em;
+}
+
 .sectionSupSeal {
   width: 100%;
-  height: 48%;
+  height: 42%;
   justify-content: space-around;
 }
 
@@ -140,7 +144,7 @@
 }
 
 .sectionDownSeal h5 {
-  height: 13%;
+  height: 8%;
   width: 100%;
   font-size: 1.2em;
   text-align: center;

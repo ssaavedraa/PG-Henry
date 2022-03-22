@@ -4,8 +4,7 @@ import { getAllPurchase } from "../../../../redux/actions/actions";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import CardArticlesPurchase from "../CardArticlesPurchase/CardArticlesPurchase";
-import ContactInfoPurchase from "../SectionSupSeal/ContactInfoPurchase";
-import DatesPurchase from "../SectionSupSeal/DatesPurchase";
+import DetailPurchase from "./DetailPurchase";
 
 function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
   const [state, setState] = useState(purchase.state);
@@ -81,26 +80,16 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
       ) : null}
 
       <div className="detail-seal-data">
-        <section className="sectionSupSeal">
-          <DatesPurchase purchase={purchase}/>
-          <ContactInfoPurchase fullName={fullName} detailData={detailData}/>
-          <div className="status-detail-data">
-            <div className="customer-purchase-data">
-              <label>Price:&nbsp;&nbsp;</label>
-              <h5>{purchase.totalPrice}</h5>
-            </div>
-            <OptionsSelect
-              state={purchase.state}
-              onChangeState={onChangeState}
-            />
-            {state !== purchase.state && (
-              <button className="btnReviewPurchase" onClick={updateState}>
-                Update State
-              </button>
-            )}
-          </div>
-        </section>
-
+        <DetailPurchase
+          purchase={purchase}
+          fullName={fullName}
+          detailData={detailData}
+          onChangeState={onChangeState}
+          updateState={updateState}
+          state={state}
+          isAdmin={isAdmin}
+          isComplete={isComplete}
+        />
         <section className="sectionDownSeal">
           <h5>Articles</h5>
           <div className="cardsArticlePurchase">
@@ -112,6 +101,8 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
                     price={purch.price}
                     title={purch.title}
                     img={purch.photos}
+                    isAdmin={isAdmin}
+                    state={purchase.state}
                   />
                 ))
               : null}
@@ -124,45 +115,3 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
 
 export default DataSalesPurchase;
 
-/* "processing" | "pending" | "canceled" | "dispatched" | "completed" */
-function OptionsSelect({ state, onChangeState }) {
-  switch (state) {
-    case "processing":
-      return (
-        <select name="state" onChange={onChangeState}>
-          <option value="pending">Pending</option>;
-        </select>
-      );
-    case "pending":
-      return (
-        <select name="state" onChange={onChangeState}>
-          <option value="pending">Pending</option>;
-          <option value="dispatched">Dispatched</option>;
-          <option value="canceled">Canceled</option>;
-        </select>
-      );
-    case "dispatched":
-      return (
-        <select name="state" onChange={onChangeState}>
-          <option value="dispatched">Dispatched</option>;
-          <option value="completed">Completed</option>;
-          <option value="canceled">Canceled</option>;
-        </select>
-      );
-    case "canceled":
-      return (
-        <div className="customer-purchase-data">
-          <label>State:&nbsp;&nbsp;</label>
-          <h5 className="canceled">Canceled</h5>
-        </div>
-      );
-    default:
-    case "completed":
-      return (
-        <div className="customer-purchase-data">
-          <label>State:&nbsp;&nbsp;</label>
-          <h5 className="completed">Completed</h5>
-        </div>
-      );
-  }
-}
