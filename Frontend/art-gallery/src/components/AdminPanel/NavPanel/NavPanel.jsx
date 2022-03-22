@@ -105,15 +105,13 @@ const NavPanel = () => {
             </NavLink>
           </li>
         )}
-        {!session && (
-          <li onClick={() => logout()}>
-            <div className="logoutShopping-btn">
-              <h5>Logout</h5>
-              <FiLogOut className="navPanelRole-icon" />
-            </div>
-          </li>
-        )}
       </ul>
+      {!session && (
+        <div className="logoutShopping-btn" onClick={() => logout()}>
+          <h5>Logout</h5>
+          <FiLogOut className="navPanelRole-icon" />
+        </div>
+      )}
     </div>
   );
 };
