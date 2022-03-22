@@ -29,11 +29,26 @@ export default StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: "row",
+    width: wp("95%"),
+    justifyContent: "space-between",
   },
   button: {
-    borderRadius: 20,
-    padding: 10,
+    borderRadius: wp("2%"),
+    width: wp("30%"),
+    height: hp("6%"),
     elevation: 2,
-    backgroundColor: "#2196F3",
+    backgroundColor: "black",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  textBtn: {
+    color: "white",
+    textAlign: "center",
+    fontWeight: 'bold'
+  },
+  textWant: {
+    fontSize: hp("2.5%"),
+    fontWeight: "bold",
+    paddingBottom: wp("4%"),
   },
 });
