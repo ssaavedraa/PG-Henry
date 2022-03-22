@@ -28,6 +28,7 @@ export default function CheckoutButton() {
 				console.log(e);
 			}
 		} else {
+			console.log('hola')
 			//Agregar mensaje de no estan disponibles
 			return;
 		}

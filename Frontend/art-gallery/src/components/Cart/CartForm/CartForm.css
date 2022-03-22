@@ -16,7 +16,17 @@
 
 .divContainerItemsCart {
     width: 27rem;  
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+
+
 
 .divContainerInputsFormCart{
     width: 32rem;
@@ -25,7 +35,7 @@
 }
 
 .divContainerInputsFormCart input{
-    height: 1.75rem;
+    height: 1.55rem;
     border-radius: 0.4rem;
     border: 0.2rem solid var(--fifth-color);
 }
@@ -44,12 +54,14 @@
 
 .divContainerProductCart{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .divContainerProductCart img {
-    width: 5rem;
-    height: 5rem;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -93,7 +105,7 @@ margin: 0.15rem 0rem;
     height: 2.5rem;
     border-radius: 0.5rem;
     border: none;
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
@@ -119,4 +131,10 @@ margin: 0.15rem 0rem;
 .NumberFloorUnitCart{
     padding-right: 0.4rem;
 }
-
+.activeError{
+    background: rgb(212, 114, 114);
+}
+.activeLabel::after {
+    content: 'is required';
+    margin-left: 5px;
+}
