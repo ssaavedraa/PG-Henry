@@ -7,6 +7,8 @@ import giveAdmin from "../../selectors/modifyUser/giveAdmin";
 import passReset from "../../selectors/modifyUser/passReset";
 import removeAdmin from "../../selectors/modifyUser/removeAdmin";
 import unbanUser from "../../selectors/modifyUser/unbanUser";
+import CustomModal from "../CustomModal/CustomModal";
+import CustomButton from "../CustomButton/CustomButton";
 
 function UserModal({ editModal, setEditModal, user, loadUsers }) {
   const [loading, setLoading] = useState(false);
@@ -28,48 +30,44 @@ function UserModal({ editModal, setEditModal, user, loadUsers }) {
   };
 
   return (
-    <View style={style.centeredView}>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={editModal}
-        onRequestClose={() => setEditModal(!editModal)}
-      >
-        <View style={style.modalView}>
-          {loading ? (
-            <Spinner />
-          ) : (
-            <>
-              <Text>Que hacemo</Text>
-              <View style={style.buttonContainer}>
-                <Pressable
-                  style={style.button}
-                  onPress={() =>
-                    submit(user.role === "admin" ? removeAdmin : giveAdmin)
-                  }
-                >
-                  <Text>
-                    {user.role === "admin" ? "Remove Admin" : "Give Admin"}
-                  </Text>
-                </Pressable>
-                <Pressable
-                  style={style.button}
-                  onPress={() => submit(user.isBanned ? unbanUser : banUser)}
-                >
-                  <Text>{user.isBanned ? "Unban User" : "Ban User"}</Text>
-                </Pressable>
-                <Pressable
-                  style={style.button}
-                  onPress={() => submit(passReset)}
-                >
-                  <Text>Reset Password</Text>
-                </Pressable>
-              </View>
-            </>
-          )}
-        </View>
-      </Modal>
-    </View>
+    <CustomModal
+      openModal={editModal}
+      closeModal={() => {
+        setEditModal(false);
+      }}
+    >
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          <Text style={style.textWant}>What you want to do?</Text>
+          <View style={style.buttonContainer}>
+            <CustomButton
+              onPress={() =>
+                submit(user.role === "admin" ? removeAdmin : giveAdmin)
+              }
+              text={
+                <Text style={style.textBtn}>
+                  {user.role === "admin" ? "Remove admin" : "Give admin"}
+                </Text>
+              }
+            />
+            <CustomButton
+              onPress={() => submit(user.isBanned ? unbanUser : banUser)}
+              text={
+                <Text style={style.textBtn}>
+                  {user.isBanned ? "Unban user" : "Ban user"}
+                </Text>
+              }
+            />
+            <CustomButton
+              onPress={() => submit(passReset)}
+              text={<Text>Reset password</Text>}
+            />
+          </View>
+        </>
+      )}
+    </CustomModal>
   );
 }
 

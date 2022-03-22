@@ -1,6 +1,5 @@
 import ListItem from "../ListItem/ListItem";
 import { Text, Button, View } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/Ionicons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import style from "./PurchaseItem.style";
 import { useState } from "react";

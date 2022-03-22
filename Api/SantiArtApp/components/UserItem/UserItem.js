@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 import ListItem from "../ListItem/ListItem";
 import UserModal from "../UserModal/UserModal";
 import style from "./UserItem.style";
@@ -16,17 +17,25 @@ function UserItem({ user, loadUsers }) {
         loadUsers={loadUsers}
       />
       <ListItem>
-        <View style={{ width: "100%", height: "100%" }}>
+        <View style={style.container}>
           <TouchableOpacity
-            style={{ flexDirection: "column", justifyContent: "space-between" }}
+            style={style.btnList}
             onLongPress={() => setEditModal(true)}
           >
-            <Text>{user.email}</Text>
-            <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
-            >
-              <Text>{user.isBanned ? "Banneado" : "No Banneado"}</Text>
-              <Text>{"Role: " + user.role}</Text>
+            <View style={style.viewRole}>
+              <Text style={style.textEmail}>{user.email}</Text>
+              {/* {user.isBanned ? <Text>Banneado</Text> : <Text></Text>} */}
+              {user.isBanned ? (
+                <FontAwesome5Icon name="user-slash" style={style.iconBanned} />
+              ) : (
+                <FontAwesome5Icon name="user-alt" style={style.iconNoBanned}/>
+              )}
+            </View>
+            <View style={style.viewRole}>
+              <Text style={style.textName}>
+                {user.firstName} {user.lastName}
+              </Text>
+              <Text>{user.role}</Text>
             </View>
           </TouchableOpacity>
         </View>
