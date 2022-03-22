@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getArtitsStat } from "../../../redux/actions/actions";
-import classnames from "classnames";
 import { FaPlus } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
