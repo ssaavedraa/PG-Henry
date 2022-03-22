@@ -47,6 +47,7 @@ function AddArtists() {
       <NavPanel />
       <div className="admin-profile-container">
         <div className="artists-header">
+          <h1>Artists</h1>
           <AddArtistModal
             openModalArtist={openModalArtist}
             setOpenModalArtist={setOpenModalArtist}
