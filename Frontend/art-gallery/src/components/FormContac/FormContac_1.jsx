@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './formContact.css'
 import logo from "../../assets/img/SantArtlogo.png";
 import { useForm } from '../../customHooks/useForm';
-import { FiCornerDownLeft } from 'react-icons/fi';
+import axios from "axios";
 
 
 
@@ -14,18 +14,25 @@ export const FormContac_1 = () => {
         message: '',
     });
     const [errorEmail, seterrorEmail] = useState({
-        active: false
+        active: false,
+        resp: false
     })
     const { active } = errorEmail;
     const { name, email, message } = formValues;
 
-    const handleForm = (e) => {
+    const handleForm = async(e) => {
         e.preventDefault()
         if (email.trim().length === 0) {
             seterrorEmail(err => ({ ...err, active: true }))
         }
         else {
-            seterrorEmail(err => ({ ...err, active: false }))
+            const response = await axios.post("/contact/contactMessage", {
+                email,
+                name,
+                message
+            });
+            seterrorEmail(err => ({ ...err, active: false, resp: true }))
+            console.log(response)
         }
         reset()
     }
@@ -39,7 +46,15 @@ export const FormContac_1 = () => {
                 </div>
 
                 <div className='formContac_form' >
-                    <h1>Contact us</h1>
+                {
+                        (errorEmail.resp)
+                            ?
+                            <h1>Message sent...<span><i className="fa fa-paper-plane-o move1" aria-hidden="true"></i>
+                            </span></h1>
+                            :
+                            <h1>Contact us</h1>
+                    }
+                   
                     <form onSubmit={handleForm}>
                         <label>Name</label>
                         <input
