@@ -40,7 +40,7 @@ function UserModal({ editModal, setEditModal, user, loadUsers }) {
         <Spinner />
       ) : (
         <>
-          <Text style={style.textWant}>What you want to do?</Text>
+          <Text style={style.textWant}>What do you want to do?</Text>
           <View style={style.buttonContainer}>
             <CustomButton
               onPress={() =>
