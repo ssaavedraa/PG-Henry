@@ -1,6 +1,6 @@
 .container__formContac{
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     background: white;
     display: flex;
     justify-content: center;
@@ -9,14 +9,25 @@
 }
 .formContac_Principal {
     width: 70vh;
-    height: 70vh;
+    height: 80vh;
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation-name: desvanecer;
+    animation-duration: 3s;
+    animation-timing-function: linear;
 }
+@keyframes desvanecer {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+    }
 .formContac_Principal img{
 margin-right: 5px;
 margin-top: 3px;
@@ -63,7 +74,7 @@ margin-top: 3px;
     width: 100px;
     height: 30px;
     border-radius: 20px;
-margin-top: 50px;
+margin-top: 20px;
 background: #168AAD;
 color: white;
 font-size: 15px;
@@ -86,4 +97,32 @@ cursor: pointer;
 }
 .notMessageError{
     display: none;
+}
+
+
+.move1 {
+    animation: showIcom 5s linear;
+}
+
+@keyframes showIcom {
+
+    0%{
+        transform: translateY(300px) scale(4, 4);
+        opacity: 1;
+
+    }
+    50%{
+        transform: translateY(-100px) scale(4, 4);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(400px) scale(4, 4);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0.6;
+    }
+    100%{
+        transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
 }

@@ -22,8 +22,10 @@ import CheckoutButton from "./components/MercadoPago/checkoutButton";
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 import CartForm from "./components/Cart/CartForm/CartForm";
 import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
-import { AboutDev } from "./components/aboutDev/AboutDev";
 import NotFound from "./components/Error404/notFound.component";
+import { FormContac_1 } from "./components/FormContac/FormContac_1";
+import { FormContacArtist } from "./components/FormContac/FormContacArtist";
+import { AboutDev } from "./components/aboutDev/AboutDev";
 
 function App() {
   return (
@@ -101,6 +103,9 @@ function App() {
           <Route exact path="/gallery" element={<Gallery />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/formUser" element={<FormContac_1 />} />
+          <Route exact path="/formArtists" element={<FormContacArtist />} />
+          <Route exact path="/about" element={<AboutDev />} />
           <Route
             exact
             path="/favs"
