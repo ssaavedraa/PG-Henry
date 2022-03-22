@@ -22,16 +22,7 @@ const MyProfile = () => {
   const [lastName, setLastName] = useState("");
   const [applyChanges, setApplyChanges] = useState(true);
 
-  /* const emailChange = ['Old email', 'New email', 'Verify new email']
-
-  const handleEmailChange = (e) => {
-    setIsEmailEdit(!isEmailEdit)
-    if(!isEmailEdit)e.target.classList.replace('normal','cancel')
-    else e.target.classList.replace('cancel', 'normal')
-  }; */
-
-  const handlePassChange = (e) => {
-  
+  const handlePassChange = (e) => {  
     setIsPassEdit(!isPassEdit)
     if(!isPassEdit)e.target.classList.replace('normal','cancel')
     else e.target.classList.replace('cancel', 'normal')

@@ -69,15 +69,10 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
         <h5 className={classnames(`status-sales ${isComplete}`)}>
           {purchase.state}
         </h5>
-        {isAdmin === false && purchase.state === "completed" ? (
-          <button className="btnReviewPurchase">Add Review</button>
-        ) : null}
       </div>
-      {isAdmin === true ? (
-        <div className="arrow-sales" onClick={() => detailedInformation(index)}>
-          <button className="btnArrowSale">▼</button>
-        </div>
-      ) : null}
+      <div className="arrow-sales" onClick={() => detailedInformation(index)}>
+        <button className="btnArrowSale">▼</button>
+      </div>
 
       <div className="detail-seal-data">
         <DetailPurchase
@@ -114,4 +109,3 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
 }
 
 export default DataSalesPurchase;
-

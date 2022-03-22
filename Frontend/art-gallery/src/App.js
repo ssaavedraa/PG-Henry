@@ -127,6 +127,15 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            exact
+            path="/user/purchase"
+            element={
+              <ProtectedRoute role="user">
+                <Sales />
+              </ProtectedRoute>
+            }
+          />
           <Route exact path="*" element={<NotFound/>}/>
         </Routes>
         <Footer />
