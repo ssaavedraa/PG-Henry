@@ -1,100 +1,65 @@
 [
 	{
-		"pendingDate":"19/2/2022 17:00",
-		"state": "pending",
-		"totalPrice": 1500,
+		"completedDate": "19/2/2022 17:00",
+		"state": "completed",
+		"totalPrice": 1400,
 		"userId": 1,
-		"paintingId": 1
+		"paintingId": [1]
 	},
 	{
-		"pendingDate":"19/2/2022 17:00",
-		"state": "pending",
-		"totalPrice": 4750,
+		"completedDate": "19/2/2022 17:00",
+		"state": "completed",
+		"totalPrice": 4800,
 		"userId": 2,
-		"paintingId": 2
+		"paintingId": [3, 4]
 	},
 	{
-		"pendingDate":"19/2/2022 17:00",
-		"state": "pending",
-		"totalPrice": 2500,
+		"completedDate": "19/2/2022 17:00",
+		"state": "completed",
+		"totalPrice": 11399,
 		"userId": 3,
-		"paintingId": 3
+		"paintingId": [5, 6, 7, 8]
 	},
 	{
-		"pendingDate":"19/2/2022 17:00",
+		"pendingDate": "19/2/2022 17:00",
 		"state": "pending",
 		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 4
+		"userId": 2,
+		"paintingId": [10]
 	},
 	{
-		"pendingDate":"19/2/2022 17:00",
+		"pendingDate": "19/2/2022 17:00",
 		"state": "pending",
-		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 6
-	},
-	{
-		"completedDate": "20/2/2022 17:22",
-		"state": "completed",
-		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 7
-	},
-	{
-		"completedDate": "20/2/2022 17:22",
-		"state": "completed",
-		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 8
-	},
-	{
-		"completedDate": "20/2/2022 17:22",
-		"state": "completed",
-		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 11
-	},
-	{
-		"completedDate": "20/2/2022 17:22",
-		"state": "completed",
-		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 12
-	},
-	{
-		"completedDate": "20/2/2022 17:22",
-		"state": "completed",
-		"totalPrice": 2500,
-		"userId": 1,
-		"paintingId": 15
-	},
-	{
-		"canceledDate": "20/2/2022 17:25",
-		"state": "canceled",
-		"totalPrice": 2500,
-		"userId": 4,
-		"paintingId": 16
-	},
-	{
-		"canceledDate": "20/2/2022 17:25",
-		"state": "canceled",
-		"totalPrice": 2500,
-		"userId": 2,
-		"paintingId": 18
-	},
-	{
-		"canceledDate": "20/2/2022 17:25",
-		"state": "canceled",
-		"totalPrice": 2500,
-		"userId": 2,
-		"paintingId": 19
-	},
-	{
-		"canceledDate": "20/2/2022 17:25",
-		"state": "canceled",
-		"totalPrice": 2500,
+		"totalPrice": 9100,
 		"userId": 3,
-		"paintingId": 21
+		"paintingId": [11, 12]
+	},
+	{
+		"canceledDate": "20/2/2022 17:25",
+		"state": "canceled",
+		"totalPrice": 4879,
+		"userId": 1,
+		"paintingId": [16]
+	},
+	{
+		"canceledDate": "20/2/2022 17:25",
+		"state": "canceled",
+		"totalPrice": 5248,
+		"userId": 2,
+		"paintingId": [18]
+	},
+	{
+		"canceledDate": "20/2/2022 17:25",
+		"state": "canceled",
+		"totalPrice": 6877,
+		"userId": 2,
+		"paintingId": [19]
+	},
+	{
+		"canceledDate": "20/2/2022 17:25",
+		"state": "canceled",
+		"totalPrice": 15000,
+		"userId": 3,
+		"paintingId": [31, 32]
 	}
 ]

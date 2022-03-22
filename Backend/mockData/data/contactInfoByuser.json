@@ -1,0 +1,42 @@
+[
+	{
+		"userId": 1,
+		"firstName": "Brian",
+		"lastName": "Weidl",
+		"email": "brianweidl@gmail.com",
+		"telephone": "1234567",
+		"postCode": "150",
+		"city": "CABA",
+		"street": "Parana",
+		"streetNumber": "315",
+		"floor": "75",
+		"unit": "3"
+	},
+
+	{
+		"userId": 2,
+		"firstName": "Santiago",
+		"lastName": "Nuñez",
+		"email": "nunezsantiago92@gmail.com",
+		"telephone": "1234567",
+		"postCode": "2900",
+		"city": "San Nicolas de Los Arroyos",
+		"street": "Francia",
+		"streetNumber": "315",
+		"floor": "PB",
+		"unit": ""
+	},
+	{
+		"userId": 3,
+		"firstName": "Facundo",
+		"lastName": "Romano",
+		"email": "facuromano121299@gmail.com",
+		"telephone": "1234567",
+		"postCode": "560",
+		"city": "CABA",
+		"street": "Uruguay",
+		"streetNumber": "1250",
+		"floor": "3",
+		"unit": "1"
+	}
+]
