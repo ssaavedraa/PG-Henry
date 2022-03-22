@@ -130,7 +130,7 @@ export const DetailOfArt = () => {
               );
             })}
           </div>
-          <img src={detailObra.photos[bigImage].url} alt="img" />
+          <img src={detailObra.photos[bigImage].url} alt="img" className={styles.photoPaintingDetail}/>
         </div>
         <div className={styles.internodescription}>
           <div className={styles.principalSectionArtist}>

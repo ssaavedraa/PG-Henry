@@ -103,20 +103,9 @@ export const AddUser = () => {
   return (
     <>
       <div className="addUser-admin-box">
-
-        <div className="addUser-component-box">
-
-          {/* <div className="addUser-tittle-box"><h2>Admin Panel</h2>
-          </div> */}
-
-          <div className="container-div">
-
-            <div className="addUser-nav">
               <NavPanel />
-            </div>
-
             <div className="addUser-content">
-              
+
               <div className="panel-admin">
                 <h1>Users</h1>
 
@@ -266,9 +255,9 @@ export const AddUser = () => {
               </div>
             </div>
 
-          </div>
+{/*           </div>
 
-        </div>
+        </div> */}
       </div>
 
     </>

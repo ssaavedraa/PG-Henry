@@ -20,7 +20,13 @@
   height: 12%;
   padding: 0.5em;
   margin: 0.2em auto;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artists-header h1{
+    padding-left: .4em;
+    color: var(--primary-color);
 }
 
 .btnNewArtist{
@@ -53,6 +59,7 @@
 .subtitle-artists{
     font-size: 1.2em;
     margin-left: .5em;
+    padding-left: .6em;
     font-weight: 500;
 }
 

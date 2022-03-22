@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
 
 .admin-box{
     display: flex;
+    height: 90vh;
 }
 
 .component-box{   
-    width: 85%;
+    width: 82%;
     display: flex;
     justify-content: center;
 }
