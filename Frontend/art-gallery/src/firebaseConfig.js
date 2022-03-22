@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getStorage } from "firebase/storage";
+import { getStorage } from "firebase/storage"
 import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -12,16 +12,14 @@ const firebaseConfig = {
   appId: "1:300497102374:web:adcc54a278021c490d68e7"
 };
 
-
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage(app);
 
-const fbFirestore = getFirestore(firebaseApp)
-const fbStorage = getStorage();
+const db = getFirestore()
 
 
-export { fbStorage, fbFirestore }
+export { storage, db }
 
 

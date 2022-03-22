@@ -2,7 +2,7 @@
 
 .cardsArticlePurchase {
     width: 100%;
-    height: 87%;
+    height: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,6 +10,7 @@
   
   .articleCard,
   .sectionSupArticle,
+  .sectionDownArticle,
   .info-article {
     display: flex;
   }
@@ -18,8 +19,8 @@
     background-color: var(--fifth-color);
     border-radius: 0.5em;
     border: 0.2em solid var(--fifth-color);
-    width: 31%;
-    height: 95%;
+    width: 30%;
+    height: 98%;
     flex-direction: column;
     margin: 0.2em;
   }
@@ -30,13 +31,14 @@
   }
   
   .sectionSupArticle {
-    width: 100%;
-    height: 12%;
+    width: 90%;
+    margin: 0 auto;
+    height: 10%;
     justify-content: space-evenly;
   }
   
   .sectionSupArticle h5{
-    text-align: left;
+    
     height: 100%;
     width: 70%;
   }
@@ -47,19 +49,58 @@
   }
   
   .sectionMiddleArticle {
-    width: 100%;
+    width: 90%;
     height: 65%;
+    margin: 0 auto;
   }
   
   .img-article {
-    width: 95%;
-    height: 95%;
-    margin: 0.2em;
+    width: 100%;
+    height: 100%;
+    margin: 0.2em auto;
+    object-fit: contain;
   }
   
   .sectionDownArticle {
-    margin-top: 0.2em;
-    margin-left: 0.4em;
-    height: 22%;
+    margin: .5em auto;
+    margin-bottom: 0;
+    height: 30%;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sectionDownArticle .customer-purchase-data{
+    max-width: 90%;
+    width: auto;
+    height: auto;
+  }
+
+  .sectionDownArticle button{
+    height: 55%;
+    width: 50%;
+    margin-top: .4em;
+    cursor: pointer;
+    background-color: var(--bgMainColor);
+    color: var(--fourth-color);
+    outline: none;
+    border: none;
+    border-radius: .5em .5em 0 0;
+  }
+
+  .sectionDownArticle button:hover{
+    background-color: var(--second-color);
+  }
+
+  .sectionDownArticle button:active{
+    background-color: var(--bgMainColor);
   }
   
+  .articleCard .customer-purchase-data h5{
+    text-align: left;
+  }
+
+  .articleCard label{
+    margin-left: .5em;
+  }

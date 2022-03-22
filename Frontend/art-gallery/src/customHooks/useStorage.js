@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
-import { fbStorage, fbFirestore,  } from '../firebaseConfig'
+import { storage, db} from '../firebaseConfig'
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
+import { collection, addDoc} from 'firebase/firestore'
+
 
 const useStorage = (file) => {
 	const [progress, setProgress] = useState(0)
@@ -9,11 +12,12 @@ const useStorage = (file) => {
 	// useEffect se ejecutara cada vez que file cambie de valor
 	useEffect(() => {
 		// references
-		const storageRef = fbStorage.ref(file.name)
-		const collectionRef = fbFirestore.collection('images')
+		const storageRef = ref(storage, `/files/${file.name}`);
+		// const collectionRef = collection(db,'images')
+		const uploadTask= uploadBytesResumable(storageRef,file);
 
 		// subimos la imagen, suceden ciertas cosas
-		storageRef.put(file).on(
+		uploadTask.on(
 			'state_changed',
 			(snap) => {
 				let percentage = (snap.bytesTransferred / snap.totalBytes) * 100
@@ -23,15 +27,28 @@ const useStorage = (file) => {
 				setError(err)
 			},
 			async () => {
-				const url = await storageRef.getDownloadURL()
-				
-				collectionRef.add( url)
+				const url = await getDownloadURL(storageRef)
 				setUrl(url)
+				try {
+					const docRef = await addDoc(collection(db, "images"), {
+					  url: url
+					});
+					console.log("Document written with ID: ", docRef.id);
+				  } catch (e) {
+					console.error("Error adding document: ", e);
+				  }
+				
+				
+				
 			}
+			
 		)
 	}, [file])
 
-	return { progress, url, error }
+	console.log(progress, url, error, "soy url")	
+
+	return {progress, url, error }
+
 }
 
 export default useStorage

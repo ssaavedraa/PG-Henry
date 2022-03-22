@@ -2,8 +2,8 @@ const { Review, Purchase, Painting, Artist } = require("../../db");
 const updateScore = require("./utils/updateScore.js");
 
 const add = async (req, res) => {
-	const { title, body, score, userId, paintingId } = req.body;
-
+	const { title, body, score, paintingId } = req.body;
+	const userId = req.user.id;
 	const checkReview = await Review.findOne({ where: { userId, paintingId } });
 	if (checkReview)
 		return res.status(400).send("You reviewed this painting already");

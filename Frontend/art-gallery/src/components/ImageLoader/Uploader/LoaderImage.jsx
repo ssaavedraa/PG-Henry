@@ -5,7 +5,7 @@ import useStorage from '../../../customHooks/useStorage'
 
 export const LoaderImage = ({file, setFile, setLoading}) => {
   const {url, progress}=useStorage(file)
-
+ 
   useEffect(()=>{
     if(url){
       setFile(null)
@@ -13,6 +13,7 @@ export const LoaderImage = ({file, setFile, setLoading}) => {
     }
   }, [url, setFile, setLoading])
 
+  
 
   return (
     <div className="loader">
