@@ -44,43 +44,56 @@ const ConfirmPurchase = () => {
 	}, []);
 
 	return (
-		<div className="divContainerConfirmPurchase">
+		<div className="divContainerConfirmPurchase-1">
 			<h1>Confirm purchase</h1>
-			<div className="divContainerDetailsPurchase">
-				<div className="divContainerInputsDetailPurchase">
+			<div className="divContainerDetailsPurchase-1">
+				<div className="divContainerInputsDetailPurchase-1">
 					<h3>Billings details</h3>
 
 					{contactInfo ? (
-						<div>
-							<div>Name :{contactInfo.firstName + contactInfo.lastName}</div>
-							<div>Email: {contactInfo.email}</div>
-							<div>Telephone: {contactInfo.telephone}</div>
-							<div>Post Code: {contactInfo.postCode}</div>
-							<div>City: {contactInfo.city}</div>
-							<div>Street: {contactInfo.street}</div>
-							<div>Number: {contactInfo.streetNumber}</div>
-							<div>Floor: {contactInfo.floor}</div>
-							<div>Unit: {contactInfo.unit}</div>
+						<div className="divContainerInputsDetailPurchase-1-div">
+							<div>Name:</div>
+							<div>Email:</div>
+							<div>Telephone:</div>
+							<div>Post Code:</div>
+							<div>City:</div>
+							<div>Street:</div>
+							<div>Number:</div>
+							<div>Floor:</div>
+							<div>Unit:</div>
+
+							{/* ///////////////// */}
+							<div className="divContainerInputsDetailPurchase-2-div">
+							<div>{contactInfo.firstName + contactInfo.lastName}</div>
+							<div>{contactInfo.email}</div>
+							<div>{contactInfo.telephone}</div>
+							<div>{contactInfo.postCode}</div>
+							<div>{contactInfo.city}</div>
+							<div>{contactInfo.street}</div>
+							<div>{contactInfo.streetNumber}</div>
+							<div>{contactInfo.floor}</div>
+							<div>{contactInfo.unit}</div>
+						</div>
 						</div>
 					) : (
 						<div>A</div>
 					)}
 				</div>
-				<div className="divContainerItemsPurchase">
+				<div className="divContainerItemsPurchase-1">
 					<h3>Your order</h3>
 					{paintings &&
 						paintings.map((painting, i) => (
-							<div key={i} className="divContainerProductCart">
-								<div>
-									<p>{painting.title}</p>
-									<img src={painting.photos[0].url} alt={painting.title} />
-								</div>
+							<div key={i} className="divContainerProductCart-1">
+
+								<p>{painting.title}</p>
+								<img className="content-img" src={painting.photos[0].url} alt={painting.title} />
+
 								<p>USD$ {painting.price}</p>
 							</div>
 						))}
-					<div className="divContainerButtonMercadoPago">
-						<button id="button1"></button>
-					</div>
+					{/* <div className="divContainerButtonMercadoPago"> */}
+					<button id="button1"></button>
+					{/* </div> */}
 				</div>
 			</div>
 		</div>
