@@ -23,6 +23,7 @@ import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 import CartForm from "./components/Cart/CartForm/CartForm";
 import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
 import { AboutDev } from "./components/aboutDev/AboutDev";
+import NotFound from "./components/Error404/notFound.component";
 
 function App() {
   return (
@@ -121,6 +122,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route exact path="*" element={<NotFound/>}/>
         </Routes>
         <Footer />
       </div>
