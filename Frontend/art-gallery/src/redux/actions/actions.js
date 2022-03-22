@@ -224,9 +224,10 @@ export const editArtist = (id, payload) => {
   return async function (dispatch) {
     try {
       const response = await axios.put(`/artist/update/${id}`, payload);
+      const { data: newArtist } = await axios.get(`/artist/get/${id}`);
       return dispatch({
         type: EDIT_ARTIST,
-        payload: response.data,
+        payload: newArtist,
       });
     } catch (err) {
       console.log(err);

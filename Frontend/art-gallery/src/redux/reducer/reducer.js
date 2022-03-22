@@ -190,6 +190,7 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         paintings: artworks,
+        detailObra: action.payload[0],
       };
     case ADD_TECHNIQUE:
       return {
@@ -199,7 +200,7 @@ function rootReducer(state = initialState, action) {
     case EDIT_ARTIST:
       return {
         ...state,
-        artistId: [...state.artistId, action.payload],
+        artistId: action.payload,
       };
     case GET_ALL_SP:
       return {
