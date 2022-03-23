@@ -14,7 +14,6 @@ function Artists() {
     getArtists()
       .then((artists) => {
         setArtistData(artists);
-        console.log("LOADED ARTISTS");
       })
       .catch((err) => {
         console.log(err);
