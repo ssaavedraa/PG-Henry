@@ -4,7 +4,7 @@ import "./CardArticles.css";
 import { useState } from "react";
 import AddReviewModal from "../../../../Modales/Reviews/AddReviewModal";
 
-function CardArticlesPurchase({ id, price, img, title, isAdmin, state }) {
+function CardArticlesPurchase({ id, price, img, title, isAdmin, state, isReviewed }) {
 
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [openModalReview, setOpenModalReview] = useState(false)
@@ -20,7 +20,7 @@ function CardArticlesPurchase({ id, price, img, title, isAdmin, state }) {
       </section>
       <section className="sectionDownArticle">
         <DivPurchaseData title="Title" value={title} />
-        {isAdmin === false && state === "completed" && (
+        {isAdmin === false && state === "completed" && isReviewed === false && (
           <button onClick={() => setOpenModalReview(true)} >+ Add Review</button>
         )}
       </section>
