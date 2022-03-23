@@ -46,7 +46,7 @@ function PurchaseModal({
           {purchase.state === "processing" ||
           purchase.state === "completed" ||
           purchase.state === "canceled" ? (
-            <Text>{`There's no operations for ${purchase.state} purchases`}</Text>
+            <Text style={style.textNo}>{`There's no operations for ${purchase.state} purchases`}</Text>
           ) : (
             <>
               <Text style={style.textWant}>What do you want to do?</Text>
