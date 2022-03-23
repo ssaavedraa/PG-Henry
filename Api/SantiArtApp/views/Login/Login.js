@@ -17,6 +17,8 @@ import {
 } from "react-native-responsive-screen";
 import symbolicateStackTrace from "react-native/Libraries/Core/Devtools/symbolicateStackTrace";
 import Spinner from "../../components/Spinner/Spinner.js";
+import HeaderWavy from "../../components/HeaderWavyLogin/HeaderWavy.js";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const popUp = (msg) => {
   Alert.alert("Login failed :(", msg, [{ text: "OK" }]);
@@ -59,35 +61,46 @@ function Login({ navigation }) {
   if (loading) return <Spinner />;
 
   return (
-    <View style={style.loginForm}>
-      <Image
-        source={require("../../assets/santArt.png")}
-        style={{ width: wp("75%"), height: hp("40%") }}
-      />
-      <TextInput
-        autoFocus
-        placeholder="Email"
-        keyboardType="email-address"
-        autoComplete="email"
-        defaultValue={email}
-        autoCapitalize="none"
-        onChangeText={(i) => setEmail(i)}
-        onSubmitEditing={() => passRef.current.focus()}
-        style={style.inputs}
-      />
-      <TextInput
-        secureTextEntry
-        placeholder="Password"
-        defaultValue={password}
-        onChangeText={(i) => setPassword(i)}
-        onSubmitEditing={handleLogin}
-        ref={passRef}
-        style={style.inputs}
-      />
-      <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
-        <Text style={style.textLogin}>Login</Text>
-      </TouchableOpacity>
-      <Button
+    <View style={style.container}>
+      <View style={style.viewImage}>
+        <Image source={require("../../assets/santArt.png")} style={style.img} />
+      </View>
+      <View style={style.loginForm}>
+        <Text style={style.textWelcome}>Hi there!</Text>
+        <Text style={{ marginBottom: wp("3%") }}>Welcome to SantArt App</Text>
+        <View style={style.viewInputs}>
+          <Icon name="mail-outline" size={25} color={'#7c7c7c'}/>
+          <TextInput
+            autoFocus
+            placeholder="Email"
+            keyboardType="email-address"
+            autoComplete="email"
+            defaultValue={email}
+            autoCapitalize="none"
+            onChangeText={(i) => setEmail(i)}
+            onSubmitEditing={() => passRef.current.focus()}
+            style={style.inputs}
+          />
+        </View>
+        <View style={style.viewInputs}>
+          <Icon name="key-outline" size={25} color={'#7c7c7c'} />
+          <TextInput
+            secureTextEntry
+            placeholder="Password"
+            defaultValue={password}
+            onChangeText={(i) => setPassword(i)}
+            onSubmitEditing={handleLogin}
+            ref={passRef}
+            style={style.inputs}
+          />
+        </View>
+
+        <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
+          <Text style={style.textLogin}>Login</Text>
+        </TouchableOpacity>
+
+        <Button
+     
         title="PASA DERECHO"
         onPress={() => {
           axios.defaults.headers.common["Authorization"] =
@@ -95,6 +108,7 @@ function Login({ navigation }) {
           navigation.replace("Home");
         }}
       />
+      </View>
     </View>
   );
 }
