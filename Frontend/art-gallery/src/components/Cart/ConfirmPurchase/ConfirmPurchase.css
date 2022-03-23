@@ -1,6 +1,6 @@
 .divContainerConfirmPurchase-1{
     width: inherit;
-    height: 65vh;
+    min-height: 80vh;
     margin: 3rem 9rem;
 }
 .divContainerProductCart-1  {
@@ -44,13 +44,16 @@ color: grey;
 }
 .divContainerInputsDetailPurchase-2-div > div {
     color: black;
+    
     }
 .divContainerInputsDetailPurchase-2-div{
     position: absolute;
-    right: 200px;
+    /* right: 200px; */
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-left: 200px;
+  
    
 }
 
@@ -68,7 +71,7 @@ color: grey;
 
 .divContainerItemsPurchase-1 {
     width: 27rem;  
-    height: 400px;
+    min-height: 400px;
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
@@ -92,4 +95,30 @@ color: grey;
     font-size: 0.9rem;
     cursor: pointer;
     background-color: #578bff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.divContainerProductCart-100 {
+    width: 80%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+.divContainerProductCart-100 img{
+    width: 80px;
+    height: 80px;
+}
+.divContainerProductCart-100 > div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.divContainerProductCart-100 > div > p{
+    margin-left: 30px;
 }

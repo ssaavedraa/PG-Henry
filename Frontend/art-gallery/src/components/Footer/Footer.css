@@ -15,3 +15,17 @@
     font-size: 12px;
     margin-top: 0.5rem;
 }
+.spanAbout {
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    border: 1px solid rgb(129, 129, 129);
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.spanAbout:hover {
+    transition: all 0.5s;
+  background: rgb(216, 216, 216);
+}
