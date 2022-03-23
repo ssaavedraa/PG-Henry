@@ -10,9 +10,9 @@ const getRecommended = async (req, res) => {
     limit: 10,
   });
   const fixedRecommended = recommended.map((r) => {
-    const { id, title, photos } = r.toJSON();
+    const { id, title, photos, artist } = r.toJSON();
     const image = photos[0].url;
-    return { id, title, image };
+    return { id, title, image, artist };
   });
   res.json(fixedRecommended);
 };
