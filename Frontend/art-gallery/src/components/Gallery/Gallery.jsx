@@ -18,9 +18,9 @@ function Gallery() {
   const params = new URLSearchParams(search);
   const query = params.get("query");
 
-  useEffect(() => {
+  /*   useEffect(() => {
     dispatch(getPaintings());
-  }, [dispatch]);
+  }, [dispatch]); */
   //Filters
   const [filter, setFilter] = useState({
     order: "",
@@ -145,6 +145,7 @@ function Gallery() {
         cleanFilter={cleanFilter}
         filter={filter}
         setFilter={setFilter}
+        name={filter.name}
       />
       <div className="cards-container">
         {query && <p>{"searching for: " + query}</p>}
