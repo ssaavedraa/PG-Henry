@@ -3,6 +3,7 @@ const router = Router();
 const paintingControllers = require("../controllers/painting");
 
 router.get("/get/:id", paintingControllers.getById);
+router.get("/getStats", paintingControllers.getStats);
 router.get("/getall", paintingControllers.getAll);
 router.get("/getrecommended/:paintingId", paintingControllers.getRecommended);
 router.get("/search", paintingControllers.search);

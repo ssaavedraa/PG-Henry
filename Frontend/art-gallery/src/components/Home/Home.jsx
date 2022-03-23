@@ -1,31 +1,19 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getPaintings } from "../../redux/actions/actions";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import CardHomeArt from "../CardHome/CardHomeArt";
 import "./home.css";
 
 function Home() {
-  const { paintings } = useSelector((state) => state);
-  const dispatch = useDispatch();
+  const [obraRandon, setObraRandon] = useState([]);
+  const random = Math.floor(Math.random() * 30 + 1);
 
   //Obras mas populares max 6
   useEffect(() => {
-    dispatch(getPaintings());
-  }, [dispatch]);
-
-  
-  function getRandom(){
-    const random =
-    paintings && paintings.length > 0
-      ? Math.floor(Math.random() * (paintings.length - 1))
-      : 1;
-    return random;
-  }
-
-  let paintsPopulars = [];
-  for (let i = 0; i < 5; i++) {
-    paintsPopulars.push(paintings[getRandom()]);
-  }
+    axios
+      .get(`/painting/getrecommended/${random}`)
+      .then((res) => setObraRandon(res.data.slice(0, 5)))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className="container-home">
@@ -38,15 +26,16 @@ function Home() {
 
       <div className="content-all">
         <div className="content-carrousel">
-          {paintings.length > 0 && paintsPopulars.length > 0 && paintsPopulars.map((paint, index) => (
-            <CardHomeArt
-              key={index}
-              id={paint.id}
-              url={paint.photos[0].url}
-              artist={paint.artist.name}
-              title={paint.title}
-            />
-          ))}
+          {obraRandon.length > 0 &&
+            obraRandon.map((paint, index) => (
+              <CardHomeArt
+                key={index}
+                id={paint.id}
+                url={paint.image}
+                artist={paint.artist.name}
+                title={paint.title}
+              />
+            ))}
         </div>
       </div>
     </div>
