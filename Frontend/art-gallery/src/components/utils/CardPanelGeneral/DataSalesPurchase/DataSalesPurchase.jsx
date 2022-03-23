@@ -23,9 +23,6 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
     btnArrow[index].innerHTML = btnArrow[index].innerHTML === "▲" ? "▼" : "▲";
   }
 
-  const fullName = `${purchase.contactInfo.firstName} ${purchase.contactInfo.lastName}`;
-  const detailData = purchase.contactInfo;
-
   function onChangeState(e) {
     setState(e.target.value);
   }
@@ -37,6 +34,9 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
     detailedInformation(index);
     toast.success(`Status has been updated to ${state}!`);
   }
+
+  const fullName = `${purchase.contactInfo.firstName} ${purchase.contactInfo.lastName}`;
+  const detailData = purchase.contactInfo;
 
   const isComplete =
     purchase.state === "completed"
@@ -98,6 +98,7 @@ function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
                     img={purch.photos}
                     isAdmin={isAdmin}
                     state={purchase.state}
+                    isReviewed={purch.isReviewed}
                   />
                 ))
               : null}

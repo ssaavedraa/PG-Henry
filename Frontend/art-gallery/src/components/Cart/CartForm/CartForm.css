@@ -142,7 +142,7 @@ margin: 0.15rem 0rem;
 .divContainerProductCart-10 {
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     border: 2px solid black;
     border-left: none;
@@ -161,5 +161,5 @@ margin: 0.15rem 0rem;
     gap: 15px;
 }
 .divContainerProductCart-10 > div > p{
-    margin-left: -150px;
+    margin-left: 30px;
 }

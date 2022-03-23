@@ -101,7 +101,6 @@ export const AddUser = () => {
     return <h2>Loading</h2>
   }
   return (
-    <>
       <div className="addUser-admin-box">
               <NavPanel />
             <div className="addUser-content">
@@ -259,8 +258,6 @@ export const AddUser = () => {
 
         </div> */}
       </div>
-
-    </>
   );
 
 }

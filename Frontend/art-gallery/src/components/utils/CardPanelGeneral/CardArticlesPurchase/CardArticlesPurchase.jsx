@@ -2,7 +2,7 @@ import React from "react";
 import DivPurchaseData from "../../DivPurchaseData/DivPurchaseData";
 import "./CardArticles.css";
 
-function CardArticlesPurchase({ id, price, img, title, isAdmin, state }) {
+function CardArticlesPurchase({ id, price, img, title, isAdmin, state,isReviewed }) {
   return (
     <div className="articleCard">
       <section className="sectionSupArticle">
@@ -14,7 +14,7 @@ function CardArticlesPurchase({ id, price, img, title, isAdmin, state }) {
       </section>
       <section className="sectionDownArticle">
         <DivPurchaseData title="Title" value={title} />
-        {isAdmin === false && state === "completed" && (
+        {isAdmin === false && state === "completed" && isReviewed === false && (
           <button>+ Add Review</button>
         )}
       </section>
