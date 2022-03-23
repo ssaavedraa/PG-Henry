@@ -9,7 +9,7 @@ function Artists() {
   const [artistData, setArtistData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  const loadArtist = () => {
     setLoading(true);
     getArtists()
       .then((artists) => {
@@ -22,6 +22,10 @@ function Artists() {
       .finally(() => {
         setLoading(false);
       });
+  }
+
+  useEffect(() => {
+    loadArtist()
   }, []);
 
 
@@ -29,9 +33,9 @@ function Artists() {
 
   return (
     <FlatList 
-    // refreshControl={
-    //   <RefreshControl refreshing={loading} onRefresh={loadUsers} />
-    // }
+    refreshControl={
+      <RefreshControl refreshing={loading} onRefresh={loadArtist}  enabled={true}/>
+    }
     data={artistData}
     renderItem={({item}) => (
       <ArtistItem artist={item} />

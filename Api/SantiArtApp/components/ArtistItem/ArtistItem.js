@@ -1,26 +1,33 @@
 import { View, Text, Image } from "react-native";
 import style from "./ArtistItem.style";
-import React from "react";
+import React, { useState } from "react";
 import ListItem from "../ListItem/ListItem";
+import AboutArtistModal from "../AboutArtistModal/AboutArtistModal";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const ArtistItem = ({ artist }) => {
+  const [artistData, setArtistData] = useState(false);
   return (
     <>
+      <AboutArtistModal
+        artistData={artistData}
+        setArtistData={setArtistData}
+        artist={artist}
+      />
       <ListItem>
-        <View style={style.containerImg}>
-          <Image source={{ uri: artist.photo }} style={style.img} />
-        </View>
-        <View style={style.container}>
-          <View style={style.nameArtist}>
-            <Text>{artist.name}</Text>
-            <Text>{artist.score}</Text>
+        <TouchableOpacity onPress={() => setArtistData(true)}>
+          <View style={style.containerArtist}>
+            <View style={style.containerImg}>
+              <Image source={{ uri: artist.photo }} style={style.img} />
+            </View>
+            <View style={style.container}>
+              <View style={style.nameArtist}>
+                <Text style={style.textName}>{artist.name}</Text>
+                <Text>{artist.email}</Text>
+              </View>
+            </View>
           </View>
-          <View style={style.detailArtist}>
-            <Text>{"Paintings " + artist.paintings}</Text>
-            <Text>{"Reviews " + artist.reviews}</Text>
-            <Text>{"Sales " + artist.sales}</Text>
-          </View>
-        </View>
+        </TouchableOpacity>
       </ListItem>
     </>
   );

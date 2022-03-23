@@ -15,6 +15,7 @@ export default StyleSheet.create({
     marginTop: wp('2%'),
     marginLeft: wp('3%'),
     flexDirection: "row",
-    padding: wp('2.5%'),
+    padding: wp('2%'),
+    alignItems: 'center',
   },
 });
