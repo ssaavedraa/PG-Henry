@@ -18,7 +18,6 @@ import { DetailOfArt } from "./components/obrasDetail/DetailOfArt";
 import Cart from "./components/Cart/Cart";
 import Favs from "./components/Favs/Favs";
 import ProtectedRoute from "./routes/ProtectedRoute";
-import CheckoutButton from "./components/MercadoPago/checkoutButton";
 import UserMailVerify from "./components/UserMailVerify/UserMailVerify";
 import CartForm from "./components/Cart/CartForm/CartForm";
 import ConfirmPurchase from "./components/Cart/ConfirmPurchase/ConfirmPurchase";
@@ -29,121 +28,119 @@ import { AboutDev } from "./components/aboutDev/AboutDev";
 import { ImageLoader } from "./components/ImageLoader/ImageLoader";
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/artists" element={<Artists />} />
-          <Route exact path="/artists/:id" element={<DetailArtist />} />
-          <Route
-            exact
-            path="/login"
-            element={
-              <ProtectedRoute role="guest">
-                <Login />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            exact
-            path="/user/verify/:token"
-            element={<UserMailVerify />}
-          />
-          <Route exact path="/detailpainting/:id" element={<DetailOfArt />} />
+	return (
+		<Router>
+			<div className="App">
+				<NavBar />
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route exact path="/artists" element={<Artists />} />
+					<Route exact path="/artists/:id" element={<DetailArtist />} />
+					<Route
+						exact
+						path="/login"
+						element={
+							<ProtectedRoute role="guest">
+								<Login />
+							</ProtectedRoute>
+						}
+					/>
+					<Route exact path="/user/verify/:token" element={<UserMailVerify />} />
+					<Route exact path="/detailpainting/:id" element={<DetailOfArt />} />
 
-          <Route
-            exact
-            path="/admin/addartist"
-            element={
-              <ProtectedRoute role="admin">
-                <AddArtists />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            exact
-            path="/admin"
-            element={
-              <ProtectedRoute role="admin">
-                <MyProfile />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            exact
-            path="/admin/user"
-            element={
-              <ProtectedRoute role="admin">
-                <AddUser />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            exact
-            path="/admin/additems"
-            element={
-              <ProtectedRoute role="admin">
-                <AddItems />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            exact
-            path="/admin/sales"
-            element={
-              <ProtectedRoute role="admin">
-                <Sales />
-              </ProtectedRoute>
-            }
-          />
+					<Route
+						exact
+						path="/admin/addartist"
+						element={
+							<ProtectedRoute role="admin">
+								<AddArtists />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						exact
+						path="/admin"
+						element={
+							<ProtectedRoute role="admin">
+								<MyProfile />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						exact
+						path="/admin/user"
+						element={
+							<ProtectedRoute role="admin">
+								<AddUser />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						exact
+						path="/admin/additems"
+						element={
+							<ProtectedRoute role="admin">
+								<AddItems />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						exact
+						path="/admin/sales"
+						element={
+							<ProtectedRoute role="admin">
+								<Sales />
+							</ProtectedRoute>
+						}
+					/>
 
-          <Route exact path="/under" element={<UnderConstruction />} />
-          <Route exact path="/contactus" element={<ContactUs />} />
-          <Route exact path="/gallery" element={<Gallery />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/formUser" element={<FormContac_1 />} />
-          <Route exact path="/formArtists" element={<FormContacArtist />} />
-          <Route exact path="/about" element={<AboutDev />} />
-          <Route
-            exact
-            path="/favs"
-            element={
-              <ProtectedRoute role="user">
-                <Favs />
-              </ProtectedRoute>
-            }
-          />
-          <Route exact path="/testMP" element={<CheckoutButton />} />
-          <Route exact path="/contactInfo" element={<CartForm />} />
-          <Route exact path="/payment" element={<ConfirmPurchase />} />
+					<Route exact path="/under" element={<UnderConstruction />} />
+					<Route exact path="/contactus" element={<ContactUs />} />
+					<Route exact path="/gallery" element={<Gallery />} />
+					<Route exact path="/home" element={<Home />} />
+					<Route exact path="/cart" element={<Cart />} />
+					<Route exact path="/formUser" element={<FormContac_1 />} />
+					<Route exact path="/formArtists" element={<FormContacArtist />} />
+					<Route exact path="/about" element={<AboutDev />} />
           <Route exact path="/image" element={<ImageLoader />} />
-          <Route
-            exact
-            path="/user"
-            element={
-              <ProtectedRoute role="user">
-                <MyProfile />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            exact
-            path="/user/purchase"
-            element={
-              <ProtectedRoute role="user">
-                <Sales />
-              </ProtectedRoute>
-            }
-          />
-          <Route exact path="*" element={<NotFound/>}/>
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
+					<Route
+						exact
+						path="/favs"
+						element={
+							<ProtectedRoute role="user">
+								<Favs />
+							</ProtectedRoute>
+						}
+					/>
+
+					<Route exact path="/contactInfo" element={<CartForm />} />
+					<Route exact path="/payment" element={<ConfirmPurchase />} />
+					<Route
+						exact
+						path="/user"
+						element={
+							<ProtectedRoute role="user">
+								<MyProfile />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						exact
+						path="/user/purchase"
+						element={
+							<ProtectedRoute role="user">
+								<Sales />
+							</ProtectedRoute>
+						}
+					/>
+					<Route exact path="*" element={<NotFound />} />
+				</Routes>
+				<Footer />
+			</div>
+		</Router>
+	);
 }
 
 export default App;
+
+

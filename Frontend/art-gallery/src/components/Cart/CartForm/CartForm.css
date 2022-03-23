@@ -16,7 +16,7 @@
 
 .divContainerItemsCart {
     width: 27rem;  
-    height: 400px;
+    min-height: 400px;
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
@@ -109,6 +109,7 @@ margin: 0.15rem 0rem;
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .divContainerNumberFloorUnit{
@@ -137,4 +138,28 @@ margin: 0.15rem 0rem;
 .activeLabel::after {
     content: 'is required';
     margin-left: 5px;
+}
+.divContainerProductCart-10 {
+    width: 80%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+.divContainerProductCart-10 img{
+    width: 80px;
+    height: 80px;
+}
+.divContainerProductCart-10 > div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.divContainerProductCart-10 > div > p{
+    margin-left: 30px;
 }
