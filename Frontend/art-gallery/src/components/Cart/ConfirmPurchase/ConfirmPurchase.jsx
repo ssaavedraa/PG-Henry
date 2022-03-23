@@ -64,16 +64,16 @@ const ConfirmPurchase = () => {
 
 							{/* ///////////////// */}
 							<div className="divContainerInputsDetailPurchase-2-div">
-							<div>{contactInfo.firstName + contactInfo.lastName}</div>
-							<div>{contactInfo.email}</div>
-							<div>{contactInfo.telephone}</div>
-							<div>{contactInfo.postCode}</div>
-							<div>{contactInfo.city}</div>
-							<div>{contactInfo.street}</div>
-							<div>{contactInfo.streetNumber}</div>
-							<div>{contactInfo.floor}</div>
-							<div>{contactInfo.unit}</div>
-						</div>
+								<div>{contactInfo.firstName + contactInfo.lastName}</div>
+								<div>{contactInfo.email}</div>
+								<div>{contactInfo.telephone}</div>
+								<div>{contactInfo.postCode}</div>
+								<div>{contactInfo.city}</div>
+								<div>{contactInfo.street}</div>
+								<div>{contactInfo.streetNumber}</div>
+								<div>{contactInfo.floor}</div>
+								<div>{contactInfo.unit}</div>
+							</div>
 						</div>
 					) : (
 						<div>A</div>
@@ -81,13 +81,24 @@ const ConfirmPurchase = () => {
 				</div>
 				<div className="divContainerItemsPurchase-1">
 					<h3>Your order</h3>
-					{paintings &&
+					{
+					(paintings.length > 1)
+						?
+						paintings.map((painting, i) => (
+							<div key={i} className="divContainerProductCart-100">
+
+								<img src={painting.photos[0].url} alt={painting.title} />
+								<div>
+									<p>{painting.title}</p>
+									<p>USD$ {painting.price}</p>
+								</div>
+							</div>
+						))
+						:
 						paintings.map((painting, i) => (
 							<div key={i} className="divContainerProductCart-1">
-
 								<p>{painting.title}</p>
 								<img className="content-img" src={painting.photos[0].url} alt={painting.title} />
-
 								<p>USD$ {painting.price}</p>
 							</div>
 						))}

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import useCart from "../../../customHooks/useCart.js";
 import { contactInfo } from "../../../redux/actions/actions";
 import { useDispatch } from "react-redux";
-import {validarForm} from './validarForm'
+import { validarForm } from './validarForm'
 
 
 
@@ -24,8 +24,8 @@ const CartForm = () => {
 		return paintings;
 	};
 	const [errorState, seterrorState] = useState({
-        error: {}
-    })
+		error: {}
+	})
 	const [paintings, setPaintings] = useState([]);
 
 	const [info, setInfo] = useState({
@@ -60,7 +60,7 @@ const CartForm = () => {
 		e.preventDefault();
 		let error = validarForm(info)
 
-		if  (!Object.keys(error).length){
+		if (!Object.keys(error).length) {
 
 			for (const key in info) {
 				if (!info[key] && key !== "floor" && key !== "unit") {
@@ -69,31 +69,31 @@ const CartForm = () => {
 			}
 			try {
 				await axios.post("checkout/contactInfo", info);
-	
+
 				dispatch(contactInfo(info));
 				navigate("/payment");
 			} catch (e) {
 				console.log(e);
 			}
 
-			
+
 		} else {
-			seterrorState(err => ({...err, error: error}))
+			seterrorState(err => ({ ...err, error: error }))
 			console.log(errorState)
 			setInfo({
 				firstName: "",
-		email: "",
-		lastName: "",
-		telephone: '',
-		postCode: '',
-		city: "",
-		street: "",
-		streetNumber: '',
-		floor: '',
-		unit: "",
+				email: "",
+				lastName: "",
+				telephone: '',
+				postCode: '',
+				city: "",
+				street: "",
+				streetNumber: '',
+				floor: '',
+				unit: "",
 			})
 		}
-	
+
 
 
 	};
@@ -108,14 +108,14 @@ const CartForm = () => {
 						<div className="divContainerNameLastCart">
 							<div className="divNameLastCart">
 								<label
-								className = { errorState.error.firstName === "Name require"  ? "activeLabel" : ''}
+									className={errorState.error.firstName === "Name require" ? "activeLabel" : ''}
 								>First Name</label>
-								<input 
-								className= { errorState.error.firstName === "Name require"  ? "activeError" : ''}
-								type="text" 
-								value={info.firstName} 
-								name="firstName"
-								onChange={handleChange} />
+								<input
+									className={errorState.error.firstName === "Name require" ? "activeError" : ''}
+									type="text"
+									value={info.firstName}
+									name="firstName"
+									onChange={handleChange} />
 							</div>
 							<div className="divNameLastCart">
 								<label>Last Name</label>
@@ -124,47 +124,47 @@ const CartForm = () => {
 						</div>
 
 						<label
-						className = { errorState.error.email === "Email require"  ? "activeLabel" : ''}
+							className={errorState.error.email === "Email require" ? "activeLabel" : ''}
 						>Email</label>
-						<input 
-						className= { errorState.error.email === "Email require"  ? "activeError" : ''}
-						type="email" name="email" value={info.email} onChange={handleChange} />
+						<input
+							className={errorState.error.email === "Email require" ? "activeError" : ''}
+							type="email" name="email" value={info.email} onChange={handleChange} />
 
 						<label
-						className = { errorState.error.telephone === "phone invalid"  ? "activeLabel" : ''}
+							className={errorState.error.telephone === "phone invalid" ? "activeLabel" : ''}
 						>Telephone</label>
-						<input 
-						className= { errorState.error.telephone === "phone invalid"  ? "activeError" : ''}
-						type="text" name="telephone" value={info.telephone} onChange={handleChange} />
+						<input
+							className={errorState.error.telephone === "phone invalid" ? "activeError" : ''}
+							type="text" name="telephone" value={info.telephone} onChange={handleChange} />
 
 						<label
-						className = { errorState.error.postCode === "postCode require"  ? "activeLabel" : ''}
+							className={errorState.error.postCode === "postCode require" ? "activeLabel" : ''}
 						>Post Code</label>
-						<input 
-						className= { errorState.error.postCode === "postCode require"  ? "activeError" : ''}
-						type="text" name="postCode" value={info.postCode} onChange={handleChange} />
+						<input
+							className={errorState.error.postCode === "postCode require" ? "activeError" : ''}
+							type="text" name="postCode" value={info.postCode} onChange={handleChange} />
 
 						<label
-						className = { errorState.error.city === "city require"  ? "activeLabel" : ''}
+							className={errorState.error.city === "city require" ? "activeLabel" : ''}
 						>City</label>
-						<input 
-						className= { errorState.error.city === "city require"  ? "activeError" : ''}
-						type="text" name="city" value={info.city} onChange={handleChange} />
+						<input
+							className={errorState.error.city === "city require" ? "activeError" : ''}
+							type="text" name="city" value={info.city} onChange={handleChange} />
 
 						<label
-						className = { errorState.error.street === "street require"  ? "activeLabel" : ''}
+							className={errorState.error.street === "street require" ? "activeLabel" : ''}
 						>Street</label>
-						<input 
-						className= { errorState.error.street === "street require"  ? "activeError" : ''}
-						type="text" name="street" value={info.street} onChange={handleChange} />
+						<input
+							className={errorState.error.street === "street require" ? "activeError" : ''}
+							type="text" name="street" value={info.street} onChange={handleChange} />
 						<div className="divContainerNumberFloorUnit">
 							<div className="NumberFloorUnitCart">
 								<label
-								className = { errorState.error.streetNumber === "Number require"  ? "activeLabel" : ''}
+									className={errorState.error.streetNumber === "Number require" ? "activeLabel" : ''}
 								>Number</label>
-								<input 
-								className= { errorState.error.streetNumber === "Number require"  ? "activeError" : ''}
-								type="text" name="streetNumber" value={info.streetNumber} onChange={handleChange} />
+								<input
+									className={errorState.error.streetNumber === "Number require" ? "activeError" : ''}
+									type="text" name="streetNumber" value={info.streetNumber} onChange={handleChange} />
 							</div>
 
 							<div className="NumberFloorUnitCart">
@@ -181,16 +181,30 @@ const CartForm = () => {
 
 					<div className="divContainerItemsCart">
 						<h3>Your order</h3>
-						{paintings &&
-							paintings.map((painting, i) => (
-								<div key={i} className="divContainerProductCart">
-
-									<p>{painting.title}</p>
+						{
+							paintings.length > 1
+								?
+								paintings.map((painting, i) => (
+								<div key={i} className="divContainerProductCart-10">
+									
 									<img src={painting.photos[0].url} alt={painting.title} />
-
+									<div>
+									<p>{painting.title}</p>
 									<p>USD$ {painting.price}</p>
+									</div>
 								</div>
-							))}
+								))
+								:
+								paintings.map((painting, i) => (
+									<div key={i} className="divContainerProductCart">
+
+										<p>{painting.title}</p>
+										<img src={painting.photos[0].url} alt={painting.title} />
+
+										<p>USD$ {painting.price}</p>
+									</div>
+								))
+						}
 						<div className="divContainerButtonCartContinue">
 							{<button type="submit">Continue</button>}
 						</div>
