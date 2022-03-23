@@ -12,6 +12,7 @@ mercadopago.configure({
 const preference = async (req, res) => {
 	const paintingsIds = req.body.paintingsIds;
 	const userId = req.body.userId;
+	const url = req.body.url;
 	let paintings = [];
 
 	try {
@@ -48,7 +49,7 @@ const preference = async (req, res) => {
 				pending: "http://localhost:3001/checkout/paymentPending",
 			},
 			auto_return: "approved",
-			external_reference: `${purchase.id}`,
+			external_reference: JSON.stringify({ purchaseId: purchase.id, url }),
 			date_of_expiration: expirationDateTo,
 			expiration_date_to: expirationDateTo,
 
