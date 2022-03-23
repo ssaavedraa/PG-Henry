@@ -1,52 +1,26 @@
 import React from "react";
 import "./AddAReview.css";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import logo from "../../assets/img/SantArtlogo.png";
 import { confirmationSweet } from "../../components/utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
 import { FaStar } from "react-icons/fa";
+import { addReview } from "../../redux/actions/actions";
 
 const AddAReview = (setOpenModalArtist) => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
-  const [errors, setError] = useState({});
+  const [errors, setError] = useState('');
   const [applyChanges, setApplyChanges] = useState(true);
-
-  const [hover, SetHover] = useState(null);
-
+  const [hover, setHover] = useState(null)
   const [input, setInput] = useState({
+    title: '',
     score: 0,
-    review: "",
+    body: "",
+    paintingId: 9
   });
-
-  console.log(input, "soy input");
-
-  function validate(input) {
-    setApplyChanges(true);
-    let errors = {};
-    if (!input.score || !input.review) {
-      errors.message = "*Please fill all the inputs";
-    } else {
-      setApplyChanges(false);
-    }
-    return errors;
-  }
-
-  function handleChange(e) {
-    setInput({
-      ...input,
-      [e.target.name]: e.target.value,
-    });
-    setError(
-      validate({
-        ...input,
-        [e.target.name]: e.target.value,
-      })
-    );
-  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -54,12 +28,31 @@ const AddAReview = (setOpenModalArtist) => {
   }
 
   function confirm() {
-    // dispatch(addNewArtist(input));
-    navigate("/artists");
+    try{
+      dispatch(addReview(input));
+      navigate("/artists");
+    }
+    catch(e){
+      alert(e)
+    }
   }
 
   function closeModal() {
     setOpenModalArtist(false);
+  }
+
+  const handleChange = (e) =>{
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value
+    })
+    if(input.title && input.body && input.score){
+      setApplyChanges(false)
+      setError('')
+    }
+    else{
+      setError('Please fill all blanks')
+    }
   }
 
   return (
@@ -72,48 +65,37 @@ const AddAReview = (setOpenModalArtist) => {
           </div>
 
           <div className="data-box-review">
-            <form key="form" onSubmit={(e) => handleSubmit(e)}>
+            <form onSubmit={(e) => handleSubmit(e)}>
               <div>
                 <h2>Review your purchase</h2>
               </div>
+              <label> Review title: </label>
+              <input type="text" name="title" id="title" onChange={handleChange} />
 
               <label> Product review: </label>
-              <textarea
-                name="review"
-                key="review"
-                className="input-add-review"
-                value={input.review}
-                onChange={handleChange}
-              />
+              <textarea name="body" className="input-add-review" onChange={handleChange} />
+
               <label> What is your score for the artist?</label>
               <div className="stars">
-                {[...Array(5)].map((star, i) => {
-                  const score = i + 1;
-                  return (
-                    <label>
-                      <input
-                        type="radio"
-                        name="score"
-                        value={input.score}
-                        onClick={() => setInput({ score })}
-                      />
-                      <FaStar
-                        className="star"
-                        size="2rem"
-                        color={
-                          score <= (hover || input.score) ? "#ffc107" : "e4e5e9"
-                        }
-                        onMouseEnter={() => SetHover(score)}
-                        onMouseLeave={() => SetHover(null)}
-                      />
-                    </label>
-                  );
-                })}
+
+                {
+                  [...Array(5)].map((star, index) => {
+                    const score = index + 1
+                    return(
+                      <>
+                      <input type="radio" name="score" id={`star${score}`} value={score} onChange={handleChange}/>
+                        <label htmlFor={`star${score}`}>
+                          <FaStar className="star" size='1rem' color={score <= (hover || input.score) ? "#ffc107" : "e4e5e9"}  onMouseEnter={() => setHover(score)} onMouseLeave={() => setHover(null)} />
+                        </label>
+                      </>
+                    )
+                  })
+                }
               </div>
 
               <div>
                 <div className="error">
-                  {errors.message ? <p>{errors.message}</p> : <p></p>}
+                  {errors ? <p>{errors}</p> : <p></p>}
                 </div>
                 <button disabled={applyChanges} className="btn-addartist">
                   SEND MY REVIEW

@@ -1,5 +1,6 @@
 import axios from "axios";
-import {
+import { AiFillBoxPlot } from "react-icons/ai";
+import{
   GET_OBRAID,
   GET_OBRAIDRANDON,
   GET_PAITINGS,
@@ -22,6 +23,7 @@ import {
   GET_ALL_SP,
   ADD_PAINTING,
   CONTACT_INFO,
+  ADD_REVIEW
 } from "../action-types/index.js";
 
 export function getPaintings(filters) {
@@ -400,3 +402,18 @@ export const getAllPurchase = (filters) => {
     }
   };
 };
+
+export const addReview = (review) => {
+  return async (dispatch) => {
+    try{
+      const response = axios.post('/review/add', review)
+      dispatch({
+        type: ADD_REVIEW,
+        payload: response.data
+      })
+    }
+    catch(e){
+      console.log(e)
+    }
+  }
+}
