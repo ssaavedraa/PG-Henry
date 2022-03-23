@@ -16,4 +16,13 @@ export default StyleSheet.create({
     width: wp("95%"),
     justifyContent: 'space-evenly',
   },
+  textNo: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    fontWeight: 'bold',
+    fontSize: hp('2%'),
+    marginVertical: wp('12%')
+  }
 });
