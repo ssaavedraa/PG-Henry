@@ -43,7 +43,7 @@ export default function GoogleLoginBtn({ renderProp }) {
 
 	return (
 		<GoogleLogin
-			clientId="977904409468-90cv2ah8dvlo2djnafa7osm3h4i99bec.apps.googleusercontent.com" //ToDo poner el client Id en un .env
+			clientId="977904409468-8atr4k7egvd106g4c57nc0hut690hpjl.apps.googleusercontent.com"
 			onSuccess={successResponseGoogle}
 			onFailure={failureResponseGoogle}
 			cookiePolicy={"single_host_origin"}
