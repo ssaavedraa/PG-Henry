@@ -38,24 +38,29 @@ export default function TechniqueModal({
     name: "",
     description: "",
   });
-  console.log(inputTechnique, "soy input");
+  
 
   const [errors, setError] = useState({});
   const [applyChanges, setApplyChanges] = useState(true);
-  console.log(errors, "soy errores");
+  
+  function allTechniques() {
+
+  }
 
   function validate(input) {
-    setApplyChanges(true);
-    const allTechiques = [];
-    console.log(allTechiques, "soy todas la tecnicas");
-    technique.map((d) => allTechiques.push(d.name));
+    setApplyChanges(true);    
     let errors = {};
-    if (allTechiques.includes(input.name)) {
+    if (!input.name || !input.description) {
+      errors.message = "*All inputs are required"; 
+    
+    } else if (input.name ) {
+      const allTechiques = [];    
+    technique.map((d) => allTechiques.push(d.name));
+    if(allTechiques.includes(input.name)){
       errors.message = "This Technique is already added";
-    } else if (!input.name || !input.description) {
-      errors.message = "*All inputs are required";
-    } else {
-      setApplyChanges(false);
+    }else if(input.name && input.description){
+      setApplyChanges(false)
+    }       
     }
     return errors;
   }

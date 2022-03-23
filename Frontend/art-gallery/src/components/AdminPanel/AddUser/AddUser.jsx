@@ -185,26 +185,7 @@ export const AddUser = () => {
                   <div className="panel-admin-interno1">
                     <h4>Registered users</h4>
 
-                    <div>
-                      <label>Order by:</label>
-                      <select className="nav-select-1"  onChange={(e) => handleSortType(e)}>
-                        <option value="0">...</option>
-                        <option value="email">Email</option>
-                        <option value="firstName">FirstName</option>
-                        <option value="id">Id</option>
-                      </select>
-                    </div>
-
-                    <div className="panel-button">
-                      <label>Sort By Name</label>
-                      <select className="nav-select-1"  onChange={(e) => handleSort(e)}>
-                        <option value="0">...</option>
-                        <option value="ASC">A-Z</option>
-                        <option value="DESC">Z-A</option>
-                      </select>
-                    </div>
-
-
+                   
                   </div>
                   <div className="panel-admin-interno2">
                     <div className="interno2-div1">

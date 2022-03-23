@@ -213,7 +213,7 @@
 }
 
 .color-reset {
-  background: rgb(245, 71, 71) !important;
+  background: var(--canceled-color) !important;
 }
 
 .color-reset:hover{

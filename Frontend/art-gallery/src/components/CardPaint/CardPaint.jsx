@@ -92,13 +92,16 @@ function CardPaint({
       width="40px"
     />}
         <div className="data-paint">
-          <h4>{title}</h4>
-          <h5>{artist.name}</h5>
+          <h5>{title}</h5>
+          <div className="linea"></div>
+          <h6 className="price">USD$ {price}</h6>
+          
+          <p>{artist.name}</p>
           <p>
-            Size: {height} x {width}
+            {height} cm x {width} cm
           </p>
-          <p>Technique: {techniques[0].name}</p>
-          <p className="price">USD$ {price}</p>
+          <p>{techniques[0].name}</p>
+          
         </div>
       </NavLink>
       {user.role === "user" || user.role === "guest" ? (
