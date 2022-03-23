@@ -11,7 +11,7 @@ import useAuth from "../../../customHooks/useAuth";
 const CartForm = () => {
 	//Esto es lo que estaba en contactInfo
 	const navigate = useNavigate();
-	const { cart } = useCart();
+	const { cart, removeAll } = useCart();
 	const dispatch = useDispatch();
 	const { user } = useAuth();
 
@@ -53,7 +53,6 @@ const CartForm = () => {
 				email: user.email,
 			});
 		}
-		console.log(user);
 		getPaintings()
 			.then((res) => setPaintings(res))
 			.catch((err) => console.log(err));
@@ -86,6 +85,7 @@ const CartForm = () => {
 				await axios.post("checkout/contactInfo", info);
 
 				dispatch(contactInfo(info));
+				removeAll();
 				navigate("/payment");
 			} catch (e) {
 				console.log(e);
