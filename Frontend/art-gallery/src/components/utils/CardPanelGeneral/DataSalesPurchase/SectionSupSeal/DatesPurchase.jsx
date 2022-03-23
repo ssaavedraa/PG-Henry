@@ -1,7 +1,7 @@
 import React from "react";
 import DivPurchaseData from "../../../DivPurchaseData/DivPurchaseData";
 
-function DatesPurchase({ purchase, isAdmin,isComplete }) {
+function DatesPurchase({ purchase, isAdmin, isComplete }) {
   const condicionalComplete = purchase.state === "completed";
   const conditionalDispatched = purchase.state === "dispatched";
   const conditionalCanceled = purchase.state === "canceled";
@@ -18,9 +18,11 @@ function DatesPurchase({ purchase, isAdmin,isComplete }) {
         <DivPurchaseData title="Price" value={purchase.totalPrice} />
       )}
 
-      {isAdmin === false && (
-        <DivPurchaseData title="Status" value={purchase.state} isComplete={isComplete} />
-      )}
+      <DivPurchaseData
+        title="Status"
+        value={purchase.state}
+        isComplete={isComplete}
+      />
 
       {conditionalBoth && isAdmin === true && (
         <DivPurchaseData

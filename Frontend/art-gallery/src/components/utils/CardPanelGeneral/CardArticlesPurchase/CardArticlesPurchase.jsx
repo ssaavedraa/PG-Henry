@@ -1,5 +1,6 @@
 import React from "react";
 import DivPurchaseData from "../../DivPurchaseData/DivPurchaseData";
+import { Link } from "react-router-dom";
 import "./CardArticles.css";
 import { useState } from "react";
 import AddReviewModal from "../../../../Modales/Reviews/AddReviewModal";
@@ -14,9 +15,9 @@ function CardArticlesPurchase({ id, price, img, title, isAdmin, state, isReviewe
         <DivPurchaseData title="Id" value={id} />
         <DivPurchaseData title="Price" value={price} />
       </section>
-      <section className="sectionMiddleArticle">
+      <Link to={"/detailpainting/" + id} className="sectionMiddleArticle">
         <img src={img[0].url} alt="img-article" className="img-article" />
-      </section>
+      </Link>
       <section className="sectionDownArticle">
         <DivPurchaseData title="Title" value={title} />
         {isAdmin === false && state === "completed" && isReviewed === false && (
