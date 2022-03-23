@@ -20,7 +20,13 @@
   height: 12%;
   padding: 0.5em;
   margin: 0.2em auto;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artists-header h1{
+    padding-left: .4em;
+    color: var(--primary-color);
 }
 
 .btnNewArtist{
@@ -53,6 +59,7 @@
 .subtitle-artists{
     font-size: 1.2em;
     margin-left: .5em;
+    padding-left: .6em;
     font-weight: 500;
 }
 
@@ -100,9 +107,41 @@
 .row-titles-admin {
     height: 9%;
     width: 100%;
+    padding-left: 1em;
 }
 
-.row-titles-admin > tr > th{
+.row-titles-admin tr th button{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--eigth-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderButton{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ocultOrderButton{
+    display: none;
+}
+
+.iconFilterButton{
+    height: 100%;
+    
+    font-size: 1.4em;
+}
+
+.button-title{
     font-weight: 400;
     color: var(--eigth-color);
 }

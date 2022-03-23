@@ -10,8 +10,9 @@ import {
   getArtistById,
 } from "../../redux/actions/actions";
 import useAuth from "../../customHooks/useAuth";
-import ArtistModal from "../../Modales/EditArtist/ArtistModal";
-import { AiFillEdit } from "react-icons/ai";
+import EditArtistModal from "../../Modales/EditArtist/EditArtistForm/EditArtistModal";
+import { AiFillEdit, AiOutlineEnvironment, AiOutlineMail } from "react-icons/ai";
+import img from '../../assets/img/loading-img.gif'
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
@@ -21,7 +22,7 @@ const DetailArtist = () => {
   const [openModal, setOpenModal] = useState(false);
 
   //Estado para el modal de artistas
-  const [openModalArtist, setOpenModalArtist] = useState(false);
+  const [openEditArtistModal, setOpenEditArtistModal] = useState(false);
   const { id } = useParams();
 
   //Manejo de vista
@@ -33,36 +34,49 @@ const DetailArtist = () => {
   }, [dispatch, id]);
 
   const paintingsArtist = useSelector((state) => state.paintingsArtist);
-  // console.log(paintingsByArtist)
-
   const artists = useSelector((state) => state.artistId);
-  //console.log(artists)
+
+  if (!artists || !paintingsArtist) {
+    return <div className="loading">
+        <img src={img} alt="img"/>
+        </div>
+  }
 
   return (
     <div className="divContainer">
-      {user.role === "admin" ? (
-        <h1>
-          {artists.name}
-          <button
-            onClick={() => setOpenModalArtist(true)}
-            className="btnHeaderIconArtist"
-          >
-            <AiFillEdit className="iconHeaderCardArtist" />
-          </button>
-        </h1>
-      ) : (
-        <h1>{artists.name}</h1>
-      )}
-      <ArtistModal
-        openModalArtist={openModalArtist}
-        setOpenModalArtist={setOpenModalArtist}
-        isEditArtist={true}
-        artist={artists}
+      <EditArtistModal
+        openEditArtistModal={openEditArtistModal}
+        setOpenEditArtistModal={setOpenEditArtistModal}
+        artistId={id}
       />
       <div className="divContainerimg">
-        <img src={artists.photo} alt="artist" className="imgArtist" />
+        <div className="photo-artist">
+          <img src={artists.photo} alt="artist" className="imgArtist" />
+        </div>
         <div className="divBio">
-          <p>{artists.biography}</p>
+          <div className="divContainerNameEmailArtist">
+            <div className="divNameEmailArtist">
+              <h1>{artists.name} </h1>
+              <span><AiOutlineMail className='iconsDetailArtist'/>{artists.email}</span>
+              <span><AiOutlineEnvironment className='iconsDetailArtist'/>{artists.location}</span>
+            </div>
+            <div>
+              {user.role === "admin" ? (
+                <button
+                  onClick={() => setOpenEditArtistModal(true)}
+                  className="btnHeaderIconArtist"
+                >
+                  <AiFillEdit className="iconHeaderCardArtist" />
+                </button>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </div>
+          <div className="divArtistBiography">
+            <h4>Who is {artists.name}?</h4>
+            <p>{artists.biography}</p>
+          </div>
           <div className="divButton">
             <ModalArtworks
               openModal={openModal}

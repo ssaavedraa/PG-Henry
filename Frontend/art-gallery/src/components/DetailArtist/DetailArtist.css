@@ -2,77 +2,147 @@
   margin: 1.5625rem;
 }
 
-.divContainer h1 {
-  justify-content: center;
-  align-items: flex-end;
-  margin: auto;
+.divContainerimg {
+  margin: 4rem 2rem 0rem;
   display: flex;
+  height: 27rem;
+  justify-content: center;
 }
 
-.divContainerimg {
-  margin: 30px 5px 5px 20px;
+.photo-artist{
+  width: 40%;
+  height: 100%;
   display: flex;
   justify-content: center;
 }
 
 .imgArtist {
-  width: 375px;
-  /* height: 450px; */
+  width: 100%;
+  height: 100%;
   padding-right: 40px;
   object-fit: contain;
 }
 
 .divBio {
-  width: 350px;
+  width: 30rem;
+}
+
+.divBio h1 {
+  align-items: flex-end;
+  margin-top: -0.5rem;
+  display: flex;
+  font-size: 1.8rem;
+}
+
+.divBio span {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.divContainerNameEmailArtist {
+  display: flex;
+  width: inherit;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.15rem solid var(--third-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divNameEmailArtist {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.btnHeaderIconArtist{
+.divArtistBiography {
+  margin-top: 0.75rem;
+  height: 60%;
+}
+
+.divArtistBiography p {
+  text-align: left;
+  height: 90%;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  overflow-y:auto ;
+}
+
+/*Scroll*/
+
+/*Scrollbar*/
+.divArtistBiography p::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.divArtistBiography p::-webkit-scrollbar:vertical {
+  width: 0.6em;
+}
+
+.divArtistBiography p::-webkit-scrollbar-button:increment,
+.divArtistBiography p::-webkit-scrollbar-button {
+  display: none;
+}
+
+.divArtistBiography p::-webkit-scrollbar:horizontal {
+  height: 0.7em;
+}
+
+.divArtistBiography p::-webkit-scrollbar-thumb {
+  background-color: var(--eigth-color);
+  border-radius: 20px;
+  border: 0.1em solid var(--third-color);
+}
+
+.sales-data-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+
+.btnHeaderIconArtist {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
   border: none;
-outline: none;
-background-color: var(--fourth-color);
-padding: 0rem;
-margin-left: 0.5rem;
-cursor: pointer;
+  cursor: pointer;
+  color: black;
 }
 
-.iconHeaderCardArtist:hover {
-  color: red;
+.btnHeaderIconArtist:hover {
+  color: white;
+  background: rgb(29, 28, 28);
+  transition: all 1s;
 }
 
-.btnHeaderIconArtist:hover{
-  background-color: var(--fourth-color);
-}
-
-.iconHeaderCardArtist{
-  width: 2.2rem;
-  height: 2.4rem;
-  color: var(--eigth-color);
-}
-
-.divBio p {
-  text-align: center;
+.iconHeaderCardArtist {
+  width: 1.55rem;
+  height: 1.55rem;
 }
 
 .divButton {
-  margin: 5px;
+  margin: 1.25rem 0rem;
+  display: flex;
+  width: inherit;
+  align-items: center;
+  flex-direction: column;
 }
 
-.divButton button{
+.divButton button {
   width: 250px;
   height: 2.2rem;
   border: none;
   outline: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
 }
 
-.divButton button:hover{
+.divButton button:hover {
   color: white;
-  background-color: var(--btnHover-color) ;
+  background-color: var(--btnHover-color);
+}
+
+.iconsDetailArtist {
+  font-size: 1.15rem;
+  padding-right: 0.25rem;
 }

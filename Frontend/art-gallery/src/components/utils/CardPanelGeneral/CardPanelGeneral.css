@@ -1,0 +1,241 @@
+/*sales-data-subcontainer*/
+.sales-data-subcontainer {
+  width: 95%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8em;
+  margin-left: 1em;
+  color: var(--eigth-color);
+  border-radius: 0.4em;
+  border-style: inset;
+  background-color: var(--nine-color);
+}
+
+.arrow-sales {
+  width: 100%;
+  height: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btnArrowSale {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: var(--eigth-color);
+}
+
+.btnArrowSale:hover {
+  color: var(--third-color);
+}
+
+.resizeSubcontainer {
+  transition: 0.4s;
+  height: 130%;
+}
+
+.resizeLengthSubcontainer{
+  transition: 0.4s;
+  height: 220%;
+}
+
+.resizeSubcontainer .sales-main-data, .resizeLengthSubcontainer .sales-main-data {
+  display: none;
+}
+
+.resizeSubcontainer .detail-seal-data, .resizeLengthSubcontainer .detail-seal-data {
+  display: flex;
+}
+
+/*Sub Container Render Main Data*/
+
+.resizeLengthSubcontainer .sales-main-data{
+  width: 30%;
+}
+
+.sales-main-data {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.4em;
+}
+
+.sales-main-data .purchase-sales,
+.sales-main-data .shipment-sales,
+.sales-main-data .customer-sales,
+.sales-main-data .status-sales,
+.sales-main-data .completed,
+.sales-main-data .canceled {
+  height: 100%;
+}
+
+/*Btn Review*/
+.btnReviewPurchase {
+  height: 27%;
+  width: 13%;
+  margin: .7em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.5em;
+  background-color: var(--primary-color);
+  color: var(--fourth-color);
+}
+
+.btnReviewPurchase:hover {
+  background-color: var(--btnHover-color);
+}
+
+.btnReviewPurchase:active {
+  background-color: var(--primary-color);
+}
+
+/*Detail Data*/
+
+.resizeSubcontainer .arrow-sales{
+  height: 6%;
+}
+
+.resizeLengthSubcontainer .arrow-sales{
+  height: 6%;
+}
+
+.resizeLengthSubcontainer .sectionSupSeal{
+  height: 20%;
+}
+
+.resizeLengthSubcontainer .sectionDownSeal{
+  height: 75%;
+}
+
+.detail-seal-data,
+.sectionSupSeal,
+.sectionDownSeal {
+  display: flex;
+}
+
+.detail-seal-data {
+  width: 100%;
+  height: 96%;
+  display: none;
+  flex-direction: column;
+}
+
+.detail-seal-data .status-sales {
+  padding: 0 .5em;
+}
+
+.sectionSupSeal {
+  width: 100%;
+  height: 42%;
+  justify-content: space-around;
+}
+
+.sectionDownSeal {
+  width: 98%;
+  height: 52%;
+  margin-top: 0.6em;
+  margin-left: 0.6em;
+  flex-direction: column;
+}
+
+.sectionDownSeal h5 {
+  height: 8%;
+  width: 100%;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.img-data-seal-id {
+  width: 30%;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-sale-detail {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+  margin-bottom: 2em;
+}
+
+.specific-seal-data {
+  width: 35%;
+  padding: 0.5em;
+}
+
+.customer-purchase-data {
+  display: flex;
+  width: 100%;
+}
+
+.status-detail-data .customer-purchase-data h5 {
+  margin-top: 0;
+}
+
+.status-detail-data .customer-purchase-data {
+  justify-content: center;
+}
+
+.specific-seal-data h5,
+.status-detail-data h5,
+.img-data-seal-id h5 {
+  font-size: 1em;
+  margin-bottom: 0.6em;
+  font-weight: 500;
+}
+
+.status-detail-data {
+  width: 20%;
+  height: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-detail-data h5 {
+  margin-top: 2em;
+}
+
+.status-detail-data select {
+  height: 13%;
+  width: 60%;
+  border-radius: 0.4em;
+  outline: none;
+}
+
+.status-detail-data .btnReviewPurchase {
+  width: 70%;
+  height: 13%;
+  margin-top: 1em;
+}
+
+.sales-data-subcontainer .status-sales {
+  color: var(--primary-color);
+}
+
+.canceled {
+  color: var(--canceled-color) !important;
+}
+
+.completed {
+  color: var(--completed-color) !important;
+}
+
+
+.noPurchases{
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}

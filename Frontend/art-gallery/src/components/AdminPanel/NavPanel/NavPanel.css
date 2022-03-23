@@ -1,77 +1,112 @@
-
-
-.admin-bar{
-    height: 100%;
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0.5rem;
-    align-self: stretch;
-    padding: 1.5rem;
-    align-content: flex-end;
-    justify-content: flex-start;
-    align-items: center;  /*Eli anduvo por aqui*/
+.admin-bar {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center; 
+  box-shadow: 7px -1px 11px -8px rgba(0,0,0,0.46);
+-webkit-box-shadow: 7px -1px 11px -8px rgba(0,0,0,0.46);
+-moz-box-shadow: 7px -1px 11px -8px rgba(0,0,0,0.46);
 }
 
-.menu-options > li{ /* -> Agregado */
-    display: flex;
+.user {
+  width: 70%;  
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1em;
 }
 
-.user{
-    text-align:center;
-    font-size: 1.2rem;
-    margin: 1rem;    
+.img-profile {
+  width: 40%;
 }
 
-.user a{ 
-    color: var(--eigth-color);
+/*Menu Options*/
+.menu-options,
+.menu-options li,
+.shopping-btn,
+.logoutShopping-btn  {
+  display: flex;
 }
 
-.user a:hover{
-    color: var(--btnHover-color)
+.menu-options {
+  width: 70%;
+  height: 45%;
+  flex-direction: column;
 }
 
-.icon {
-    width: 20%;
-    height: 70%;
-  }
-
-.img-profile{
-    width: 6rem;
+.menu-options li {
+  width: 85%;
+  height: 19%;
+  margin: 0.3em 0;
+  margin-left: .9em; 
+  font-size: 1.4em;
+  list-style: none;
+  color: var(--eigth-color);
+  cursor: pointer;
 }
 
-.menu-options{
-    text-align:left;    
+.shopping-btn, .logoutShopping-btn {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
 }
 
-.menu-options li{    
-    font-size: 1.2rem;   
-    list-style: none;
-   margin:2.5rem;  
-    color: var(--eigth-color);
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.menu-options li:hover{
-    color: var(--btnHover-color)
- }
-.menu-options li a{
-    color: var(--eigth-color);    
-}
-
-.menu-options li a:hover{
-    color: var(--btnHover-color)
-}
-.logout{   
-    align-self: baseline;
-}
-
-.icon{
-    font-size: 1.5rem;
+.navPanelRole-icon {
+  font-size: 1.5em;
+  margin: 0.3em 0.4em;
 }
 
 
+.logoutShopping-btn{
+  margin-top: .7em;
+  height: 6%;
+  width: 50%;
+  justify-content: center;
+  background-color: var(--canceled-color);
+  color: var(--fourth-color);
+  border-radius: .3em;
+}
+
+.logoutShopping-btn h5{
+  padding-left: .5em;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+ .navPanelRole-icon{
+  font-size: 1.2em;
+}
+
+.logoutShopping-btn:hover{
+  background-color: var(--btnHoverCancelColor);
+}
+
+.logoutShopping-btn:active{
+  background-color:  var(--canceled-color);
+}
 
 
+/*NavLinks*/
+.navPanelRole-links {
+  width: 100%;
+  color: var(--eigth-color);
+}
 
+.navPanelRole-links:hover{
+    color: var(--btnHover-color);
+}
+
+.navLinkActive{
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.myProfileLink{
+  color: var(--eigth-color);
+  font-weight: 400;
+}
+
+.myProfileLink:hover{
+  color: var(--btnHover-color);
+}

@@ -15,10 +15,15 @@ import {
   ORDER_BY_TYPE,
   GET_FAVS,
   CLEAR_ARTISTBYID,
-	GET_STATS_ARTIST,
-	CLEAR_ARTIST
+  GET_STATS_ARTIST,
+  ADD_ARTIST,
+  EDIT_PAINT,
+  GET_ALL_SP,
+  EDIT_ARTIST,
+  ADD_TECHNIQUE,
+  ADD_PAINTING,
+  CONTACT_INFO,
 } from "../action-types";
-
 
 const detailObra = {
   orientation: "",
@@ -48,19 +53,30 @@ const detailObra = {
       url: "",
     },
   ],
-}
+};
+
+const artistId = {
+  id: 1,
+  name: "",
+  biography: "",
+  photo: "",
+  email: "",
+  location: "",
+};
 
 const initialState = {
   //Aca estan todas las pinturas
   paintings: [],
   reviews: [],
   paintingsArtist: [],
-  artistId: [],
+  artistId,
   artist: [],
   technique: [],
   resultSearch: [],
   favs: [],
   detailObra,
+  purchase: [],
+  contactInfo: {},
 };
 
 function rootReducer(state = initialState, action) {
@@ -134,34 +150,71 @@ function rootReducer(state = initialState, action) {
     case ORDER_BY_TYPE:
       return {
         ...state,
-        userAdmin: action.payload
-      }
-      case GET_FAVS:
-			return {
-				...state,
-				favs: action.payload,
-			};
+        userAdmin: action.payload,
+      };
+    case GET_FAVS:
+      return {
+        ...state,
+        favs: action.payload,
+      };
 
-		case CLEAR_ARTISTBYID:
-			return{
-				...state,
-				artistId: [],
-			}
+    case CLEAR_ARTISTBYID:
+      return {
+        ...state,
+        artistId: [],
+      };
 
-		case GET_STATS_ARTIST:
-			return{
-				...state,
-				artist: action.payload
-			}
+    case GET_STATS_ARTIST:
+      return {
+        ...state,
+        artist: action.payload,
+      };
 
-		case CLEAR_ARTIST:
-			return{
-				...state,
-				artist: []
-			}
-		default:
-			return state;
-	}
+    case ADD_ARTIST:
+      return {
+        ...state,
+        artist: [...state.artist, action.payload],
+      };
+
+    case ADD_PAINTING:
+      return {
+        ...state,
+        paintings: [...state.paintings, action.payload],
+      };
+    case EDIT_PAINT:
+      let artworks = [...state.paintings];
+      let modifiedArtworkIndex = artworks.findIndex(
+        (paint) => paint.id === action.payload[0].id
+      );
+      artworks[modifiedArtworkIndex] = action.payload[0];
+      return {
+        ...state,
+        paintings: artworks,
+        detailObra: action.payload[0],
+      };
+    case ADD_TECHNIQUE:
+      return {
+        ...state,
+        technique: [...state.technique, action.payload],
+      };
+    case EDIT_ARTIST:
+      return {
+        ...state,
+        artistId: action.payload,
+      };
+    case GET_ALL_SP:
+      return {
+        ...state,
+        purchase: action.payload,
+      };
+    case CONTACT_INFO:
+      return {
+        ...state,
+        contactInfo: action.payload,
+      };
+    default:
+      return state;
+  }
 }
 
 export default rootReducer;

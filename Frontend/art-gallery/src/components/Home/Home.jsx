@@ -1,31 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import CardHomeArt from "../CardHome/CardHomeArt";
 import "./home.css";
 
-const { paintings } = require("../../assets/Json/paintings.json");
-
 function Home() {
-    //Obras mas populares max 6
-  let paintsPopulars = [];
+  const [obraRandon, setObraRandon] = useState([]);
+  const random = Math.floor(Math.random() * 30 + 1);
 
-  for (let i = 0; i < 6; i++) {
-    paintsPopulars.push(paintings[i]);
-  }
+  //Obras mas populares max 6
+  useEffect(() => {
+    axios
+      .get(`/painting/getrecommended/${random}`)
+      .then((res) => setObraRandon(res.data.slice(0, 5)))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className="container-home">
-      <h2>Most popular artworks</h2>
+      <div className="text-conteiner-home">
+        <span className="line anim-typewriter">
+          {" "}
+          THE BEST PAINTINGS & ARTISTS
+        </span>
+      </div>
+
       <div className="content-all">
         <div className="content-carrousel">
-          {paintsPopulars.map((paint) => (
-            <CardHomeArt
-              key={paint.id}
-              id={paint.id}
-              url={paint.image[0]}
-              artist={paint.artist}
-              title={paint.title}
-            />
-          ))}
+          {obraRandon.length > 0 &&
+            obraRandon.map((paint, index) => (
+              <CardHomeArt
+                key={index}
+                id={paint.id}
+                url={paint.image}
+                artist={paint.artist.name}
+                title={paint.title}
+              />
+            ))}
         </div>
       </div>
     </div>

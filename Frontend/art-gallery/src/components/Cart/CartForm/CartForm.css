@@ -1,0 +1,165 @@
+.divContainerFormCart{
+    width: inherit;
+    margin: 3rem 9rem;
+}
+
+.divContainerFormCart h1{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.divContainerDetailsCart{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.divContainerItemsCart {
+    width: 27rem;  
+    min-height: 400px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+.divContainerInputsFormCart{
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.divContainerInputsFormCart input{
+    height: 1.55rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--fifth-color);
+}
+
+.divContainerNameLastCart{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+
+.divNameLastCart{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+
+.divContainerProductCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divContainerProductCart img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.divContainerProductCart p{
+font-size: 0.9rem;
+margin: 0.15rem 0rem;
+}
+
+.divContainerInputsFormCart label{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.divProductSubTotalCart{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2rem;
+    border-radius: 0.25rem;
+    align-items: center;
+    background-color: var(--six-color);
+    margin-top: 0.75rem;
+}
+
+.divContainerTotalPrice{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;  
+}
+
+.divContainerButtonCartContinue{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divContainerButtonCartContinue button {
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.divContainerNumberFloorUnit{
+    display: flex;
+    width: 30rem;
+    justify-content: space-between;
+
+}
+
+.NumberFloorUnitCart label{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.NumberFloorUnitCart input{
+    width: 10rem
+}
+
+.NumberFloorUnitCart{
+    padding-right: 0.4rem;
+}
+.activeError{
+    background: rgb(212, 114, 114);
+}
+.activeLabel::after {
+    content: 'is required';
+    margin-left: 5px;
+}
+.divContainerProductCart-10 {
+    width: 80%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+.divContainerProductCart-10 img{
+    width: 80px;
+    height: 80px;
+}
+.divContainerProductCart-10 > div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.divContainerProductCart-10 > div > p{
+    margin-left: 30px;
+}

@@ -1,8 +1,9 @@
 const { Artist, conn } = require("../../db");
 
 const getAll = async (req, res) => {
+  const { orderBy, order } = req.query;
   const rawArtists = await Artist.findAll({
-    attributes: [["id", "artistId"], "name", "photo"],
+    attributes: [["id", "artistId"], "name", "photo", "email" ],
     order: [["id", "ASC"]],
   });
   const paintings = await conn.query(
@@ -42,7 +43,12 @@ const getAll = async (req, res) => {
   const fullArtistsStats = artistsStats.map((s) => {
     return { paintings: "0", sales: "0", reviews: "0", score: "0", ...s };
   });
-  res.json(fullArtistsStats);
+  if (!fullArtistsStats[0].hasOwnProperty(orderBy))
+    return res.json(fullArtistsStats);
+  const orderedArtists = fullArtistsStats.sort((a1, a2) =>
+    a1[orderBy] > a2[orderBy] ? 1 : -1
+  );
+  res.json(order === "DESC" ? orderedArtists.reverse() : orderedArtists);
 };
 
 module.exports = getAll;

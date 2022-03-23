@@ -6,6 +6,7 @@ import axios from "axios";
 import "./Cart.css";
 import CartCards from "./CartCards/CartCards.jsx";
 import { ToastContainer, toast } from "react-toastify";
+import CheckoutButton from "../MercadoPago/checkoutButton.jsx";
 
 const Cart = () => {
   const { cart, removeAll } = useCart();
@@ -13,9 +14,7 @@ const Cart = () => {
   const getPaintings = async (cart) => {
     const paintings = [];
     for (let i = 0; i < cart.length; i++) {
-      const dbPaiting = await axios.get(
-        `/painting/get/${cart[i]}`
-      );
+      const dbPaiting = await axios.get(`/painting/get/${cart[i]}`);
       paintings.push(dbPaiting.data);
     }
     return paintings;
@@ -37,7 +36,7 @@ const Cart = () => {
   //Sirve para el toastify
   const removeAllCart = () => {
     removeAll();
-    toast.success("All items was delete");
+    toast.success("All items were deleted");
   };
 
   return (
@@ -45,7 +44,7 @@ const Cart = () => {
       <ToastContainer
         position="bottom-center"
         theme="dark"
-        autoClose={3000}
+        autoClose={1500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -56,7 +55,7 @@ const Cart = () => {
       />
       <h1>Cart</h1>
       <div className="containerCart">
-        <div className="divPrecio">
+        <div className="divPrecioCart">
           <button onClick={() => removeAllCart()}>Remove all items</button>
           <h5>Price</h5>
         </div>
@@ -69,7 +68,7 @@ const Cart = () => {
           <Link to="/gallery">
             <button>Continue shopping</button>
           </Link>
-          <button>Buy</button>
+          <CheckoutButton />
         </div>
       </div>
     </div>

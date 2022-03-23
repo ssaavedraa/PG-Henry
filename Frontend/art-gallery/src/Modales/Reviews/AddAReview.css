@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+.img-container2 {
+  background-image: url("https://res.cloudinary.com/dw6bkceqj/image/upload/v1647774307/santart/review_xdqxel.png");
+  overflow: hidden;
+  width: 65vh;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-logo {
+  justify-content: flex-end;
+  display: flex;
+  padding-top: 2rem;
+  height: 0.5rem;
+}
+
+.review-box {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+  justify-content: space-between;
+  z-index: 6;
+}
+
+.inforeview-box {
+  text-align: center;
+  width: 80vh;
+}
+
+.data-box-review {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  width: 28rem;
+  justify-content: center;
+}
+
+.data-box-review form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  margin: 2rem;
+}
+
+.data-box-review form h2 {
+  color: var(--btnMain-Color);
+  margin: 0.5rem;
+}
+
+.data-box-review form textarea {
+  width: auto;
+  height: 4rem;
+  width: auto;
+}
+
+.data-box-review form input[type='text']{
+  width: auto;
+  height: 1.5rem;
+  width: auto;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: solid black 1px;
+}
+
+.data-box-review form input[type="radio"] {
+  display: none;
+}
+
+.data-box-review form label {
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.input-add-review {
+  margin: 0.2rem;
+  height: 1.5rem;
+  width: auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+}
+
+.input-add-review:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.btn-addartist {
+  height: 3rem;
+  width: 12rem;
+  list-style: none;
+  background-color: rgb(212, 212, 212);
+  border-radius: 20px;
+  border-style: none;
+  margin: 1rem;
+}
+
+.btn-addartist:hover {
+  background-color: rgb(160, 160, 160);
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.error {
+  color: red;
+}

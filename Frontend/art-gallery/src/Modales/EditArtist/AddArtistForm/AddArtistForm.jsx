@@ -3,15 +3,14 @@ import "./AddArtistForm.css";
 import { addNewArtist } from "../../../redux/actions/actions";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import imgUser from "../../../assets/img/user.png";
 import logo from "../../../assets/img/SantArtlogo.png";
+import { confirmationSweet } from "../../../components/utils/Notifications/Notifications";
+import { useNavigate } from "react-router-dom";
 
-
-const ModalAddArtist = (setOpenModalArtist) => {
+const AddArtistForm = (setOpenModalArtist) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [input, setInput] = useState({
     name: "",
     biography: "",
@@ -20,29 +19,49 @@ const ModalAddArtist = (setOpenModalArtist) => {
     location: "",
   });
 
-  console.log(input);
+  const [errors, setError] = useState({});
+  const [applyChanges, setApplyChanges] = useState(true);
+
+  function validate(input) {
+    setApplyChanges(true);
+    let errors = {};
+    if (!input.name || !input.biography || !input.email || !input.location) {
+      errors.message = "*All inputs are required";
+    } else if (!input.photo || !input.photo.startsWith("http")) {
+      errors.message = "*invalid photo";
+    } else {
+      setApplyChanges(false);
+    }
+    return errors;
+  }
+
   function handleChange(e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value, //va tomando el nombre de cada prop, me vaya llenando el estado
     });
+    setError(
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(addNewArtist(input));
-    
-    navigate("/artists");
-    setInput({
-      name: "",
-      biography: "",
-      photo: "",
-      email: "",
-      location: "",
-    });
-
-    
+    confirmationSweet(input.name, confirm, closeModal, false, true);
   }
+
+  function confirm() {
+    dispatch(addNewArtist(input));
+    navigate("/artists");
+  }
+
+  function closeModal() {
+    setOpenModalArtist(false);
+  }
+
   return (
     <>
       <div className="artists-box">
@@ -186,7 +205,12 @@ const ModalAddArtist = (setOpenModalArtist) => {
                 onChange={handleChange}
               />
               <div>
-                <button className="btn-create">CREATE</button>
+                <div className="error">
+                  {errors.message ? <p>{errors.message}</p> : <p></p>}{" "}
+                </div>
+                <button disabled={applyChanges} className="btn-addartist">
+                  CREATE
+                </button>
               </div>
             </form>
           </div>
@@ -195,4 +219,4 @@ const ModalAddArtist = (setOpenModalArtist) => {
     </>
   );
 };
-export default ModalAddArtist;
+export default AddArtistForm;

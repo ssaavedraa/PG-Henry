@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getArtist, getTechnique } from "../../redux/actions/actions";
 
@@ -15,20 +15,20 @@ import ListArtist from "../utils/ListArtist/ListArtist";
 
 import "./Filters.css";
 
-function Filters({ handleOnChange, filter, addList, cleanFilter}) {
-  const artists = useSelector((state) => state.artist); 
+function Filters({ handleOnChange, filter, addList, cleanFilter, name }) {
+  const artists = useSelector((state) => state.artist);
   const technique = useSelector((state) => state.technique);
 
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    dispatch(getArtist());
+  useEffect(() => {
+    dispatch(getArtist(name));
     dispatch(getTechnique());
-  }, [dispatch, addList]);
+  }, [dispatch, name]);
 
-  React.useEffect(() => {
+  /*   useEffect(() => {
     dispatch(getArtist(filter.name));
-  }, [dispatch, filter, addList]);
+  }, [dispatch, filter, addList]); */
 
   return (
     <div className="filter-container">
@@ -40,7 +40,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
 
       <Title
         texto="PRICE"
-        logo={<BiDollarCircle className="icon" />}
+        logo={<BiDollarCircle className="icon-fiilter-g" />}
         mostrar={() => mostrar(0)}
       />
       <div className="container-range">
@@ -54,7 +54,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="DIMENSIONS"
-        logo={<MdOutlinePhotoSizeSelectLarge className="icon" />}
+        logo={<MdOutlinePhotoSizeSelectLarge className="icon-fiilter-g" />}
         mostrar={() => mostrar(1)}
       />
       <div className="container-range">
@@ -77,7 +77,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="ARTIST"
-        logo={<BsPersonBadge className="icon" />}
+        logo={<BsPersonBadge className="icon-fiilter-g" />}
         mostrar={() => mostrar(2)}
       />
       <div className="container-range">
@@ -92,7 +92,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="TECHNIQUE"
-        logo={<FaPaintBrush className="icon" />}
+        logo={<FaPaintBrush className="icon-fiilter-g" />}
         mostrar={() => mostrar(3)}
       />
       <div className="container-range">
@@ -100,7 +100,7 @@ function Filters({ handleOnChange, filter, addList, cleanFilter}) {
       </div>
       <Title
         texto="ORIENTATION"
-        logo={<GiWoodFrame className="icon" />}
+        logo={<GiWoodFrame className="icon-fiilter-g" />}
         mostrar={() => mostrar(4)}
       />
       <div className="container-range">

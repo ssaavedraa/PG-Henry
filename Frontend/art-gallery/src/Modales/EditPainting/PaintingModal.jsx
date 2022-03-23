@@ -28,7 +28,7 @@ const EditPaintingModal = ({ openModal, setOpenModal ,ObraId}) => {
     <Modal isOpen={openModal} style={customStyles} ariaHideApp={false} ObraId={ObraId} >
       <div className="modal-inner-painting">
       <div className="form-box">
-      <EditPaintinfForm isOpen={openModal} ObraId={ObraId}/>
+      <EditPaintinfForm isOpen={openModal} ObraId={ObraId} setOpenModal={setOpenModal}/>
         <div onClick={() => setOpenModal(false)}>
             <FaTimes style={{ fontSize: "25px", cursor: "pointer" }} />
           </div>

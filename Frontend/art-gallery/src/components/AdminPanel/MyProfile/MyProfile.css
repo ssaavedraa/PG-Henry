@@ -1,82 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
-
-.admin-box{
-    display: flex;
+.admin-box {
+  display: flex;
+  height: 90vh;
 }
 
-.component-box{   
-    width: 85%;
-    display: flex;
-    justify-content: center;
+.component-box {
+  width: 82%;
+  display: flex;
+  justify-content: center;
 }
 
-.component-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.component-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.user-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    padding: 1rem;
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
 }
 
-.user-data{
-    width: 100%;
+/*Scroll User*/
+.user-info::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
-.user-fields{
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
-    padding: 0.5rem;
+.user-info::-webkit-scrollbar:vertical {
+  width: 0.7em;
 }
 
-.user-fields input{
-    height: 1.3rem;
-    padding: 0.3rem;
-    font-size: 1rem;
-    border-radius: 0.6rem;
-}
-.user-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 1rem;
-    margin: 0.5rem;
+.user-info::-webkit-scrollbar-button:increment,
+.user-info::-webkit-scrollbar-button {
+  display: none;
 }
 
-.user-buttons button{
-    background-color: var(--btnMain-Color);
-    color: var(--third-color);
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.4rem 0.8rem ;
-    border: none;
+.user-info::-webkit-scrollbar:horizontal {
+  height: 0.7em;
 }
 
-.user-buttons button:disabled{
-    opacity: 50%;
+.user-info::-webkit-scrollbar-thumb {
+  background-color: var(--eigth-color);
+  border-radius: 20px;
+  border: 0.1em solid var(--third-color);
 }
 
-.user-buttons button:hover{
-    cursor: pointer;
+.user-info::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
-button.cancel{
-    background-color: rgb(192, 10, 10);
+.img-Myprofile {
+  width: 20%;
 }
 
-.password-reqs{
-    border-top: var(--primary-color) 2px solid;
-    padding: 1rem;
+.user-data {
+  width: 100%;
 }
 
-.password-reqs ul{
-    padding-left: 2rem;
+.user-fields {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.user-fields input {
+  height: 1.3rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+}
+.user-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  margin: 0.5rem;
+}
+
+.user-buttons button {
+  background-color: var(--btnMain-Color);
+  color: var(--third-color);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border: none;
+}
+
+.user-buttons button:disabled {
+  opacity: 50%;
+}
+
+.user-buttons button:hover {
+  cursor: pointer;
+}
+
+button.cancel {
+  background-color: rgb(192, 10, 10);
+}
+
+.password-reqs {
+  border-top: var(--primary-color) 2px solid;
+  padding: 1rem;
+}
+
+.password-reqs ul {
+  padding-left: 2rem;
+}
+.color-reset {
+  background: rgb(235, 87, 99) !important;
+  color: white;
+  font-weight: 800;
+}
+.color-add {
+  background: #50b9b1 !important;
+  color: white;
+  font-weight: 800;
+}
+.messgeError {
+  width: 120px;
+  height: 100px;
+  background: #50b9b1;
 }

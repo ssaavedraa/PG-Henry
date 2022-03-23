@@ -1,9 +1,8 @@
 import React from "react";
 import './ArtistCard.css'
+import {AiOutlineEnvironment} from "react-icons/ai";
 
 export default function ArtistCard({id, img, name, location}){
-
-   
     return(
         <div className="artist-card">
             <div className="artist-img">
@@ -11,7 +10,7 @@ export default function ArtistCard({id, img, name, location}){
             </div>
             <div className="artist-data">
                 <h3>{name}</h3>
-                <p>{location}</p>
+                <span><AiOutlineEnvironment className='iconsDetailArtist'/>{location}</span>
                
             </div>
         </div>

@@ -1,47 +1,71 @@
 import Swal from "sweetalert2";
 import "./ButtonsStyles.css";
 
+export function confirmationSweet(
+  name,
+  execute,
+  closeModal,
+  isEdit,
+  isArtist,
+  isTech,
+  isReview
+) {
+  let detail =
+    isArtist === true ? "artist" : isTech === true ? "Technique" : "painting";
 
+  if (isReview) detail = "review";
 
-export function addConfirmation(){
+  const edit = {
+    title: "Are you sure you want to change the data?",
+    text: `You are trying to change the ${detail}'s data `,
+    success: "Your entry has been added.",
+  };
+  const add = {
+    title: `Are you sure you want to add a new ${detail}?`,
+    text: `You are trying to add a new ${detail}`,
+    success: "Your entry has been updated.",
+  };
+
   const confirmationAdd = Swal.mixin({
-      customClass: {
-        confirmButton: "btn success",
-        cancelButton: "btn danger",
-      },
-      buttonsStyling: false,
-    });
-
-    confirmationAdd.fire({
-      title: 'Are you sure?',
-      text: "You can revert changes to edit!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, add it!',
-      cancelButtonText: "No, cancel!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Added!',
-          'Your entry has been added.',
-          'success'
-        )
-      }
-    })
-}
-
-
-
-export function deleteConfirmation() {
-  const confirmationDelete = Swal.mixin({
     customClass: {
-      confirmButton: "btn success",
-      cancelButton: "btn danger",
+      confirmButton: "btnSweet success",
+      cancelButton: "btnSweet danger",
     },
     buttonsStyling: false,
   });
 
-  confirmationDelete
+  confirmationAdd
+    .fire({
+      title: isEdit === true ? edit.title.concat(name) : add.title,
+      text: isEdit === true ? edit.text : add.text,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: isEdit === true ? "Yes, edit it!" : "Yes, add it!",
+      cancelButtonText: "No, cancel!",
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        execute();
+        Swal.fire(
+          isEdit === true ? "Updated!" : "Added!",
+          isEdit === true ? edit.success : add.success,
+          "success"
+        );
+      }
+      closeModal();
+    });
+}
+
+export function deleteConfirmation() {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger",
+    },
+    buttonsStyling: false,
+  });
+
+  swalWithBootstrapButtons
     .fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -53,20 +77,19 @@ export function deleteConfirmation() {
     })
     .then((result) => {
       if (result.isConfirmed) {
-        confirmationDelete.fire(
+        swalWithBootstrapButtons.fire(
           "Deleted!",
           "Your file has been deleted.",
           "success"
         );
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
-        confirmationDelete.fire(
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        swalWithBootstrapButtons.fire(
           "Cancelled",
-          "Your file is safe!",
+          "Your imaginary file is safe :)",
           "error"
         );
       }
     });
 }
+
+/*Usuarios */

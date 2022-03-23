@@ -9,6 +9,9 @@ const reviewRoute = require("./reviewRoute.js");
 const authRoute = require("./authRoute.js");
 const favoriteRoute = require("./favoriteRoute.js");
 const cartRoute = require("./cartRoute.js");
+const checkoutRoute = require("./checkoutRoute.js");
+const purchaseRoute = require("./purchaseRoute");
+const contactRoute = require("./contactRoute.js");
 
 const router = Router();
 // Configurar los routers
@@ -17,7 +20,11 @@ const router = Router();
 router.use("/painting", paintingRoute);
 router.use("/technique", techniqueRoute);
 router.use("/artist", artistRoute);
-router.use("/review", reviewRoute);
+router.use(
+	"/review",
+	passport.authenticate("jwt", { session: false }),
+	reviewRoute
+);
 router.use(
 	"/favorites",
 	passport.authenticate("jwt", { session: false }),
@@ -29,5 +36,12 @@ router.use(
 	passport.authenticate("jwt", { session: false }),
 	cartRoute
 );
+router.use("/checkout", checkoutRoute);
+router.use(
+	"/purchase",
+	passport.authenticate("jwt", { session: false }),
+	purchaseRoute
+);
+router.use("/contact", contactRoute);
 
 module.exports = router;

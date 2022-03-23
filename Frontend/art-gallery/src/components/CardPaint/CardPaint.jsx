@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import { AiTwotoneHeart, AiOutlineHeart, AiFillEdit } from "react-icons/ai";
 import useCart from "../../customHooks/useCart.js";
+import { ToastContainer, toast } from "react-toastify";
 import { NavLink } from "react-router-dom";
 import "./CardPaint.css";
 import PaintingModal from "../../Modales/EditPainting/PaintingModal";
@@ -9,6 +10,7 @@ import useAuth from "../../customHooks/useAuth";
 import { addFav, deleteFav } from "../Favs/functionFavs.js";
 import { useDispatch } from "react-redux";
 import { getFavs } from "../../redux/actions/actions.js";
+import loading from "../../assets/img/loading-img.gif";
 
 function CardPaint({
   image,
@@ -21,7 +23,6 @@ function CardPaint({
   fav,
   id,
 }) {
-  //console.log(user);
   const { user } = useAuth();
   //Estado para el modal
   const [openModal, setOpenModal] = useState(false);
@@ -39,6 +40,11 @@ function CardPaint({
   }
 
   const { add, remove, cart } = useCart();
+
+  function addToCart(id) {
+    add(parseInt(id));
+    toast.success("Painting has been added to your cart");
+  }
 
   return (
     <div className="card">
@@ -66,15 +72,21 @@ function CardPaint({
         </button>
       )}
       <NavLink to={"/detailpainting/" + id} className="linksCard" key={id}>
-        <img src={image} alt="img-obra" className="image" />
+        {image ? (
+          <img src={image} alt="img-obra" className="image" />
+        ) : (
+          <img src={loading} alt="loading" width="40px" />
+        )}
         <div className="data-paint">
-          <h4>{title}</h4>
-          <h5>{artist.name}</h5>
+          <h5>{title}</h5>
+          <div className="linea"></div>
+          <h6 className="price">USD$ {price}</h6>
+
+          <p>{artist.name}</p>
           <p>
-            Size: {height} x {width}
+            {height} cm x {width} cm
           </p>
-          <p>Technique: {techniques[0].name}</p>
-          <p className="price">USD$ {price}</p>
+          <p>{techniques[0].name}</p>
         </div>
       </NavLink>
       {user.role === "user" || user.role === "guest" ? (
@@ -86,7 +98,7 @@ function CardPaint({
             REMOVE <FaCartArrowDown className="icon_add_paint" />
           </button>
         ) : (
-          <button className="btn_card_paint" onClick={() => add(parseInt(id))}>
+          <button className="btn_card_paint" onClick={() => addToCart(id)}>
             ADD TO CART <FaCartArrowDown className="icon_add_paint" />
           </button>
         )

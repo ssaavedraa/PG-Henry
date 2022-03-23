@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { getSearchAuto, getFavs } from "../../redux/actions/actions";
 import Logo from "../../assets/img/SantArtlogo.png";
 import SearchBar from "../SearchBar/SearchBar";
@@ -17,6 +17,11 @@ export default function NavBar() {
   const resultSearch = useSelector((state) => state.resultSearch);
   const [keyword, setKeyword] = useState("");
 
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [location]);
+
   //favs
 
   useEffect(() => {
@@ -24,7 +29,6 @@ export default function NavBar() {
   }, [dispatch]);
 
   const favs = useSelector((state) => state.favs);
-  // console.log('soy favs', favs)
 
   function updateField(value, update = true) {
     if (update) {
@@ -46,17 +50,32 @@ export default function NavBar() {
       />
       <ul className={styles.nav_links}>
         <li>
-          <NavLink to="/gallery" className={styles.linksNav}>
+          <NavLink
+            to="/gallery"
+            className={(navData) =>
+              navData.isActive ? styles.links_Active : styles.linksNav
+            }
+          >
             Gallery
           </NavLink>
         </li>
         <li>
-          <NavLink to="/artists" className={styles.linksNav}>
+          <NavLink
+            to="/artists"
+            className={(navData) =>
+              navData.isActive ? styles.links_Active : styles.linksNav
+            }
+          >
             Artists
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contactus" className={styles.linksNav}>
+          <NavLink
+            to="/contactus"
+            className={(navData) =>
+              navData.isActive ? styles.links_Active : styles.linksNav
+            }
+          >
             Contact
           </NavLink>
         </li>
@@ -76,7 +95,7 @@ export default function NavBar() {
           </li>
         ) : (
           <li>
-            <NavLink to="/under" className={styles.linksNav}>
+            <NavLink to="/user" className={styles.linksNav}>
               <h5>Welcome {user.firstName}!</h5>
             </NavLink>
           </li>
@@ -105,7 +124,13 @@ export default function NavBar() {
           <li>
             <NavLink to="/favs" className={styles.linksNav}>
               <div className={styles.divContainerCartIcon}>
-                <div className={styles.containerCartLengthPlus}>
+                <div
+                  className={
+                    favs.length > 0
+                      ? styles.containerCartLengthPlus
+                      : styles.containerCartLength
+                  }
+                >
                   {favs.length}
                 </div>
                 <AiOutlineHeart className={styles.icon} />

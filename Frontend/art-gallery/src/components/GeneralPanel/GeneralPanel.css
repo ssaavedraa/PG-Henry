@@ -1,0 +1,96 @@
+.sales-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 0.8em;
+}
+
+/*Titles Header*/
+
+.sales-titles-header,
+.id-sales,
+.purchase-sales,
+.price-sales,
+.customer-sales,
+.status-sales {
+  display: flex;
+}
+
+.sales-titles-header{
+  width: 94%;
+  height: 7%;
+  margin-left: 1.2em;
+  color: var(--eigth-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.id-sales,
+.purchase-sales,
+.price-sales,
+.customer-sales,
+.status-sales {
+  padding: 0.3em;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.id-sales{
+  width: 8%;
+}
+
+.status-sales{
+  width: 19%;
+}
+
+.purchase-sales{
+  width: 18%;
+}
+
+.price-sales{
+  width: 10%;
+}
+
+.customer-sales {
+  width: 26%;
+}
+
+
+/*Container Data*/
+.sales-data-container {
+  width: 100%;
+  height: 73%;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+/*Scrollbar*/
+.sales-data-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.sales-data-container::-webkit-scrollbar:vertical {
+  width: 0.8em;
+}
+
+.sales-data-container::-webkit-scrollbar-button:increment,
+.sales-data-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.sales-data-container::-webkit-scrollbar:horizontal {
+  height: 0.7em;
+}
+
+.sales-data-container::-webkit-scrollbar-thumb {
+  background-color: var(--eigth-color);
+  border-radius: 20px;
+  border: 0.1em solid var(--third-color);
+}
+
+.sales-data-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+
