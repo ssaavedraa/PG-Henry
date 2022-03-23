@@ -14,6 +14,7 @@ const ReviewArtist = ({ id }) => {
   }, [dispatch, idArtist]);
 
   const reviews = useSelector((state) => state.reviews);
+  console.log(reviews)
 
   return (
     <div className='divContainerReviews'>
@@ -30,7 +31,7 @@ const ReviewArtist = ({ id }) => {
               <div className="divReviews" key={review.id}>
                 <img
                   src={review.paintingPhoto}
-                  alt="arteworks"
+                  alt="artworks"
                   className="imgArtwork"
                 />
                 <div className="containerText">
