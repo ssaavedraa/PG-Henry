@@ -5,12 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style type="text/css">
-       
+     <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+        .mail-background{
+            font-family: 'Poppins', sans-serif;
+            margin: auto;
+            background-color: #4B4B4D;
+            width: 400px;
+            padding: 30px;
+        }
+        .mail-container{
+            background-color: #F5F5F3;
+            padding: 30px;
+            color: black;
+        }
+        .logo{
+            width: 30%;
+            height: auto;
+        }
+        .btn{
+            border: none;
+        }
+        .btn:hover{
+            cursor: pointer;
+        }
+
+        .disclaimer{
+            font-size: 11px;
+            color: #7c7c7c;
+        }
     </style>
 </head>
     <body>
-        <h1>Payment Success</h1>
-        <p>{{name}}, your payment has been successful</p>
+        <div class="mail-background">
+            <div class="mail-container" style="border-radius: 30px;">
+                <h1>We received your payment!</h1>
+                <h3>Hello {{name}}!</h3>
+                <h3>Thanks for buying in SantArt</h3>
+                <h3>You will receive an email once we dispatch your order.</h3>
+                <p class="disclaimer">We appreciate your feedback. Thanks for being part of this wonderful community</p>
+                <div class="footer">
+                    <hr style="margin: 1rem 0; border-color: #168AAD;">
+                    <center><img src="https://pg-henry.vercel.app/static/media/SantArtlogo.9356199ab92de6f9251f.png" alt="SantArt-logo" class="logo">
+                    <p>All rights reserved - &reg;SantArt 2022</p></center>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
