@@ -17,16 +17,21 @@
 .card:hover,
 .card:hover .linksCard {
   cursor: pointer;
-  /* transition: transform 0.5s;
-  transform: scale(1.05); */
+  transition: transform 1s;
+  transform: scale(1.02);
 }
 
 .image {
-  width: 90%;
-  height: 46%;
+  width: 95%;
+  height: 55%;
   object-fit: contain;
 }
-
+.linea {
+  background-color: var(--fifth-color);
+  height: 1px;
+  width: 70%;
+  margin: 5px;
+}
 .data-paint {
   width: 90%;
   height: 50%;
@@ -40,20 +45,26 @@
   flex-direction: column;
 }
 
-.data-paint h4 {
+.data-paint h5 {
   width: 100%;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: 500;
 }
 
-.data-paint h5 {
-  font-size: 0.9em;
+.data-paint h6 {
+  font-size: 1.2em;
   font-weight: 400;
+  color: var(--primary-color);
+  font-weight: 500;
 }
 
+.data-paint:hover h6 {
+  color: var(--btnHover-color);
+}
 .data-paint p {
-  font-size: 0.87em;
+  font-size: 0.75em;
+  color: var(--eigth-color);
 }
 
 .price {
@@ -76,7 +87,7 @@
   border: none;
   cursor: pointer;
   /* background-color: rgb(255, 145, 0); */
-  background-color: var(--fifth-color);
+  background-color: var(--third-color);
   transition: 1.2s;
 }
 
@@ -120,11 +131,10 @@
 }
 
 .icon-header-card:hover {
-color: red;
+  color: red;
 }
 
-
-.btn-header-icon:hover .icon-header-card{
+.btn-header-icon:hover .icon-header-card {
   color: red;
 }
 

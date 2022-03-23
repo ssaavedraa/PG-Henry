@@ -60,10 +60,12 @@ function PurchaseModal({
                     )
                   }
                   text={purchase.state === "pending" ? "Dispatch" : "Complete"}
+                  color={purchase.state === "pending" ? "#5499C7" : "#52BE80"}
                 />
                 <CustomButton
                   onPress={() => submit(setCanceled)}
-                  text={'Cancel'}
+                  text={"Cancel"}
+                  color="#EC7063"
                 />
               </View>
             </>

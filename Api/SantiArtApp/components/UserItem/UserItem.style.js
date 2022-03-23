@@ -6,34 +6,32 @@ import {
 } from "react-native-responsive-screen";
 
 export default StyleSheet.create({
- container: {
-    width: wp('88%'),
-    flex: 1
- },
- btnList: { 
-   flexDirection: "column", 
-   justifyContent: "space-between",
- 
+  container: {
+    width: wp("88%"),
+    flex: 1,
   },
-  textEmail:{
-    fontWeight: 'bold',
-    fontSize: hp('2%')
+  btnList: {
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
-  textName:{
-    fontSize: hp('1.75%')
+  textEmail: {
+    fontWeight: "bold",
+    fontSize: hp("2%"),
   },
-  viewRole:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
+  textName: {
+    fontSize: hp("1.75%"),
   },
-  iconBanned:{
-    fontSize: hp('2.5%'),
-    color: 'red'
+  viewRole: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-  iconNoBanned:{
-    fontSize: hp('2.5%'),
-    color: 'blue'
-  }
-
+  iconBanned: {
+    fontSize: hp("2.5%"),
+    color: "#EC7063",
+  },
+  iconNoBanned: {
+    fontSize: hp("2.5%"),
+    color: "#5499C7",
+  },
 });

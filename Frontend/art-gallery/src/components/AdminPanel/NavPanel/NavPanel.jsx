@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavPanel.css";
-import img from "../../../assets/img/profile.png";
+import img from "../../../assets/img/user.png";
 import { NavLink } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 import { useSelector } from "react-redux";

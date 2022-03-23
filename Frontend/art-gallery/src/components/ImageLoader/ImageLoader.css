@@ -1,0 +1,12 @@
+.main {
+  min-height: 50vh;
+  width: 50%;
+}
+.main__container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 90%;
+  display: grid;
+  row-gap: 40px;
+}
+

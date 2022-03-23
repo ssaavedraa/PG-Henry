@@ -2,7 +2,7 @@ import React from "react";
 import "./MyProfile.css";
 import { useState, useEffect } from "react";
 import NavPanel from "../NavPanel/NavPanel";
-import img from "../../../assets/img/profile.png";
+import img from "../../../assets/img/user.png";
 import useAuth from "../../../customHooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
