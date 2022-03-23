@@ -10,14 +10,14 @@ function CardArticlesPurchase({ id, price, img, title, isAdmin, state, isReviewe
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [openModalReview, setOpenModalReview] = useState(false)
   return (
-    <Link to={"/detailpainting/" + id} className="articleCard">
+    <div className="articleCard">
       <section className="sectionSupArticle">
         <DivPurchaseData title="Id" value={id} />
         <DivPurchaseData title="Price" value={price} />
       </section>
-      <section className="sectionMiddleArticle">
+      <Link to={"/detailpainting/" + id} className="sectionMiddleArticle">
         <img src={img[0].url} alt="img-article" className="img-article" />
-      </section>
+      </Link>
       <section className="sectionDownArticle">
         <DivPurchaseData title="Title" value={title} />
         {isAdmin === false && state === "completed" && isReviewed === false && (
@@ -27,7 +27,7 @@ function CardArticlesPurchase({ id, price, img, title, isAdmin, state, isReviewe
       {
         <AddReviewModal openModalReview={openModalReview} setOpenModalReview ={setOpenModalReview}/>
       }
-      </Link>
+      </div>
   );
 }
 
