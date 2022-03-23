@@ -232,3 +232,10 @@
 .completed {
   color: var(--completed-color) !important;
 }
+
+
+.noPurchases{
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
