@@ -7,8 +7,3 @@
 	transition: all ease-in 0.4s;
 }
 
-@media screen and (min-width: 900px) {
-	.uploader {
-		align-items: initial;
-	}
-}

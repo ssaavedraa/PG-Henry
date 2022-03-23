@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LoaderImage } from "./LoaderImage";
 import { DragImage } from "./DragImage";
-import "./uploader.scss";
+import "./uploader.css";
 
 export const Uploader = () => {
   const [loading, setLoading] = useState(false);

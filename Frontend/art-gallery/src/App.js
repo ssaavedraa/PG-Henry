@@ -25,7 +25,6 @@ import NotFound from "./components/Error404/notFound.component";
 import { FormContac_1 } from "./components/FormContac/FormContac_1";
 import { FormContacArtist } from "./components/FormContac/FormContacArtist";
 import { AboutDev } from "./components/aboutDev/AboutDev";
-import { ImageLoader } from "./components/ImageLoader/ImageLoader";
 
 function App() {
 	return (
@@ -102,7 +101,7 @@ function App() {
 					<Route exact path="/formUser" element={<FormContac_1 />} />
 					<Route exact path="/formArtists" element={<FormContacArtist />} />
 					<Route exact path="/about" element={<AboutDev />} />
-          <Route exact path="/image" element={<ImageLoader />} />
+         
 					<Route
 						exact
 						path="/favs"

@@ -159,11 +159,12 @@ export const DetailOfArt = () => {
                   {detailObra.orientation}
                 </span>
               </div>
-              {user.role === "user" ? (
+              {user.role === "user" && detailObra.isAvailable ?  (
+                
                 <button
                   onClick={() => handlePress(id)}
                   className={styles.buttonLikeObra}
-                >
+                >                  
                   {isFavorite ? (
                     <AiTwotoneHeart className={styles.iconLike} />
                   ) : (
@@ -219,7 +220,7 @@ export const DetailOfArt = () => {
               )}
             </div>
 
-            {user.role !== "admin" ? (
+            {user.role !== "admin" && detailObra.isAvailable ? (
               cart.includes(parseInt(id)) ? (
                 <button
                   className={styles.btnCard}

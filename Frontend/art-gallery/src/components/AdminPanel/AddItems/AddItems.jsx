@@ -157,6 +157,7 @@ const AddItems = () => {
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
                 <div className="image-content-item">
+                  
                   {input.photos &&
                   input.photos.toString().startsWith("http") ? (
                     <img src={input.photos.toString()} alt="imgUser" />
