@@ -284,15 +284,34 @@ const CartForm = () => {
 
 					<div className="divContainerItemsCart">
 						<h3>Your order</h3>
-						{paintings &&
-							paintings.map((painting, i) => (
-								<div key={i} className="divContainerProductCart">
-									<p>{painting.title}</p>
-									<img src={painting.photos[0].url} alt={painting.title} />
-
-									<p>USD$ {painting.price}</p>
+						{
+						
+						paintings?.length > 1 
+						
+						?
+						paintings.map((painting, i) => (
+							<div key={i} className="divContainerProductCart-10">
+								
+								<img src={painting.photos[0].url} alt={painting.title} />
+								<div>
+								<p>{painting.title}</p>
+								<p>USD$ {painting.price}</p>
 								</div>
-							))}
+							</div>
+							))
+						:
+							paintings.map((painting, i) => (
+									<div key={i} className="divContainerProductCart">
+
+										<p>{painting.title}</p>
+										<img src={painting.photos[0].url} alt={painting.title} />
+
+										<p>USD$ {painting.price}</p>
+									</div>
+								))
+								// :
+								
+						}
 						<div className="divContainerButtonCartContinue">
 							{<button type="submit">Continue</button>}
 						</div>
