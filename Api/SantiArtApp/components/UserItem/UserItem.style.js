@@ -33,7 +33,7 @@ export default StyleSheet.create({
   },
   iconNoBanned:{
     fontSize: hp('2.5%'),
-    color: 'green'
+    color: 'blue'
   }
 
 });

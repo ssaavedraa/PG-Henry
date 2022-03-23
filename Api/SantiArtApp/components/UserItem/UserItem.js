@@ -23,18 +23,18 @@ function UserItem({ user, loadUsers }) {
             onLongPress={() => setEditModal(true)}
           >
             <View style={style.viewRole}>
-              <Text style={style.textEmail}>{user.email}</Text>
+              <Text style={style.textEmail}>
+                {user.firstName} {user.lastName}
+              </Text>
               {/* {user.isBanned ? <Text>Banneado</Text> : <Text></Text>} */}
               {user.isBanned ? (
                 <FontAwesome5Icon name="user-slash" style={style.iconBanned} />
               ) : (
-                <FontAwesome5Icon name="user-alt" style={style.iconNoBanned}/>
+                <FontAwesome5Icon name="user-alt" style={style.iconNoBanned} />
               )}
             </View>
             <View style={style.viewRole}>
-              <Text style={style.textName}>
-                {user.firstName} {user.lastName}
-              </Text>
+              <Text style={style.textName}>{user.email}</Text>
               <Text>{user.role}</Text>
             </View>
           </TouchableOpacity>

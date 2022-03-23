@@ -3,7 +3,7 @@ const { Artist, conn } = require("../../db");
 const getAll = async (req, res) => {
   const { orderBy, order } = req.query;
   const rawArtists = await Artist.findAll({
-    attributes: [["id", "artistId"], "name", "photo"],
+    attributes: [["id", "artistId"], "name", "photo", "email" ],
     order: [["id", "ASC"]],
   });
   const paintings = await conn.query(

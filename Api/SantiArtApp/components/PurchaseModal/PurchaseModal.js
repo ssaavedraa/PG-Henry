@@ -3,6 +3,8 @@ import { Alert, Modal, Text, Pressable, View } from "react-native";
 import setCanceled from "../../selectors/modifyPurchase/setCanceled";
 import setCompleted from "../../selectors/modifyPurchase/setCompleted";
 import setDispatched from "../../selectors/modifyPurchase/setDispatched";
+import CustomButton from "../CustomButton/CustomButton";
+import CustomModal from "../CustomModal/CustomModal";
 import Spinner from "../Spinner/Spinner";
 import style from "./PurchaseModal.style";
 
@@ -31,52 +33,44 @@ function PurchaseModal({
   };
 
   return (
-    <View style={style.centeredView}>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={purchaseModal}
-        onRequestClose={() => setPurchaseModal(!purchaseModal)}
-      >
-        <View style={style.modalView}>
-          {loading ? (
-            <Spinner />
+    <CustomModal
+      openModal={purchaseModal}
+      closeModal={() => {
+        setPurchaseModal(false);
+      }}
+    >
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          {purchase.state === "processing" ||
+          purchase.state === "completed" ||
+          purchase.state === "canceled" ? (
+            <Text>{`There's no operations for ${purchase.state} purchases`}</Text>
           ) : (
             <>
-              <Text>Que hacemo</Text>
-              {purchase.state === "processing" ||
-              purchase.state === "completed" ||
-              purchase.state === "canceled" ? (
-                <Text>{`There's no operations for ${purchase.state} purchases`}</Text>
-              ) : (
-                <View style={style.buttonContainer}>
-                  <Pressable
-                    style={style.button}
-                    onPress={() =>
-                      submit(
-                        purchase.state === "pending"
-                          ? setDispatched
-                          : setCompleted
-                      )
-                    }
-                  >
-                    <Text>
-                      {purchase.state === "pending" ? "Dispatch" : "Complete"}
-                    </Text>
-                  </Pressable>
-                  <Pressable
-                    style={style.button}
-                    onPress={() => submit(setCanceled)}
-                  >
-                    <Text>Cancel</Text>
-                  </Pressable>
-                </View>
-              )}
+              <Text style={style.textWant}>What do you want to do?</Text>
+              <View style={style.buttonContainer}>
+                <CustomButton
+                  onPress={() =>
+                    submit(
+                      purchase.state === "pending"
+                        ? setDispatched
+                        : setCompleted
+                    )
+                  }
+                  text={purchase.state === "pending" ? "Dispatch" : "Complete"}
+                />
+                <CustomButton
+                  onPress={() => submit(setCanceled)}
+                  text={'Cancel'}
+                />
+              </View>
             </>
           )}
-        </View>
-      </Modal>
-    </View>
+        </>
+      )}
+    </CustomModal>
   );
 }
 

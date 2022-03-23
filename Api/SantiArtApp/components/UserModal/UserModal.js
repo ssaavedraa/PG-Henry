@@ -40,29 +40,21 @@ function UserModal({ editModal, setEditModal, user, loadUsers }) {
         <Spinner />
       ) : (
         <>
-          <Text style={style.textWant}>What you want to do?</Text>
+          <Text style={style.textWant}>What do you want to do?</Text>
           <View style={style.buttonContainer}>
             <CustomButton
               onPress={() =>
                 submit(user.role === "admin" ? removeAdmin : giveAdmin)
               }
-              text={
-                <Text style={style.textBtn}>
-                  {user.role === "admin" ? "Remove admin" : "Give admin"}
-                </Text>
-              }
+              text={user.role === "admin" ? "Remove admin" : "Give admin"}
             />
             <CustomButton
               onPress={() => submit(user.isBanned ? unbanUser : banUser)}
-              text={
-                <Text style={style.textBtn}>
-                  {user.isBanned ? "Unban user" : "Ban user"}
-                </Text>
-              }
+              text={user.isBanned ? "Unban user" : "Ban user"}
             />
             <CustomButton
               onPress={() => submit(passReset)}
-              text={<Text>Reset password</Text>}
+              text={"Reset password"}
             />
           </View>
         </>

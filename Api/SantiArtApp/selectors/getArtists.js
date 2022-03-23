@@ -10,3 +10,5 @@ const getArtists = async () => {
 };
 
 export default getArtists;
+
+
