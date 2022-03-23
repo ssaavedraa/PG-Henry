@@ -11,7 +11,7 @@ function GeneralPanel() {
   const { user } = useAuth();
   const isAdmin = user.role === "admin" ? true : false;
   const title = user.role === "admin" ? "Sales" : "Purchase";
-  console.log(isAdmin);
+
   return (
     <div className="sales-container">
       <HeaderCheckPanel title={title} setState={setState} state={state}/>

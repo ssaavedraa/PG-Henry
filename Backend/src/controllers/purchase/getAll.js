@@ -20,6 +20,7 @@ const getAll = async (req, res) => {
 			condition.where = { ...condition.where, state: { [Op.in]: stateList } };
 		let purchases = await Purchase.findAll({
 			...condition,
+			where: { state: { [Op.ne]: "processing" } },
 			include: [
 				ContactInfo,
 				{
@@ -55,7 +56,7 @@ const getAll = async (req, res) => {
 			});
 			return purchase;
 		});
-		console.log(purchases.length);
+
 		res.json(purchases || []);
 	} catch (err) {
 		res.status(400).json({ error: err.message });

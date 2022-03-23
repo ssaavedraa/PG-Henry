@@ -8,7 +8,6 @@ function CardArticlesPurchase({ id, price, img, title, isAdmin, state, isReviewe
 
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [openModalReview, setOpenModalReview] = useState(false)
-
   return (
     <div className="articleCard">
       <section className="sectionSupArticle">
