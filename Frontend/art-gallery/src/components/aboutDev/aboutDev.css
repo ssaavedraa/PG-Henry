@@ -1,20 +1,58 @@
 
 .aboutPrincipal{
     width: 100%;
-    height: 80vh;
+    height: 120vh;
     /* background: red; */
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    animation-name: desvanece;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.aboutPrincipal-div1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    margin-top: 20px;
+}
+.content-img{
+    width: 100%;
+    /* height: 90px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: blue; */
+}
+.content-img img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 5px;
+    
 }
 .cardAbout {
-    width: 370px;
-    height: 250px;
-    background: rgb(59, 58, 58);
+    width: 260px;
+    height: 325px;
+    background: transparent;
     position: relative;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+}
+.cardAbout:hover {
+transition: all 1s;
+    transform: scale(1.05);
+    
 }
 
 .part1 {
@@ -43,7 +81,7 @@
 }
 .part2 > h1 {
     position: relative;
-    font-size: 25px;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +97,7 @@
     gap: 10px;
 }
 .icom_logo i{
-font-size: 20px;
+font-size: 17px;
     
 }
 .icom_logo a{
@@ -69,5 +107,16 @@ font-size: 20px;
     }
 .icom_logo p{
     color: black;
-            
+           font-size: 13px; 
+    }
+
+    
+
+@keyframes desvanece {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
     }
