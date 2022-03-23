@@ -12,6 +12,7 @@ export default function CheckoutButton() {
 		const obj = {
 			paintingsIds: cart,
 			userId: user.id === -1 ? null : user.id,
+			url: window.location.host,
 		};
 
 		const response = await axios.post("checkout/checkAvailable", obj);

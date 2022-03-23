@@ -16,6 +16,25 @@ const {
 	DEFAULT_ADMIN_PASSWORD,
 } = process.env;
 
+/* 
+VENDEDOR
+{
+    "id": 1090513240,
+    "nickname": "TESTQS0YUVEI",
+    "password": "qatest7557",
+    "site_status": "active",
+    "email": "test_user_87104316@testuser.com"
+}
+COMPRADOR
+{
+    "id": 1090522718,
+    "nickname": "TESTPWJPK4Z0",
+    "password": "qatest6474",
+    "site_status": "active",
+    "email": "test_user_92165718@testuser.com"
+}
+ */
+
 const loadMockData = async () => {
 	console.log("loading mock data");
 
