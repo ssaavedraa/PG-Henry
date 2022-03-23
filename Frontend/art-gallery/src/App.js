@@ -101,6 +101,7 @@ function App() {
 					<Route exact path="/formUser" element={<FormContac_1 />} />
 					<Route exact path="/formArtists" element={<FormContacArtist />} />
 					<Route exact path="/about" element={<AboutDev />} />
+         
 					<Route
 						exact
 						path="/favs"
@@ -140,3 +141,5 @@ function App() {
 }
 
 export default App;
+
+
