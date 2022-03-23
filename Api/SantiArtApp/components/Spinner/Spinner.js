@@ -6,6 +6,7 @@ function Spinner() {
       style={{
         flex: 1,
         justifyContent: "center",
+        backgroundColor: 'white'
       }}
       size="large"
       color="#0000ff"

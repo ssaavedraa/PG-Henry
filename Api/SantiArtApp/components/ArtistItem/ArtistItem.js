@@ -2,20 +2,19 @@ import { View, Text, Image } from "react-native";
 import style from "./ArtistItem.style";
 import React, { useState } from "react";
 import ListItem from "../ListItem/ListItem";
-import AboutArtistModal from "../AboutArtistModal/AboutArtistModal";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/core";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const ArtistItem = ({ artist }) => {
-  const [artistData, setArtistData] = useState(false);
+  const navigation = useNavigation();
+
   return (
     <>
-      <AboutArtistModal
-        artistData={artistData}
-        setArtistData={setArtistData}
-        artist={artist}
-      />
       <ListItem>
-        <TouchableOpacity onPress={() => setArtistData(true)}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ArtistDetail", { artist })}
+        >
           <View style={style.containerArtist}>
             <View style={style.containerImg}>
               <Image source={{ uri: artist.photo }} style={style.img} />
@@ -23,8 +22,12 @@ const ArtistItem = ({ artist }) => {
             <View style={style.container}>
               <View style={style.nameArtist}>
                 <Text style={style.textName}>{artist.name}</Text>
-                <Text>{artist.email}</Text>
+                <View style={style.viewScore}>
+                <Icon name="star" size={15} color={'#F9B208'}/>
+                  <Text style={style.textScore}>{artist.score}</Text>
+                </View>
               </View>
+              <Text>{artist.email}</Text>
             </View>
           </View>
         </TouchableOpacity>

@@ -23,6 +23,20 @@ export default StyleSheet.create({
   },
   nameArtist: {
     marginBottom: wp("0.5%"),
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: wp("72%"),
+    alignItems: "center",
+  },
+  viewScore: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  textScore: {
+    fontSize: hp("1.9%"),
+    paddingLeft: wp("1%"),
   },
   textName: {
     fontSize: hp("2.15%"),
