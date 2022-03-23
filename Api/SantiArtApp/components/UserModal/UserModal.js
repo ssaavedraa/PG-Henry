@@ -47,14 +47,17 @@ function UserModal({ editModal, setEditModal, user, loadUsers }) {
                 submit(user.role === "admin" ? removeAdmin : giveAdmin)
               }
               text={user.role === "admin" ? "Remove admin" : "Give admin"}
+              color={user.role === "admin" ? "#EC7063" : "#52BE80"}
             />
             <CustomButton
               onPress={() => submit(user.isBanned ? unbanUser : banUser)}
               text={user.isBanned ? "Unban user" : "Ban user"}
+              color={user.isBanned ? "#52BE80" : "#EC7063"}
             />
             <CustomButton
               onPress={() => submit(passReset)}
               text={"Reset password"}
+              color="#5499C7"
             />
           </View>
         </>

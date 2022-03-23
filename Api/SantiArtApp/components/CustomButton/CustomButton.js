@@ -6,6 +6,7 @@ const defaultColor = "blue";
 const defaultTextColor = "white";
 
 export default function CustomButton({ text, color, onPress, textColor }) {
+  console.log(color, text);
   return (
     <TouchableOpacity
       onPress={onPress}
