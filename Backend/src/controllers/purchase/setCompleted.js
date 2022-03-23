@@ -1,4 +1,4 @@
-const { Purchase } = require("../../db");
+const { Purchase, User, ContactInfo } = require("../../db");
 const getToday = require("./Utils/getToday");
 const emailSender = require("../../nodemailer/paymentCompleted/sendMail.js");
 

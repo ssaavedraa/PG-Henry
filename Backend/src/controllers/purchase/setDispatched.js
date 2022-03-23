@@ -1,4 +1,4 @@
-const { Purchase } = require("../../db");
+const { Purchase, User, ContactInfo } = require("../../db");
 const getToday = require("./Utils/getToday");
 const emailSender = require("../../nodemailer/paymentDispatched/sendMail.js");
 
@@ -36,6 +36,7 @@ const setDispatched = async (req, res) => {
       message: "Purchase dispatched",
     });
   } catch (err) {
+    console.log(err)
     res.json({
       status: "error",
       message: err.message,
