@@ -7,7 +7,7 @@ import {
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    // backgroundColor: "white",
     flex: 1,
     padding: wp("4%"),
   },
@@ -15,13 +15,13 @@ export default StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: wp("7%"),
+    // marginTop: wp("7%"),
   },
   viewImg: {
     justifyContent: "center",
     alignContent: "center",
     alignItems: "center",
-    paddingTop: wp("5%"),
+    paddingTop: wp("4%"),
   },
   textBiography: {
     paddingVertical: wp("3%"),
@@ -41,7 +41,7 @@ export default StyleSheet.create({
     paddingTop: wp("3%"),
   },
   viewEmail: {
-    paddingVertical: wp("2.5%"),
+    paddingVertical: wp("1%"),
     borderBottomColor: "#DCDCDD",
     borderTopColor: "#DCDCDD",
     borderTopWidth: wp("0.25%"),
@@ -55,5 +55,13 @@ export default StyleSheet.create({
     paddingHorizontal: wp('2%'),
     paddingVertical: wp('1%'),
     fontSize: hp('1.9%')
+  },
+  stats: {
+    paddingBottom: wp("1.25%"),
+    marginTop: wp('4%'),
+    fontSize: hp('2.15%'),
+    fontWeight: 'bold',
+    borderBottomWidth: wp("0.25%"),
+    borderColor: "#DCDCDD",
   }
 });

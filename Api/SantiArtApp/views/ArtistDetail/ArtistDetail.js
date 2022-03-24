@@ -32,7 +32,7 @@ export default function ArtistDetail({ route, navigation }) {
   if (loading) return <Spinner />;
 
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
+    <ScrollView style={{ flex: 1}}>
       <View style={style.container}>
         <View style={style.viewImg}>
           <Image source={{ uri: detailArtist.photo }} style={style.img} />
@@ -40,15 +40,16 @@ export default function ArtistDetail({ route, navigation }) {
         </View>
         <View style={style.viewEmail}>
           <View style={style.textIcon}>
-          <Icon name="mail-outline" size={25} color={'#7c7c7c'}/>
+            <Icon name="mail-outline" size={25} color={"#7c7c7c"} />
             <Text style={style.text}>{detailArtist.email}</Text>
           </View>
           <View style={style.textIcon}>
-          <Icon name="location-outline" size={25} color={'#7c7c7c'}/>
+            <Icon name="location-outline" size={25} color={"#7c7c7c"} />
             <Text style={style.text}>{detailArtist.location}</Text>
           </View>
         </View>
         <Text style={style.textBiography}>{detailArtist.biography}</Text>
+        <Text style={style.stats}>Artist's statistics</Text>
         <View style={style.containerStats}>
           <StatsArtistItem title={"Reviews"} value={artist.reviews} />
           <StatsArtistItem title={"Sales"} value={artist.sales} />

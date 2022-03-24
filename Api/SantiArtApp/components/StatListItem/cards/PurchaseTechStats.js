@@ -27,13 +27,14 @@ function PurchaseTechStats({ techStats }) {
     <StatListItem>
       <Text
         style={{
-          fontSize: wp("5%"),
+          fontSize: hp("2.5%"),
           alignSelf: "flex-start",
+          fontWeight: 'bold',
         }}
       >
-        ○ Purchases by technique
+      Purchases by technique
       </Text>
-      <StackedBar data={data} width={wp("80%")} height={hp("1%")} />
+      <StackedBar data={data} width={wp("85%")} height={hp("1.5%")} />
       {data.map((d, i) => (
         <View
           key={i}
@@ -42,6 +43,7 @@ function PurchaseTechStats({ techStats }) {
             width: "100%",
             flexDirection: "row",
             alignItems: "flex-start",
+            alignItems: 'center'
           }}
         >
           <MaterialCommunityIcons name="ellipse" style={{ color: d.color }} />

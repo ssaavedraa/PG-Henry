@@ -98,7 +98,7 @@ function Login({ navigation }) {
           <Text style={style.textLogin}>Login</Text>
         </TouchableOpacity>
 
-        {/* <Button
+        <Button
      
         title="PASA DERECHO"
         onPress={() => {
@@ -106,7 +106,7 @@ function Login({ navigation }) {
             "Bearer eyJhbGciOiJIUzI1NiJ9.Ng.UYrNTe6rvfYBwkOQgCZsJMGOyp2rVnkAt20QVwtsGOs";
           navigation.replace("Home");
         }}
-      /> */}
+      />
       </View>
     </View>
   );
