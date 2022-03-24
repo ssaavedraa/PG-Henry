@@ -168,11 +168,38 @@
 .divDescriptionArtwork {
   padding-top: 0.75rem;
   width: inherit;
+  height: 30%;
+  overflow-y: auto;
+}
+
+/*Scrollbar*/
+.divDescriptionArtwork::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.divDescriptionArtwork::-webkit-scrollbar:vertical {
+  width: 0.6em;
+}
+
+.divDescriptionArtwork::-webkit-scrollbar-button:increment,
+.divDescriptionArtwork::-webkit-scrollbar-button {
+  display: none;
+}
+
+.divDescriptionArtwork::-webkit-scrollbar:horizontal {
+  height: 0.7em;
+}
+
+.divDescriptionArtwork::-webkit-scrollbar-thumb {
+  background-color: var(--eigth-color);
+  border-radius: 20px;
+  border: 0.1em solid var(--third-color);
 }
 
 .divDescriptionArtwork span {
   font-weight: 400;
 }
+
 
 .divDescriptionArtwork h4 {
   font-weight: 600;
