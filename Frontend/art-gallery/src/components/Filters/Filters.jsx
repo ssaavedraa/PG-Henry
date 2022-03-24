@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getArtist, getTechnique } from "../../redux/actions/actions";
 
@@ -15,20 +15,20 @@ import ListArtist from "../utils/ListArtist/ListArtist";
 
 import "./Filters.css";
 
-function Filters({ handleOnChange, filter, addList, cleanFilter}) {
-  const artists = useSelector((state) => state.artist); 
+function Filters({ handleOnChange, filter, addList, cleanFilter, name }) {
+  const artists = useSelector((state) => state.artist);
   const technique = useSelector((state) => state.technique);
 
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    dispatch(getArtist());
+  useEffect(() => {
+    dispatch(getArtist(name));
     dispatch(getTechnique());
-  }, [dispatch]);
+  }, [dispatch, name]);
 
-  React.useEffect(() => {
+  /*   useEffect(() => {
     dispatch(getArtist(filter.name));
-  }, [dispatch, filter, addList]);
+  }, [dispatch, filter, addList]); */
 
   return (
     <div className="filter-container">

@@ -6,8 +6,8 @@ import Filters from "../Filters/Filters";
 import CardsPaints from "../../containers/CardsPaints/CardsPaints";
 import Pagination from "../Pagination/Pagination";
 import "./Gallery.css";
-import img from '../../assets/img/loading-img.gif'
-
+import img from "../../assets/img/loading-img.gif";
+import { ToastContainer } from "react-toastify";
 
 function Gallery() {
   const dispatch = useDispatch();
@@ -18,9 +18,9 @@ function Gallery() {
   const params = new URLSearchParams(search);
   const query = params.get("query");
 
-  useEffect(() => {
+  /*   useEffect(() => {
     dispatch(getPaintings());
-  }, [dispatch]);
+  }, [dispatch]); */
   //Filters
   const [filter, setFilter] = useState({
     order: "",
@@ -38,6 +38,10 @@ function Gallery() {
 
   useEffect(() => {
     dispatch(getPaintings({ searchTerm: query, ...filter }));
+    setPage({
+      actualPage: 1,
+      paintsPerPage: 9,
+    });
   }, [dispatch, filter, query]);
 
   //------------------
@@ -52,11 +56,13 @@ function Gallery() {
   const firstPaint = lastPaint - page.paintsPerPage;
   const actualPaints = paintings.slice(firstPaint, lastPaint);
 
-  const paginate = (pageNumber) =>
+  const paginate = (pageNumber) => {
     setPage({
       ...page,
       actualPage: pageNumber,
     });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   //----------------------
 
   function handleOnChange(e, value) {
@@ -112,19 +118,34 @@ function Gallery() {
   }
 
   if (!paintings) {
-    return <div className="loading">
-        <img src={img} alt="img"/>
-        </div>
+    return (
+      <div className="loading">
+        <img src={img} alt="img" />
+      </div>
+    );
   }
 
   return (
     <div className="gallery-container">
+      <ToastContainer
+        position="bottom-center"
+        theme="dark"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Filters
         handleOnChange={handleOnChange}
         addList={addList}
         cleanFilter={cleanFilter}
         filter={filter}
         setFilter={setFilter}
+        name={filter.name}
       />
       <div className="cards-container">
         {query && <p>{"searching for: " + query}</p>}

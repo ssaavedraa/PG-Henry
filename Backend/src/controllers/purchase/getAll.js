@@ -12,15 +12,16 @@ const getAll = async (req, res) => {
 		user: { id, role },
 	} = req;
 	const { state } = req.query;
+
 	const stateList = state && state.split(",").map((s) => s.trim());
 	try {
-		const condition = { where: {} };
+		const condition = { where: { state: { [Op.ne]: "processing" } } };
 		if (role === "user") condition.where = { ...condition.where, userId: id };
 		if (state)
 			condition.where = { ...condition.where, state: { [Op.in]: stateList } };
 		let purchases = await Purchase.findAll({
 			...condition,
-			where: { state: { [Op.ne]: "processing" } },
+
 			include: [
 				ContactInfo,
 				{

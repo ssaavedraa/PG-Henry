@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style type="text/css">
+     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
         .mail-background{
@@ -31,15 +31,20 @@
             cursor: pointer;
         }
 
+        .disclaimer{
+            font-size: 11px;
+            color: #7c7c7c;
+        }
     </style>
 </head>
     <body>
         <div class="mail-background">
             <div class="mail-container" style="border-radius: 30px;">
-                <h1>Your account has been upgraded!</h1>
+                <h1>We received your payment!</h1>
                 <h3>Hello {{name}}!</h3>
-                <h3>Great news! we reach to you in order to inform you that your SantArt account's role has been upgraded to admin.</h3>
-                <center><a href='https://pg-henry.vercel.app//login'><button class="btn" style="background-color: #168AAD; margin: 1rem auto; border-radius: 5px; padding: 0.5rem 1rem; color: #F5F5F3;">Login to your account</button></a></center>
+                <h3>Thanks for buying in SantArt</h3>
+                <h3>You will receive an email once we dispatch your order.</h3>
+                <p class="disclaimer">We appreciate your feedback. Thanks for being part of this wonderful community</p>
                 <div class="footer">
                     <hr style="margin: 1rem 0; border-color: #168AAD;">
                     <center><img src="https://pg-henry.vercel.app/static/media/SantArtlogo.9356199ab92de6f9251f.png" alt="SantArt-logo" class="logo">

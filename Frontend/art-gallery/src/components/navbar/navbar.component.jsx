@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { getSearchAuto, getFavs } from "../../redux/actions/actions";
 import Logo from "../../assets/img/SantArtlogo.png";
 import SearchBar from "../SearchBar/SearchBar";
@@ -16,6 +16,11 @@ export default function NavBar() {
   const { user, logout } = useAuth();
   const resultSearch = useSelector((state) => state.resultSearch);
   const [keyword, setKeyword] = useState("");
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [location]);
 
   //favs
 
