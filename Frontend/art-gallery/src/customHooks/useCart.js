@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 function setArr(key, arr) {
   localStorage.setItem(key, JSON.stringify(arr));
   window.dispatchEvent(new Event("storage"));
-};
+}
 
 function getArr(key) {
   const storage = JSON.parse(localStorage.getItem(key));
@@ -13,18 +13,16 @@ function getArr(key) {
   } else {
     return storage;
   }
-};
-
+}
 
 function useCart() {
-
   function cartEvent() {
-    setCart(getArr("painting"))
-  };
-  
+    setCart(getArr("painting"));
+  }
+
   function removeEvent() {
     window.removeEventListener("storage", cartEvent);
-  };
+  }
 
   useEffect(() => {
     window.addEventListener("storage", cartEvent);
@@ -33,17 +31,15 @@ function useCart() {
   }, []);
 
   function add(paintingId) {
-
     try {
-
       if (Array.isArray(paintingId)) {
         paintingId.forEach((p) => add(p));
         return;
-      };
+      }
 
       if (localStorage.getItem("jwtToken") !== null) {
-        axios.post(`http://localhost:3001/cart/add/${paintingId}`).catch(err => console.log(err));
-      };
+        axios.post(`/cart/add/${paintingId}`).catch((err) => console.log(err));
+      }
 
       const paintingArr = getArr("painting");
       const id = parseInt(paintingId);
@@ -63,10 +59,11 @@ function useCart() {
 
   function remove(paintingId) {
     try {
-
       if (localStorage.getItem("jwtToken") !== null) {
-        axios.delete(`http://localhost:3001/cart/remove/${paintingId}`).catch(err => console.log(err));
-      };
+        axios
+          .delete(`/cart/remove/${paintingId}`)
+          .catch((err) => console.log(err));
+      }
 
       let paintingArr = getArr("painting");
       const id = parseInt(paintingId);
@@ -85,8 +82,8 @@ function useCart() {
 
   function removeAll() {
     if (localStorage.getItem("jwtToken") !== null) {
-      axios.delete("http://localhost:3001/cart/removeAll").catch(err => console.log(err));;
-    };
+      axios.delete("/cart/removeAll").catch((err) => console.log(err));
+    }
     setArr("painting", []);
     localStorage.removeItem("painting");
   }
