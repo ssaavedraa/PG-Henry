@@ -21,6 +21,7 @@ function DetailPurchase({
         detailData={detailData}
         isAdmin={isAdmin}
       />
+      
       <div className="status-detail-data">
         {isAdmin === true ? (
           <DivPurchaseData title="Price" value={purchase.totalPrice}/>

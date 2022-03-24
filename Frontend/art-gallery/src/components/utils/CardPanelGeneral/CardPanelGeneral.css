@@ -42,7 +42,7 @@
 
 .resizeLengthSubcontainer{
   transition: 0.4s;
-  height: 160%;
+  height: 220%;
 }
 
 .resizeSubcontainer .sales-main-data, .resizeLengthSubcontainer .sales-main-data {
@@ -108,8 +108,12 @@
   height: 6%;
 }
 
-.resizeLengthSubcontainer .sectionSupSeal, .resizeLengthSubcontainer .sectionDownSeal{
-  height: 35%;
+.resizeLengthSubcontainer .sectionSupSeal{
+  height: 20%;
+}
+
+.resizeLengthSubcontainer .sectionDownSeal{
+  height: 75%;
 }
 
 .detail-seal-data,
@@ -227,4 +231,11 @@
 
 .completed {
   color: var(--completed-color) !important;
+}
+
+
+.noPurchases{
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
 }

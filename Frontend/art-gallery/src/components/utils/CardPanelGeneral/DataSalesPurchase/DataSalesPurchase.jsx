@@ -9,6 +9,7 @@ import DetailPurchase from "./DetailPurchase";
 function DataSalesPurchase({ index, purchase, isAdmin, setUpdateStatus }) {
   const [state, setState] = useState(purchase.state);
   const dispatch = useDispatch();
+
   const size =
     purchase.paintings.length < 3
       ? "resizeSubcontainer"

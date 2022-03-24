@@ -23,6 +23,17 @@
     height: 98%;
     flex-direction: column;
     margin: 0.2em;
+    color: var(--second-color);
+    cursor: pointer;
+  }
+
+  .articleCard:hover{
+    transition: 1s ease-in-out;
+    background-color: var(--eigth-color);
+  }
+
+  .resizeLengthSubcontainer .sectionDownSeal .articleCard{
+    height: 45%;
   }
   
   .articleCard h5 {
@@ -103,4 +114,15 @@
 
   .articleCard label{
     margin-left: .5em;
+  }
+
+
+  .resizeLengthSubcontainer .sectionDownArticle .customer-purchase-data{
+    margin-top: -.3em;
+    margin-bottom: .5em;
+    height: 45%;
+  }
+
+  .resizeLengthSubcontainer .sectionDownArticle button{
+    height: 48%;
   }
