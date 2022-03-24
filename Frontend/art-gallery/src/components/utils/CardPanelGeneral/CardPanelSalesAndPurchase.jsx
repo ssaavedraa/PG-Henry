@@ -3,12 +3,18 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { updateStatus, getAllPurchase } from "../../../redux/actions/actions";
 import DataSalesPurchase from "./DataSalesPurchase/DataSalesPurchase";
+import useAuth from "../../../customHooks/useAuth";
 import "./CardPanelGeneral.css";
 
-function CardPanelSalesAndPurchase({ isAdmin, filter }) {
+function CardPanelSalesAndPurchase({filter }) {
   //Aca hacemos el mapeo de la data
   const purchase = useSelector((state) => state.purchase);
   const dispatch = useDispatch();
+
+  const { user } = useAuth();
+  const isAdmin = user.role === "admin" ? true : false;
+
+  const purchaseArray = isAdmin === true ? purchase : purchase.filter(item => item.userId === user.id);
 
   useEffect(() => {
     dispatch(getAllPurchase(filter));
@@ -24,8 +30,8 @@ function CardPanelSalesAndPurchase({ isAdmin, filter }) {
 
   return (
     <div className="sales-data-container">
-      {purchase.length
-        ? purchase.map((item, index) => (
+      {purchaseArray.length
+        ? purchaseArray.map((item, index) => (
             <DataSalesPurchase
               key={item.id}
               index={index}
@@ -34,7 +40,7 @@ function CardPanelSalesAndPurchase({ isAdmin, filter }) {
               setUpdateStatus={setUpdateStatus}
             />
           ))
-        : null}
+        : <h1 className="noPurchases">No purchases made!</h1>}
     </div>
   );
 }

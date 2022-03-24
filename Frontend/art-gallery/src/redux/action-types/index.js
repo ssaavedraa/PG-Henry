@@ -24,3 +24,4 @@ export const ADD_TECHNIQUE = 'ADD_TECHNIQUE';
 export const GET_ALL_SP = 'GET_ALL_SP';
 export const ADD_PAINTING = 'ADD_PAINTING';
 export const CONTACT_INFO = "CONTACT_INFO";
+export const ADD_REVIEW = 'ADD_REVIEW'

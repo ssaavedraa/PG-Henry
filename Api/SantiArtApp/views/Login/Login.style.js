@@ -20,15 +20,15 @@ export default StyleSheet.create({
     padding: wp("5%"),
   },
   img: {
-    width: wp("42%"),
-    height: hp("15%"),
+    width: wp("65%"),
+    height: hp("35%"),
+    resizeMode: "contain",
   },
   viewImage: {
-    flex: 0.5,
+    marginTop: wp("12.5%"),
     justifyContent: "center",
     alignContent: "center",
     alignItems: "center",
-    resizeMode: "contain",
   },
   viewInputs: {
     flexDirection: "row",
@@ -37,8 +37,7 @@ export default StyleSheet.create({
     borderColor: "#DCDCDD",
     borderWidth: wp("0.75%"),
     borderRadius: wp("2.5%"),
-    marginTop: wp("4%"),
-    
+    marginTop: wp("6%"),
     paddingLeft: wp("2.5%"),
     alignItems: "center",
     backgroundColor: "white",
@@ -52,14 +51,14 @@ export default StyleSheet.create({
   },
   inputs: {
     fontSize: hp("1.9%"),
-    width: wp('70%'),
-    marginLeft: wp('2%')
+    width: wp("70%"),
+    marginLeft: wp("2%"),
   },
   btnLogin: {
     width: wp("90%"),
     height: hp("7.5%"),
     backgroundColor: "#1696ad",
-    marginTop: wp("7%"),
+    marginTop: wp("8%"),
     borderRadius: wp("2.5%"),
     alignItems: "center",
     justifyContent: "center",

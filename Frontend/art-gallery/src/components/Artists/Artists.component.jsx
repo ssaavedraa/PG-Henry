@@ -8,9 +8,6 @@ import AddArtistModal from "../../Modales/EditArtist/AddArtistForm/AddArtisModal
 import useAuth from "../../customHooks/useAuth";
 import img from "../../assets/img/loading-img.gif";
 
-//provando modal de review (no borrar aun )
-// import AddReviewModal from "../../Modales/Reviews/AddReviewModal";
-
 export default function Artists() {
   const artists = useSelector((state) => state.artist);
   const [sort, setSort] = useState("az");
@@ -42,10 +39,6 @@ export default function Artists() {
 
   const [openModalArtist, setOpenModalArtist] = useState(false);
 
-  //Provando modal de review( no borrar aun)
-  // const [openModalReview,  setOpenModalReview] = useState(false);
-  // ------
-
   if (!artists) {
     return (
       <div className="loading">
@@ -71,13 +64,6 @@ export default function Artists() {
             openModalArtist={openModalArtist}
             setOpenModalArtist={setOpenModalArtist}
           />
-
-          {/* //Provando modal de review( no borrar aun) */}
-          {/* <AddReviewModal
-        openModalReview={openModalReview}
-        setOpenModalReview ={setOpenModalReview}        
-              />  
-              {user.role === 'admin' && <button  onClick={() => setOpenModalReview(true)} className="btn-create">ADD REVIEW</button>}          */}
 
           {user.role === "admin" && (
             <button

@@ -21,8 +21,7 @@ function StackedBar({ data, width, height }) {
         width,
         display: "flex",
         flexDirection: "column",
-        marginBottom: hp("3%"),
-        marginTop: hp("3%"),
+       marginVertical: wp('3%')
       }}
     >
       <View

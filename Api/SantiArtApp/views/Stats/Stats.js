@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text, View, ScrollView, RefreshControl } from "react-native";
+import { View, ScrollView, RefreshControl } from "react-native";
 import Spinner from "../../components/Spinner/Spinner";
 import PaintingStats from "../../components/StatListItem/cards/PaintingsStats";
 import PurchaseTechStats from "../../components/StatListItem/cards/PurchaseTechStats";
@@ -39,7 +39,7 @@ function Stats() {
   return (
     <View>
       <ScrollView
-        style={{ marginBottom: hp("2.5%") }}
+        style={{ marginBottom: wp("2.5%")}}
         refreshControl={
           <RefreshControl
             enabled={true}

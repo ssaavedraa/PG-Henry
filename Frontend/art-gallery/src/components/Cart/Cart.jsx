@@ -21,7 +21,6 @@ const Cart = () => {
   };
 
   const [cartPainting, setCartPainting] = useState([]);
- 
 
   useEffect(() => {
     getPaintings(cart).then((res) => setCartPainting(res));
@@ -37,7 +36,7 @@ const Cart = () => {
   //Sirve para el toastify
   const removeAllCart = () => {
     removeAll();
-    toast.success("All items was delete");
+    toast.success("All items were deleted");
   };
 
   return (

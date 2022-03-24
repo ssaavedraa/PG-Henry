@@ -17,7 +17,6 @@ import {
 } from "react-native-responsive-screen";
 import symbolicateStackTrace from "react-native/Libraries/Core/Devtools/symbolicateStackTrace";
 import Spinner from "../../components/Spinner/Spinner.js";
-import HeaderWavy from "../../components/HeaderWavyLogin/HeaderWavy.js";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const popUp = (msg) => {
@@ -67,7 +66,7 @@ function Login({ navigation }) {
       </View>
       <View style={style.loginForm}>
         <Text style={style.textWelcome}>Hi there!</Text>
-        <Text style={{ marginBottom: wp("3%") }}>Welcome to SantArt App</Text>
+        <Text style={{ marginBottom: wp("1%"), fontSize: hp('1.75%') }}>Welcome to SantArt App</Text>
         <View style={style.viewInputs}>
           <Icon name="mail-outline" size={25} color={'#7c7c7c'}/>
           <TextInput

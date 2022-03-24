@@ -46,7 +46,7 @@ function PurchaseModal({
           {purchase.state === "processing" ||
           purchase.state === "completed" ||
           purchase.state === "canceled" ? (
-            <Text>{`There's no operations for ${purchase.state} purchases`}</Text>
+            <Text style={style.textNo}>{`There's no operations for ${purchase.state} purchases`}</Text>
           ) : (
             <>
               <Text style={style.textWant}>What do you want to do?</Text>
@@ -60,10 +60,12 @@ function PurchaseModal({
                     )
                   }
                   text={purchase.state === "pending" ? "Dispatch" : "Complete"}
+                  color={purchase.state === "pending" ? "#5499C7" : "#52BE80"}
                 />
                 <CustomButton
                   onPress={() => submit(setCanceled)}
-                  text={'Cancel'}
+                  text={"Cancel"}
+                  color="#EC7063"
                 />
               </View>
             </>

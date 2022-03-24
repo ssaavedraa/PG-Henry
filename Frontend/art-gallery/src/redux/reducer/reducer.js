@@ -208,8 +208,6 @@ function rootReducer(state = initialState, action) {
         purchase: action.payload,
       };
     case CONTACT_INFO:
-      console.log("a");
-      console.log(action.payload);
       return {
         ...state,
         contactInfo: action.payload,

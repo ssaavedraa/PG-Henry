@@ -16,7 +16,7 @@ function GeneralPanel() {
     <div className="sales-container">
       <HeaderCheckPanel title={title} setState={setState} state={state}/>
       <SubtitlePanel isAdmin={isAdmin} />
-      <CardPanelSalesAndPurchase isAdmin={isAdmin} filter={state}/>
+      <CardPanelSalesAndPurchase filter={state}/>
     </div>
   );
 }

@@ -17,5 +17,6 @@ export default StyleSheet.create({
     flexDirection: "row",
     padding: wp('2%'),
     alignItems: 'center',
+    elevation: 3,
   },
 });

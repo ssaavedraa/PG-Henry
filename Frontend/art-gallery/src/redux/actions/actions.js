@@ -1,4 +1,5 @@
 import axios from "axios";
+import { AiFillBoxPlot } from "react-icons/ai";
 import {
   GET_OBRAID,
   GET_OBRAIDRANDON,
@@ -22,25 +23,22 @@ import {
   GET_ALL_SP,
   ADD_PAINTING,
   CONTACT_INFO,
+  ADD_REVIEW,
 } from "../action-types/index.js";
 
-export function getPaintings(filters) {
+export function getPaintings(filters = {}) {
   return async function (dispatch) {
     try {
-      let json;
-
-      !filters
-        ? (json = await axios.get("/painting/getall"))
-        : (json = await axios.get("/painting/search", {
-            params: {
-              ...filters,
-              artist: filters?.artist?.join(","),
-              technique: filters?.technique?.join(","),
-            },
-          }));
+      const { data } = await axios.get("/painting/search", {
+        params: {
+          ...filters,
+          artist: filters?.artist?.join(","),
+          technique: filters?.technique?.join(","),
+        },
+      });
       return dispatch({
         type: GET_PAITINGS,
-        payload: json.data,
+        payload: data,
       });
     } catch (error) {
       console.log(error);
@@ -125,14 +123,11 @@ export const getObrasRandon = (id) => {
   };
 };
 
-export function getArtist(name) {
+export function getArtist(name = "") {
   return async (dispatch) => {
     try {
-      let json;
-      !name
-        ? (json = await axios.get("/artist/getall"))
-        : (json = await axios.get(`artist/getbyname/?name=${name}`));
-      dispatch({ type: GET_ARTIST, payload: json.data });
+      const { data } = await axios.get(`artist/getbyname/?name=${name}`);
+      dispatch({ type: GET_ARTIST, payload: data });
     } catch (error) {
       console.log(error);
     }
@@ -397,6 +392,20 @@ export const getAllPurchase = (filters) => {
       dispatch({ type: GET_ALL_SP, payload: json.data });
     } catch (error) {
       console.log(error);
+    }
+  };
+};
+
+export const addReview = (review) => {
+  return async (dispatch) => {
+    try {
+      const response = axios.post("/review/add", review);
+      dispatch({
+        type: ADD_REVIEW,
+        payload: response.data,
+      });
+    } catch (e) {
+      console.log(e);
     }
   };
 };

@@ -16,8 +16,6 @@ const contactInfo = async (req, res) => {
 	} = req.body;
 
 	const paintingsIds = req.body.paintings;
-
-	console.log(req.body)
 	let paintings = [];
 	let totalPrice = 0;
 
