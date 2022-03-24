@@ -28,13 +28,14 @@ function PurchaseUserStats({ userData }) {
     <StatListItem>
       <Text
         style={{
-          fontSize: wp("5%"),
+          fontSize: hp("2.5%"),
           alignSelf: "flex-start",
+          fontWeight: 'bold',
         }}
       >
-        ○ Users purchases
+      Users purchases
       </Text>
-      <StackedBar data={data} width={wp("80%")} height={hp("1%")} />
+      <StackedBar data={data} width={wp("85%")} height={hp("1.5%")} />
       {data.map((d, i) => (
         <View
           key={i}
@@ -42,6 +43,7 @@ function PurchaseUserStats({ userData }) {
             display: "flex",
             flexDirection: "row",
             alignSelf: "flex-start",
+            alignItems: 'center'
           }}
         >
           <MaterialCommunityIcons name="ellipse" style={{ color: d.color }} />

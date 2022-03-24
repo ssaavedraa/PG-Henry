@@ -5,6 +5,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import CustomerInfo from "../../components/CustomerInfo/CustomerInfo";
 
 const stateColors = {
   completed: "green",
@@ -17,36 +18,37 @@ const stateColors = {
 function PurchaseDetail({ route, navigation }) {
   const { purchase } = route.params;
   return (
-    <View style={style.container}>
-      <View style={style.customerInfo}>
-        <Text style={style.textPrincipal}>Purchase status</Text>
-        <Text
-          style={{
-            color: stateColors.hasOwnProperty(purchase.state)
-              ? stateColors[purchase.state]
-              : "grey",
-            fontSize: wp("5%"),
-          }}
-        >
-          {purchase.state}
-        </Text>
-        <Text>${purchase.totalPrice}</Text>
+    <ScrollView>
+      <View style={style.container}>
+        <View style={style.customerInfo}>
+          <View style={style.viewStatus}>
+            <Text style={style.textPrincipal}>Purchase</Text>
+            <Text
+              style={{
+                color: stateColors.hasOwnProperty(purchase.state)
+                  ? stateColors[purchase.state]
+                  : "grey",
+                fontSize: hp("2.25%"),
+                textTransform: "uppercase",
+                fontWeight: "bold",
+              }}
+            >
+              {purchase.state}
+            </Text>
+          </View>
+          <ScrollView>
+            {purchase.paintings.map((painting, i) => (
+              <PaintingCard key={i} painting={painting} />
+            ))}
+            <View style={style.viewPrice}>
+              <Text style={style.total}>Total</Text>
+              <Text style={style.totalPrice}>{"$ " + purchase.totalPrice}</Text>
+            </View>
+          </ScrollView>
+        </View>
+       <CustomerInfo purchase={purchase} />
       </View>
-      <View style={style.customerInfo}>
-        <Text style={style.textPrincipal}>Customer's information</Text>
-        <Text>
-          {purchase.contactInfo.firstName} {purchase.contactInfo.lastName}
-        </Text>
-        <Text>{purchase.contactInfo.email}</Text>
-        <Text>{purchase.contactInfo.telephone}</Text>
-        <Text>{purchase.contactInfo.city}</Text>
-      </View>
-      <ScrollView>
-        {purchase.paintings.map((painting, i) => (
-          <PaintingCard key={i} painting={painting} />
-        ))}
-      </ScrollView>
-    </View>
+    </ScrollView>
   );
 }
 
