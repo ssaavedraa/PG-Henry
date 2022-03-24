@@ -10,8 +10,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { confirmationSweet } from "../../utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
-import TechniqueModal from "../../../Modales/AddTechniques/Tecnique"
+import TechniqueModal from "../../../Modales/AddTechniques/Tecnique";
 import { HiViewGridAdd } from "react-icons/hi";
+import axios from "axios";
 
 const AddItems = () => {
   const dispatch = useDispatch();
@@ -133,12 +134,19 @@ const AddItems = () => {
   //--------
   function handleSubmit(e) {
     e.preventDefault();
-    confirmationSweet(input.name, confirm, false, false);
+    confirmationSweet(input.name, confirm, () => {}, false, false);
   }
 
   function confirm() {
-    dispatch(addNewPainting(input));
-    navigate("/gallery");
+    axios
+      .post("/painting/create", input)
+      .then((_) => {
+        navigate("/gallery");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    //dispatch(addNewPainting(input));
   }
 
   return (
@@ -146,18 +154,24 @@ const AddItems = () => {
       <div className="admin-box">
         <NavPanel />
         <TechniqueModal
-        openTechniqueModal={openTechniqueModal}
-        setOpenTechniqueModal={setOpenTechniqueModal}        
-      />
+          openTechniqueModal={openTechniqueModal}
+          setOpenTechniqueModal={setOpenTechniqueModal}
+        />
         <div className="principal-box">
-         
           <div className="data">
-          <div className="add-tech-box"><button onClick={() => setOpenTechniqueModal(true) } className="add-item-btn"><HiViewGridAdd/>Add new technique</button></div>
+            <div className="add-tech-box">
+              <button
+                onClick={() => setOpenTechniqueModal(true)}
+                className="add-item-btn"
+              >
+                <HiViewGridAdd />
+                Add new technique
+              </button>
+            </div>
             <h2> ADD NEW ITEM</h2>
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
                 <div className="image-content-item">
-                  
                   {input.photos &&
                   input.photos.toString().startsWith("http") ? (
                     <img src={input.photos.toString()} alt="imgUser" />
@@ -235,7 +249,7 @@ const AddItems = () => {
               </div>
 
               <label> Techniques: </label>
-              <div className="techniques-box">                
+              <div className="techniques-box">
                 {technique?.map((d) => (
                   <label>
                     <input
@@ -246,10 +260,8 @@ const AddItems = () => {
                       onChange={(e) => handleCheck(e)}
                     />
                     {d.name}
-                    
                   </label>
                 ))}
-                
               </div>
 
               <label> Photo: </label>
