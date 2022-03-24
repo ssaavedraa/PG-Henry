@@ -27,7 +27,7 @@ export default function useAuth() {
         if (paintings) {
           add(paintings);
         }
-        const dbCart = await axios.get("http://localhost:3001/cart/getAll");
+        const dbCart = await axios.get("/cart/getAll");
         if (Array.isArray(dbCart.data)) {
           add(dbCart.data);
         }
