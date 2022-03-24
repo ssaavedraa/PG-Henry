@@ -40,7 +40,7 @@ function CardPanelSalesAndPurchase({filter }) {
               setUpdateStatus={setUpdateStatus}
             />
           ))
-        : <h1 className="noPurchases">No purchases are made!</h1>}
+        : <h1 className="noPurchases">No purchases made!</h1>}
     </div>
   );
 }
