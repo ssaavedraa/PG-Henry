@@ -26,6 +26,7 @@ import { FormContac_1 } from "./components/FormContac/FormContac_1";
 import { FormContacArtist } from "./components/FormContac/FormContacArtist";
 import { AboutDev } from "./components/aboutDev/AboutDev";
 
+
 function App() {
 	return (
 		<Router>
@@ -101,7 +102,7 @@ function App() {
 					<Route exact path="/formUser" element={<FormContac_1 />} />
 					<Route exact path="/formArtists" element={<FormContacArtist />} />
 					<Route exact path="/about" element={<AboutDev />} />
-         
+          
 					<Route
 						exact
 						path="/favs"
