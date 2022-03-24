@@ -27,7 +27,7 @@ export default StyleSheet.create({
     height: hp("12%"),
     width: wp("17%"),
     justifyContent: "center",
-    borderColor: "#125D98",
+    borderColor: "#1696ad",
     borderWidth: wp("0.75%"),
     borderRadius: wp("1%"),
     elevation: 2,
@@ -58,7 +58,7 @@ export default StyleSheet.create({
   textNameFilterSelected: {
     fontSize: hp("1.25%"),
     fontWeight: "bold",
-    color: "#125D98",
+    color: "#1696ad",
   },
   icons: {
     fontSize: hp("5.5%"),
@@ -66,6 +66,6 @@ export default StyleSheet.create({
   },
   iconsSelected: {
     fontSize: hp("5.5%"),
-    color: "#125D98",
+    color: "#1696ad",
   },
 });

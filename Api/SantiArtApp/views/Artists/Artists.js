@@ -21,25 +21,26 @@ function Artists() {
       .finally(() => {
         setLoading(false);
       });
-  }
+  };
 
   useEffect(() => {
-    loadArtist()
+    loadArtist();
   }, []);
-
 
   if (loading) return <Spinner />;
 
   return (
-    <FlatList 
-    refreshControl={
-      <RefreshControl refreshing={loading} onRefresh={loadArtist}  enabled={true}/>
-    }
-    data={artistData}
-    renderItem={({item}) => (
-      <ArtistItem artist={item} />
-    )}
-    keyExtractor={(item) => item.artistId}
+    <FlatList
+      refreshControl={
+        <RefreshControl
+          enabled={true}
+          refreshing={loading}
+          onRefresh={loadArtist}
+        />
+      }
+      data={artistData}
+      renderItem={({ item }) => <ArtistItem artist={item} />}
+      keyExtractor={(item) => item.artistId}
     />
   );
 }

@@ -39,7 +39,7 @@ function Stats() {
   return (
     <View>
       <ScrollView
-        style={{ marginBottom: hp("2.5%") }}
+        style={{ marginBottom: wp("2.5%")}}
         refreshControl={
           <RefreshControl
             enabled={true}

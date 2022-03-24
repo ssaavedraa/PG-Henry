@@ -41,6 +41,7 @@ function PurchaseItem({ purchase, navigation, loadPurchases }) {
                     color: stateColors.hasOwnProperty(purchase.state)
                       ? stateColors[purchase.state]
                       : "grey",
+                      textTransform: 'capitalize'
                   },
                 ]}
               >
