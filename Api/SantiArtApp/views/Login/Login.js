@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import {
+  ScrollView,
   Alert,
   Button,
   TextInput,
@@ -61,44 +62,50 @@ function Login({ navigation }) {
 
   return (
     <View style={style.container}>
-      <View style={style.viewImage}>
-        <Image source={require("../../assets/santArt.png")} style={style.img} />
-      </View>
-      <View style={style.loginForm}>
-        <Text style={style.textWelcome}>Hi there!</Text>
-        <Text style={{ marginBottom: wp("1%"), fontSize: hp('1.75%') }}>Welcome to SantArt App</Text>
-        <View style={style.viewInputs}>
-          <Icon name="mail-outline" size={25} color={'#7c7c7c'}/>
-          <TextInput
-            autoFocus
-            placeholder="Email"
-            keyboardType="email-address"
-            autoComplete="email"
-            defaultValue={email}
-            autoCapitalize="none"
-            onChangeText={(i) => setEmail(i)}
-            onSubmitEditing={() => passRef.current.focus()}
-            style={style.inputs}
+      <ScrollView style={{ backgroundColor: "white" }}>
+        <View style={style.viewImage}>
+          <Image
+            source={require("../../assets/santArt.png")}
+            style={style.img}
           />
         </View>
-        <View style={style.viewInputs}>
-          <Icon name="key-outline" size={25} color={'#7c7c7c'} />
-          <TextInput
-            secureTextEntry
-            placeholder="Password"
-            defaultValue={password}
-            onChangeText={(i) => setPassword(i)}
-            onSubmitEditing={handleLogin}
-            ref={passRef}
-            style={style.inputs}
-          />
-        </View>
+        <View style={style.loginForm}>
+          <Text style={style.textWelcome}>Hi there!</Text>
+          <Text style={{ marginBottom: wp("1%"), fontSize: hp("1.75%") }}>
+            Welcome to SantArt App
+          </Text>
+          <View style={style.viewInputs}>
+            <Icon name="mail-outline" size={25} color={"#7c7c7c"} />
+            <TextInput
+              autoFocus
+              placeholder="Email"
+              keyboardType="email-address"
+              autoComplete="email"
+              defaultValue={email}
+              autoCapitalize="none"
+              onChangeText={(i) => setEmail(i)}
+              onSubmitEditing={() => passRef.current.focus()}
+              style={style.inputs}
+            />
+          </View>
+          <View style={style.viewInputs}>
+            <Icon name="key-outline" size={25} color={"#7c7c7c"} />
+            <TextInput
+              secureTextEntry
+              placeholder="Password"
+              defaultValue={password}
+              onChangeText={(i) => setPassword(i)}
+              onSubmitEditing={handleLogin}
+              ref={passRef}
+              style={style.inputs}
+            />
+          </View>
 
-        <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
-          <Text style={style.textLogin}>Login</Text>
-        </TouchableOpacity>
+          <TouchableOpacity onPress={handleLogin} style={style.btnLogin}>
+            <Text style={style.textLogin}>Login</Text>
+          </TouchableOpacity>
 
-        <Button
+          {/* <Button
      
         title="PASA DERECHO"
         onPress={() => {
@@ -106,8 +113,9 @@ function Login({ navigation }) {
             "Bearer eyJhbGciOiJIUzI1NiJ9.Ng.UYrNTe6rvfYBwkOQgCZsJMGOyp2rVnkAt20QVwtsGOs";
           navigation.replace("Home");
         }}
-      />
-      </View>
+      /> */}
+        </View>
+      </ScrollView>
     </View>
   );
 }
