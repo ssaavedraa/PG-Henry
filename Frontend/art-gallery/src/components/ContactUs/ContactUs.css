@@ -1,85 +1,80 @@
-.contact-box{
-
-display: flex;
-flex-direction: column;
-;
-
+.contact-box {
+  display: flex;
+  flex-direction: column;
 }
 
-.titulo-box{
-    
-    align-self: center;
-    margin: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.titulo-box {
+  align-self: center;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.maps-box{
-    
-    align-self: center;
-    margin: 3rem
+.maps-box {
+  align-self: center;
+  margin: 3rem;
 }
 
-.data-box{
-    
-    align-self: center;
-    text-align: center;
+.data-box {
+  align-self: center;
+  text-align: center;
+  align-items: center
 }
 
-.button-become{
-    align-self: center;
-    
-    margin: 3rem
+.button-become {
+  align-self: center;
+
+  margin: 3rem;
 }
 
+.btn-become {
+  height: 6rem;
+  width: 24rem;
 
-
-.btn-become{
-
-
-    height: 6rem;
-    width: 24rem;
-    
-    list-style: none;
-    background-color: rgb(212, 212, 212);
-    border-radius: 20px;
-    border-style: none;
-    margin: 1rem;
-    
-         
-    
+  list-style: none;
+  background-color: rgb(212, 212, 212);
+  border-radius: 20px;
+  border-style: none;
+  margin: 1rem;
 }
 
-.btn-become:hover{
- background-color: rgb(160, 160, 160);
+.btn-become:hover {
+  background-color: rgb(160, 160, 160);
 }
-.container-contact-1{
-
-    width: 400px;
-    height: 150px;
-    /* background: red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-contact-1 {
+  width: 400px;
+  height: 150px;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-contact-1 div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-contact-1 div i {
-  font-size: 100px;
+  font-size: 75px;
   cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 .container-contact-1 div i p {
-    font-size: 25px;
-    margin-top: 10px;
-    margin-left: -60px;
-    cursor: pointer;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: -60px;
+  cursor: pointer;
+}
+
+.divContainerContact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem
+}
+
+.divContainerContact p{
+    font-weight: bold;
 }

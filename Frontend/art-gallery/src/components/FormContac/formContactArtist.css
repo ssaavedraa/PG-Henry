@@ -1,7 +1,6 @@
 .container__FormContacArtist{
     width: 100%;
-    min-height: 110vh;
-    background: white;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,8 +9,9 @@
 .FormContacArtist_Principal {
     width: 70vh;
     min-height: 80vh;
-    border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 0.5rem;
+    border: 1px rgb(0 0 0 / 11%) solid;
+    box-shadow: 1px 2px 10px rgb(0 0 0 / 30%);
     display: flex;
     justify-content: center;
     align-items: center;

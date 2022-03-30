@@ -11,8 +11,12 @@ import {
 } from "../../redux/actions/actions";
 import useAuth from "../../customHooks/useAuth";
 import EditArtistModal from "../../Modales/EditArtist/EditArtistForm/EditArtistModal";
-import { AiFillEdit, AiOutlineEnvironment, AiOutlineMail } from "react-icons/ai";
-import img from '../../assets/img/loading-img.gif'
+import {
+  AiFillEdit,
+  AiOutlineEnvironment,
+  AiOutlineMail,
+} from "react-icons/ai";
+import img from "../../assets/img/loading-img.gif";
 
 //Componente que renderiza el detalle de un artista
 const DetailArtist = () => {
@@ -36,10 +40,12 @@ const DetailArtist = () => {
   const paintingsArtist = useSelector((state) => state.paintingsArtist);
   const artists = useSelector((state) => state.artistId);
 
-  if (!artists || !paintingsArtist) {
-    return <div className="loading">
-        <img src={img} alt="img"/>
-        </div>
+  if (!artists) {
+    return (
+      <div className="loading">
+        <img src={img} alt="img" />
+      </div>
+    );
   }
 
   return (
@@ -57,8 +63,14 @@ const DetailArtist = () => {
           <div className="divContainerNameEmailArtist">
             <div className="divNameEmailArtist">
               <h1>{artists.name} </h1>
-              <span><AiOutlineMail className='iconsDetailArtist'/>{artists.email}</span>
-              <span><AiOutlineEnvironment className='iconsDetailArtist'/>{artists.location}</span>
+              <span>
+                <AiOutlineMail className="iconsDetailArtist" />
+                {artists.email}
+              </span>
+              <span>
+                <AiOutlineEnvironment className="iconsDetailArtist" />
+                {artists.location}
+              </span>
             </div>
             <div>
               {user.role === "admin" ? (

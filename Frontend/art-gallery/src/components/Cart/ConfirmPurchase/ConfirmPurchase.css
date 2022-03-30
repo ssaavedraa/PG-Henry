@@ -1,83 +1,80 @@
-.divContainerConfirmPurchase-1{
-    width: inherit;
-    min-height: 80vh;
-    margin: 3rem 9rem;
+.divContainerConfirmPurchase-1 {
+  width: inherit;
+  min-height: 80vh;
+  margin: 3rem 9rem;
 }
-.divContainerProductCart-1  {
-    width: 400px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.divContainerProductCart-1 {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 .content-img {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
-.divContainerConfirmPurchase-1 h1{
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-}
-
-.divContainerDetailsPurchase-1{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.divContainerConfirmPurchase-1 h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
-.divContainerInputsDetailPurchase-1{
-    width: 32rem;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    margin-top: 15px;
+.divContainerDetailsPurchase-1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.divContainerInputsDetailPurchase-1 {
+  width: 32rem;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 15px;
 }
 .divContainerInputsDetailPurchase-1-div {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
 }
 .divContainerInputsDetailPurchase-1-div > div {
-color: grey;
+  color: grey;
 }
 .divContainerInputsDetailPurchase-2-div > div {
-    color: black;
-    
-    }
-.divContainerInputsDetailPurchase-2-div{
-    position: absolute;
-    /* right: 200px; */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-left: 200px;
-  
-   
+  color: black;
+}
+.divContainerInputsDetailPurchase-2-div {
+  position: absolute;
+  /* right: 200px; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 200px;
 }
 
-.divContainerInputsDetailPurchase-1 input{
-    height: 1.75rem;
-    border-radius: 0.4rem;
-    border: 0.2rem solid var(--fifth-color);
+.divContainerInputsDetailPurchase-1 input {
+  height: 1.75rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid var(--fifth-color);
 }
 
-.divContainerInputsDetailPurchase-1  label{
-    font-weight: bold;
-    font-size: 0.8rem;
-    margin-top: 1rem;
+.divContainerInputsDetailPurchase-1 label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 .divContainerItemsPurchase-1 {
-    width: 27rem;  
-    min-height: 400px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 27rem;
+  min-height: 400px;
+  border: 0.15rem solid var(--fifth-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 /* 
 .divContainerButtonMercadoPago{
@@ -86,39 +83,39 @@ color: grey;
     justify-content: center;  
 } */
 
-#button1{
-    width: 4.8rem;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    border: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
-    background-color: #578bff;
-    margin-top: 10px;
-    margin-bottom: 5px;
+#button1 {
+  width: 4.8rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #578bff;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .divContainerProductCart-100 {
-    width: 80%;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    border: 2px solid black;
-    border-left: none;
-    border-right: none;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
+  width: 80%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  border: 0.15rem solid var(--fifth-color);
+  border-left: none;
+  border-right: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
 }
-.divContainerProductCart-100 img{
-    width: 80px;
-    height: 80px;
+.divContainerProductCart-100 img {
+  width: 80px;
+  height: 80px;
 }
-.divContainerProductCart-100 > div{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.divContainerProductCart-100 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.divContainerProductCart-100 > div > p{
-    margin-left: 30px;
+.divContainerProductCart-100 > div > p {
+  margin-left: 30px;
 }

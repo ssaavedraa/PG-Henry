@@ -64,7 +64,7 @@ export const FormContacArtist = () => {
                             <h1>Message sent...<span><i className="fa fa-paper-plane-o move" aria-hidden="true"></i>
                             </span></h1>
                             :
-                            <h1>Contact us artist</h1>
+                            <h1>Contact us</h1>
                     }
                     <form onSubmit={handleForm}>
                         <label>Name</label>

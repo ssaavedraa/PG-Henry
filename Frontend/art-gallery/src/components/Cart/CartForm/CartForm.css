@@ -17,7 +17,7 @@
 .divContainerItemsCart {
     width: 27rem;  
     min-height: 400px;
-    border: 2px solid black;
+    border: 0.15rem solid var(--fifth-color);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@
 .divContainerInputsFormCart input{
     height: 1.55rem;
     border-radius: 0.4rem;
-    border: 0.2rem solid var(--fifth-color);
+    border: 0.15rem solid var(--fifth-color);
 }
 
 .divContainerNameLastCart{
@@ -144,7 +144,7 @@ margin: 0.15rem 0rem;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    border: 2px solid black;
+    border: 0.15rem solid var(--fifth-color);
     border-left: none;
     border-right: none;
     padding-top: 3px;
@@ -162,4 +162,5 @@ margin: 0.15rem 0rem;
 }
 .divContainerProductCart-10 > div > p{
     margin-left: 30px;
+    font-weight: 'bold';
 }
