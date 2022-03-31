@@ -200,7 +200,6 @@
   font-weight: 400;
 }
 
-
 .divDescriptionArtwork h4 {
   font-weight: 600;
   padding-bottom: 0.75rem;
@@ -229,7 +228,7 @@
   flex-direction: column-reverse;
 }
 
-.photoPaintingDetail{
+.photoPaintingDetail {
   width: 80% !important;
   height: 75%;
 }
@@ -409,8 +408,8 @@
   font-size: 0.9rem;
 }
 
-.obrasSimilares p{
-margin-top: 2vh;
+.obrasSimilares p {
+  margin-top: 2vh;
 }
 
 .obrasSimilares img {
@@ -502,4 +501,34 @@ margin-top: 2vh;
 
 .divContainerTitleMorePaintings h1 {
   font-size: 1.9rem;
+}
+
+@media (max-width: 800px) {
+  .principalSectionInterno {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  .photoPaintingDetail {
+    width: 70% !important;
+    height: 75%;
+  }
+  .divContainerTitleMorePaintings {
+    margin-top: 1vh;
+    border-bottom: 0.2rem solid var(--third-color);
+  }
+
+  .internoimg {
+    
+    margin-bottom: 8%;
+  }
+}
+
+@media (max-width: 600px) {
+  .divContainerTitleMorePaintings {
+    margin-top: 1vh;
+    border-bottom: 0.2rem solid var(--third-color);
+    margin-left: 0;
+  }
 }

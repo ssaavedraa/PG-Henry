@@ -42,6 +42,7 @@ export const CardsFav = () => {
                   </button>
                 </div>
               </div>
+              <div className="divContainerDetailsFav">
               <h4>USD$ {fav.paintingprice}</h4>
               {fav.isAvailable ? (
                 <h4 className="textAvalibleFavs">Available</h4>
@@ -66,7 +67,9 @@ export const CardsFav = () => {
                 </button>
               )}
               </div>
+              </div>
           ))}
+         
         </div>
       ) : (
         <div className="divNothinghere">

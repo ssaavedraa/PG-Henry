@@ -14,7 +14,7 @@ const ReviewArtist = ({ id }) => {
   }, [dispatch, idArtist]);
 
   const reviews = useSelector((state) => state.reviews);
-  console.log(reviews)
+ // console.log(reviews)
 
   return (
     <div className='divContainerReviews'>
