@@ -12,12 +12,9 @@ import { confirmationSweet } from "../../utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
 import TechniqueModal from "../../../Modales/AddTechniques/Tecnique";
 import { HiViewGridAdd } from "react-icons/hi";
-<<<<<<< HEAD
 import { storage } from "../../../firebaseConfig";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-=======
 import axios from "axios";
->>>>>>> 66e4d7af4086752d36ce751dbdf37d15fd5c0edc
 
 const AddItems = () => {
   const dispatch = useDispatch();
