@@ -79,7 +79,7 @@ export default function NavBar() {
             Contact
           </NavLink>
         </li>
-        <h4>|</h4>
+        
         {user.role === "guest" ? (
           <NavLink to="/login" className={styles.login_link}>
             <button className={styles.btn_access}>

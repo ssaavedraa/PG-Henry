@@ -504,6 +504,31 @@
 }
 
 @media (max-width: 800px) {
+  .internoimg {
+    width: 20rem;
+    height: 25rem;
+    padding: 0;
+    
+  }
+
+  .internodescription {
+    width: 100%;
+    height: 100%;
+   
+  }
+  .divContainerInfoDetail {
+    flex-direction: column;
+    align-items:flex-start;   
+   
+  }
+
+  .principalSectionArtist {
+    
+    width: 20rem;
+  
+  } 
+  
+
   .principalSectionInterno {
     display: flex;
     justify-content: space-evenly;
@@ -532,3 +557,4 @@
     margin-left: 0;
   }
 }
+

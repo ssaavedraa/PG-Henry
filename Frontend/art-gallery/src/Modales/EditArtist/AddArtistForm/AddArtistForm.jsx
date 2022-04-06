@@ -71,7 +71,7 @@ const AddArtistForm = (setOpenModalArtist) => {
             <img src={logo} height="70rem" alt="imgUser" />
           </div>
           <div className="data-box">
-            <form key="form" onSubmit={(e) => handleSubmit(e)}>
+            <form key="form" onSubmit={(e) => handleSubmit(e)} autocomplete="off">
               <div>
                 {input.photo && input.photo.startsWith("http") ? (
                   <img src={input.photo} className="imgRedonda" alt="imgUser" />
@@ -87,6 +87,7 @@ const AddArtistForm = (setOpenModalArtist) => {
                 key="photo"
                 className="input-addartist"
                 required
+                autocomplete="off"
                 value={input.photo}
                 name="photo"
                 onChange={handleChange}
@@ -99,6 +100,7 @@ const AddArtistForm = (setOpenModalArtist) => {
                 key="name"
                 className="input-addartist"
                 required
+                autocomplete="off"
                 value={input.name}
                 name="name"
                 onChange={handleChange}
@@ -110,6 +112,7 @@ const AddArtistForm = (setOpenModalArtist) => {
                 autoComplete="off"
                 key="email"
                 className="input-addartist"
+                autocomplete="off"
                 required
                 value={input.email}
                 name="email"
@@ -120,6 +123,7 @@ const AddArtistForm = (setOpenModalArtist) => {
               <select
                 name="location"
                 onChange={handleChange}
+                
                 className="input-addartist"
               >
                 <option value="Elegir" id="AF">
@@ -200,6 +204,7 @@ const AddArtistForm = (setOpenModalArtist) => {
               <textarea
                 name="biography"
                 key="biography"
+                autocomplete="off"
                 className="input-addartist"
                 value={input.biography}
                 onChange={handleChange}

@@ -19,7 +19,7 @@ export const dataAbout = [
         gitHub: 'https://github.com/Ssaavedraa',
         gitName: 'ssaavedraa',
         mail: 'Santiagosaavedra98@gmail.com',
-        img: 'https://media-exp1.licdn.com/dms/image/D4E35AQFq2Vt5RFKJ2w/profile-framedphoto-shrink_200_200/0/1638199014489?e=1648756800&v=beta&t=dmyJmdHGm1tMFgTBZZPZDLtWQcOML9sWWDlgNgAMg7A'
+        img: 'https://firebasestorage.googleapis.com/v0/b/santart-9b5c9.appspot.com/o/files%2F1638199014489.jpg?alt=media&token=71fa77ac-501b-42c6-958f-929a16d1eace'
     },
     {
         name: 'Brian Weidl Coronel',
@@ -39,27 +39,27 @@ export const dataAbout = [
         gitHub: 'https://github.com/jorgyrod',
         gitName: 'jorgyrod',
         mail: 'jorgsrodriguez@gmail.com',
-        img: 'https://media-exp1.licdn.com/dms/image/D4D35AQHPQIkwr3B9Sg/profile-framedphoto-shrink_200_200/0/1646159863210?e=1648756800&v=beta&t=JwZvFWFBg1zxwzWj6j5I3qS30CBe6WQoWr-OGOq7kpw'
+        img: 'https://firebasestorage.googleapis.com/v0/b/santart-9b5c9.appspot.com/o/files%2F1646159863210.jpg?alt=media&token=d2f50da7-bb9b-438c-bb5d-79a1e1d13448'
     },
     {
         name: 'Facundo Romano',
         id: 5,
-        linkedin: 'https://www.linkedin.com/mwlite/in/facu-romano-js',
+        linkedin: 'https://media-exp1.licdn.com/dms/image/D4D35AQH_U5-iue5ZBA/profile-framedphoto-shrink_800_800/0/1646159079955?e=1648846800&v=beta&t=u6Rt36o6YxMpzsnzQjJyiTSMTwHoZFPiFOyw2vWw4ZI',
         linName: 'Facu-romano-js',
         gitHub: 'https://github.com/Facundo-Romano',
         gitName: 'Facundo-Romano',
         mail: 'facuromano121299@gmail.com',
-        img: 'https://media-exp1.licdn.com/dms/image/D4D35AQH_U5-iue5ZBA/profile-framedphoto-shrink_200_200/0/1646159079955?e=1648756800&v=beta&t=cfU1HvqNL_YwfO4YLgxfWMtO8YaHCgn_BTUg4tKp6eo'
+        img: 'https://firebasestorage.googleapis.com/v0/b/santart-9b5c9.appspot.com/o/files%2F1646159079955.jpg?alt=media&token=4aa524ba-4fc5-4381-90c0-a7d7aca430c2'
     },
     {
         name: 'Santiago Nuñez',
         id: 6,
-        linkedin: '',
-        linName: '',
+        linkedin: 'https://www.linkedin.com/in/nsantiago92/',
+        linName: 'nsantiago92',
         gitHub: 'https://github.com/NSantiago92',
         gitName: 'NSantiago92',
         mail: 'nunezsantiago92@gmail.com',
-        img: 'https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png'
+        img: 'https://firebasestorage.googleapis.com/v0/b/santart-9b5c9.appspot.com/o/files%2F1648667972437.jpg?alt=media&token=78bf76a2-769a-460a-9448-eaccf1323b3c'
 
     },
     {

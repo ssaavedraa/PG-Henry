@@ -53,3 +53,17 @@
 .btn-create:hover{
  background-color: var(--btnHover-color);
 }
+
+
+@media (max-width:1000px) {
+
+    .artists-header1 {
+        
+        flex-direction: column;
+        
+    }
+   
+    
+    
+  }
+

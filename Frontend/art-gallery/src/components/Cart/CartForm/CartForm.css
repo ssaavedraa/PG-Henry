@@ -126,7 +126,7 @@ margin: 0.15rem 0rem;
 }
 
 .NumberFloorUnitCart input{
-    width: 10rem
+    width: 5rem
 }
 
 .NumberFloorUnitCart{
@@ -147,6 +147,7 @@ margin: 0.15rem 0rem;
     border: 0.15rem solid var(--fifth-color);
     border-left: none;
     border-right: none;
+    border-top: none;
     padding-top: 3px;
     padding-bottom: 3px;
     margin-top: 3px;
@@ -164,3 +165,51 @@ margin: 0.15rem 0rem;
     margin-left: 30px;
     font-weight: 'bold';
 }
+
+@media (max-width:1000px) {
+
+    .divContainerFormCart{
+        /* width: 5rem; */
+        margin: 1rem 3rem;
+    }
+
+    .divContainerDetailsCart{
+        display: flex;
+       flex-direction: column;
+    }
+
+    .divContainerItemsCart {
+        width: 18rem;
+
+    }
+
+    .divContainerInputsFormCart{
+        width: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divContainerNumberFloorUnit{
+      flex-direction: column;
+      margin-bottom: 3rem;
+    
+    }
+    .NumberFloorUnitCart{
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divContainerNameLastCart {
+        flex-direction: column;
+    }
+    .divContainerNumberFloorUnit{
+        width: 10rem;
+    }
+
+    .divContainerButtonCartContinue button {
+        width: 15rem;
+
+    }
+  
+  }

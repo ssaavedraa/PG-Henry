@@ -1,11 +1,7 @@
 import React, { useRef } from "react";
 import "./AddItems.css";
 import NavPanel from "../NavPanel/NavPanel";
-import {
-  getArtist,
-  getTechnique,
-  addNewPainting,
-} from "../../../redux/actions/actions";
+import { getArtist, getTechnique } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { confirmationSweet } from "../../utils/Notifications/Notifications";
@@ -45,6 +41,7 @@ const AddItems = () => {
     dispatch(getTechnique());
   }, [dispatch]);
 
+  //form validation
   function validate(input) {
     setApplyChanges(true);
     let errors = {};
@@ -65,12 +62,19 @@ const AddItems = () => {
     return errors;
   }
 
+  const handlerFile = (e) => {
+    //le paso el file cargado desde la compu al hook de firebase
+    const file = e.target.files[0];
+    uploadImage(file);
+    console.log(file, "soy file");
+  };
+
+  //hook firebase to upload photos
   const uploadImage = (file) => {
     // references
     const storageRef = ref(storage, `/files/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
-    // subimos la imagen, suceden ciertas cosas
     uploadTask.on(
       "state_changed",
       (snap) => {
@@ -85,20 +89,13 @@ const AddItems = () => {
       },
       async () => {
         const url = await getDownloadURL(storageRef);
-        //link de firebase se sube a input
+        //firebase link is uploaded to input
         setInput({
           ...input,
           photos: [...input.photos, url],
         });
       }
     );
-  };
-
-  const handlerFile = (e) => {
-    //le paso el file cargado desde la compu al hook de firebase
-    const file = e.target.files[0];
-    uploadImage(file);
-    console.log(file, "soy file");
   };
 
   const deletePhoto = (artwork) => {
@@ -108,7 +105,7 @@ const AddItems = () => {
     });
   };
 
-  //funsion que abre el cuadro de dialogo compu
+  //function that opens the computer box
   const selectImage = (e) => {
     refInputFile.current.click();
   };
@@ -176,7 +173,6 @@ const AddItems = () => {
   }
 
   //--------
-  console.log(input, "soy input");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -218,6 +214,7 @@ const AddItems = () => {
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
                 <div className="internal-box-1">
+                  {/* image section */}
                   <div className="internoimg">
                     <div className="miniatureContainer">
                       {input.photos.length > 1 ? (
@@ -281,21 +278,7 @@ const AddItems = () => {
                     </p>
                   </div>
                 </div>
-
-                {/*                   
-                  
-                  { input.photos ? 
-                  (input.photos.map((a) => (
-                    <div> <span onClick={()=> deletePhoto(a)}>X</span>
-                    <div><img src={a.toString()} alt="imgUser" key={a} /></div> 
-                    </div> 
-                  )) 
-                 ) :
-                    (<img
-                      src="http://accordelectrotechnics.in/img/product/no-preview/no-preview.png"
-                      alt="nofoto"
-                    />)
-                  } */}
+                {/*data section*/}
 
                 <div className="first-dataform">
                   <div className="file-uploader">

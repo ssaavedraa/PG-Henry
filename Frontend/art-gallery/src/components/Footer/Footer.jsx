@@ -11,18 +11,12 @@ const Footer = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className='divFooter'>
-        <img src={Logo} alt="logo" className='img'/>
-        <p>2022 SantArt - All rights reserved. | <span onClick={handleAbout} className='spanAbout'> About DEVS</span></p>
-=======
     <div className="divFooter">
       <img src={Logo} alt="logo" className="img" />
       <p>2022 SantArt - All rights reserved.</p>
       <span onClick={handleAbout} className="spanAbout">
-        About us
+        About Devs
       </span>
->>>>>>> 2fd014067ad8351124b175c81ac83481fc5f002c
     </div>
   );
 };

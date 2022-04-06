@@ -27,7 +27,7 @@
 }
 
 .search_inputNav {
-  width: 85%;
+  /* width: 85%; */
   height: 100%;
   padding-left: 1rem;
   font-family: "Poppins", sans-serif;
@@ -160,3 +160,21 @@
 .start {
   border-top: none;
 }
+
+@media (max-width:1000px) {
+
+  .div_search {
+    width: 280px;
+    min-height:17.9rem;
+    
+    margin-top: 1rem;
+   
+  }
+
+  .div_searchNoResults {
+    margin-bottom: 2rem;
+  }
+
+  
+}
+

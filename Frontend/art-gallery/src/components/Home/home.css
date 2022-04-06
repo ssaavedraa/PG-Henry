@@ -9,7 +9,7 @@
 
 .line{
     margin-top: 3rem;    
-   font-size: 2rem;
+   font-size:2rem;
     white-space: nowrap;
     color: #06A8BA;   
     letter-spacing: 2px;  
@@ -139,3 +139,51 @@
 }
 
 
+@media (max-width: 1000px) {
+
+    .container-home{
+        height: 70vh;
+        align-self: center;
+    }
+
+    .content-carrousel{
+   
+        width: 70%;
+        justify-content: center;
+        margin-left: 2.5rem;
+    }
+
+    .line{
+        margin-top: 3rem;    
+       font-size:1.3rem;
+       letter-spacing: 1px; 
+    }
+
+    .container-home{
+        
+        background: url(https://res.cloudinary.com/dw6bkceqj/image/upload/v1647412737/santart/SantArt_bzu2ln.png) no-repeat fixed center;   
+        background-size:auto;
+    }
+
+.content-carrousel .figure:nth-child(1){
+    transform: rotateY(0deg) translateZ(10em);
+}
+.content-carrousel .figure:nth-child(2){
+    transform: rotateY(72deg) translateZ(10em);
+}
+.content-carrousel .figure:nth-child(3){
+    transform: rotateY(144deg) translateZ(10em);
+}
+.content-carrousel .figure:nth-child(4){
+    transform: rotateY(216deg) translateZ(10em);
+}
+.content-carrousel .figure:nth-child(5){
+    transform: rotateY(288deg) translateZ(10em);
+}
+.content-carrousel .figure:nth-child(6){
+    transform: rotateY(360deg) translateZ(10em);
+}
+
+
+
+}

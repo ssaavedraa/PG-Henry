@@ -14,10 +14,12 @@
 
 .maps-box {
   align-self: center;
-  margin: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 80%;
 }
 
-.data-box {
+.datacont-box {
   align-self: center;
   text-align: center;
   align-items: center
@@ -78,3 +80,21 @@
 .divContainerContact p{
     font-weight: bold;
 }
+
+
+@media (max-width:1000px) {
+  .container-contact-1 {
+    width: 100%;
+    height: auto;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
+  
+  
+}
+

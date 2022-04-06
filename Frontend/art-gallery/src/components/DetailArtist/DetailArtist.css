@@ -148,6 +148,9 @@
 }
 
 @media (max-width: 800px) {
+  .divBio {
+    width: 15rem;
+  }
   
 .divContainerimg {
   margin: 4rem 2rem 0rem;
