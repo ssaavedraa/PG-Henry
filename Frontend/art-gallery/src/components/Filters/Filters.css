@@ -200,8 +200,6 @@ label {
 
 
 @media (max-width:1000px) {
-
-
   .filter-container {
     height: 50%;
     max-height: 150vh;;
@@ -209,9 +207,6 @@ label {
     width: 80%;
     overflow-y: scroll;
   }
-
- 
-  
   
 }
 
