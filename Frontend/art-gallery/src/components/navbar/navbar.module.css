@@ -19,7 +19,7 @@
   width: 100%;
   display: flex;
   box-shadow: 2px 2px 5px var(--fifth-color);
-  
+
 }
 
 .navbar ul {
@@ -65,14 +65,15 @@
   height: 50%;
 }
 
-.linksNav, .links_Active {
+.linksNav,
+.links_Active {
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none !important;
   color: var(--bgMainColor);
 }
 
-.links_Active{
+.links_Active {
   text-decoration: overline !important;
   color: var(--primary-color);
   background-color: transparent !important;
@@ -94,15 +95,15 @@
   cursor: pointer;
 }
 
-.btn_access h4{
-    width:65%;
-    font-size: 1.35rem;
-    margin: 0;
+.btn_access h4 {
+  width: 65%;
+  font-size: 1.35rem;
+  margin: 0;
 }
 
-.btn_access .icon{
-    font-size: 1.3em;
-    margin: 0;
+.btn_access .icon {
+  font-size: 1.3em;
+  margin: 0;
 }
 
 .home_link {
@@ -125,12 +126,12 @@
   background-color: rgb(219, 2, 2);
 }
 
-.logoutNav:hover{
-    background-color: rgb(173, 6, 6);
+.logoutNav:hover {
+  background-color: rgb(173, 6, 6);
 }
 
-.logoutNav:active{
-    background-color: rgb(219, 2, 2);
+.logoutNav:active {
+  background-color: rgb(219, 2, 2);
 }
 
 .logoutNav .icon {
@@ -148,7 +149,8 @@
   text-decoration: underline !important;
 }
 
-.containerCartLength, .containerCartLengthPlus{
+.containerCartLength,
+.containerCartLengthPlus {
   display: flex;
   top: .75em;
   left: 1.25em;
@@ -167,29 +169,28 @@
 
 }
 
-.containerCartLength{
+.containerCartLength {
   opacity: 0;
 }
 
-.containerCartLengthPlus{
+.containerCartLengthPlus {
   opacity: 1;
 }
 
-.divContainerCartIcon .icon{
+.divContainerCartIcon .icon {
   font-size: 1.4em;
 }
 
-.divContainerCartIcon{
+.divContainerCartIcon {
   position: relative;
   top: -.4em;
 }
 
 @media (max-width: 1000px) {
-  
-  .navbar {    
+
+  .navbar {
     flex-direction: column;
-    height:auto;    
-    
+    height: auto;
   }
 
   .navbar div:nth-of-type(1) {
@@ -212,16 +213,15 @@
   }
 
   .login_link,
-.logoutNav {
-  width: 50%;
-  height: 90%;
-}
+  .logoutNav {
+    width: 50%;
+    height: 90%;
+  }
 
-.navbar img {
-  width: 4.75rem;
-  height: 3.75rem;
-  margin: 1.5rem;
-}
+  .navbar img {
+    width: 4.75rem;
+    height: 3.75rem;
+    margin: 1.5rem;
+  }
 
 }
-

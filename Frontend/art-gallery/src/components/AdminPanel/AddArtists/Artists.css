@@ -1,35 +1,37 @@
-.artists-header, .btnNewArtist, .subheader-artists{
+.artists-header,
+.btnNewArtist,
+.subheader-artists {
     display: flex;
     align-items: center;
 }
 
-.container-addartist{
-    display: flex;   
-    height: 90vh !important;       
+.container-addartist {
+    display: flex;
+    height: 90vh !important;
     overflow: hidden !important;
 }
 
 .admin-profile-container {
-  width: 80%;
-  height: 100%;
-  margin: 0 0.8em;
+    width: 80%;
+    height: 100%;
+    margin: 0 0.8em;
 }
 
 .artists-header {
-  width: 98%;
-  height: 12%;
-  padding: 0.5em;
-  margin: 0.2em auto;
-  justify-content: space-between;
-  align-items: center;
+    width: 98%;
+    height: 12%;
+    padding: 0.5em;
+    margin: 0.2em auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.artists-header h1{
+.artists-header h1 {
     padding-left: .4em;
     color: var(--primary-color);
 }
 
-.btnNewArtist{
+.btnNewArtist {
     width: 16%;
     height: 50%;
     padding: .5em;
@@ -43,50 +45,50 @@
     cursor: pointer;
 }
 
-.btnNewArtist:hover{
+.btnNewArtist:hover {
     background-color: var(--btnHover-color);
 }
 
-.icon-Admin-AddArtist{
+.icon-Admin-AddArtist {
     margin-right: .5em;
 }
 
 /*Subheader*/
-.subheader-artists{
+.subheader-artists {
     justify-content: space-between;
 }
 
-.subtitle-artists{
+.subtitle-artists {
     font-size: 1.2em;
     margin-left: .5em;
     padding-left: .6em;
     font-weight: 500;
 }
 
-.sort-Artist-Admin{
+.sort-Artist-Admin {
     width: 20%;
     margin-right: .7em;
 }
 
-.sort-Artist-Admin > label{
+.sort-Artist-Admin>label {
     margin-right: .8em;
     color: var(--eigth-color);
 }
 
-.select-filter-admin{
+.select-filter-admin {
     width: 30%;
     outline: none;
     cursor: pointer;
 }
 
-.select-filter-admin option{
+.select-filter-admin option {
     cursor: pointer;
 }
 
 /*Table*/
 
 
-.data-artist-admin{
+.data-artist-admin {
     table-layout: fixed;
     width: 98%;
     border-collapse: collapse;
@@ -98,7 +100,7 @@
     align-items: center;
 }
 
-.data-artist-admin tbody{    
+.data-artist-admin tbody {
     min-width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -110,7 +112,7 @@
     padding-left: 1em;
 }
 
-.row-titles-admin tr th button{
+.row-titles-admin tr th button {
     width: 90%;
     height: 100%;
     border: none;
@@ -125,110 +127,118 @@
     justify-content: center;
 }
 
-.orderButton{
+.orderButton {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.ocultOrderButton{
+.ocultOrderButton {
     display: none;
 }
 
-.iconFilterButton{
+.iconFilterButton {
     height: 100%;
-    
+
     font-size: 1.4em;
 }
 
-.button-title{
+.button-title {
     font-weight: 400;
     color: var(--eigth-color);
 }
 
-.data-artist-admin tr{
+.data-artist-admin tr {
     border-bottom: 2px solid var(--fifth-color);
 }
 
 /*Rows Titles*/
 
-.id-title,.photo-title,.name-title,.paintings-title,.review-title,.sales-title,.button-title{
+.id-title,
+.photo-title,
+.name-title,
+.paintings-title,
+.review-title,
+.sales-title,
+.button-title {
     text-align: center;
 }
 
-.row-titles-admin tr{
+.row-titles-admin tr {
     height: 2.3em;
 }
 
-.id-title{
+.id-title {
     width: 5.5em;
 }
 
-.paintings-title, .review-title, .sales-title{
+.paintings-title,
+.review-title,
+.sales-title {
     width: 6.1em;
 }
 
-.button-title{
+.button-title {
     width: 6.6em;
 }
 
-.photo-title{
+.photo-title {
     width: 8em;
 }
 
-.name-title{
+.name-title {
     width: 17em;
 }
 
 /*Rows Data Artist*/
 
-.data-artist-admin tbody tr{
+.data-artist-admin tbody tr {
     height: 10em;
 }
 
 
 /*Icon edit Artist*/
 
-.icon-artist-eduit{
+.icon-artist-eduit {
     color: var(--eigth-color);
     font-size: 1.6em;
     cursor: pointer;
 }
 
-.icon-artist-eduit:hover{
+.icon-artist-eduit:hover {
     color: var(--second-color);
 }
 
 
 /*Scrollbar*/
 .data-artist-admin tbody::-webkit-scrollbar {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 .data-artist-admin tbody::-webkit-scrollbar:vertical {
-  width: 1em;
+    width: 1em;
 }
 
 .data-artist-admin tbody::-webkit-scrollbar-button:increment,
 .data-artist-admin tbody::-webkit-scrollbar-button {
-  display: none;
+    display: none;
 }
 
 .data-artist-admin tbody::-webkit-scrollbar:horizontal {
-  height: 0.7em;
+    height: 0.7em;
 }
 
 .data-artist-admin tbody::-webkit-scrollbar-thumb {
-  background-color: var(--eigth-color);
-  border-radius: 20px;
-  border: 2px solid var(--third-color);
+    background-color: var(--eigth-color);
+    border-radius: 20px;
+    border: 2px solid var(--third-color);
 }
 
 .data-artist-admin tbody::-webkit-scrollbar-track {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
-.img-td-artist{
+.img-td-artist {
     margin-top: .3em;
     width: 70%;
     height: 100%;
@@ -236,17 +246,22 @@
 
 /*Responsive*/
 
-@media screen and (min-width: 1250px){
-    .id-title{
+@media screen and (min-width: 1250px) {
+    .id-title {
         width: 6em;
     }
-    .name-title{
+
+    .name-title {
         width: 18em;
     }
-    .photo-title{
+
+    .photo-title {
         width: 10em;
     }
-    .paintings-title, .review-title, .sales-title{
+
+    .paintings-title,
+    .review-title,
+    .sales-title {
         width: 6.9em;
     }
 }

@@ -26,12 +26,14 @@
   height: 55%;
   object-fit: contain;
 }
+
 .linea {
   background-color: var(--fifth-color);
   height: 1px;
   width: 70%;
   margin: 5px;
 }
+
 .data-paint {
   width: 90%;
   height: 50%;
@@ -62,6 +64,7 @@
 .data-paint:hover h6 {
   color: var(--btnHover-color);
 }
+
 .data-paint p {
   font-size: 0.75em;
   color: var(--eigth-color);

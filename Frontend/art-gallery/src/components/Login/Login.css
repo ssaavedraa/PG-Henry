@@ -1,29 +1,29 @@
-.login-container{
+.login-container {
     height: auto;
     display: flex;
     align-items: center;
 }
 
-.login{
+.login {
     position: relative;
     margin: 5vh auto;
     border: 1px rgba(0, 0, 0, 0.3) solid;
     border-radius: 1rem;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
     width: 40%;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3vh;
 }
 
-.login h1{
+.login h1 {
     margin: 1%;
     font-size: 4vh;
 }
 
-.login-user{
+.login-user {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -33,21 +33,21 @@
     padding-bottom: 2vh;
 }
 
-.login h3{
+.login h3 {
     text-align: center;
     padding-top: 1vh;
     font-size: 2.5vh;
     margin-bottom: 1vh;
 }
 
-.login-user input{
+.login-user input {
     border-radius: 1.5vh;
     height: 2.5vh;
     width: 90%;
     padding: 0.25rem 0.5rem;
 }
 
-.login-user form{
+.login-user form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,12 +55,12 @@
     width: 100%;
 }
 
-.login-user label{
+.login-user label {
     margin-top: 1vh;
 }
 
-.login button{
-    padding: 0.5vh ;
+.login button {
+    padding: 0.5vh;
     border-radius: 0.65rem;
     width: 80%;
     font-size: 2vh;
@@ -68,23 +68,23 @@
     color: white;
 }
 
-.login #submit{
+.login #submit {
     margin-top: 2vh;
     height: 6vh;
 }
 
-.login button:hover{
+.login button:hover {
     cursor: pointer;
 }
 
-.login-notuser{
+.login-notuser {
     margin: 1vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.login-user .google-button{
+.login-user .google-button {
     width: auto;
     background-color: white;
     display: flex;
@@ -95,7 +95,7 @@
     justify-content: center;
 }
 
-.login-failed{
+.login-failed {
     border: solid 2px darkred;
     width: 90%;
     height: 1.5rem;
@@ -107,16 +107,12 @@
     text-align: center;
 }
 
-.login-error{
+.login-error {
     border: solid 2px darkred;
 }
 
 @media (max-width:1000px) {
-
-
-    .login{
+    .login {
         width: 80%;
     }
-    
-    
-  }
+}

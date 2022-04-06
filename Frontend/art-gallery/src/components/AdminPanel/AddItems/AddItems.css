@@ -2,6 +2,7 @@
   display: flex;
   height: 90vh;
 }
+
 .add-tech-box {
   display: flex;
   justify-content: flex-end;
@@ -21,9 +22,9 @@
   justify-content: space-between;
 }
 
-.internal-box-1{
+.internal-box-1 {
   display: flex;
-  justify-content:center ;
+  justify-content: center;
   flex-direction: column;
   align-self: center;
   align-items: center;
@@ -49,6 +50,7 @@
   justify-content: center;
   margin-top: 5%;
 }
+
 .data h2 {
   color: var(--btnMain-Color);
 }
@@ -59,14 +61,15 @@
   justify-content: center;
 }
 
-.data form label{
+.data form label {
   margin-top: 0.2rem;
 
 }
 
 .data form input[type='file'] {
-	display: none;
+  display: none;
 }
+
 .data form textarea {
   width: auto;
   height: 4rem;
@@ -133,7 +136,7 @@
 }
 
 .btn-files:hover {
-  background-color: var( --btnHover-color);
+  background-color: var(--btnHover-color);
 }
 
 .error p {
@@ -153,7 +156,8 @@
   font-size: .9em;
   cursor: pointer;
 }
-.img{
+
+.img {
   width: 100%;
   object-fit: contain;
   transition: all 2s;
@@ -190,7 +194,7 @@
   transform: scale(1.1);
 }
 
-.photoPaintingDetail{
+.photoPaintingDetail {
   width: 80% !important;
   height: 75%;
 }
