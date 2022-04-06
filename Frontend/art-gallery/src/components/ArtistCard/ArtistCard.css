@@ -1,4 +1,4 @@
-.artist-card{
+.artist-card {
     width: 12.5rem;
     height: 22rem;
     padding: 1.5rem;
@@ -10,13 +10,13 @@
     justify-content: space-evenly;
 }
 
-.artist-card:hover{
+.artist-card:hover {
     cursor: pointer;
     transition: transform 0.5s;
     transform: scale(1.05);
 }
 
-.artist-card .artist-img{
+.artist-card .artist-img {
     height: 75%;
     display: flex;
     justify-content: center;
@@ -24,23 +24,23 @@
     clip-path: inset(0 0);
 }
 
-.artist-card .artis-data{
+.artist-card .artis-data {
     height: 20%;
 }
 
-.artist-card .artist-img img{
+.artist-card .artist-img img {
     height: 100%;
 }
 
-.artist-img{
+.artist-img {
     object-fit: contain;
 }
 
-.edit-artist{
+.edit-artist {
     display: flex;
     align-items: center;
 }
 
-.edit-artist p{
+.edit-artist p {
     margin-left: 0.3rem;
 }

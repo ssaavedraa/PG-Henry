@@ -1,56 +1,80 @@
-.containerReviews{
-    margin: auto;
-    padding: 0.3125rem 2.5rem 0.3125rem 2.5rem;
-    width: 83%;
-    justify-content: center;
-    align-items: center;
+.containerReviews {
+  margin: auto;
+  padding: 0.3125rem 2.5rem 0.3125rem 2.5rem;
+  width: 83%;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
-    margin-top: 1.875rem;
-    margin-left: 7rem;
+.title {
+  margin-top: 1.875rem;
+  margin-left: 7rem;
 }
 
-.divReviews{
-    display: flex;
-    justify-content: flex-start;
-    margin: 1rem 0rem;
-    padding: 11px 5px 11px 10px;
-    background-color:  var(--third-color);
-    border-radius: 4px;
-   
+.divReviews {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 0rem;
+  padding: 11px 5px 11px 10px;
+  background-color: var(--third-color);
+  border-radius: 4px;
 }
 
-.imgArtwork{
-    height: 95px;
-    width: 67.5px;
-    border-radius: 3px;
-    object-fit: contain;
+.imgArtwork {
+  height: 95px;
+  width: 67.5px;
+  border-radius: 3px;
+  object-fit: contain;
 }
 
-.containerText{
-    padding: 2px;
-    margin-left: 15px;
-    
+.containerText {
+  padding: 2px;
+  margin-left: 15px;
 }
 
 .containerText p {
-    font-size: 0.92rem;
+  font-size: 0.92rem;
 }
 
-.divText{
-    display: flex;
+.divText {
+  display: flex;
+  align-items: center;
+}
+
+.divText h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.divText div {
+  margin-left: 5px;
+}
+
+@media (max-width: 800px) {
+  .title {
+    margin-top: 1.875rem;
+    margin-left: 17%;
+  }
+  .containerReviews {
+    margin: auto;
+    padding: 0.3125rem 2.5rem 0.3125rem 2.5rem;
+    justify-content: center;
     align-items: center;
-
+    width: 67%;
+  }
 }
 
-.divText h5{
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
+@media (max-width: 600px) {
+  .title {
+    margin: auto;
+    padding-left: 6%;
+  }
+  .containerReviews {
+    margin: auto;
+    padding: 0.25rem 2.5rem 0.3125rem 2.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
 }
-
-.divText div{
-    margin-left: 5px;
-}
-

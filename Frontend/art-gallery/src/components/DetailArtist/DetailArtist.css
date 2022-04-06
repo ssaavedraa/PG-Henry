@@ -146,3 +146,35 @@
   font-size: 1.15rem;
   padding-right: 0.25rem;
 }
+
+@media (max-width: 800px) {
+  .divBio {
+    width: 15rem;
+  }
+  
+.divContainerimg {
+  margin: 4rem 2rem 0rem;
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-artist {
+  margin-bottom: 10%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+}
+
+@media (max-width: 600px) {
+  .photo-artist {
+    margin-bottom: 10%;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -13,6 +13,7 @@
   flex-direction: column;
   margin: 1rem;
   margin: auto;
+  padding-top: 3rem;
 }
 
 .divContainerTotal {
@@ -21,6 +22,7 @@
   justify-content: flex-end;
   padding: 1rem 0rem;
   margin-top: 1rem;
+  
 }
 
 .divContainerTotal p {
@@ -32,8 +34,10 @@
 
 .divButtons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 2rem 0rem;
+  
 }
 
 .divButtons button {
@@ -45,6 +49,7 @@
   font-weight: bold;
   cursor: pointer;
   width: 15rem;
+  margin-top: 1rem;
 }
 
 .divButtons button:hover {
@@ -61,7 +66,7 @@
 }
 
 .divPrecioCart button {
-  margin-right: 6.5rem;
+  /* margin-right: 6.5rem; */
   outline: none;
   border: none;
   padding: 0.5rem 1.75rem;
@@ -79,3 +84,6 @@
   font-size: 1.15rem;
   margin-bottom: -0.5rem;
 }
+
+
+

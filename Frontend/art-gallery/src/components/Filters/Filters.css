@@ -199,5 +199,14 @@ label {
 
 
 
-
+@media (max-width:1000px) {
+  .filter-container {
+    height: 50%;
+    max-height: 150vh;;
+    margin-top: 3rem;
+    width: 80%;
+    overflow-y: scroll;
+  }
+  
+}
 

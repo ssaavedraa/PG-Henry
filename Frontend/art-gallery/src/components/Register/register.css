@@ -90,3 +90,24 @@
 .fail{
     border: darkred solid 2px;
 }
+
+@media (max-width:1000px) {
+
+    
+
+    .register{
+        position: fixed;
+        top: 5%;
+        left: 10%;
+       
+        
+        width: 80%;
+        height:auto;
+        
+        padding: 0.1rem;
+       
+       
+    }
+    
+  
+  }

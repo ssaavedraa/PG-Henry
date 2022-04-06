@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./AddItems.css";
 import NavPanel from "../NavPanel/NavPanel";
-import {
-  getArtist,
-  getTechnique,
-  addNewPainting,
-} from "../../../redux/actions/actions";
+import { getArtist, getTechnique } from "../../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { confirmationSweet } from "../../utils/Notifications/Notifications";
 import { useNavigate } from "react-router-dom";
 import TechniqueModal from "../../../Modales/AddTechniques/Tecnique";
 import { HiViewGridAdd } from "react-icons/hi";
+import { storage } from "../../../firebaseConfig";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import axios from "axios";
 
 const AddItems = () => {
@@ -19,12 +17,9 @@ const AddItems = () => {
   const artists = useSelector((state) => state.artist);
   const technique = useSelector((state) => state.technique);
   const navigate = useNavigate();
+  const refInputFile = useRef(null);
 
-  React.useEffect(() => {
-    dispatch(getArtist());
-    dispatch(getTechnique());
-  }, [dispatch]);
-
+  const [progress, setProgress] = useState(0);
   const [input, setInput] = useState({
     title: "",
     description: "",
@@ -39,11 +34,19 @@ const AddItems = () => {
   const [openTechniqueModal, setOpenTechniqueModal] = useState(false);
   const [errors, setError] = useState({});
   const [applyChanges, setApplyChanges] = useState(true);
+  const [bigImage, setBigImage] = useState(0);
 
+  React.useEffect(() => {
+    dispatch(getArtist());
+    dispatch(getTechnique());
+  }, [dispatch]);
+
+  //form validation
   function validate(input) {
     setApplyChanges(true);
     let errors = {};
     if (
+      input.photos.length === 0 ||
       !input.title ||
       !input.price ||
       !input.height ||
@@ -53,24 +56,62 @@ const AddItems = () => {
       !input.description
     ) {
       errors.message = "*All inputs are required";
-    } else if (
-      input.photos.length === 0 ||
-      !input.photos.toString().startsWith("http")
-    ) {
-      errors.message = "*invalid photo";
     } else {
       setApplyChanges(false);
     }
     return errors;
   }
 
+  const handlerFile = (e) => {
+    //le paso el file cargado desde la compu al hook de firebase
+    const file = e.target.files[0];
+    uploadImage(file);
+    console.log(file, "soy file");
+  };
+
+  //hook firebase to upload photos
+  const uploadImage = (file) => {
+    // references
+    const storageRef = ref(storage, `/files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on(
+      "state_changed",
+      (snap) => {
+        let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
+        console.log(percentage, "porsentaje ");
+        let por = Math.round(percentage);
+        console.log(por, "por ");
+        setProgress(por);
+      },
+      (err) => {
+        console.log(err);
+      },
+      async () => {
+        const url = await getDownloadURL(storageRef);
+        //firebase link is uploaded to input
+        setInput({
+          ...input,
+          photos: [...input.photos, url],
+        });
+      }
+    );
+  };
+
+  const deletePhoto = (artwork) => {
+    setInput({
+      ...input,
+      photos: input.photos.filter((d) => d !== artwork),
+    });
+  };
+
+  //function that opens the computer box
+  const selectImage = (e) => {
+    refInputFile.current.click();
+  };
+
   function handleChange(e) {
-    if (e.target.name === "photos") {
-      setInput({
-        ...input,
-        photos: [e.target.value],
-      });
-    } else if (
+    if (
       e.target.name === "width" ||
       e.target.name === "height" ||
       e.target.name === "price"
@@ -132,6 +173,7 @@ const AddItems = () => {
   }
 
   //--------
+
   function handleSubmit(e) {
     e.preventDefault();
     confirmationSweet(input.name, confirm, () => {}, false, false);
@@ -171,18 +213,85 @@ const AddItems = () => {
             <h2> ADD NEW ITEM</h2>
             <form key="form" onSubmit={(e) => handleSubmit(e)}>
               <div className="box-1">
-                <div className="image-content-item">
-                  {input.photos &&
-                  input.photos.toString().startsWith("http") ? (
-                    <img src={input.photos.toString()} alt="imgUser" />
-                  ) : (
-                    <img
-                      src="http://accordelectrotechnics.in/img/product/no-preview/no-preview.png"
-                      alt="nofoto"
-                    />
-                  )}
+                <div className="internal-box-1">
+                  {/* image section */}
+                  <div className="internoimg">
+                    <div className="miniatureContainer">
+                      {input.photos.length > 1 ? (
+                        input.photos.map((artwork, index) => {
+                          return (
+                            <>
+                              <p onClick={() => deletePhoto(artwork)}>X</p>
+                              <img
+                                className="img"
+                                src={artwork}
+                                alt={`img-${index}`}
+                                key={`img-${index}`}
+                                onClick={() => setBigImage(index)}
+                              />
+                            </>
+                          );
+                        })
+                      ) : (
+                        <div>
+                          <img
+                            className="img"
+                            src="https://awantraining.com/wp-content/plugins/tutor/assets/images/placeholder.jpg"
+                            alt="1"
+                            key="aja"
+                          />
+                          <img
+                            className="img"
+                            src="https://awantraining.com/wp-content/plugins/tutor/assets/images/placeholder.jpg"
+                            alt="1"
+                            key="aja2"
+                          />
+                        </div>
+                      )}
+                    </div>
+                    {input.photos.length > 0 ? (
+                      <>
+                        <img
+                          src={input.photos[bigImage]}
+                          alt="img"
+                          className="photoPaintingDetail"
+                        />
+                        <p onClick={() => deletePhoto(input.photos[bigImage])}>
+                          X
+                        </p>
+                      </>
+                    ) : (
+                      <img
+                        src={
+                          "https://awantraining.com/wp-content/plugins/tutor/assets/images/placeholder.jpg"
+                        }
+                        alt="img"
+                        className="photoPaintingDetail"
+                      />
+                    )}
+                  </div>
+
+                  <div>
+                    <p className="btn-files" onClick={selectImage}>
+                      {" "}
+                      select image
+                    </p>
+                  </div>
                 </div>
+                {/*data section*/}
+
                 <div className="first-dataform">
+                  <div className="file-uploader">
+                    <input
+                      type="file"
+                      key="file"
+                      accept=".png, .jpg, .jpeg"
+                      ref={refInputFile}
+                      value={input.file}
+                      onChange={handlerFile}
+                    />
+                  </div>
+
                   <label> Title: </label>
                   <input
                     type="text"
@@ -245,35 +354,24 @@ const AddItems = () => {
                       <option value={a.id}>{a.name}</option>
                     ))}
                   </select>
+
+                  <label> Techniques: </label>
+                  <div className="techniques-box">
+                    {technique?.map((d) => (
+                      <label>
+                        <input
+                          type="checkbox"
+                          id={d.id}
+                          name="techniqueIds"
+                          value={d.id}
+                          onChange={(e) => handleCheck(e)}
+                        />
+                        {d.name}
+                      </label>
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              <label> Techniques: </label>
-              <div className="techniques-box">
-                {technique?.map((d) => (
-                  <label>
-                    <input
-                      type="checkbox"
-                      id={d.id}
-                      name="techniqueIds"
-                      value={d.id}
-                      onChange={(e) => handleCheck(e)}
-                    />
-                    {d.name}
-                  </label>
-                ))}
-              </div>
-
-              <label> Photo: </label>
-              <input
-                type="text"
-                autoComplete="off"
-                key="photos"
-                className=""
-                value={input.photos}
-                name="photos"
-                onChange={handleChange}
-              />
 
               <label> Description: </label>
               <textarea
@@ -288,6 +386,11 @@ const AddItems = () => {
               </div>
 
               <div>
+                {progress === 0 || progress === 100 ? (
+                  <></>
+                ) : (
+                  ` Uploading... ${progress} %`
+                )}
                 <button disabled={applyChanges} className="btn-edit">
                   ADD NEW ITEM
                 </button>

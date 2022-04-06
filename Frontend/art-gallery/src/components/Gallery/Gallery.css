@@ -11,3 +11,16 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width:1000px) {
+    .gallery-container{
+        width: 90vw;
+        min-height: 90vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;        
+        align-items: center;
+    }
+  
+  }
+  

@@ -2,6 +2,7 @@
   display: flex;
   height: 90vh;
 }
+
 .add-tech-box {
   display: flex;
   justify-content: flex-end;
@@ -21,26 +22,21 @@
   justify-content: space-between;
 }
 
-.image-content-item {
+.internal-box-1 {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-self: center;
-  width: 50%;
-  height: 80%;
-  margin: 1rem;
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
-}
-
-.image-content-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  align-items: center;
 }
 
 .first-dataform {
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 60%;
 }
+
+
 
 .information-box {
   text-align: center;
@@ -49,10 +45,12 @@
 .data {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 65%;
   text-align: center;
   justify-content: center;
+  margin-top: 5%;
 }
+
 .data h2 {
   color: var(--btnMain-Color);
 }
@@ -61,6 +59,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.data form label {
+  margin-top: 0.2rem;
+
+}
+
+.data form input[type='file'] {
+  display: none;
 }
 
 .data form textarea {
@@ -91,6 +98,8 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 0.2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .price {
@@ -114,8 +123,20 @@
   background-color: rgb(160, 160, 160);
 }
 
-.tech-button {
-  background-color: blue;
+
+.btn-files {
+  height: 2rem;
+  width: 10rem;
+  list-style: none;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border-style: none;
+  margin: 1rem;
+  color: white;
+}
+
+.btn-files:hover {
+  background-color: var(--btnHover-color);
 }
 
 .error p {
@@ -123,11 +144,57 @@
 }
 
 .add-item-btn {
-  height: 2rem;
-  width: 11rem;
-  list-style: none;
-  background-color: rgb(212, 212, 212);
-  border-radius: 20px;
-  border-style: none;
-  margin: 1rem;
+  width: 25%;
+  height: 90%;
+  padding: 0.5em;
+  margin: 0 0.8em;
+  justify-content: center;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.5em;
+  color: var(--fourth-color);
+  font-size: .9em;
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  object-fit: contain;
+  transition: all 2s;
+}
+
+.miniatureContainer {
+  display: flex;
+  height: 25%;
+  margin-top: 1em;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.internoimg {
+  width: 18rem;
+  height: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 2vh;
+  flex-direction: column-reverse;
+  margin-top: 3rem;
+}
+
+.miniatureContainer img {
+  margin: 0.4em;
+  width: 20%;
+  height: auto;
+}
+
+.miniatureContainer img:hover {
+  transform: scale(1.1);
+}
+
+.photoPaintingDetail {
+  width: 80% !important;
+  height: 75%;
 }
